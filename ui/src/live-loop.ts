@@ -8,12 +8,14 @@ function workerHeartbeat(tick:(now:number)=>void,interval:number){
 /** One upload in flight. An offscreen clock must still see advancing video time. */
 export class LiveVideoLoop{
  private active=false;private pending=false;private id=0;private last=-Infinity;private mediaTime=-Infinity;private generation=0;private cancelHeartbeat:null|(()=>void)=null;
- processed=0;skipped=0;
- constructor(private video:VideoClock,private work:(sequence:number)=>Promise<void>,private onError:(error:unknown)=>void,private interval=350,private heartbeat:Heartbeat=workerHeartbeat){}
+ processed=0;skipped=0;received=0;private receivedTime=-Infinity;
+ constructor(private video:VideoClock,private work:(sequence:number)=>Promise<void>,private onError:(error:unknown)=>void,private interval=350,private heartbeat:Heartbeat=workerHeartbeat,private onFrame?:(now:number)=>void){}
  start(){
-  this.stop();this.active=true;this.last=-Infinity;this.mediaTime=-Infinity;this.processed=0;this.skipped=0;const generation=this.generation;
+  this.stop();this.active=true;this.last=-Infinity;this.mediaTime=-Infinity;this.receivedTime=-Infinity;this.processed=0;this.skipped=0;this.received=0;const generation=this.generation;
   const run=(now:number,mediaTime:number|undefined)=>{
-   if(!this.active||generation!==this.generation||this.video.readyState<2||now-this.last<this.interval)return;
+   if(!this.active||generation!==this.generation||this.video.readyState<2)return;
+   if(typeof mediaTime==='number'&&mediaTime>this.receivedTime){this.receivedTime=mediaTime;this.received++;try{this.onFrame?.(now)}catch(error){this.onError(error)}}
+   if(now-this.last<this.interval)return;
    if(typeof mediaTime==='number'&&mediaTime<=this.mediaTime)return;
    if(this.pending){this.skipped++;return}
    this.last=now;if(typeof mediaTime==='number')this.mediaTime=mediaTime;this.pending=true;const sequence=this.processed++;

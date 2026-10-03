@@ -5,6 +5,10 @@ import {Download,ExternalLink,Monitor,Play,ScanEye,Square} from 'lucide-react';
 import {api,download,fetchApi,Rules,Snapshot} from './api';
 import {ScreenShare,captureScreenFrame,screenSharingError} from './screen-sharing';
 import {LiveVideoLoop} from './live-loop';
+import ClefVerification,{useClefVerification} from './ClefVerification';
+import {verificationImage,VisualEvidence} from './clef-evidence';
+import {FrameMonitor} from './frame-monitor';
+import {SessionRecording,saveVideo} from './session-recording';
 import {DemoVideoSource} from './demo-source';
 import {getLanguage,t} from './i18n';
 import {localize} from './localize';
@@ -18,7 +22,7 @@ const number=(value:unknown,d=2)=>typeof value==='number'?value.toFixed(d):'—'
 export function LiveAdvisor({report,stale,compact=false}:{report:any;stale:boolean;compact?:boolean}){
  const decision=!stale?report?.decision:null,advice=!stale?report?.advice:null;
  const best=advice?.best_action||decision?.best_action,row=decision?.actions?.[best];
- const hand=advice?.hand||(report?.player?.length?handValue(report.player):null);
+ const hand=advice?.hand||(!stale&&report?.gate?.solver_allowed&&report?.player?.length?handValue(report.player):null);
  const state=report?.phase==='settled'?'Hand complete':stale&&report?'Refresh the video':report?.gate?.reasons?.length?'Check the table':'Connect a source';
  return localize(<section className={'live-advisor '+(compact?'compact':'')} aria-label="Probability estimates">
   <div className="advisor-heading"><span className={'status-dot '+(best?'ok':'')}/><span>{best?'NEXT ACTION':'TABLE STATUS'}</span><small>{advice?.basis==='observed-composition'?'Composition estimate':best?'Basic strategy':'Video evidence'}</small></div>
@@ -27,7 +31,8 @@ export function LiveAdvisor({report,stale,compact=false}:{report:any;stale:boole
   <p className="advisor-cards"><span>Player <b>{report?.player?.join(' · ')||'—'}</b></span><span>Dealer <b>{report?.dealer?.join(' · ')||'—'}</b></span></p>
   {!compact&&<div className="probability-grid"><div><span>Positive outcome</span><strong>{percent(row?.win)}</strong></div><div><span>Push</span><strong>{percent(row?.push)}</strong></div><div><span>Negative outcome</span><strong>{percent(row?.loss)}</strong></div></div>}
   {compact&&row&&<p className="compact-probability">Positive outcome <b>{percent(row.win)}</b> · EV {number(row.ev,3)}</p>}
-  <div className="advisor-count"><span>True count <b className={(report?.true_count||0)>=2?'positive':(report?.true_count||0)<=-2?'negative':''}>{number(report?.true_count)}</b></span><span>Running count <b>{report?.running_count??0}</b></span><span>Observed <b>{report?.observed_cards??0}</b></span></div>
+  <div className="advisor-count"><span>True count <b className={(report?.true_count||0)>=2?'positive':(report?.true_count||0)<=-2?'negative':''}>{number(report?.true_count)}</b></span><span>Running count <b>{report?.running_count??'—'}</b></span><span>Observed <b>{report?.observed_cards??0}</b></span></div>
+  {report?.count_reliable===false&&<p className="gate-note">Count unverified · {report?.count_reasons?.[0]||'Waiting for consistent observed history.'}</p>}
   {report?.count_scope&&<p className="count-scope">{report.count_scope==='from declared fresh shoe'?'From declared fresh shoe':'Observed cards only'}</p>}
   {!best&&<p className="gate-note" role="status">{stale&&report?'Refresh the source before acting.':report?.phase==='settled'?'Wait for the next deal.':report?.gate?.reasons?.[0]||'Share a table, run the demo, or confirm cards manually.'}</p>}
   <details className="advisor-details"><summary>Why this action & advanced details</summary><div className="advisor-detail-body">
@@ -49,19 +54,25 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
  const advisorId=useRef(crypto.randomUUID());
  const identity=useRef<string|null>(null),generation=useRef(0),sourceGeneration=useRef(0),mounted=useRef(true),abort=useRef<AbortController|null>(null);
  const [stream,setStream]=useState<MediaStream|null>(null),[source,setSource]=useState(''),[pending,setPending]=useState(false),[observing,setObserving]=useState(false),[error,setError]=useState('');
- const [report,setReport]=useState<any>(null),[lastSeen,setLastSeen]=useState(0),[stale,setStale]=useState(true),[corners,setCorners]=useState<number[][]>([]),[selecting,setSelecting]=useState(false);
+ const [rawReport,setReport]=useState<any>(null),[lastSeen,setLastSeen]=useState(0),[stale,setStale]=useState(true),[corners,setCorners]=useState<number[][]>([]),[selecting,setSelecting]=useState(false);
  const [samples,setSamples]=useState(defaultSamples),[fresh,setFresh]=useState(false),[manualTurn,setManualTurn]=useState(false),[bot,setBot]=useState(true),[demoState,setDemoState]=useState<Snapshot|null>(null);
- const [metrics,setMetrics]=useState({sent:0,skipped:0,latency:0}),[advisorOpen,setAdvisorOpen]=useState(false),[inlineAdvisor,setInlineAdvisor]=useState(false),[advisorOpening,setAdvisorOpening]=useState(false),floating=useRef<{window:Window;root:Root}|null>(null),advisorGeneration=useRef(0);
+ const [metrics,setMetrics]=useState({sent:0,skipped:0,latency:0,received:0}),[advisorOpen,setAdvisorOpen]=useState(false),[inlineAdvisor,setInlineAdvisor]=useState(false),[advisorOpening,setAdvisorOpening]=useState(false),floating=useRef<{window:Window;root:Root}|null>(null),advisorGeneration=useRef(0);
+ const [verify,setVerify]=useState(false),[evidence,setEvidence]=useState<VisualEvidence|null>(null);
+ const verificationEnabled=useRef(verify);verificationEnabled.current=verify;
+ const verification=useClefVerification(evidence,verify);
+ const disagreement=verification.result?.comparison?.status==='disagreement';
+ const report=disagreement&&rawReport?{...rawReport,advice:null,decision:null,gate:{solver_allowed:false,reasons:verification.result.comparison.issues}}:rawReport;
+ const recording=useRef(new SessionRecording()),[recordingOn,setRecordingOn]=useState(false);
  const language=getLanguage();
 
  const stopObserver=()=>{
   generation.current++;loop.current?.stop();loop.current=null;abort.current?.abort();abort.current=null;
   const old=identity.current;identity.current=null;if(old)void fetchApi('/live/'+old,{method:'DELETE'}).catch(()=>{});
-  if(mounted.current){setObserving(false);setReport(null);setStale(true);setLastSeen(0)}
+  if(mounted.current){setObserving(false);setReport(null);setEvidence(null);setStale(true);setLastSeen(0)}
  };
  const sourceObserved=useRef(false);
  const shared=useRef<MediaStream|null>(null);
- const stop=()=>{sourceGeneration.current++;sourceObserved.current=false;stopObserver();owner.current.stop();if(shared.current){releaseSource?.(shared.current);shared.current=null}demo.current?.dispose();demo.current=null;if(mounted.current){setStream(null);setPending(false);setSource('');setDemoState(null)}};
+ const stop=()=>{recording.current.stop();sourceGeneration.current++;sourceObserved.current=false;stopObserver();owner.current.stop();if(shared.current){releaseSource?.(shared.current);shared.current=null}demo.current?.dispose();demo.current=null;if(mounted.current){setStream(null);setPending(false);setSource('');setDemoState(null)}};
  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;advisorGeneration.current++;stop();const previous=floating.current;floating.current=null;previous?.root.unmount();previous?.window.close()}},[]);
  useEffect(()=>{if(!connected)stopObserver()},[connected]);
  useEffect(()=>{const timer=setInterval(()=>setStale(!lastSeen||performance.now()-lastSeen>2200),200);return()=>clearInterval(timer)},[lastSeen]);
@@ -76,8 +87,10 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
    if(!mounted.current||attempt!==generation.current){void fetchApi('/live/'+configuration.stream_id,{method:'DELETE'});return}
    identity.current=configuration.stream_id;sourceObserved.current=true;setObserving(true);
    const target=video.current!;const id=configuration.stream_id;
+   const monitor=new FrameMonitor(),canvas=document.createElement('canvas');canvas.width=96;canvas.height=54;
+   const monitorContext=canvas.getContext('2d',{willReadFrequently:true});let motionEpoch=0,region:number[]|null=null,imageSize:number[]|null=null;
    loop.current=new LiveVideoLoop(target,async(sequence)=>{
-    const began=performance.now(),controller=new AbortController();abort.current=controller;
+    const began=performance.now(),capturedEpoch=motionEpoch,controller=new AbortController();abort.current=controller;
     const timeout=setTimeout(()=>controller.abort(),6000);
     try{
      const image=await captureScreenFrame(target);
@@ -85,9 +98,16 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
      const response=await fetchApi('/live/'+id+'/frame?sequence='+sequence+'&timestamp='+(began/1000),{method:'POST',body:image,signal:controller.signal,headers:{'Content-Type':'image/png'}});
      const value=await response.json();if(!response.ok)throw new Error(typeof value.detail==='string'?value.detail:'Video processing failed.');
      if(!mounted.current||attempt!==generation.current)return;
-     setReport(value);setLastSeen(began);setStale(performance.now()-began>2200);setError('');setMetrics({sent:sequence+1,skipped:loop.current?.skipped||0,latency:performance.now()-began});
+     region=value.table_bounds;imageSize=value.image_size;
+     if(capturedEpoch===motionEpoch){setReport(value);setLastSeen(began);setStale(performance.now()-began>2200);setError('');if(verificationEnabled.current&&value.gate?.solver_allowed){const visualImage=await verificationImage(image,corners.length?null:value);if(capturedEpoch===motionEpoch&&attempt===generation.current)setEvidence({key:[attempt,capturedEpoch,value.round,value.player.join(','),value.dealer.join(',')].join(':'),image:visualImage,report:value,corners:corners.length?corners:undefined,output_height:tableHeight(corners,target.videoWidth,target.videoHeight)})}else setEvidence(null)}
+     setMetrics({sent:sequence+1,skipped:loop.current?.skipped||0,latency:performance.now()-began,received:loop.current?.received||0});
     }finally{clearTimeout(timeout)}
-   },e=>{setReport(null);setStale(true);setError(e instanceof Error&&e.name==='AbortError'?'Video processing timed out. Waiting for a fresh observation.':String(e instanceof Error?e.message:e))},interval);
+   },e=>{setReport(null);setStale(true);setError(e instanceof Error&&e.name==='AbortError'?'Video processing timed out. Waiting for a fresh observation.':String(e instanceof Error?e.message:e))},interval,undefined,()=>{
+    if(!monitorContext||attempt!==generation.current)return;
+    if(region&&imageSize&&!corners.length){const sx=target.videoWidth/imageSize[0],sy=target.videoHeight/imageSize[1];monitorContext.drawImage(target,region[0]*sx,region[1]*sy,region[2]*sx,region[3]*sy,0,0,96,54)}
+    else monitorContext.drawImage(target,0,0,96,54);
+    if(monitor.observe(monitorContext.getImageData(0,0,96,54).data).motion>.008){motionEpoch++;setReport(null);setEvidence(null);setStale(true)}
+   });
    loop.current.start();
   }catch(e){if(mounted.current&&attempt===generation.current)setError(e instanceof Error?e.message:String(e))}
   finally{if(mounted.current&&attempt===generation.current)setPending(false)}
@@ -147,7 +167,7 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
   <div className="live-columns"><section className="panel live-video-panel"><div className="panel-header"><h2><ScanEye size={17}/>{source==='demo'?'Lab video demo':'Screen video'}</h2><span className="badge" role="status">{observing||(monitorOnly&&stream)?'Video connected':stream?'Video paused':'Waiting for video'}</span></div>
    {stream?<div className={'live-video-wrap '+(selecting?'selecting':'')} onClick={e=>{if(!selecting||corners.length>=4)return;const b=e.currentTarget.getBoundingClientRect();setCorners(previous=>[...previous,[(e.clientX-b.left)/b.width,(e.clientY-b.top)/b.height]])}}>
     <video ref={video} muted autoPlay playsInline aria-label="Continuous shared video" onLoadedData={()=>void startObserver()}/>
-    <svg className="live-detections" viewBox={'0 0 '+(video.current?.videoWidth||960)+' '+(video.current?.videoHeight||600)} aria-label="Live recognized cards">{corners.length===0&&(report?.detections||[]).map((d:any,i:number)=>{const [x,y,w,h]=d.bbox;return <g key={i}><rect x={x} y={y} width={w} height={h}/><text x={x+3} y={Math.max(18,y-7)}>{d.face_down?'BACK':d.rank+' '+d.suit}</text></g>})}</svg>
+    <svg className="live-detections" viewBox={'0 0 '+(report?.image_size?.[0]||video.current?.videoWidth||960)+' '+(report?.image_size?.[1]||video.current?.videoHeight||600)} aria-label="Live recognized cards">{corners.length===0&&(report?.detections||[]).map((d:any,i:number)=>{const [x,y,w,h]=d.bbox;return <g key={i}><rect x={x} y={y} width={w} height={h}/><text x={x+3} y={Math.max(18,y-7)}>{d.face_down?'BACK':[d.rank,d.suit].filter(Boolean).join(' ')}</text></g>})}</svg>
     {corners.map((c,i)=><span className="live-corner" key={i} style={{left:c[0]*100+'%',top:c[1]*100+'%'}}>{i+1}</span>)}
    </div>:<div className="live-placeholder"><Monitor size={38}/><h3>Give the lab a live video source.</h3><p>Share your simulation, or run the lab demo to test video → recognition → tracking → advice.</p></div>}
    <div className="live-config" hidden={monitorOnly}><label>Samples per action<select disabled={observing||pending} value={samples} onChange={e=>setSamples(Number(e.target.value))}><option value="500">500 · fast</option><option value="1500">1,500 · balanced</option><option value="5000">5,000 · precise</option></select></label><label><input type="checkbox" disabled={observing||pending} checked={fresh} onChange={e=>setFresh(e.target.checked)}/>Observe from a new shoe</label><label><input type="checkbox" disabled={observing||pending} checked={manualTurn} onChange={e=>setManualTurn(e.target.checked)}/>Player turn (manual layout)</label>
@@ -155,9 +175,12 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
    </div>
    {stream&&!monitorOnly&&<div className="live-calibration"><button className="text-button" onClick={()=>{stopObserver();setSelecting(v=>!v);setCorners([])}}>Table calibration</button><span>Selected corners: {corners.length} / 4</span><button className="text-button" onClick={()=>{stopObserver();setCorners([]);setSelecting(false)}}>Clear corners</button><button className="button secondary" disabled={corners.length!==4||pending} onClick={()=>{setSelecting(false);void startObserver()}}>Apply calibration</button><p>For a full screen, select the table corners: top left, top right, bottom right, bottom left. Keep its position fixed while observing.</p></div>}
    {source==='demo'&&demoState&&<div className="live-demo-actions"><button className="button secondary" onClick={()=>{demo.current?.setBot(!bot);setBot(v=>!v)}}>{bot?'Pause bot':'Resume bot'}</button>{demoState.available_actions.map(action=><button key={action} className="button secondary" onClick={()=>void demo.current?.action(action).catch(e=>setError(e.message))}>{action==='deal'?'Deal':action==='shuffle'?'New shoe':actions[action]||action}</button>)}<span>Round {demoState.round_id} · {demoState.phase}</span></div>}
-   <div className="live-metrics"><span>Video processing <b>{number(metrics.latency,0)} ms</b></span><span>Distinct observations <b>{metrics.sent}</b></span><span>Skipped while busy <b>{metrics.skipped}</b></span></div>
+   <label className="toggle-label" hidden={monitorOnly}><input type="checkbox" checked={verify} onChange={e=>setVerify(e.target.checked)}/>Independent Clef verification (experimental)</label>
+   {verify&&<ClefVerification result={verification.result} busy={verification.busy}/>}
+   {stream&&<details className="live-details"><summary>Local video replay</summary><p>Optionally save the selected video and observed events on this computer. Recording is off by default. No video is sent to an external service.</p><button className="button secondary" onClick={()=>{if(recordingOn){recording.current.stop();return}try{recording.current.start(stream,(blob,metadata)=>{saveVideo(blob,'blackjack-session.webm');download('blackjack-video-timing.json',metadata);if(mounted.current)setRecordingOn(false)},message=>{if(mounted.current)setError(message)});setRecordingOn(true)}catch(e){setError(e instanceof Error?e.message:String(e))}}}>{recordingOn?'Stop & save video':'Record video locally'}</button></details>}
+   <div className="live-metrics"><span>Video processing <b>{number(metrics.latency,0)} ms</b></span><span>Frames monitored <b>{metrics.received}</b></span><span>Card analyses <b>{metrics.sent}</b></span><span>Skipped while busy <b>{metrics.skipped}</b></span></div>
    <p className="panel-caption" hidden={monitorOnly}>Processing runs locally. The preview is video; the analysis samples it automatically with one upload in flight. Guidance expires when the video stops updating.</p>
-   <details className="live-details" hidden={monitorOnly}><summary>Recognition scope and probability method</summary><p>Recognition supports lab cards and compatible classic green casino tables. Include printed corners, hand totals and English action buttons. The largest compatible table is located automatically. Counts cover observed cards; declare external shuffles explicitly. Unreadable or multiple active hands need confirmation.</p><p>Win, push and loss describe net profit of the active hand, including any new splits. Existing other hands are excluded. EV estimates use finite-pool Monte Carlo with generated basic continuation; sampling intervals do not measure perception error.</p></details>
+   <details className="live-details" hidden={monitorOnly}><summary>Recognition scope and probability method</summary><p>Recognition supports lab cards and compatible classic green casino tables. Include printed corners, hand totals and enabled English or Italian action buttons. The largest compatible table is located automatically. Counts cover observed cards; declare external shuffles explicitly. Unreadable or multiple active hands need confirmation.</p><p>Win, push and loss describe net profit of the active hand, including any new splits. Existing other hands are excluded. EV estimates use finite-pool Monte Carlo with generated basic continuation; sampling intervals do not measure perception error.</p></details>
    <p className="panel-caption">Display sharing needs Chrome or Edge on localhost. <button className="text-button" onClick={()=>void openBrowser()}>Open in default browser</button></p>
   </section>{monitorOnly?<section className="live-advisor"><h2>Visual monitor</h2><p>This source is registered separately. Poker strategy and poker card recognition are not supported; no blackjack recommendation is applied to this game.</p></section>:<LiveAdvisor report={report} stale={stale}/>}</div>
   {report&&<div className="live-export"><button className="button secondary" onClick={()=>download('live-observation.json',report)}><Download size={14}/>Export observation</button><button className="button secondary" onClick={()=>identity.current&&void api('/live/'+identity.current+'/events').then(value=>download('live-events.json',value))}><Download size={14}/>Export observed events</button></div>}

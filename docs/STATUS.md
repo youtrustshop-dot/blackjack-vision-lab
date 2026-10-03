@@ -1,3 +1,39 @@
+# Verified source status — 1.1.0
+
+- **370 Python tests + 10 subtests passed** in 56.37 seconds. The retained
+  Starlette/httpx deprecation warning remains visible.
+- **34 frontend tests passed**, including every-frame monitoring, outdated
+  evidence, recording lifecycle and poker streets; TypeScript/Vite passed.
+- Actual browser lab video displayed the current 6+3 versus K hand, Hit,
+  conditional outcomes, independent count and advancing frame/analysis metrics.
+  The actual Clef browser request returned an explicitly inconclusive verification
+  in 3,844 ms while core advice remained available.
+- Actual browser poker image calibration recognized AS/KH and QS/JH/2D, then
+  produced 65.0% equity with a 63.3–66.7% sampling interval (3,000 samples, one
+  uniformly random opponent). Hole/board drag selection and Italian controls
+  were exercised; a native-image dragging conflict was fixed.
+- Seven private reported images recovered all 26 visible ranks. The replay kept
+  A+5 at soft 16, without phantom earlier cards; missing history withheld counts.
+- Eleven real Clef visual cases checked 35 annotated fields. Raw choices matched;
+  only 17 fields passed the acceptance threshold. The first request took 54.5
+  seconds, warm table requests 3.2–4.2 seconds. This small development set is not
+  a held-out provider accuracy benchmark.
+- Independent Treys 0.1.8 validation compared 6,000 pairs / 12,000 random
+  5/6/7-card hands with zero ranking-order mismatches.
+
+[Reliability architecture and provider matrix](RELIABILITY.md) ·
+[Actual Clef evidence](CLEF_VISUAL_VERIFICATION.json) · [Texas Hold’em](POKER.md).
+Versioned Windows source-provenance and executable checks are retained under
+`release/v1.1.0/`; their reports bind each executed check to its artifact hash.
+
+The release separates active-hand evidence from exposure history. It clears stale
+advice on motion, gates count estimates after missed history and offers calibrated
+Hold’em image/video input with independent showdown equity. Automatic poker
+stack/pot/action OCR, optimal betting policy and licensed held-out complete-session
+evaluation remain open. Universal “10/10” recognition is not certified.
+
+The records below retain their original scope and dates.
+
 # Verified status — 1.0.1
 
 Version 1.0.1 fixes automatic recognition of the reported external classic green

@@ -1,0 +1,9 @@
+{
+  "seed": 823417,
+  "hand_pairs": 6000,
+  "hands": 12000,
+  "mismatches": [],
+  "reference": "treys 0.1.8 (MIT), independently installed for validation only",
+  "elapsed_ms": 650.0726000012946,
+  "scope": "Ranking ordering only; no visual or betting-policy claim."
+}

@@ -1,0 +1,106 @@
+{
+  "version": "1.1.0",
+  "binary": "Blackjack Vision Lab.exe",
+  "sha256": "38d55cb73a8ca2d28261277aeea84b70c7fe14d5b200a5c80bfa1b934a1b158c",
+  "mode": "native-hidden",
+  "runtime_path": "Windows System32 only; no Python/Node/Rust paths",
+  "personal_display_picker_selected": false,
+  "native_window_created": true,
+  "initial_live_probability": {
+    "ev": 0.316,
+    "ev_ci95": [
+      0.1497962836412407,
+      0.4822037163587593
+    ],
+    "win": 0.54,
+    "push": 0.078,
+    "loss": 0.382,
+    "win_ci95": [
+      0.4961751552930624,
+      0.5832148974700135
+    ],
+    "samples": 500
+  },
+  "status": "pass",
+  "health": {
+    "status": "ok",
+    "version": "1.1.0",
+    "service": "Blackjack Vision Lab",
+    "local_only": true,
+    "truth_boundary": "debug endpoint excluded from solver inputs"
+  },
+  "ui_matches_build": true,
+  "ui_javascript_sha256": "5c8df31e99069dd629aa8271293dc6864a590eb2a241d15925d093998618e215",
+  "exact_solver_best_action": "double",
+  "live_pixel_stages": [
+    {
+      "round": 1,
+      "phase": "player",
+      "observed_cards": 3,
+      "running_count": 2,
+      "best_action": "double"
+    },
+    {
+      "round": 1,
+      "phase": "settled",
+      "observed_cards": 6,
+      "running_count": 0,
+      "best_action": null
+    },
+    {
+      "round": 2,
+      "phase": "player",
+      "observed_cards": 9,
+      "running_count": 2,
+      "best_action": "hit"
+    }
+  ],
+  "live_counts_match_public_exposures": true,
+  "live_processed_observations": 15,
+  "bundled_roadmap_matches_source": true,
+  "source_independent_launch": true,
+  "holdem_royal_flush_equity": 1.0,
+  "overlap_web_regression": {
+    "source": "private user-reported image; pixels not published",
+    "player": [
+      "A",
+      "5"
+    ],
+    "dealer": [
+      "2"
+    ],
+    "total": 16,
+    "action": "hit"
+  },
+  "external_pixel_regression": {
+    "source": "private user-provided diagnostic screenshot",
+    "source_sha256": "50456ce709e8a971a67e60542b1211d00a3f32c539b175ba46f25c5ff59e202e",
+    "image_action": "double",
+    "live_action": "double",
+    "player": [
+      "7",
+      "2"
+    ],
+    "dealer": [
+      "6"
+    ],
+    "running_count": 2,
+    "observed_cards_per_submission": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      3,
+      3,
+      3
+    ],
+    "profile": "classic-casino-ocr",
+    "scope": "repeated-image HTTP observer test; not a claim about all rounds or graphics"
+  },
+  "native_exit": "bounded hidden smoke used normal AppHandle Exit path",
+  "owned_backend_exited": true,
+  "graceful_exit_code": 0,
+  "local_port_closed": true,
+  "new_mei_leaks": 0
+}

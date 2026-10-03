@@ -22,7 +22,7 @@ again” option.
 
 **Add table** creates an independent observer, up to five. One screen grant can
 supply several regions; calibrate each explicitly. Each table retains its own
-rules and history. Poker / other sources are visual monitors only. More tables
+rules and history. Texas Hold’em supports calibrated cards and equity; other sources remain visual monitors. More tables
 increase work; 500 samples is the multi-table starting setting. Update latency
 and sampling uncertainty are visible tradeoffs.
 
@@ -34,7 +34,7 @@ reset or a user declaration.
 
 **Image & manual advice** accepts Ctrl+V, drag/drop and file selection. Recognition
 supports lab artwork and compatible classic green casino tables with printed
-corners, total badges and English controls. Include the full game window;
+corners, total badges and English/Italian controls. Include the full game window;
 the compatible table is located automatically. Confirm player cards and
 dealer upcard for unreadable or other designs.
 Split context and an optional exposed-card list can be supplied; the list includes
@@ -50,3 +50,11 @@ Unreadable, moving or expired video displays a status. Confirm cards or restore
 the source before using an action. Outcome probability, classifier confidence,
 current-action EV and next-round betting edge are distinct. Analysis and education
 only; not financial advice or a winning system.
+
+## Reliability and Hold’em — 1.1.0
+
+See [complete-session reliability](RELIABILITY.md) and [Texas Hold’em](POKER.md).
+Every browser-delivered advancing frame is monitored cheaply; heavy recognition
+and Clef are bounded separately. Local video recording is optional. Current-hand
+reads and historical counts are separate; missed boundaries or reveals disable
+count estimates. New EN/IT side-total regressions cover overlapping cards.

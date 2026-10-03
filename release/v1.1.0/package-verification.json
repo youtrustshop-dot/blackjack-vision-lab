@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "version": "1.1.0",
+  "assets": [
+    {
+      "file": "Blackjack-Vision-Lab_1.1.0_x64-setup.exe",
+      "bytes": 183755700,
+      "sha256": "47d4bcb68b4e50b668ad487b4220877278f854ad52a5fe616ae167b2970b4633"
+    },
+    {
+      "file": "blackjack-vision-lab-windows-v1.1.0.zip",
+      "bytes": 186267152,
+      "sha256": "ea3481c604baaf3e785c41e4853431bce157868d3de9226487bae1ab0e51b895"
+    }
+  ],
+  "portable_files": 956,
+  "release_binary_hashes_verified": true,
+  "archive_crc_verified": true,
+  "python_node_required": false,
+  "clef_installation": "separate optional pinned environment"
+}

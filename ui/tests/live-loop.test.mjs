@@ -4,6 +4,13 @@ import {loadSource} from './load-ts.mjs';
 const {LiveVideoLoop}=await loadSource('live-loop.ts');
 function clock(){let next=0;const scheduled=new Map();return {readyState:2,requestVideoFrameCallback(fn){scheduled.set(++next,fn);return next},cancelVideoFrameCallback(id){scheduled.delete(id)},tick(now){const [id,fn]=scheduled.entries().next().value;scheduled.delete(id);fn(now,{mediaTime:now/1000})},get scheduled(){return scheduled.size}}}
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
+test('every delivered frame is monitored even while card inference is busy',async()=>{
+ const video=clock(),frames=[];let finish;
+ const loop=new LiveVideoLoop(video,()=>new Promise(resolve=>finish=resolve),()=>{},350,()=>null,now=>frames.push(now));
+ loop.start();for(let now=0;now<400;now+=16)video.tick(now);
+ assert.equal(frames.length,25);assert.equal(loop.received,25);assert.equal(loop.processed,1);
+ loop.stop();finish();await flush();
+});
 test('video loop holds one upload and drops busy observations without queuing',async()=>{
  const video=clock(),calls=[],errors=[];let finish;
  const loop=new LiveVideoLoop(video,seq=>{calls.push(seq);return new Promise(resolve=>finish=resolve)},error=>errors.push(error),100);

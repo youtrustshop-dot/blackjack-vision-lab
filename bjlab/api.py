@@ -829,4 +829,6 @@ from .advisor_api import router as advisor_router
 app.include_router(advisor_router)
 from .model_api import router as model_router
 app.include_router(model_router)
+from .poker_api import router as poker_router
+app.include_router(poker_router)
 mount_ui()

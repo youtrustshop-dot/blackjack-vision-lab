@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.1.0
+
+- Separate active cards from historical exposures; stable external round transitions and missed-history count gates.
+- Full printed rank corners, EN/IT side totals, enabled controls and small-preview handling; no stale cards from earlier hands.
+- Every-frame lightweight motion monitoring with bounded recognition and obsolete-result rejection.
+- Real independent Clef table/card verification, explicit inconclusive results and actual local experiment evidence.
+- Optional local WebM/timing export.
+- Independent Texas Hold’em ranking, ranges, equity/pot odds and calibrated image/video card regions.
+- Measured provider matrix, remaining acceptance work and a corrected recognition scope.
+
+## 1.0.1
+
+- Bundled offline OCR for a classic printed-card profile, total cross-checks and readable manual-input validation.
+- Source, frozen, native and installer verification retained under release/v1.0.1.
+
+
 ## 1.0.0
 
 - Immediate rule-generated basic recommendations, finite EV comparison and legal fallback when sampled rankings overlap.

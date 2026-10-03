@@ -1,0 +1,364 @@
+{
+  "version": "1.1.0",
+  "date": "2026-10-03",
+  "model": "Cloudflare/clef-flash",
+  "revision": "17f0b0ad64efb65d273590632833508766b2aae6",
+  "hardware": "RTX 2070 SUPER 8 GiB, 16 GiB system RAM",
+  "runtime": "Pinned official head; NF4 backbone, float16 compute and checkpoint-row adapter",
+  "scope": "Exploratory development cases, not a held-out universal recognition benchmark. Private pixels are not published.",
+  "cases": [
+    {
+      "case": "table-1",
+      "task": "table",
+      "expected": {
+        "phase": "player",
+        "player_count": "2",
+        "dealer_upcard": "A",
+        "player_1": "A",
+        "player_2": "7"
+      },
+      "checked_answers": {
+        "phase": {
+          "value": "player",
+          "accepted": false,
+          "score": 0.8241
+        },
+        "player_count": {
+          "value": "2",
+          "accepted": true,
+          "score": 0.9542
+        },
+        "dealer_upcard": {
+          "value": "A",
+          "accepted": false,
+          "score": 0.7875
+        },
+        "player_1": {
+          "value": "A",
+          "accepted": true,
+          "score": 0.9356
+        },
+        "player_2": {
+          "value": "7",
+          "accepted": true,
+          "score": 0.9314
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 3,
+      "http_roundtrip_ms": 54484.6,
+      "model_inference_ms": 51865.5
+    },
+    {
+      "case": "corner-1-0",
+      "task": "card",
+      "expected": {
+        "rank": "A",
+        "suit": "D"
+      },
+      "checked_answers": {
+        "rank": {
+          "value": "A",
+          "accepted": false,
+          "score": 0.8771
+        },
+        "suit": {
+          "value": "D",
+          "accepted": true,
+          "score": 0.9604
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 1,
+      "http_roundtrip_ms": 2310.8,
+      "model_inference_ms": 2288.6
+    },
+    {
+      "case": "corner-1-1",
+      "task": "card",
+      "expected": {
+        "rank": "7",
+        "suit": "H"
+      },
+      "checked_answers": {
+        "rank": {
+          "value": "7",
+          "accepted": true,
+          "score": 0.9177
+        },
+        "suit": {
+          "value": "H",
+          "accepted": true,
+          "score": 0.9361
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 2,
+      "http_roundtrip_ms": 904.6,
+      "model_inference_ms": 901.4
+    },
+    {
+      "case": "table-2",
+      "task": "table",
+      "expected": {
+        "phase": "player",
+        "player_count": "2",
+        "dealer_upcard": "7",
+        "player_1": "9",
+        "player_2": "8"
+      },
+      "checked_answers": {
+        "phase": {
+          "value": "player",
+          "accepted": false,
+          "score": 0.8091
+        },
+        "player_count": {
+          "value": "2",
+          "accepted": true,
+          "score": 0.9364
+        },
+        "dealer_upcard": {
+          "value": "7",
+          "accepted": true,
+          "score": 0.9214
+        },
+        "player_1": {
+          "value": "9",
+          "accepted": true,
+          "score": 0.9296
+        },
+        "player_2": {
+          "value": "8",
+          "accepted": true,
+          "score": 0.929
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 4,
+      "http_roundtrip_ms": 4005.3,
+      "model_inference_ms": 3960.3
+    },
+    {
+      "case": "table-4",
+      "task": "table",
+      "expected": {
+        "phase": "player",
+        "player_count": "2",
+        "dealer_upcard": "2",
+        "player_1": "A",
+        "player_2": "5"
+      },
+      "checked_answers": {
+        "phase": {
+          "value": "player",
+          "accepted": false,
+          "score": 0.7462
+        },
+        "player_count": {
+          "value": "2",
+          "accepted": true,
+          "score": 0.9125
+        },
+        "dealer_upcard": {
+          "value": "2",
+          "accepted": false,
+          "score": 0.8705
+        },
+        "player_1": {
+          "value": "A",
+          "accepted": true,
+          "score": 0.919
+        },
+        "player_2": {
+          "value": "5",
+          "accepted": false,
+          "score": 0.8482
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 2,
+      "http_roundtrip_ms": 3224.5,
+      "model_inference_ms": 3216.2
+    },
+    {
+      "case": "corner-4-0",
+      "task": "card",
+      "expected": {
+        "rank": "A",
+        "suit": "H"
+      },
+      "checked_answers": {
+        "rank": {
+          "value": "A",
+          "accepted": false,
+          "score": 0.8931
+        },
+        "suit": {
+          "value": "H",
+          "accepted": true,
+          "score": 0.9386
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 1,
+      "http_roundtrip_ms": 949.5,
+      "model_inference_ms": 946.0
+    },
+    {
+      "case": "corner-4-1",
+      "task": "card",
+      "expected": {
+        "rank": "5",
+        "suit": "D"
+      },
+      "checked_answers": {
+        "rank": {
+          "value": "5",
+          "accepted": false,
+          "score": 0.8873
+        },
+        "suit": {
+          "value": "D",
+          "accepted": true,
+          "score": 0.9408
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 1,
+      "http_roundtrip_ms": 1004.6,
+      "model_inference_ms": 1000.5
+    },
+    {
+      "case": "table-0",
+      "task": "table",
+      "expected": {
+        "phase": "settled",
+        "player_count": "4",
+        "player_1": "5",
+        "player_2": "3",
+        "player_3": "3",
+        "player_4": "K"
+      },
+      "checked_answers": {
+        "phase": {
+          "value": "settled",
+          "accepted": true,
+          "score": 0.929
+        },
+        "player_count": {
+          "value": "4",
+          "accepted": true,
+          "score": 0.9331
+        },
+        "player_1": {
+          "value": "5",
+          "accepted": true,
+          "score": 0.9465
+        },
+        "player_2": {
+          "value": "3",
+          "accepted": false,
+          "score": 0.6875
+        },
+        "player_3": {
+          "value": "3",
+          "accepted": false,
+          "score": 0.8843
+        },
+        "player_4": {
+          "value": "K",
+          "accepted": false,
+          "score": 0.8784
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 3,
+      "http_roundtrip_ms": 4172.2,
+      "model_inference_ms": 4124.0
+    },
+    {
+      "case": "blank-card",
+      "task": "card",
+      "expected": {
+        "rank": "unknown",
+        "suit": "unknown"
+      },
+      "checked_answers": {
+        "rank": {
+          "value": "unknown",
+          "accepted": false,
+          "score": 0.6382
+        },
+        "suit": {
+          "value": "unknown",
+          "accepted": false,
+          "score": 0.7822
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 0,
+      "http_roundtrip_ms": 1106.9,
+      "model_inference_ms": 1045.3
+    },
+    {
+      "case": "face-down-card",
+      "task": "card",
+      "expected": {
+        "rank": "back",
+        "suit": "unknown"
+      },
+      "checked_answers": {
+        "rank": {
+          "value": "back",
+          "accepted": false,
+          "score": 0.8855
+        },
+        "suit": {
+          "value": "unknown",
+          "accepted": false,
+          "score": 0.7353
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 0,
+      "http_roundtrip_ms": 818.8,
+      "model_inference_ms": 804.5
+    },
+    {
+      "case": "no-table",
+      "task": "table",
+      "expected": {
+        "phase": "unknown",
+        "dealer_upcard": "unknown"
+      },
+      "checked_answers": {
+        "phase": {
+          "value": "unknown",
+          "accepted": false,
+          "score": 0.8611
+        },
+        "dealer_upcard": {
+          "value": "unknown",
+          "accepted": false,
+          "score": 0.6041
+        }
+      },
+      "raw_choice_errors": 0,
+      "accepted_checked_fields": 0,
+      "http_roundtrip_ms": 2678.0,
+      "model_inference_ms": 2673.1
+    }
+  ],
+  "checked_fields": 35,
+  "raw_choice_errors": 0,
+  "accepted_checked_fields": 17,
+  "threshold": 0.9,
+  "score_semantics": "Uncalibrated option scores, not correctness probabilities.",
+  "limitations": [
+    "The full table verifier checks at most four player cards.",
+    "Correct raw choices below threshold remain inconclusive.",
+    "First table request took 54.5 seconds; warm table requests took 3.2\u20134.2 seconds.",
+    "No dense per-frame neural inference or complete provider accuracy claim."
+  ]
+}

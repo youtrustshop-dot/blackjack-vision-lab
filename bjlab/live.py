@@ -232,6 +232,10 @@ class LiveObserver:
         self.external_phase_candidate = None
         self.external_phase_hits = 0
         self.external_previous_phase = None
+        from .round_lifecycle import RoundLifecycle
+        self.lifecycle=RoundLifecycle()
+        self.history_gap=False
+        self.last_observation_timestamp=None
 
     def process(self, image: Image.Image, sequence: int, timestamp: float) -> dict:
         with self.lock:
@@ -255,6 +259,9 @@ class LiveObserver:
                                        extract_controlled_metadata(image), self.detector.context)
                 self.pixel_cache_key = pixel_key
             detections, context, metadata, external = self.pixel_evidence
+            if external and self.last_observation_timestamp is not None and timestamp-self.last_observation_timestamp>2.5:
+                self.history_gap=True
+            self.last_observation_timestamp=timestamp
             # Template similarity and OCR token scores have different contracts.
             # Never silently discard an OCR rank accepted by its profile.
             self.tracker.minimum_score = OCR_RANK_MIN_SCORE if external else .90
@@ -263,30 +270,24 @@ class LiveObserver:
             self.context_candidate = token
             context_stable = self.context_hits >= 2 and all(k in context for k in ("shoe", "round", "hand", "phase"))
             # Accept visible context only after distinct consecutive video inputs.
+            lifecycle={'stable':False}
             if context_stable:
                 if (self.last_context.get("shoe") != context["shoe"] or
                         self.last_context.get("session") != context.get("session")):
                     self.tracker.new_shoe(self.rules.decks, timestamp=timestamp,
                                           shoe_id="live-shoe-" + str(context["shoe"]))
                     self.round = 0
+                    self.history_gap=False
                 self.round = context["round"]
                 self.phase = context["phase"]
                 self.last_context = context
             elif external:
                 phase = external['phase']
-                self.external_phase_hits = self.external_phase_hits+1 if phase == self.external_phase_candidate else 1
-                self.external_phase_candidate = phase
-                self.empty_frames = self.empty_frames+1 if not detections else 0
-                if self.empty_frames == 3 and self.tracker.tracks:
-                    self.tracker.end_round(timestamp=timestamp)
-                    self.round += 1
-                if self.external_phase_hits >= 2:
-                    if phase == 'player' and self.external_previous_phase == 'settled' and self.tracker.tracks:
-                        self.round += 1
-                        self.tracker.start_round(str(self.round), timestamp=timestamp)
-                    self.external_previous_phase = phase
-                if not self.round and detections:
-                    self.round = 1
+                lifecycle=self.lifecycle.observe(detections,phase)
+                if lifecycle['new_round']:
+                    self.round+=1
+                    self.tracker.start_round(str(self.round),timestamp=timestamp)
+                self.history_gap=self.history_gap or lifecycle['history_gap']
                 self.phase = 'player' if self.manual_turn else phase
             elif not context:
                 # Generic calibrated layout: clear table is an observable boundary.
@@ -297,7 +298,13 @@ class LiveObserver:
                 if not self.round and detections:
                     self.round = 1
                 self.phase = "player" if self.manual_turn else "waiting"
-            emitted = self.tracker.update(detections, timestamp, round_id=str(self.round))
+            # Never write exposure history from a deal animation or an unstable
+            # replacement hand. Boundary confirmation must precede new tracks.
+            # An unclassified initial deal must not enter round 0 history and
+            # then be counted again when its first player turn starts round 1.
+            can_commit=not external or (lifecycle['stable'] and
+                (self.lifecycle.seen_round or external['phase']=='settled'))
+            emitted = self.tracker.update(detections, timestamp, round_id=str(self.round)) if can_commit else []
             self.sequence, self.last_access = sequence, time.monotonic()
             self.frame_count += 1
             summary = self.tracker.state_summary()
@@ -319,11 +326,18 @@ class LiveObserver:
             split_hands = max(1, len({c.get("zone") for c in cards if str(c.get("zone", "")).startswith("player")}))
             from_split = split_hands > 1
             player_ranks = [c["rank"] for c in player if c.get("rank")]
+            if external:
+                # The active hand comes from the current image, never a union
+                # of historical exposures that may contain previous hands.
+                player_ranks=[d.rank for d in detections if d.zone==f'player:{active_index}' and d.rank]
+                dealer=[{'rank':d.rank} for d in detections if d.zone=='dealer' and d.rank]
+                if not lifecycle['stable']:
+                    reasons.append('Current visible cards are changing; waiting for three stable observations.')
             if external and player_ranks:
                 visible_totals=external.get('player_totals',{}).get(f'player:{active_index}',[])
                 if visible_totals and hand_value(player_ranks)[0] not in visible_totals:
                     reasons.append("Tracked cards do not match the visible hand total. Waiting for fresh card evidence.")
-            if len(player_ranks) != len(player):
+            if not external and len(player_ranks) != len(player):
                 reasons.append("Active player cards are not fully visible.")
             if len(player_ranks) < 2 or len(dealer) != 1:
                 reasons.append("Need at least two player cards and exactly one visible dealer upcard.")
@@ -342,11 +356,18 @@ class LiveObserver:
             if not allowed and self.phase != "insurance":
                 reasons.append("No readable legal player controls; calibrate the table or declare a manual player turn.")
             allowed_gate = summary["gate"]["solver_allowed"] and not reasons
+            unknown_removed=any(not c.get('on_table') and not c.get('rank') for c in summary['cards'].values())
+            count_reliable=summary['gate']['solver_allowed'] and not self.history_gap and not unknown_removed
+            if external:
+                # Missing history blocks composition estimates, not a valid
+                # visible-hand basic-policy recommendation.
+                allowed_gate=(lifecycle['stable'] and len(player_ranks)>=2 and len(dealer)==1
+                    and self.phase=='player' and bool(allowed) and not external.get('reasons'))
             decision = None
             advice = None
             if allowed_gate:
                 state_key = json.dumps([player_ranks, dealer[0]["rank"], summary["composition_remaining"],
-                                        allowed, peeked, from_split, split_hands, self.phase], sort_keys=True)
+                                        allowed, peeked, from_split, split_hands, self.phase, count_reliable], sort_keys=True)
                 if state_key != self.decision_key:
                     if self.phase == "insurance":
                         pool = summary["composition_remaining"]
@@ -355,11 +376,13 @@ class LiveObserver:
                         self.decision = {"best_action": "insurance" if insurance > 0 and "insurance" in controls else "decline_insurance",
                                          "actions": {}, "insurance_blackjack_probability": probability,
                                          "insurance_ev": insurance, "method": "observable-pool insurance expectation", "exact": True}
-                    else:
+                    elif count_reliable:
                         self.decision = estimate_actions(player_ranks, dealer[0]["rank"],
                                           summary["composition_remaining"], self.rules, allowed,
                                           samples=self.samples, seed=int(hashlib.sha256(state_key.encode()).hexdigest()[:8], 16),
                                           peeked=peeked, from_split=from_split, split_hands=split_hands)
+                    else:
+                        self.decision=None
                     self.decision_key = state_key
                 decision = self.decision
                 from .advice import recommend
@@ -368,7 +391,7 @@ class LiveObserver:
                     phase=self.phase, from_split=from_split, split_hands=split_hands,
                     split_aces=from_split and bool(player_ranks) and card_rank(player_ranks[0]) == 1,
                     peeked=peeked, true_count=running / (remaining / 52) if remaining else 0.,
-                    count_complete=self.fresh_shoe, estimate=decision)
+                    count_complete=self.fresh_shoe and count_reliable, estimate=decision)
             else:
                 # Never retain advice through a transition, unreadable card or lost track.
                 self.decision_key, self.decision = None, None
@@ -376,12 +399,15 @@ class LiveObserver:
                           for rank, count in summary["known_rank_counts"].items())
             remaining = summary["physical_remaining"]
             gate = {"solver_allowed": bool(allowed_gate), "status": "stable" if allowed_gate else "waiting",
-                    "reasons": list(dict.fromkeys(reasons))}
+                    "reasons": [] if allowed_gate else list(dict.fromkeys(reasons))}
             return {"source": "live-video-pixels", "sequence": sequence, "timestamp": timestamp,
+                    "image_size":list(image.size),
                     "processed_frames": self.frame_count, "detections": [d.to_dict() for d in detections],
                     "context": context, "phase": self.phase, "round": self.round, "gate": gate,
-                    "decision": decision, "advice": advice, "running_count": running,
-                    "true_count": running / (remaining / 52) if remaining else None,
+                    "decision": decision, "advice": advice, "running_count": running if count_reliable else None,
+                    "true_count": running / (remaining / 52) if remaining and count_reliable else None,
+                    "count_reliable":count_reliable,
+                    "count_reasons":(['A video gap or round boundary was missed. Earlier exposures are incomplete.'] if self.history_gap else ['An earlier hidden card was never observed face up.'] if unknown_removed else summary['gate']['reasons']),
                     "count_scope": "from declared fresh shoe" if self.fresh_shoe else "observed portion only",
                     "observed_cards": len(summary["counted_ids"]), "physical_remaining": remaining,
                     "player": player_ranks, "dealer": [c["rank"] for c in dealer],

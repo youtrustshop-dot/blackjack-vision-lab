@@ -232,3 +232,28 @@ Each live request consumes one supplied video image; it does not simulate additi
 - Active simulator snapshots include structured `advice`: primary/basic/count/composition actions, legal choices, hand total, ace values, precision and an auditable explanation. Terminal replay snapshots retain their immutable contract.
 
 Live frames still have increasing observation sequence/time. Exact pixel reuse caches detection only; each real observation updates temporal tracking. The lab renderer exposes a visible SESSION label so two sources with the same shoe/round numbers are distinguishable without passing a simulator session ID into the observer.
+
+
+## Version 1.1 reliability and Hold’em
+
+- `POST /api/models/clef/verify`: `{image_base64, task:"table"|"card"|"scene",
+  corners?:[[x,y],...], output_height?:600}`. Bounds/calibration are checked before
+  contacting the fixed loopback runtime. Fixed questions return per-field value,
+  accepted flag and uncalibrated score. The browser compares the exact captured
+  hand, rejects stale answers and gates confident disagreement.
+- Live reports include `image_size`, `count_reliable` and `count_reasons`.
+  Missed rounds/video gaps or an unrevealed historical removal make count values
+  `null` and omit finite-pool estimates. A valid current hand can retain basic policy.
+- `POST /api/poker/image`: base64 image plus normalized `hole_roi` and `board_roi`
+  rectangles `[x,y,width,height]`. Returns physical rank/suit identities, detections
+  and an integrity gate. The API itself is a single-image read; temporal street
+  stability is handled by the browser's poker session ledger.
+- `POST /api/poker/equity`: `hole` (2), `board` (0/3/4/5), optional `dead`,
+  `opponents` (1–8), `samples` (100–20,000), `seed`, `pot`, `call_cost` and
+  `opponent_ranges` (one equally weighted two-card-combination list or null per
+  opponent). Returns split-pot equity, win/tie/loss, a sampling interval, pot odds
+  and showdown call EV. Known-card blockers and physical duplicates are checked.
+  Future betting, rake, side pots and an optimal betting policy are excluded.
+
+Local WebM recording is browser-only and opt-in. Neither recordings nor pixels
+are automatically sent to a third party. [Contracts and limitations](RELIABILITY.md).

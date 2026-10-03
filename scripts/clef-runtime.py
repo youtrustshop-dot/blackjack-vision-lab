@@ -42,6 +42,8 @@ def main():
     from safetensors.torch import load_file
     from types import SimpleNamespace
     from PIL import Image
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from bjlab.clef_contract import visual_request, parse_visual_result
     # Validate all processor dependencies before the expensive model load.
     processor = AutoProcessor.from_pretrained(str(root), local_files_only=True)
     print('Processor ready; loading the pinned quantized backbone.', flush=True)
@@ -127,6 +129,30 @@ def main():
                 if image.width * image.height > 5_000_000:
                     raise ValueError('Image exceeds five megapixels.')
                 return classify(image.convert('RGB'))
+        except (ValueError, OSError, Image.DecompressionBombError) as error:
+            raise HTTPException(422, str(error)) from error
+
+    class VerifyBody(ImageBody):
+        task: str = 'table'
+
+    @app.post('/verify')
+    def verify(body: VerifyBody):
+        try:
+            request = visual_request(body.task)
+            raw = base64.b64decode(body.image_base64, validate=True)
+            if len(raw) > 8 * 1024 * 1024:
+                raise ValueError('Image exceeds 8 MiB.')
+            with Image.open(io.BytesIO(raw)) as source:
+                if source.width * source.height > 5_000_000:
+                    raise ValueError('Image exceeds five megapixels.')
+                image = source.convert('RGB')
+                image.thumbnail((1024, 1024))
+                request['images'] = [image]
+                with lock:
+                    began = time.perf_counter()
+                    result = systemone(model, processor, request, max_length=6144)
+                    elapsed = (time.perf_counter() - began) * 1000
+            return {**parse_visual_result(result, body.task), 'latency_ms': elapsed, 'raw_result': result}
         except (ValueError, OSError, Image.DecompressionBombError) as error:
             raise HTTPException(422, str(error)) from error
 

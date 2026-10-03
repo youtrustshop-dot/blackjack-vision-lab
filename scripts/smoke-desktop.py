@@ -50,6 +50,7 @@ def main():
     parser.add_argument('--binary', type=Path)
     parser.add_argument('--evidence', type=Path)
     parser.add_argument('--external-image', type=Path, help='Optional private reported-table regression; pixels are not included in evidence')
+    parser.add_argument('--web-image', type=Path, help='Optional private overlapping A+5 side-total regression')
     args = parser.parse_args()
     project = Path(__file__).resolve().parents[1]
     version = tomllib.loads((project/'pyproject.toml').read_text(encoding='utf-8'))['project']['version']
@@ -168,6 +169,15 @@ def main():
                 exact_solver_best_action='double',live_pixel_stages=stages,
                 live_counts_match_public_exposures=True,live_processed_observations=sequence,
                 bundled_roadmap_matches_source=True,source_independent_launch=True)
+            poker=request('/api/poker/equity',{'hole':['AS','KS'],'board':['QS','JS','TS','2H','3D'],'opponents':2,'samples':100,'pot':100,'call_cost':20})
+            assert poker['win']==1 and poker['equity']==1 and poker['showdown_call_ev']==100
+            report['holdem_royal_flush_equity']=poker['equity']
+            if args.web_image:
+                pixels=args.web_image.read_bytes()
+                image=request('/api/advisor/image',{'image_base64':base64.b64encode(pixels).decode(),'rules':{'decks':4}})
+                assert image['player']==['A','5'] and image['dealer']==['2']
+                assert image['advice']['best_action']=='hit' and image['advice']['hand']['total']==16
+                report['overlap_web_regression']={'source':'private user-reported image; pixels not published','player':image['player'],'dealer':image['dealer'],'total':16,'action':'hit'}
             if args.external_image:
                 pixels=args.external_image.read_bytes()
                 image=request('/api/advisor/image',{'image_base64':base64.b64encode(pixels).decode(),'rules':{'decks':4}})
@@ -179,7 +189,7 @@ def main():
                 for i in range(8):
                     current=request('/api/live/'+observer+'/frame?sequence='+str(i)+'&timestamp='+str(i+1),data=pixels)
                     observed.append(current['observed_cards'])
-                assert observed==[0,0,3,3,3,3,3,3]
+                assert observed==[0,0,0,0,3,3,3,3]
                 assert current['advice']['best_action']=='double' and current['running_count']==2
                 report['external_pixel_regression']={'source':'private user-provided diagnostic screenshot','source_sha256':hashlib.sha256(pixels).hexdigest(),
                     'image_action':image['advice']['best_action'],'live_action':current['advice']['best_action'],

@@ -106,6 +106,72 @@ const versionOneItalian:Record<string,string>={
  'Independent-draw reference; finite deck composition and count deviations are compared separately. Single-deck composition can differ. These calculations run locally and need no online chart lookup.':'Riferimento con estrazioni indipendenti; composizione finita e deviazioni di conteggio sono confrontate separatamente. Con un solo mazzo la composizione può cambiare il risultato. I calcoli sono locali e non richiedono ricerche online.',
  'ESSENTIAL PROGRAMS':'PROGRAMMI ESSENZIALI','A small core. Optional extras.':'Un nucleo semplice. Strumenti facoltativi.','OPTIONAL · CLEF':'FACOLTATIVO · CLEF','Local scene classification':'Classificazione locale della scena','Checking…':'Verifica…','Check local Clef runtime':'Verifica Clef locale','Installation & hardware notes':'Installazione e requisiti hardware','OPTIONAL · BROWSER EXTENSION':'FACOLTATIVO · ESTENSIONE BROWSER','A quick tab image':'Un’immagine rapida della scheda','Extension source & setup':'Sorgenti e configurazione estensione','Optional Clef scene check':'Verifica scena con Clef facoltativa','Classifying…':'Classificazione…','Classify this image with Clef':'Classifica questa immagine con Clef','Visual monitor':'Monitoraggio visivo',
 };
+const reliabilityItalian:Record<string,string>={
+"Understand the hand. Measure equity.":"Comprendi la mano. Misura l’equity.","Texas Hold’em with ranks, suits and explicit opponent ranges.":"Texas Hold’em con valori, semi e range avversari espliciti.","Drag a rectangle around your two hole cards.":"Trascina un rettangolo intorno alle tue due carte.","Drag a rectangle around the community-card area.":"Trascina un rettangolo intorno alle carte comuni.","Frames monitored:":"Fotogrammi monitorati:","· Card analyses:":"· Analisi delle carte:","· Hole:":"· Carte personali:","· Board:":"· Board:","High card":"Carta alta","One pair":"Coppia","Two pair":"Doppia coppia","Three of a kind":"Tris","Straight":"Scala","Flush":"Colore","Full house":"Full","Four of a kind":"Poker","Straight flush":"Scala colore","opponent(s)":"avversario/i","95% sampling interval:":"Intervallo di campionamento 95%:","Explicit equally weighted combinations where supplied; otherwise uniformly random unknown hands.":"Combinazioni esplicite con pari peso quando inserite; altrimenti mani sconosciute casuali uniformi.","hole":"carte personali",
+"Independent Clef verification (experimental)":"Verifica indipendente con Clef (sperimentale)","Independent Clef image verification":"Verifica indipendente dell’immagine con Clef","Verify this table with Clef":"Verifica questo tavolo con Clef","Stop & save video":"Ferma e salva video","Texas Hold’em · calibrated vision":"Texas Hold’em · visione calibrata","Optionally save the selected video and observed events on this computer. Recording is off by default. No video is sent to an external service.":"Puoi salvare il video selezionato e gli eventi su questo computer. La registrazione è disattivata all’avvio. Nessun video viene inviato a servizi esterni.",
+ "Texas Hold’em lab": "Laboratorio Texas Hold’em",
+ "Read the hand. Compare the possibilities.": "Leggi la mano. Confronta le possibilità.",
+ "CALIBRATED POKER VISION · EXPERIMENTAL": "VISIONE POKER CALIBRATA · SPERIMENTALE",
+ "Select your two hole cards and the community-card area. The same regions stay active throughout the video. Unsupported suits stay unknown.": "Seleziona le tue due carte e l’area delle carte comuni. Le regioni restano attive durante il video. I semi non riconosciuti rimangono sconosciuti.",
+ "Share poker screen": "Condividi schermo poker",
+ "Choose poker image": "Scegli immagine poker",
+ "Stop poker video": "Ferma video poker",
+ "Poker shared video": "Video poker condiviso",
+ "Poker table for region calibration": "Tavolo poker per calibrare le regioni",
+ "Select hole cards": "Seleziona carte personali",
+ "Select community cards": "Seleziona carte comuni",
+ "Analyze poker source": "Analizza sorgente poker",
+ "Pause poker analysis": "Pausa analisi poker",
+ "Select both your hole-card region and the community-card region.": "Seleziona sia la regione delle carte personali sia quella delle carte comuni.",
+ "Both card regions are configured.": "Entrambe le regioni sono configurate.",
+ "Empty board is confirmed as preflop": "Il board vuoto è confermato come preflop",
+ "Choose a PNG, JPEG or WebP image below 8 MiB.": "Scegli un’immagine PNG, JPEG o WebP inferiore a 8 MiB.",
+ "Cards confirmed": "Carte confermate",
+ "Check the poker table": "Verifica il tavolo poker",
+ "Export poker events": "Esporta eventi poker",
+ "Calibrated card recognition and showdown equity only. Pot size, betting turn, stacks, rake and side pots require explicit input. A complete poker action advisor is a separate roadmap item.": "Riconoscimento calibrato delle carte ed equity allo showdown. Piatto, turno di puntata, stack, rake e piatti laterali richiedono informazioni esplicite. Il consigliere completo per le azioni poker è una voce separata della roadmap.",
+ "TEXAS HOLD’EM · SHOWDOWN EQUITY": "TEXAS HOLD’EM · EQUITY ALLO SHOWDOWN",
+ "Your two cards": "Le tue due carte",
+ "Board: flop, turn or river": "Board: flop, turn o river",
+ "Opponents": "Avversari",
+ "Pot before your call": "Piatto prima del tuo call",
+ "Cost to call": "Costo del call",
+ "Samples": "Campioni",
+ "Enter ranks and suits: AS, 10H, K♦. Choose the opponents and include known dead cards. Hidden cards are sampled, never inferred.": "Inserisci valori e semi: AS, 10H, K♦. Seleziona gli avversari e includi le carte note escluse. Le carte nascoste vengono campionate, senza inventarle.",
+ "Known dead cards and opponent ranges": "Carte note escluse e range avversari",
+ "Known dead cards": "Carte note escluse",
+ "Optional explicit ranges (JSON)": "Range espliciti facoltativi (JSON)",
+ "One list per opponent. Each two-card combination has equal weight. Use null for a uniformly random opponent. Known-card blockers are removed automatically.": "Una lista per avversario. Ogni combinazione di due carte ha lo stesso peso. Usa null per un avversario casuale uniforme. Le combinazioni incompatibili con le carte note vengono escluse.",
+ "Calculating equity…": "Calcolo equity…",
+ "Calculate equity": "Calcola equity",
+ "EQUITY · EXPLICIT ASSUMPTIONS": "EQUITY · IPOTESI ESPLICITE",
+ "Configure the hand": "Configura la mano",
+ "Win": "Vittoria",
+ "Tie": "Parità",
+ "Loss": "Sconfitta",
+ "Pot odds": "Pot odds",
+ "Showdown call EV": "EV del call allo showdown",
+ "Equity is your expected share of the pot at showdown. It is not an optimal betting decision. Future betting, rake and side pots need a separate model.": "L’equity è la quota attesa del piatto allo showdown. Non determina una puntata ottimale. Puntate future, rake e piatti laterali richiedono un modello separato.",
+ "Clef is checking the captured table…": "Clef sta verificando il tavolo acquisito…",
+ "Clef agrees with the visible hand": "Clef concorda con la mano visibile",
+ "Visual disagreement — confirm the cards": "Letture visive discordanti: conferma le carte",
+ "Clef unavailable": "Clef non disponibile",
+ "Clef verification inconclusive": "Verifica Clef inconclusiva",
+ "Independent Clef verification": "Verifica indipendente con Clef",
+ "Experimental second check. Model scores are not recognition accuracy or outcome probabilities.": "Seconda verifica sperimentale. I punteggi del modello non misurano l’accuratezza né la probabilità degli esiti.",
+ "Inspect visual evidence": "Esamina evidenza visiva",
+ "Start the separate local Clef runtime on port 9051.": "Avvia Clef locale separatamente sulla porta 9051.",
+ "Verify this image independently with Clef": "Verifica questa immagine indipendentemente con Clef",
+ "Verifying…": "Verifica…",
+ "Independent visual verification": "Verifica visiva indipendente",
+ "Local video replay": "Replay video locale",
+ "Record video locally": "Registra video localmente",
+ "Stop and save video": "Ferma e salva video",
+ "Nothing is recorded by default. The selected video is saved locally as WebM, with timing metadata; maximum 200 MiB.": "La registrazione è disattivata all’avvio. Il video selezionato viene salvato localmente in WebM con i tempi; massimo 200 MiB.",
+ "Frames monitored": "Fotogrammi monitorati",
+ "Card analyses": "Analisi delle carte",
+ "Capture continuity is incomplete. Count estimates are unavailable.": "La continuità della cattura è incompleta. Le stime del conteggio non sono disponibili."
+};
 // Legacy labels use Italian keys. New features use English keys; both translate.
 const primary=new Map<string,string>(),secondary=new Map<string,string>();
 let englishKeys=false;
@@ -114,7 +180,7 @@ for(const [key,value] of Object.entries(messages)){
  const it=(englishKeys?value:key).trim(),en=(englishKeys?key:value).trim();
  primary.set(it,en);if(!secondary.has(en))secondary.set(en,it);
 }
-for(const [en,it] of Object.entries({...liveItalian,...versionOneItalian})){primary.set(it,en);secondary.set(en,it)}
+for(const [en,it] of Object.entries({...liveItalian,...versionOneItalian,...reliabilityItalian})){primary.set(it,en);secondary.set(en,it)}
 export function t(text:string):string{
  const raw=text.trim();
  let translated=language==='en'?(primary.get(raw)||raw):(secondary.get(raw)||raw);

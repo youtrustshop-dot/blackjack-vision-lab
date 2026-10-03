@@ -17,6 +17,22 @@ from .vision import CardDetection, TemplateCardDetector, _rgb
 OCR_RANK_MIN_SCORE = .80
 
 
+def integrity_reasons(context, detections):
+    reasons = []
+    totals_by_zone = context.get('player_totals', {})
+    if context.get('phase') == 'player' and not totals_by_zone:
+        reasons.append('The player total could not be verified. Enlarge the shared game window.')
+    for zone, totals in totals_by_zone.items():
+        ranks = [d.rank for d in detections if d.zone == zone and d.rank and not d.face_down]
+        if not ranks or hand_value(ranks)[0] not in totals:
+            reasons.append('The recognized cards do not match the visible hand total. Enlarge or recalibrate the table.')
+    if context.get('active_hand_ambiguous'):
+        reasons.append('Several player hands are visible. Confirm the active hand manually.')
+    if context.get('phase') == 'player' and any(d.face_down for d in detections if d.zone.startswith('player')):
+        reasons.append('A player card is face down or unreadable.')
+    return reasons
+
+
 def _contours(mask):
     return cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[0]
 
@@ -64,13 +80,13 @@ class ClassicCasinoDetector:
             else:
                 continue
             bodies.append((bx, by, bw, bh, zone))
-            top_height = max(10, round(bh*.18))
+            top_height = max(14, round(bh*.30))
             local = rgb[by:by+top_height, bx:bx+bw]
             ink = (cv2.cvtColor(local, cv2.COLOR_RGB2GRAY) < 130).astype(np.uint8)*255
             boxes = []
             for cc in _contours(ink):
                 ix, iy, iw, ih = cv2.boundingRect(cc)
-                if max(5, bh*.045) <= ih <= bh*.15 and 2 <= iw <= bh*.20 and 2 <= iy <= bh*.12:
+                if max(5, bh*.045) <= ih <= bh*.23 and 2 <= iw <= bh*.25 and 1 <= iy <= bh*.16:
                     boxes.append((ix, iy, iw, ih))
             boxes.sort()
             groups = []
@@ -96,7 +112,26 @@ class ClassicCasinoDetector:
                 left = max(bx, bx+ix-round(bh*.05))
                 box = (left, by, min(round(bh*.80), rgb.shape[1]-left), bh)
                 if all(abs(left-d.bbox[0]) > bh*.20 or zone != d.zone for d in marks):
-                    marks.append(CardDetection(rank, None, box, score, zone=zone, score_type="ocr_token_score"))
+                    from .suit_symbols import read_suit
+                    sy=by+iy+ih+max(2,round(bh*.015))
+                    sx=max(0,bx+ix-round(bh*.035))
+                    symbol=rgb[sy:sy+round(bh*.18),sx:sx+round(bh*.23)]
+                    marks.append(CardDetection(rank, read_suit(symbol), box, score, zone=zone, score_type="ocr_token_score"))
+
+        # A patterned card back is a physical exposure with unknown rank.
+        # It changes the draw-pile size, but never the Hi-Lo running count.
+        red=cv2.inRange(hsv,np.array([0,100,100],np.uint8),np.array([9,255,255],np.uint8)) | cv2.inRange(hsv,np.array([170,100,100],np.uint8),np.array([179,255,255],np.uint8))
+        red=cv2.morphologyEx(red,cv2.MORPH_CLOSE,np.ones((max(3,w//150)|1,max(3,w//150)|1),np.uint8))
+        for contour in _contours(red):
+            bx,by,bw,bh=cv2.boundingRect(contour)
+            if not (x+w*.12<bx<x+w*.78 and y<=by<y+h*.82 and h*.10<bh<h*.42 and .4<bw/bh<.9):
+                continue
+            if cv2.contourArea(contour)<bw*bh*.65:
+                continue
+            zone='dealer' if by<y+h*.30 else 'player:0' if by>y+h*.40 else None
+            if zone:
+                marks=[d for d in marks if not (bx<=d.bbox[0]<bx+bw and d.zone==zone)]
+                marks.append(CardDetection(None,None,(bx,by,bw,bh),1.,face_down=True,zone=zone,score_type='visible_card_back'))
 
         # Visible dark-blue message and total badges belong to this table only.
         blue = cv2.inRange(hsv, np.array([90,50,20],np.uint8), np.array([135,255,210],np.uint8))
@@ -170,18 +205,16 @@ class ClassicCasinoDetector:
         elif any('your turn' in t for t in messages) or ('hit' in controls and 'stand' in controls):
             self.context["phase"]="player"
 
+        from .table_labels import read_side_total_context
+        side_context = read_side_total_context(rgb, (x,y,w,h))
+        if side_context:
+            self.context.update(side_context)
+            self.last_diagnostics['profile'] = side_context['profile']
+
         # Totals are independent visible evidence: a missed card must not yield advice.
-        reasons=[]
-        if self.context["phase"] == "player" and not player_badges:
-            reasons.append("The player total could not be verified. Enlarge the shared game window.")
+        reasons=integrity_reasons(self.context, marks)
         if len([d for d in marks if d.zone == 'dealer']) == 0 and any(b[4] == 'dealer' for b in bodies):
             reasons.append("The dealer upcard could not be read. Enlarge the shared game window.")
-        for zone,totals in self.context["player_totals"].items():
-            ranks=[d.rank for d in marks if d.zone==zone]
-            if ranks and hand_value(ranks)[0] not in totals:
-                reasons.append("The recognized cards do not match the visible hand total. Enlarge or recalibrate the table.")
-        if self.context.get("active_hand_ambiguous"):
-            reasons.append("Several player hands are visible. Confirm the active hand manually.")
         self.context["reasons"]=reasons
         self.last_diagnostics.update(detections=len(marks), latency_ms=(time.perf_counter()-started)*1000,
             score_semantics="OCR token scores, not calibrated correctness probabilities", table_found=True)
@@ -198,7 +231,19 @@ class AdaptiveCardDetector:
 
     def detect(self,image):
         lab=self.lab.detect(image)
-        external=self.classic.detect(image)
+        rgb=_rgb(image)
+        scale=2 if rgb.shape[1]<800 else 1
+        external=self.classic.detect(cv2.resize(rgb,None,fx=scale,fy=scale,interpolation=cv2.INTER_CUBIC) if scale!=1 else image)
+        if scale!=1:
+            external=[CardDetection(d.rank,d.suit,tuple(v/scale for v in d.bbox),d.score,
+                face_down=d.face_down,zone=d.zone,score_type=d.score_type) for d in external]
+            if self.classic.context.get('table_bounds'):
+                self.classic.context['table_bounds']=[round(v/scale) for v in self.classic.context['table_bounds']]
+                from .table_labels import read_side_total_context
+                native_context=read_side_total_context(rgb,self.classic.context['table_bounds'])
+                if native_context:
+                    self.classic.context.update(native_context)
+                    self.classic.context['reasons']=integrity_reasons(self.classic.context, external)
         strong_lab=[d for d in lab if d.rank and d.score>=.90]
         # A small lab preview must not hide a larger external table in a desktop share.
         bounds=self.classic.context.get('table_bounds')

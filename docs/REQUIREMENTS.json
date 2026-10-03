@@ -2,8 +2,8 @@
   "schema_version": 1,
   "progress_report": "docs/STATUS.md",
   "verification": {
-    "completed_test_run": "282 tests + 10 subtests passed in 30.32s",
-    "frontend_build": "TypeScript/Vite passed",
+    "completed_test_run": "370 tests + 10 subtests passed in 56.37s",
+    "frontend_build": "34 frontend tests; TypeScript/Vite passed",
     "browser_primary_flows": 7,
     "browser_advanced_flows": 5,
     "latest_changes_require_retest": false,
@@ -24,7 +24,7 @@
     },
     "version": "1.0.0",
     "frontend_tests": "23 tests passed",
-    "release_evidence": "release/v1.0.0/: manifest.json, backend-smoke.json, native-smoke.json, installer-smoke.json, installer-native-smoke.json; portable archive SHA256/CRC verification",
+    "release_evidence": "release/v1.1.0/",
     "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
     "historical_v0_2": {
       "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
@@ -32,7 +32,41 @@
       "native_desktop_build_verified": true,
       "frozen_backend_verified": true,
       "release_verified": true
-    }
+    },
+    "historical_v1_0_verification": {
+      "completed_test_run": "282 tests + 10 subtests passed in 30.32s",
+      "frontend_build": "TypeScript/Vite passed",
+      "browser_primary_flows": 7,
+      "browser_advanced_flows": 5,
+      "latest_changes_require_retest": false,
+      "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
+      "native_desktop_build_verified": true,
+      "frozen_backend_verified": true,
+      "release_verified": true,
+      "historical_v0_1": {
+        "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
+        "frontend_build": "passed",
+        "browser_primary_flows": 7,
+        "browser_advanced_flows": 5,
+        "latest_changes_require_retest": false,
+        "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
+        "native_desktop_build_verified": true,
+        "frozen_backend_verified": true,
+        "release_verified": true
+      },
+      "version": "1.0.0",
+      "frontend_tests": "23 tests passed",
+      "release_evidence": "release/v1.0.0/: manifest.json, backend-smoke.json, native-smoke.json, installer-smoke.json, installer-native-smoke.json; portable archive SHA256/CRC verification",
+      "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
+      "historical_v0_2": {
+        "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
+        "frontend_build": "passed",
+        "native_desktop_build_verified": true,
+        "frozen_backend_verified": true,
+        "release_verified": true
+      }
+    },
+    "clef_visual_evidence": "docs/CLEF_VISUAL_VERIFICATION.json"
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",
   "requirements": [
@@ -422,18 +456,60 @@
       "description": "Pinned optional CUDA classifier and offline-safe loopback bridge",
       "evidence": "tests/test_model_api.py; docs/CLEF_VERIFICATION.json; actual pinned CUDA text/image inference and warm loopback bridge; experimental scene scope only",
       "status": "verified"
+    },
+    {
+      "id": "whole_game_memory",
+      "milestone": "R4",
+      "description": "Stable external rounds, separate active cards/history and missed-exposure count gates",
+      "evidence": "tests/test_side_vision.py; tests/test_reliability.py",
+      "status": "verified"
+    },
+    {
+      "id": "frame_monitor",
+      "milestone": "R6",
+      "description": "Every browser-delivered advancing frame has lightweight motion monitoring; optional local video export",
+      "evidence": "ui/tests/live-loop.test.mjs; ui/tests/visual-evidence.test.mjs; ui/tests/session-recording.test.mjs",
+      "status": "verified"
+    },
+    {
+      "id": "clef_visual",
+      "milestone": "R7",
+      "description": "Independent captured-image verification, obsolete-answer rejection and disagreement gate",
+      "evidence": "docs/CLEF_VISUAL_VERIFICATION.json; tests/test_model_api.py; ui/tests/visual-evidence.test.mjs",
+      "status": "verified"
+    },
+    {
+      "id": "holdem_equity",
+      "milestone": "R9",
+      "description": "Independent 52-card ranking, explicit ranges and showdown equity",
+      "evidence": "tests/test_poker.py; docs/POKER.md",
+      "status": "verified"
+    },
+    {
+      "id": "holdem_vision",
+      "milestone": "R10",
+      "description": "Calibrated hole/board regions with temporal stability; full betting-state OCR pending",
+      "evidence": "tests/test_poker_vision.py; ui/tests/poker-session.test.mjs",
+      "status": "partial"
+    },
+    {
+      "id": "heldout_provider_sessions",
+      "milestone": "R8",
+      "description": "Disjoint licensed full-session evaluation and final count drift",
+      "evidence": "docs/RELIABILITY.md",
+      "status": "pending"
     }
   ],
   "model_rollout": {
     "current_scope": "deterministic engine and perception baseline",
     "laya": "Prepared; actual integration/benchmark deferred by the user until later.",
     "jev": "inactive; not requesting credentials",
-    "clef": "Separate pinned CUDA environment and model installed; actual text/image inference and warm bridge passed. Occasional experimental scene classifier; not a real-time rank detector."
+    "clef": "Optional independent table/card verifier, eleven actual visual experiments; uncertainty and latency retained."
   },
   "acceptance_scope": {
     "required_system": "Controlled simulator, recorded single-round lab-artwork clips, screenshots, deterministic math and research validation layer.",
     "conditional_research": "Unavailable vendor models and unsupported legacy reference execution remain recorded; they are not fabricated or core dependencies.",
     "laya_user_deferral": "Add Laya later.",
-    "limitations": "Unstable/stale pixels require confirmation; arbitrary card graphics and poker strategy are not validated. Immediate basic policy remains available for valid declared player states. Finite optima retain their declared budget; optional classifier is separate."
+    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Hold’em calibrated cards/ranking/equity are implemented."
   }
 }

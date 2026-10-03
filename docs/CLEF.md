@@ -30,10 +30,12 @@ row calculation while reducing resident RAM and VRAM use. It is an
 experimental configuration, not an upstream performance certification or a
 lossless equivalent of full-precision inference.
 
-**Programs & extensions → Check local Clef runtime** checks readiness. **Image &
-manual advice → Optional Clef scene check** classifies the supplied image. Its
-result remains separate from mathematical advice and card counts. Classifier
-confidence is never described as a probability of winning.
+**Programs & extensions → Check local Clef runtime** checks readiness. **Image & manual advice → Independent Clef verification** and the optional
+live checkbox ask fixed questions about the captured table, ranks, card count and
+phase. `/verify` also supports individual rank/suit checks. Confident disagreement
+clears guidance; uncertainty stays visible. The model never writes card counts.
+[Visual experiment evidence](CLEF_VISUAL_VERIFICATION.json) and
+[architecture and boundaries](RELIABILITY.md) describe the 1.1 implementation.
 
 An independent test records load time, GPU/VRAM and text/image results:
 
@@ -82,3 +84,12 @@ budget; the subsequent warm status and classification request passed.
 The two `UNEXPECTED` vocabulary keys in the Transformers report are intentional:
 their unchanged rows are supplied by the read-only checkpoint adapter. No other
 missing or unexpected model keys were reported. Quantization remains approximate.
+
+## Visual verification — 1.1.0
+
+The new eleven-case experiment checks four tables, four individual corners and
+three negative images. The annotated raw choices matched, while several fields
+were below the 0.90 acceptance threshold. Warm table roundtrips took 3.2–4.2
+seconds; the first request took 54.5 seconds. Unknown, occluded and malformed
+answers cannot confirm a hand. At most four player cards are checked per table.
+This is development evidence, not a held-out accuracy or dense-video benchmark.
