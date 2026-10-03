@@ -157,4 +157,3 @@ These gates are targets, not achieved results. Evidence can reject a candidate;
 it must never remove hard cases from the denominator. Prior champion stays
 available for rollback. Poker Phase 0 remains intact; new poker strategic features
 are deferred while common vision is evaluated.
-
