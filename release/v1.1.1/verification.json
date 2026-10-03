@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "version": "1.1.1",
+  "status": "pass",
+  "verified_at": "2026-10-03T18:50:21.687367+00:00",
+  "source_commit": "df39d5821ae274a276861525859ac3d87d73a55b",
+  "checks": [
+    "Frozen executable launches without Python/Node paths",
+    "Bundled modules, UI and docs match current source",
+    "Actual progressive live estimates and controlled count/reveal/next-round checks",
+    "Private A+5 overlap image remains soft 16 with Hit",
+    "Portable native launch/backend ownership/shutdown",
+    "Fresh workspace installer launch and uninstall",
+    "Final smoke reports bind to the manifest executable hashes"
+  ],
+  "source_verification": "docs/LIVE_RELIABILITY_VERIFICATION.json",
+  "source_verification_sha256": "6bd25b9a37095506d400cde8e3808ebf23fa2061c1567a09e3a1e0325147f21e",
+  "artifact_manifest_sha256": "1f8274602cccea7a23a320f5533d6b4859cea98cf5cefb58995fec8ed9e6c89f",
+  "report_sha256": {
+    "backend-smoke.json": "ee35ce922c502ccae3af0cfe178dc56d4b4dc1d568cbeaa50c58231d25519605",
+    "native-smoke.json": "209e67dde1dd38a4543bd8b029baf4f64ac961d5944bf87c92189de0cd147dd2",
+    "installer-smoke.json": "21fa3862e099c712737037a959b33e1c981bdeb341b7d99d65a3529fe8007d0f",
+    "installer-native-smoke.json": "0082ac43673f522a814a04902198f79bdf1f88a42e7488844a2eb4e7d2a23dcc"
+  },
+  "source_hashes_checked": 32,
+  "not_verified": [
+    "User-selected display picker",
+    "Detached OS advisor dragging and mixed monitor DPI",
+    "Held-out external provider full-session recognition",
+    "Perfect shoe reconstruction",
+    "Profitability"
+  ],
+  "development_failure_retained": "experiments/live_reliability/desktop-concurrent-cleanup-failure.json",
+  "final_windows_tests": "Native and installer smoke executed sequentially; unrelated WebView2 processes left untouched"
+}

@@ -1,0 +1,126 @@
+{
+  "version": "1.1.1",
+  "binary": "bjlab-backend.exe",
+  "sha256": "a1521f6af640c31c151ff929aea4eda5adbdcd88d550d35dd4b5e2677d278613",
+  "mode": "frozen-backend",
+  "runtime_path": "Windows System32 only; no Python/Node/Rust paths",
+  "personal_display_picker_selected": false,
+  "self_test": {
+    "event": "self_test",
+    "status": "ok",
+    "frozen": true,
+    "numpy": "2.5.3",
+    "opencv": "5.0.0",
+    "onnxruntime": "1.30.0",
+    "ocr_model_sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+    "offline_card_ocr_self_test": "10",
+    "third_party_notices_bundled": true,
+    "build_provenance": {
+      "version": "1.1.1",
+      "source_sha256": {
+        "bjlab/engine.py": "3b9b68f6f6d124f17c7d1e6895ce149eb42ab66b06e1ab6e39545d078b5035ba",
+        "bjlab/solver.py": "a219f3d90f82bd4dd22c4f3cafde5001577c86732859b88c9b682577a42f6397",
+        "bjlab/strategy.py": "bf36116f0a8bf89008eafe87c3ec29a4e04c5cf96b997fb870fc802f3dbe9741",
+        "bjlab/api.py": "6d3a0f2a9ed2a1a408d93ace8b8f4abdfdbd3ae78ea57181ee8c2376281408c1",
+        "bjlab/live.py": "e2645734f0bfa14a70e655f5ac1feabfc066ef7e4a4782fae94f18d8dd88bd65",
+        "bjlab/live_api.py": "b535b13d10a702032c4089098b02196ef4a340d2058767b6ccf8cfb5fd8de737",
+        "bjlab/advice.py": "626aed67d9255488c0f07df56c70656f2d1f09b23f42f067207c9a39fdf04683",
+        "bjlab/advisor_api.py": "f2c7c9570c6faaddf9a2c4541fb146c39ccc6f28d9b16189a4e9a091a106e518",
+        "bjlab/model_api.py": "983bcfc958b459bb510b60011d6c20a6215933fb20edc392ebc835e4eecc14a1",
+        "bjlab/simulator.py": "2f12e895f4f0dcae4c60826d4f42109cc98f35a4510b11a44e58fe08c75d5707",
+        "bjlab/vision.py": "b6dce7fb5686d5788f06bcefc5905e675e7fd98de69d378cb5a89cbd7a129729",
+        "bjlab/external_vision.py": "1f1e40af4db294d10136ae22535348822a79d9dd8e434bc0adefd85994685ff8",
+        "bjlab/ocr.py": "97e279cfc8c3872efba841b536e883202c485f83757420b96561e1f2cc78e44e",
+        "bjlab/assets/ocr/ch_PP-OCRv4_rec_infer.onnx": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+        "desktop_launcher.py": "d8aba3bc7c01729ce09ae31f4fde65a91aec0c00ea66715d097dc87ef27536a0",
+        "ui/src-tauri/src/main.rs": "2d3e929582c73fbfffcb735d48dc2d1ed8cc59d09f95edbf113bcdffcdf8201a",
+        "ui/src-tauri/Cargo.toml": "1ebe31d1ed9cb01879f6509e17f3f2382ce162d84476e8bddb1e774372a31dc0",
+        "ui/src-tauri/tauri.conf.json": "cfc25dab831706bbdacd5d843a95d12a2c8e863b39c0be870c511afa3d01ff4d",
+        "ui/dist/index.html": "7355adaf0785bc5aad06258ec1a61e55b7c923e9208538fac7b4ee31f9a2b5fe",
+        "docs/REQUIREMENTS.json": "078b14a5c7bc678592b5f181dd8cf21a09d4238e6bde56475e5864a043341c64",
+        "bjlab/live_work.py": "43e089351586d6333c89bb0ee2f060463f4c7e060f61415f4af7c3e12dbea445",
+        "bjlab/evidence.py": "92bf85f86c9e936af3e42d133cf9db307dad1fd3ba7235e000e9318ceab7b587",
+        "ui/src/live-analysis.ts": "b450d3211be8d6121c2f791a2e0b20e8463d85b6c471a69ec2424d5bffe08f3e",
+        "ui/src/LiveVision.tsx": "fe04a8c20b242728faffece8aa6e75ade4c61df8102656a6c8b9528bc6740c35",
+        "ui/src/App.tsx": "2a43817ed0d9b0f5b0224980eee335ddede04c3c794bfe49d0a1d78b2f87c913",
+        "bjlab/clef_contract.py": "04f151b470b8b907664e69990985d04334a721d682fde93536d8c78c28818d7f",
+        "bjlab/poker.py": "7d57677fe653d3c875f7201e4c95285f7b6e56ff6d718e71fc0a521128a733c3",
+        "bjlab/poker_api.py": "c800106aaf6ffa3a188e43efea7467ee8263f794df6a0d73cd9b0e0378932ea2",
+        "bjlab/poker_vision.py": "93c4555fc30cf1783040c4d0d499b368ec0d370ff3345674fcae2706c2136761",
+        "bjlab/round_lifecycle.py": "8b38f46691a6cc56daf02ecd0d04ddb53bdb4802c75ae1cb10f0b3e859d834b9",
+        "bjlab/table_labels.py": "ca0ba634cb86194461afff528c6bb6d876c091eeb15a266bbe59dfabe24c4d5e",
+        "bjlab/suit_symbols.py": "c9e6fa2ecdefc62ca2634b6ef43ed4ac00b64019d0a9a39667cfbe2e41613be8"
+      }
+    },
+    "ui_bundled": true
+  },
+  "initial_live_probability": {
+    "ev": 0.38,
+    "ev_ci95": [
+      0.21520445557319867,
+      0.5447955444268013
+    ],
+    "win": 0.554,
+    "push": 0.082,
+    "loss": 0.364,
+    "win_ci95": [
+      0.5101829628154826,
+      0.5969936084146699
+    ],
+    "samples": 500
+  },
+  "status": "pass",
+  "health": {
+    "status": "ok",
+    "version": "1.1.1",
+    "service": "Blackjack Vision Lab",
+    "local_only": true,
+    "truth_boundary": "debug endpoint excluded from solver inputs"
+  },
+  "ui_matches_build": true,
+  "ui_javascript_sha256": "d9c418da7a5e92ec575639b46ad4602ea8e923e46c3327c5ea6ee01486958abb",
+  "exact_solver_best_action": "double",
+  "live_pixel_stages": [
+    {
+      "round": 1,
+      "phase": "player",
+      "observed_cards": 3,
+      "running_count": 2,
+      "best_action": "double"
+    },
+    {
+      "round": 1,
+      "phase": "settled",
+      "observed_cards": 6,
+      "running_count": 0,
+      "best_action": null
+    },
+    {
+      "round": 2,
+      "phase": "player",
+      "observed_cards": 9,
+      "running_count": 2,
+      "best_action": "hit"
+    }
+  ],
+  "live_counts_match_public_exposures": true,
+  "live_processed_observations": 15,
+  "bundled_roadmap_matches_source": true,
+  "source_independent_launch": true,
+  "holdem_royal_flush_equity": 1.0,
+  "overlap_web_regression": {
+    "source": "private user-reported image; pixels not published",
+    "player": [
+      "A",
+      "5"
+    ],
+    "dealer": [
+      "2"
+    ],
+    "total": 16,
+    "action": "hit"
+  },
+  "graceful_exit_code": 0,
+  "local_port_closed": true,
+  "new_mei_leaks": 0
+}
