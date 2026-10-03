@@ -9,6 +9,7 @@ import sys
 import time
 import uuid
 import winreg
+import tomllib
 
 
 def exists(key):
@@ -23,10 +24,11 @@ def main():
     parser.add_argument('--work',type=Path,required=True)
     args=parser.parse_args()
     release,work=args.release.resolve(),args.work.resolve()
+    version = tomllib.loads((Path(__file__).resolve().parents[1]/'pyproject.toml').read_text(encoding='utf-8'))['project']['version']
     registration=r'Software\Microsoft\Windows\CurrentVersion\Uninstall\Blackjack Vision Lab'
     preference=r'Software\bjlab\Blackjack Vision Lab'
     assert not exists(registration) and not exists(preference),'Existing user installation must not be overwritten'
-    installer=release/'Blackjack Vision Lab_1.0.0_x64-setup.exe'
+    installer=release/f'Blackjack Vision Lab_{version}_x64-setup.exe'
     target=(work/('installer-'+uuid.uuid4().hex)).resolve()
     assert target.is_relative_to(work) and not target.exists()
     work.mkdir(parents=True,exist_ok=True)
@@ -73,7 +75,7 @@ def main():
                 assert remembered==target and winreg.QueryInfoKey(key)[0]==0
             winreg.DeleteKey(winreg.HKEY_CURRENT_USER,preference)
         assert not exists(preference) and not target.exists()
-    report={'status':'pass','version':'1.0.0','installer':installer.name,
+    report={'status':'pass','version':version,'installer':installer.name,
         'installer_sha256':hashlib.sha256(installer.read_bytes()).hexdigest(),
         'installed_file_sha256':hashes,'install_scope':'fresh workspace directory, current user, no shortcuts',
         'existing_user_installation_overwritten':False,'installed_native_proof':evidence.name,

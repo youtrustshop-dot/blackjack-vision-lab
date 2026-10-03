@@ -20,7 +20,7 @@ export async function fetchApi(path:string,options?:RequestInit):Promise<Respons
 }
 export async function api<T=any>(path:string,data?:unknown):Promise<T>{
  const response=await fetchApi(path,{method:data===undefined?'GET':'POST',headers:{'Content-Type':'application/json'},body:data===undefined?undefined:JSON.stringify(data)});
- if(!response.ok){let msg=await response.text();try{const detail=JSON.parse(msg).detail;msg=typeof detail==='string'?detail:JSON.stringify(detail)||msg}catch{}throw new ApiResponseError(msg,response.status)}
+ if(!response.ok){let msg=await response.text();try{const detail=JSON.parse(msg).detail;msg=typeof detail==='string'?detail:Array.isArray(detail)?detail.map(item=>{const field=item.loc?.filter((x:unknown)=>x!=='body').join(' ')||'Input';return field==='player'&&item.type==='too_short'?'Enter at least two player cards, for example 7 2.':field+': '+(item.msg||'Check this value.');}).join(' '):'The request could not be processed. Check the table settings.'}catch{}throw new ApiResponseError(msg,response.status)}
  try{return await response.json()}catch{throw new ApiResponseError('Risposta del backend non valida. Riprova la connessione.',response.status)}
 }
 export function download(name:string,data:unknown,type='application/json'){

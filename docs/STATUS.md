@@ -1,8 +1,25 @@
-# Verified status — 1.0.0
+# Verified status — 1.0.1
+
+Version 1.0.1 fixes automatic recognition of the reported external classic green
+table and empty manual-input errors. Printed ranks, total cross-checks and visible
+controls are recognized offline. [Scope and regressions](EXTERNAL_VISION.md).
+The 1.0.0 checks below remain historical evidence. Current 1.0.1 verification
+is retained separately in `release/v1.0.1/` and GitHub CI.
+
+## 1.0.1 source verification
+
+- 302 Python tests and 10 subtests cover the retained suite plus 20 external
+  printed-card regressions, including a compressed video decoded through OpenCV.
+- 27 frontend tests passed; TypeScript and the production build passed.
+- Actual browser upload of the private reported desktop screenshot recognized
+  7 + 2 versus 6 automatically and displayed Double, total 9, three observed
+  cards and running count +2. Empty inputs displayed a helpful validation message.
+- OCR weights and CPU inference are bundled with source hashes and retained
+  third-party license notices. No cloud credential or GPU is required.
 
 Version 1.0 adds immediate legal recommendations, ace values, a complete offline starting-hand library, separate observers for up to five tables, image/manual input, first-visit setup, rule presets, a dark visual identity and an optional Chromium image extension.
 
-## Current verification
+## Retained 1.0.0 verification
 
 - **282 Python tests + 10 subtests passed** in 30.32 seconds. This includes the finite-pool, replay and independent reference checks plus the new recommendation, ace, image, count-isolation and model-bridge cases.
 - **23 frontend tests passed**. TypeScript and the Vite production build passed.
@@ -14,7 +31,12 @@ Version 1.0 adds immediate legal recommendations, ace values, a complete offline
 
 Basic strategy is available before a finite computation finishes. An unresolved Monte Carlo ranking keeps the configured basic policy as the primary recommendation. A valid recognized turn receives a legal action; unavailable, changing or stale evidence asks for a fresh view or manual confirmation. Unknown pixels never become an invented action.
 
-The included detector is validated on the lab artwork. External card graphics need a separately trained and evaluated detector. Poker/other tables are visual monitors only. Counts cover observed exposures; joining a shoe midway leaves earlier composition unknown. The optional Clef scene classifier does not recognize ranks or compute blackjack decisions.
+The original 1.0 detector was validated only on lab artwork. Version 1.0.1 adds
+the separately reported classic printed-card profile described above; arbitrary
+graphics remain outside that contract. Poker/other tables are visual monitors
+only. Counts cover observed exposures; joining a shoe midway leaves earlier
+composition unknown. The optional Clef scene classifier is separate from card
+recognition and blackjack decisions.
 
 ## Retained evidence
 

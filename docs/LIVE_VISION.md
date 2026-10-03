@@ -1,4 +1,4 @@
-# Continuous live vision — 1.0
+# Continuous live vision — 1.0.1
 
 ## Start and configure
 
@@ -30,7 +30,18 @@ Tables are registered and calibrated explicitly. Automatic detection of arbitrar
 
 ## Tracking and card count
 
-The detector recognizes lab card corners and visible controls. SESSION, SHOE, ROUND, HAND and PHASE are read from pixels. Two distinct observations stabilize context; three stabilize cards. New rounds reset active tracks and retain exposed history. A visible source-session or new-shoe change resets the shoe count.
+The lab detector recognizes lab card corners and visible controls. SESSION, SHOE, ROUND, HAND and PHASE are read from pixels. Two distinct observations stabilize context; three stabilize cards. New rounds reset active tracks and retain exposed history. A visible source-session or new-shoe change resets the shoe count.
+
+The classic casino profile finds the largest green felt, reads printed rank
+corners locally and verifies them against the visible hand total. English turn
+messages and enabled green action buttons supply phase and available actions.
+It supports the external table reported in issue diagnostics, including a full
+desktop image with smaller duplicate previews. Sharing the game window gives
+the clearest input. No calibration is needed for this profile. A settled-to-player
+transition or three clear observations starts a new round while retaining the
+observed count. External shuffles must be declared; pixels cannot establish an
+unseen shuffle. Multiple player hands currently require manual active-hand
+confirmation. [Recognition scope and tests](EXTERNAL_VISION.md).
 
 Hi-Lo adds +1 for 2–6, 0 for 7–9 and −1 for tens/aces. Every confirmed exposure counts once. True count divides by estimated physical decks remaining. Declare **Observe from a new shoe** only when the complete shoe has really been observed. Restarting observation mid-game labels the count partial unless a new shoe is explicitly declared.
 
@@ -48,7 +59,7 @@ The Hi-Lo index action is a reference comparison, with count-history reliability
 
 ## Images and floating advisor
 
-**Image & manual advice** accepts pasted, dropped or uploaded PNG/JPEG/WebP images. Lab artwork can be read automatically; other artwork needs confirmed player/dealer cards. Advanced confirmation accepts split context and an observed-card list including current cards. One image supplies no temporal history.
+**Image & manual advice** accepts pasted, dropped or uploaded PNG/JPEG/WebP images. Lab artwork and compatible classic casino tables can be read automatically; other artwork needs confirmed player/dealer cards. Blank manual inputs show readable guidance before any request. Unicode suits and common separators are accepted. Advanced confirmation accepts split context and an observed-card list including current cards. One image supplies no temporal history.
 
 Sharing opens a compact translucent advisor. **Pop out advisor** uses Document Picture-in-Picture when supported and requires a user click. The in-page fallback cannot stay over another application. Only the selected table's popup is shown. Advanced details expand EV, intervals, policy/count comparisons and count scope.
 

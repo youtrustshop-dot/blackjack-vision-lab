@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "version": "1.0.1",
+  "installer": "Blackjack Vision Lab_1.0.1_x64-setup.exe",
+  "installer_sha256": "83b80485013b76d6d77ae2fa0c94790cb3099ba344ce6728928fc3cd7cae5715",
+  "installed_file_sha256": {
+    "bjlab-backend.exe": "c515b59c99ca347d368fb3bc758f530cb828c6e11efd6cb232896b15ae7d8252",
+    "WebView2Loader.dll": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5",
+    "blackjack-vision-lab.exe": "61a7ff7a29b57ca63c63032f15ac0132b68737cc1349bb61d6117498d41712a7"
+  },
+  "install_scope": "fresh workspace directory, current user, no shortcuts",
+  "existing_user_installation_overwritten": false,
+  "installed_native_proof": "installer-native-smoke.json",
+  "native_bundle_marker_change": "Only Tauri UNK -> NSS; all other native bytes identical",
+  "install_exit_code": 0,
+  "uninstall_exit_code": 0,
+  "owned_installation_and_registry_entries_removed": true,
+  "test_preference_removed": true
+}

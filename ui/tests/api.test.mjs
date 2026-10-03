@@ -21,3 +21,8 @@ test('non-JSON responses cannot masquerade as a session',async t=>{
  t.mock.method(globalThis,'fetch',async()=>new Response('<html>wrong service</html>',{status:200}));
  await assert.rejects(api('/health'),error=>error instanceof ApiResponseError&&error.message.includes('non valida'));
 });
+
+test('backend card validation is readable instead of exposing Pydantic JSON',async t=>{
+ t.mock.method(globalThis,'fetch',async()=>new Response(JSON.stringify({detail:[{type:'too_short',loc:['body','player'],msg:'List should have at least 2 items after validation',input:['']}]}),{status:422}));
+ await assert.rejects(api('/advisor/manual'),error=>error instanceof ApiResponseError&&error.message==='Enter at least two player cards, for example 7 2.');
+});

@@ -68,7 +68,7 @@ visit(analysis)
 for distribution in sorted(metadata.distributions(), key=lambda item: item.metadata["Name"].lower()):
     name = distribution.metadata["Name"]
     files = distribution.files or ()
-    selected = name.lower() in {"pyinstaller", "pyinstaller-hooks-contrib"} or any(
+    selected = name.lower() in {"pyinstaller", "pyinstaller-hooks-contrib", "onnxruntime", "flatbuffers", "protobuf"} or any(
         str(distribution.locate_file(file)).casefold() in paths for file in files)
     if not selected:
         continue
@@ -87,6 +87,10 @@ inventory.append({"ecosystem": "runtime", "name": "CPython", "version": sys.vers
 font_root = workspace / "work/desktop-toolchain/fonts"
 inventory.append({"ecosystem": "font", "name": "DejaVu Sans", "version": "2.37",
                   "files": [copy(path, "font/" + path.name) for path in notice_files(font_root)]})
+ocr_root = project / "bjlab/assets/ocr"
+inventory.append({"ecosystem": "model", "name": "PaddleOCR PP-OCRv4 recognition via RapidOCR", "version": "RapidOCR 1.4.4",
+                  "license": "Apache-2.0", "source": "https://pypi.org/project/rapidocr-onnxruntime/1.4.4/",
+                  "files": [copy(path, "model/paddleocr/" + path.name) for path in ocr_root.iterdir() if path.suffix in {".txt", ".json", ".md"}]})
 
 # Include the locked Cargo graph (also build-time packages); this is a conservative
 # notice inventory, not a claim that every locked package is linked into the EXE.

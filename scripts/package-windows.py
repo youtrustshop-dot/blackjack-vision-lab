@@ -51,7 +51,8 @@ def main():
             "Windows x64 and Microsoft WebView2 are required; Python and Node are not.\n"
             "English is the default; select Italiano for the secondary language.\n"
             "For live screen sharing, open the local app in Chrome or Edge and keep the desktop app running.\n"
-            "Card recognition is validated on the lab artwork. See docs/LIVE_VISION.md.\n")
+            "Card recognition supports lab artwork and compatible classic green casino tables.\n"
+            "Include the full game window, total badges and English controls. See docs/LIVE_VISION.md.\n")
         for name in ("DESKTOP.md", "STATUS.md", "LIVE_VISION.md", "QUICK_START.md", "CLEF.md"):
             archive.write(ROOT / "docs" / name, "Blackjack Vision Lab/docs/" + name)
         optional = [ROOT / "scripts" / name for name in ("install-clef.ps1", "run-clef.ps1", "clef-runtime.py", "clef_vocabulary.py", "clef-requirements.txt")]

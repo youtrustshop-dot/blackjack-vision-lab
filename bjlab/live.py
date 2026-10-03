@@ -21,7 +21,8 @@ from PIL import Image, ImageDraw
 from .calibration import NormalizedROI, TemplateTextDetector, extract_controlled_metadata, normalize_table
 from .engine import Rules, card_rank, dealer_should_hit, hand_value, is_blackjack, legal_actions, settle
 from .strategy import get_generated_strategy
-from .vision import TemplateCardDetector, TemporalTracker
+from .vision import TemporalTracker
+from .external_vision import AdaptiveCardDetector, OCR_RANK_MIN_SCORE
 from .datasets import card_font, THEMES
 
 
@@ -228,6 +229,9 @@ class LiveObserver:
         self.frame_count = 0
         self.pixel_cache_key = None
         self.pixel_evidence = None
+        self.external_phase_candidate = None
+        self.external_phase_hits = 0
+        self.external_previous_phase = None
 
     def process(self, image: Image.Image, sequence: int, timestamp: float) -> dict:
         with self.lock:
@@ -243,13 +247,17 @@ class LiveObserver:
                 zones = self.zones or {"dealer": (0, 0, 960, 250)} | {
                     f"player:{i}": (30 + i % 2 * 440, 290 + i // 2 * 190, 440, 190)
                     for i in range(8)}
-                self.detector = TemplateCardDetector(zones=zones)
+                self.detector = AdaptiveCardDetector(zones=zones)
             pixel_key = (image.size, image.mode, hashlib.sha256(image.tobytes()).digest())
             if pixel_key != self.pixel_cache_key:
-                self.pixel_evidence = (self.detector.detect(image), self.reader.read(image),
-                                       extract_controlled_metadata(image))
+                detected = self.detector.detect(image)
+                self.pixel_evidence = (detected, {} if self.detector.context else self.reader.read(image),
+                                       extract_controlled_metadata(image), self.detector.context)
                 self.pixel_cache_key = pixel_key
-            detections, context, metadata = self.pixel_evidence
+            detections, context, metadata, external = self.pixel_evidence
+            # Template similarity and OCR token scores have different contracts.
+            # Never silently discard an OCR rank accepted by its profile.
+            self.tracker.minimum_score = OCR_RANK_MIN_SCORE if external else .90
             token = tuple(context.get(k) for k in ("shoe", "round", "hand", "phase", "session"))
             self.context_hits = self.context_hits + 1 if token == self.context_candidate else 1
             self.context_candidate = token
@@ -264,6 +272,22 @@ class LiveObserver:
                 self.round = context["round"]
                 self.phase = context["phase"]
                 self.last_context = context
+            elif external:
+                phase = external['phase']
+                self.external_phase_hits = self.external_phase_hits+1 if phase == self.external_phase_candidate else 1
+                self.external_phase_candidate = phase
+                self.empty_frames = self.empty_frames+1 if not detections else 0
+                if self.empty_frames == 3 and self.tracker.tracks:
+                    self.tracker.end_round(timestamp=timestamp)
+                    self.round += 1
+                if self.external_phase_hits >= 2:
+                    if phase == 'player' and self.external_previous_phase == 'settled' and self.tracker.tracks:
+                        self.round += 1
+                        self.tracker.start_round(str(self.round), timestamp=timestamp)
+                    self.external_previous_phase = phase
+                if not self.round and detections:
+                    self.round = 1
+                self.phase = 'player' if self.manual_turn else phase
             elif not context:
                 # Generic calibrated layout: clear table is an observable boundary.
                 self.empty_frames = self.empty_frames + 1 if not detections else 0
@@ -281,6 +305,7 @@ class LiveObserver:
                           for rank, count in summary["known_rank_counts"].items())
             remaining = summary["physical_remaining"]
             reasons = list(summary["gate"]["reasons"])
+            reasons.extend(external.get('reasons', []) if external else [])
             if context and not context_stable:
                 reasons.append("Visible round context is changing; waiting for stable video evidence.")
             if self.detector.last_diagnostics["rejected_card_candidates"]:
@@ -290,10 +315,14 @@ class LiveObserver:
             player = sorted([c for c in cards if c.get("zone") in (f"player:{active_index}", "player")],
                             key=lambda c: c.get("bbox", [0])[0])
             dealer = [c for c in cards if c.get("zone") == "dealer" and c.get("rank")]
-            controls = {d["text"].lower().replace(" ", "_") for d in metadata["button_detections"]}
+            controls = set(external['controls']) if external else {d["text"].lower().replace(" ", "_") for d in metadata["button_detections"]}
             split_hands = max(1, len({c.get("zone") for c in cards if str(c.get("zone", "")).startswith("player")}))
             from_split = split_hands > 1
             player_ranks = [c["rank"] for c in player if c.get("rank")]
+            if external and player_ranks:
+                visible_totals=external.get('player_totals',{}).get(f'player:{active_index}',[])
+                if visible_totals and hand_value(player_ranks)[0] not in visible_totals:
+                    reasons.append("Tracked cards do not match the visible hand total. Waiting for fresh card evidence.")
             if len(player_ranks) != len(player):
                 reasons.append("Active player cards are not fully visible.")
             if len(player_ranks) < 2 or len(dealer) != 1:
@@ -358,4 +387,7 @@ class LiveObserver:
                     "player": player_ranks, "dealer": [c["rank"] for c in dealer],
                     "events": [e.to_dict() for e in emitted], "state": summary,
                     "processing_ms": (time.perf_counter() - started) * 1000,
-                    "scope": "lab artwork; other graphics require an independently validated detector"}
+                    "recognition_profile": external.get('profile', 'lab-template') if external else 'lab-template',
+                    "table_bounds": external.get('table_bounds') if external else None,
+                    "visible_controls": sorted(controls),
+                    "scope": "lab artwork and classic green-table printed-rank OCR; unreadable or inconsistent evidence is gated"}

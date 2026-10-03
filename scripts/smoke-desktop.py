@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 from contextlib import contextmanager
 import ctypes
 from ctypes import wintypes
@@ -16,6 +17,7 @@ import subprocess
 import tempfile
 import threading
 import time
+import tomllib
 from urllib.request import Request, urlopen
 
 
@@ -47,8 +49,10 @@ def main():
     parser.add_argument('--native', action='store_true')
     parser.add_argument('--binary', type=Path)
     parser.add_argument('--evidence', type=Path)
+    parser.add_argument('--external-image', type=Path, help='Optional private reported-table regression; pixels are not included in evidence')
     args = parser.parse_args()
     project = Path(__file__).resolve().parents[1]
+    version = tomllib.loads((project/'pyproject.toml').read_text(encoding='utf-8'))['project']['version']
     release, work = args.release.resolve(), args.work.resolve()
     work.mkdir(parents=True, exist_ok=True)
     binary = args.binary.resolve() if args.binary else release / ('Blackjack Vision Lab.exe' if args.native else 'bjlab-backend.exe')
@@ -57,7 +61,7 @@ def main():
         environment.pop(variable,None)
     environment['PATH'] = str(Path(os.environ['SystemRoot'])/'System32')
     environment['BJLAB_FONT_PATH'] = 'invalid-external-font'
-    report = {'version':'1.0.0','binary':binary.name,'sha256':digest(binary),
+    report = {'version':version,'binary':binary.name,'sha256':digest(binary),
               'mode':'native-hidden' if args.native else 'frozen-backend',
               'runtime_path':'Windows System32 only; no Python/Node/Rust paths',
               'personal_display_picker_selected':False}
@@ -68,7 +72,7 @@ def main():
         native_ready=temporary/'native-ready.json'
         if args.native:
             environment.update(BJLAB_DESKTOP_SMOKE='1',BJLAB_NATIVE_READY_FILE=str(native_ready),
-                               BJLAB_NATIVE_SMOKE_EXIT_AFTER_MS='25000')
+                               BJLAB_NATIVE_SMOKE_EXIT_AFTER_MS='45000' if args.external_image else '25000')
             command=[str(binary)]
         else:
             selftest=subprocess.run([str(binary),'--self-test'],cwd=temporary,env=environment,
@@ -76,7 +80,7 @@ def main():
             assert selftest.returncode==0,selftest.stderr
             checked=json.loads(selftest.stdout)
             assert checked['frozen'] and checked['status']=='ok'
-            assert checked['build_provenance']['version']=='1.0.0'
+            assert checked['build_provenance']['version']==version
             for name,expected in checked['build_provenance']['source_sha256'].items():
                 assert digest(project/name)==expected,'Stale recorded source: '+name
             report['self_test']=checked
@@ -121,7 +125,7 @@ def main():
                     payload=response.read()
                     return json.loads(payload) if response.headers.get_content_type()=='application/json' else payload
             health=request('/api/health')
-            assert health['status']=='ok' and health['version']=='1.0.0'
+            assert health['status']=='ok' and health['version']==version
             assert request('/api/roadmap')==json.loads((project/'docs/REQUIREMENTS.json').read_text(encoding='utf-8'))
             html=request('/')
             assert html==(project/'ui/dist/index.html').read_bytes()
@@ -164,6 +168,24 @@ def main():
                 exact_solver_best_action='double',live_pixel_stages=stages,
                 live_counts_match_public_exposures=True,live_processed_observations=sequence,
                 bundled_roadmap_matches_source=True,source_independent_launch=True)
+            if args.external_image:
+                pixels=args.external_image.read_bytes()
+                image=request('/api/advisor/image',{'image_base64':base64.b64encode(pixels).decode(),'rules':{'decks':4}})
+                assert image['player']==['7','2'] and image['dealer']==['6']
+                assert image['advice']['best_action']=='double' and image['observed_cards']==3
+                assert image['recognition_profile']=='classic-casino-ocr'
+                observer=request('/api/live',{'rules':{'decks':4},'samples':500})['stream_id']
+                observed=[]
+                for i in range(8):
+                    current=request('/api/live/'+observer+'/frame?sequence='+str(i)+'&timestamp='+str(i+1),data=pixels)
+                    observed.append(current['observed_cards'])
+                assert observed==[0,0,3,3,3,3,3,3]
+                assert current['advice']['best_action']=='double' and current['running_count']==2
+                report['external_pixel_regression']={'source':'private user-provided diagnostic screenshot','source_sha256':hashlib.sha256(pixels).hexdigest(),
+                    'image_action':image['advice']['best_action'],'live_action':current['advice']['best_action'],
+                    'player':current['player'],'dealer':current['dealer'],'running_count':current['running_count'],
+                    'observed_cards_per_submission':observed,'profile':current['recognition_profile'],
+                    'scope':'repeated-image HTTP observer test; not a claim about all rounds or graphics'}
             if args.native:
                 code=process.wait(timeout=55)
                 assert code==0 and kernel.WaitForSingleObject(backend_handle,20000)==0

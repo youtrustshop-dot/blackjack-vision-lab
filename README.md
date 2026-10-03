@@ -8,7 +8,7 @@ A local, open-source blackjack simulation and visual analysis lab. Share a scree
 
 ## Start
 
-The [Windows 1.0.0 release](https://github.com/youtrustshop-dot/blackjack-vision-lab/releases/tag/v1.0.0) provides an installer and portable ZIP. Windows x64 and Microsoft WebView2 are required. The packaged app includes its backend; Python, Node and API keys are unnecessary for the core application.
+The [Windows 1.0.1 release](https://github.com/youtrustshop-dot/blackjack-vision-lab/releases/tag/v1.0.1) provides an installer and portable ZIP. Windows x64 and Microsoft WebView2 are required. The packaged app includes its backend and offline OCR model; Python, Node, GPU and API keys are unnecessary for the core application.
 
 For source installation, Python 3.12 and Node.js 22 are useful:
 
@@ -25,10 +25,16 @@ Open the launcher's local address in Chrome / Edge. Keep the launcher or desktop
 
 - **Configure** selects 1, 2, 4, 6 or 8 decks, standard / hit-stand-only / custom play, S17/H17, payout, peek/ENHC, surrender and split/double rules.
 - **Run lab demo** plays a real canvas video stream. The independent observer receives pixels, not hidden cards or the future shoe.
-- **Share screen** opens the browser's screen / window / tab picker. Video keeps playing while the lab samples it automatically. Calibrate each table's four corners. Audio is not requested.
+- **Share screen** opens the browser's screen / window / tab picker. Video keeps playing while the lab samples it automatically. Classic green tables with printed corners, visible total badges and English action buttons are located automatically. Include the whole game window and its controls. Other layouts can use calibration or confirmed cards. Audio is not requested.
 - A compact advisor appears for a shared source. **Pop out advisor** uses a separate always-on-top window where Chromium supports Document Picture-in-Picture. Advanced details stay collapsed.
 - Up to **five independent tables** retain separate histories, rules and counts. One selected display can supply multiple calibrated regions. Poker / other sources have visual monitoring only.
 - **Paste, drop or upload an image**, or confirm cards manually. Optional observed-card lists and split context are explicit inputs. One image cannot reconstruct earlier cards.
+
+Version 1.0.1 fixes the external table recognition failure: the previous detector
+read only lab artwork. A local PaddleOCR/ONNX Runtime adapter now reads printed
+ranks and visible turn/control text. It verifies the player total before giving
+guidance. The reported 7 + 2 versus 6 screenshot produces **Double** without
+manual card entry. See [external recognition evidence](docs/EXTERNAL_VISION.md).
 
 A valid player hand always has an immediate legal basic-policy recommendation. A normal 20 stands; A+7 is displayed as soft 18, with A=11 and alternative total 8. A separated composition estimate can refine the action; overlapping EV intervals retain basic strategy. Unreadable or expired video asks for confirmation / fresh evidence.
 

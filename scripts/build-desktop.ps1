@@ -150,7 +150,7 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
         & $PythonExe (Join-Path $bjProject "ui\src-tauri\build-notices.py")
         Assert-Exit "Third-party runtime and dependency notices"
     }
-    $bjProvenanceFiles = @("bjlab/engine.py", "bjlab/solver.py", "bjlab/strategy.py", "bjlab/api.py", "bjlab/live.py", "bjlab/live_api.py", "bjlab/advice.py", "bjlab/advisor_api.py", "bjlab/model_api.py", "bjlab/simulator.py", "desktop_launcher.py", "ui/src-tauri/src/main.rs", "ui/src-tauri/Cargo.toml", "ui/src-tauri/tauri.conf.json", "ui/dist/index.html", "docs/REQUIREMENTS.json")
+    $bjProvenanceFiles = @("bjlab/engine.py", "bjlab/solver.py", "bjlab/strategy.py", "bjlab/api.py", "bjlab/live.py", "bjlab/live_api.py", "bjlab/advice.py", "bjlab/advisor_api.py", "bjlab/model_api.py", "bjlab/simulator.py", "bjlab/vision.py", "bjlab/external_vision.py", "bjlab/ocr.py", "bjlab/assets/ocr/ch_PP-OCRv4_rec_infer.onnx", "desktop_launcher.py", "ui/src-tauri/src/main.rs", "ui/src-tauri/Cargo.toml", "ui/src-tauri/tauri.conf.json", "ui/dist/index.html", "docs/REQUIREMENTS.json")
     $bjProvenanceHashes = [ordered]@{}
     foreach ($bjRelative in $bjProvenanceFiles) {
         $bjProvenancePath = Join-Path $bjProject $bjRelative
@@ -164,7 +164,7 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
     $bjArgs = @("-m", "PyInstaller", "--noconfirm", "--onefile", "--console",
         "--name", "bjlab-backend", "--distpath", (Join-Path $bjWork "sidecar"),
         "--workpath", (Join-Path $bjWork "pyinstaller-work"), "--specpath", $bjWork,
-        "--paths", $bjProject, "--collect-submodules", "bjlab", "--collect-all", "cv2",
+        "--paths", $bjProject, "--collect-submodules", "bjlab", "--collect-data", "bjlab", "--collect-all", "cv2", "--collect-all", "onnxruntime",
         "--add-data", ((Join-Path $bjProject "ui\dist") + ";ui/dist"),
         "--add-data", ((Join-Path $bjProject "docs") + ";docs"),
         "--add-data", ($bjProvenance + ";assets"),

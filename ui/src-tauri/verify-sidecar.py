@@ -31,6 +31,7 @@ def verify(sidecar: Path, project: Path, expected_path: Path, report_path: Path,
 
     checked_data = 0
     for local, prefix in ((project / "docs", "docs/"), (project / "ui/dist", "ui/dist/"),
+                          (project / "bjlab/assets", "bjlab/assets/"),
                           (project / "ui/src-tauri/licenses", "assets/licenses/"), (fonts, "assets/fonts/")):
         source_files = {prefix + path.relative_to(local).as_posix(): path for path in local.rglob("*") if path.is_file()}
         bundled_files = {name for name in entries if name.startswith(prefix)}

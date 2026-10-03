@@ -1,0 +1,93 @@
+{
+  "version": "1.0.1",
+  "binary": "Blackjack Vision Lab.exe",
+  "sha256": "9941abf21fa066188630be88840efaaf8504c6550a62ac7157b3dfd536b47ccb",
+  "mode": "native-hidden",
+  "runtime_path": "Windows System32 only; no Python/Node/Rust paths",
+  "personal_display_picker_selected": false,
+  "native_window_created": true,
+  "initial_live_probability": {
+    "ev": 0.596,
+    "ev_ci95": [
+      0.43390851556156657,
+      0.7580914844384334
+    ],
+    "win": 0.62,
+    "push": 0.058,
+    "loss": 0.322,
+    "win_ci95": [
+      0.576692489073785,
+      0.6614776692154425
+    ],
+    "samples": 500
+  },
+  "status": "pass",
+  "health": {
+    "status": "ok",
+    "version": "1.0.1",
+    "service": "Blackjack Vision Lab",
+    "local_only": true,
+    "truth_boundary": "debug endpoint excluded from solver inputs"
+  },
+  "ui_matches_build": true,
+  "ui_javascript_sha256": "fa74acab33075f27f9155881197e44b2a4c69deeae9b7ac991887e42db3b1c32",
+  "exact_solver_best_action": "double",
+  "live_pixel_stages": [
+    {
+      "round": 1,
+      "phase": "player",
+      "observed_cards": 3,
+      "running_count": 2,
+      "best_action": "double"
+    },
+    {
+      "round": 1,
+      "phase": "settled",
+      "observed_cards": 6,
+      "running_count": 0,
+      "best_action": null
+    },
+    {
+      "round": 2,
+      "phase": "player",
+      "observed_cards": 9,
+      "running_count": 2,
+      "best_action": "hit"
+    }
+  ],
+  "live_counts_match_public_exposures": true,
+  "live_processed_observations": 15,
+  "bundled_roadmap_matches_source": true,
+  "source_independent_launch": true,
+  "external_pixel_regression": {
+    "source": "private user-provided diagnostic screenshot",
+    "source_sha256": "50456ce709e8a971a67e60542b1211d00a3f32c539b175ba46f25c5ff59e202e",
+    "image_action": "double",
+    "live_action": "double",
+    "player": [
+      "7",
+      "2"
+    ],
+    "dealer": [
+      "6"
+    ],
+    "running_count": 2,
+    "observed_cards_per_submission": [
+      0,
+      0,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "profile": "classic-casino-ocr",
+    "scope": "repeated-image HTTP observer test; not a claim about all rounds or graphics"
+  },
+  "native_exit": "bounded hidden smoke used normal AppHandle Exit path",
+  "owned_backend_exited": true,
+  "graceful_exit_code": 0,
+  "local_port_closed": true,
+  "new_mei_leaks": 0
+}

@@ -65,6 +65,15 @@ def main() -> int:
         detected = TemplateCardDetector().detect(frame)
         if len(detected) != 1 or detected[0].rank != "A":
             raise RuntimeError("Frozen pixel detector self-test failed")
+        from PIL import Image, ImageDraw
+        from bjlab.datasets import card_font
+        from bjlab.ocr import read_text, MODEL_SHA256
+        import onnxruntime as ort
+        text_image=Image.new('RGB',(70,40),'white')
+        ImageDraw.Draw(text_image).text((6,6),'10',font=card_font(22),fill='black',anchor='lt')
+        text,score=read_text(np.asarray(text_image))
+        if text != '10' or score < .94:
+            raise RuntimeError('Frozen offline card OCR self-test failed')
         session = BlackjackSession(Rules(), seed=7)
         session.deal()
         notice_root = Path(__file__).resolve().parent / "assets" / "licenses"
@@ -74,6 +83,8 @@ def main() -> int:
         provenance = json.loads(provenance_path.read_text(encoding="utf-8-sig")) if provenance_path.is_file() else None
         print(json.dumps({"event": "self_test", "status": "ok", "frozen": bool(getattr(sys, "frozen", False)),
                           "numpy": np.__version__, "opencv": cv2.__version__,
+                          "onnxruntime": ort.__version__, "ocr_model_sha256": MODEL_SHA256,
+                          "offline_card_ocr_self_test": "10",
                           "third_party_notices_bundled": (notice_root / "NOTICE.md").is_file(),
                           "build_provenance": provenance,
                           "ui_bundled": (Path(__file__).resolve().parent / "ui" / "dist" / "index.html").exists()}), flush=True)

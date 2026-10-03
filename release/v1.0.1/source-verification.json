@@ -1,0 +1,34 @@
+{
+  "version": "1.0.1",
+  "status": "pass",
+  "python_tests": 302,
+  "python_subtests": 10,
+  "frontend_tests": 27,
+  "bundled_font_external_regressions": 20,
+  "typescript": "pass",
+  "frontend_production_build": "pass",
+  "python_test_log_sha256": "8cd3e9e508bef7f1a34644e007f39adc2725096281eaed3e9851caac4c5da6e6",
+  "offline_model_sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+  "reported_external_hand": {
+    "player": [
+      "7",
+      "2"
+    ],
+    "dealer": [
+      "6"
+    ],
+    "action": "double",
+    "running_count": 2,
+    "observed_cards": 3
+  },
+  "runtime_checks": [
+    "frozen backend without Python/Node PATH",
+    "hidden native launch/analysis/shutdown",
+    "fresh scoped installer install/launch/uninstall"
+  ],
+  "browser_checks": [
+    "automatic private screenshot upload without card entry",
+    "blank input validation in English and Italian"
+  ],
+  "scope": "Reported private screenshot plus original printed-card synthetic fixtures and a decoded compressed video; arbitrary artwork and personal display-picker selection are not certified."
+}

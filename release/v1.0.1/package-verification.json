@@ -1,0 +1,15 @@
+{
+  "output": "blackjack-vision-lab-windows-v1.0.1.zip",
+  "created_at": "2026-10-03T15:31:00.668302+00:00",
+  "files": 933,
+  "bytes": 185824261,
+  "sha256": "a99110c4928580f3ec48c134f6c1855f7e5798b624ea3fa698a1e7c6bde467e6",
+  "release_binary_hashes_verified": true,
+  "crc_verified": true,
+  "status": "pass",
+  "binary_checks": [
+    "frozen backend including offline OCR",
+    "native launch/shutdown including reported image and live observer",
+    "fresh installer install/launch/uninstall"
+  ]
+}

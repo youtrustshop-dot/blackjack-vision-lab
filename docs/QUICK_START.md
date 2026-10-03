@@ -33,7 +33,10 @@ number from merging into an old count. External games need their own observable
 reset or a user declaration.
 
 **Image & manual advice** accepts Ctrl+V, drag/drop and file selection. Recognition
-supports lab artwork. Confirm player cards and dealer upcard for other designs.
+supports lab artwork and compatible classic green casino tables with printed
+corners, total badges and English controls. Include the full game window;
+the compatible table is located automatically. Confirm player cards and
+dealer upcard for unreadable or other designs.
 Split context and an optional exposed-card list can be supplied; the list includes
 current cards. Image estimates use a conditional pool with earlier history
 unknown. One image cannot establish a complete shoe.

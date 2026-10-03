@@ -72,6 +72,15 @@ const liveItalian:Record<string,string>={
 };
 
 const versionOneItalian:Record<string,string>={
+ 'Tracked cards do not match the visible hand total. Waiting for fresh card evidence.':'Le carte tracciate non corrispondono al totale visibile. In attesa di una nuova lettura delle carte.',
+ 'Recognition supports lab cards and compatible classic green casino tables. Include printed corners, hand totals and English action buttons. The largest compatible table is located automatically. Counts cover observed cards; declare external shuffles explicitly. Unreadable or multiple active hands need confirmation.':'Il riconoscimento supporta le carte del laboratorio e i tavoli verdi classici compatibili. Includi gli angoli stampati, i totali delle mani e i pulsanti in inglese. Il tavolo compatibile più grande viene individuato automaticamente. Il conteggio riguarda le carte osservate: dichiara esplicitamente i rimescolamenti esterni. Le mani illeggibili o più mani attive richiedono conferma.',
+ 'Enter at least two player cards, for example 7 2.':'Inserisci almeno due carte del giocatore, ad esempio 7 2.',
+ 'Enter one dealer upcard, for example 6.':'Inserisci una carta scoperta del banco, ad esempio 6.',
+ 'Enter exactly one dealer upcard.':'Inserisci esattamente una carta scoperta del banco.',
+ 'The player total could not be verified. Enlarge the shared game window.':'Il totale del giocatore non è verificabile. Ingrandisci la finestra del gioco condivisa.',
+ 'The dealer upcard could not be read. Enlarge the shared game window.':'La carta scoperta del banco non è leggibile. Ingrandisci la finestra del gioco condivisa.',
+ 'The recognized cards do not match the visible hand total. Enlarge or recalibrate the table.':'Le carte riconosciute non corrispondono al totale visibile. Ingrandisci o ricalibra il tavolo.',
+ 'Several player hands are visible. Confirm the active hand manually.':'Sono visibili più mani del giocatore. Conferma manualmente la mano attiva.',
  'Ask before reusing saved settings':'Chiedi prima di riusare le impostazioni salvate',
  'NEW SESSION':'NUOVA SESSIONE','Start new session':'Avvia nuova sessione','The new session starts with a fresh simulated shoe. Match its rules before observing it.':'La nuova sessione parte con mazzi simulati nuovi. Verifica le regole prima di osservarla.','Double rule':'Regola del raddoppio','Maximum split hands':'Massimo di mani dopo split','Double after split':'Raddoppio dopo split','Resplit pairs':'Dividi ancora le coppie','Resplit aces':'Dividi ancora gli assi','Hit split aces':'Carta dopo split degli assi','European dealer blackjack loss':'Perdita su blackjack del banco europeo','All wagers':'Tutte le puntate','Original wager only (OBO)':'Solo puntata originale (OBO)',
  'Observed cards only':'Solo carte osservate','From declared fresh shoe':'Dai nuovi mazzi dichiarati','Perception lab':'Laboratorio visivo','Hand created by a split':'Mano creata da uno split','Hands in this round':'Mani in questo round','Observed cards (optional, includes current cards)':'Carte osservate (facoltativo, include le carte attuali)',

@@ -39,7 +39,7 @@ class ImageRequest(StrategyRequest):
     player_turn: bool = True
 
 
-def _manual(body: ManualRequest):
+def _manual(body: ManualRequest, *, screen_allowed=None):
     rules = Rules(**body.rules)
     counts = list(initial_counts(rules.decks))
     exposed = body.observed or [*body.player, body.dealer]
@@ -59,6 +59,10 @@ def _manual(body: ManualRequest):
     peeked = rules.dealer_peek and not rules.enhc and card_rank(body.dealer) in (1, 10)
     permitted = legal_actions(body.player, rules, from_split=body.from_split,
         split_hands=body.split_hands, peek_resolved=peeked)
+    if screen_allowed is not None:
+        permitted = [a for a in permitted if a in screen_allowed]
+        if not permitted:
+            raise ValueError("No enabled player controls could be read. Include the buttons in the image.")
     from .live import estimate_actions
     # A finite pool with unknown earlier history is explicitly a conditional model.
     decision = estimate_actions(body.player, body.dealer, counts, rules, permitted,
@@ -110,7 +114,7 @@ async def strategy_library(body: StrategyRequest):
 async def image_advice(body: ImageRequest):
     def inspect():
         from .calibration import normalize_table
-        from .vision import TemplateCardDetector
+        from .external_vision import AdaptiveCardDetector
         raw = base64.b64decode(body.image_base64, validate=True)
         if len(raw) > 8 * 1024 * 1024:
             raise ValueError("Image exceeds 8 MiB.")
@@ -120,11 +124,18 @@ async def image_advice(body: ImageRequest):
             image = source.convert("RGB")
         if body.corners:
             image = Image.fromarray(normalize_table(image, body.corners, (960, 600), corners_normalized=True).image_rgb)
-        detector = TemplateCardDetector(zones={"dealer": (0, 0, 960, 250), "player:0": (0, 290, 960, 310)})
+        detector = AdaptiveCardDetector(zones={"dealer": (0, 0, 960, 250), "player:0": (0, 290, 960, 310)})
         detections = detector.detect(image)
         player = [d.rank for d in sorted(detections, key=lambda d: d.bbox[0]) if d.zone == "player:0" and not d.face_down and d.rank]
         dealer = [d.rank for d in detections if d.zone == "dealer" and not d.face_down and d.rank]
         reasons = []
+        external = detector.context
+        if external:
+            reasons.extend(external.get('reasons', []))
+            if external['phase'] != 'player':
+                reasons.append("This table does not show a player decision. Include the turn message and enabled controls.")
+            if not external['controls']:
+                reasons.append("Include the enabled player buttons in the image.")
         if not body.player_turn:
             reasons.append("Confirm that this image shows your player decision.")
         if len(player) < 2 or len(dealer) != 1:
@@ -134,10 +145,14 @@ async def image_advice(body: ImageRequest):
         report = {"source": "single-image-pixels", "player": player, "dealer": dealer,
             "detections": [d.to_dict() for d in detections], "decision": None, "advice": None,
             "gate": {"solver_allowed": not reasons, "reasons": reasons},
-            "count_scope": "single image only; earlier history unknown"}
+            "count_scope": "single image only; earlier history unknown",
+            "recognition_profile": external.get('profile','lab-template') if external else 'lab-template',
+            "table_bounds": external.get('table_bounds') if external else None,
+            "visible_controls": external.get('controls',[]) if external else []}
         if not reasons:
             observed = [d.rank for d in detections if d.rank and not d.face_down]
-            report.update(_manual(ManualRequest(player=player, dealer=dealer[0], observed=observed, rules=body.rules)))
+            report.update(_manual(ManualRequest(player=player, dealer=dealer[0], observed=observed, rules=body.rules),
+                                  screen_allowed=external['controls'] if external else None))
             report["source"] = "single-image-pixels"
         return report
     try:
