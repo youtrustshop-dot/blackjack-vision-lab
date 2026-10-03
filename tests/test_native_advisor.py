@@ -59,3 +59,18 @@ def test_native_writes_refuse_foreign_origins_and_do_not_create_an_observer():
         assert client.post('/api/native/advisor/control',json={'operation':'open','stream_id':'missing'},
                            headers={'origin':'http://127.0.0.1:8000','x-bjlab-local':'1'}).status_code==404
     assert set(observers)==before
+
+
+def test_old_table_view_cannot_close_or_pin_the_new_selected_advisor(monkeypatch):
+    import bjlab.native_advisor as module
+    messages=[]
+    host=NativeHost(True,messages.append)
+    host.selected='current-table';host.visible=True
+    monkeypatch.setattr(module,'host',host)
+    with TestClient(app,base_url='http://127.0.0.1:8000') as client:
+        for operation in ('hide','topmost'):
+            response=client.post('/api/native/advisor/control',
+                json={'operation':operation,'stream_id':'previous-table','topmost':True},
+                headers={'origin':'http://127.0.0.1:8000','x-bjlab-local':'1'})
+            assert response.status_code==409
+    assert not messages and host.status()['visible'] and host.selected=='current-table'

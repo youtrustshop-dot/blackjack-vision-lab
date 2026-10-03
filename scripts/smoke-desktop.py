@@ -201,7 +201,8 @@ def main():
                     assert not status['pending'] and not status['error'],status
                     assert status['native_proof']['window']=='advisor'
                     return status
-                initial=native('open');pinned=native('topmost',topmost=True);assert pinned['topmost']
+                initial=native('open');assert initial['native_proof']['main_minimized'],initial
+                pinned=native('topmost',topmost=True);assert pinned['topmost']
                 for repeat in range(3):native('hide');native('open')
                 assert len(request('/api/native/advisor/status')['tables'])==1
                 # New captured evidence continues while the native main is minimized.
