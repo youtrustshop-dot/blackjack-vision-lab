@@ -129,6 +129,13 @@ def main():
                     return json.loads(payload) if response.headers.get_content_type()=='application/json' else payload
             health=request('/api/health')
             assert health['status']=='ok' and health['version']==version
+            experiments=request('/api/vision/experiments')
+            vision_sources={name:digest(project/name) for name in
+                ('bjlab/external_vision.py','bjlab/corner_vision.py','bjlab/live.py','bjlab/vision.py')}
+            expected_fingerprint=hashlib.sha256(json.dumps(vision_sources,sort_keys=True).encode()).hexdigest()
+            assert experiments['runtime']['source_fingerprint']==expected_fingerprint
+            assert experiments['runtime']['source_fingerprint']!='unavailable'
+            report['vision_runtime_identity']=experiments['runtime']
             assert request('/api/roadmap')==json.loads((project/'docs/REQUIREMENTS.json').read_text(encoding='utf-8'))
             html=request('/')
             assert html==(project/'ui/dist/index.html').read_bytes()

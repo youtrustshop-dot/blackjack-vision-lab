@@ -48,8 +48,13 @@ def diagnostic_bundle(observer,received,original_bytes,capture_geometry=None):
 def source_revision(root):
     """A content fingerprint works for frozen apps without requiring git."""
     root=Path(root)
-    sources={name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in
-        ('bjlab/external_vision.py','bjlab/corner_vision.py','bjlab/live.py','bjlab/vision.py') if (root/name).is_file()}
+    names=('bjlab/external_vision.py','bjlab/corner_vision.py','bjlab/live.py','bjlab/vision.py')
+    provenance=root/'assets/build-provenance.json'
+    recorded=json.loads(provenance.read_text(encoding='utf-8-sig')).get('source_sha256',{}) if provenance.is_file() else {}
+    # PyInstaller loads compiled modules, so their source files are absent.
+    # These recorded hashes were checked against the frozen payload at build time.
+    sources={name:hashlib.sha256((root/name).read_bytes()).hexdigest() if (root/name).is_file() else recorded.get(name) for name in names}
+    if not all(sources.values()):return 'unavailable'
     return hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()
 
 
