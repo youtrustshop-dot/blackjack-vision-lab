@@ -54,3 +54,31 @@ A small smoke test does not establish general card recognition, five-table neura
 inference or downstream strategy accuracy. Connecting a new model to arbitrary
 artwork tracking requires labeled data and separate false-count, abstention and
 latency evaluation. Laya remains deferred; Jev is optional and inactive.
+
+## Measured local run
+
+[CLEF_VERIFICATION.json](CLEF_VERIFICATION.json) records the actual pinned model
+on an RTX 2070 SUPER with 8 GB VRAM and 16 GB system RAM. The empty-office text
+case selected `other`; the controlled A–7 lab image selected `blackjack`. This
+two-case check establishes execution, not general classification accuracy.
+
+Loading took 1,099 seconds during concurrent work. The first text and image
+classifications took 137.1 and 35.7 seconds. A subsequent actual HTTP request
+through the core bridge classified the same image in 3.8 seconds (8.2 seconds
+roundtrip). A subsequent actual browser button test reported 1.2 seconds for
+the warm image classification, while mathematical A–7 advice remained Hit.
+Peak allocated model VRAM was 4,028 MiB. These are measured examples,
+not minimum hardware requirements or latency bounds. This setup is unsuitable
+for per-frame real-time neural analysis on five tables.
+
+Earlier full CPU-vocabulary loading was stopped at 97% RAM pressure. The row
+adapter then completed backbone loading but encountered the missing Torchvision
+dependency. After installing it, an unsupported processor backend option was
+removed and the final processor/image/inference path passed. Model loading also
+caused substantial system-memory pressure; the preview diagnostic failure is
+retained in STATUS.md. The first bridge readiness check exceeded its 3-second
+budget; the subsequent warm status and classification request passed.
+
+The two `UNEXPECTED` vocabulary keys in the Transformers report are intentional:
+their unchanged rows are supplied by the read-only checkpoint adapter. No other
+missing or unexpected model keys were reported. Quantization remains approximate.

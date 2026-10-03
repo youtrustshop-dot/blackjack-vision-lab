@@ -23,6 +23,8 @@
   "responsive": "375-pixel content width observed within a requested 390-pixel viewport, with local strategy-table scrolling; override reset.",
   "display_picker_personal_source_selected": false,
   "installed_unpacked_extension_exercised": false,
+  "clef_browser": {"action": "Actual Classify this image with Clef button", "scene": "blackjack", "model_reported_latency_ms": 1151.9417999988946, "scope": "Warm scene classification; separate from the displayed mathematical Hit advice"},
+  "final_live_check": {"source": "Actual canvas video, paused bot, new second hand", "player": ["3", "2"], "dealer": "9", "action": "hit", "observed": 9, "running_count": 2, "true_count": 0.34, "compact_advisor_exercised": true},
   "screenshots": ["ace-advice.jpg", "simulator.jpg", "floating-advisor.jpg", "strategy-library.jpg", "configuration.jpg", "guide.jpg", "mobile.jpg"],
   "scope": "Lab artwork and educational simulation. Arbitrary game graphics and poker strategy are not validated."
 }

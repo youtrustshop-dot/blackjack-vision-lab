@@ -5,6 +5,8 @@ Actual browser captures with English selected. No actions, counts or probabiliti
 ![Ace values and image advice](ace-advice.jpg)
 ![Configured simulator: 20 means Stand](simulator.jpg)
 ![Compact live advisor](floating-advisor.jpg)
+![Continuous video and current compact advice](live-vision.jpg)
+![Actual optional Clef scene classification](clef-check.jpg)
 ![Offline basic strategy library](strategy-library.jpg)
 ![Rule configuration](configuration.jpg)
 ![First-visit guide](guide.jpg)

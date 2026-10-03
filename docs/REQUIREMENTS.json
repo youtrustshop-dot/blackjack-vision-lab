@@ -10,7 +10,7 @@
     "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
     "native_desktop_build_verified": true,
     "frozen_backend_verified": true,
-    "release_verified": false,
+    "release_verified": true,
     "historical_v0_1": {
       "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
       "frontend_build": "passed",
@@ -24,7 +24,7 @@
     },
     "version": "1.0.0",
     "frontend_tests": "23 tests passed",
-    "release_evidence": "release/v1.0.0/: backend-smoke.json, native-smoke.json, installer-smoke.json, installer-native-smoke.json; final packaging metadata refresh follows",
+    "release_evidence": "release/v1.0.0/: manifest.json, backend-smoke.json, native-smoke.json, installer-smoke.json, installer-native-smoke.json; portable archive SHA256/CRC verification",
     "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
     "historical_v0_2": {
       "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
@@ -420,20 +420,20 @@
       "id": "clef_runtime",
       "milestone": "V31",
       "description": "Pinned optional CUDA classifier and offline-safe loopback bridge",
-      "evidence": "tests/test_model_api.py; docs/CLEF.md; actual model smoke pending",
-      "status": "pending"
+      "evidence": "tests/test_model_api.py; docs/CLEF_VERIFICATION.json; actual pinned CUDA text/image inference and warm loopback bridge; experimental scene scope only",
+      "status": "verified"
     }
   ],
   "model_rollout": {
     "current_scope": "deterministic engine and perception baseline",
-    "laya": "prepared, actual integration/benchmark deferred by user: poi mettiamo laya",
+    "laya": "Prepared; actual integration/benchmark deferred by the user until later.",
     "jev": "inactive; not requesting credentials",
-    "clef": "Separate pinned CUDA environment installed; model download and inference test in progress."
+    "clef": "Separate pinned CUDA environment and model installed; actual text/image inference and warm bridge passed. Occasional experimental scene classifier; not a real-time rank detector."
   },
   "acceptance_scope": {
     "required_system": "Controlled simulator, recorded single-round lab-artwork clips, screenshots, deterministic math and research validation layer.",
     "conditional_research": "Unavailable vendor models and unsupported legacy reference execution remain recorded; they are not fabricated or core dependencies.",
-    "laya_user_deferral": "poi mettiamo laya",
+    "laya_user_deferral": "Add Laya later.",
     "limitations": "Unstable/stale pixels require confirmation; arbitrary card graphics and poker strategy are not validated. Immediate basic policy remains available for valid declared player states. Finite optima retain their declared budget; optional classifier is separate."
   }
 }

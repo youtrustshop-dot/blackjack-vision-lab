@@ -2,9 +2,9 @@
   "status": "pass",
   "version": "1.0.0",
   "installer": "Blackjack Vision Lab_1.0.0_x64-setup.exe",
-  "installer_sha256": "2d5a0516b994a39a23db69d871ac63893e22a58ba8e0a3e06b5603d1bcca79c2",
+  "installer_sha256": "4eca968c60b0454035e478c889eaaad3d13e8e368b51206d012a493a87d68665",
   "installed_file_sha256": {
-    "bjlab-backend.exe": "339ca9645331a61dd242851624718046db0d81e0255eb4596d5771504062a104",
+    "bjlab-backend.exe": "51628c8d994b333f619ae8b613a2f40da24aa630f75a2da90c37596f3bcaaf3b",
     "WebView2Loader.dll": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5",
     "blackjack-vision-lab.exe": "d630f0a36f12adf086e656605ef11db280cb2d6cb24c51e9acc6742afd7a99c7"
   },

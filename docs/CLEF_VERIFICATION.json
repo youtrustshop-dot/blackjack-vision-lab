@@ -1,0 +1,164 @@
+{
+  "runtime": {
+    "status": "ready",
+    "model": "Cloudflare/clef-flash",
+    "revision": "17f0b0ad64efb65d273590632833508766b2aae6",
+    "device": "NVIDIA GeForce RTX 2070 SUPER",
+    "quantization": "NF4 / float16; unchanged vocabulary rows read from checkpoint on demand",
+    "load_seconds": 1099.0093364000022,
+    "allocated_vram_mib": 3877.56396484375,
+    "scope": "Optional experimental classifier; core card recognition and mathematics are independent."
+  },
+  "text": {
+    "model": "clef-flash",
+    "answers": {
+      "scene": {
+        "type": "choice",
+        "choice": "other",
+        "confidence": 0.9784,
+        "probabilities": {
+          "blackjack": 0.0141,
+          "poker": 0.0075,
+          "other": 0.9784
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 176,
+      "output_tokens": 0
+    },
+    "latency_ms": 137111.67249999926,
+    "scope": "Experimental scene classification. Confidence is not a blackjack outcome probability."
+  },
+  "image": {
+    "model": "clef-flash",
+    "answers": {
+      "scene": {
+        "type": "choice",
+        "choice": "blackjack",
+        "confidence": 0.9895,
+        "probabilities": {
+          "blackjack": 0.9895,
+          "poker": 0.0052,
+          "other": 0.0053
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 343,
+      "output_tokens": 0
+    },
+    "latency_ms": 35710.66100000098,
+    "scope": "Experimental scene classification. Confidence is not a blackjack outcome probability."
+  },
+  "peak_allocated_vram_mib": 4028.3046875,
+  "verification_scope": "Two controlled scene cases; no general card-rank, accuracy or real-time certification.",
+  "hardware": {
+    "vram_gib": 8,
+    "system_ram_gib": 16,
+    "operating_system": "Windows x64"
+  },
+  "fixture_sha256": "5b5f255dc1771512efc55d8583786d854a186f7f0f689a261856c6654e029ada",
+  "expected_choices_match": true,
+  "warm_core_bridge": {
+    "status": "pass",
+    "path": "core loopback bridge -> actual separately loaded Clef model",
+    "health": {
+      "status": "ready",
+      "model": "Cloudflare/clef-flash",
+      "revision": "17f0b0ad64efb65d273590632833508766b2aae6",
+      "device": "NVIDIA GeForce RTX 2070 SUPER",
+      "quantization": "NF4 / float16; unchanged vocabulary rows read from checkpoint on demand",
+      "load_seconds": 1099.0093364000022,
+      "allocated_vram_mib": 3877.56396484375,
+      "scope": "Optional experimental classifier; core card recognition and mathematics are independent."
+    },
+    "classification": {
+      "model": "clef-flash",
+      "answers": {
+        "scene": {
+          "type": "choice",
+          "choice": "blackjack",
+          "confidence": 0.9895,
+          "probabilities": {
+            "blackjack": 0.9895,
+            "poker": 0.0052,
+            "other": 0.0053
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 343,
+        "output_tokens": 0
+      },
+      "latency_ms": 3805.212899998878,
+      "scope": "Experimental scene classification. Confidence is not a blackjack outcome probability."
+    },
+    "roundtrip_ms": 8182
+  },
+  "row_adapter_self_test": {
+    "status": "pass",
+    "selected_rows_match_checkpoint": [
+      "torch.bfloat16",
+      "torch.float16",
+      "torch.float32"
+    ],
+    "repeated_batched_tokens_checked": true,
+    "full_matrix_not_copied": true
+  },
+  "actual_browser_classification": {
+    "model": "clef-flash",
+    "answers": {
+      "scene": {
+        "type": "choice",
+        "choice": "blackjack",
+        "confidence": 0.9895,
+        "probabilities": {
+          "blackjack": 0.9895,
+          "poker": 0.0052,
+          "other": 0.0053
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 343,
+      "output_tokens": 0
+    },
+    "latency_ms": 1151.9417999988946,
+    "scope": "Experimental scene classification. Confidence is not a blackjack outcome probability."
+  },
+  "ordinary_preview_after_restart": {
+    "status": "pass",
+    "purpose": "Controlled image on the ordinary preview after the diagnostic failure, with the optional model available.",
+    "action": "hit",
+    "player": "A,7",
+    "dealer": "9",
+    "alternative_total": 8,
+    "observed_cards": 3,
+    "elapsed_ms": 463,
+    "probabilities": {
+      "ev": -0.12333333333333334,
+      "ev_ci95": [
+        -0.17104137868195962,
+        -0.07562528798470704
+      ],
+      "win": 0.39,
+      "push": 0.09666666666666666,
+      "loss": 0.5133333333333333,
+      "win_ci95": [
+        0.365627832971752,
+        0.4149341417866879
+      ],
+      "samples": 1500
+    }
+  },
+  "retained_negative_observations": [
+    "Full CPU vocabulary attempts were stopped under 97% system RAM pressure.",
+    "On-demand row backbone completed, then the processor failed because Torchvision was missing.",
+    "Processor backend=pil was incompatible with the video processor backend property; the default processor passed after installing matching Torchvision.",
+    "The final load took 1099 seconds under concurrent work and caused substantial RAM pressure; one snapshot recorded 23470 MiB private commit and 0.87 GiB free physical RAM.",
+    "Preview health timed out; a separate periodic-stack-dump diagnostic preview later exited with a Windows asyncio access violation. Cause undetermined. Ordinary launcher restarted and controlled image path rechecked.",
+    "First model bridge health exceeded its 3-second readiness budget. Warm readiness and actual image classification then passed."
+  ],
+  "version": "1.0.0"
+}

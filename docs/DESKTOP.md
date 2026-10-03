@@ -120,6 +120,11 @@ Build a new version into a distinct folder to preserve historical evidence:
 python scripts/package-windows.py --release release/v1.0.0 --output ../blackjack-vision-lab-windows-v1.0.0.zip
 ```
 
+An existing official `@tauri-apps/cli` 2.12.1 installation can be supplied with
+`-TauriCliScript <absolute-path-to-tauri.js>`. The script validates the pinned
+package version before using it. This avoids a broken global npm installation
+without modifying it; ordinary builds still use the pinned npm package.
+
 The manifest/versioned smoke reports distinguish new artifacts from the original v0.1.0 installation reports. Existing statements about installation under `release/installer-smoke.json` refer to that original measured release, not an untested reinstall of a later build. Verify each new frozen backend's live endpoint and native readiness/shutdown against its own digest.
 
 
