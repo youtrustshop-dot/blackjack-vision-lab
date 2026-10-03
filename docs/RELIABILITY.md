@@ -1,4 +1,10 @@
-# Complete-session reliability — 1.1.0
+# Complete-session reliability — 1.1.1
+
+The [1.1.1 increment](LIVE_RELIABILITY_INCREMENT.md) separates basic response
+from estimates, gates unknown initial history and bounds actual server work.
+New synthetic complete sessions retain missed exposures and count abstentions;
+they do not replace held-out provider evaluation. Earlier 1.1 visual/Clef results
+below preserve their original development scope.
 
 The reported failures were real: a short rank crop missed overlapping cards,
 and active tracks could retain cards from an earlier hand. Passing the previous

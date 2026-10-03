@@ -1,3 +1,28 @@
+# Verified source status — 1.1.1
+
+Basic strategy is independent of Monte Carlo. Complete history, partial
+observations and conditional inventory have separate claims; unknown TC and
+physical remaining cards are withheld. Source/state generations reject obsolete
+results. Actual worker limits and cooperative deadlines are tested.
+
+- **382 Python tests + 10 subtests**, **40 frontend tests** and TypeScript/Vite pass.
+- Four reproduced baseline failures; 12 progressive regression checks pass.
+- Actual Chrome and the real API pass with five independent owned video sources.
+  The earlier Chrome timer failure is preserved and corrected.
+- New fixed-seed synthetic sessions: 30 rounds, 624 observations, 44/44 timely
+  correct basic decisions on both baseline and candidate. Missing exposures
+  of 1/4/4 cards and count abstentions remain: **count accuracy is not accepted**.
+- Versioned executable and package checks are retained in `release/v1.1.1/`.
+
+[Increment, before/after and limits](LIVE_RELIABILITY_INCREMENT.md) ·
+[Executed source evidence](LIVE_RELIABILITY_VERIFICATION.json).
+
+These sessions use a development renderer, not independent provider recordings.
+External complete-session coverage, every-frame event reconstruction and universal
+recognition are not certified. Clef and Poker functionality are unchanged.
+
+The following 1.1.0 status and its recorded results are historical.
+
 # Verified source status — 1.1.0
 
 - **370 Python tests + 10 subtests passed** in 56.37 seconds. The retained

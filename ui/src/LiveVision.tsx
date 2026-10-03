@@ -5,6 +5,7 @@ import {Download,ExternalLink,Monitor,Play,ScanEye,Square} from 'lucide-react';
 import {api,download,fetchApi,Rules,Snapshot} from './api';
 import {ScreenShare,captureScreenFrame,screenSharingError} from './screen-sharing';
 import {LiveVideoLoop} from './live-loop';
+import {LiveAnalysis} from './live-analysis';
 import ClefVerification,{useClefVerification} from './ClefVerification';
 import {verificationImage,VisualEvidence} from './clef-evidence';
 import {FrameMonitor} from './frame-monitor';
@@ -18,6 +19,7 @@ import './live.css';
 const actions:Record<string,string>={hit:'Hit',stand:'Stand',double:'Double',split:'Split',surrender:'Surrender',continue:'Continue',insurance:'Insurance',decline_insurance:'Decline insurance'};
 const percent=(value:unknown)=>typeof value==='number'?(value*100).toFixed(1)+'%':'—';
 const number=(value:unknown,d=2)=>typeof value==='number'?value.toFixed(d):'—';
+const analysisLabels:Record<string,string>={ready:'In progress',pending:'In progress',busy:'Waiting for an analysis slot',complete:'Complete',timeout:'Budget reached',error:'Not available',not_available:'Not available',unavailable:'Not available'};
 
 export function LiveAdvisor({report,stale,compact=false}:{report:any;stale:boolean;compact?:boolean}){
  const decision=!stale?report?.decision:null,advice=!stale?report?.advice:null;
@@ -36,12 +38,13 @@ export function LiveAdvisor({report,stale,compact=false}:{report:any;stale:boole
   {report?.count_scope&&<p className="count-scope">{report.count_scope==='from declared fresh shoe'?'From declared fresh shoe':'Observed cards only'}</p>}
   {!best&&<p className="gate-note" role="status">{stale&&report?'Refresh the source before acting.':report?.phase==='settled'?'Wait for the next deal.':report?.gate?.reasons?.[0]||'Share a table, run the demo, or confirm cards manually.'}</p>}
   <details className="advisor-details"><summary>Why this action & advanced details</summary><div className="advisor-detail-body">
-   {advice&&<div className="strategy-comparison"><div><span>Basic policy</span><b>{actions[advice.basic_action]||advice.basic_action}</b></div><div><span>Hi-Lo reference</span><b>{actions[advice.count_action]||advice.count_action}</b></div><div><span>Composition estimate</span><b>{decision?actions[decision.best_action]||decision.best_action:'Not available'}</b></div></div>}
+   {advice&&<div className="strategy-comparison"><div><span>Basic policy</span><b>{actions[advice.basic_action]||advice.basic_action}</b></div><div><span>Hi-Lo reference</span><b>{advice.count_comparison_reliable?(actions[advice.count_action]||advice.count_action):'Unavailable · incomplete history'}</b></div><div><span>Composition estimate</span><b>{decision?actions[decision.best_action]||decision.best_action:'Not available'}</b></div></div>}
    {advice?.explanation&&<ol>{advice.explanation.map((line:string,i:number)=><li key={i}>{line}</li>)}</ol>}
    {row&&<><div className="advisor-ev"><span>Estimated EV per initial wager</span><b>{number(row.ev,4)}</b></div><p>95% sampling interval: {percent(row.win_ci95?.[0])} – {percent(row.win_ci95?.[1])}<br/>{decision.samples_per_action} outcomes per action · Monte Carlo</p><p>{decision.ranking_resolved?'EV ranking separated':'EV intervals overlap; basic strategy remains the primary recommendation.'}</p></>}
    {decision?.insurance_blackjack_probability!==undefined&&<p>Dealer blackjack: {percent(decision.insurance_blackjack_probability)} · Insurance EV: {number(decision.insurance_ev,4)}</p>}
    {decision?.actions&&Object.keys(decision.actions).length>0&&<div className="live-action-table"><div><b>Action</b><b>EV</b><b>Positive</b><b>Push</b><b>Negative</b></div>{Object.entries(decision.actions).map(([name,value]:[string,any])=><div key={name} className={name===best?'best':''}><span>{actions[name]||name}</span><span>{number(value.ev,4)}</span><span>{percent(value.win)}</span><span>{percent(value.push)}</span><span>{percent(value.loss)}</span></div>)}</div>}
-   <p>{report?.count_scope==='from declared fresh shoe'?'Full observed history from a declared fresh shoe.':'Count covers observed cards only. Earlier cards are unknown.'}</p><p>Remaining inventory: {report?.physical_remaining??'—'} cards. A positive true count describes a higher proportion of tens and aces in the estimated pool; it does not guarantee an outcome.</p>
+   <p>{report?.count_history==='complete'?'Full observed history from a declared fresh shoe.':report?.count_history==='compromised'?'Observation history is incomplete. Declare a new shoe to restore the count.':'Count covers observed cards only. Earlier cards are unknown.'}</p><p>Remaining inventory: {report?.physical_remaining??'—'} cards. A positive true count describes a higher proportion of tens and aces in the estimated pool; it does not guarantee an outcome.</p>
+   {report?.analysis&&<p><span>EV analysis</span>: <span>{analysisLabels[report.analysis.status]||'Not available'}</span>. <span>Basic strategy remains available while estimates run.</span></p>}
    <p>Basic strategy is available offline. Sampling intervals describe simulation uncertainty, not recognition accuracy. EV describes the current action, not the next-round betting edge.</p>
   </div></details>
   <p className="analysis-disclaimer">Analysis and education only. Not financial advice. No guaranteed outcomes.</p>
@@ -52,6 +55,7 @@ function tableHeight(corners:number[][],width:number,height:number){if(corners.l
 export default function LiveVision({rules,connected,acquireSource,releaseSource,interval=350,monitorOnly=false,tableName='Table 1',demoSeed=42,defaultSamples=1500}:{rules:Rules;connected:boolean;acquireSource?:()=>Promise<MediaStream>;releaseSource?:(stream:MediaStream)=>void;interval?:number;monitorOnly?:boolean;tableName?:string;demoSeed?:number;defaultSamples?:number}){
  const video=useRef<HTMLVideoElement>(null),owner=useRef(new ScreenShare()),demo=useRef<DemoVideoSource|null>(null),loop=useRef<LiveVideoLoop|null>(null);
  const advisorId=useRef(crypto.randomUUID());
+ const progressive=useRef(new LiveAnalysis());
  const identity=useRef<string|null>(null),generation=useRef(0),sourceGeneration=useRef(0),mounted=useRef(true),abort=useRef<AbortController|null>(null);
  const [stream,setStream]=useState<MediaStream|null>(null),[source,setSource]=useState(''),[pending,setPending]=useState(false),[observing,setObserving]=useState(false),[error,setError]=useState('');
  const [rawReport,setReport]=useState<any>(null),[lastSeen,setLastSeen]=useState(0),[stale,setStale]=useState(true),[corners,setCorners]=useState<number[][]>([]),[selecting,setSelecting]=useState(false);
@@ -66,7 +70,7 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
  const language=getLanguage();
 
  const stopObserver=()=>{
-  generation.current++;loop.current?.stop();loop.current=null;abort.current?.abort();abort.current=null;
+  generation.current++;progressive.current.stop();loop.current?.stop();loop.current=null;abort.current?.abort();abort.current=null;
   const old=identity.current;identity.current=null;if(old)void fetchApi('/live/'+old,{method:'DELETE'}).catch(()=>{});
   if(mounted.current){setObserving(false);setReport(null);setEvidence(null);setStale(true);setLastSeen(0)}
  };
@@ -100,13 +104,19 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
      if(!mounted.current||attempt!==generation.current)return;
      region=value.table_bounds;imageSize=value.image_size;
      if(capturedEpoch===motionEpoch){setReport(value);setLastSeen(began);setStale(performance.now()-began>2200);setError('');if(verificationEnabled.current&&value.gate?.solver_allowed){const visualImage=await verificationImage(image,corners.length?null:value);if(capturedEpoch===motionEpoch&&attempt===generation.current)setEvidence({key:[attempt,capturedEpoch,value.round,value.player.join(','),value.dealer.join(',')].join(':'),image:visualImage,report:value,corners:corners.length?corners:undefined,output_height:tableHeight(corners,target.videoWidth,target.videoHeight)})}else setEvidence(null)}
+     if(capturedEpoch===motionEpoch&&value.state_id&&['ready','pending','busy'].includes(value.analysis?.status)){
+      progressive.current.watch([attempt,capturedEpoch,id,value.state_id].join(':'),async signal=>{
+       const response=await fetchApi('/live/'+id+'/analysis?state_id='+encodeURIComponent(value.state_id),{signal});
+       if(!response.ok)throw new Error('Analysis is no longer current.');return response.json();
+      },patch=>{if(mounted.current&&attempt===generation.current&&capturedEpoch===motionEpoch&&patch.state_id===value.state_id)setReport((current:any)=>current?.state_id===patch.state_id?{...current,...patch}:current)});
+     }else if(capturedEpoch===motionEpoch)progressive.current.stop();
      setMetrics({sent:sequence+1,skipped:loop.current?.skipped||0,latency:performance.now()-began,received:loop.current?.received||0});
     }finally{clearTimeout(timeout)}
    },e=>{setReport(null);setStale(true);setError(e instanceof Error&&e.name==='AbortError'?'Video processing timed out. Waiting for a fresh observation.':String(e instanceof Error?e.message:e))},interval,undefined,()=>{
     if(!monitorContext||attempt!==generation.current)return;
     if(region&&imageSize&&!corners.length){const sx=target.videoWidth/imageSize[0],sy=target.videoHeight/imageSize[1];monitorContext.drawImage(target,region[0]*sx,region[1]*sy,region[2]*sx,region[3]*sy,0,0,96,54)}
     else monitorContext.drawImage(target,0,0,96,54);
-    if(monitor.observe(monitorContext.getImageData(0,0,96,54).data).motion>.008){motionEpoch++;setReport(null);setEvidence(null);setStale(true)}
+    if(monitor.observe(monitorContext.getImageData(0,0,96,54).data).motion>.008){motionEpoch++;progressive.current.stop();setReport(null);setEvidence(null);setStale(true)}
    });
    loop.current.start();
   }catch(e){if(mounted.current&&attempt===generation.current)setError(e instanceof Error?e.message:String(e))}

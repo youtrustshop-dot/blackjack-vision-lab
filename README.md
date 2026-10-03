@@ -18,7 +18,7 @@ A local, open-source blackjack simulation and visual analysis lab. Share a scree
 
 
 
-The [Windows 1.1.0 release](https://github.com/youtrustshop-dot/blackjack-vision-lab/releases/tag/v1.1.0) provides an installer and portable ZIP. Windows x64 and Microsoft WebView2 are required. The packaged app includes its backend and offline OCR model; Python, Node, GPU and API keys are unnecessary for the core application.
+The [Windows 1.1.1 release](https://github.com/youtrustshop-dot/blackjack-vision-lab/releases/tag/v1.1.1) provides an installer and portable ZIP. Windows x64 and Microsoft WebView2 are required. The packaged app includes its backend and offline OCR model; Python, Node, GPU and API keys are unnecessary for the core application.
 
 
 
@@ -74,7 +74,7 @@ manual card entry. See [external recognition evidence](docs/EXTERNAL_VISION.md).
 
 
 
-A valid player hand always has an immediate legal basic-policy recommendation. A normal 20 stands; A+7 is displayed as soft 18, with A=11 and alternative total 8. A separated composition estimate can refine the action; overlapping EV intervals retain basic strategy. Unreadable or expired video asks for confirmation / fresh evidence.
+A valid player hand always has an immediate legal basic-policy recommendation. A normal 20 stands; A+7 is displayed as soft 18, with A=11 and alternative total 8. Version 1.1.1 delivers basic strategy before a separately budgeted live estimate. A separated composition estimate can refine the action; overlapping EV intervals retain basic strategy. Unreadable or expired video asks for confirmation / fresh evidence.
 
 
 
@@ -86,7 +86,7 @@ The offline library includes hard totals, soft totals, pairs, naturals and **550
 
 
 
-Exposed-card events update Hi-Lo running count and true count. A "shoe" is the collection of cards dealt from the chosen decks. Counts cover a complete history only when the necessary exposures were observed from a known reset; otherwise their scope is the observed portion. Repeated video observations do not count cards twice.
+Exposed-card events update the observed Hi-Lo running count. True count and physical remaining cards are shown only for a known complete shoe history. A "shoe" is the collection of cards dealt from the chosen decks. Counts cover a complete history only when the necessary exposures were observed from a known reset; otherwise their scope is the observed portion. Repeated video observations do not count cards twice.
 
 
 
@@ -164,3 +164,5 @@ Original code is [MIT](LICENSE). Dependencies, fonts and Microsoft components re
 ## Reliability and Hold’em — 1.1.0
 
 [Complete-session architecture and provider scope](docs/RELIABILITY.md) · [Texas Hold’em](docs/POKER.md)
+
+Current [1.1.1 verification and limitations](docs/LIVE_RELIABILITY_INCREMENT.md) include before/after regressions and complete synthetic sessions. Complete external-session count accuracy remains unverified.

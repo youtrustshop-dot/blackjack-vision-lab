@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="3.670" timestamp="2026-10-03T19:57:18.531859+02:00" hostname="DESKTOP-5A82ST7"><testcase classname="tests.test_live_progressive" name="test_joining_mid_shoe_keeps_basic_advice_but_not_physical_inventory_or_tc" time="2.393"><failure message="assert 0.25490196078431376 is None">def test_joining_mid_shoe_keeps_basic_advice_but_not_physical_inventory_or_tc():
+        result = stable(LiveObserver(Rules(decks=4, surrender='none'), samples=100))
+        assert result['advice']['best_action'] == 'hit'
+&gt;       assert result['true_count'] is None
+E       assert 0.25490196078431376 is None
+
+tests\test_live_progressive.py:22: AssertionError</failure></testcase><testcase classname="tests.test_live_progressive" name="test_valid_basic_response_does_not_call_monte_carlo" time="0.253"><failure message="AssertionError: The video/basic-policy response must not run Monte Carlo.&#10;assert not [True]">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000027B6DBC3050&gt;
+
+    def test_valid_basic_response_does_not_call_monte_carlo(monkeypatch):
+        calls = []
+        def slow_estimate(*args, **kwargs):
+            calls.append(True)
+            return {'best_action': 'hit', 'actions': {}, 'exact': False}
+        monkeypatch.setattr('bjlab.live.estimate_actions', slow_estimate)
+        result = stable(LiveObserver(Rules(decks=4, surrender='none'), samples=100, fresh_shoe=True))
+        assert result['advice']['best_action'] == 'hit'
+&gt;       assert not calls, 'The video/basic-policy response must not run Monte Carlo.'
+E       AssertionError: The video/basic-policy response must not run Monte Carlo.
+E       assert not [True]
+
+tests\test_live_progressive.py:37: AssertionError</failure></testcase><testcase classname="tests.test_live_progressive" name="test_confirmed_shoe_gap_stays_compromised_after_readable_video_returns" time="0.292"><failure message="assert 204 is None">def test_confirmed_shoe_gap_stays_compromised_after_readable_video_returns():
+        observer = LiveObserver(Rules(decks=4, surrender='none'), samples=100, fresh_shoe=True)
+        first = stable(observer)
+        assert first['true_count'] is not None
+        later = stable(observer, start=6, timestamp=10.)
+        assert later['advice']['best_action'] == 'hit'
+        assert later['true_count'] is None
+&gt;       assert later['physical_remaining'] is None
+E       assert 204 is None
+
+tests\test_live_progressive.py:47: AssertionError</failure></testcase><testcase classname="tests.test_live_progressive" name="test_current_requirement_summary_has_one_version_and_one_frontend_count" time="0.003"><failure message="AssertionError: assert '1.0.0' == '1.1.0'&#10;  &#10;  - 1.1.0&#10;  + 1.0.0">def test_current_requirement_summary_has_one_version_and_one_frontend_count():
+        root = Path(__file__).resolve().parents[1]
+        summary = json.loads((root / 'docs/REQUIREMENTS.json').read_text(encoding='utf-8'))['verification']
+&gt;       assert summary['version'] == __version__
+E       AssertionError: assert '1.0.0' == '1.1.0'
+E
+E         - 1.1.0
+E         + 1.0.0
+
+tests\test_live_progressive.py:58: AssertionError</failure></testcase></testsuite></testsuites>

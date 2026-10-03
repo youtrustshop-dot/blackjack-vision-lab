@@ -1,0 +1,1985 @@
+{
+  "schema": 1,
+  "scope": "new synthetic sequences, existing development renderer; not held-out provider footage",
+  "rules": {
+    "decks": 4,
+    "hit_soft17": false,
+    "blackjack_payout": 1.5,
+    "dealer_peek": true,
+    "enhc": false,
+    "enhc_loss": "all",
+    "double_rule": "none",
+    "double_after_split": true,
+    "resplit": false,
+    "max_split_hands": 1,
+    "resplit_aces": false,
+    "hit_split_aces": false,
+    "surrender": "none",
+    "penetration": 0.75
+  },
+  "repetitions": 6,
+  "interval_ms": 350,
+  "decision_window_ms": 2200,
+  "thresholds_frozen_before_run": {
+    "useful_coverage": 0.95,
+    "false_confident_decisions": 0
+  },
+  "sessions": [
+    {
+      "seed": 12983,
+      "locale": "en",
+      "scale": 1.0,
+      "rounds": 10,
+      "stages": [
+        {
+          "file": "12983/0000.png",
+          "sha256": "6debad55476daa9406a6729d5c08d092cfe4f913bb3a1d7550421a58fe876f6a",
+          "round": 1,
+          "phase": "player",
+          "player": [
+            "K",
+            "7"
+          ],
+          "dealer": [
+            "Q"
+          ],
+          "basic_action": "stand",
+          "seen": 3,
+          "running_count": -2,
+          "remaining": 204
+        },
+        {
+          "file": "12983/0001.png",
+          "sha256": "52e99952faaa868b81549ae53e8973800fb4177dddc2410f0a5880ca6b0be1ed",
+          "round": 1,
+          "phase": "settled",
+          "player": [
+            "K",
+            "7"
+          ],
+          "dealer": [
+            "Q",
+            "2",
+            "2",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 6,
+          "running_count": -1,
+          "remaining": 202
+        },
+        {
+          "file": "12983/0002.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 1,
+          "phase": "blank",
+          "player": [
+            "K",
+            "7"
+          ],
+          "dealer": [
+            "Q",
+            "2",
+            "2",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 6,
+          "running_count": -1,
+          "remaining": 202
+        },
+        {
+          "file": "12983/0003.png",
+          "sha256": "90795bb848466b96cdfb8a70a5ae89f9fe86701fde3ffef1e8ce06a445b9dace",
+          "round": 2,
+          "phase": "player",
+          "player": [
+            "8",
+            "Q"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "stand",
+          "seen": 9,
+          "running_count": -2,
+          "remaining": 198
+        },
+        {
+          "file": "12983/0004.png",
+          "sha256": "c6c8ac65da7bc83b3cfcd070d0317888a062366f2faceda6a13e354be1cb5bb6",
+          "round": 2,
+          "phase": "settled",
+          "player": [
+            "8",
+            "Q"
+          ],
+          "dealer": [
+            "7",
+            "A"
+          ],
+          "basic_action": null,
+          "seen": 10,
+          "running_count": -3,
+          "remaining": 198
+        },
+        {
+          "file": "12983/0005.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 2,
+          "phase": "blank",
+          "player": [
+            "8",
+            "Q"
+          ],
+          "dealer": [
+            "7",
+            "A"
+          ],
+          "basic_action": null,
+          "seen": 10,
+          "running_count": -3,
+          "remaining": 198
+        },
+        {
+          "file": "12983/0006.png",
+          "sha256": "bb1417a0fc2f33518e12ce5827718c0aecaf2d5c4882e757c184a5379db29bc9",
+          "round": 3,
+          "phase": "player",
+          "player": [
+            "J",
+            "3"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "hit",
+          "seen": 13,
+          "running_count": -3,
+          "remaining": 194
+        },
+        {
+          "file": "12983/0007.png",
+          "sha256": "6a63a0a74c30f3c940d1f45e266417c9d6d4ca11876115460f5783239e3910aa",
+          "round": 3,
+          "phase": "player",
+          "player": [
+            "J",
+            "3",
+            "A"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "hit",
+          "seen": 14,
+          "running_count": -4,
+          "remaining": 193
+        },
+        {
+          "file": "12983/0008.png",
+          "sha256": "b9316ca690b240c26ccfb5028f8de0c6f6611bdcf599fcd883a40a367bb0f187",
+          "round": 3,
+          "phase": "player",
+          "player": [
+            "J",
+            "3",
+            "A",
+            "3"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "stand",
+          "seen": 15,
+          "running_count": -3,
+          "remaining": 192
+        },
+        {
+          "file": "12983/0009.png",
+          "sha256": "da54475b437e355fc2e7cb01108fe98484353ab380671a5bd5a9143ee0656cea",
+          "round": 3,
+          "phase": "settled",
+          "player": [
+            "J",
+            "3",
+            "A",
+            "3"
+          ],
+          "dealer": [
+            "7",
+            "3",
+            "6",
+            "6"
+          ],
+          "basic_action": null,
+          "seen": 18,
+          "running_count": 0,
+          "remaining": 190
+        },
+        {
+          "file": "12983/0010.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 3,
+          "phase": "blank",
+          "player": [
+            "J",
+            "3",
+            "A",
+            "3"
+          ],
+          "dealer": [
+            "7",
+            "3",
+            "6",
+            "6"
+          ],
+          "basic_action": null,
+          "seen": 18,
+          "running_count": 0,
+          "remaining": 190
+        },
+        {
+          "file": "12983/0011.png",
+          "sha256": "ca53714dc95d0779faa9eb5934cca82f457f5a379e93682de5f2c2434525b346",
+          "round": 4,
+          "phase": "player",
+          "player": [
+            "6",
+            "4"
+          ],
+          "dealer": [
+            "J"
+          ],
+          "basic_action": "hit",
+          "seen": 21,
+          "running_count": 1,
+          "remaining": 186
+        },
+        {
+          "file": "12983/0012.png",
+          "sha256": "2799ce9ae47a4198a6cb2eb57430f4a2af5be99cc93da2f06c72013e652e4214",
+          "round": 4,
+          "phase": "player",
+          "player": [
+            "6",
+            "4",
+            "9"
+          ],
+          "dealer": [
+            "J"
+          ],
+          "basic_action": "stand",
+          "seen": 22,
+          "running_count": 1,
+          "remaining": 185
+        },
+        {
+          "file": "12983/0013.png",
+          "sha256": "e6ad5d1ebdb061a381fda0546972e8664fb6547945998bf7d78172c1773bcdac",
+          "round": 4,
+          "phase": "settled",
+          "player": [
+            "6",
+            "4",
+            "9"
+          ],
+          "dealer": [
+            "J",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 23,
+          "running_count": 0,
+          "remaining": 185
+        },
+        {
+          "file": "12983/0014.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 4,
+          "phase": "blank",
+          "player": [
+            "6",
+            "4",
+            "9"
+          ],
+          "dealer": [
+            "J",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 23,
+          "running_count": 0,
+          "remaining": 185
+        },
+        {
+          "file": "12983/0015.png",
+          "sha256": "f779d5a9c7df59e1760b1555dfd434091df2c98c001aace723bbad7a200f5cf3",
+          "round": 5,
+          "phase": "player",
+          "player": [
+            "4",
+            "7"
+          ],
+          "dealer": [
+            "8"
+          ],
+          "basic_action": "hit",
+          "seen": 26,
+          "running_count": 1,
+          "remaining": 181
+        },
+        {
+          "file": "12983/0016.png",
+          "sha256": "156bf1f7a09fbabe752a3c815e7e1d50b7bab70098db173b8d8d6c1d285065c1",
+          "round": 5,
+          "phase": "player",
+          "player": [
+            "4",
+            "7",
+            "6"
+          ],
+          "dealer": [
+            "8"
+          ],
+          "basic_action": "stand",
+          "seen": 27,
+          "running_count": 2,
+          "remaining": 180
+        },
+        {
+          "file": "12983/0017.png",
+          "sha256": "b25058e86daee8e1b1daf2ce13c474c8346bdd790d1d87594126483039b6c213",
+          "round": 5,
+          "phase": "settled",
+          "player": [
+            "4",
+            "7",
+            "6"
+          ],
+          "dealer": [
+            "8",
+            "Q"
+          ],
+          "basic_action": null,
+          "seen": 28,
+          "running_count": 1,
+          "remaining": 180
+        },
+        {
+          "file": "12983/0018.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 5,
+          "phase": "blank",
+          "player": [
+            "4",
+            "7",
+            "6"
+          ],
+          "dealer": [
+            "8",
+            "Q"
+          ],
+          "basic_action": null,
+          "seen": 28,
+          "running_count": 1,
+          "remaining": 180
+        },
+        {
+          "file": "12983/0019.png",
+          "sha256": "7f8d099cc5d95dcfea99b893441be5c304f28f42c5d4b09e35844bbde1004837",
+          "round": 6,
+          "phase": "player",
+          "player": [
+            "9",
+            "8"
+          ],
+          "dealer": [
+            "K"
+          ],
+          "basic_action": "stand",
+          "seen": 31,
+          "running_count": 0,
+          "remaining": 176
+        },
+        {
+          "file": "12983/0020.png",
+          "sha256": "2d6f4ce975c50e0dace4ef2a174cc6ee5071f91c69a2bc903f4a174d02bb7a8f",
+          "round": 6,
+          "phase": "settled",
+          "player": [
+            "9",
+            "8"
+          ],
+          "dealer": [
+            "K",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 32,
+          "running_count": -1,
+          "remaining": 176
+        },
+        {
+          "file": "12983/0021.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 6,
+          "phase": "blank",
+          "player": [
+            "9",
+            "8"
+          ],
+          "dealer": [
+            "K",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 32,
+          "running_count": -1,
+          "remaining": 176
+        },
+        {
+          "file": "12983/0022.png",
+          "sha256": "e7f2280d1cc625e99a137d94d6e54f66790084b02c397e1689ac82484c5386db",
+          "round": 7,
+          "phase": "player",
+          "player": [
+            "J",
+            "4"
+          ],
+          "dealer": [
+            "8"
+          ],
+          "basic_action": "hit",
+          "seen": 35,
+          "running_count": -1,
+          "remaining": 172
+        },
+        {
+          "file": "12983/0023.png",
+          "sha256": "c6578f34def1a1b37e71117b40e3d4c0a89c04e25476485d95156bfef2a7e548",
+          "round": 7,
+          "phase": "player",
+          "player": [
+            "J",
+            "4",
+            "3"
+          ],
+          "dealer": [
+            "8"
+          ],
+          "basic_action": "stand",
+          "seen": 36,
+          "running_count": 0,
+          "remaining": 171
+        },
+        {
+          "file": "12983/0024.png",
+          "sha256": "cb91362401fe951a70105904b9b22f681e495e38c8a9ab3894f2a6fd05a61006",
+          "round": 7,
+          "phase": "settled",
+          "player": [
+            "J",
+            "4",
+            "3"
+          ],
+          "dealer": [
+            "8",
+            "3",
+            "2",
+            "K"
+          ],
+          "basic_action": null,
+          "seen": 39,
+          "running_count": 1,
+          "remaining": 169
+        },
+        {
+          "file": "12983/0025.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 7,
+          "phase": "blank",
+          "player": [
+            "J",
+            "4",
+            "3"
+          ],
+          "dealer": [
+            "8",
+            "3",
+            "2",
+            "K"
+          ],
+          "basic_action": null,
+          "seen": 39,
+          "running_count": 1,
+          "remaining": 169
+        },
+        {
+          "file": "12983/0026.png",
+          "sha256": "951420d299ece3438ef3249e9806703397a5927d3e19a98315eb4816a02e9641",
+          "round": 8,
+          "phase": "player",
+          "player": [
+            "A",
+            "2"
+          ],
+          "dealer": [
+            "2"
+          ],
+          "basic_action": "hit",
+          "seen": 42,
+          "running_count": 2,
+          "remaining": 165
+        },
+        {
+          "file": "12983/0027.png",
+          "sha256": "6bb85157ae670754093c757ada4cf3eac2eb66423e6540a84eb16e870b56a3a8",
+          "round": 8,
+          "phase": "player",
+          "player": [
+            "A",
+            "2",
+            "K"
+          ],
+          "dealer": [
+            "2"
+          ],
+          "basic_action": "stand",
+          "seen": 43,
+          "running_count": 1,
+          "remaining": 164
+        },
+        {
+          "file": "12983/0028.png",
+          "sha256": "9741756232c390174d4afb85f830a90ff764af3dc8a4345270addfcb8b700868",
+          "round": 8,
+          "phase": "settled",
+          "player": [
+            "A",
+            "2",
+            "K"
+          ],
+          "dealer": [
+            "2",
+            "6",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 45,
+          "running_count": 1,
+          "remaining": 163
+        },
+        {
+          "file": "12983/0029.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 8,
+          "phase": "blank",
+          "player": [
+            "A",
+            "2",
+            "K"
+          ],
+          "dealer": [
+            "2",
+            "6",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 45,
+          "running_count": 1,
+          "remaining": 163
+        },
+        {
+          "file": "12983/0030.png",
+          "sha256": "21d8f4e78ad3bbf79e02e5b76a06c788782b02a8e58d20475aae8fc20f1d0900",
+          "round": 9,
+          "phase": "player",
+          "player": [
+            "Q",
+            "9"
+          ],
+          "dealer": [
+            "9"
+          ],
+          "basic_action": "stand",
+          "seen": 48,
+          "running_count": 0,
+          "remaining": 159
+        },
+        {
+          "file": "12983/0031.png",
+          "sha256": "918dae115c9fc8a42dbbcd7c9b3c9c1abcabad4fca3eeea767891bb5b787f019",
+          "round": 9,
+          "phase": "settled",
+          "player": [
+            "Q",
+            "9"
+          ],
+          "dealer": [
+            "9",
+            "9"
+          ],
+          "basic_action": null,
+          "seen": 49,
+          "running_count": 0,
+          "remaining": 159
+        },
+        {
+          "file": "12983/0032.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 9,
+          "phase": "blank",
+          "player": [
+            "Q",
+            "9"
+          ],
+          "dealer": [
+            "9",
+            "9"
+          ],
+          "basic_action": null,
+          "seen": 49,
+          "running_count": 0,
+          "remaining": 159
+        },
+        {
+          "file": "12983/0033.png",
+          "sha256": "cae16864bee0c45317d3cfa2485d3e1e0d17eb424afd4ab80931c75355d0a183",
+          "round": 10,
+          "phase": "player",
+          "player": [
+            "6",
+            "5"
+          ],
+          "dealer": [
+            "6"
+          ],
+          "basic_action": "hit",
+          "seen": 52,
+          "running_count": 3,
+          "remaining": 155
+        },
+        {
+          "file": "12983/0034.png",
+          "sha256": "67e90b9902db4359b91358d4b5f5e4a50ad92fb675811f253a4ce366e95cea27",
+          "round": 10,
+          "phase": "player",
+          "player": [
+            "6",
+            "5",
+            "9"
+          ],
+          "dealer": [
+            "6"
+          ],
+          "basic_action": "stand",
+          "seen": 53,
+          "running_count": 3,
+          "remaining": 154
+        },
+        {
+          "file": "12983/0035.png",
+          "sha256": "c65b6b767b69c77ddf3b555863b0b7eaf914e523b647c257bf311ecbe7fc74a7",
+          "round": 10,
+          "phase": "settled",
+          "player": [
+            "6",
+            "5",
+            "9"
+          ],
+          "dealer": [
+            "6",
+            "9",
+            "8"
+          ],
+          "basic_action": null,
+          "seen": 55,
+          "running_count": 3,
+          "remaining": 153
+        },
+        {
+          "file": "12983/0036.png",
+          "sha256": "347ad51dcc9fd61c0bfb31c1e2a97987eb4f516cce9c85dd1d0b903911c73214",
+          "round": 10,
+          "phase": "blank",
+          "player": [
+            "6",
+            "5",
+            "9"
+          ],
+          "dealer": [
+            "6",
+            "9",
+            "8"
+          ],
+          "basic_action": null,
+          "seen": 55,
+          "running_count": 3,
+          "remaining": 153
+        }
+      ]
+    },
+    {
+      "seed": 77271,
+      "locale": "it",
+      "scale": 0.8,
+      "rounds": 10,
+      "stages": [
+        {
+          "file": "77271/0000.png",
+          "sha256": "6d1c82fb27f462a0ca1796764d6bc19faa954d0b13f78f0f95fb365047c8233e",
+          "round": 1,
+          "phase": "player",
+          "player": [
+            "6",
+            "8"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "hit",
+          "seen": 3,
+          "running_count": 1,
+          "remaining": 204
+        },
+        {
+          "file": "77271/0001.png",
+          "sha256": "523ee2cae9e636fe9e17af887f3ce1e843ee3440b6249226744c3ea08ee46dbd",
+          "round": 1,
+          "phase": "player",
+          "player": [
+            "6",
+            "8",
+            "4"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "stand",
+          "seen": 4,
+          "running_count": 2,
+          "remaining": 203
+        },
+        {
+          "file": "77271/0002.png",
+          "sha256": "f1dd6e818a95745e70608e37eeed3789c4051a5ec42aaf782fe52c08b6cf0d03",
+          "round": 1,
+          "phase": "settled",
+          "player": [
+            "6",
+            "8",
+            "4"
+          ],
+          "dealer": [
+            "7",
+            "K"
+          ],
+          "basic_action": null,
+          "seen": 5,
+          "running_count": 1,
+          "remaining": 203
+        },
+        {
+          "file": "77271/0003.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 1,
+          "phase": "blank",
+          "player": [
+            "6",
+            "8",
+            "4"
+          ],
+          "dealer": [
+            "7",
+            "K"
+          ],
+          "basic_action": null,
+          "seen": 5,
+          "running_count": 1,
+          "remaining": 203
+        },
+        {
+          "file": "77271/0004.png",
+          "sha256": "360c1ae026383893e5a22747c2d83acab81ef82230fe559dc50e6ab148ea77b3",
+          "round": 2,
+          "phase": "player",
+          "player": [
+            "Q",
+            "J"
+          ],
+          "dealer": [
+            "6"
+          ],
+          "basic_action": "stand",
+          "seen": 8,
+          "running_count": 0,
+          "remaining": 199
+        },
+        {
+          "file": "77271/0005.png",
+          "sha256": "bee805423eb1e68b3fe8a2bf792682f5ed8f467f988b49a9a7cb5d6aba17dc06",
+          "round": 2,
+          "phase": "settled",
+          "player": [
+            "Q",
+            "J"
+          ],
+          "dealer": [
+            "6",
+            "7",
+            "2",
+            "9"
+          ],
+          "basic_action": null,
+          "seen": 11,
+          "running_count": 1,
+          "remaining": 197
+        },
+        {
+          "file": "77271/0006.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 2,
+          "phase": "blank",
+          "player": [
+            "Q",
+            "J"
+          ],
+          "dealer": [
+            "6",
+            "7",
+            "2",
+            "9"
+          ],
+          "basic_action": null,
+          "seen": 11,
+          "running_count": 1,
+          "remaining": 197
+        },
+        {
+          "file": "77271/0007.png",
+          "sha256": "a56fb83ad5735aef93ee77b95b6d08aa216d6c48b876912b054089065814614f",
+          "round": 3,
+          "phase": "settled",
+          "player": [
+            "A",
+            "6"
+          ],
+          "dealer": [
+            "A",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 15,
+          "running_count": -1,
+          "remaining": 193
+        },
+        {
+          "file": "77271/0008.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 3,
+          "phase": "blank",
+          "player": [
+            "A",
+            "6"
+          ],
+          "dealer": [
+            "A",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 15,
+          "running_count": -1,
+          "remaining": 193
+        },
+        {
+          "file": "77271/0009.png",
+          "sha256": "bb82eca819ad582b0e2a4fd594ecb3e39f6716d2ff122734f4c7fae9c208aae8",
+          "round": 4,
+          "phase": "player",
+          "player": [
+            "10",
+            "10"
+          ],
+          "dealer": [
+            "Q"
+          ],
+          "basic_action": "stand",
+          "seen": 18,
+          "running_count": -4,
+          "remaining": 189
+        },
+        {
+          "file": "77271/0010.png",
+          "sha256": "2059f7caf46690a31796c547fec26443b660f5ce0c1c35baac64ae05632af684",
+          "round": 4,
+          "phase": "settled",
+          "player": [
+            "10",
+            "10"
+          ],
+          "dealer": [
+            "Q",
+            "9"
+          ],
+          "basic_action": null,
+          "seen": 19,
+          "running_count": -4,
+          "remaining": 189
+        },
+        {
+          "file": "77271/0011.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 4,
+          "phase": "blank",
+          "player": [
+            "10",
+            "10"
+          ],
+          "dealer": [
+            "Q",
+            "9"
+          ],
+          "basic_action": null,
+          "seen": 19,
+          "running_count": -4,
+          "remaining": 189
+        },
+        {
+          "file": "77271/0012.png",
+          "sha256": "e08ea48e09c73561e51687aa2d0157fea5d9f28330e596be2c3fcf7be745f5a5",
+          "round": 5,
+          "phase": "player",
+          "player": [
+            "5",
+            "Q"
+          ],
+          "dealer": [
+            "9"
+          ],
+          "basic_action": "hit",
+          "seen": 22,
+          "running_count": -4,
+          "remaining": 185
+        },
+        {
+          "file": "77271/0013.png",
+          "sha256": "054d672ec0b2398c39510a3b4849a583f042c2450aafe39aad3a8c64aea157a0",
+          "round": 5,
+          "phase": "player",
+          "player": [
+            "5",
+            "Q",
+            "3"
+          ],
+          "dealer": [
+            "9"
+          ],
+          "basic_action": "stand",
+          "seen": 23,
+          "running_count": -3,
+          "remaining": 184
+        },
+        {
+          "file": "77271/0014.png",
+          "sha256": "fa1785c2d37f1b28ee2548c16515a2711dbe37b75760d18a248a00cce053374a",
+          "round": 5,
+          "phase": "settled",
+          "player": [
+            "5",
+            "Q",
+            "3"
+          ],
+          "dealer": [
+            "9",
+            "Q"
+          ],
+          "basic_action": null,
+          "seen": 24,
+          "running_count": -4,
+          "remaining": 184
+        },
+        {
+          "file": "77271/0015.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 5,
+          "phase": "blank",
+          "player": [
+            "5",
+            "Q",
+            "3"
+          ],
+          "dealer": [
+            "9",
+            "Q"
+          ],
+          "basic_action": null,
+          "seen": 24,
+          "running_count": -4,
+          "remaining": 184
+        },
+        {
+          "file": "77271/0016.png",
+          "sha256": "f5a6a38c5c256cf94dfa2d74dfcc9d88281e89a2a8c8980427862bc65ca14d52",
+          "round": 6,
+          "phase": "player",
+          "player": [
+            "8",
+            "J"
+          ],
+          "dealer": [
+            "J"
+          ],
+          "basic_action": "stand",
+          "seen": 27,
+          "running_count": -6,
+          "remaining": 180
+        },
+        {
+          "file": "77271/0017.png",
+          "sha256": "a2c73e22f1fb95e11ce574965919fb563f0d6bb1e61b39445c203b8e8fa0d8a6",
+          "round": 6,
+          "phase": "settled",
+          "player": [
+            "8",
+            "J"
+          ],
+          "dealer": [
+            "J",
+            "6",
+            "5"
+          ],
+          "basic_action": null,
+          "seen": 29,
+          "running_count": -4,
+          "remaining": 179
+        },
+        {
+          "file": "77271/0018.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 6,
+          "phase": "blank",
+          "player": [
+            "8",
+            "J"
+          ],
+          "dealer": [
+            "J",
+            "6",
+            "5"
+          ],
+          "basic_action": null,
+          "seen": 29,
+          "running_count": -4,
+          "remaining": 179
+        },
+        {
+          "file": "77271/0019.png",
+          "sha256": "95b87182970c2a6b67600ff84e89115d61a1cfecc41b94f5d8f2a110288235b3",
+          "round": 7,
+          "phase": "player",
+          "player": [
+            "3",
+            "9"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "hit",
+          "seen": 32,
+          "running_count": -3,
+          "remaining": 175
+        },
+        {
+          "file": "77271/0020.png",
+          "sha256": "90c6b0776b698cf7faad63b90ff3933d716bd40d88b5b1f81371647599b0a413",
+          "round": 7,
+          "phase": "player",
+          "player": [
+            "3",
+            "9",
+            "2"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "hit",
+          "seen": 33,
+          "running_count": -2,
+          "remaining": 174
+        },
+        {
+          "file": "77271/0021.png",
+          "sha256": "f746071c4a40c537f727f07f56cf9d3183a31e39e2118428cd0eecceb1adf0aa",
+          "round": 7,
+          "phase": "player",
+          "player": [
+            "3",
+            "9",
+            "2",
+            "2"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "hit",
+          "seen": 34,
+          "running_count": -1,
+          "remaining": 173
+        },
+        {
+          "file": "77271/0022.png",
+          "sha256": "e9bbeb563c24a761fee4d8abaf74c6448fcb3096d4c5702b4a2678578ee1065c",
+          "round": 7,
+          "phase": "player",
+          "player": [
+            "3",
+            "9",
+            "2",
+            "2",
+            "4"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "stand",
+          "seen": 35,
+          "running_count": 0,
+          "remaining": 172
+        },
+        {
+          "file": "77271/0023.png",
+          "sha256": "bfefbb7ff071708e55a3624ec11d85982db5619e19d1f6972b509778b405c247",
+          "round": 7,
+          "phase": "settled",
+          "player": [
+            "3",
+            "9",
+            "2",
+            "2",
+            "4"
+          ],
+          "dealer": [
+            "7",
+            "4",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 37,
+          "running_count": 0,
+          "remaining": 171
+        },
+        {
+          "file": "77271/0024.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 7,
+          "phase": "blank",
+          "player": [
+            "3",
+            "9",
+            "2",
+            "2",
+            "4"
+          ],
+          "dealer": [
+            "7",
+            "4",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 37,
+          "running_count": 0,
+          "remaining": 171
+        },
+        {
+          "file": "77271/0025.png",
+          "sha256": "24d70266d01e4af88ee0a7c2709bb71fb1a8a540ce9902f247e53fe8b3816d73",
+          "round": 8,
+          "phase": "player",
+          "player": [
+            "Q",
+            "8"
+          ],
+          "dealer": [
+            "8"
+          ],
+          "basic_action": "stand",
+          "seen": 40,
+          "running_count": -1,
+          "remaining": 167
+        },
+        {
+          "file": "77271/0026.png",
+          "sha256": "eff7124e3ecd0bdcd3cb8fcfdf233b010da0cbfebddf33331ab1e0b66c0a8a46",
+          "round": 8,
+          "phase": "settled",
+          "player": [
+            "Q",
+            "8"
+          ],
+          "dealer": [
+            "8",
+            "4",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 42,
+          "running_count": -1,
+          "remaining": 166
+        },
+        {
+          "file": "77271/0027.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 8,
+          "phase": "blank",
+          "player": [
+            "Q",
+            "8"
+          ],
+          "dealer": [
+            "8",
+            "4",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 42,
+          "running_count": -1,
+          "remaining": 166
+        },
+        {
+          "file": "77271/0028.png",
+          "sha256": "17c35282bff84f2c6854fb47c364f9a4347621020ccef99b4860441396314e6d",
+          "round": 9,
+          "phase": "player",
+          "player": [
+            "9",
+            "Q"
+          ],
+          "dealer": [
+            "K"
+          ],
+          "basic_action": "stand",
+          "seen": 45,
+          "running_count": -3,
+          "remaining": 162
+        },
+        {
+          "file": "77271/0029.png",
+          "sha256": "302cbb0eb6580155e3736f605e4e9cf2a41e49aff158d17ef2aefba9bb9c56e9",
+          "round": 9,
+          "phase": "settled",
+          "player": [
+            "9",
+            "Q"
+          ],
+          "dealer": [
+            "K",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 46,
+          "running_count": -4,
+          "remaining": 162
+        },
+        {
+          "file": "77271/0030.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 9,
+          "phase": "blank",
+          "player": [
+            "9",
+            "Q"
+          ],
+          "dealer": [
+            "K",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 46,
+          "running_count": -4,
+          "remaining": 162
+        },
+        {
+          "file": "77271/0031.png",
+          "sha256": "9cef2c071bb85fa7152595536de8cb184221e37ea0f8d3032e723d7ae2adf829",
+          "round": 10,
+          "phase": "player",
+          "player": [
+            "A",
+            "6"
+          ],
+          "dealer": [
+            "5"
+          ],
+          "basic_action": "hit",
+          "seen": 49,
+          "running_count": -3,
+          "remaining": 158
+        },
+        {
+          "file": "77271/0032.png",
+          "sha256": "5a315be1c53def6a4a4a9a1e3881eec610060d7ddbaa5389586fd8aeb7ae2a84",
+          "round": 10,
+          "phase": "player",
+          "player": [
+            "A",
+            "6",
+            "7"
+          ],
+          "dealer": [
+            "5"
+          ],
+          "basic_action": "stand",
+          "seen": 50,
+          "running_count": -3,
+          "remaining": 157
+        },
+        {
+          "file": "77271/0033.png",
+          "sha256": "c262d23fa1d1fafb1f87ac009519037ee55fa85f82d41bce75921afe2b8f6bef",
+          "round": 10,
+          "phase": "settled",
+          "player": [
+            "A",
+            "6",
+            "7"
+          ],
+          "dealer": [
+            "5",
+            "5",
+            "3",
+            "K"
+          ],
+          "basic_action": null,
+          "seen": 53,
+          "running_count": -2,
+          "remaining": 155
+        },
+        {
+          "file": "77271/0034.png",
+          "sha256": "174887c17741b4ff0f691b2a4f3fae303cc7285cfa9e782c2b983c4d86af501f",
+          "round": 10,
+          "phase": "blank",
+          "player": [
+            "A",
+            "6",
+            "7"
+          ],
+          "dealer": [
+            "5",
+            "5",
+            "3",
+            "K"
+          ],
+          "basic_action": null,
+          "seen": 53,
+          "running_count": -2,
+          "remaining": 155
+        }
+      ]
+    },
+    {
+      "seed": 61073,
+      "locale": "en",
+      "scale": 0.6,
+      "rounds": 10,
+      "stages": [
+        {
+          "file": "61073/0000.png",
+          "sha256": "e23d7cc37f2c412b53a7124765bb3d6c631a3c264d7b3c5269a7e5cb1a7df479",
+          "round": 1,
+          "phase": "player",
+          "player": [
+            "7",
+            "9"
+          ],
+          "dealer": [
+            "J"
+          ],
+          "basic_action": "hit",
+          "seen": 3,
+          "running_count": -1,
+          "remaining": 204
+        },
+        {
+          "file": "61073/0001.png",
+          "sha256": "db379fa676921b0928cafed686ad9e2685ad4befe9d6ea56490ae887907c3301",
+          "round": 1,
+          "phase": "player",
+          "player": [
+            "7",
+            "9",
+            "2"
+          ],
+          "dealer": [
+            "J"
+          ],
+          "basic_action": "stand",
+          "seen": 4,
+          "running_count": 0,
+          "remaining": 203
+        },
+        {
+          "file": "61073/0002.png",
+          "sha256": "fd8f788f06eb5355e83c1413816d4bd3368bc092b06687cfb7871d0577ddeaa8",
+          "round": 1,
+          "phase": "settled",
+          "player": [
+            "7",
+            "9",
+            "2"
+          ],
+          "dealer": [
+            "J",
+            "3",
+            "3",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 7,
+          "running_count": 1,
+          "remaining": 201
+        },
+        {
+          "file": "61073/0003.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 1,
+          "phase": "blank",
+          "player": [
+            "7",
+            "9",
+            "2"
+          ],
+          "dealer": [
+            "J",
+            "3",
+            "3",
+            "J"
+          ],
+          "basic_action": null,
+          "seen": 7,
+          "running_count": 1,
+          "remaining": 201
+        },
+        {
+          "file": "61073/0004.png",
+          "sha256": "123ad47630e912191f0134dc2e01723253f8351d7ae8382823ac4112c604f154",
+          "round": 2,
+          "phase": "player",
+          "player": [
+            "4",
+            "7"
+          ],
+          "dealer": [
+            "6"
+          ],
+          "basic_action": "hit",
+          "seen": 10,
+          "running_count": 3,
+          "remaining": 197
+        },
+        {
+          "file": "61073/0005.png",
+          "sha256": "765eedc0d6ec374fd3268a94a7e888417bc898e8de55e878345498f452546727",
+          "round": 2,
+          "phase": "player",
+          "player": [
+            "4",
+            "7",
+            "4"
+          ],
+          "dealer": [
+            "6"
+          ],
+          "basic_action": "stand",
+          "seen": 11,
+          "running_count": 4,
+          "remaining": 196
+        },
+        {
+          "file": "61073/0006.png",
+          "sha256": "c7756a157fd38a17932f0e3b323f6b27ab31fee4bc9d1837c18cb6b75eb9dc3f",
+          "round": 2,
+          "phase": "settled",
+          "player": [
+            "4",
+            "7",
+            "4"
+          ],
+          "dealer": [
+            "6",
+            "7",
+            "6"
+          ],
+          "basic_action": null,
+          "seen": 13,
+          "running_count": 5,
+          "remaining": 195
+        },
+        {
+          "file": "61073/0007.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 2,
+          "phase": "blank",
+          "player": [
+            "4",
+            "7",
+            "4"
+          ],
+          "dealer": [
+            "6",
+            "7",
+            "6"
+          ],
+          "basic_action": null,
+          "seen": 13,
+          "running_count": 5,
+          "remaining": 195
+        },
+        {
+          "file": "61073/0008.png",
+          "sha256": "2b5bb4c39a592bbabd37a4aa4c22458bded6865f125f937c5ed4ba644f1824e5",
+          "round": 3,
+          "phase": "player",
+          "player": [
+            "5",
+            "8"
+          ],
+          "dealer": [
+            "5"
+          ],
+          "basic_action": "stand",
+          "seen": 16,
+          "running_count": 7,
+          "remaining": 191
+        },
+        {
+          "file": "61073/0009.png",
+          "sha256": "b4403c5d1e86157c8be9392d0132299885db3020aa133224d08b603a986e5542",
+          "round": 3,
+          "phase": "settled",
+          "player": [
+            "5",
+            "8"
+          ],
+          "dealer": [
+            "5",
+            "6",
+            "Q"
+          ],
+          "basic_action": null,
+          "seen": 18,
+          "running_count": 7,
+          "remaining": 190
+        },
+        {
+          "file": "61073/0010.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 3,
+          "phase": "blank",
+          "player": [
+            "5",
+            "8"
+          ],
+          "dealer": [
+            "5",
+            "6",
+            "Q"
+          ],
+          "basic_action": null,
+          "seen": 18,
+          "running_count": 7,
+          "remaining": 190
+        },
+        {
+          "file": "61073/0011.png",
+          "sha256": "6780ec94d49d4d5f590a61e0da8efc204a7696a3467da7557d864fb7d708043b",
+          "round": 4,
+          "phase": "player",
+          "player": [
+            "J",
+            "5"
+          ],
+          "dealer": [
+            "5"
+          ],
+          "basic_action": "stand",
+          "seen": 21,
+          "running_count": 8,
+          "remaining": 186
+        },
+        {
+          "file": "61073/0012.png",
+          "sha256": "f6e0079dd4a1f77aa011dc601380c2705c130b32f240f3275de03c0aa9be581c",
+          "round": 4,
+          "phase": "settled",
+          "player": [
+            "J",
+            "5"
+          ],
+          "dealer": [
+            "5",
+            "A",
+            "7",
+            "7"
+          ],
+          "basic_action": null,
+          "seen": 24,
+          "running_count": 7,
+          "remaining": 184
+        },
+        {
+          "file": "61073/0013.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 4,
+          "phase": "blank",
+          "player": [
+            "J",
+            "5"
+          ],
+          "dealer": [
+            "5",
+            "A",
+            "7",
+            "7"
+          ],
+          "basic_action": null,
+          "seen": 24,
+          "running_count": 7,
+          "remaining": 184
+        },
+        {
+          "file": "61073/0014.png",
+          "sha256": "bd1d5bef30f55f663b1b63ac00848c61c784791d67016dacf42cf6548f583ff7",
+          "round": 5,
+          "phase": "player",
+          "player": [
+            "4",
+            "J"
+          ],
+          "dealer": [
+            "8"
+          ],
+          "basic_action": "hit",
+          "seen": 27,
+          "running_count": 7,
+          "remaining": 180
+        },
+        {
+          "file": "61073/0015.png",
+          "sha256": "e00e5aa4a94315f40a54841497cabc5d120ae6c18e7545550f8fe8af43ac36dd",
+          "round": 5,
+          "phase": "player",
+          "player": [
+            "4",
+            "J",
+            "2"
+          ],
+          "dealer": [
+            "8"
+          ],
+          "basic_action": "hit",
+          "seen": 28,
+          "running_count": 8,
+          "remaining": 179
+        },
+        {
+          "file": "61073/0016.png",
+          "sha256": "29776c1929dc635cff5c91da3c24ec79f998161902af494aa1caf1f10db59917",
+          "round": 5,
+          "phase": "settled",
+          "player": [
+            "4",
+            "J",
+            "2",
+            "K"
+          ],
+          "dealer": [
+            "8",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 30,
+          "running_count": 6,
+          "remaining": 178
+        },
+        {
+          "file": "61073/0017.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 5,
+          "phase": "blank",
+          "player": [
+            "4",
+            "J",
+            "2",
+            "K"
+          ],
+          "dealer": [
+            "8",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 30,
+          "running_count": 6,
+          "remaining": 178
+        },
+        {
+          "file": "61073/0018.png",
+          "sha256": "6f08b361eb97488add12467b4df026468204ac2a574d40328b54a5fb99be8f67",
+          "round": 6,
+          "phase": "player",
+          "player": [
+            "7",
+            "J"
+          ],
+          "dealer": [
+            "10"
+          ],
+          "basic_action": "stand",
+          "seen": 33,
+          "running_count": 4,
+          "remaining": 174
+        },
+        {
+          "file": "61073/0019.png",
+          "sha256": "3d61c8270ce0b55283addc258fba4f1b0df4e0fa05a29101c2af1741f6faa7ca",
+          "round": 6,
+          "phase": "settled",
+          "player": [
+            "7",
+            "J"
+          ],
+          "dealer": [
+            "10",
+            "2",
+            "7"
+          ],
+          "basic_action": null,
+          "seen": 35,
+          "running_count": 5,
+          "remaining": 173
+        },
+        {
+          "file": "61073/0020.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 6,
+          "phase": "blank",
+          "player": [
+            "7",
+            "J"
+          ],
+          "dealer": [
+            "10",
+            "2",
+            "7"
+          ],
+          "basic_action": null,
+          "seen": 35,
+          "running_count": 5,
+          "remaining": 173
+        },
+        {
+          "file": "61073/0021.png",
+          "sha256": "aae99c58f5b9ee98f0115a19b9d9da790aa6f80d3acba6fc9c27b8e4ec9f843e",
+          "round": 7,
+          "phase": "player",
+          "player": [
+            "K",
+            "6"
+          ],
+          "dealer": [
+            "5"
+          ],
+          "basic_action": "stand",
+          "seen": 38,
+          "running_count": 6,
+          "remaining": 169
+        },
+        {
+          "file": "61073/0022.png",
+          "sha256": "7681191c4a44d0329763a7789a3d593c4e3f58545a142e48388f2b4f5c97096a",
+          "round": 7,
+          "phase": "settled",
+          "player": [
+            "K",
+            "6"
+          ],
+          "dealer": [
+            "5",
+            "5",
+            "3",
+            "6"
+          ],
+          "basic_action": null,
+          "seen": 41,
+          "running_count": 9,
+          "remaining": 167
+        },
+        {
+          "file": "61073/0023.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 7,
+          "phase": "blank",
+          "player": [
+            "K",
+            "6"
+          ],
+          "dealer": [
+            "5",
+            "5",
+            "3",
+            "6"
+          ],
+          "basic_action": null,
+          "seen": 41,
+          "running_count": 9,
+          "remaining": 167
+        },
+        {
+          "file": "61073/0024.png",
+          "sha256": "4889e5d42f5d2ba398a20d83b94bf863c92988fd021394808de48b0e49e9f161",
+          "round": 8,
+          "phase": "player",
+          "player": [
+            "6",
+            "10"
+          ],
+          "dealer": [
+            "Q"
+          ],
+          "basic_action": "hit",
+          "seen": 44,
+          "running_count": 8,
+          "remaining": 163
+        },
+        {
+          "file": "61073/0025.png",
+          "sha256": "3bf738875b303cad9b494fef011c349ea12eacd592df6c0ef0491ee2fe3f93cc",
+          "round": 8,
+          "phase": "settled",
+          "player": [
+            "6",
+            "10",
+            "8"
+          ],
+          "dealer": [
+            "Q",
+            "3"
+          ],
+          "basic_action": null,
+          "seen": 46,
+          "running_count": 9,
+          "remaining": 162
+        },
+        {
+          "file": "61073/0026.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 8,
+          "phase": "blank",
+          "player": [
+            "6",
+            "10",
+            "8"
+          ],
+          "dealer": [
+            "Q",
+            "3"
+          ],
+          "basic_action": null,
+          "seen": 46,
+          "running_count": 9,
+          "remaining": 162
+        },
+        {
+          "file": "61073/0027.png",
+          "sha256": "04fdab0de1e69b36c0c180c29f2b05304412cde0506906c3d78b1edf0ca28e87",
+          "round": 9,
+          "phase": "player",
+          "player": [
+            "J",
+            "10"
+          ],
+          "dealer": [
+            "7"
+          ],
+          "basic_action": "stand",
+          "seen": 49,
+          "running_count": 7,
+          "remaining": 158
+        },
+        {
+          "file": "61073/0028.png",
+          "sha256": "3d58580a47f53678cf7c590f5ebc3b41c4b4b8bc6abb6d9eadcd46c4c4591169",
+          "round": 9,
+          "phase": "settled",
+          "player": [
+            "J",
+            "10"
+          ],
+          "dealer": [
+            "7",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 50,
+          "running_count": 6,
+          "remaining": 158
+        },
+        {
+          "file": "61073/0029.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 9,
+          "phase": "blank",
+          "player": [
+            "J",
+            "10"
+          ],
+          "dealer": [
+            "7",
+            "10"
+          ],
+          "basic_action": null,
+          "seen": 50,
+          "running_count": 6,
+          "remaining": 158
+        },
+        {
+          "file": "61073/0030.png",
+          "sha256": "4d14435580bf3a0fc94bfbf51a045a7f6630d4920f07a483857ea306984e6b84",
+          "round": 10,
+          "phase": "settled",
+          "player": [
+            "8",
+            "10"
+          ],
+          "dealer": [
+            "A",
+            "Q"
+          ],
+          "basic_action": null,
+          "seen": 54,
+          "running_count": 3,
+          "remaining": 154
+        },
+        {
+          "file": "61073/0031.png",
+          "sha256": "6f631be0a735d2b945e19a8f514484247583e3fba750aebd817045b1ad5efd2e",
+          "round": 10,
+          "phase": "blank",
+          "player": [
+            "8",
+            "10"
+          ],
+          "dealer": [
+            "A",
+            "Q"
+          ],
+          "basic_action": null,
+          "seen": 54,
+          "running_count": 3,
+          "remaining": 154
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": "1.1.1",
+  "status": "failed",
+  "scope": "pre-footer native hidden smoke ran concurrently with installed-native smoke",
+  "stage": "temporary-directory cleanup",
+  "error": "WinError 32: WebView2 temporary file remained locked beyond the 20 second cleanup retry",
+  "binary_sha256": "ba94fdfcc40a6bfa3e3e7fff0f4b47dbb3c61a80e0ef42fbe18a36a0b7444670",
+  "full_test_pass_claimed": false,
+  "follow_up": "Run final native and installer smoke sequentially; do not terminate shared WebView2 processes."
+}

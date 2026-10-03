@@ -1,0 +1,52 @@
+{
+  "version": "1.1.1",
+  "scope": "headless Chrome, owned lab canvas video and real local REST service; no personal display picker or external provider footage",
+  "checks": [
+    "Actual video UI displays basic policy from a frame response without Monte Carlo",
+    "Independent analysis polling supplies probabilities for the same state",
+    "Floating advisor uses the same current report",
+    "Mid-shoe live video retains a base action and displays unknown TC/inventory",
+    "Five concurrent owned video sources keep separate identities and legal basic advice"
+  ],
+  "errors": [],
+  "initial": {
+    "player": [
+      "2",
+      "8"
+    ],
+    "dealer": [
+      "4"
+    ],
+    "action": "double",
+    "count_history": "complete",
+    "state_id": "9439bba4b17b2718:1:35af23660569af0d2e00"
+  },
+  "five_tables": [
+    {
+      "action": "Double",
+      "cards": "Player 2 · 8Dealer 4",
+      "metrics": "Video processing 87 msFrames monitored 43Card analyses 5Skipped while busy 0"
+    },
+    {
+      "action": "Hit",
+      "cards": "Player 3 · QDealer 9",
+      "metrics": "Video processing 59 msFrames monitored 41Card analyses 5Skipped while busy 0"
+    },
+    {
+      "action": "Hit",
+      "cards": "Player 5 · 4Dealer 7",
+      "metrics": "Video processing 103 msFrames monitored 33Card analyses 4Skipped while busy 0"
+    },
+    {
+      "action": "Split",
+      "cards": "Player 8 · 8Dealer 4",
+      "metrics": "Video processing 104 msFrames monitored 33Card analyses 4Skipped while busy 0"
+    },
+    {
+      "action": "Stand",
+      "cards": "Player J · 9Dealer 5",
+      "metrics": "Video processing 120 msFrames monitored 32Card analyses 4Skipped while busy 0"
+    }
+  ],
+  "status": "passed"
+}

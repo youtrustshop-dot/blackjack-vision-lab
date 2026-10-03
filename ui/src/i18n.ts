@@ -170,7 +170,13 @@ const reliabilityItalian:Record<string,string>={
  "Nothing is recorded by default. The selected video is saved locally as WebM, with timing metadata; maximum 200 MiB.": "La registrazione è disattivata all’avvio. Il video selezionato viene salvato localmente in WebM con i tempi; massimo 200 MiB.",
  "Frames monitored": "Fotogrammi monitorati",
  "Card analyses": "Analisi delle carte",
- "Capture continuity is incomplete. Count estimates are unavailable.": "La continuità della cattura è incompleta. Le stime del conteggio non sono disponibili."
+ "Capture continuity is incomplete. Count estimates are unavailable.": "La continuità della cattura è incompleta. Le stime del conteggio non sono disponibili.",
+ "Unavailable · incomplete history": "Non disponibile · storia incompleta",
+ "Observation history is incomplete. Declare a new shoe to restore the count.": "La storia osservata è incompleta. Dichiara un nuovo shoe per ripristinare il conteggio.",
+ "EV analysis":"Analisi EV","In progress":"In corso","Waiting for an analysis slot":"In attesa di disponibilità",
+ "Complete":"Completata","Budget reached":"Tempo disponibile esaurito",
+ "Basic strategy remains available while estimates run.":"La strategia base resta disponibile durante il calcolo delle stime.",
+ "Observation began mid-shoe or its initial history is unknown. True count and physical inventory are unavailable.":"L’osservazione è iniziata a shoe avviato o la storia iniziale è sconosciuta. True count e inventario fisico non sono disponibili."
 };
 // Legacy labels use Italian keys. New features use English keys; both translate.
 const primary=new Map<string,string>(),secondary=new Map<string,string>();

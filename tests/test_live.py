@@ -51,9 +51,12 @@ def test_pixels_stabilize_once_and_never_count_repeated_video_cards_twice(client
     assert final['source'] == 'live-video-pixels'
     assert final['player'] == ['2', '8'] and final['dealer'] == ['4']
     assert final['observed_cards'] == 3 and final['running_count'] == 2
-    assert final['decision']['best_action'] == 'double'
+    assert final['advice']['basic_action'] == 'double'
     assert sum(e['kind'] == 'CARD_CONFIRMED' for e in client.get(f'/api/live/{stream}/events').json()['events']) == 4
-    assert results[3]['decision'] == results[-1]['decision']
+    assert results[3]['decision'] is None  # Base arrives before the scheduled estimate.
+    assert results[3]['advice']['basic_action'] == final['advice']['basic_action']
+    completed = [r['decision'] for r in results if r['decision'] is not None]
+    assert all(r == completed[0] for r in completed)
     assert client.post('/api/live', json={'session_id': sid}).status_code == 422
 
 
@@ -158,7 +161,7 @@ def test_card_occlusion_immediately_removes_previous_advice(client):
     image = Image.open(io.BytesIO(content)).convert('RGB')
     for i in range(5):
         result = observer.process(image, i, i+1.)
-    assert result['decision'] is not None
+    assert result['advice'] is not None
     # Hide a real player-card region with felt while leaving context visible.
     hidden = image.copy()
     hidden.paste(image.getpixel((40,290)), (55,305,165,465))
@@ -254,4 +257,4 @@ def test_full_screen_table_calibration_preserves_cards_and_decision(client):
     stream=client.post('/api/live',json={'samples':100,'corners':corners}).json()['stream_id']
     result=feed(client,stream,encoded.getvalue(),0)[-1]
     assert result['player']==['2','8'] and result['dealer']==['4']
-    assert result['decision']['best_action']=='double' and result['observed_cards']==3
+    assert result['advice']['best_action']=='double' and result['observed_cards']==3

@@ -2,40 +2,17 @@
   "schema_version": 1,
   "progress_report": "docs/STATUS.md",
   "verification": {
-    "completed_test_run": "370 tests + 10 subtests passed in 56.37s",
-    "frontend_build": "34 frontend tests; TypeScript/Vite passed",
-    "browser_primary_flows": 7,
-    "browser_advanced_flows": 5,
+    "version": "1.1.1",
+    "status": "source-verified",
+    "completed_test_run": "382 tests + 10 subtests passed in 59.53s",
+    "frontend_tests": "40 tests passed",
+    "frontend_build": "40 frontend tests; TypeScript/Vite passed",
     "latest_changes_require_retest": false,
-    "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
-    "native_desktop_build_verified": true,
-    "frozen_backend_verified": true,
-    "release_verified": true,
-    "historical_v0_1": {
-      "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
-      "frontend_build": "passed",
-      "browser_primary_flows": 7,
-      "browser_advanced_flows": 5,
-      "latest_changes_require_retest": false,
-      "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
-      "native_desktop_build_verified": true,
-      "frozen_backend_verified": true,
-      "release_verified": true
-    },
-    "version": "1.0.0",
-    "frontend_tests": "23 tests passed",
-    "release_evidence": "release/v1.1.0/",
-    "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
-    "historical_v0_2": {
-      "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
-      "frontend_build": "passed",
-      "native_desktop_build_verified": true,
-      "frozen_backend_verified": true,
-      "release_verified": true
-    },
-    "historical_v1_0_verification": {
-      "completed_test_run": "282 tests + 10 subtests passed in 30.32s",
-      "frontend_build": "TypeScript/Vite passed",
+    "release_evidence": "release/v1.1.1/",
+    "source_evidence": "docs/LIVE_RELIABILITY_VERIFICATION.json",
+    "historical_v1_1_verification_before_reconciliation": {
+      "completed_test_run": "370 tests + 10 subtests passed in 56.37s",
+      "frontend_build": "34 frontend tests; TypeScript/Vite passed",
       "browser_primary_flows": 7,
       "browser_advanced_flows": 5,
       "latest_changes_require_retest": false,
@@ -56,7 +33,7 @@
       },
       "version": "1.0.0",
       "frontend_tests": "23 tests passed",
-      "release_evidence": "release/v1.0.0/: manifest.json, backend-smoke.json, native-smoke.json, installer-smoke.json, installer-native-smoke.json; portable archive SHA256/CRC verification",
+      "release_evidence": "release/v1.1.0/",
       "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
       "historical_v0_2": {
         "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
@@ -64,9 +41,46 @@
         "native_desktop_build_verified": true,
         "frozen_backend_verified": true,
         "release_verified": true
-      }
+      },
+      "historical_v1_0_verification": {
+        "completed_test_run": "282 tests + 10 subtests passed in 30.32s",
+        "frontend_build": "TypeScript/Vite passed",
+        "browser_primary_flows": 7,
+        "browser_advanced_flows": 5,
+        "latest_changes_require_retest": false,
+        "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
+        "native_desktop_build_verified": true,
+        "frozen_backend_verified": true,
+        "release_verified": true,
+        "historical_v0_1": {
+          "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
+          "frontend_build": "passed",
+          "browser_primary_flows": 7,
+          "browser_advanced_flows": 5,
+          "latest_changes_require_retest": false,
+          "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
+          "native_desktop_build_verified": true,
+          "frozen_backend_verified": true,
+          "release_verified": true
+        },
+        "version": "1.0.0",
+        "frontend_tests": "23 tests passed",
+        "release_evidence": "release/v1.0.0/: manifest.json, backend-smoke.json, native-smoke.json, installer-smoke.json, installer-native-smoke.json; portable archive SHA256/CRC verification",
+        "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
+        "historical_v0_2": {
+          "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
+          "frontend_build": "passed",
+          "native_desktop_build_verified": true,
+          "frozen_backend_verified": true,
+          "release_verified": true
+        }
+      },
+      "clef_visual_evidence": "docs/CLEF_VISUAL_VERIFICATION.json"
     },
-    "clef_visual_evidence": "docs/CLEF_VISUAL_VERIFICATION.json"
+    "current_browser_evidence": "experiments/live_reliability/browser.json",
+    "session_evidence": "experiments/live_reliability/session-after.json",
+    "verification_scope": "Source suite and owned video UI pass. Desktop checks are recorded separately against actual executable hashes. Complete external-session vision and shoe reconstruction remain unverified.",
+    "desktop_artifact_verification": "release/v1.1.1/verification.json"
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",
   "requirements": [
@@ -116,7 +130,8 @@
       "description": "RC,TC,rounding,history and deviations",
       "evidence": "tests/test_counting.py; docs/BROWSER_ADVANCED_VERIFICATION.json",
       "status": "verified",
-      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+      "verified_at": "2026-10-03T01:14:10.000983+00:00",
+      "current_increment_scope": "1.1.1: source regressions pass; 30 new synthetic rounds retain missing exposures and count abstentions. No universal visual/count certification."
     },
     {
       "id": "all_counting",
@@ -132,7 +147,8 @@
       "description": "Observed/unknown inventory and shuffle detection",
       "evidence": "tests/test_events.py; tests/test_simulator.py; unknown standalone imports gated",
       "status": "verified",
-      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+      "verified_at": "2026-10-03T01:14:10.000983+00:00",
+      "current_increment_scope": "1.1.1: source regressions pass; 30 new synthetic rounds retain missing exposures and count abstentions. No universal visual/count certification."
     },
     {
       "id": "deck_posterior",
@@ -206,7 +222,8 @@
       "description": "No duplication across occlusion/reveal/split",
       "evidence": "validation/results/vision/tracking-test.json:59/60 final groups, one provisional; identities/reveals tested",
       "status": "verified",
-      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+      "verified_at": "2026-10-03T01:14:10.000983+00:00",
+      "current_increment_scope": "1.1.1: source regressions pass; 30 new synthetic rounds retain missing exposures and count abstentions. No universal visual/count certification."
     },
     {
       "id": "gate",
@@ -384,7 +401,8 @@
       "description": "Continuous user-selected screen/window/tab video, automatic observations and persistent multi-round tracking",
       "evidence": "tests/test_live.py; ui/tests/live-loop.test.mjs; browser MediaStream demo",
       "status": "verified",
-      "scope": "lab artwork and declared rules/inventory; arbitrary graphics not certified"
+      "scope": "lab artwork and declared rules/inventory; arbitrary graphics not certified",
+      "current_increment_scope": "1.1.1: source regressions pass; 30 new synthetic rounds retain missing exposures and count abstentions. No universal visual/count certification."
     },
     {
       "id": "live_advice",
@@ -392,7 +410,8 @@
       "description": "Sampled active-hand win/push/loss/EV, uncertainty/stale gates, floating advisor and separate simulator",
       "evidence": "tests/test_live.py; ui/src/LiveVision.tsx; docs/LIVE_VISION.md",
       "status": "verified",
-      "scope": "lab artwork and declared rules/inventory; arbitrary graphics not certified"
+      "scope": "lab artwork and declared rules/inventory; arbitrary graphics not certified",
+      "current_increment_scope": "1.1.1: source regressions pass; 30 new synthetic rounds retain missing exposures and count abstentions. No universal visual/count certification."
     },
     {
       "id": "english_primary",
@@ -510,6 +529,6 @@
     "required_system": "Controlled simulator, recorded single-round lab-artwork clips, screenshots, deterministic math and research validation layer.",
     "conditional_research": "Unavailable vendor models and unsupported legacy reference execution remain recorded; they are not fabricated or core dependencies.",
     "laya_user_deferral": "Add Laya later.",
-    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Hold’em calibrated cards/ranking/equity are implemented."
+    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Hold\u2019em calibrated cards/ranking/equity are implemented."
   }
 }

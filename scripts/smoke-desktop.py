@@ -154,6 +154,14 @@ def main():
                 assert result['observed_cards']==session['shoe']['seen']
                 assert result['running_count']==session['shoe']['running_count']
                 if stage==0:
+                    assert result['advice']['basic_action']=='double'
+                    # The frozen app must exercise the progressive endpoint,
+                    # rather than require Monte Carlo in its frame response.
+                    deadline=time.monotonic()+3
+                    while result['decision'] is None and time.monotonic()<deadline:
+                        result.update(request('/api/live/'+identity+'/analysis?state_id='+result['state_id']))
+                        if result['analysis']['status'] in ('timeout','error','not_available'):break
+                        if result['decision'] is None:time.sleep(.03)
                     assert result['decision']['best_action']=='double'
                     row=result['decision']['actions']['double']
                     assert abs(row['win']+row['push']+row['loss']-1)<1e-12

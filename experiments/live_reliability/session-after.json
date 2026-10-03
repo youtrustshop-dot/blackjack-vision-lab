@@ -1,0 +1,2910 @@
+{
+  "version": "1.1.1",
+  "source": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\outputs\\blackjack-vision-lab-open-source",
+  "dataset_sha256": "ac5a3bc7df253a509adba932ae5e78e940e609ebb320fc249560d9fd12caca7f",
+  "scope": "new synthetic sequences, existing development renderer; not held-out provider footage",
+  "latency_scope": "offline observer processing and nominal stabilization; excludes browser, encoding, transport and display",
+  "clef_enabled": false,
+  "samples_per_action": 100,
+  "decision_window_ms": 2200,
+  "thresholds": {
+    "useful_coverage": 0.95,
+    "false_confident_decisions": 0
+  },
+  "sessions": [
+    {
+      "seed": 12983,
+      "rounds": 10,
+      "frames": 222,
+      "decision_opportunities": 17,
+      "timely_correct": 17,
+      "false_confident_frames": 0,
+      "final_observed_minus_expected": -1,
+      "final_rc_error": null,
+      "frame_processing_ms": {
+        "p50": 6.7340500027057715,
+        "p95": 279.22650000182324,
+        "p99": 470.1004230007665
+      },
+      "stages": [
+        {
+          "round": 1,
+          "phase": "player",
+          "expected_player": [
+            "K",
+            "7"
+          ],
+          "recognized_player": [
+            "K",
+            "7"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 706.8380999946385,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 3,
+          "observed_cards": 3,
+          "expected_rc": -2,
+          "running_count": -2,
+          "count_reliable": true,
+          "count_history": "complete",
+          "reasons": []
+        },
+        {
+          "round": 1,
+          "phase": "settled",
+          "expected_player": [
+            "K",
+            "7"
+          ],
+          "recognized_player": [
+            "K",
+            "7"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 6,
+          "observed_cards": 6,
+          "expected_rc": -1,
+          "running_count": -1,
+          "count_reliable": true,
+          "count_history": "complete",
+          "reasons": [
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 1,
+          "phase": "blank",
+          "expected_player": [
+            "K",
+            "7"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 6,
+          "observed_cards": 6,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "6 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 2,
+          "phase": "player",
+          "expected_player": [
+            "8",
+            "Q"
+          ],
+          "recognized_player": [
+            "8",
+            "Q"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 706.7868999976781,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 9,
+          "observed_cards": 9,
+          "expected_rc": -2,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 2,
+          "phase": "settled",
+          "expected_player": [
+            "8",
+            "Q"
+          ],
+          "recognized_player": [
+            "8",
+            "Q"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 10,
+          "observed_cards": 10,
+          "expected_rc": -3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 2,
+          "phase": "blank",
+          "expected_player": [
+            "8",
+            "Q"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 10,
+          "observed_cards": 10,
+          "expected_rc": -3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "4 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 3,
+          "phase": "player",
+          "expected_player": [
+            "J",
+            "3"
+          ],
+          "recognized_player": [
+            "J",
+            "3"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 705.829800000356,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 13,
+          "observed_cards": 13,
+          "expected_rc": -3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 3,
+          "phase": "player",
+          "expected_player": [
+            "J",
+            "3",
+            "A"
+          ],
+          "recognized_player": [
+            "J",
+            "3",
+            "A"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 706.8315000025905,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 14,
+          "observed_cards": 14,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 3,
+          "phase": "player",
+          "expected_player": [
+            "J",
+            "3",
+            "A",
+            "3"
+          ],
+          "recognized_player": [
+            "J",
+            "3",
+            "A",
+            "3"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 705.8578000025591,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 15,
+          "observed_cards": 15,
+          "expected_rc": -3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 3,
+          "phase": "settled",
+          "expected_player": [
+            "J",
+            "3",
+            "A",
+            "3"
+          ],
+          "recognized_player": [
+            "J",
+            "3",
+            "A",
+            "3"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 18,
+          "observed_cards": 18,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 3,
+          "phase": "blank",
+          "expected_player": [
+            "J",
+            "3",
+            "A",
+            "3"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 18,
+          "observed_cards": 18,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "8 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 4,
+          "phase": "player",
+          "expected_player": [
+            "6",
+            "4"
+          ],
+          "recognized_player": [
+            "6",
+            "4"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 707.4701999983517,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 21,
+          "observed_cards": 21,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 4,
+          "phase": "player",
+          "expected_player": [
+            "6",
+            "4",
+            "9"
+          ],
+          "recognized_player": [
+            "6",
+            "4",
+            "9"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 707.2050000017043,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 22,
+          "observed_cards": 22,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 4,
+          "phase": "settled",
+          "expected_player": [
+            "6",
+            "4",
+            "9"
+          ],
+          "recognized_player": [
+            "6",
+            "4",
+            "9"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 23,
+          "observed_cards": 23,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 4,
+          "phase": "blank",
+          "expected_player": [
+            "6",
+            "4",
+            "9"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 23,
+          "observed_cards": 23,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "5 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 5,
+          "phase": "player",
+          "expected_player": [
+            "4",
+            "7"
+          ],
+          "recognized_player": [
+            "4",
+            "7"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 709.6551000024192,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 26,
+          "observed_cards": 26,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 5,
+          "phase": "player",
+          "expected_player": [
+            "4",
+            "7",
+            "6"
+          ],
+          "recognized_player": [
+            "4",
+            "7",
+            "6"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 707.2875000041677,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 27,
+          "observed_cards": 27,
+          "expected_rc": 2,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 5,
+          "phase": "settled",
+          "expected_player": [
+            "4",
+            "7",
+            "6"
+          ],
+          "recognized_player": [
+            "4",
+            "7",
+            "6"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 28,
+          "observed_cards": 28,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 5,
+          "phase": "blank",
+          "expected_player": [
+            "4",
+            "7",
+            "6"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 28,
+          "observed_cards": 28,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "5 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 6,
+          "phase": "player",
+          "expected_player": [
+            "9",
+            "8"
+          ],
+          "recognized_player": [
+            "9",
+            "8"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 706.9052999970154,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 31,
+          "observed_cards": 31,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 6,
+          "phase": "settled",
+          "expected_player": [
+            "9",
+            "8"
+          ],
+          "recognized_player": [
+            "9",
+            "8"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 32,
+          "observed_cards": 32,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 6,
+          "phase": "blank",
+          "expected_player": [
+            "9",
+            "8"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 32,
+          "observed_cards": 32,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "4 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 7,
+          "phase": "player",
+          "expected_player": [
+            "J",
+            "4"
+          ],
+          "recognized_player": [
+            "J",
+            "4"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 710.0382000018726,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 35,
+          "observed_cards": 35,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 7,
+          "phase": "player",
+          "expected_player": [
+            "J",
+            "4",
+            "3"
+          ],
+          "recognized_player": [
+            "J",
+            "4",
+            "3"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 706.4480000000913,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 36,
+          "observed_cards": 36,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 7,
+          "phase": "settled",
+          "expected_player": [
+            "J",
+            "4",
+            "3"
+          ],
+          "recognized_player": [
+            "J",
+            "4",
+            "3"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 39,
+          "observed_cards": 39,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 7,
+          "phase": "blank",
+          "expected_player": [
+            "J",
+            "4",
+            "3"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 39,
+          "observed_cards": 39,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "7 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 8,
+          "phase": "player",
+          "expected_player": [
+            "A",
+            "2"
+          ],
+          "recognized_player": [
+            "A",
+            "2"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 708.9337999961572,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 42,
+          "observed_cards": 42,
+          "expected_rc": 2,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 8,
+          "phase": "player",
+          "expected_player": [
+            "A",
+            "2",
+            "K"
+          ],
+          "recognized_player": [
+            "A",
+            "2",
+            "K"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 707.8375000011874,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 43,
+          "observed_cards": 43,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 8,
+          "phase": "settled",
+          "expected_player": [
+            "A",
+            "2",
+            "K"
+          ],
+          "recognized_player": [
+            "A",
+            "2",
+            "K"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 45,
+          "observed_cards": 45,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 8,
+          "phase": "blank",
+          "expected_player": [
+            "A",
+            "2",
+            "K"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 45,
+          "observed_cards": 45,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "6 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 9,
+          "phase": "player",
+          "expected_player": [
+            "Q",
+            "9"
+          ],
+          "recognized_player": [
+            "Q",
+            "9"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 713.12859999598,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 48,
+          "observed_cards": 48,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 9,
+          "phase": "settled",
+          "expected_player": [
+            "Q",
+            "9"
+          ],
+          "recognized_player": [
+            "Q",
+            "9"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 49,
+          "observed_cards": 49,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 9,
+          "phase": "blank",
+          "expected_player": [
+            "Q",
+            "9"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 49,
+          "observed_cards": 49,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "4 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 10,
+          "phase": "player",
+          "expected_player": [
+            "6",
+            "5"
+          ],
+          "recognized_player": [
+            "6",
+            "5"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 711.4598000000115,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 52,
+          "observed_cards": 51,
+          "expected_rc": 3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 10,
+          "phase": "player",
+          "expected_player": [
+            "6",
+            "5",
+            "9"
+          ],
+          "recognized_player": [
+            "6",
+            "5",
+            "9"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 708.4207999971113,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 53,
+          "observed_cards": 52,
+          "expected_rc": 3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 10,
+          "phase": "settled",
+          "expected_player": [
+            "6",
+            "5",
+            "9"
+          ],
+          "recognized_player": [
+            "6",
+            "5",
+            "9"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 55,
+          "observed_cards": 54,
+          "expected_rc": 3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "Card conservation rejected live-shoe-1:card-52: Known rank/suit multiplicity exceeds shoe capacity",
+            "card occluded or removed without round boundary",
+            "1 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 10,
+          "phase": "blank",
+          "expected_player": [
+            "6",
+            "5",
+            "9"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 55,
+          "observed_cards": 54,
+          "expected_rc": 3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "6 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 77271,
+      "rounds": 10,
+      "frames": 210,
+      "decision_opportunities": 15,
+      "timely_correct": 15,
+      "false_confident_frames": 0,
+      "final_observed_minus_expected": -4,
+      "final_rc_error": null,
+      "frame_processing_ms": {
+        "p50": 5.279900004097726,
+        "p95": 288.7013900002785,
+        "p99": 364.1933910018997
+      },
+      "stages": [
+        {
+          "round": 1,
+          "phase": "player",
+          "expected_player": [
+            "6",
+            "8"
+          ],
+          "recognized_player": [
+            "6",
+            "8"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 702.5827999998,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 3,
+          "observed_cards": 3,
+          "expected_rc": 1,
+          "running_count": 1,
+          "count_reliable": true,
+          "count_history": "complete",
+          "reasons": []
+        },
+        {
+          "round": 1,
+          "phase": "player",
+          "expected_player": [
+            "6",
+            "8",
+            "4"
+          ],
+          "recognized_player": [
+            "6",
+            "8",
+            "4"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 702.5617999999668,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 4,
+          "observed_cards": 4,
+          "expected_rc": 2,
+          "running_count": 2,
+          "count_reliable": true,
+          "count_history": "complete",
+          "reasons": []
+        },
+        {
+          "round": 1,
+          "phase": "settled",
+          "expected_player": [
+            "6",
+            "8",
+            "4"
+          ],
+          "recognized_player": [
+            "6",
+            "8",
+            "4"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 5,
+          "observed_cards": 5,
+          "expected_rc": 1,
+          "running_count": 1,
+          "count_reliable": true,
+          "count_history": "complete",
+          "reasons": [
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 1,
+          "phase": "blank",
+          "expected_player": [
+            "6",
+            "8",
+            "4"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 5,
+          "observed_cards": 5,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "5 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 2,
+          "phase": "player",
+          "expected_player": [
+            "Q",
+            "J"
+          ],
+          "recognized_player": [
+            "Q",
+            "J"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 703.8201000061235,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 8,
+          "observed_cards": 8,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 2,
+          "phase": "settled",
+          "expected_player": [
+            "Q",
+            "J"
+          ],
+          "recognized_player": [
+            "Q",
+            "J"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 11,
+          "observed_cards": 11,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 2,
+          "phase": "blank",
+          "expected_player": [
+            "Q",
+            "J"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 11,
+          "observed_cards": 11,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "6 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 3,
+          "phase": "settled",
+          "expected_player": [
+            "A",
+            "6"
+          ],
+          "recognized_player": [
+            "A",
+            "6"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 15,
+          "observed_cards": 11,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "2 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 3,
+          "phase": "blank",
+          "expected_player": [
+            "A",
+            "6"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 15,
+          "observed_cards": 11,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "6 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 4,
+          "phase": "player",
+          "expected_player": [
+            "10",
+            "10"
+          ],
+          "recognized_player": [
+            "10",
+            "10"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 705.5684000035399,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 18,
+          "observed_cards": 14,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 4,
+          "phase": "settled",
+          "expected_player": [
+            "10",
+            "10"
+          ],
+          "recognized_player": [
+            "10",
+            "10"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 19,
+          "observed_cards": 15,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 4,
+          "phase": "blank",
+          "expected_player": [
+            "10",
+            "10"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 19,
+          "observed_cards": 15,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "4 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 5,
+          "phase": "player",
+          "expected_player": [
+            "5",
+            "Q"
+          ],
+          "recognized_player": [
+            "5",
+            "Q"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 704.7642000063206,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 22,
+          "observed_cards": 18,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 5,
+          "phase": "player",
+          "expected_player": [
+            "5",
+            "Q",
+            "3"
+          ],
+          "recognized_player": [
+            "5",
+            "Q",
+            "3"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 703.8521000024048,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 23,
+          "observed_cards": 19,
+          "expected_rc": -3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 5,
+          "phase": "settled",
+          "expected_player": [
+            "5",
+            "Q",
+            "3"
+          ],
+          "recognized_player": [
+            "5",
+            "Q",
+            "3"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 24,
+          "observed_cards": 20,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 5,
+          "phase": "blank",
+          "expected_player": [
+            "5",
+            "Q",
+            "3"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 24,
+          "observed_cards": 20,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "5 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 6,
+          "phase": "player",
+          "expected_player": [
+            "8",
+            "J"
+          ],
+          "recognized_player": [
+            "8",
+            "J"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 706.2558999998146,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 27,
+          "observed_cards": 23,
+          "expected_rc": -6,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 6,
+          "phase": "settled",
+          "expected_player": [
+            "8",
+            "J"
+          ],
+          "recognized_player": [
+            "8",
+            "J"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 29,
+          "observed_cards": 25,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 6,
+          "phase": "blank",
+          "expected_player": [
+            "8",
+            "J"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 29,
+          "observed_cards": 25,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "5 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 7,
+          "phase": "player",
+          "expected_player": [
+            "3",
+            "9"
+          ],
+          "recognized_player": [
+            "3",
+            "9"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 708.0625999980839,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 32,
+          "observed_cards": 28,
+          "expected_rc": -3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 7,
+          "phase": "player",
+          "expected_player": [
+            "3",
+            "9",
+            "2"
+          ],
+          "recognized_player": [
+            "3",
+            "9",
+            "2"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 706.4072999957716,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 33,
+          "observed_cards": 29,
+          "expected_rc": -2,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 7,
+          "phase": "player",
+          "expected_player": [
+            "3",
+            "9",
+            "2",
+            "2"
+          ],
+          "recognized_player": [
+            "3",
+            "9",
+            "2",
+            "2"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 705.8227000045008,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 34,
+          "observed_cards": 30,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 7,
+          "phase": "player",
+          "expected_player": [
+            "3",
+            "9",
+            "2",
+            "2",
+            "4"
+          ],
+          "recognized_player": [
+            "3",
+            "9",
+            "2",
+            "2",
+            "4"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 705.3580000021611,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 35,
+          "observed_cards": 31,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 7,
+          "phase": "settled",
+          "expected_player": [
+            "3",
+            "9",
+            "2",
+            "2",
+            "4"
+          ],
+          "recognized_player": [
+            "3",
+            "9",
+            "2",
+            "2",
+            "4"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 37,
+          "observed_cards": 33,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 7,
+          "phase": "blank",
+          "expected_player": [
+            "3",
+            "9",
+            "2",
+            "2",
+            "4"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 37,
+          "observed_cards": 33,
+          "expected_rc": 0,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "8 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 8,
+          "phase": "player",
+          "expected_player": [
+            "Q",
+            "8"
+          ],
+          "recognized_player": [
+            "Q",
+            "8"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 710.1665999973193,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 40,
+          "observed_cards": 36,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 8,
+          "phase": "settled",
+          "expected_player": [
+            "Q",
+            "8"
+          ],
+          "recognized_player": [
+            "Q",
+            "8"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 42,
+          "observed_cards": 38,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 8,
+          "phase": "blank",
+          "expected_player": [
+            "Q",
+            "8"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 42,
+          "observed_cards": 38,
+          "expected_rc": -1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "5 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 9,
+          "phase": "player",
+          "expected_player": [
+            "9",
+            "Q"
+          ],
+          "recognized_player": [
+            "9",
+            "Q"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 708.210499996494,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 45,
+          "observed_cards": 41,
+          "expected_rc": -3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 9,
+          "phase": "settled",
+          "expected_player": [
+            "9",
+            "Q"
+          ],
+          "recognized_player": [
+            "9",
+            "Q"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 46,
+          "observed_cards": 42,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 9,
+          "phase": "blank",
+          "expected_player": [
+            "9",
+            "Q"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 46,
+          "observed_cards": 42,
+          "expected_rc": -4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "4 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 10,
+          "phase": "player",
+          "expected_player": [
+            "A",
+            "6"
+          ],
+          "recognized_player": [
+            "A",
+            "6"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 710.4143999997177,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 49,
+          "observed_cards": 45,
+          "expected_rc": -3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 10,
+          "phase": "player",
+          "expected_player": [
+            "A",
+            "6",
+            "7"
+          ],
+          "recognized_player": [
+            "A",
+            "6",
+            "7"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 706.6213999962201,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 50,
+          "observed_cards": 46,
+          "expected_rc": -3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 10,
+          "phase": "settled",
+          "expected_player": [
+            "A",
+            "6",
+            "7"
+          ],
+          "recognized_player": [
+            "A",
+            "6",
+            "7"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 53,
+          "observed_cards": 49,
+          "expected_rc": -2,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 10,
+          "phase": "blank",
+          "expected_player": [
+            "A",
+            "6",
+            "7"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 53,
+          "observed_cards": 49,
+          "expected_rc": -2,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "7 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 61073,
+      "rounds": 10,
+      "frames": 192,
+      "decision_opportunities": 12,
+      "timely_correct": 12,
+      "false_confident_frames": 0,
+      "final_observed_minus_expected": -4,
+      "final_rc_error": null,
+      "frame_processing_ms": {
+        "p50": 4.381950002425583,
+        "p95": 296.64157000006526,
+        "p99": 429.7380339960364
+      },
+      "stages": [
+        {
+          "round": 1,
+          "phase": "player",
+          "expected_player": [
+            "7",
+            "9"
+          ],
+          "recognized_player": [
+            "7",
+            "9"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 702.0147000032011,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 3,
+          "observed_cards": 3,
+          "expected_rc": -1,
+          "running_count": -1,
+          "count_reliable": true,
+          "count_history": "complete",
+          "reasons": []
+        },
+        {
+          "round": 1,
+          "phase": "player",
+          "expected_player": [
+            "7",
+            "9",
+            "2"
+          ],
+          "recognized_player": [
+            "7",
+            "9",
+            "2"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 702.2819000005256,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 4,
+          "observed_cards": 4,
+          "expected_rc": 0,
+          "running_count": 0,
+          "count_reliable": true,
+          "count_history": "complete",
+          "reasons": []
+        },
+        {
+          "round": 1,
+          "phase": "settled",
+          "expected_player": [
+            "7",
+            "9",
+            "2"
+          ],
+          "recognized_player": [
+            "7",
+            "9",
+            "2"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 7,
+          "observed_cards": 7,
+          "expected_rc": 1,
+          "running_count": 1,
+          "count_reliable": true,
+          "count_history": "complete",
+          "reasons": [
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 1,
+          "phase": "blank",
+          "expected_player": [
+            "7",
+            "9",
+            "2"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 7,
+          "observed_cards": 7,
+          "expected_rc": 1,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "7 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 2,
+          "phase": "player",
+          "expected_player": [
+            "4",
+            "7"
+          ],
+          "recognized_player": [
+            "4",
+            "7"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 703.8260000001173,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 10,
+          "observed_cards": 10,
+          "expected_rc": 3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 2,
+          "phase": "player",
+          "expected_player": [
+            "4",
+            "7",
+            "4"
+          ],
+          "recognized_player": [
+            "4",
+            "7",
+            "4"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 703.1630999947083,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 11,
+          "observed_cards": 11,
+          "expected_rc": 4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 2,
+          "phase": "settled",
+          "expected_player": [
+            "4",
+            "7",
+            "4"
+          ],
+          "recognized_player": [
+            "4",
+            "7",
+            "4"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 13,
+          "observed_cards": 13,
+          "expected_rc": 5,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 2,
+          "phase": "blank",
+          "expected_player": [
+            "4",
+            "7",
+            "4"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 13,
+          "observed_cards": 13,
+          "expected_rc": 5,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "6 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 3,
+          "phase": "player",
+          "expected_player": [
+            "5",
+            "8"
+          ],
+          "recognized_player": [
+            "5",
+            "8"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 703.7635999979102,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 16,
+          "observed_cards": 16,
+          "expected_rc": 7,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 3,
+          "phase": "settled",
+          "expected_player": [
+            "5",
+            "8"
+          ],
+          "recognized_player": [
+            "5",
+            "8"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 18,
+          "observed_cards": 18,
+          "expected_rc": 7,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 3,
+          "phase": "blank",
+          "expected_player": [
+            "5",
+            "8"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 18,
+          "observed_cards": 18,
+          "expected_rc": 7,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "5 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 4,
+          "phase": "player",
+          "expected_player": [
+            "J",
+            "5"
+          ],
+          "recognized_player": [
+            "J",
+            "5"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 703.9313000015682,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 21,
+          "observed_cards": 21,
+          "expected_rc": 8,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 4,
+          "phase": "settled",
+          "expected_player": [
+            "J",
+            "5"
+          ],
+          "recognized_player": [
+            "J",
+            "5"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 24,
+          "observed_cards": 24,
+          "expected_rc": 7,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 4,
+          "phase": "blank",
+          "expected_player": [
+            "J",
+            "5"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 24,
+          "observed_cards": 24,
+          "expected_rc": 7,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "6 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 5,
+          "phase": "player",
+          "expected_player": [
+            "4",
+            "J"
+          ],
+          "recognized_player": [
+            "4",
+            "J"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 706.410699999833,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 27,
+          "observed_cards": 27,
+          "expected_rc": 7,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 5,
+          "phase": "player",
+          "expected_player": [
+            "4",
+            "J",
+            "2"
+          ],
+          "recognized_player": [
+            "4",
+            "J",
+            "2"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 703.8567999945371,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 28,
+          "observed_cards": 28,
+          "expected_rc": 8,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 5,
+          "phase": "settled",
+          "expected_player": [
+            "4",
+            "J",
+            "2",
+            "K"
+          ],
+          "recognized_player": [
+            "4",
+            "J",
+            "2",
+            "K"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 30,
+          "observed_cards": 30,
+          "expected_rc": 6,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 5,
+          "phase": "blank",
+          "expected_player": [
+            "4",
+            "J",
+            "2",
+            "K"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 30,
+          "observed_cards": 30,
+          "expected_rc": 6,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "6 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 6,
+          "phase": "player",
+          "expected_player": [
+            "7",
+            "J"
+          ],
+          "recognized_player": [
+            "7",
+            "J"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 705.7576999970479,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 33,
+          "observed_cards": 33,
+          "expected_rc": 4,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 6,
+          "phase": "settled",
+          "expected_player": [
+            "7",
+            "J"
+          ],
+          "recognized_player": [
+            "7",
+            "J"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 35,
+          "observed_cards": 35,
+          "expected_rc": 5,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 6,
+          "phase": "blank",
+          "expected_player": [
+            "7",
+            "J"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 35,
+          "observed_cards": 35,
+          "expected_rc": 5,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "5 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 7,
+          "phase": "player",
+          "expected_player": [
+            "K",
+            "6"
+          ],
+          "recognized_player": [
+            "K",
+            "6"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 706.6915999996127,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 38,
+          "observed_cards": 38,
+          "expected_rc": 6,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 7,
+          "phase": "settled",
+          "expected_player": [
+            "K",
+            "6"
+          ],
+          "recognized_player": [
+            "K",
+            "6"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 41,
+          "observed_cards": 41,
+          "expected_rc": 9,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 7,
+          "phase": "blank",
+          "expected_player": [
+            "K",
+            "6"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 41,
+          "observed_cards": 41,
+          "expected_rc": 9,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "6 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 8,
+          "phase": "player",
+          "expected_player": [
+            "6",
+            "10"
+          ],
+          "recognized_player": [
+            "6",
+            "10"
+          ],
+          "expected_action": "hit",
+          "action": "hit",
+          "first_correct_ms": 707.6446999955806,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 44,
+          "observed_cards": 44,
+          "expected_rc": 8,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 8,
+          "phase": "settled",
+          "expected_player": [
+            "6",
+            "10",
+            "8"
+          ],
+          "recognized_player": [
+            "6",
+            "10",
+            "8"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 46,
+          "observed_cards": 46,
+          "expected_rc": 9,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 8,
+          "phase": "blank",
+          "expected_player": [
+            "6",
+            "10",
+            "8"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 46,
+          "observed_cards": 46,
+          "expected_rc": 9,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "5 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 9,
+          "phase": "player",
+          "expected_player": [
+            "J",
+            "10"
+          ],
+          "recognized_player": [
+            "J",
+            "10"
+          ],
+          "expected_action": "stand",
+          "action": "stand",
+          "first_correct_ms": 716.059800000221,
+          "false_confident_frames": 0,
+          "timely": true,
+          "expected_seen": 49,
+          "observed_cards": 49,
+          "expected_rc": 7,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": []
+        },
+        {
+          "round": 9,
+          "phase": "settled",
+          "expected_player": [
+            "J",
+            "10"
+          ],
+          "recognized_player": [
+            "J",
+            "10"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 50,
+          "observed_cards": 50,
+          "expected_rc": 6,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 9,
+          "phase": "blank",
+          "expected_player": [
+            "J",
+            "10"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 50,
+          "observed_cards": 50,
+          "expected_rc": 6,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "4 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 10,
+          "phase": "settled",
+          "expected_player": [
+            "8",
+            "10"
+          ],
+          "recognized_player": [
+            "8",
+            "10"
+          ],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 54,
+          "observed_cards": 50,
+          "expected_rc": 3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        },
+        {
+          "round": 10,
+          "phase": "blank",
+          "expected_player": [
+            "8",
+            "10"
+          ],
+          "recognized_player": [],
+          "expected_action": null,
+          "action": null,
+          "first_correct_ms": null,
+          "false_confident_frames": 0,
+          "timely": null,
+          "expected_seen": 54,
+          "observed_cards": 50,
+          "expected_rc": 3,
+          "running_count": null,
+          "count_reliable": false,
+          "count_history": "compromised",
+          "reasons": [
+            "card occluded or removed without round boundary",
+            "4 cards await stable visual evidence",
+            "Need at least two player cards and exactly one visible dealer upcard.",
+            "Waiting for a player decision in the video.",
+            "No readable legal player controls; calibrate the table or declare a manual player turn."
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "rounds": 30,
+    "frames": 624,
+    "decision_opportunities": 44,
+    "timely_correct": 44,
+    "useful_coverage": 1.0,
+    "false_confident_frames": 0,
+    "false_confident_end_stage_counts": 0
+  },
+  "acceptance_passed": true,
+  "acceptance_scope": "basic-policy useful coverage and false confident advice only",
+  "count_accuracy_accepted": false,
+  "count_limitation": "Missing exposures or unresolved tracking are retained; basic coverage does not certify a reconstructed shoe."
+}

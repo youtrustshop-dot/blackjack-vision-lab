@@ -49,8 +49,8 @@ def recommend(player, dealer, rules: Rules, *, allowed=None, phase="player",
         basic_evs = generated["actions"]
     if basic not in permitted:
         raise ValueError("Basic recommendation conflicts with visible legal actions.")
-    count_action = basic
-    if phase == "player":
+    count_action = basic if count_complete else None
+    if phase == "player" and count_complete:
         count_action = hilo_strategy(cards, up, rules, true_count, permitted,
             from_split=from_split, split_hands=split_hands, split_aces=split_aces)
     selected, basis = basic, "basic-strategy"
@@ -66,7 +66,8 @@ def recommend(player, dealer, rules: Rules, *, allowed=None, phase="player",
             "explanation": [
                 f"Visible player total: {hand['label']}; dealer upcard: {dealer}.",
                 "Apply the configured rules and currently available actions.",
-                f"Rule-generated basic policy: {basic}; Hi-Lo index comparison: {count_action}.",
+                (f"Rule-generated basic policy: {basic}; Hi-Lo index comparison: {count_action}." if count_complete
+                 else f"Rule-generated basic policy: {basic}; Hi-Lo comparison unavailable because shoe history is incomplete."),
                 (f"Use the resolved observed-composition estimate: {selected}." if basis == "observed-composition"
                  else "Use basic strategy while the composition estimate is unavailable or its ranking overlaps."),
             ],

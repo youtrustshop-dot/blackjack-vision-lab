@@ -54,7 +54,8 @@ def main():
             "Card recognition supports lab artwork and compatible classic green casino tables.\n"
             "Include the full game window, total badges and English/Italian controls. See docs/LIVE_VISION.md.\n")
         for name in ("DESKTOP.md", "STATUS.md", "LIVE_VISION.md", "QUICK_START.md", "CLEF.md",
-                     "RELIABILITY.md", "POKER.md", "CLEF_VISUAL_VERIFICATION.json", "HOLDEM_REFERENCE.json"):
+                     "RELIABILITY.md", "POKER.md", "CLEF_VISUAL_VERIFICATION.json", "HOLDEM_REFERENCE.json",
+                     "LIVE_RELIABILITY_INCREMENT.md", "LIVE_RELIABILITY_VERIFICATION.json"):
             archive.write(ROOT / "docs" / name, "Blackjack Vision Lab/docs/" + name)
         optional = [ROOT / "scripts" / name for name in ("install-clef.ps1", "run-clef.ps1", "clef-runtime.py", "clef_vocabulary.py", "clef-requirements.txt")]
         optional += [ROOT / 'bjlab' / name for name in ('__init__.py','clef_contract.py')]

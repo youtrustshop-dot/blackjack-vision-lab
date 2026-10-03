@@ -15,6 +15,7 @@ jobs:
           cache-dependency-path: ui/package-lock.json
       - run: python -m pip install -c requirements-lock.txt -e ".[dev]"
       - run: python -m pytest -q
+      - run: python scripts/check-evidence.py
       - run: npm ci
         working-directory: ui
       - run: npm run build

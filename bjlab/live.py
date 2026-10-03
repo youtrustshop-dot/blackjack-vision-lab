@@ -6,11 +6,13 @@ module. Each call consumes one newly captured image from the video stream.
 from __future__ import annotations
 
 from dataclasses import asdict
+import copy
 from functools import lru_cache
 import hashlib
 import json
 import math
 import random
+import secrets
 import threading
 import time
 
@@ -27,6 +29,17 @@ from .datasets import card_font, THEMES
 
 
 PHASES = ("READY", "PLAYER", "INSURANCE", "EARLY", "SETTLED")
+
+
+class AnalysisStopped(Exception):
+    """A live estimate exceeded its budget or belongs to an obsolete state."""
+
+
+def check_analysis_budget(deadline, cancel_event):
+    if cancel_event is not None and cancel_event.is_set():
+        raise AnalysisStopped("cancelled")
+    if deadline is not None and time.monotonic() >= deadline:
+        raise AnalysisStopped("timeout")
 
 
 class ContextReader:
@@ -86,12 +99,15 @@ def wilson(successes: int, samples: int) -> list[float]:
 def estimate_actions(player: list[str], upcard: str, counts: list[int], rules: Rules,
                      actions: list[str], *, samples: int = 1500, seed: int = 17,
                      peeked: bool = False, from_split: bool = False,
-                     split_hands: int = 1) -> dict:
+                     split_hands: int = 1, timeout_ms: int | None = None,
+                     cancel_event: threading.Event | None = None) -> dict:
     """Monte Carlo without replacement, using generated basic continuation.
 
     Win means positive net profit for the active hand and any resplits caused by
     its evaluated action. Existing other hands are excluded, explicitly.
     """
+    deadline = time.monotonic() + timeout_ms / 1000 if timeout_ms is not None else None
+    check_analysis_budget(deadline, cancel_event)
     strategy = get_generated_strategy(rules)
     initial = tuple(card_rank(c) for c in player)
     up = card_rank(upcard)
@@ -100,6 +116,7 @@ def estimate_actions(player: list[str], upcard: str, counts: list[int], rules: R
 
     @lru_cache(maxsize=2048)
     def continuation(cards, split, hand_count, pending, split_aces):
+        check_analysis_budget(deadline, cancel_event)
         available = legal_actions(cards, rules, from_split=split, split_hands=hand_count,
                                   split_aces=split_aces, peek_resolved=peeked,
                                   can_surrender=False)
@@ -113,9 +130,11 @@ def estimate_actions(player: list[str], upcard: str, counts: list[int], rules: R
         rng = random.Random(seed)  # Paired initial random streams across actions.
         profits = []
         for _ in range(samples):
+            check_analysis_budget(deadline, cancel_event)
             pool = list(counts)
 
             def draw(excluded=0):
+                check_analysis_budget(deadline, cancel_event)
                 total = sum(pool) - (pool[excluded - 1] if excluded else 0)
                 if total <= 0:
                     raise ValueError("Insufficient cards for a simulated continuation.")
@@ -192,6 +211,7 @@ def estimate_actions(player: list[str], upcard: str, counts: list[int], rules: R
         reports[action] = {"ev": mean, "ev_ci95": [mean - margin, mean + margin],
                            "win": wins / samples, "push": pushes / samples, "loss": losses / samples,
                            "win_ci95": wilson(wins, samples), "samples": samples}
+    check_analysis_budget(deadline, cancel_event)
     best = max(reports, key=lambda name: reports[name]["ev"])
     others = [r for name, r in reports.items() if name != best]
     separated = all(reports[best]["ev_ci95"][0] > r["ev_ci95"][1] for r in others)
@@ -236,9 +256,43 @@ class LiveObserver:
         self.lifecycle=RoundLifecycle()
         self.history_gap=False
         self.last_observation_timestamp=None
+        self.state_generation = 0
+        self.source_id = secrets.token_hex(8)
+        self.state_id = None
+        self.analysis_input = None
+        self.analysis_cancel = threading.Event()
+        self.analysis_status = 'not_available'
+        self.analysis_ms = None
+        self.last_report = None
+        self.stopped = False
+        self.frame_slot = threading.Lock()
+
+    def _invalidate_analysis(self):
+        self.analysis_cancel.set()
+        self.analysis_cancel = threading.Event()
+        self.state_generation += 1
+        self.state_id = None
+        self.analysis_input = None
+        self.analysis_status = 'not_available'
+        self.analysis_ms = None
+        self.decision = None
+
+    def stop(self):
+        with self.lock:
+            self.stopped = True
+            self._invalidate_analysis()
+
+    def analysis_result(self, state_id):
+        with self.lock:
+            if self.stopped or state_id != self.state_id or self.last_report is None:
+                raise ValueError('This analysis belongs to an obsolete video state.')
+            return copy.deepcopy({key: self.last_report[key]
+                                  for key in ('state_id', 'analysis', 'advice', 'decision')})
 
     def process(self, image: Image.Image, sequence: int, timestamp: float) -> dict:
         with self.lock:
+            if self.stopped:
+                raise ValueError('Live observation has stopped.')
             if sequence <= self.sequence:
                 raise ValueError("Video frame sequence must increase; stale frame rejected.")
             if timestamp <= self.tracker.last_timestamp:
@@ -259,7 +313,7 @@ class LiveObserver:
                                        extract_controlled_metadata(image), self.detector.context)
                 self.pixel_cache_key = pixel_key
             detections, context, metadata, external = self.pixel_evidence
-            if external and self.last_observation_timestamp is not None and timestamp-self.last_observation_timestamp>2.5:
+            if self.last_observation_timestamp is not None and timestamp-self.last_observation_timestamp>2.5:
                 self.history_gap=True
             self.last_observation_timestamp=timestamp
             # Template similarity and OCR token scores have different contracts.
@@ -274,10 +328,19 @@ class LiveObserver:
             if context_stable:
                 if (self.last_context.get("shoe") != context["shoe"] or
                         self.last_context.get("session") != context.get("session")):
+                    # Only a new shoe actually witnessed after a known context
+                    # repairs lost history. Joining round N is not a reset.
+                    witnessed_shuffle = bool(self.last_context) and self.last_context.get('shoe') != context['shoe']
                     self.tracker.new_shoe(self.rules.decks, timestamp=timestamp,
                                           shoe_id="live-shoe-" + str(context["shoe"]))
                     self.round = 0
                     self.history_gap=False
+                    if witnessed_shuffle:
+                        self.fresh_shoe = True
+                    elif context['round'] > 1:
+                        self.fresh_shoe = False
+                elif context['round'] > self.round + 1:
+                    self.history_gap = True
                 self.round = context["round"]
                 self.phase = context["phase"]
                 self.last_context = context
@@ -357,7 +420,8 @@ class LiveObserver:
                 reasons.append("No readable legal player controls; calibrate the table or declare a manual player turn.")
             allowed_gate = summary["gate"]["solver_allowed"] and not reasons
             unknown_removed=any(not c.get('on_table') and not c.get('rank') for c in summary['cards'].values())
-            count_reliable=summary['gate']['solver_allowed'] and not self.history_gap and not unknown_removed
+            observed_integrity=summary['gate']['solver_allowed'] and not self.history_gap and not unknown_removed
+            count_reliable=self.fresh_shoe and observed_integrity
             if external:
                 # Missing history blocks composition estimates, not a valid
                 # visible-hand basic-policy recommendation.
@@ -367,22 +431,31 @@ class LiveObserver:
             advice = None
             if allowed_gate:
                 state_key = json.dumps([player_ranks, dealer[0]["rank"], summary["composition_remaining"],
-                                        allowed, peeked, from_split, split_hands, self.phase, count_reliable], sort_keys=True)
+                                        allowed, peeked, from_split, split_hands, self.phase, count_reliable,
+                                        self.round, self.last_context, asdict(self.rules)], sort_keys=True)
                 if state_key != self.decision_key:
+                    self._invalidate_analysis()
+                    self.state_id = self.source_id + ':' + str(self.state_generation) + ':' + hashlib.sha256(state_key.encode()).hexdigest()[:20]
                     if self.phase == "insurance":
-                        pool = summary["composition_remaining"]
-                        probability = pool[9] / sum(pool)
-                        insurance = 1.5 * probability - .5
-                        self.decision = {"best_action": "insurance" if insurance > 0 and "insurance" in controls else "decline_insurance",
-                                         "actions": {}, "insurance_blackjack_probability": probability,
-                                         "insurance_ev": insurance, "method": "observable-pool insurance expectation", "exact": True}
+                        if count_reliable:
+                            pool = summary["composition_remaining"]
+                            probability = pool[9] / sum(pool)
+                            insurance = 1.5 * probability - .5
+                            self.decision = {"best_action": "insurance" if insurance > 0 and "insurance" in controls else "decline_insurance",
+                                             "actions": {}, "insurance_blackjack_probability": probability,
+                                             "insurance_ev": insurance, "method": "observable-pool insurance expectation", "exact": True}
+                            self.analysis_status = 'complete'
                     elif count_reliable:
-                        self.decision = estimate_actions(player_ranks, dealer[0]["rank"],
-                                          summary["composition_remaining"], self.rules, allowed,
-                                          samples=self.samples, seed=int(hashlib.sha256(state_key.encode()).hexdigest()[:8], 16),
-                                          peeked=peeked, from_split=from_split, split_hands=split_hands)
-                    else:
-                        self.decision=None
+                        # No simulation runs under the observer/video lock.
+                        self.analysis_input = {
+                            'state_id': self.state_id,
+                            'player': tuple(player_ranks), 'upcard': dealer[0]['rank'],
+                            'counts': tuple(summary['composition_remaining']),
+                            'rules': Rules(**asdict(self.rules)), 'actions': tuple(allowed),
+                            'samples': self.samples, 'seed': int(hashlib.sha256(state_key.encode()).hexdigest()[:8], 16),
+                            'peeked': peeked, 'from_split': from_split, 'split_hands': split_hands,
+                        }
+                        self.analysis_status = 'ready'
                     self.decision_key = state_key
                 decision = self.decision
                 from .advice import recommend
@@ -391,29 +464,53 @@ class LiveObserver:
                     phase=self.phase, from_split=from_split, split_hands=split_hands,
                     split_aces=from_split and bool(player_ranks) and card_rank(player_ranks[0]) == 1,
                     peeked=peeked, true_count=running / (remaining / 52) if remaining else 0.,
-                    count_complete=self.fresh_shoe and count_reliable, estimate=decision)
+                    count_complete=count_reliable, estimate=decision)
+                if self.analysis_input is not None and 'base_advice' not in self.analysis_input:
+                    self.analysis_input['base_advice'] = copy.deepcopy(advice)
             else:
                 # Never retain advice through a transition, unreadable card or lost track.
+                if self.decision_key is not None:
+                    self._invalidate_analysis()
                 self.decision_key, self.decision = None, None
             running = sum((1 if 2 <= card_rank(rank) <= 6 else -1 if card_rank(rank) in (1, 10) else 0) * count
                           for rank, count in summary["known_rank_counts"].items())
             remaining = summary["physical_remaining"]
             gate = {"solver_allowed": bool(allowed_gate), "status": "stable" if allowed_gate else "waiting",
                     "reasons": [] if allowed_gate else list(dict.fromkeys(reasons))}
-            return {"source": "live-video-pixels", "sequence": sequence, "timestamp": timestamp,
+            count_history = 'complete' if count_reliable else 'partial' if observed_integrity else 'compromised'
+            count_reasons = []
+            if not self.fresh_shoe:
+                count_reasons.append('Observation began mid-shoe or its initial history is unknown. True count and physical inventory are unavailable.')
+            if self.history_gap:
+                count_reasons.append('A video gap or round boundary was missed. Earlier exposures are incomplete.')
+            if unknown_removed:
+                count_reasons.append('An earlier hidden card was never observed face up.')
+            count_reasons.extend(summary['gate']['reasons'])
+            # Keep a named conditional model for inspection; never label it as
+            # a known physical shoe when earlier history is unavailable.
+            state = dict(summary, physical_remaining=remaining if count_reliable else None,
+                         inventory_scope='complete' if count_reliable else 'conditional-model')
+            report = {"source": "live-video-pixels", "sequence": sequence, "timestamp": timestamp,
                     "image_size":list(image.size),
                     "processed_frames": self.frame_count, "detections": [d.to_dict() for d in detections],
                     "context": context, "phase": self.phase, "round": self.round, "gate": gate,
-                    "decision": decision, "advice": advice, "running_count": running if count_reliable else None,
+                    "state_id": self.state_id,
+                    "analysis": {'status': self.analysis_status, 'state_id': self.state_id, 'elapsed_ms': self.analysis_ms},
+                    "decision": decision, "advice": advice, "running_count": running if observed_integrity else None,
+                    "observed_running_count": running, "observed_integrity": observed_integrity,
                     "true_count": running / (remaining / 52) if remaining and count_reliable else None,
                     "count_reliable":count_reliable,
-                    "count_reasons":(['A video gap or round boundary was missed. Earlier exposures are incomplete.'] if self.history_gap else ['An earlier hidden card was never observed face up.'] if unknown_removed else summary['gate']['reasons']),
+                    "count_history":count_history, "count_reasons":list(dict.fromkeys(count_reasons)),
                     "count_scope": "from declared fresh shoe" if self.fresh_shoe else "observed portion only",
-                    "observed_cards": len(summary["counted_ids"]), "physical_remaining": remaining,
+                    "observed_cards": len(summary["counted_ids"]), "physical_remaining": remaining if count_reliable else None,
+                    "conditional_inventory": {'assumption':'No exposures occurred before observation and none were missed.',
+                                              'physical_remaining':remaining, 'composition_remaining':summary['composition_remaining']},
                     "player": player_ranks, "dealer": [c["rank"] for c in dealer],
-                    "events": [e.to_dict() for e in emitted], "state": summary,
+                    "events": [e.to_dict() for e in emitted], "state": state,
                     "processing_ms": (time.perf_counter() - started) * 1000,
                     "recognition_profile": external.get('profile', 'lab-template') if external else 'lab-template',
                     "table_bounds": external.get('table_bounds') if external else None,
                     "visible_controls": sorted(controls),
                     "scope": "lab artwork and classic green-table printed-rank OCR; unreadable or inconsistent evidence is gated"}
+            self.last_report = report
+            return copy.deepcopy(report)

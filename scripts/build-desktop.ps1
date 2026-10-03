@@ -152,7 +152,8 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
     }
     $bjProvenanceFiles = @("bjlab/engine.py", "bjlab/solver.py", "bjlab/strategy.py", "bjlab/api.py", "bjlab/live.py", "bjlab/live_api.py", "bjlab/advice.py", "bjlab/advisor_api.py", "bjlab/model_api.py", "bjlab/simulator.py", "bjlab/vision.py", "bjlab/external_vision.py", "bjlab/ocr.py", "bjlab/assets/ocr/ch_PP-OCRv4_rec_infer.onnx", "desktop_launcher.py", "ui/src-tauri/src/main.rs", "ui/src-tauri/Cargo.toml", "ui/src-tauri/tauri.conf.json", "ui/dist/index.html", "docs/REQUIREMENTS.json")
     $bjProvenanceHashes = [ordered]@{}
-    $bjProvenanceFiles += @("bjlab/clef_contract.py", "bjlab/poker.py", "bjlab/poker_api.py",
+    $bjProvenanceFiles += @("bjlab/live_work.py", "bjlab/evidence.py", "ui/src/live-analysis.ts", "ui/src/LiveVision.tsx", "ui/src/App.tsx",
+        "bjlab/clef_contract.py", "bjlab/poker.py", "bjlab/poker_api.py",
         "bjlab/poker_vision.py", "bjlab/round_lifecycle.py", "bjlab/table_labels.py", "bjlab/suit_symbols.py")
     foreach ($bjRelative in $bjProvenanceFiles) {
         $bjProvenancePath = Join-Path $bjProject $bjRelative

@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "version": "1.1.1",
+  "captured_at": "2026-10-03T18:24:28.588181+00:00",
+  "baseline_commit": "f4f757909dccb7db62a5d2fa39118e7426a9ed2f",
+  "candidate_scope": "current source fingerprint captured after executed tests; final Git commit is in release notes",
+  "source_sha256": {
+    "bjlab/__init__.py": "75250dac0f70b71a17497363b8a1fcd6bd5a2051132e274e278280a6da6b6fe4",
+    "bjlab/advice.py": "626aed67d9255488c0f07df56c70656f2d1f09b23f42f067207c9a39fdf04683",
+    "bjlab/live.py": "e2645734f0bfa14a70e655f5ac1feabfc066ef7e4a4782fae94f18d8dd88bd65",
+    "bjlab/live_api.py": "b535b13d10a702032c4089098b02196ef4a340d2058767b6ccf8cfb5fd8de737",
+    "bjlab/live_work.py": "43e089351586d6333c89bb0ee2f060463f4c7e060f61415f4af7c3e12dbea445",
+    "bjlab/evidence.py": "92bf85f86c9e936af3e42d133cf9db307dad1fd3ba7235e000e9318ceab7b587",
+    "ui/src/live-analysis.ts": "b450d3211be8d6121c2f791a2e0b20e8463d85b6c471a69ec2424d5bffe08f3e",
+    "ui/src/LiveVision.tsx": "fe04a8c20b242728faffece8aa6e75ade4c61df8102656a6c8b9528bc6740c35",
+    "ui/src/i18n.ts": "80ff252ed071955531ace7518f127bc5ef85ce93234175c930f2a4b8b3934cca",
+    "pyproject.toml": "1f2a87319683b1f01133454ea9ee76f22ab247ff5afbfcaa4408b8a0d5544d59",
+    "ui/package.json": "d7fe04d5a6d62c8a7f2fd4ccc718ce34acde4e11d06adc56c00b47e9fddcf0d3",
+    "ui/package-lock.json": "349538d185db1afe2e5bdca37d3929b86ee0424ee20c33cf9fab3f82204abe0e",
+    "ui/src-tauri/Cargo.toml": "1ebe31d1ed9cb01879f6509e17f3f2382ce162d84476e8bddb1e774372a31dc0",
+    "ui/src-tauri/Cargo.lock": "cba9f428ffd797f451a6b7063eeb47f7511bba6294e6490dd019080b596753e3",
+    "ui/src-tauri/tauri.conf.json": "cfc25dab831706bbdacd5d843a95d12a2c8e863b39c0be870c511afa3d01ff4d",
+    "ui/src/App.tsx": "2a43817ed0d9b0f5b0224980eee335ddede04c3c794bfe49d0a1d78b2f87c913"
+  },
+  "tests": {
+    "python_passed": 382,
+    "python_subtests_passed": 10,
+    "frontend_passed": 40,
+    "targeted_progressive_passed": 12,
+    "typescript_vite_build": "passed",
+    "python_deprecation_warning": "retained Starlette/httpx warning",
+    "xml": {
+      "before.xml": {
+        "path": "experiments/live_reliability/before.xml",
+        "sha256": "e915bd4473ff4251bcab6fdec5ce67fe660b877d80375217c52c240d5c75b02b",
+        "tests": 4,
+        "failures": 4,
+        "errors": 0,
+        "time_seconds": 3.67
+      },
+      "after.xml": {
+        "path": "experiments/live_reliability/after.xml",
+        "sha256": "01914c16aac0543a770ea664e9ad96ded28b19745d4ddfaea198a08e5b2a313c",
+        "tests": 12,
+        "failures": 0,
+        "errors": 0,
+        "time_seconds": 7.048
+      },
+      "full-python.xml": {
+        "path": "experiments/live_reliability/full-python.xml",
+        "sha256": "99f64c3de1e4f203826901f883e5e85953cf1a47bf38628ede2bdb8c293f4253",
+        "tests": 392,
+        "failures": 0,
+        "errors": 0,
+        "time_seconds": 59.509
+      },
+      "frontend.xml": {
+        "path": "experiments/live_reliability/frontend.xml",
+        "sha256": "f404bd82072423dca8619c9239ce4a96a1b233acb5ee0690b9b6511b45847676",
+        "tests": 40,
+        "failures": 0,
+        "errors": 0,
+        "time_seconds": 0.13129
+      }
+    },
+    "xml_normalization": "Trailing diagnostic whitespace removed from baseline XML; cases and outcomes unchanged."
+  },
+  "artifact_sha256": {
+    "experiments/live_reliability/browser.json": "e7b062e20bca90224187693f4ddfd7c0bbe8e18b4fb92fc93e90803be2f113ee",
+    "experiments/live_reliability/browser-failed-timer.json": "101934cd22b5b3f78f2036cb3cf2f9aeeaf357fb2e971a69a4f5353ac80a5a03",
+    "experiments/live_reliability/session-before.json": "f4912b289f34f32cac5753fb5c56947e49632f25a10f77af270abfb8b9f93f06",
+    "experiments/live_reliability/session-after.json": "b6e154c4d8b6a5ebed1ee1b0981578ce687649d425db6601c30bde4595b2294a",
+    "experiments/live_reliability/session-manifest.json": "ac5a3bc7df253a509adba932ae5e78e940e609ebb320fc249560d9fd12caca7f",
+    "experiments/live_reliability/browser-before-footer.json": "6a1c64b87ac80511c08bed2020a218431da55f11b1092d86f8ffa5479b079e2b",
+    "experiments/live_reliability/desktop-concurrent-cleanup-failure.json": "61e0dda369fe7f5b00d9c29f2159c704286119f1c1c8493cdee130bccef10976",
+    "experiments/live_reliability/frontend.xml": "f404bd82072423dca8619c9239ce4a96a1b233acb5ee0690b9b6511b45847676"
+  },
+  "browser": {
+    "version": "1.1.1",
+    "scope": "headless Chrome, owned lab canvas video and real local REST service; no personal display picker or external provider footage",
+    "checks": [
+      "Visible application version matches the package and backend version",
+      "Actual video UI displays basic policy from a frame response without Monte Carlo",
+      "Independent analysis polling supplies probabilities for the same state",
+      "Floating advisor uses the same current report",
+      "Mid-shoe live video retains a base action and displays unknown TC/inventory",
+      "Five concurrent owned video sources keep separate identities and legal basic advice"
+    ],
+    "errors": [],
+    "initial": {
+      "player": [
+        "2",
+        "8"
+      ],
+      "dealer": [
+        "4"
+      ],
+      "action": "double",
+      "count_history": "complete",
+      "state_id": "fc07beacddaa9275:1:e9a02569db9dcc83bb5a"
+    },
+    "five_tables": [
+      {
+        "action": "Double",
+        "cards": "Player 2 \u00c2\u00b7 8Dealer 4",
+        "metrics": "Video processing 29 msFrames monitored 40Card analyses 5Skipped while busy 0"
+      },
+      {
+        "action": "Hit",
+        "cards": "Player 3 \u00c2\u00b7 QDealer 9",
+        "metrics": "Video processing 34 msFrames monitored 41Card analyses 5Skipped while busy 0"
+      },
+      {
+        "action": "Hit",
+        "cards": "Player 5 \u00c2\u00b7 4Dealer 7",
+        "metrics": "Video processing 79 msFrames monitored 31Card analyses 4Skipped while busy 0"
+      },
+      {
+        "action": "Split",
+        "cards": "Player 8 \u00c2\u00b7 8Dealer 4",
+        "metrics": "Video processing 94 msFrames monitored 32Card analyses 4Skipped while busy 0"
+      },
+      {
+        "action": "Stand",
+        "cards": "Player J \u00c2\u00b7 9Dealer 5",
+        "metrics": "Video processing 75 msFrames monitored 31Card analyses 4Skipped while busy 0"
+      }
+    ],
+    "status": "passed"
+  },
+  "new_synthetic_sessions": {
+    "session-before": {
+      "version": "1.1.0",
+      "dataset_sha256": "ac5a3bc7df253a509adba932ae5e78e940e609ebb320fc249560d9fd12caca7f",
+      "scope": "new synthetic sequences, existing development renderer; not held-out provider footage",
+      "latency_scope": "offline observer processing and nominal stabilization; excludes browser, encoding, transport and display",
+      "clef_enabled": false,
+      "samples_per_action": 100,
+      "decision_window_ms": 2200,
+      "thresholds": {
+        "useful_coverage": 0.95,
+        "false_confident_decisions": 0
+      },
+      "summary": {
+        "rounds": 30,
+        "frames": 624,
+        "decision_opportunities": 44,
+        "timely_correct": 44,
+        "useful_coverage": 1.0,
+        "false_confident_frames": 0,
+        "false_confident_end_stage_counts": 0
+      },
+      "acceptance_passed": true,
+      "acceptance_scope": "basic-policy useful coverage and false confident advice only",
+      "count_accuracy_accepted": false,
+      "count_limitation": "Missing exposures or unresolved tracking are retained; basic coverage does not certify a reconstructed shoe.",
+      "final_observed_minus_expected": [
+        -1,
+        -4,
+        -4
+      ],
+      "final_rc_error": [
+        null,
+        null,
+        null
+      ],
+      "frame_processing_ms_by_session": [
+        {
+          "p50": 7.159000000683591,
+          "p95": 345.0864000024011,
+          "p99": 470.21901500265784
+        },
+        {
+          "p50": 4.817099998035701,
+          "p95": 326.8233199949463,
+          "p99": 406.1169009963486
+        },
+        {
+          "p50": 3.2636500036460347,
+          "p95": 268.45714499941084,
+          "p99": 388.056024000689
+        }
+      ]
+    },
+    "session-after": {
+      "version": "1.1.1",
+      "dataset_sha256": "ac5a3bc7df253a509adba932ae5e78e940e609ebb320fc249560d9fd12caca7f",
+      "scope": "new synthetic sequences, existing development renderer; not held-out provider footage",
+      "latency_scope": "offline observer processing and nominal stabilization; excludes browser, encoding, transport and display",
+      "clef_enabled": false,
+      "samples_per_action": 100,
+      "decision_window_ms": 2200,
+      "thresholds": {
+        "useful_coverage": 0.95,
+        "false_confident_decisions": 0
+      },
+      "summary": {
+        "rounds": 30,
+        "frames": 624,
+        "decision_opportunities": 44,
+        "timely_correct": 44,
+        "useful_coverage": 1.0,
+        "false_confident_frames": 0,
+        "false_confident_end_stage_counts": 0
+      },
+      "acceptance_passed": true,
+      "acceptance_scope": "basic-policy useful coverage and false confident advice only",
+      "count_accuracy_accepted": false,
+      "count_limitation": "Missing exposures or unresolved tracking are retained; basic coverage does not certify a reconstructed shoe.",
+      "final_observed_minus_expected": [
+        -1,
+        -4,
+        -4
+      ],
+      "final_rc_error": [
+        null,
+        null,
+        null
+      ],
+      "frame_processing_ms_by_session": [
+        {
+          "p50": 6.7340500027057715,
+          "p95": 279.22650000182324,
+          "p99": 470.1004230007665
+        },
+        {
+          "p50": 5.279900004097726,
+          "p95": 288.7013900002785,
+          "p99": 364.1933910018997
+        },
+        {
+          "p50": 4.381950002425583,
+          "p95": 296.64157000006526,
+          "p99": 429.7380339960364
+        }
+      ]
+    }
+  },
+  "hardware": {
+    "schema_version": 1,
+    "captured_at": "2026-10-03T00:43:25.089991+00:00",
+    "OS": "Windows-11-10.0.26200-SP0",
+    "CPU": "AMD Ryzen 5 3600 6-Core Processor",
+    "logical_processors": 12,
+    "physical_memory_bytes": 17126506496,
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.5.3",
+      "opencv-python-headless": "5.0.0.93",
+      "Pillow": "12.3.0",
+      "fastapi": "0.142.2",
+      "pytest": "9.1.1"
+    },
+    "measurement_scope": "Local controlled-renderer and solver measurements in saved reports; GPU inference not measured.",
+    "load_note": "Development builds and separate reference benchmarks ran on the same host; figures are empirical observations, not dedicated-machine guarantees."
+  },
+  "desktop_artifact_evidence": "release/v1.1.1/verification.json; separate executable checks bound to actual artifact hashes",
+  "not_executed": [
+    "held-out authorized external provider full sessions",
+    "personal display picker",
+    "detached OS advisor dragging and mixed monitor DPI",
+    "new Clef ablation",
+    "new economic/rake comparison"
+  ],
+  "limitations": [
+    "New seeds use an existing development renderer, not independent provider recordings.",
+    "Session oracle reuses core basic strategy; these results check integration, not independent mathematical correctness.",
+    "30 rounds do not certify perfect count reconstruction: missing exposures and count abstentions are retained.",
+    "Frame-processing p95 is offline, not browser end-to-end latency.",
+    "Five-table readings are snapshots, not sustained latency percentiles.",
+    "1200 ms estimate deadline is cooperative; native OCR is not forcibly preempted."
+  ]
+}

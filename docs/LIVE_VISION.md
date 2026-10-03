@@ -1,4 +1,4 @@
-# Continuous live vision — 1.0.1
+# Continuous live vision — 1.1.1
 
 
 
@@ -88,7 +88,7 @@ confirmation. [Recognition scope and tests](EXTERNAL_VISION.md).
 
 
 
-Hi-Lo adds +1 for 2–6, 0 for 7–9 and −1 for tens/aces. Every confirmed exposure counts once. True count divides by estimated physical decks remaining. Declare **Observe from a new shoe** only when the complete shoe has really been observed. Restarting observation mid-game labels the count partial unless a new shoe is explicitly declared.
+Hi-Lo adds +1 for 2–6, 0 for 7–9 and −1 for tens/aces. Every confirmed exposure counts once. True count divides by physical decks remaining only when initial shoe history and observed continuity are known. Mid-shoe observation shows observed RC, with TC and physical remaining cards unavailable. A gap or ambiguous tracking withholds reliable counts. Declare **Observe from a new shoe** only when the complete shoe has really been observed. A separately labelled conditional inventory is an assumption, not known physical inventory.
 
 
 
@@ -101,6 +101,12 @@ Unreadable, lost or changing cards, unknown active hands, unavailable legal cont
 
 
 Every valid declared/recognized player turn has an immediate legal basic-policy recommendation. Ace values show 1 or 11 and a soft hand's alternative hard total. The offline library covers hard, soft, pair and natural hands plus 550 starting rank/dealer combinations.
+
+In 1.1.1 the frame response does not await Monte Carlo. A source/state-specific
+endpoint supplies estimates later, with at most two jobs and a cooperative
+1,200-ms budget. Busy, timed-out and unresolved estimates retain basic strategy;
+obsolete results cannot replace the current state. The budget is not a hard
+wall-clock guarantee. [Executed checks and limits](LIVE_RELIABILITY_INCREMENT.md).
 
 
 

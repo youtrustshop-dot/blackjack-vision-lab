@@ -6,7 +6,7 @@ Laboratorio open source locale per simulazioni di blackjack, visione video conti
 
 
 
-[Installer e ZIP Windows 1.1.0](https://github.com/youtrustshop-dot/blackjack-vision-lab/releases/tag/v1.1.0) · [Documentazione principale in inglese](README.md).
+[Installer e ZIP Windows 1.1.1](https://github.com/youtrustshop-dot/blackjack-vision-lab/releases/tag/v1.1.1) · [Documentazione principale in inglese](README.md).
 
 
 

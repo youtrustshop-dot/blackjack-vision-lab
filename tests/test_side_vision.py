@@ -48,7 +48,8 @@ def test_repeated_identical_deals_and_revealed_back_are_counted_once():
     assert settled['advice'] is None
     next_round=observe(side_table())
     assert next_round['round']==2 and next_round['player']==['A','5']
-    assert next_round['count_reliable'] and not next_round['count_reasons']
+    assert next_round['observed_integrity'] and next_round['count_history']=='partial'
+    assert next_round['true_count'] is None and next_round['physical_remaining'] is None
     assert next_round['running_count']==2
     assert next_round['observed_cards']==9
 
