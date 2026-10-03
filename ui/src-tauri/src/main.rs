@@ -55,6 +55,21 @@ fn main() {
                                                     let _ = std::fs::write(path, proof.to_string());
                                                 }
                                                 if let Some(splash) = handle.get_webview_window("startup") { let _ = splash.close(); }
+                                                // A bounded, hidden executable smoke can request the same
+                                                // graceful Exit path without manipulating desktop windows.
+                                                if smoke_hidden {
+                                                    if let Ok(value) = std::env::var("BJLAB_NATIVE_SMOKE_EXIT_AFTER_MS") {
+                                                        if let Ok(delay) = value.parse::<u64>() {
+                                                            if (1000..=120000).contains(&delay) {
+                                                                let shutdown = handle.clone();
+                                                                std::thread::spawn(move || {
+                                                                    std::thread::sleep(std::time::Duration::from_millis(delay));
+                                                                    shutdown.exit(0);
+                                                                });
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                             }
                                             else { stop_backend(&handle); handle.exit(1); }
                                         }

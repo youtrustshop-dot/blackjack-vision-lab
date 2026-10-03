@@ -121,7 +121,7 @@ def render_table(cards: Iterable[Mapping[str, Any]], *, width: int = 960, height
     draw = ImageDraw.Draw(image)
     draw.rounded_rectangle((30, 30, width - 30, height - 30), radius=80,
                            outline=tuple(min(255, c + 30) for c in THEMES[theme]), width=2)
-    draw.text((width // 2, 70), "BLACKJACK VISION LAB", fill=(162, 172, 160),
+    draw.text((width // 2, 70), "BLACKJACK VISION LAB", fill=(132, 144, 130),
               font=card_font(15, font_path), anchor="mt")
     label_font = card_font(16, font_path)
     if rule_labels:

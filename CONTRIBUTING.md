@@ -4,6 +4,7 @@ Use Python 3.12+ and Node.js 22+. On Windows, run `./setup.ps1`.
 
 ```powershell
 .venv/Scripts/python.exe -m pytest -q
+npm --prefix ui test
 npm --prefix ui run build
 ```
 
@@ -20,5 +21,10 @@ Adapters without measured model runs must remain labelled as unbenchmarked.
 Never commit API keys, local environments, generated executables or external
 datasets without their licences. Dependencies retain their original licences.
 
-The existing Windows binaries correspond to the original 0.1.0 source hashes
-recorded in `release/`. A modified core or UI requires a new tested release.
+Versioned Windows binaries must match the recorded source/payload hashes.
+The original 0.1.0 evidence stays in `release/`; later releases use versioned
+folders. A modified core or UI requires a new tested release.
+
+Use English for primary UI labels, docs and screenshots, with an Italian
+secondary translation in `ui/src/i18n.ts`. Keep video ownership, no-backlog
+scheduling, stale gates and the live observer’s pixel-only boundary intact.

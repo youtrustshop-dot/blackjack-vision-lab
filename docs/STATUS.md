@@ -1,28 +1,27 @@
-# Stato verificato — 3 ottobre 2026
+# Verified status — 0.2.0
 
-La consegna corrente implementa il laboratorio controllato dei due testi: motore, solver, conteggio, percezione, shoe, replay, dashboard, esperimenti e verifiche indipendenti. Laya resta rinviato dall’utente. Installer e pacchetto sorgente verificati.
+The source includes the original mathematical/research laboratory plus continuous video observation, a floating advisor, a standalone simulator and English-first UI with optional Italian. Laya is deferred. Clef/Jev are not required or promoted to measured production models.
 
-## Prove eseguite
+## Current verification
 
-- **246 test e 10 subtest passati**, report `TEST_RESULTS.xml`; proprietà su 32 configurazioni ×12 mani. Warning Starlette/httpx conservato.
-- TypeScript/Vite riusciti; Chrome isolato: **7 flussi principali +5 avanzati**, incluse carte coperte, EV, mobile, correzioni/calibrazione, posteriori, design/velocità e replay di JPEG video senza futuro nel prefisso.
-- **2.000 stati** finite-shoe, cinque deck count ×S17/H17: tutte le azioni ottimali concordano. 279 EV fuori tolleranza nel riferimento approssimato effort3 sono conservati; tutti tornano entro1e-7 a effort4, massimo errore diagnostico1,82e-10. Nessun input o tolleranza modificati. Gli originali restano `failed`; la risoluzione è un artifact separato.
-- Tre bug reali trovati nell’audit e corretti: puntate prima del peek, double sulle mani split già a21 e fase di peek inferita dopo hit/split con early surrender. Golden analitici e regressioni indipendenti accompagnano le correzioni.
-- BJSS:6 stati/24EV concordanti entro1e-9, AGPL isolato. FreeBJ e mhluska:120.000 round per motore nei confronti always-stand; intervalli includono zero. FreeBJ condizionato fallito e dichiarato non equivalente.
-- Backend standalone, vera finestra Tauri e chiusura regolare verificati; installer definitivo e cattura del client attestati nei report della cartella `release`.
+- **259 Python tests + 10 subtests passed** in 30.87 seconds. The existing Starlette/httpx deprecation warning is preserved. Thirteen tests exercise the new live path.
+- **16 frontend tests passed**: API outage/recovery, display-stream ownership/late grants, video scheduling/backpressure/stale callbacks and language translation. TypeScript/Vite production build passed.
+- Real lossless video decoding across multiple actions/hands, persistent exposed counts, reveals, shoe changes, four-corner normalization, context OCR, action probabilities and occlusion gates are checked.
+- Actual browser video demo recognized multiple hands and produced action/EV/win/push/loss, persistent RC/TC and fresh-observation metrics. Personal display-picker selection and arbitrary card artwork are not claimed as automated end-to-end tests.
+- **Windows 0.2.0 built and exercised**: frozen backend, hidden native WebView creation, independent HTTP/solver/live-pixel flow, graceful owned-backend shutdown and a fresh current-user installer install/launch/uninstall. The frozen payload verifier checked 20 Python modules and 943 data files in the first build; metadata refreshes rerun the exact payload check. Versioned reports under `release/v0.2.0/` record final binary digests; original v0.1.0 evidence remains unchanged under `release/`. Personal screen capture and a separate always-on-top window are not certified by the hidden executable smoke.
 
-## Percezione e risultati negativi
+[Live vision](LIVE_VISION.md) defines probability scope, timing, tracking and screen-sharing behavior. Live estimates are Monte Carlo, not certified exact optimization. There is no universal 30-FPS-analysis or sub-100-ms guarantee.
 
-Generati1.560 PNG da120 sessioni; calibrazione/test separati. Su360 frame test:1.632 detections geometriche corrette,1.452 rank/semi e180 dorsi corretti, zero FP/FN. Detection p95 14,68ms; tracking finale59/60 esatto, una rivelazione provvisoria conservata. Pipeline p95 32,81ms. Calibrazione per detection: Brier0,0000103, ECE0,000908; non probabilità d’integrità dell’intera sessione.
+## Retained mathematical evidence
 
-Ablation reale360 frame/60 gruppi: conferma1frame RC100%, TC MAE0; conferma3frame RC43,89%, TC MAE0,8648 perframe, con ritardo e finale59/60. Nessuno stato di conteggio/inventario inesatto ammesso dal gate nel benchmark; questa metrica non certifica semi, identità o zone. Quattro confronti EV completi: regret0; quattro astensioni: regret null. Pipeline p95 circa26,8ms, bookkeeping nativo0,053ms. Denominatori/limiti in `PERCEPTION_EXPERIMENTS.md`.
+The original engine/solver audit covered 2,000 finite-shoe states across five deck counts and S17/H17: optimal actions agreed. 279 approximate-reference EV discrepancies were retained as failed originals and resolved separately at greater precision, with maximum diagnostic error 1.82e-10. BJSS supplied six states/24 EVs agreeing within 1e-9. FreeBJ and mhluska comparisons ran 120,000 rounds per engine with explicit policies and intervals; the failed conditioned FreeBJ comparison remains non-equivalent. Three real core defects found during that audit have independent regression cases.
 
-Deck inference heldout47,92%; tray sintetico MAE0,315 carte ma spessore nuovo MAE13,87 e copertura0%. Foto vere: primo tray predictor fallisce, versione prudente si astiene su9/9 test e7/7 overflow. Martin: nostra baseline0/13, reference13/13 su una sua fixture; nessuna generalizzazione fotografica rivendicata.
+These historical studies are documented in the existing raw validation/research reports. They are not rerun measurements of every new UI release. [Original status report](history/v0.1-STATUS.md) preserves the full earlier record and original language.
 
-## Ambito e opzioni conservate
+## Perception evidence and limitations
 
-La visione supporta l’artwork controllato e clip di un solo round; non segmenta automaticamente video arbitrari. Import indipendenti non ereditano mazzi dalla sessione. I posteriori non diventano un numero certo; unknown inventory blocca il solver. FPS live/drop restano null quando non misurati, distinti dal throughput offline.
+The original controlled held-out benchmark used 360 test images: 1,632 geometrically correct detections, 1,452 rank/suit readings and 180 card backs, with no FP/FN in that dataset. Detection p95 was 14.68 ms. Three-frame tracking ended 59/60 sessions exact, with one provisional reveal retained. These historical offline timings are not live capture FPS.
 
-Basic strategy generata nel modello replacement; celle finite composition-dependent separate. Split esatto entro budget, analisi incomplete senza falso best globale. Le misure non sono garanzie30FPS/<100ms su ogni stato; OCR e decisioni complesse hanno costi separati. Hardware in `HARDWARE.json`.
+Temporal confirmation produced real delays and count errors per intermediate image; the ablations and gate exclusions remain in [PERCEPTION_EXPERIMENTS.md](PERCEPTION_EXPERIMENTS.md). External photos, unknown card designs and discard-tray inference had failures or abstentions; see [EXTERNAL_BENCHMARKS.md](EXTERNAL_BENCHMARKS.md). Adding live acquisition does not erase these limits.
 
-Laya/Jev sono adattatori opzionali con test, modelli reali non eseguiti e Laya rinviato. RLCard resta ricerca futura; ONNX/Roboflow non hanno pesi locali validati. MGP: manuale/licenza/capability studiati, runtime legacy senza CLI, nessun numero inventato. Roadmap e `REQUIREMENTS.json` conservano questi stati.
+The live detector reads the lab artwork and visible lab context. Other footage needs a trained, separately evaluated detector. Counts cover exposed cards actually observed; starting mid-shoe leaves earlier composition unknown. Sampling confidence does not certify perception accuracy or session integrity.

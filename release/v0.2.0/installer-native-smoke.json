@@ -1,0 +1,67 @@
+{
+  "version": "0.2.0",
+  "binary": "blackjack-vision-lab.exe",
+  "sha256": "a4c521b45437c4909089a2a2bcd451647cb6847d0c507d6b753390d294c4562c",
+  "mode": "native-hidden",
+  "runtime_path": "Windows System32 only; no Python/Node/Rust paths",
+  "personal_display_picker_selected": false,
+  "native_window_created": true,
+  "initial_live_probability": {
+    "ev": 0.596,
+    "ev_ci95": [
+      0.43390851556156657,
+      0.7580914844384334
+    ],
+    "win": 0.62,
+    "push": 0.058,
+    "loss": 0.322,
+    "win_ci95": [
+      0.576692489073785,
+      0.6614776692154425
+    ],
+    "samples": 500
+  },
+  "status": "pass",
+  "health": {
+    "status": "ok",
+    "version": "0.2.0",
+    "service": "Blackjack Vision Lab",
+    "local_only": true,
+    "truth_boundary": "debug endpoint excluded from solver inputs"
+  },
+  "ui_matches_build": true,
+  "ui_javascript_sha256": "35ab4453d395c167e012a4e2545fb06253828ebc8f175ab17fd70d563e4dfe0b",
+  "exact_solver_best_action": "double",
+  "live_pixel_stages": [
+    {
+      "round": 1,
+      "phase": "player",
+      "observed_cards": 3,
+      "running_count": 2,
+      "best_action": "double"
+    },
+    {
+      "round": 1,
+      "phase": "settled",
+      "observed_cards": 6,
+      "running_count": 0,
+      "best_action": null
+    },
+    {
+      "round": 2,
+      "phase": "player",
+      "observed_cards": 9,
+      "running_count": 2,
+      "best_action": "hit"
+    }
+  ],
+  "live_counts_match_public_exposures": true,
+  "live_processed_observations": 15,
+  "bundled_roadmap_matches_source": true,
+  "source_independent_launch": true,
+  "native_exit": "bounded hidden smoke used normal AppHandle Exit path",
+  "owned_backend_exited": true,
+  "graceful_exit_code": 0,
+  "local_port_closed": true,
+  "new_mei_leaks": 0
+}

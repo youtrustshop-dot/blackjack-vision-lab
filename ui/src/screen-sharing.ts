@@ -4,7 +4,7 @@ export class ScreenShare {
  private generation=0;
  constructor(private acquire:()=>Promise<MediaStream>=()=>{
   if(!navigator.mediaDevices?.getDisplayMedia)throw new Error('Questo browser non supporta la condivisione. Apri questa pagina in Chrome o Edge, oppure carica uno screenshot.');
-  return navigator.mediaDevices.getDisplayMedia({video:{frameRate:{ideal:5,max:15}},audio:false});
+  return navigator.mediaDevices.getDisplayMedia({video:{frameRate:{ideal:15,max:30}},audio:false});
  }){}
  async start():Promise<MediaStream|null>{
   this.stop();const attempt=this.generation;

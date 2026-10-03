@@ -2,7 +2,7 @@
   "schema_version": 1,
   "progress_report": "docs/STATUS.md",
   "verification": {
-    "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
+    "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
     "frontend_build": "passed",
     "browser_primary_flows": 7,
     "browser_advanced_flows": 5,
@@ -10,7 +10,22 @@
     "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
     "native_desktop_build_verified": true,
     "frozen_backend_verified": true,
-    "release_verified": true
+    "release_verified": true,
+    "historical_v0_1": {
+      "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
+      "frontend_build": "passed",
+      "browser_primary_flows": 7,
+      "browser_advanced_flows": 5,
+      "latest_changes_require_retest": false,
+      "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
+      "native_desktop_build_verified": true,
+      "frozen_backend_verified": true,
+      "release_verified": true
+    },
+    "version": "0.2.0",
+    "frontend_tests": "16 passed",
+    "release_evidence": "release/v0.2.0/: backend/native/installer smoke reports, manifest and SHA-256",
+    "current_browser_evidence": "docs/BROWSER_LIVE_VERIFICATION.json"
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",
   "requirements": [
@@ -98,7 +113,7 @@
       "id": "replay_ui",
       "milestone": "M07",
       "description": "Frame/event timeline and import/export",
-      "evidence": "docs/BROWSER_VERIFICATION.json; docs/BROWSER_ADVANCED_VERIFICATION.json; screenshots/video-replay.png",
+      "evidence": "docs/BROWSER_VERIFICATION.json; docs/BROWSER_ADVANCED_VERIFICATION.json; screenshots/video-replay.jpg; docs/BROWSER_LIVE_VERIFICATION.json",
       "status": "verified",
       "verified_at": "2026-10-03T01:14:10.000983+00:00"
     },
@@ -302,7 +317,7 @@
       "id": "desktop",
       "milestone": "M19",
       "description": "Tauri native build and installation smoke",
-      "evidence": "release/manifest.json; release/backend-smoke.json; release/native-smoke.json; release/installer-smoke.json; release/installer-native-smoke.json; docs/SOURCE_PACKAGE_MANIFEST.json",
+      "evidence": "release/manifest.json; release/backend-smoke.json; release/native-smoke.json; release/installer-smoke.json; release/installer-native-smoke.json; docs/SOURCE_PACKAGE_MANIFEST.json; release/v0.2.0/backend-smoke.json; release/v0.2.0/native-smoke.json; release/v0.2.0/installer-smoke.json",
       "status": "verified",
       "verified_at": "2026-10-03T01:14:10.000983+00:00"
     },
@@ -318,9 +333,32 @@
       "id": "delivery",
       "milestone": "M20",
       "description": "Installable package and exhaustive completion audit",
-      "evidence": "release/manifest.json; release/backend-smoke.json; release/native-smoke.json; release/installer-smoke.json; release/installer-native-smoke.json; docs/SOURCE_PACKAGE_MANIFEST.json",
+      "evidence": "release/manifest.json; release/backend-smoke.json; release/native-smoke.json; release/installer-smoke.json; release/installer-native-smoke.json; docs/SOURCE_PACKAGE_MANIFEST.json; release/v0.2.0/backend-smoke.json; release/v0.2.0/native-smoke.json; release/v0.2.0/installer-smoke.json",
       "status": "verified",
       "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "live_video",
+      "milestone": "V21",
+      "description": "Continuous user-selected screen/window/tab video, automatic observations and persistent multi-round tracking",
+      "evidence": "tests/test_live.py; ui/tests/live-loop.test.mjs; browser MediaStream demo",
+      "status": "verified",
+      "scope": "lab artwork and declared rules/inventory; arbitrary graphics not certified"
+    },
+    {
+      "id": "live_advice",
+      "milestone": "V22",
+      "description": "Sampled active-hand win/push/loss/EV, uncertainty/stale gates, floating advisor and separate simulator",
+      "evidence": "tests/test_live.py; ui/src/LiveVision.tsx; docs/LIVE_VISION.md",
+      "status": "verified",
+      "scope": "lab artwork and declared rules/inventory; arbitrary graphics not certified"
+    },
+    {
+      "id": "english_primary",
+      "milestone": "V23",
+      "description": "English default UI/docs/GitHub imagery with optional Italian UI",
+      "evidence": "ui/tests/i18n.test.mjs; docs/screenshots; README.md; README.it.md",
+      "status": "verified"
     }
   ],
   "model_rollout": {

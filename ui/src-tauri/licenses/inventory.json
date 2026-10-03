@@ -4415,7 +4415,8 @@
       "license": "MIT/Apache-2.0",
       "repository": "https://github.com/retep998/winapi-rs",
       "files": [
-        "rust/winapi-i686-pc-windows-gnu-0.4.0/lib/libwinapi_oemlicense.a"
+        "rust/winapi-i686-pc-windows-gnu-0.4.0/Cargo.toml",
+        "source-archives/winapi-i686-pc-windows-gnu-0.4.0.crate"
       ]
     },
     {
@@ -4437,7 +4438,8 @@
       "license": "MIT/Apache-2.0",
       "repository": "https://github.com/retep998/winapi-rs",
       "files": [
-        "rust/winapi-x86_64-pc-windows-gnu-0.4.0/lib/libwinapi_oemlicense.a"
+        "rust/winapi-x86_64-pc-windows-gnu-0.4.0/Cargo.toml",
+        "source-archives/winapi-x86_64-pc-windows-gnu-0.4.0.crate"
       ]
     },
     {

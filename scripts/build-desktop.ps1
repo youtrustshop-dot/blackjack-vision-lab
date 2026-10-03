@@ -3,6 +3,7 @@ param(
     [string]$CargoHome = "",
     [string]$RustupHome = "",
     [string]$GnuBin = "",
+    [string]$ReleaseDirectory = "",
     [switch]$BackendOnly,
     [switch]$SkipBackend,
     [switch]$SkipFrontend,
@@ -10,9 +11,10 @@ param(
 )
 $ErrorActionPreference = "Stop"
 $bjProject = Split-Path -Parent $PSScriptRoot
+$bjVersion = (Get-Content -LiteralPath (Join-Path $bjProject "ui\src-tauri\tauri.conf.json") -Raw | ConvertFrom-Json).version
 $bjWorkspace = Split-Path -Parent (Split-Path -Parent $bjProject)
 $bjWork = Join-Path $bjWorkspace "work\desktop-build"
-$bjRelease = Join-Path $bjProject "release"
+$bjRelease = if ($ReleaseDirectory) { [System.IO.Path]::GetFullPath($ReleaseDirectory) } else { Join-Path $bjProject "release" }
 $bjToolchain = Join-Path $bjWorkspace "work\desktop-toolchain"
 if (-not $PythonExe) { $PythonExe = Join-Path $bjWorkspace "work\venv-bjlab\Scripts\python.exe" }
 if (-not $CargoHome) { $CargoHome = Join-Path $bjToolchain "cargo" }
@@ -89,53 +91,7 @@ image.save(root / "icon.ico", sizes=[(16,16),(24,24),(32,32),(48,48),(64,64),(12
     Assert-Exit "Desktop icon generation"
     & $PythonExe -m PyInstaller --version
     Assert-Exit "PyInstaller availability (install into the build venv first)"
-    if (-not $MetadataOnly) {
-        & $PythonExe (Join-Path $bjProject "ui\src-tauri\build-notices.py")
-        Assert-Exit "Third-party runtime and dependency notices"
-    }
-    $bjProvenanceFiles = @("bjlab/engine.py", "bjlab/solver.py", "bjlab/strategy.py", "bjlab/api.py", "bjlab/simulator.py", "desktop_launcher.py", "ui/src-tauri/src/main.rs", "ui/src-tauri/Cargo.toml", "ui/src-tauri/tauri.conf.json", "ui/dist/index.html", "docs/REQUIREMENTS.json")
-    $bjProvenanceHashes = [ordered]@{}
-    foreach ($bjRelative in $bjProvenanceFiles) {
-        $bjProvenancePath = Join-Path $bjProject $bjRelative
-        if (Test-Path -LiteralPath $bjProvenancePath) {
-            $bjProvenanceHashes[$bjRelative] = (Get-FileHash -LiteralPath $bjProvenancePath -Algorithm SHA256).Hash.ToLowerInvariant()
-        }
-    }
-    $bjProvenance = Join-Path $bjWork "build-provenance.json"
-    [ordered]@{ version = "0.1.0"; source_sha256 = $bjProvenanceHashes } |
-        ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $bjProvenance -Encoding utf8
-    $bjArgs = @("-m", "PyInstaller", "--noconfirm", "--onefile", "--console",
-        "--name", "bjlab-backend", "--distpath", (Join-Path $bjWork "sidecar"),
-        "--workpath", (Join-Path $bjWork "pyinstaller-work"), "--specpath", $bjWork,
-        "--paths", $bjProject, "--collect-submodules", "bjlab", "--collect-all", "cv2",
-        "--add-data", ((Join-Path $bjProject "ui\dist") + ";ui/dist"),
-        "--add-data", ((Join-Path $bjProject "docs") + ";docs"),
-        "--add-data", ($bjProvenance + ";assets"),
-        "--add-data", ((Join-Path $bjProject "ui\src-tauri\licenses") + ";assets/licenses"))
-    if (-not $MetadataOnly) { $bjArgs += "--clean" }
-    $bjFonts = Join-Path $bjToolchain "fonts"
-    if (Test-Path -LiteralPath (Join-Path $bjFonts "DejaVuSans-Bold.ttf")) {
-        $bjArgs += @("--add-data", ($bjFonts + ";assets/fonts"))
-    } else { throw "Portable font bundle missing in $bjFonts; see docs/DESKTOP.md" }
-    $bjArgs += (Join-Path $bjProject "desktop_launcher.py")
-    if (-not $SkipBackend) {
-        & $PythonExe @bjArgs
-        Assert-Exit "Frozen backend build"
-    }
-    $bjSidecar = Join-Path $bjWork "sidecar\bjlab-backend.exe"
-    if (-not (Test-Path -LiteralPath $bjSidecar)) { throw "Verified backend executable is missing: $bjSidecar" }
-    $bjSelfTestOutput = @(& $bjSidecar --self-test)
-    Assert-Exit "Frozen pixel/backend self-test"
-    $bjSelfTestReport = Join-Path $bjWork "cached-sidecar-self-test.json"
-    $bjSelfTestOutput -join "`n" | Set-Content -LiteralPath $bjSelfTestReport -Encoding utf8
-    & $PythonExe (Join-Path $bjProject "ui\src-tauri\verify-sidecar.py") `
-        --sidecar $bjSidecar --project $bjProject --expected $bjProvenance `
-        --self-test $bjSelfTestReport --fonts $bjFonts
-    Assert-Exit "Frozen backend source/provenance/payload freshness"
-    Copy-Item -LiteralPath $bjSidecar -Destination (Join-Path $bjRelease "bjlab-backend.exe") -Force
-    Copy-Item -LiteralPath (Join-Path $bjProject "ui\src-tauri\licenses") -Destination $bjRelease -Recurse -Force
-    if ($BackendOnly) { Write-Host "Backend executable ready: $bjRelease\bjlab-backend.exe"; return }
-
+    # Resolve the exact shipped loader before its license/binary audit.
     & cargo.exe --version
     Assert-Exit "Cargo availability"
     $bjTarget = (& rustc.exe --print host-tuple).Trim()
@@ -170,6 +126,54 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
     $bjRuntime = Join-Path $bjProject "ui\src-tauri\runtime"
     New-Item -ItemType Directory -Force -Path $bjRuntime | Out-Null
     Copy-Item -LiteralPath $bjLoaderSources[0].FullName -Destination (Join-Path $bjRuntime "WebView2Loader.dll") -Force
+
+    if (-not $MetadataOnly) {
+        & $PythonExe (Join-Path $bjProject "ui\src-tauri\build-notices.py")
+        Assert-Exit "Third-party runtime and dependency notices"
+    }
+    $bjProvenanceFiles = @("bjlab/engine.py", "bjlab/solver.py", "bjlab/strategy.py", "bjlab/api.py", "bjlab/live.py", "bjlab/live_api.py", "bjlab/simulator.py", "desktop_launcher.py", "ui/src-tauri/src/main.rs", "ui/src-tauri/Cargo.toml", "ui/src-tauri/tauri.conf.json", "ui/dist/index.html", "docs/REQUIREMENTS.json")
+    $bjProvenanceHashes = [ordered]@{}
+    foreach ($bjRelative in $bjProvenanceFiles) {
+        $bjProvenancePath = Join-Path $bjProject $bjRelative
+        if (Test-Path -LiteralPath $bjProvenancePath) {
+            $bjProvenanceHashes[$bjRelative] = (Get-FileHash -LiteralPath $bjProvenancePath -Algorithm SHA256).Hash.ToLowerInvariant()
+        }
+    }
+    $bjProvenance = Join-Path $bjWork "build-provenance.json"
+    [ordered]@{ version = $bjVersion; source_sha256 = $bjProvenanceHashes } |
+        ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $bjProvenance -Encoding utf8
+    $bjArgs = @("-m", "PyInstaller", "--noconfirm", "--onefile", "--console",
+        "--name", "bjlab-backend", "--distpath", (Join-Path $bjWork "sidecar"),
+        "--workpath", (Join-Path $bjWork "pyinstaller-work"), "--specpath", $bjWork,
+        "--paths", $bjProject, "--collect-submodules", "bjlab", "--collect-all", "cv2",
+        "--add-data", ((Join-Path $bjProject "ui\dist") + ";ui/dist"),
+        "--add-data", ((Join-Path $bjProject "docs") + ";docs"),
+        "--add-data", ($bjProvenance + ";assets"),
+        "--add-data", ((Join-Path $bjProject "ui\src-tauri\licenses") + ";assets/licenses"))
+    if (-not $MetadataOnly) { $bjArgs += "--clean" }
+    $bjFonts = Join-Path $bjToolchain "fonts"
+    if (Test-Path -LiteralPath (Join-Path $bjFonts "DejaVuSans-Bold.ttf")) {
+        $bjArgs += @("--add-data", ($bjFonts + ";assets/fonts"))
+    } else { throw "Portable font bundle missing in $bjFonts; see docs/DESKTOP.md" }
+    $bjArgs += (Join-Path $bjProject "desktop_launcher.py")
+    if (-not $SkipBackend) {
+        & $PythonExe @bjArgs
+        Assert-Exit "Frozen backend build"
+    }
+    $bjSidecar = Join-Path $bjWork "sidecar\bjlab-backend.exe"
+    if (-not (Test-Path -LiteralPath $bjSidecar)) { throw "Verified backend executable is missing: $bjSidecar" }
+    $bjSelfTestOutput = @(& $bjSidecar --self-test)
+    Assert-Exit "Frozen pixel/backend self-test"
+    $bjSelfTestReport = Join-Path $bjWork "cached-sidecar-self-test.json"
+    $bjSelfTestOutput -join "`n" | Set-Content -LiteralPath $bjSelfTestReport -Encoding utf8
+    & $PythonExe (Join-Path $bjProject "ui\src-tauri\verify-sidecar.py") `
+        --sidecar $bjSidecar --project $bjProject --expected $bjProvenance `
+        --self-test $bjSelfTestReport --fonts $bjFonts
+    Assert-Exit "Frozen backend source/provenance/payload freshness"
+    Copy-Item -LiteralPath $bjSidecar -Destination (Join-Path $bjRelease "bjlab-backend.exe") -Force
+    Copy-Item -LiteralPath (Join-Path $bjProject "ui\src-tauri\licenses") -Destination $bjRelease -Recurse -Force
+    if ($BackendOnly) { Write-Host "Backend executable ready: $bjRelease\bjlab-backend.exe"; return }
+
     $bjBinaries = Join-Path $bjProject "ui\src-tauri\binaries"
     New-Item -ItemType Directory -Force -Path $bjBinaries | Out-Null
     Copy-Item -LiteralPath $bjSidecar -Destination (Join-Path $bjBinaries "bjlab-backend-$bjTarget.exe") -Force
@@ -191,14 +195,14 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
     Copy-Item -LiteralPath $bjNative -Destination (Join-Path $bjRelease "Blackjack Vision Lab.exe") -Force
     Copy-Item -LiteralPath (Join-Path $bjRuntime "WebView2Loader.dll") -Destination (Join-Path $bjRelease "WebView2Loader.dll") -Force
     $bjInstallers = Join-Path $env:CARGO_TARGET_DIR "$bjTarget\release\bundle\nsis"
-    Get-ChildItem -LiteralPath $bjInstallers -Filter "Blackjack Vision Lab_0.1.0_x64-setup.exe" | ForEach-Object {
+    Get-ChildItem -LiteralPath $bjInstallers -Filter "Blackjack Vision Lab_${bjVersion}_x64-setup.exe" | ForEach-Object {
         Copy-Item -LiteralPath $_.FullName -Destination $bjRelease -Force
     }
     $bjHashes = Get-ChildItem -LiteralPath $bjRelease -File | Where-Object { $_.Extension -in @(".exe", ".dll") } | ForEach-Object {
         $bjHash = Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256
         [ordered]@{ file = $_.Name; bytes = $_.Length; sha256 = $bjHash.Hash.ToLowerInvariant() }
     }
-    [ordered]@{ version = "0.1.0"; target = $bjTarget; files = @($bjHashes) } |
+    [ordered]@{ version = $bjVersion; target = $bjTarget; files = @($bjHashes) } |
         ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $bjRelease "manifest.json") -Encoding utf8
     Write-Host "Desktop artifacts ready in $bjRelease"
 } finally {

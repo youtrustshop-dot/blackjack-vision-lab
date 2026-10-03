@@ -1,20 +1,19 @@
 # Changelog
 
-## Unreleased
+## 0.2.0
 
-- Explain an unavailable local backend and offer explicit reconnection.
-- Distinguish expired sessions from transport failure; reconnect recreates a
-  session after a server restart and clears stale decision/perception output.
-- Add user-selected display sharing, local preview and still-frame capture for
-  calibration/import in supported desktop browsers.
-- Stop display tracks on cancel, source end, tool closure and component unmount;
-  reject late/superseded permission grants.
-- Add nine frontend regression tests and run them in GitHub Actions.
+- Continuous screen/window/tab video from a share-once browser source, with automatic observations, persistent multi-round card tracking and Hi-Lo count.
+- Real lab-video demo with bot/manual actions and a separate playable simulator window.
+- Finite-pool Monte Carlo action probabilities and EV, sampling intervals, uncertain-rank labels and fresh-observation gates.
+- Floating advisor through Document Picture-in-Picture where supported, in-page floating fallback and explicit close control.
+- Four-corner live calibration, visible shoe/round/hand/phase context, reveal/shoe-transition handling and no upload backlog.
+- English default UI and primary documentation/images; Italian secondary selection persists locally. English-first Windows startup and installer.
+- Local backend recovery/reconnect, display-stream cleanup and cancellation of stale results.
+- 13 live integration tests; 16 frontend tests in CI. Full suite: 259 tests and 10 subtests.
+- Fix decorative renderer text merging with the fourth dealer card contour.
 
-See [screen sharing and recovery](docs/SCREEN_SHARING.md). The release v0.1.0
-installer and portable ZIP remain the verified original artifacts.
+The lab artwork is the validated recognition scope. No arbitrary-game detector or universal real-time performance guarantee is implied. See [live vision](docs/LIVE_VISION.md).
 
 ## 0.1.0
 
-Initial verified simulator, deterministic EV engine, counting, controlled
-perception, replay, research reports and Windows desktop distribution.
+Initial verified simulator, independent EV engine, counting, controlled perception, replay, research reports and Windows desktop distribution. The original release artifacts and evidence remain unchanged.

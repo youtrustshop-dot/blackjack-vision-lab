@@ -20,6 +20,9 @@ release/*
 !release/*.json
 !release/owned-window-capture.png
 !release/prior-fresh-core-proof/
+!release/v0.2.0/
+release/v0.2.0/*
+!release/v0.2.0/*.json
 datasets/**/*.png
 datasets/**/*.jpg
 datasets/**/*.jpeg

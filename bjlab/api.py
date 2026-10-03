@@ -25,7 +25,7 @@ from .monte_carlo import basic_action, hilo_action, run_experiment
 from .simulator import BlackjackSession
 
 ROOT = Path(__file__).resolve().parents[1]
-app = FastAPI(title="Blackjack Vision Lab", version="0.1.0")
+app = FastAPI(title="Blackjack Vision Lab", version="0.2.0")
 sessions: dict[str, BlackjackSession] = {}
 session_locks: dict[str, threading.RLock] = {}
 perception_trackers: dict[str, Any] = {}
@@ -134,7 +134,7 @@ def _guard_action(function, *args) -> Any:
 
 @app.get("/api/health")
 def health() -> dict:
-    return {"status": "ok", "version": "0.1.0", "service": "Blackjack Vision Lab",
+    return {"status": "ok", "version": "0.2.0", "service": "Blackjack Vision Lab",
             "local_only": True, "truth_boundary": "debug endpoint excluded from solver inputs"}
 
 
@@ -227,6 +227,16 @@ def action(session_id: str, body: ActionRequest) -> dict:
         if body.action == "shuffle":
             perception_trackers.pop(session_id, None)
         return result
+
+
+@app.post("/api/sessions/{session_id}/bot-step")
+def simulator_bot_step(session_id: str) -> dict:
+    """Drive the visible source; the independent video observer never calls this."""
+    session = _session(session_id)
+    with session_locks[session_id]:
+        if session.phase in ("ready", "settled"):
+            return _guard_action(session.deal, 1.)
+        return _guard_action(session.action, basic_action(session))
 
 
 def _solver_child(connection, rules: dict, state: dict, timeout_ms: int, max_nodes: int) -> None:
@@ -419,11 +429,25 @@ def _render_session(session: BlackjackSession, *, theme: str = "green", blur: fl
 @app.get("/api/sessions/{session_id}/frame")
 def frame(session_id: str, theme: str = "green", blur: float = Query(default=0, ge=0, le=10),
           scale: float = Query(default=1, ge=.4, le=2), overlap: float = Query(default=0, ge=0, le=.9),
-          card_design: Literal["classic", "minimal"] = "classic") -> Response:
+          card_design: Literal["classic", "minimal"] = "classic", live_context: bool = False) -> Response:
     session = _session(session_id)
     try:
         with session_locks[session_id]:
             image = _render_session(session, theme=theme, blur=blur, scale=scale, overlap=overlap, card_design=card_design)
+            if live_context:
+                # Visible context, read from pixels by the independent observer.
+                # These labels contain no hidden card or future deck information.
+                from PIL import ImageDraw
+                from .datasets import card_font
+                draw = ImageDraw.Draw(image)
+                font = card_font(16)
+                color = (212, 220, 213)
+                context = [(60, "SHOE"), (120, str(session.shoe.generation)),
+                           (225, "ROUND"), (305, str(session.round_id)),
+                           (405, "HAND"), (470, str((session.active_hand or 0) + 1)),
+                           (590, "EARLY" if session.phase == "early_surrender" else session.phase.upper())]
+                for x, text in context:
+                    draw.text((x, 260), text, font=font, fill=color, anchor="lt")
         output = io.BytesIO()
         image.save(output, format="PNG")
         return Response(output.getvalue(), media_type="image/png", headers={"Cache-Control": "no-store"})
@@ -765,4 +789,6 @@ def mount_ui() -> None:
             return {"service": "Blackjack Vision Lab", "api_docs": "/docs", "ui": "Build ui/dist to enable the dashboard."}
 
 
+from .live_api import router as live_router
+app.include_router(live_router)
 mount_ui()

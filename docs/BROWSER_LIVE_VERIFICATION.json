@@ -1,0 +1,112 @@
+{
+  "version": "0.2.0",
+  "date": "2026-10-03",
+  "source": "actual localhost browser UI, isolated verification session",
+  "language_default": "English",
+  "italian_selection_survives_reload": true,
+  "english_restored_after_test": true,
+  "video_source": "real canvas.captureStream MediaStream at 15 FPS; analysis consumes its video pixels",
+  "display_picker_personal_source_selected": false,
+  "stages": [
+    {
+      "round": 1,
+      "player": [
+        "2",
+        "8"
+      ],
+      "dealer": [
+        "4"
+      ],
+      "observed_cards": 3,
+      "running_count": 2,
+      "best_action": "double",
+      "samples_per_action": 1500,
+      "win": 0.592,
+      "push": 0.0593,
+      "loss": 0.3487,
+      "ev": 0.4867
+    },
+    {
+      "round": 1,
+      "phase": "settled",
+      "player": [
+        "2",
+        "8",
+        "A"
+      ],
+      "dealer": [
+        "4",
+        "7",
+        "Q"
+      ],
+      "observed_cards": 6,
+      "running_count": 0,
+      "advice_withheld": true
+    },
+    {
+      "round": 2,
+      "player": [
+        "3",
+        "2"
+      ],
+      "dealer": [
+        "9"
+      ],
+      "observed_cards": 9,
+      "running_count": 2,
+      "best_action": "hit",
+      "win": 0.319,
+      "push": 0.099,
+      "loss": 0.583,
+      "ev": -0.264
+    }
+  ],
+  "probability_values": "UI rounded sampled results, not exact probabilities; rounded percentages may sum to 100.1%",
+  "navigation_preserves_live_observation": true,
+  "stopping_observation_removes_advice_and_cards": true,
+  "floating_panel_rendered_and_closed": true,
+  "external_pip_always_on_top_visually_verified": false,
+  "native_display_picker_verified": false,
+  "legacy_views_checked_in_english": [
+    "table",
+    "counting",
+    "perception",
+    "calibration",
+    "replay",
+    "experiments",
+    "rules",
+    "video replay"
+  ],
+  "actual_small_experiment": {
+    "rounds": 30,
+    "policies": [
+      "basic",
+      "hilo"
+    ],
+    "seed": 42,
+    "completed": 30,
+    "independent_batches": 1,
+    "confidence_interval": "unavailable, explicitly displayed"
+  },
+  "responsive_viewport": {
+    "width": 390,
+    "height": 844,
+    "reset_after_test": true
+  },
+  "screenshots": [
+    "live-vision.jpg",
+    "live-round-two.jpg",
+    "floating-advisor.jpg",
+    "workbench.jpg",
+    "counting.jpg",
+    "perception.jpg",
+    "calibration.jpg",
+    "replay.jpg",
+    "experiments.jpg",
+    "video-replay.jpg",
+    "mobile.jpg",
+    "simulator.jpg"
+  ],
+  "limitations": "Lab artwork only. Video processing latency is measured on this computer, not a universal guarantee. Sampling confidence does not measure perception error. Personal desktop picker selection and arbitrary footage are user-controlled and not certified by this run.",
+  "standalone_simulator_manual_deal_verified": true
+}

@@ -1,7 +1,7 @@
+import {localize} from './localize';
 import {useEffect,useRef,useState} from 'react';
 import {Check,Download,Eye,RotateCcw,Upload} from 'lucide-react';
 import {api,download,fetchApi} from './api';
-import ScreenCapture from './ScreenCapture';
 
 type Props={sid?:string;budget:number;onResult:(value:any)=>void;canAnalyze:boolean;observation:unknown;connected:boolean};
 const show=(value:unknown)=>JSON.stringify(value,null,2);
@@ -33,12 +33,12 @@ export default function VisionTools({sid,budget,onResult,canAnalyze,observation,
  });
  const analyze=()=>run(async()=>{if(sid)setObserved(await api('/sessions/'+sid+'/perception/analyze',{timeout_ms:budget}))});
  const correct=()=>run(async()=>{if(sid)onResult(await api('/sessions/'+sid+'/perception/correct',{card_id:cardId,rank,suit,reason}))});
- return <section className="panel vision-tools">
+ return localize(<section className="panel vision-tools">
   <div className="panel-header"><h2>Calibrazione, video e stato osservato</h2><button className="text-button" onClick={()=>setOpen(v=>!v)} aria-expanded={open}>{open?'Chiudi strumenti':'Apri strumenti'}</button></div>
   <div className="observed-controls"><button className="button primary" disabled={busy||!sid||!canAnalyze||!connected} onClick={analyze}><Eye size={15}/>EV dalla percezione</button><span>{canAnalyze?'Il gate verifica lo stato ricostruito prima del calcolo.':'Questo import è indipendente. Analizza il frame del simulatore o associa esplicitamente un’immagine alla sessione.'}</span></div>
   {error&&<p className="tool-error" role="alert">{error}</p>}
   {observed&&<div className="observed-result"><div className="section-label">{observed.status==='gated'?'ANALISI BLOCCATA DAL GATE':'RISULTATO DELLO STATO OSSERVATO'}</div><pre>{show(observed)}</pre><button className="button secondary" onClick={()=>download('observed-analysis.json',observed)}><Download size={14}/>Esporta analisi</button></div>}
-  {open&&<><ScreenCapture onCapture={next=>{setFile(next);setObserved(null)}}/><div className="import-context"><label>Mazzi dichiarati per l’import<select aria-label="Mazzi dichiarati per l’import" value={declaredDecks} onChange={e=>setDeclaredDecks(e.target.value)}><option value="">Sconosciuti</option>{[1,2,4,6,8].map(d=><option key={d} value={d}>{d}</option>)}</select></label><label><input type="checkbox" checked={attachSession} onChange={e=>setAttachSession(e.target.checked)}/>Associa l’immagine al tracker della sessione attiva</label><p>La configurazione dichiarata non dimostra che lo shoe sia stato osservato dall’inizio. Importa clip di un singolo round.</p></div><div className="tool-grid">
+  {open&&<><div className="import-context"><label>Mazzi dichiarati per l’import<select aria-label="Mazzi dichiarati per l’import" value={declaredDecks} onChange={e=>setDeclaredDecks(e.target.value)}><option value="">Sconosciuti</option>{[1,2,4,6,8].map(d=><option key={d} value={d}>{d}</option>)}</select></label><label><input type="checkbox" checked={attachSession} onChange={e=>setAttachSession(e.target.checked)}/>Associa l’immagine al tracker della sessione attiva</label><p>La configurazione dichiarata non dimostra che lo shoe sia stato osservato dall’inizio. Importa clip di un singolo round.</p></div><div className="tool-grid">
    <div><h3>Normalizza un’immagine</h3><p>Seleziona gli angoli in ordine: alto sinistra, alto destra, basso destra, basso sinistra. Le zone sono rettangoli [x, y, larghezza, altezza] sul frame 960 × 600.</p>
     <label className="file-picker">Immagine da calibrare<input type="file" accept="image/png,image/jpeg,image/webp" onChange={e=>setFile(e.target.files?.[0]||null)}/></label>
     {url&&<div className="calibration-preview" onClick={e=>{if(corners.length===4)return;const b=e.currentTarget.getBoundingClientRect();setCorners(v=>[...v,[(e.clientX-b.left)/b.width,(e.clientY-b.top)/b.height]])}}><img src={url} alt="Immagine: seleziona i quattro angoli del tavolo"/>{corners.map((c,i)=><span key={i} style={{left:c[0]*100+'%',top:c[1]*100+'%'}}>{i+1}</span>)}</div>}
@@ -55,5 +55,5 @@ export default function VisionTools({sid,budget,onResult,canAnalyze,observation,
     <button className="button secondary" disabled={busy||!sid||!cardId||reason.length<3||!connected} onClick={correct}><Check size={14}/>Registra correzione</button>
    </div>
   </div></>}
- </section>;
+ </section>);
 }

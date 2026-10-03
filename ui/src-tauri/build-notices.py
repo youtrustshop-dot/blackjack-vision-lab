@@ -38,10 +38,17 @@ def copy(source: Path, relative: str) -> str:
     return relative
 
 
+def is_notice(path: Path) -> bool:
+    # A library such as libwinapi_oemlicense.a contains "license" in its name,
+    # but is compiled code rather than a copyright or license document.
+    return (path.is_file()
+            and path.suffix.lower() not in {".a", ".lib", ".dll", ".exe", ".o", ".obj", ".pdb", ".pyc"}
+            and any(token in path.name.upper() for token in ("LICENSE", "COPYING", "NOTICE", "COPYRIGHT"))
+            and ".git" not in path.parts)
+
+
 def notice_files(directory: Path):
-    return sorted(path for path in directory.rglob("*") if path.is_file()
-                  and any(token in path.name.upper() for token in ("LICENSE", "COPYING", "NOTICE", "COPYRIGHT"))
-                  and ".git" not in path.parts)
+    return sorted(path for path in directory.rglob("*") if is_notice(path))
 
 
 # PyInstaller's analysis identifies Python packages actually entering the sidecar.
@@ -68,7 +75,7 @@ for distribution in sorted(metadata.distributions(), key=lambda item: item.metad
     copied = []
     for file in files:
         source = Path(distribution.locate_file(file))
-        if source.is_file() and any(token in source.name.upper() for token in ("LICENSE", "COPYING", "NOTICE", "COPYRIGHT")):
+        if is_notice(source):
             copied.append(copy(source, "python/" + name + "-" + distribution.version + "/" + str(file).replace("\\", "/")))
     inventory.append({"ecosystem": "python", "name": name, "version": distribution.version,
                       "license": distribution.metadata.get("License-Expression") or distribution.metadata.get("License"),

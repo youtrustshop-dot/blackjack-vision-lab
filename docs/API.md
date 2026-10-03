@@ -202,3 +202,20 @@ Invalid rules/input return HTTP 422, illegal transitions return 409, unknown
 session IDs return 404, and unflagged truth access returns 403. Bind the launcher
 to loopback for the intended local research use.
 
+
+## Continuous video observation — 0.2.0
+
+| Endpoint | Request | Response |
+|---|---|---|
+| `POST /api/live` | `{rules?:{},samples?:1500,fresh_shoe?:false,manual_turn?:false,corners?:[[x,y],...],zones?:{"dealer":[x,y,w,h],"player:0":[x,y,w,h]}}` | stream ID, rule/information contract |
+| `POST /api/live/{id}/frame?sequence=N&timestamp=T` | binary PNG, content type `image/png` | detections, observed player/dealer cards, event state, count, gate, sampled decision, timings |
+| `GET /api/live/{id}/events` | none | observed immutable event log |
+| `DELETE /api/live/{id}` | none | disposes observer |
+| `POST /api/live/browser` | `{}` from local same-origin page | launches the local app in the default browser |
+| `POST /api/sessions/{id}/bot-step` | `{}` | simulator's public basic-policy command result |
+
+`GET /api/sessions/{id}/frame?live_context=true` adds visible English shoe/round/hand/phase labels to the PNG; hidden card ranks and future order remain absent. The bot/source API is separate from the live observer; live configuration forbids `session_id` and any extra native metadata. Rules/inventory are explicit declarations. Corners are four normalized points TL/TR/BR/BL, rectified to lab geometry.
+
+Each live request consumes one supplied video image; it does not simulate additional stabilization updates. Sequence/timestamp must be finite, positive where applicable, and strictly increasing. Input limits are 8 MiB and five megapixels; configured observers are limited to eight, with idle expiry on allocation. Samples accept 100–8,000.
+
+`decision.exact=false`, method `finite-pool Monte Carlo`. Action rows contain net `ev`, `ev_ci95`, `win`, `push`, `loss`, `win_ci95` and sampling metadata. Scope is the active hand plus new splits, excluding other already existing hands. Read the returned gate and [probability contract](LIVE_VISION.md) before using an estimate. Stale-advice timing/backpressure is enforced by the browser loop, independent of tracker stability. The API does not persist recordings or send observations to a remote model.
