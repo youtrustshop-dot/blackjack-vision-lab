@@ -47,6 +47,7 @@ def main():
     parser.add_argument('--release', type=Path, required=True)
     parser.add_argument('--work', type=Path, required=True)
     parser.add_argument('--native', action='store_true')
+    parser.add_argument('--advisor', action='store_true', help='Exercise the real second native window through its local bridge')
     parser.add_argument('--binary', type=Path)
     parser.add_argument('--evidence', type=Path)
     parser.add_argument('--external-image', type=Path, help='Optional private reported-table regression; pixels are not included in evidence')
@@ -73,7 +74,8 @@ def main():
         native_ready=temporary/'native-ready.json'
         if args.native:
             environment.update(BJLAB_DESKTOP_SMOKE='1',BJLAB_NATIVE_READY_FILE=str(native_ready),
-                               BJLAB_NATIVE_SMOKE_EXIT_AFTER_MS='45000' if args.external_image else '25000')
+                               BJLAB_NATIVE_SMOKE_EXIT_AFTER_MS='60000' if args.advisor else '45000' if args.external_image else '25000')
+            if args.advisor:environment['BJLAB_NATIVE_ADVISOR_SMOKE']='1'
             command=[str(binary)]
         else:
             selftest=subprocess.run([str(binary),'--self-test'],cwd=temporary,env=environment,
@@ -120,9 +122,9 @@ def main():
                 backend_handle=kernel.OpenProcess(0x100000,False,ready['backend_pid'])
                 assert backend_handle
                 report['native_window_created']=True
-            def request(path,body=None,*,data=None):
+            def request(path,body=None,*,data=None,extra_headers=None):
                 if body is not None:data=json.dumps(body).encode()
-                with urlopen(Request(base+path,data=data,headers={'Content-Type':'image/png' if data is not None and body is None else 'application/json'}),timeout=30) as response:
+                with urlopen(Request(base+path,data=data,headers={'Content-Type':'image/png' if data is not None and body is None else 'application/json',**(extra_headers or {})}),timeout=30) as response:
                     payload=response.read()
                     return json.loads(payload) if response.headers.get_content_type()=='application/json' else payload
             health=request('/api/health')
@@ -186,6 +188,40 @@ def main():
                 assert image['player']==['A','5'] and image['dealer']==['2']
                 assert image['advice']['best_action']=='hit' and image['advice']['hand']['total']==16
                 report['overlap_web_regression']={'source':'private user-reported image; pixels not published','player':image['player'],'dealer':image['dealer'],'total':16,'action':'hit'}
+            if args.advisor:
+                assert args.native
+                def native(operation,stream=identity,topmost=None):
+                    response=request('/api/native/advisor/control',{'operation':operation,'stream_id':stream,'table_name':'Owned smoke table','topmost':topmost},
+                                     extra_headers={'X-BJLAB-Local':'1','Origin':base})
+                    deadline=time.monotonic()+4
+                    while time.monotonic()<deadline:
+                        status=request('/api/native/advisor/status')
+                        if not status['pending']:break
+                        time.sleep(.1)
+                    assert not status['pending'] and not status['error'],status
+                    assert status['native_proof']['window']=='advisor'
+                    return status
+                initial=native('open');pinned=native('topmost',topmost=True);assert pinned['topmost']
+                for repeat in range(3):native('hide');native('open')
+                assert len(request('/api/native/advisor/status')['tables'])==1
+                # New captured evidence continues while the native main is minimized.
+                pixels=request('/api/sessions/'+sid+'/frame?live_context=true')
+                result=request('/api/live/'+identity+'/frame?sequence='+str(sequence)+'&timestamp='+str(sequence+1),data=pixels,
+                    extra_headers={'X-BJLAB-Capture':json.dumps({'captured_epoch_ms':time.time()*1000,'motion_epoch':1,'table_name':'Owned smoke table'})})
+                sequence+=1
+                fresh=request('/api/native/advisor/'+identity+'/state')
+                assert not fresh['stale'] and fresh['source_id']==result['source_id']
+                state_id=result['state_id']
+                request('/api/native/advisor/'+identity+'/view',{'epoch':2,'stale':True},extra_headers={'X-BJLAB-Local':'1','Origin':base})
+                assert request('/api/native/advisor/'+identity+'/state')['stale']
+                # Read-only refresh never restores validity after a source/motion gap.
+                time.sleep(2.3);expired=request('/api/native/advisor/'+identity+'/state')
+                assert expired['stale'] and expired['report']['advice'] is None
+                report['native_advisor']={'created':True,'singleton_reopen_cycles':3,'always_on_top':True,
+                    'same_origin_http_bridge':True,'main_minimized':initial['native_proof']['main_minimized'],
+                    'monitor_count':initial['native_proof']['monitor_count'],'fresh_source_binding':True,
+                    'motion_and_expiry_withhold_advice':True,'personal_picker_selected':False,
+                    'capture_scope':'controlled session image HTTP submission; personal display sharing while minimized not exercised'}
             if args.external_image:
                 pixels=args.external_image.read_bytes()
                 image=request('/api/advisor/image',{'image_base64':base64.b64encode(pixels).decode(),'rules':{'decks':4}})

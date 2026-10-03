@@ -141,6 +141,14 @@ async def video_frame(stream_id: str, request: Request, sequence: int = Query(ge
                         raise ValueError('Source dimensions or selected crop changed. Recalibrate and restart observation.')
                     observer.capture_geometry_signature=signature
             result = observer.process(image, sequence, timestamp)
+            with observer.lock:
+                metadata=geometry if isinstance(geometry,dict) else {}
+                captured=metadata.get('captured_epoch_ms')
+                age=max(0,time.time()-captured/1000) if isinstance(captured,(int,float)) and math.isfinite(captured) and captured<=time.time()*1000+1000 else 2.3
+                epoch=metadata.get('motion_epoch',0)
+                observer.native_evidence={'at':time.monotonic()-age,'epoch':epoch if isinstance(epoch,int) and epoch>=0 else 0,
+                    'captured_epoch_ms':captured}
+                observer.table_name=str(metadata.get('table_name','Observed table'))[:80]
             result['capture_geometry']=geometry
             if diagnostic:
                 from .vision_diagnostics import diagnostic_bundle

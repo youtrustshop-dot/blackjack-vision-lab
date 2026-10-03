@@ -145,12 +145,12 @@ def health() -> dict:
 
 @app.get('/api/vision/experiments')
 def vision_experiments():
-    from .vision_diagnostics import source_revision
+    from .vision_diagnostics import source_revision,candidate_revision
     from .corner_vision import VERSION
     data=json.loads((ROOT/'docs/VISION_EXPERIMENTS.json').read_text(encoding='utf-8'))
     data['runtime']={'package_version':__version__,'detector_version':VERSION,
         'source_fingerprint':source_revision(ROOT),'frozen':bool(getattr(__import__('sys'),'frozen',False)),
-        'publication':'research candidate; no installed desktop replacement'}
+        'publication':'research candidate; no installed desktop replacement',**candidate_revision(ROOT)}
     return data
 
 
@@ -836,6 +836,8 @@ def mount_ui() -> None:
 
 from .live_api import router as live_router
 app.include_router(live_router)
+from .native_advisor import router as native_advisor_router
+app.include_router(native_advisor_router)
 from .advisor_api import router as advisor_router
 app.include_router(advisor_router)
 from .model_api import router as model_router

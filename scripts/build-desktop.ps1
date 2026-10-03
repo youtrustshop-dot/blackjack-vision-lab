@@ -155,6 +155,7 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
     $bjProvenanceFiles += @("bjlab/live_work.py", "bjlab/evidence.py", "ui/src/live-analysis.ts", "ui/src/LiveVision.tsx", "ui/src/App.tsx",
         "bjlab/clef_contract.py", "bjlab/poker.py", "bjlab/poker_api.py",
         "bjlab/poker_vision.py", "bjlab/round_lifecycle.py", "bjlab/table_labels.py", "bjlab/suit_symbols.py")
+    $bjProvenanceFiles += @("bjlab/corner_vision.py", "bjlab/vision_diagnostics.py", "bjlab/native_advisor.py", "ui/src-tauri/src/advisor.rs", "ui/src/NativeAdvisor.tsx", "ui/src/native-advisor.ts", "ui/src/advisor-evidence.ts", "ui/src/capture-geometry.ts", "docs/VISION_EXPERIMENTS.json")
     foreach ($bjRelative in $bjProvenanceFiles) {
         $bjProvenancePath = Join-Path $bjProject $bjRelative
         if (Test-Path -LiteralPath $bjProvenancePath) {
@@ -162,7 +163,7 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
         }
     }
     $bjProvenance = Join-Path $bjWork "build-provenance.json"
-    [ordered]@{ version = $bjVersion; source_sha256 = $bjProvenanceHashes } |
+    [ordered]@{ version = $bjVersion; git_commit = (& git rev-parse HEAD).Trim(); working_tree_dirty = [bool](& git status --porcelain); source_sha256 = $bjProvenanceHashes } |
         ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $bjProvenance -Encoding utf8
     $bjArgs = @("-m", "PyInstaller", "--noconfirm", "--onefile", "--console",
         "--name", "bjlab-backend", "--distpath", (Join-Path $bjWork "sidecar"),
