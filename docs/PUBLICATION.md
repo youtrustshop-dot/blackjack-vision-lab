@@ -2,9 +2,11 @@
 
 This repository publishes the independently implemented Blackjack Vision Lab
 0.1.0 core, React UI, Tauri shell, tests, research runners and measured reports.
-The Python core, UI source and native shell files match the verified Windows
-distribution; public-facing README, licence and contributor documentation are
-added for publication. The original delivered source archive remains unchanged.
+At initial publication (commit `a24cf1044de53ed2325391c47710ba3227e2c222`),
+the Python core, UI source and native shell files matched the verified Windows
+distribution; public-facing README, licence and contributor documentation were
+added for publication. Subsequent UI changes are recorded in `CHANGELOG.md`.
+The original delivered source archive remains unchanged.
 
 The repository omits the original pasted conversations, build caches, bundled
 executables, compiled frontend and the large generated tray PNG collection.

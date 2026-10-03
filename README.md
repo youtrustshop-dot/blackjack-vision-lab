@@ -26,6 +26,13 @@ Questi requisiti riguardano l'avvio dai sorgenti. `requirements-lock.txt` fissa 
 
 Sviluppo frontend: `npm --prefix ui run dev`. Verifica: `python -m pytest` nell'ambiente installato e `npm --prefix ui run build`.
 
+La versione corrente dei sorgenti/browser include il pulsante **Riconnetti** e
+**Perception lab → Apri strumenti → Condividi finestra o schermo**. Aprire la
+pagina locale in Chrome o Edge per scegliere la sorgente. La condivisione usa
+un’anteprima locale e l’import esplicito di un fotogramma; la grafica di carte
+esterne resta da validare. [Istruzioni e verifiche](docs/SCREEN_SHARING.md).
+Queste aggiunte non sono presenti nei binari della release v0.1.0.
+
 ## Principi
 
 - Il solver riceve solo informazioni osservabili; verità completa e ordine futuro sono riservati alla valutazione.
