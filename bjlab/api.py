@@ -143,6 +143,17 @@ def health() -> dict:
             "local_only": True, "truth_boundary": "debug endpoint excluded from solver inputs"}
 
 
+@app.get('/api/vision/experiments')
+def vision_experiments():
+    from .vision_diagnostics import source_revision
+    from .corner_vision import VERSION
+    data=json.loads((ROOT/'docs/VISION_EXPERIMENTS.json').read_text(encoding='utf-8'))
+    data['runtime']={'package_version':__version__,'detector_version':VERSION,
+        'source_fingerprint':source_revision(ROOT),'frozen':bool(getattr(__import__('sys'),'frozen',False)),
+        'publication':'research candidate; no installed desktop replacement'}
+    return data
+
+
 @app.get("/api/rules")
 def default_rules() -> dict:
     return {"defaults": asdict(Rules()), "choices": {"decks": [1, 2, 4, 6, 8],

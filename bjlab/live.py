@@ -226,10 +226,12 @@ def estimate_actions(player: list[str], upcard: str, counts: list[int], rules: R
 
 
 class LiveObserver:
-    def __init__(self, rules: Rules, *, samples=1500, corners=None, zones=None,
+    def __init__(self, rules: Rules, *, samples=1500, corners=None, zones=None, layout=None,
                  fresh_shoe=False, manual_turn=False, output_height=600):
         self.rules, self.samples = rules, samples
         self.corners, self.zones = corners, zones
+        self.layout=layout
+        self.source_size=None
         self.fresh_shoe, self.manual_turn, self.output_height = fresh_shoe, manual_turn, output_height
         self.tracker = TemporalTracker(stable_frames=3, lost_after=4)
         self.tracker.new_shoe(rules.decks, shoe_id="live-shoe-1")
@@ -299,6 +301,12 @@ class LiveObserver:
             if timestamp <= self.tracker.last_timestamp:
                 raise ValueError("Video timestamps must increase; stale frame rejected.")
             started = time.perf_counter()
+            if self.layout:
+                if self.source_size is not None and self.source_size!=image.size:
+                    self.history_gap=True
+                    self._invalidate_analysis()
+                    raise ValueError('The capture geometry changed. Recalibrate and restart observation.')
+                self.source_size=image.size
             if self.corners:
                 image = Image.fromarray(normalize_table(image, self.corners,
                                          (960, self.output_height), corners_normalized=True).image_rgb)
@@ -306,10 +314,17 @@ class LiveObserver:
                 zones = self.zones or {"dealer": (0, 0, 960, 250)} | {
                     f"player:{i}": (30 + i % 2 * 440, 290 + i // 2 * 190, 440, 190)
                     for i in range(8)}
-                self.detector = AdaptiveCardDetector(zones=zones)
+                if self.layout:
+                    from .corner_vision import CornerCardDetector
+                    self.detector=CornerCardDetector(self.layout)
+                else:
+                    self.detector = AdaptiveCardDetector(zones=zones)
             pixel_key = (image.size, image.mode, hashlib.sha256(image.tobytes()).digest())
             if pixel_key != self.pixel_cache_key:
                 detected = self.detector.detect(image)
+                if self.layout and self.manual_turn:
+                    self.detector.context['phase']='player'
+                    self.detector.context['turn_provenance']='manual confirmation'
                 self.pixel_evidence = (detected, {} if self.detector.context else self.reader.read(image),
                                        extract_controlled_metadata(image), self.detector.context)
                 self.pixel_cache_key = pixel_key
@@ -441,6 +456,11 @@ class LiveObserver:
                 observed_integrity=observed_integrity and lifecycle['stable'] and not self.perception_pending
                 observed_integrity=observed_integrity and not external.get('reasons') and not self.detector.last_diagnostics['rejected_card_candidates']
             count_reliable=self.fresh_shoe and observed_integrity
+            if self.layout:
+                # This prototype does not yet verify backs or full event
+                # coverage. Rank recognition alone cannot certify a shoe.
+                observed_integrity=False
+                count_reliable=False
             if external:
                 # Missing history blocks composition estimates, not a valid
                 # visible-hand basic-policy recommendation.
@@ -510,11 +530,14 @@ class LiveObserver:
             if external and not lifecycle['stable']:
                 count_reasons.append('Current visible card evidence is not yet stable.')
             count_reasons.extend(summary['gate']['reasons'])
+            if self.layout:
+                count_reasons.append('Calibrated corner research profile: complete exposure history is not validated.')
             # Keep a named conditional model for inspection; never label it as
             # a known physical shoe when earlier history is unavailable.
             state = dict(summary, physical_remaining=remaining if count_reliable else None,
                          inventory_scope='complete' if count_reliable else 'conditional-model')
             report = {"source": "live-video-pixels", "sequence": sequence, "timestamp": timestamp,
+                    "source_id":self.source_id,
                     "image_size":list(image.size),
                     "processed_frames": self.frame_count, "detections": [d.to_dict() for d in detections],
                     "context": context, "phase": self.phase, "round": self.round, "gate": gate,

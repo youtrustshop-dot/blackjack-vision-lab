@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "baseline": {
+    "version": "1.1.1",
+    "commit": "4f074efd53066a95d64ca1ed53de03479a8adcba"
+  },
+  "parent_commit": "20f0fc0aa1ae862ad0ddd20dea2b5d8128a63b1c",
+  "publication": "unreleased research candidate; installed release unchanged",
+  "stages": [
+    {
+      "id": "capture",
+      "stage": "Acquisition",
+      "candidate": "native selected ROI vs 1920 full frame",
+      "status": "executed",
+      "finding": "Native ROI preserves source pixels; still-image comparison does not measure capture-to-display."
+    },
+    {
+      "id": "roi",
+      "stage": "Calibration",
+      "candidate": "explicit table/dealer/player/control regions",
+      "status": "executed",
+      "finding": "Letterbox/DPI mapping tested; source dimension/crop changes block and require recalibration. Same-size scroll must be recalibrated explicitly."
+    },
+    {
+      "id": "localization",
+      "stage": "Localization",
+      "candidate": "baseline / calibrated corners / YOLO26n",
+      "status": "executed",
+      "finding": "9/10 annotated objects found by calibrated corners; the blue back is missed. No promotion."
+    },
+    {
+      "id": "ranks",
+      "stage": "Rank reading",
+      "candidate": "pixel corner OCR / YOLO26n 13-rank pilot",
+      "status": "executed",
+      "finding": "Baseline 3/9; calibrated corners 9/9; this scratch YOLO checkpoint 0/9. Two graphic families; repeated preview is not independent."
+    },
+    {
+      "id": "suits",
+      "stage": "Suit reading",
+      "candidate": "silhouette templates; learned corner classifier alternative",
+      "status": "executed",
+      "finding": "4/9 suit reads. Five unknowns. Learned suit model and rotation support proposed, not measured."
+    },
+    {
+      "id": "rotation",
+      "stage": "Rotation / overlap",
+      "candidate": "corner detector; OBB/segmentation or RT-DETR alternatives",
+      "status": "proposed",
+      "finding": "Upright exposed K recovered; monitor-photo rotated cards remain diagnostic failures. No unseen graphics proof."
+    },
+    {
+      "id": "tracking",
+      "stage": "Object/card identity",
+      "candidate": "current tracker; ByteTrack / BoT-SORT alternatives",
+      "status": "available",
+      "finding": "PR1 continuity retained. Same detection replay comparison and new independent video sessions not executed in this increment."
+    },
+    {
+      "id": "temporal",
+      "stage": "Temporal confirmation",
+      "candidate": "three observations / probabilistic voting alternative",
+      "status": "available",
+      "finding": "Historical 97 stabilized synthetic endpoints are regression evidence, not 97 independent sessions."
+    },
+    {
+      "id": "context",
+      "stage": "Game context",
+      "candidate": "layout-independent card reading + explicit turn",
+      "status": "executed",
+      "finding": "Native profile phase is unknown unless manually confirmed; totals never supply missing cards. Split selection and back recognition unvalidated."
+    },
+    {
+      "id": "integrity",
+      "stage": "Integrity / count",
+      "candidate": "strict gates and source-bound reports",
+      "status": "executed",
+      "finding": "Uncertain glyph candidates and incomplete history withhold advice/count. Research profile never certifies RC/TC."
+    },
+    {
+      "id": "display",
+      "stage": "Visualization",
+      "candidate": "source coordinate overlays / private diagnostic ZIP",
+      "status": "executed",
+      "finding": "Actual selected-region pixels previewed; user-triggered ZIP contains exact uploaded bytes, crops, transform and tracker report."
+    },
+    {
+      "id": "verification",
+      "stage": "Independent verifier",
+      "candidate": "local Clef; classifier challengers",
+      "status": "available",
+      "finding": "Clef optional runtime available; not compared in this first pixel benchmark. No invented score."
+    },
+    {
+      "id": "data",
+      "stage": "Dataset partition",
+      "candidate": "session/family manifests and hashes",
+      "status": "available",
+      "finding": "Private cases are development only. New independent validation/final sessions still required. No private pixels distributed."
+    }
+  ],
+  "comparison": {
+    "scope": "private development stills; repeated preview is same family/session, not independent data",
+    "hardware": {
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD"
+    },
+    "source_fingerprint": "5aee4dcaf763b7bec6d6dbb8346083d6ebd6160acab49623b709b43c863d3c0f",
+    "timing_protocol": "one excluded runtime warm-up then three repeats per case/profile; glyph OCR cache cleared before each repeat; offline detection only, unrelated Clef runtime idle and CPU pilot training finished",
+    "metrics_semantics": "manual full-card boxes matched at IoU .30 within role; still-image detection/zone rank and suit metrics, not calibrated certainty or detection AP",
+    "selection": "no promotion; limited samples and no unseen external session evaluation",
+    "not_measured": [
+      "tracking ID switches",
+      "missed/duplicate video events",
+      "RC/TC session drift",
+      "capture-to-display latency",
+      "independent final generalization"
+    ],
+    "aggregates": {
+      "baseline-full": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 3,
+        "missed_zone_ranks": 6,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.3333333333333333,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 905.9573000049568,
+        "offline_ms_p95": 1680.2188599976944,
+        "localization_precision": 1.0,
+        "localization_recall": 0.3,
+        "rank_correct_including_misses": 3,
+        "suit_correct_including_misses": 0
+      },
+      "baseline-native-roi": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 3,
+        "missed_zone_ranks": 6,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.3333333333333333,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 791.6413999992074,
+        "offline_ms_p95": 1622.4707199973636,
+        "localization_precision": 1.0,
+        "localization_recall": 0.3,
+        "rank_correct_including_misses": 3,
+        "suit_correct_including_misses": 0
+      },
+      "calibrated-corners": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 9,
+        "missed_zone_ranks": 0,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 1.0,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 220.79699999449076,
+        "offline_ms_p95": 275.34902000043076,
+        "localization_precision": 1.0,
+        "localization_recall": 0.9,
+        "rank_correct_including_misses": 9,
+        "suit_correct_including_misses": 4
+      },
+      "ultralytics-corners": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 0,
+        "missed_zone_ranks": 9,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.0,
+        "rank_inventory_precision": null,
+        "offline_ms_p50": 118.64860000059707,
+        "offline_ms_p95": 189.55875999818088,
+        "localization_precision": null,
+        "localization_recall": 0.0,
+        "rank_correct_including_misses": 0,
+        "suit_correct_including_misses": 0
+      }
+    }
+  },
+  "ultralytics_training": {
+    "schema": 1,
+    "ultralytics": "8.4.7",
+    "torch": "2.9.1+cpu",
+    "device": "cpu",
+    "model": "yolo26n.yaml",
+    "initialization": "random scratch, no pretrained COCO weights",
+    "classes": [
+      "A",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "J",
+      "Q",
+      "K"
+    ],
+    "checkpoint_sha256": "479a72b6247e679eb612bf41da7aefb10a100d2f28a364cfabeb79ff77b434ae",
+    "data_manifest_sha256": "314fbe487621eb6a1f1b33df46b717da4f39b5510d8b0ddea06a24c2bec8bc29",
+    "epochs": 8,
+    "wall_seconds": 227.8655327000015,
+    "validation_metrics": {
+      "metrics/precision(B)": 0.0,
+      "metrics/recall(B)": 0.0,
+      "metrics/mAP50(B)": 0.0,
+      "metrics/mAP50-95(B)": 0.0,
+      "fitness": 0.0
+    },
+    "telemetry": false,
+    "external_uploads": false,
+    "license": "Ultralytics AGPL-3.0; no distribution promotion",
+    "scope": "small synthetic training pilot, not proof of provider generalization"
+  },
+  "private_artifacts": "Detailed private cases, pixels, diagnostics and manifests remain in ignored artifacts/vision-research.",
+  "statuses": [
+    "proposed",
+    "available",
+    "executed",
+    "not executable",
+    "rejected",
+    "promoted"
+  ],
+  "decision": "No detector promoted. YOLO pilot checkpoint rejected; calibrated corners available for research with strict integrity gates."
+}

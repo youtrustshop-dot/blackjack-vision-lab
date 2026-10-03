@@ -7,6 +7,8 @@ import threading
 import time
 
 from fastapi import APIRouter, Body, HTTPException, Query, Request
+from fastapi.responses import Response
+import json
 from PIL import Image, UnidentifiedImageError
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -30,12 +32,18 @@ class LiveConfig(BaseModel):
     fresh_shoe: bool = False
     manual_turn: bool = False
     output_height: int = Field(default=600, ge=300, le=1600)
+    layout: dict[str, tuple[float,float,float,float]] | None = None
 
 
 @router.post("")
 def create_observer(body: LiveConfig):
     try:
         rules = Rules(**body.rules)
+        if body.layout:
+            from .corner_vision import validate_layout
+            validate_layout(body.layout)
+            if body.corners or body.zones:
+                raise ValueError('Native card regions cannot be combined with perspective/legacy zones.')
         if body.corners is not None:
             from .calibration import validate_corners
             validate_corners(body.corners, 960, 600, normalized=True)
@@ -58,7 +66,7 @@ def create_observer(body: LiveConfig):
         identity = secrets.token_urlsafe(18)
         observers[identity] = LiveObserver(rules, samples=body.samples, corners=body.corners,
                                           zones=body.zones, fresh_shoe=body.fresh_shoe,
-                                          manual_turn=body.manual_turn, output_height=body.output_height)
+                                          manual_turn=body.manual_turn, output_height=body.output_height,layout=body.layout)
     return {"stream_id": identity, "source": "live-video-pixels", "stable_frames": 3}
 
 
@@ -97,7 +105,7 @@ def live_events(stream_id: str):
 
 @router.post("/{stream_id}/frame")
 async def video_frame(stream_id: str, request: Request, sequence: int = Query(ge=0),
-                      timestamp: float = Query(gt=0)):
+                      timestamp: float = Query(gt=0), diagnostic: bool = False):
     observer = observers.get(stream_id)
     if observer is None:
         raise HTTPException(404, "Live stream no longer exists. Restart observation.")
@@ -118,7 +126,28 @@ async def video_frame(stream_id: str, request: Request, sequence: int = Query(ge
                 if source.width * source.height > 5_000_000:
                     raise ValueError("Video image exceeds five megapixels.")
                 image = source.convert("RGB")
+            geometry=None
+            try:
+                raw=request.headers.get('x-bjlab-capture','')
+                if raw and len(raw)<2048:geometry=json.loads(raw)
+            except (ValueError,TypeError):
+                geometry={'error':'Invalid capture metadata; upload pixels are still authoritative.'}
+            if observer.layout and isinstance(geometry,dict):
+                signature=json.dumps([geometry.get('source_size'),geometry.get('source_rect')])
+                with observer.lock:
+                    previous=getattr(observer,'capture_geometry_signature',None)
+                    if previous is not None and previous!=signature:
+                        observer.history_gap=True;observer._invalidate_analysis()
+                        raise ValueError('Source dimensions or selected crop changed. Recalibrate and restart observation.')
+                    observer.capture_geometry_signature=signature
             result = observer.process(image, sequence, timestamp)
+            result['capture_geometry']=geometry
+            if diagnostic:
+                from .vision_diagnostics import diagnostic_bundle
+                with observer.lock:
+                    bundle=diagnostic_bundle(observer,image,bytes(content),geometry)
+                return Response(bundle,media_type='application/zip',
+                    headers={'Content-Disposition':'attachment; filename="private-vision-diagnostic.zip"','Cache-Control':'no-store'})
             scheduled = analysis_pool.submit(observer)
             # The basic response remains the captured immutable result even
             # if the worker finishes before HTTP serialization.
