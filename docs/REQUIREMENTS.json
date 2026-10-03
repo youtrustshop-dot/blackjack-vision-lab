@@ -3,48 +3,27 @@
   "progress_report": "docs/STATUS.md",
   "verification": {
     "version": "1.1.1",
-    "status": "source-verified",
-    "completed_test_run": "382 tests + 10 subtests passed in 59.53s",
+    "status": "unreleased-source-verified",
+    "completed_test_run": "413 tests + 10 subtests passed in 81.79s",
     "frontend_tests": "40 tests passed",
     "frontend_build": "40 frontend tests; TypeScript/Vite passed",
     "latest_changes_require_retest": false,
+    "source_evidence": "experiments/continuity_phase0/verification.json",
     "release_evidence": "release/v1.1.1/",
-    "source_evidence": "docs/LIVE_RELIABILITY_VERIFICATION.json",
-    "historical_v1_1_verification_before_reconciliation": {
-      "completed_test_run": "370 tests + 10 subtests passed in 56.37s",
-      "frontend_build": "34 frontend tests; TypeScript/Vite passed",
-      "browser_primary_flows": 7,
-      "browser_advanced_flows": 5,
+    "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
+    "verification_scope": "Source tests and single-use owned synthetic/reference holdouts. External provider counts, candidate native artifacts and economic edge remain unverified.",
+    "historical_v1_1_1_verification": {
+      "version": "1.1.1",
+      "status": "source-verified",
+      "completed_test_run": "382 tests + 10 subtests passed in 59.53s",
+      "frontend_tests": "40 tests passed",
+      "frontend_build": "40 frontend tests; TypeScript/Vite passed",
       "latest_changes_require_retest": false,
-      "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
-      "native_desktop_build_verified": true,
-      "frozen_backend_verified": true,
-      "release_verified": true,
-      "historical_v0_1": {
-        "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
-        "frontend_build": "passed",
-        "browser_primary_flows": 7,
-        "browser_advanced_flows": 5,
-        "latest_changes_require_retest": false,
-        "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
-        "native_desktop_build_verified": true,
-        "frozen_backend_verified": true,
-        "release_verified": true
-      },
-      "version": "1.0.0",
-      "frontend_tests": "23 tests passed",
-      "release_evidence": "release/v1.1.0/",
-      "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
-      "historical_v0_2": {
-        "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
-        "frontend_build": "passed",
-        "native_desktop_build_verified": true,
-        "frozen_backend_verified": true,
-        "release_verified": true
-      },
-      "historical_v1_0_verification": {
-        "completed_test_run": "282 tests + 10 subtests passed in 30.32s",
-        "frontend_build": "TypeScript/Vite passed",
+      "release_evidence": "release/v1.1.1/",
+      "source_evidence": "docs/LIVE_RELIABILITY_VERIFICATION.json",
+      "historical_v1_1_verification_before_reconciliation": {
+        "completed_test_run": "370 tests + 10 subtests passed in 56.37s",
+        "frontend_build": "34 frontend tests; TypeScript/Vite passed",
         "browser_primary_flows": 7,
         "browser_advanced_flows": 5,
         "latest_changes_require_retest": false,
@@ -65,7 +44,7 @@
         },
         "version": "1.0.0",
         "frontend_tests": "23 tests passed",
-        "release_evidence": "release/v1.0.0/: manifest.json, backend-smoke.json, native-smoke.json, installer-smoke.json, installer-native-smoke.json; portable archive SHA256/CRC verification",
+        "release_evidence": "release/v1.1.0/",
         "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
         "historical_v0_2": {
           "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
@@ -73,14 +52,47 @@
           "native_desktop_build_verified": true,
           "frozen_backend_verified": true,
           "release_verified": true
-        }
+        },
+        "historical_v1_0_verification": {
+          "completed_test_run": "282 tests + 10 subtests passed in 30.32s",
+          "frontend_build": "TypeScript/Vite passed",
+          "browser_primary_flows": 7,
+          "browser_advanced_flows": 5,
+          "latest_changes_require_retest": false,
+          "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
+          "native_desktop_build_verified": true,
+          "frozen_backend_verified": true,
+          "release_verified": true,
+          "historical_v0_1": {
+            "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
+            "frontend_build": "passed",
+            "browser_primary_flows": 7,
+            "browser_advanced_flows": 5,
+            "latest_changes_require_retest": false,
+            "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
+            "native_desktop_build_verified": true,
+            "frozen_backend_verified": true,
+            "release_verified": true
+          },
+          "version": "1.0.0",
+          "frontend_tests": "23 tests passed",
+          "release_evidence": "release/v1.0.0/: manifest.json, backend-smoke.json, native-smoke.json, installer-smoke.json, installer-native-smoke.json; portable archive SHA256/CRC verification",
+          "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
+          "historical_v0_2": {
+            "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
+            "frontend_build": "passed",
+            "native_desktop_build_verified": true,
+            "frozen_backend_verified": true,
+            "release_verified": true
+          }
+        },
+        "clef_visual_evidence": "docs/CLEF_VISUAL_VERIFICATION.json"
       },
-      "clef_visual_evidence": "docs/CLEF_VISUAL_VERIFICATION.json"
-    },
-    "current_browser_evidence": "experiments/live_reliability/browser.json",
-    "session_evidence": "experiments/live_reliability/session-after.json",
-    "verification_scope": "Source suite and owned video UI pass. Desktop checks are recorded separately against actual executable hashes. Complete external-session vision and shoe reconstruction remain unverified.",
-    "desktop_artifact_verification": "release/v1.1.1/verification.json"
+      "current_browser_evidence": "experiments/live_reliability/browser.json",
+      "session_evidence": "experiments/live_reliability/session-after.json",
+      "verification_scope": "Source suite and owned video UI pass. Desktop checks are recorded separately against actual executable hashes. Complete external-session vision and shoe reconstruction remain unverified.",
+      "desktop_artifact_verification": "release/v1.1.1/verification.json"
+    }
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",
   "requirements": [
@@ -529,6 +541,6 @@
     "required_system": "Controlled simulator, recorded single-round lab-artwork clips, screenshots, deterministic math and research validation layer.",
     "conditional_research": "Unavailable vendor models and unsupported legacy reference execution remain recorded; they are not fabricated or core dependencies.",
     "laya_user_deferral": "Add Laya later.",
-    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Hold\u2019em calibrated cards/ranking/equity are implemented."
+    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Hold’em calibrated cards/ranking/equity are implemented."
   }
 }

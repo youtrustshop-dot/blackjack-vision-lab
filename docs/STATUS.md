@@ -1,3 +1,27 @@
+# Unreleased candidate — exposure continuity and Poker Phase 0
+
+The published **1.1.1 champion remains frozen** at `4f074ef`. The research
+candidate adds witnessed empty-table boundaries, settled-only rounds,
+white-margin OCR recovery and count gating for unresolved visual evidence.
+Six hash-sealed train/validation/final corpora and single-use final records
+separate development from final evaluation.
+
+- **413 Python tests + 10 subtests**, **40 frontend tests**, TypeScript/Vite pass.
+- Final synthetic Blackjack holdout: 30 rounds, 582 observations, 37/37 timely
+  basic decisions, 97/97 exact stabilized count endpoints, zero falsely reliable
+  count frames. This is existing-renderer synthetic data, not external footage.
+- Independent PokerKit/Treys final checks: 2,000 heads-up hands, 6,908 states,
+  6,000 evaluator comparisons; zero divergences. No strategy was trained.
+- The old 1/4/4 deficit is diagnosed: an invalid invented-suit fixture and two
+  missed settled-only deals. Original negative evidence remains unchanged.
+- A native candidate and installer have not been built; external provider count
+  reconstruction and economic advantage remain unverified.
+
+[Research scope, diagnosis and next gates](RESEARCH_BASELINE.md) ·
+[Executed evidence](../experiments/continuity_phase0/verification.json).
+
+The records below belong to their original release sources and artifacts.
+
 # Verified source status — 1.1.1
 
 Basic strategy is independent of Monte Carlo. Complete history, partial

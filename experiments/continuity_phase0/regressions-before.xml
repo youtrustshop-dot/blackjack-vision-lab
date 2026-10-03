@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="5.904" timestamp="2026-10-03T21:14:06.888695+02:00" hostname="DESKTOP-5A82ST7"><testcase classname="tests.test_exposure_continuity" name="test_witnessed_clear_closes_tracks_without_claiming_an_occlusion" time="3.047"><failure message="assert False">def test_witnessed_clear_closes_tracks_without_claiming_an_occlusion():
+        observer = LiveObserver(Rules(decks=4), fresh_shoe=True)
+        feed(observer, side_table(['8', '9'], ['6']))
+        settled = feed(observer, side_table(['8', '9'], ['6', 'K', '4'], settled=True, hidden=False))
+        assert settled['observed_cards'] == 5
+        cleared = feed(observer, side_table(blank=True))
+        assert cleared['observed_cards'] == 5
+&gt;       assert cleared['count_reliable']
+E       assert False
+
+tests\test_exposure_continuity.py:22: AssertionError</failure></testcase><testcase classname="tests.test_exposure_continuity" name="test_instant_settlement_after_witnessed_clear_is_a_new_round" time="1.099"><failure message="assert 1 == 2">def test_instant_settlement_after_witnessed_clear_is_a_new_round():
+        observer = LiveObserver(Rules(decks=4), fresh_shoe=True)
+        feed(observer, side_table(['8', '9'], ['6']))
+        feed(observer, side_table(['8', '9'], ['6', 'K', '4'], settled=True, hidden=False))
+        feed(observer, side_table(blank=True))
+        result = feed(observer, side_table(['A', '6'], ['A', 'J'], settled=True, hidden=False))
+&gt;       assert result['round'] == 2
+E       assert 1 == 2
+
+tests\test_exposure_continuity.py:33: AssertionError</failure></testcase><testcase classname="tests.test_exposure_continuity" name="test_hidden_hole_never_revealed_remains_an_incomplete_count" time="0.619"><failure message="assert False&#10; +  where False = any(&lt;generator object test_hidden_hole_never_revealed_remains_an_incomplete_count.&lt;locals&gt;.&lt;genexpr&gt; at 0x0000022702DFE4D0&gt;)">def test_hidden_hole_never_revealed_remains_an_incomplete_count():
+        observer = LiveObserver(Rules(decks=4), fresh_shoe=True)
+        feed(observer, side_table(['K', '6'], ['8']))
+        result = feed(observer, side_table(blank=True))
+        assert not result['count_reliable']
+        assert result['true_count'] is None
+&gt;       assert any('never observed face up' in reason for reason in result['count_reasons'])
+E       assert False
+E        +  where False = any(&lt;generator object test_hidden_hole_never_revealed_remains_an_incomplete_count.&lt;locals&gt;.&lt;genexpr&gt; at 0x0000022702DFE4D0&gt;)
+
+tests\test_exposure_continuity.py:46: AssertionError</failure></testcase><testcase classname="tests.test_exposure_continuity" name="test_initial_instant_settlement_starts_exactly_one_round" time="0.317"><failure message="assert 0 == 1">def test_initial_instant_settlement_starts_exactly_one_round():
+        observer = LiveObserver(Rules(decks=4), fresh_shoe=True)
+        result = feed(observer, side_table(['A', 'K'], ['7', '9', '6'], settled=True, hidden=False))
+&gt;       assert result['round'] == 1
+E       assert 0 == 1
+
+tests\test_exposure_continuity.py:52: AssertionError</failure></testcase></testsuite></testsuites>

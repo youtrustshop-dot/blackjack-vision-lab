@@ -255,6 +255,7 @@ class LiveObserver:
         from .round_lifecycle import RoundLifecycle
         self.lifecycle=RoundLifecycle()
         self.history_gap=False
+        self.perception_pending=False
         self.last_observation_timestamp=None
         self.state_generation = 0
         self.source_id = secrets.token_hex(8)
@@ -325,6 +326,7 @@ class LiveObserver:
             context_stable = self.context_hits >= 2 and all(k in context for k in ("shoe", "round", "hand", "phase"))
             # Accept visible context only after distinct consecutive video inputs.
             lifecycle={'stable':False}
+            boundary_events=[]
             if context_stable:
                 if (self.last_context.get("shoe") != context["shoe"] or
                         self.last_context.get("session") != context.get("session")):
@@ -335,6 +337,7 @@ class LiveObserver:
                                           shoe_id="live-shoe-" + str(context["shoe"]))
                     self.round = 0
                     self.history_gap=False
+                    self.perception_pending=False
                     if witnessed_shuffle:
                         self.fresh_shoe = True
                     elif context['round'] > 1:
@@ -346,10 +349,23 @@ class LiveObserver:
                 self.last_context = context
             elif external:
                 phase = external['phase']
-                lifecycle=self.lifecycle.observe(detections,phase)
+                clear_evidence=(phase=='waiting' and not external.get('reasons') and
+                    not self.detector.last_diagnostics['rejected_card_candidates'])
+                lifecycle=self.lifecycle.observe(detections,phase,clear_evidence=clear_evidence)
+                if lifecycle['stable']:
+                    if (lifecycle['round_ended'] or lifecycle['new_round']) and self.perception_pending:
+                        # A mismatch survived until cards left the table; a
+                        # later readable hand cannot repair that missing event.
+                        self.history_gap=True
+                    if external.get('reasons') or self.detector.last_diagnostics['rejected_card_candidates']:
+                        self.perception_pending=True
+                    elif detections:
+                        self.perception_pending=False
+                if lifecycle['round_ended']:
+                    boundary_events.append(self.tracker.end_round(timestamp=timestamp))
                 if lifecycle['new_round']:
                     self.round+=1
-                    self.tracker.start_round(str(self.round),timestamp=timestamp)
+                    boundary_events.append(self.tracker.start_round(str(self.round),timestamp=timestamp))
                 self.history_gap=self.history_gap or lifecycle['history_gap']
                 self.phase = 'player' if self.manual_turn else phase
             elif not context:
@@ -367,7 +383,7 @@ class LiveObserver:
             # then be counted again when its first player turn starts round 1.
             can_commit=not external or (lifecycle['stable'] and
                 (self.lifecycle.seen_round or external['phase']=='settled'))
-            emitted = self.tracker.update(detections, timestamp, round_id=str(self.round)) if can_commit else []
+            emitted = boundary_events + (self.tracker.update(detections, timestamp, round_id=str(self.round)) if can_commit else [])
             self.sequence, self.last_access = sequence, time.monotonic()
             self.frame_count += 1
             summary = self.tracker.state_summary()
@@ -421,12 +437,16 @@ class LiveObserver:
             allowed_gate = summary["gate"]["solver_allowed"] and not reasons
             unknown_removed=any(not c.get('on_table') and not c.get('rank') for c in summary['cards'].values())
             observed_integrity=summary['gate']['solver_allowed'] and not self.history_gap and not unknown_removed
+            if external:
+                observed_integrity=observed_integrity and lifecycle['stable'] and not self.perception_pending
+                observed_integrity=observed_integrity and not external.get('reasons') and not self.detector.last_diagnostics['rejected_card_candidates']
             count_reliable=self.fresh_shoe and observed_integrity
             if external:
                 # Missing history blocks composition estimates, not a valid
                 # visible-hand basic-policy recommendation.
                 allowed_gate=(lifecycle['stable'] and len(player_ranks)>=2 and len(dealer)==1
-                    and self.phase=='player' and bool(allowed) and not external.get('reasons'))
+                    and self.phase=='player' and bool(allowed) and not external.get('reasons')
+                    and not self.detector.last_diagnostics['rejected_card_candidates'])
             decision = None
             advice = None
             if allowed_gate:
@@ -485,6 +505,10 @@ class LiveObserver:
                 count_reasons.append('A video gap or round boundary was missed. Earlier exposures are incomplete.')
             if unknown_removed:
                 count_reasons.append('An earlier hidden card was never observed face up.')
+            if self.perception_pending:
+                count_reasons.append('Unreadable card evidence or a visible total mismatch has not been resolved within this round.')
+            if external and not lifecycle['stable']:
+                count_reasons.append('Current visible card evidence is not yet stable.')
             count_reasons.extend(summary['gate']['reasons'])
             # Keep a named conditional model for inspection; never label it as
             # a known physical shoe when earlier history is unavailable.

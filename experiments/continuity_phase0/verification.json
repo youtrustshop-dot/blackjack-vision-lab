@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "version": "1.1.1",
+  "status": "unreleased source candidate on frozen 1.1.1 baseline",
+  "baseline_commit": "4f074efd53066a95d64ca1ed53de03479a8adcba",
+  "candidate_source_fingerprint": "55890d50ee27c3dd2cc6cbecae79271e78502240c1aa73e876568396feeae8ca",
+  "tests": {
+    "python_passed": 413,
+    "python_subtests": 10,
+    "frontend_passed": 40,
+    "typescript_vite_build_passed": true,
+    "python_seconds": 81.794
+  },
+  "blackjack_final": {
+    "summary": {
+      "rounds": 30,
+      "frames": 582,
+      "decision_opportunities": 37,
+      "timely_correct": 37,
+      "useful_coverage": 1.0,
+      "false_confident_frames": 0,
+      "false_confident_count_frames": 0,
+      "count_endpoints": 97,
+      "correct_count_endpoints": 97,
+      "end_stage_count_coverage": 1.0
+    },
+    "count_accuracy_accepted": true,
+    "sessions": [
+      {
+        "seed": 84691,
+        "final_observed_minus_expected": 0,
+        "final_rc_error": 0
+      },
+      {
+        "seed": 27539,
+        "final_observed_minus_expected": 0,
+        "final_rc_error": 0
+      },
+      {
+        "seed": 66347,
+        "final_observed_minus_expected": 0,
+        "final_rc_error": 0
+      }
+    ],
+    "scope": "Every sampled frame must avoid a falsely reliable count; all stabilized stage endpoints must have exact exposed-rank inventory, RC and physical remaining cards. Synthetic supported renderer only."
+  },
+  "poker_final": {
+    "corpus_sha256": "568e172763eeb23056b00f934e3b83f49314f3c2a5f10d344e2834398ccd8b16",
+    "scope": "heads-up cash, fixed deals, integer chips, stacks >= BB, one runout, zero rake",
+    "references": {
+      "pokerkit": "0.7.6",
+      "treys": "0.1.8"
+    },
+    "hands": 2000,
+    "intermediate_state_checks": 6908,
+    "evaluator_pairs": 6000,
+    "state_divergences": [],
+    "evaluator_divergences": [],
+    "replay_divergences": [],
+    "passed": true,
+    "strategy_quality_evaluated": false,
+    "economic_edge_evaluated": false
+  },
+  "archives": {
+    "blackjack_train": {
+      "file": "corpora/blackjack_train.zip",
+      "sha256": "5a585d6e4e2adcf6254081b42825dc8411327304769b80d42d2f9d6f3d919682",
+      "bytes": 1352395,
+      "seal_sha256": "3f00fb08c16cd7fd1c3757f6341071820789f8ed1bc9e7db428d66cb2f0a54e3"
+    },
+    "blackjack_validation": {
+      "file": "corpora/blackjack_validation.zip",
+      "sha256": "ff8a3e8f24f3714153e2198d319fb8ffef5955852fcd899df1b1b2ec7266d3d4",
+      "bytes": 1184403,
+      "seal_sha256": "17f525d2e6874ef9bf8fc764d6f507a0eb4cd1184d4a08bb543657d7ce43f05c"
+    },
+    "blackjack_final": {
+      "file": "corpora/blackjack_final.zip",
+      "sha256": "6015308b8863c8ff4fed8f91e0d33f294c47a57df6991479ca6395b076c7f72e",
+      "bytes": 1215152,
+      "seal_sha256": "591e5f2af0e6d9d34712bca4cf60db6fe9abd758e0f15e4c59111beb2d773736"
+    },
+    "poker_train": {
+      "file": "corpora/poker_train.zip",
+      "sha256": "d95b7a78041d03842f4990ad2590e7ccc368e47a185eab24d79030a0875db605",
+      "bytes": 257305,
+      "seal_sha256": "332d24c8ec2e7d41bc7ae88823dd940a97fb3f5d3a0e03efbc5f6d5dba2da409"
+    },
+    "poker_validation": {
+      "file": "corpora/poker_validation.zip",
+      "sha256": "1a608ba4b7df9c216249a312bfb8b3c3d8b7bc066cafdf99d12a9c5cb3daa1a5",
+      "bytes": 129237,
+      "seal_sha256": "161c84cf8d1b4bb9f107cb15ce2cca05ac80926395c0cb533c69407af972026e"
+    },
+    "poker_final": {
+      "file": "corpora/poker_final.zip",
+      "sha256": "27db87fe1a026eabf371cbf57b1c024575f8494036147c54c8841f790a68983e",
+      "bytes": 257798,
+      "seal_sha256": "641c519a0e4055b6f9175e0d9ee153d5e8a321b841c222fa0571872c7b4c1edc"
+    }
+  },
+  "final_holdouts_consumed": true,
+  "external_provider_count_certified": false,
+  "windows_candidate_built": false,
+  "strategy_trained": false,
+  "economic_edge_evaluated": false,
+  "warnings": [
+    "Existing Starlette/httpx deprecation warning.",
+    "PokerKit warns on deliberately tested voluntary folds when checking is available."
+  ],
+  "limits": [
+    "Owned synthetic blackjack sequences use the existing development renderer, not independent external provider recordings.",
+    "Poker rules comparisons cover the declared heads-up integer-chip zero-rake scope; no universal engine certification.",
+    "Candidate native app and installer have not been rebuilt; published 1.1.1 artifacts remain the champion."
+  ]
+}

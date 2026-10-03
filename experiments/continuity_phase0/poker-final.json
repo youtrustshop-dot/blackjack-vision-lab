@@ -1,0 +1,17 @@
+{
+  "corpus_sha256": "568e172763eeb23056b00f934e3b83f49314f3c2a5f10d344e2834398ccd8b16",
+  "scope": "heads-up cash, fixed deals, integer chips, stacks >= BB, one runout, zero rake",
+  "references": {
+    "pokerkit": "0.7.6",
+    "treys": "0.1.8"
+  },
+  "hands": 2000,
+  "intermediate_state_checks": 6908,
+  "evaluator_pairs": 6000,
+  "state_divergences": [],
+  "evaluator_divergences": [],
+  "replay_divergences": [],
+  "passed": true,
+  "strategy_quality_evaluated": false,
+  "economic_edge_evaluated": false
+}

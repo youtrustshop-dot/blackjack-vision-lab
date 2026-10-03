@@ -103,10 +103,21 @@ class ClassicCasinoDetector:
                 crop = local[max(0,iy-2):min(top_height,iy+ih+2), max(0,ix-2):ix+iw+2]
                 text, score = read_text(crop)
                 rank = text.strip().upper()
+                vocabulary=("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K")
+                if rank not in vocabulary or score < OCR_RANK_MIN_SCORE:
+                    # A tightly cropped single glyph can lose OCR confidence.
+                    # Restore a white margin without lowering the acceptance
+                    # threshold or changing the rank vocabulary.
+                    padded=cv2.copyMakeBorder(crop,4,4,4,4,cv2.BORDER_CONSTANT,value=(255,255,255))
+                    retry,retry_score=read_text(padded)
+                    retry=retry.strip().upper()
+                    if rank not in vocabulary or retry==rank:
+                        rank,score=retry,retry_score
                 # A generic text model scores narrow printed letters (notably J)
                 # below long words. The rank vocabulary, independent total check
                 # and temporal stability are additional integrity requirements.
-                if rank not in ("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K") or score < OCR_RANK_MIN_SCORE:
+                if rank not in vocabulary or score < OCR_RANK_MIN_SCORE:
+                    self.last_diagnostics['rejected_card_candidates']+=1
                     continue
                 # Locate a card from its upper corner, including overlapped bodies.
                 left = max(bx, bx+ix-round(bh*.05))

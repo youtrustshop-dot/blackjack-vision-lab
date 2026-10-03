@@ -17,6 +17,9 @@ parser.add_argument('command',choices=['generate','run'])
 parser.add_argument('--source',type=Path,default=Path(__file__).resolve().parents[2])
 parser.add_argument('--dataset',type=Path,required=True)
 parser.add_argument('--output',type=Path)
+parser.add_argument('--physical-suits',action='store_true',help='Render actual shoe suits; legacy reproduction remains unchanged by default.')
+parser.add_argument('--seeds',default='12983,77271,61073')
+parser.add_argument('--rounds',type=int,default=10)
 args=parser.parse_args()
 sys.path.insert(0,str(args.source.resolve()))
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tests'))
@@ -37,7 +40,11 @@ if args.command=='generate':
         raise RuntimeError('Dataset is frozen; choose a new directory instead of overwriting it.')
     args.dataset.mkdir(parents=True,exist_ok=True)
     sessions=[]
-    for seed,locale,scale in ((12983,'en',1.),(77271,'it',.8),(61073,'en',.6)):
+    seeds=[int(seed) for seed in args.seeds.split(',')]
+    if len(seeds)!=3 or not 1<=args.rounds<=30:
+        raise ValueError('Provide three distinct seeds and one to thirty rounds per session.')
+    if len(set(seeds))!=3:raise ValueError('Session seeds must be distinct.')
+    for seed,locale,scale in zip(seeds,('en','it','en'),(1.,.8,.6)):
         game=BlackjackSession(rules,seed=seed,bankroll=100000)
         stages=[]
         def record(blank=False):
@@ -45,7 +52,9 @@ if args.command=='generate':
             dealer=[c.rank for c in game.dealer] if game.hole_revealed else [game.dealer[0].rank]
             stage=len(stages)
             image=side_table(player,dealer,locale=locale,scale=scale,settled=game.phase=='settled',
-                             hidden=not game.hole_revealed,blank=blank)
+                             hidden=not game.hole_revealed,blank=blank,
+                             player_suits=[c.suit for c in game.hands[0].cards] if args.physical_suits else None,
+                             dealer_suits=[c.suit for c in game.dealer] if args.physical_suits else None)
             name=f'{seed}/{stage:04}.png';path=args.dataset/name;path.parent.mkdir(exist_ok=True)
             image.save(path)
             action=(recommend(player,dealer[0],rules,allowed=game.available_actions(),peeked=game.peek_resolved)['best_action']
@@ -54,7 +63,10 @@ if args.command=='generate':
                 'round':game.round_id,'phase':'blank' if blank else game.phase,
                 'player':player,'dealer':dealer,'basic_action':action,
                 'seen':len(game.seen),'running_count':game.running_count,'remaining':len(game.shoe.cards)})
-        for _ in range(10):
+            if args.physical_suits:
+                stages[-1]['player_cards']=[{'id':c.id,'rank':c.rank,'suit':c.suit} for c in game.hands[0].cards]
+                stages[-1]['dealer_cards']=[{'id':c.id,'rank':c.rank,'suit':c.suit} for c in game.dealer if c.id in game.seen]
+        for _ in range(args.rounds):
             game.deal()
             if game.phase=='insurance':game.action('decline_insurance')
             record()
@@ -63,20 +75,31 @@ if args.command=='generate':
                                  allowed=game.available_actions(),peeked=game.peek_resolved)['best_action']
                 game.action(action);record()
             record(blank=True)
-        sessions.append({'seed':seed,'locale':locale,'scale':scale,'rounds':10,'stages':stages})
-    document={'schema':1,'scope':'new synthetic sequences, existing development renderer; not held-out provider footage',
+        sessions.append({'seed':seed,'locale':locale,'scale':scale,'rounds':args.rounds,'stages':stages})
+    document={'schema':2 if args.physical_suits else 1,'scope':'new synthetic sequences, existing development renderer; not held-out provider footage',
         'rules':asdict(rules),'repetitions':6,'interval_ms':350,'decision_window_ms':2200,
         'thresholds_frozen_before_run':{'useful_coverage':.95,'false_confident_decisions':0},'sessions':sessions}
+    if args.physical_suits:document['suit_provenance']='actual physical shoe cards'
     (args.dataset/'manifest.json').write_text(json.dumps(document,indent=2),encoding='utf-8')
-    print(json.dumps({'sessions':len(sessions),'rounds':30,'stages':sum(len(s['stages']) for s in sessions),
+    print(json.dumps({'sessions':len(sessions),'rounds':sum(s['rounds'] for s in sessions),'stages':sum(len(s['stages']) for s in sessions),
                       'manifest_sha256':hashlib.sha256((args.dataset/'manifest.json').read_bytes()).hexdigest()}))
 else:
     manifest=args.dataset/'manifest.json';data=json.loads(manifest.read_text())
     outcomes=[]
     for source in data['sessions']:
         observer=LiveObserver(Rules(**data['rules']),samples=100,fresh_shoe=True)
-        sequence=0;stages=[];latencies=[]
+        sequence=0;stages=[];latencies=[];false_counts=0
+        completed_counts=Counter();round_counts={};truth_round=None
         for truth in source['stages']:
+            if truth['round']!=truth_round:
+                for ranks in round_counts.values():completed_counts.update(ranks)
+                round_counts={};truth_round=truth['round']
+            for zone in ('player','dealer'):
+                round_counts[zone]=round_counts.get(zone,Counter()) | Counter(truth[zone])
+            expected_counts=completed_counts.copy()
+            for ranks in round_counts.values():expected_counts.update(ranks)
+            if sum(expected_counts.values())!=truth['seen']:
+                raise ValueError('Manifest exposure labels disagree with the recorded seen-card count.')
             image_path=args.dataset/truth['file']
             assert hashlib.sha256(image_path.read_bytes()).hexdigest()==truth['sha256']
             image=Image.open(image_path).convert('RGB');reports=[];first_correct=None;false=0
@@ -93,6 +116,11 @@ else:
                     if not correct:false+=1
                     elif first_correct is None:first_correct=index*data['interval_ms']+elapsed
                 reports.append(result)
+                if result['count_reliable'] and (result['observed_cards']!=truth['seen'] or
+                    result['running_count']!=truth['running_count'] or result['physical_remaining']!=truth['remaining'] or
+                    any(result['state']['known_rank_counts'][rank]!=expected_counts[rank]
+                        for rank in result['state']['known_rank_counts'])):
+                    false_counts+=1
             last=reports[-1]
             stages.append({'round':truth['round'],'phase':truth['phase'],'expected_player':truth['player'],
                 'recognized_player':last['player'],'expected_action':truth['basic_action'],
@@ -101,13 +129,19 @@ else:
                 'timely':first_correct is not None and first_correct<=data['decision_window_ms'] if truth['basic_action'] else None,
                 'expected_seen':truth['seen'],'observed_cards':last['observed_cards'],
                 'expected_rc':truth['running_count'],'running_count':last['running_count'],
+                'expected_rank_counts':dict(expected_counts),'recognized_rank_counts':last['state']['known_rank_counts'],
+                'expected_remaining':truth['remaining'],'physical_remaining':last['physical_remaining'],
                 'count_reliable':last.get('count_reliable'),'count_history':last.get('count_history'),
+                'end_count_correct':bool(last['count_reliable']) and last['observed_cards']==truth['seen'] and
+                    last['running_count']==truth['running_count'] and last['physical_remaining']==truth['remaining'] and
+                    all(last['state']['known_rank_counts'][rank]==expected_counts[rank] for rank in last['state']['known_rank_counts']),
                 'reasons':last['gate']['reasons']})
         opportunities=[s for s in stages if s['expected_action']]
         final=stages[-1]
         outcomes.append({'seed':source['seed'],'rounds':source['rounds'],'frames':sequence,
             'decision_opportunities':len(opportunities),'timely_correct':sum(s['timely'] for s in opportunities),
             'false_confident_frames':sum(s['false_confident_frames'] for s in stages),
+            'false_confident_count_frames':false_counts,
             'final_observed_minus_expected':final['observed_cards']-final['expected_seen'],
             'final_rc_error':None if final['running_count'] is None else final['running_count']-final['expected_rc'],
             'frame_processing_ms':{f'p{p}':float(np.percentile(latencies,p)) for p in (50,95,99)},'stages':stages})
@@ -119,6 +153,13 @@ else:
         'summary':{'rounds':sum(s['rounds'] for s in outcomes),'frames':sum(s['frames'] for s in outcomes),
           'decision_opportunities':opportunities,'timely_correct':timely,'useful_coverage':timely/opportunities,
           'false_confident_frames':sum(s['false_confident_frames'] for s in outcomes)}}
+    endpoints=[stage for session in outcomes for stage in session['stages']]
+    report['summary'].update(false_confident_count_frames=sum(s['false_confident_count_frames'] for s in outcomes),
+        count_endpoints=len(endpoints),correct_count_endpoints=sum(s['end_count_correct'] for s in endpoints),
+        end_stage_count_coverage=sum(s['end_count_correct'] for s in endpoints)/len(endpoints))
+    report['count_accuracy_accepted']=(report['summary']['false_confident_count_frames']==0 and
+        report['summary']['end_stage_count_coverage']==1.)
+    report['count_acceptance_scope']='Every sampled frame must avoid a falsely reliable count; all stabilized stage endpoints must have exact exposed-rank inventory, RC and physical remaining cards. Synthetic supported renderer only.'
     report['acceptance_passed']=(report['summary']['useful_coverage']>=data['thresholds_frozen_before_run']['useful_coverage']
                                and report['summary']['false_confident_frames']==0)
     args.output.parent.mkdir(parents=True,exist_ok=True)

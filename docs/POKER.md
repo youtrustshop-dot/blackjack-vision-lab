@@ -1,5 +1,10 @@
 # Texas Hold'em lab — experimental visual input
 
+The unreleased research branch also contains a separate deterministic heads-up
+betting engine with zero rake and independent PokerKit/Treys comparisons.
+It is an offline Phase 0 tool, not a betting advisor in the visual UI.
+See [scope, frozen corpora and results](RESEARCH_BASELINE.md).
+
 The independent Hold'em module uses 52 physical card identities. Enter `AS KH`
 or ranks with Unicode suits. The board has zero, three, four or five cards.
 Known dead cards and duplicate physical cards are checked before calculation.
