@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.0.0
+
+- Immediate rule-generated basic recommendations, finite EV comparison and legal fallback when sampled rankings overlap.
+- Ace 1/11 values and alternative totals; offline hard, soft, pair and natural charts plus all 550 starting rank/dealer combinations.
+- Up to five separately named/configured observers with independent counts, shared-display ownership and visible source-session reset detection.
+- Automatic pasted, dropped or uploaded image analysis with explicit card/split/history confirmation for unsupported artwork.
+- First-visit setup and guide, saved-rule confirmation, standard/simple/custom modes and 1/2/4/6/8 deck choices.
+- Original graphite/gold/cyan/violet identity, compact translucent advisor, smooth transitions and reduced-motion support.
+- English-first documentation, screenshots and Windows packaging, with secondary Italian.
+- Optional active-tab Chromium image-extension source and a pinned separate local Clef CUDA classifier runtime.
+- Video pixel reuse preserves every actual observation and count transition without repeating detection on unchanged pixels.
+- Native simulator outcome estimates are independent of finite-solver completion; late results cannot overwrite a newer turn.
+
+Recognition remains scoped to lab artwork. Clef scene confidence is not an outcome probability. Poker is monitor-only. See [verified status](docs/STATUS.md).
+
+
 ## 0.2.0
 
 - Continuous screen/window/tab video from a share-once browser source, with automatic observations, persistent multi-round card tracking and Hi-Lo count.

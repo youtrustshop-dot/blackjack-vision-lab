@@ -21,12 +21,17 @@ from pydantic import BaseModel, Field
 from starlette.concurrency import run_in_threadpool
 
 from .engine import Rules
+from . import __version__
+from itertools import count
+from .advice import session_advice
 from .monte_carlo import basic_action, hilo_action, run_experiment
 from .simulator import BlackjackSession
 
 ROOT = Path(__file__).resolve().parents[1]
-app = FastAPI(title="Blackjack Vision Lab", version="0.2.0")
+app = FastAPI(title="Blackjack Vision Lab", version=__version__)
 sessions: dict[str, BlackjackSession] = {}
+visual_sessions: dict[str, int] = {}
+visual_session_numbers = count(1)
 session_locks: dict[str, threading.RLock] = {}
 perception_trackers: dict[str, Any] = {}
 analysis_cache: dict[str, dict] = {}
@@ -134,7 +139,7 @@ def _guard_action(function, *args) -> Any:
 
 @app.get("/api/health")
 def health() -> dict:
-    return {"status": "ok", "version": "0.2.0", "service": "Blackjack Vision Lab",
+    return {"status": "ok", "version": __version__, "service": "Blackjack Vision Lab",
             "local_only": True, "truth_boundary": "debug endpoint excluded from solver inputs"}
 
 
@@ -193,14 +198,14 @@ def create_session(body: NewSession) -> dict:
     session = BlackjackSession(_rules(body.rules), body.seed, bankroll=body.bankroll)
     sessions[session.id] = session
     session_locks[session.id] = threading.RLock()
-    return session.snapshot()
+    return session_advice(session)
 
 
 @app.get("/api/sessions/{session_id}")
 def get_session(session_id: str) -> dict:
     session = _session(session_id)
     with session_locks[session_id]:
-        return session.snapshot()
+        return session_advice(session)
 
 
 @app.delete("/api/sessions/{session_id}")
@@ -209,6 +214,7 @@ def delete_session(session_id: str) -> dict:
     with session_locks[session_id]:
         sessions.pop(session_id, None)
         perception_trackers.pop(session_id, None)
+        visual_sessions.pop(session_id, None)
     return {"deleted": session_id}
 
 
@@ -216,7 +222,8 @@ def delete_session(session_id: str) -> dict:
 def deal(session_id: str, body: DealRequest) -> dict:
     session = _session(session_id)
     with session_locks[session_id]:
-        return _guard_action(session.deal, body.bet)
+        _guard_action(session.deal, body.bet)
+        return session_advice(session)
 
 
 @app.post("/api/sessions/{session_id}/action")
@@ -226,7 +233,7 @@ def action(session_id: str, body: ActionRequest) -> dict:
         result = _guard_action(session.action, body.action, body.amount)
         if body.action == "shuffle":
             perception_trackers.pop(session_id, None)
-        return result
+        return session_advice(session)
 
 
 @app.post("/api/sessions/{session_id}/bot-step")
@@ -235,8 +242,10 @@ def simulator_bot_step(session_id: str) -> dict:
     session = _session(session_id)
     with session_locks[session_id]:
         if session.phase in ("ready", "settled"):
-            return _guard_action(session.deal, 1.)
-        return _guard_action(session.action, basic_action(session))
+            _guard_action(session.deal, 1.)
+        else:
+            _guard_action(session.action, basic_action(session))
+        return session_advice(session)
 
 
 def _solver_child(connection, rules: dict, state: dict, timeout_ms: int, max_nodes: int) -> None:
@@ -294,6 +303,28 @@ def _analyze_process(rules: dict, state: dict, timeout_ms: int, max_nodes: int) 
         receiver.close()
         sender.close()
         analysis_slots.release()
+
+
+@app.post("/api/sessions/{session_id}/outcomes")
+async def session_outcomes(session_id: str):
+    """Sample the public informational pool, never the hidden future shoe order."""
+    from .live import estimate_actions
+    session = _session(session_id)
+    with session_locks[session_id]:
+        if session.phase != 'player':
+            raise HTTPException(409, 'Outcome estimates need an active player decision.')
+        state = session.decision_state()
+        rules = session.rules
+        available = list(session.available_actions())
+        revision = session.snapshot()['events_count']
+    try:
+        result = await run_in_threadpool(estimate_actions, state['player'], state['dealer'],
+            list(state['counts']), rules, available, samples=1500, peeked=state['peeked'],
+            from_split=state['from_split'], split_hands=state['split_hands'])
+    except ValueError as error:
+        raise HTTPException(422, str(error)) from error
+    return {'decision': result, 'events_count': revision,
+            'precision': 'Finite-pool Monte Carlo with generated continuation; separate from the finite exact solver.'}
 
 
 @app.post("/api/sessions/{session_id}/analyze")
@@ -442,10 +473,13 @@ def frame(session_id: str, theme: str = "green", blur: float = Query(default=0, 
                 draw = ImageDraw.Draw(image)
                 font = card_font(16)
                 color = (212, 220, 213)
+                if session_id not in visual_sessions:
+                    visual_sessions[session_id] = next(visual_session_numbers)
                 context = [(60, "SHOE"), (120, str(session.shoe.generation)),
                            (225, "ROUND"), (305, str(session.round_id)),
                            (405, "HAND"), (470, str((session.active_hand or 0) + 1)),
-                           (590, "EARLY" if session.phase == "early_surrender" else session.phase.upper())]
+                           (590, "EARLY" if session.phase == "early_surrender" else session.phase.upper()),
+                           (760, "SESSION"), (860, str(visual_sessions[session_id]))]
                 for x, text in context:
                     draw.text((x, 260), text, font=font, fill=color, anchor="lt")
         output = io.BytesIO()
@@ -791,4 +825,8 @@ def mount_ui() -> None:
 
 from .live_api import router as live_router
 app.include_router(live_router)
+from .advisor_api import router as advisor_router
+app.include_router(advisor_router)
+from .model_api import router as model_router
+app.include_router(model_router)
 mount_ui()

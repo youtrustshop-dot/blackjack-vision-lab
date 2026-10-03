@@ -4,9 +4,9 @@ import {api,fetchApi,Rules,Snapshot} from './api';
 export class DemoVideoSource{
  private canvas=document.createElement('canvas');private stream:MediaStream|null=null;private state:Snapshot|null=null;
  private image:ImageBitmap|null=null;private timer=0;private botTimer=0;private disposed=false;private bot=true;private busy=false;
- constructor(private rules:Rules,private onState:(state:Snapshot)=>void){}
+ constructor(private rules:Rules,private onState:(state:Snapshot)=>void,private seed=42){}
  async start(){
-  this.state=await api<Snapshot>('/sessions',{rules:this.rules,seed:42});
+  this.state=await api<Snapshot>('/sessions',{rules:this.rules,seed:this.seed});
   if(this.disposed){void this.removeSession();throw new Error('Demo cancelled.')}
   this.state=await api<Snapshot>('/sessions/'+this.state.session_id+'/deal',{});
   await this.render();
@@ -24,7 +24,7 @@ export class DemoVideoSource{
   this.state=await api<Snapshot>('/sessions/'+this.state.session_id+'/bot-step',{});await this.render();
  }catch{/* The observer reports transport failures; leave the last visible table. */}finally{this.busy=false}}
  private async render(){if(!this.state||this.disposed)return;
-  const response=await fetchApi('/sessions/'+this.state.session_id+'/frame?live_context=true&v='+Date.now());
+  const response=await fetchApi('/sessions/'+this.state.session_id+'/frame?theme=black&live_context=true&v='+Date.now());
   if(!response.ok)throw new Error('Could not render the simulation.');
   const next=await createImageBitmap(await response.blob());
   if(this.disposed){next.close();return}

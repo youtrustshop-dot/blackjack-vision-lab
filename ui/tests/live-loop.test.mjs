@@ -27,3 +27,10 @@ test('unready video does not generate a synthetic observation',()=>{
  const video=clock();video.readyState=0;let called=false;const loop=new LiveVideoLoop(video,async()=>{called=true},()=>{});
  loop.start();video.tick(0);assert.equal(called,false);loop.stop();
 });
+test('offscreen heartbeat processes advancing video and never renews frozen evidence',async()=>{
+ const video=clock();video.currentTime=1;let tick,cancelled=0;const calls=[];
+ const loop=new LiveVideoLoop(video,async seq=>{calls.push(seq)},()=>{},100,(fn)=>{tick=fn;return()=>cancelled++});
+ loop.start();tick(0);await flush();tick(110);assert.deepEqual(calls,[0]);
+ video.currentTime=2;tick(220);await flush();assert.deepEqual(calls,[0,1]);
+ loop.stop();video.currentTime=3;tick(330);assert.deepEqual(calls,[0,1]);assert.equal(cancelled,1);
+});

@@ -1,60 +1,61 @@
-# Continuous live vision
+# Continuous live vision — 1.0
 
-## Video workflow
+## Start and configure
 
-Open the local app in desktop Chrome or Edge. Select **Live vision**, then **Share screen**. The browser's display picker chooses a screen, window or tab and returns a real `MediaStream` to a playing video element. Audio is disabled. Permission is requested for each new sharing session. The source remains shared until **Stop video**, the browser's stop-sharing command or page closure. Switching laboratory sections keeps the live observer mounted and running.
+Open the local app in desktop Chrome or Edge. Setup declares the mode, decks, dealer rule, payout, peek/ENHC and legal actions. The standalone simulator also loads saved rules and provides its own configuration dialog. Match the declared rules to each source: pixels cannot reveal the whole rule set.
 
-There is no manual image-capture/import step in this workflow. A `requestVideoFrameCallback` clock samples new video frames automatically, throttled to at most one observation every 350 ms. Only one request may be in flight; frames encountered while busy are skipped instead of queued. Each observation is encoded as PNG and sent to the local backend. A frame-based analysis transport is how the video is processed, not a user-operated screenshot workflow.
+Select **Share screen** and choose a screen, window or tab in the browser picker. This supplies a real continuous `MediaStream` to a playing video element; audio is disabled. Stop with **Stop video**, the browser's stop-sharing command or page closure. Switching laboratory sections keeps observation mounted.
 
-The advisor hides decisions 2.2 seconds after capture time without a fresh successful observation. Requests time out after 6 seconds; cancellation/generation guards reject late results. Upload errors immediately remove advice. The displayed latency includes local capture/encoding/upload/processing. This is distinct from source video FPS, processed observations and skipped busy frames.
+The first-visit guide explains configuration, sources, count scope and advice. New sessions/tables confirm saved settings unless the reuse checkbox is selected. Setup can enable that prompt again.
 
-The Windows shell may not expose `getDisplayMedia`. **Open in default browser** launches the same local URL; use Chrome or Edge and keep the desktop app running so its backend remains available. This button uses the configured system browser, not a forced browser installation.
+## Video processing
 
-## Immediate simulation
+Video-frame callbacks trigger automatic observations. A worker heartbeat also checks advancing video time when rendering callbacks slow down offscreen; a frozen media clock cannot renew evidence. One request per observer is in flight. Busy observations are skipped, never queued. PNG encoding uses OffscreenCanvas where supported, with a regular canvas fallback.
 
-**Run lab demo** creates an isolated seeded simulator and a canvas-backed 15-FPS video stream. The source bot uses public simulator commands. The independent live endpoint receives only video images and declared rules; it cannot receive that simulator's session ID. Pause/resume the bot or take a manual action to inspect changes.
+Single-table observation has a 350-ms minimum interval; multi-table observation uses at least 500 ms. These are scheduling targets, not measured analysis FPS. Identical pixels reuse recognition, while each actual video observation still updates tracking and time. Source video FPS, sent observations, skipped work and displayed capture-to-response latency are separate measurements.
 
-**Open simulator window** opens `/?simulator=1`: a separately playable table with visible SHOE, ROUND, HAND and PHASE labels. Share its window/tab, then use **Table calibration** before playing. Select top-left, top-right, bottom-right and bottom-left table corners in the preview. The backend normalizes that quadrilateral to the lab geometry. Keep window position and table scaling fixed, or stop observing and recalibrate.
+Advice expires 2.2 seconds after capture time without a successful fresh observation. Requests time out after six seconds. Cancellation/generation guards reject late results and upload errors clear advice. Browser/OS suspension can interrupt video and must remain visible as stale status.
 
-Rule configuration belongs to the lab session; the standalone simulator uses the default six-deck rules. Match the declared rules before analyzing a different source. The observer never silently learns the full rules from a card image.
+The Windows WebView may lack display capture. **Open in default browser** opens the same local URL; use Chrome or Edge while keeping the desktop backend running.
 
-## Tracking and count
+## One to five independent tables
 
-The included OpenCV/template detector recognizes the lab's card corners and exposed controls. Context labels are read from visible pixels, not native session metadata. Two distinct observations stabilize round/shoe context; card tracking confirms after three stable observations. Reveal, movement and repeated video images preserve logical identities. Round changes reset active-card tracks while retaining shoe count; a visible new-shoe label resets the shoe.
+**+ Add table** registers another named observer, up to five. Each has its own rules, source, count and advisor. A shared screen is selected once; each table receives an owned stream clone. For a screen containing multiple games, select that game's four corners separately in each preview. Removing one observer stops only its clone; **Stop all sources** stops the shared source.
 
-Declare **Observe from a new shoe** only when observation really begins before the first deal. Otherwise counts cover the observed portion and the assumed unobserved pool cannot reconstruct earlier missing cards. Hi-Lo running count uses each confirmed exposed rank once. True count divides by the estimated physical decks remaining, based on declared inventory and observed exposures; unknown earlier removals limit its interpretation.
+Tables are registered and calibrated explicitly. Automatic detection of arbitrary tables is not implemented. Poker/other mode displays video only; it has no validated poker decision engine.
 
-The gate withholds advice on changing context, pending/lost/unreadable cards, missing active player/dealer cards, a non-player phase or unreadable legal controls. A manual-layout player-turn declaration is available for calibrated research, but does not certify arbitrary layouts or correct an unknown deck history. The gate cannot prove that a card never detected at all was absent.
+**Run lab demo** creates a separate seeded simulator and a canvas-backed 15-FPS video stream. Pause the bot or use legal manual actions. The independent observer receives only pixels and declared rules, never the source simulator's session ID.
 
-## Probability method
+**Open simulator window** provides a playable table at `/?simulator=1`. Share it and select top-left, top-right, bottom-right and bottom-left corners. Keep geometry fixed or recalibrate. Multi-hand table height is preserved when normalizing.
 
-Live estimates draw without replacement from the informational pool. The dealer hole card is marginalized; a visible player phase under American peek rules conditions on a negative peek. ENHC, OBO, double, surrender and bounded sequential split/resplit are represented. Future choices use the generated rule-dependent basic strategy, rather than optimizing every future finite composition.
+## Tracking and card count
 
-Each legal action has 500, 1,500 or 5,000 sampled outcomes in the UI (the API accepts 100–8,000). Win means positive net profit, push zero and loss negative profit for the **active hand plus new splits caused by its evaluated action**. Already existing other hands are excluded. EV is net profit per active original wager and is not a win percentage. EV has a normal sampling interval; win probability uses a Wilson 95% interval. Overlapping EV intervals produce **No clear ranking**. Values are explicitly approximate (`exact=false`).
+The detector recognizes lab card corners and visible controls. SESSION, SHOE, ROUND, HAND and PHASE are read from pixels. Two distinct observations stabilize context; three stabilize cards. New rounds reset active tracks and retain exposed history. A visible source-session or new-shoe change resets the shoe count.
 
-The UI's **No positive EV detected** describes the current action estimate. It is not a computed pre-deal betting edge for the next round. Neither a positive sampled EV nor a win probability guarantees an outcome. Sampling intervals do not include detector error or model mismatch.
+Hi-Lo adds +1 for 2–6, 0 for 7–9 and −1 for tens/aces. Every confirmed exposure counts once. True count divides by estimated physical decks remaining. Declare **Observe from a new shoe** only when the complete shoe has really been observed. Restarting observation mid-game labels the count partial unless a new shoe is explicitly declared.
 
-The table's separate decision solver retains its exact/approximate precision contracts and budget gates; live probabilities do not replace those contracts.
+Unreadable, lost or changing cards, unknown active hands, unavailable legal controls and non-player phases withhold guidance. A manual-turn declaration cannot recover never-observed cards. The gate cannot prove that a card never detected was absent.
 
-## Floating advisor
+## Decisions, aces and probabilities
 
-**Floating advisor** opens a compact panel that updates from the same live observations. **Pop out advisor** uses Chromium's Document Picture-in-Picture API for a separate always-on-top window when supported. Otherwise the panel stays in the page; it cannot stay over another application. A bounded PiP request rejects late windows after cancellation. Closing the separate window returns the advisor to the page; **Close advisor** disposes it. The advisor follows the language selection and hides stale advice.
+Every valid declared/recognized player turn has an immediate legal basic-policy recommendation. Ace values show 1 or 11 and a soft hand's alternative hard total. The offline library covers hard, soft, pair and natural hands plus 550 starting rank/dealer combinations.
 
-## Verified scope
+Live outcomes sample finite informational-pool draws without replacement. The hidden dealer card is marginalized; a readable player phase under peek rules conditions on no dealer blackjack. ENHC/OBO, doubles, surrender and bounded split/resplit are represented. Continuation uses generated rule-dependent basic policy, rather than optimizing every future finite composition.
 
-- 259 Python tests and 10 subtests passed, including 13 live tests. 16 frontend tests and TypeScript/Vite production build passed.
-- A real decoded lossless FFV1 video, 35 images at 12 FPS across seven bot actions, preserves exposed counts through reveals and new hands. These are actual distinct video observations, not internal repeated detector updates pretending to be a video benchmark.
-- Integration tests verify an embedded 960×600 table in a 1600×1000 image through four normalized corners, multi-digit visible labels, new-shoe resets, immediate occlusion gates, monotonic timestamps/sequences and session-metadata rejection.
-- Monte Carlo stand agrees with an independent exact finite-pool solver within the declared tolerance; analytic cases distinguish win probability from EV and check surrender and hidden-card conditioning.
-- Actual browser demo video followed multiple hands and produced card detections, count, advice, EV and probabilities. A held paused table continued to generate video while the count remained unchanged. In that run upload-to-result latency was about 132–177 ms; this is an observation on this computer, not a universal guarantee.
-- The automated checks did not select a personal desktop in the display picker. Browser/OS source selection remains user controlled. Card artwork outside the lab and photographic/table-layout generalization are not validated by these results.
+The UI offers 500/1,500/5,000 samples per action. Positive/push/negative means net profit of the active hand plus new splits caused by its action; other already-existing hands are excluded. EV is net profit per initial wager. Wilson outcome intervals and normal EV intervals measure sampling uncertainty, not recognition error. A separated ranking can select the composition estimate; overlapping rankings retain the basic recommendation.
 
-## Model options
+The Hi-Lo index action is a reference comparison, with count-history reliability shown. Current-action EV does not measure the next round's betting edge. No outcome is guaranteed and this is not financial advice.
 
-[Cloudflare Clef Flash](https://huggingface.co/Cloudflare/clef-flash) is a 9B multimodal structured classification model with an Apache-2.0 model license. Its model card accepts image/video records with schemas; it is a plausible phase/anomaly research candidate. The documented environment includes H200 hardware, so no local-PC real-time speed claim is inferred. No Clef weights were downloaded or measured in this release. It would still require card-data validation and temporal tracking.
+## Images and floating advisor
 
-[Jevbox](https://github.com/extend-hq/jevbox) organizes and retrieves documents with citations and permissions; it is not a screen-capture or card detector. Laya remains deferred. None is required for the working local video path.
+**Image & manual advice** accepts pasted, dropped or uploaded PNG/JPEG/WebP images. Lab artwork can be read automatically; other artwork needs confirmed player/dealer cards. Advanced confirmation accepts split context and an observed-card list including current cards. One image supplies no temporal history.
 
-Screen acquisition, visual recognition, persistent state and mathematical decisions are separate components. Replacing the detector with trained card weights requires model/dataset licensing, a held-out multi-session video benchmark, counting-drift checks and gate validation before being described as supported.
+Sharing opens a compact translucent advisor. **Pop out advisor** uses Document Picture-in-Picture when supported and requires a user click. The in-page fallback cannot stay over another application. Only the selected table's popup is shown. Advanced details expand EV, intervals, policy/count comparisons and count scope.
 
-Browser contracts: [display media](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia), [video-frame callbacks](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/requestVideoFrameCallback), [Document Picture-in-Picture](https://developer.mozilla.org/en-US/docs/Web/API/Document_Picture-in-Picture_API/Using).
+## Evidence and optional programs
+
+Current tests and browser/Windows evidence are listed in [STATUS.md](STATUS.md). Historical lossless video, perspective, occlusion and external-artwork failures remain preserved. Personal screen-picker selection, arbitrary graphics and an installed extension are not certified by a hidden desktop smoke.
+
+[Clef](CLEF.md) is an optional pinned local scene classifier, separate from card recognition and advice. [Jevbox](https://github.com/extend-hq/jevbox) is document retrieval, not a card detector. Laya remains deferred.
+
+Browser contracts: [display capture](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia), [video-frame callbacks](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/requestVideoFrameCallback), [background throttling](https://developer.chrome.com/blog/timer-throttling-in-chrome-88/), [Document Picture-in-Picture](https://developer.mozilla.org/en-US/docs/Web/API/Document_Picture-in-Picture_API/Using).

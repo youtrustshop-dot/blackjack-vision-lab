@@ -1,4 +1,25 @@
-# Verified status — 0.2.0
+# Verified status — 1.0.0
+
+Version 1.0 adds immediate legal recommendations, ace values, a complete offline starting-hand library, separate observers for up to five tables, image/manual input, first-visit setup, rule presets, a dark visual identity and an optional Chromium image extension.
+
+## Current verification
+
+- **282 Python tests + 10 subtests passed** in 30.32 seconds. This includes the finite-pool, replay and independent reference checks plus the new recommendation, ace, image, count-isolation and model-bridge cases.
+- **23 frontend tests passed**. TypeScript and the Vite production build passed.
+- Actual browser checks recognized an uploaded A–7 versus 9 image as soft 18, showed the alternative total 8 and recommended Hit. Confirmed 20 versus 6 recommended Stand. English and secondary Italian flows, the offline strategy matrix, first setup and five distinct lab-video sources were exercised.
+- Five observers preserve separate rules, ranks, histories and counts. The initial five-video browser run exposed delays; pixel reuse and an offscreen media-clock heartbeat were added. The browser still produced variable response latency and occasional stale expiry during concurrent work; no universal five-table latency is certified.
+- Windows 1.0 frozen-backend, hidden native launch/shutdown and fresh current-user installer install/launch/uninstall checks passed, including pixel recognition, probabilities and exposed counts through a reveal and second hand. Versioned `release/v1.0.0/` reports bind these checks to artifact digests. The final metadata/package refresh will repeat these checks.
+- Clef's CUDA environment and official model files are installed. The full-matrix CPU attempt was stopped under 97% RAM pressure. The on-demand vocabulary adapter loaded the backbone, then exposed a missing Torchvision processor dependency; that dependency was installed and the image processor is being checked before repeating inference. No classifier result is claimed yet.
+
+Basic strategy is available before a finite computation finishes. An unresolved Monte Carlo ranking keeps the configured basic policy as the primary recommendation. A valid recognized turn receives a legal action; unavailable, changing or stale evidence asks for a fresh view or manual confirmation. Unknown pixels never become an invented action.
+
+The included detector is validated on the lab artwork. External card graphics need a separately trained and evaluated detector. Poker/other tables are visual monitors only. Counts cover observed exposures; joining a shoe midway leaves earlier composition unknown. The optional Clef scene classifier does not recognize ranks or compute blackjack decisions.
+
+## Retained evidence
+
+The prior studies below remain historical measurements, not new performance claims. Original v0.1 and v0.2 release artifacts and their evidence are preserved.
+
+# Historical verification — 0.2.0
 
 The source includes the original mathematical/research laboratory plus continuous video observation, a floating advisor, a standalone simulator and English-first UI with optional Italian. Laya is deferred. Clef/Jev are not required or promoted to measured production models.
 

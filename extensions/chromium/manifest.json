@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Blackjack Vision Lab — Tab Image",
+  "version": "1.0.0",
+  "description": "Capture a user-selected tab image for your local simulation analysis lab.",
+  "permissions": ["activeTab", "storage", "clipboardWrite"],
+  "host_permissions": ["http://127.0.0.1/*", "http://localhost/*"],
+  "action": {"default_popup": "popup.html", "default_title": "Blackjack Vision Lab"}
+}

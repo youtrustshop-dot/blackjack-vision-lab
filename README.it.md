@@ -2,7 +2,7 @@
 
 Laboratorio open source locale per simulazioni di blackjack, visione video continua, conteggio delle carte e analisi matematica. L'inglese è la lingua principale; seleziona **Italiano** per l'interfaccia secondaria.
 
-[Installer e ZIP Windows 0.2.0](https://github.com/youtrustshop-dot/blackjack-vision-lab/releases/tag/v0.2.0) · [Documentazione principale in inglese](README.md).
+[Installer e ZIP Windows 1.0.0](https://github.com/youtrustshop-dot/blackjack-vision-lab/releases/tag/v1.0.0) · [Documentazione principale in inglese](README.md).
 
 ## Prova subito
 
@@ -16,3 +16,7 @@ Il riconoscimento è validato sulla grafica delle carte del laboratorio. Altri g
 Le probabilità live e gli EV sono stime Monte Carlo su pool finito, con strategia basic generata per la continuazione. Vittoria/parità/sconfitta riguardano il profitto della mano attiva e dei nuovi split; le altre mani già presenti sono escluse. L'intervallo statistico non misura l'errore percettivo. Laya rimane rinviato.
 
 Da sorgente, Python 3.12+ e Node 22+: esegui `setup.ps1`, poi `run.ps1`; apri http://127.0.0.1:8765 e tieni il backend avviato. Il pacchetto Windows include il backend e non richiede Python o Node. Licenza MIT per il codice originale.
+
+La versione 1.0 aggiunge configurazione guidata, modalità semplice/standard/personalizzata, 1–8 mazzi selezionabili, cinque tavoli indipendenti, immagini incollate/trascinate/caricate, asso 1/11 e tutte le 550 combinazioni iniziali. Per ogni stato giocabile valido propone subito una mossa legale; se la stima EV non separa le azioni mantiene la strategia base. La grafica principale e le immagini GitHub sono in inglese.
+
+È uno strumento di analisi e formazione, non un consiglio finanziario e non un sistema che garantisce vittorie. Poker è solo monitoraggio video; Clef è un classificatore opzionale separato.

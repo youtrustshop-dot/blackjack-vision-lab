@@ -1,6 +1,6 @@
 # Blackjack Vision Lab roadmap
 
-The original laboratory covers rules, an independent mathematical core, observed-state reconstruction, counting, replay, experiments, reference comparisons and Windows distribution. Version 0.2 adds the requested live-video workflow and English-first product. [Requirements and evidence](docs/REQUIREMENTS.json) are authoritative; historical failures and unexecuted optional models remain explicit.
+The original laboratory covers rules, an independent mathematical core, observed-state reconstruction, counting, replay, experiments, reference comparisons and Windows distribution. Version 1.0 adds immediate advice, multi-table observation, image/manual input, complete offline basic-policy combinations and the dark English-first product. [Requirements and evidence](docs/REQUIREMENTS.json) are authoritative; historical failures and unexecuted optional models remain explicit.
 
 ## Correctness contracts
 
@@ -26,7 +26,16 @@ The original laboratory covers rules, an independent mathematical core, observed
 | M20: performance | Measured on this computer within each task's contract. Universal 30-FPS analysis or <100-ms feedback is not certified. |
 | V21: continuous screen video | Share-once display stream, automatic video-clock observations, persistent count, stale expiry and no backlog. Tested canvas video plus multi-action lossless video. |
 | V22: live probabilities and popup | Finite-pool sampled win/push/loss/EV per active-hand action, intervals, uncertainty gate, floating panel and Document PiP pop-out. |
-| V23: international distribution | English default UI, English GitHub imagery/docs, optional Italian selection, Windows 0.2 artifacts. |
+| V23: international distribution | English default UI, English GitHub imagery/docs, optional Italian selection, versioned Windows artifacts. |
+
+| V24: every valid player turn | Immediate legal basic policy; finite/sampled results override only within their declared precision contract. No partial-analysis headline. |
+| V25: aces and strategy library | Active ace 1/11 values, alternative hard total; hard/soft/pair/natural tables and all 550 starting combinations. |
+| V26: five tables | Independent names, rules, observers, counts and per-table calibration. Shared display selected once. Tables are registered explicitly; no universal automatic table locator. |
+| V27: image/manual input | Paste/drop/upload image, automatic lab-artwork recognition, confirmed cards and observed-history/split context. |
+| V28: onboarding and modes | First setup, short guide, configurable reuse prompt, standard/simple/custom rules and five deck counts. |
+| V29: design | Original black/graphite/gold identity, compact advisor, advanced details, smooth motion and reduced-motion support. |
+| V30: optional extension | Scoped Chromium active-tab image capture, clipboard and loopback-only analysis. Source tests pass; unpacked browser installation remains a manual check. |
+| V31: Clef | Separate pinned CUDA environment and offline-safe bridge; actual model results are recorded in docs/CLEF.md. Classification remains optional and separate from card recognition. |
 
 ## Next research
 

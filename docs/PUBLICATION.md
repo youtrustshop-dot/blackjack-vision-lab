@@ -1,7 +1,7 @@
 # Public source publication
 
 This repository publishes the independently implemented Blackjack Vision Lab
-core, React UI, Tauri shell, tests, research runners and measured reports. Version 0.2.0 adds continuous live video and English-first distribution.
+core, React UI, Tauri shell, tests, research runners and measured reports. Version 1.0.0 adds immediate advice, aces, a full offline starting-hand library, up to five observers, images/manual input, onboarding, dark design and English-first distribution.
 At initial publication (commit `a24cf1044de53ed2325391c47710ba3227e2c222`),
 the Python core, UI source and native shell files matched the verified Windows
 distribution; public-facing README, licence and contributor documentation were
@@ -14,7 +14,7 @@ Dependency notices are retained under `ui/src-tauri/licenses/`. Release binaries
 and the portable ZIP are downloadable from the GitHub release; its checksums
 identify the exact verified files. Historical release evidence remains under
 `release/` and refers to those files, not a fresh build from every subsequent
-commit. No credentials or model weights are needed to start the laboratory.
+commit. No credentials or model weights are needed to start the laboratory. Clef downloads and its separate CUDA environment are optional; model weights and private installation logs stay outside this checkout.
 
 Regenerate the synthetic card dataset:
 
@@ -31,7 +31,7 @@ python -m bjlab.shoe_inference_benchmark run experiments/shoe_inference/dataset 
 
 The controlled artwork detector is validated. External photographic failures
 remain documented; this release does not certify arbitrary card/camera setups.
-Laya/Jev actual model execution is deferred. ONNX trained weights and RLCard are
+Laya/Jev actual model execution is deferred. Clef execution and its measured hardware limits are documented in CLEF.md. ONNX trained weights and RLCard are
 optional future work. MGP was inspected, without an unsupported numerical run.
 
 Desktop rebuilding needs the additional pinned toolchain/font inputs described

@@ -219,3 +219,16 @@ to loopback for the intended local research use.
 Each live request consumes one supplied video image; it does not simulate additional stabilization updates. Sequence/timestamp must be finite, positive where applicable, and strictly increasing. Input limits are 8 MiB and five megapixels; configured observers are limited to eight, with idle expiry on allocation. Samples accept 100–8,000.
 
 `decision.exact=false`, method `finite-pool Monte Carlo`. Action rows contain net `ev`, `ev_ci95`, `win`, `push`, `loss`, `win_ci95` and sampling metadata. Scope is the active hand plus new splits, excluding other already existing hands. Read the returned gate and [probability contract](LIVE_VISION.md) before using an estimate. Stale-advice timing/backpressure is enforced by the browser loop, independent of tracker stability. The API does not persist recordings or send observations to a remote model.
+
+
+
+## Version 1.0 advice and image endpoints
+
+- `POST /api/advisor/manual`: declared `rules`, `player` rank list and `dealer` upcard; optional `observed` exposures, `from_split`, `split_hands`, and `estimate` (false returns the immediate policy without sampling). If an observed list is supplied it must contain the current visible cards and fit the configured inventory. A partial-history count is labeled explicitly.
+- `POST /api/advisor/image`: declared rules, base64 PNG/JPEG/WebP pixels and optional four-corner calibration. A single image cannot manufacture temporal tracking history. Recognized lab-artwork cards produce advice; unknown cards require confirmation.
+- `POST /api/advisor/strategy`: offline rule-generated hard/soft/pair/natural charts and 550 starting combinations. These use independent replacement draws, separate from finite-shoe optimization.
+- `POST /api/sessions/{id}/outcomes`: active-hand finite-pool samples from the public decision state, with an event revision. Hidden ranks and the future physical shoe are excluded.
+- `GET /api/models/clef/status`, `POST /api/models/clef/classify`: fixed loopback bridge to the optional runtime on port 9051. An offline classifier is reported as unavailable without disabling the core.
+- Active simulator snapshots include structured `advice`: primary/basic/count/composition actions, legal choices, hand total, ace values, precision and an auditable explanation. Terminal replay snapshots retain their immutable contract.
+
+Live frames still have increasing observation sequence/time. Exact pixel reuse caches detection only; each real observation updates temporal tracking. The lab renderer exposes a visible SESSION label so two sources with the same shoe/round numbers are distinguishable without passing a simulator session ID into the observer.

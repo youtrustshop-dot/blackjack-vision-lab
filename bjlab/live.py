@@ -48,7 +48,7 @@ class ContextReader:
         if image.width != 960 or image.height < 300:
             return {}
         result = {}
-        for name, x, width in (("shoe", 120, 65), ("round", 305, 65), ("hand", 470, 40)):
+        for name, x, width in (("shoe", 120, 65), ("round", 305, 65), ("hand", 470, 40), ("session", 860, 65)):
             roi=np.asarray(image.crop((x-6,255,x+width+6,285)))
             mask=TemplateTextDetector._mask(roi).astype(np.uint8)
             contours,_=cv2.findContours(mask,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
@@ -226,6 +226,8 @@ class LiveObserver:
         self.last_access = time.monotonic()
         self.lock = threading.RLock()
         self.frame_count = 0
+        self.pixel_cache_key = None
+        self.pixel_evidence = None
 
     def process(self, image: Image.Image, sequence: int, timestamp: float) -> dict:
         with self.lock:
@@ -242,15 +244,20 @@ class LiveObserver:
                     f"player:{i}": (30 + i % 2 * 440, 290 + i // 2 * 190, 440, 190)
                     for i in range(8)}
                 self.detector = TemplateCardDetector(zones=zones)
-            detections = self.detector.detect(image)
-            context = self.reader.read(image)
-            token = tuple(context.get(k) for k in ("shoe", "round", "hand", "phase"))
+            pixel_key = (image.size, image.mode, hashlib.sha256(image.tobytes()).digest())
+            if pixel_key != self.pixel_cache_key:
+                self.pixel_evidence = (self.detector.detect(image), self.reader.read(image),
+                                       extract_controlled_metadata(image))
+                self.pixel_cache_key = pixel_key
+            detections, context, metadata = self.pixel_evidence
+            token = tuple(context.get(k) for k in ("shoe", "round", "hand", "phase", "session"))
             self.context_hits = self.context_hits + 1 if token == self.context_candidate else 1
             self.context_candidate = token
             context_stable = self.context_hits >= 2 and all(k in context for k in ("shoe", "round", "hand", "phase"))
             # Accept visible context only after distinct consecutive video inputs.
             if context_stable:
-                if self.last_context.get("shoe") != context["shoe"]:
+                if (self.last_context.get("shoe") != context["shoe"] or
+                        self.last_context.get("session") != context.get("session")):
                     self.tracker.new_shoe(self.rules.decks, timestamp=timestamp,
                                           shoe_id="live-shoe-" + str(context["shoe"]))
                     self.round = 0
@@ -270,6 +277,9 @@ class LiveObserver:
             self.sequence, self.last_access = sequence, time.monotonic()
             self.frame_count += 1
             summary = self.tracker.state_summary()
+            running = sum((1 if 2 <= card_rank(rank) <= 6 else -1 if card_rank(rank) in (1, 10) else 0) * count
+                          for rank, count in summary["known_rank_counts"].items())
+            remaining = summary["physical_remaining"]
             reasons = list(summary["gate"]["reasons"])
             if context and not context_stable:
                 reasons.append("Visible round context is changing; waiting for stable video evidence.")
@@ -280,7 +290,6 @@ class LiveObserver:
             player = sorted([c for c in cards if c.get("zone") in (f"player:{active_index}", "player")],
                             key=lambda c: c.get("bbox", [0])[0])
             dealer = [c for c in cards if c.get("zone") == "dealer" and c.get("rank")]
-            metadata = extract_controlled_metadata(image)
             controls = {d["text"].lower().replace(" ", "_") for d in metadata["button_detections"]}
             split_hands = max(1, len({c.get("zone") for c in cards if str(c.get("zone", "")).startswith("player")}))
             from_split = split_hands > 1
@@ -305,6 +314,7 @@ class LiveObserver:
                 reasons.append("No readable legal player controls; calibrate the table or declare a manual player turn.")
             allowed_gate = summary["gate"]["solver_allowed"] and not reasons
             decision = None
+            advice = None
             if allowed_gate:
                 state_key = json.dumps([player_ranks, dealer[0]["rank"], summary["composition_remaining"],
                                         allowed, peeked, from_split, split_hands, self.phase], sort_keys=True)
@@ -323,6 +333,13 @@ class LiveObserver:
                                           peeked=peeked, from_split=from_split, split_hands=split_hands)
                     self.decision_key = state_key
                 decision = self.decision
+                from .advice import recommend
+                advice = recommend(player_ranks, dealer[0]["rank"], self.rules,
+                    allowed=allowed if self.phase != "insurance" else ["insurance", "decline_insurance"],
+                    phase=self.phase, from_split=from_split, split_hands=split_hands,
+                    split_aces=from_split and bool(player_ranks) and card_rank(player_ranks[0]) == 1,
+                    peeked=peeked, true_count=running / (remaining / 52) if remaining else 0.,
+                    count_complete=self.fresh_shoe, estimate=decision)
             else:
                 # Never retain advice through a transition, unreadable card or lost track.
                 self.decision_key, self.decision = None, None
@@ -334,7 +351,7 @@ class LiveObserver:
             return {"source": "live-video-pixels", "sequence": sequence, "timestamp": timestamp,
                     "processed_frames": self.frame_count, "detections": [d.to_dict() for d in detections],
                     "context": context, "phase": self.phase, "round": self.round, "gate": gate,
-                    "decision": decision, "running_count": running,
+                    "decision": decision, "advice": advice, "running_count": running,
                     "true_count": running / (remaining / 52) if remaining else None,
                     "count_scope": "from declared fresh shoe" if self.fresh_shoe else "observed portion only",
                     "observed_cards": len(summary["counted_ids"]), "physical_remaining": remaining,

@@ -2,15 +2,15 @@
   "schema_version": 1,
   "progress_report": "docs/STATUS.md",
   "verification": {
-    "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
-    "frontend_build": "passed",
+    "completed_test_run": "282 tests + 10 subtests passed in 30.32s",
+    "frontend_build": "TypeScript/Vite passed",
     "browser_primary_flows": 7,
     "browser_advanced_flows": 5,
     "latest_changes_require_retest": false,
     "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
     "native_desktop_build_verified": true,
     "frozen_backend_verified": true,
-    "release_verified": true,
+    "release_verified": false,
     "historical_v0_1": {
       "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
       "frontend_build": "passed",
@@ -22,10 +22,17 @@
       "frozen_backend_verified": true,
       "release_verified": true
     },
-    "version": "0.2.0",
-    "frontend_tests": "16 passed",
-    "release_evidence": "release/v0.2.0/: backend/native/installer smoke reports, manifest and SHA-256",
-    "current_browser_evidence": "docs/BROWSER_LIVE_VERIFICATION.json"
+    "version": "1.0.0",
+    "frontend_tests": "23 tests passed",
+    "release_evidence": "release/v1.0.0/: backend-smoke.json, native-smoke.json, installer-smoke.json, installer-native-smoke.json; final packaging metadata refresh follows",
+    "current_browser_evidence": "docs/BROWSER_V1_VERIFICATION.json",
+    "historical_v0_2": {
+      "completed_test_run": "259 tests + 10 subtests passed in 30.87s",
+      "frontend_build": "passed",
+      "native_desktop_build_verified": true,
+      "frozen_backend_verified": true,
+      "release_verified": true
+    }
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",
   "requirements": [
@@ -359,17 +366,74 @@
       "description": "English default UI/docs/GitHub imagery with optional Italian UI",
       "evidence": "ui/tests/i18n.test.mjs; docs/screenshots; README.md; README.it.md",
       "status": "verified"
+    },
+    {
+      "id": "always_legal_advice",
+      "milestone": "V24",
+      "description": "Immediate legal basic policy, resolved EV comparison and explicit evidence gates",
+      "evidence": "tests/test_advice.py; tests/test_strategy.py",
+      "status": "verified"
+    },
+    {
+      "id": "ace_values_and_library",
+      "milestone": "V25",
+      "description": "Ace 1/11 display and all 550 starting rank/dealer combinations",
+      "evidence": "tests/test_advice.py; ui/src/StrategyLibrary.tsx",
+      "status": "verified"
+    },
+    {
+      "id": "five_tables",
+      "milestone": "V26",
+      "description": "Five independent video sources, rules, observed counts and safe stream ownership",
+      "evidence": "tests/test_live.py; ui/tests/shared-display.test.mjs; browser five-demo session",
+      "status": "verified"
+    },
+    {
+      "id": "images_and_manual",
+      "milestone": "V27",
+      "description": "Paste/drop/upload pixels, confirmed cards, finite-pool outcome samples and split context",
+      "evidence": "tests/test_advice.py; ui/src/ImageAdvisor.tsx",
+      "status": "verified"
+    },
+    {
+      "id": "onboarding_and_modes",
+      "milestone": "V28",
+      "description": "Setup/guide, saved-rule confirmation and standard/simple/custom modes",
+      "evidence": "ui/src/Setup.tsx; browser setup/guide/reuse review",
+      "status": "verified"
+    },
+    {
+      "id": "dark_design",
+      "milestone": "V29",
+      "description": "Original dark/gold identity, compact advisor and reduced-motion transitions",
+      "evidence": "docs/DESIGN.md; docs/screenshots; ui/src/dark.css",
+      "status": "verified"
+    },
+    {
+      "id": "extension",
+      "milestone": "V30",
+      "description": "Optional scoped tab-image extension source; loopback-only analysis",
+      "evidence": "ui/tests/extension.test.mjs; extensions/chromium/README.md",
+      "status": "verified"
+    },
+    {
+      "id": "clef_runtime",
+      "milestone": "V31",
+      "description": "Pinned optional CUDA classifier and offline-safe loopback bridge",
+      "evidence": "tests/test_model_api.py; docs/CLEF.md; actual model smoke pending",
+      "status": "pending"
     }
   ],
   "model_rollout": {
     "current_scope": "deterministic engine and perception baseline",
     "laya": "prepared, actual integration/benchmark deferred by user: poi mettiamo laya",
-    "jev": "inactive; not requesting credentials"
+    "jev": "inactive; not requesting credentials",
+    "clef": "Separate pinned CUDA environment installed; model download and inference test in progress."
   },
   "acceptance_scope": {
     "required_system": "Controlled simulator, recorded single-round lab-artwork clips, screenshots, deterministic math and research validation layer.",
     "conditional_research": "Unavailable vendor models and unsupported legacy reference execution remain recorded; they are not fabricated or core dependencies.",
     "laya_user_deferral": "poi mettiamo laya",
-    "limitations": "Solver budgets can withhold incomplete optima; external camera artwork is not validated; deck/tray inference failed cases and state-confirmation delays remain visible."
+    "limitations": "Unstable/stale pixels require confirmation; arbitrary card graphics and poker strategy are not validated. Immediate basic policy remains available for valid declared player states. Finite optima retain their declared budget; optional classifier is separate."
   }
 }

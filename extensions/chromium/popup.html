@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Blackjack Vision Lab</title>
+<link rel="stylesheet" href="popup.css"><body><header><span>♠</span> BLACKJACK <small>VISION LAB</small></header>
+<h1>One tab. One image.</h1><p>Capture the visible simulation tab after your click. For continuous video, use Share screen in the lab.</p>
+<label>Local lab address<input id="address" value="http://127.0.0.1:8767" placeholder="http://127.0.0.1:8767"></label>
+<button id="capture">Capture visible tab</button><img id="preview" hidden alt="Captured visible simulation tab">
+<div class="actions"><button id="copy" disabled>Copy image</button><button id="analyze" disabled>Analyze locally</button></div>
+<p id="status" role="status">No image selected.</p><div id="result" hidden><h2 id="action"></h2><p id="details"></p></div>
+<details><summary>Confirm cards manually</summary><label>Player cards<input id="player" placeholder="A 7"></label><label>Dealer upcard<input id="dealer" placeholder="9"></label><button id="manual">Confirm player turn & analyze</button></details>
+<p class="note">The backend’s configured defaults are used. An image has no earlier card history. Crop / calibrate and select actual table rules in the main app.</p><footer>Analysis and education only. Not financial advice. No guaranteed outcomes.</footer>
+<script type="module" src="popup.js"></script></body></html>

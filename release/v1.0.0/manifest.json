@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "target": "x86_64-pc-windows-gnu",
+  "files": [
+    {
+      "file": "bjlab-backend.exe",
+      "bytes": 89375867,
+      "sha256": "339ca9645331a61dd242851624718046db0d81e0255eb4596d5771504062a104"
+    },
+    {
+      "file": "Blackjack Vision Lab_1.0.0_x64-setup.exe",
+      "bytes": 97819568,
+      "sha256": "2d5a0516b994a39a23db69d871ac63893e22a58ba8e0a3e06b5603d1bcca79c2"
+    },
+    {
+      "file": "Blackjack Vision Lab.exe",
+      "bytes": 13086208,
+      "sha256": "761c3d9b7445489819a1871b84d1c419757ec691cda80cadd42459c8569d65e1"
+    },
+    {
+      "file": "WebView2Loader.dll",
+      "bytes": 160880,
+      "sha256": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5"
+    }
+  ]
+}

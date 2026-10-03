@@ -57,6 +57,60 @@ def test_pixels_stabilize_once_and_never_count_repeated_video_cards_twice(client
     assert client.post('/api/live', json={'session_id': sid}).status_code == 422
 
 
+def test_identical_pixels_reuse_detection_but_still_consume_each_video_observation(client, monkeypatch):
+    from bjlab.vision import TemplateCardDetector
+    original = TemplateCardDetector.detect
+    calls = []
+    def detected(self, image):
+        calls.append(image.size)
+        return original(self, image)
+    monkeypatch.setattr(TemplateCardDetector, 'detect', detected)
+    sid = source(client)
+    stream = client.post('/api/live', json={'samples': 100}).json()['stream_id']
+    image = pixels(client, sid)
+    results = feed(client, stream, image, 0, 7)
+    assert len(calls) == 1
+    assert [r['processed_frames'] for r in results] == list(range(1, 8))
+    assert results[0]['advice'] is None and results[-1]['advice']
+    changed = Image.open(io.BytesIO(image)).convert('RGB')
+    changed.putpixel((0, 0), (11, 12, 13))
+    buffer = io.BytesIO(); changed.save(buffer, format='PNG')
+    last = feed(client, stream, buffer.getvalue(), 7, 1)[0]
+    assert len(calls) == 2
+    assert last['observed_cards'] == results[-1]['observed_cards']
+
+
+def test_five_observers_do_not_merge_cards_counts_or_sessions(client):
+    reports = []
+    for cards in (['10', '6', '10', '9'], ['A', '9', '7', '6'], ['8', '10', '8', '7'],
+                  ['5', '6', '6', '9'], ['9', '7', '9', '6']):
+        sid = client.post('/api/sessions', json={}).json()['session_id']
+        sessions[sid].set_shoe(cards + ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'A'] * 6)
+        client.post(f'/api/sessions/{sid}/deal', json={})
+        stream = client.post('/api/live', json={'samples': 500, 'fresh_shoe': True}).json()['stream_id']
+        image = client.get(f'/api/sessions/{sid}/frame?theme=black&live_context=true').content
+        report = feed(client, stream, image, 0, 5)[-1]
+        assert report['advice']['best_action'] in report['advice']['legal_actions']
+        assert report['observed_cards'] == 3
+        assert 'session_id' not in report
+        reports.append(report)
+    assert [r['advice']['hand']['total'] for r in reports] == [20, 18, 16, 11, 18]
+    assert [r['running_count'] for r in reports] == [-1, -1, -1, 3, 0]
+
+
+def test_new_source_session_with_same_shoe_number_resets_from_visible_label(client):
+    stream = client.post('/api/live', json={'samples': 100, 'fresh_shoe': True}).json()['stream_id']
+    first_sid = source(client)
+    first = feed(client, stream, pixels(client, first_sid), 0)[-1]
+    second_sid = client.post('/api/sessions', json={'seed': 139}).json()['session_id']
+    client.post(f'/api/sessions/{second_sid}/deal', json={})
+    second = feed(client, stream, pixels(client, second_sid), 5)[-1]
+    assert first['context']['shoe'] == second['context']['shoe'] == 1
+    assert first['context']['session'] != second['context']['session']
+    assert second['observed_cards'] == 3
+    assert second['running_count'] == sessions[second_sid].snapshot()['shoe']['running_count']
+
+
 def test_reveal_round_and_shoe_boundaries_are_read_from_pixels(client):
     sid = source(client)
     stream = client.post('/api/live', json={'samples': 100}).json()['stream_id']
@@ -153,7 +207,9 @@ def test_visible_context_reads_multiple_digits(client,round_id,hand,shoe):
         image.paste(image.getpixel((40,250)),(x-6,255,x+width,285))
         ImageDraw.Draw(image).text((x,260),str(value),font=card_font(16),fill=(212,220,213),anchor='lt')
     context = ContextReader().read(image)
-    assert context == {'shoe':shoe,'round':round_id,'hand':hand,'phase':'player'}
+    assert {key: context[key] for key in ('shoe', 'round', 'hand', 'phase')} == {
+        'shoe': shoe, 'round': round_id, 'hand': hand, 'phase': 'player'}
+    assert context['session'] > 0
 
 
 def test_decoded_lossless_video_reconstructs_real_action_sequence(client,tmp_path):

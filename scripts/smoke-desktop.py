@@ -57,7 +57,7 @@ def main():
         environment.pop(variable,None)
     environment['PATH'] = str(Path(os.environ['SystemRoot'])/'System32')
     environment['BJLAB_FONT_PATH'] = 'invalid-external-font'
-    report = {'version':'0.2.0','binary':binary.name,'sha256':digest(binary),
+    report = {'version':'1.0.0','binary':binary.name,'sha256':digest(binary),
               'mode':'native-hidden' if args.native else 'frozen-backend',
               'runtime_path':'Windows System32 only; no Python/Node/Rust paths',
               'personal_display_picker_selected':False}
@@ -76,7 +76,7 @@ def main():
             assert selftest.returncode==0,selftest.stderr
             checked=json.loads(selftest.stdout)
             assert checked['frozen'] and checked['status']=='ok'
-            assert checked['build_provenance']['version']=='0.2.0'
+            assert checked['build_provenance']['version']=='1.0.0'
             for name,expected in checked['build_provenance']['source_sha256'].items():
                 assert digest(project/name)==expected,'Stale recorded source: '+name
             report['self_test']=checked
@@ -121,7 +121,7 @@ def main():
                     payload=response.read()
                     return json.loads(payload) if response.headers.get_content_type()=='application/json' else payload
             health=request('/api/health')
-            assert health['status']=='ok' and health['version']=='0.2.0'
+            assert health['status']=='ok' and health['version']=='1.0.0'
             assert request('/api/roadmap')==json.loads((project/'docs/REQUIREMENTS.json').read_text(encoding='utf-8'))
             html=request('/')
             assert html==(project/'ui/dist/index.html').read_bytes()

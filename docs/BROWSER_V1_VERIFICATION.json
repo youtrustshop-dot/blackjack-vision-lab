@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-03",
+  "source": "actual localhost browser UI; isolated synthetic sessions",
+  "language_default": "English",
+  "secondary_italian_main_flows_exercised": true,
+  "guide": "All four steps exercised, including completion; configuration and guide can be reopened.",
+  "configuration": "Six-deck standard and two-deck hit/stand modes saved through the UI; new-session reuse confirmation exercised; ask-again preference restored.",
+  "image": {"upload_exercised": true, "clipboard_paste_exercised": true, "drag_drop": "implemented; native file drag not separately exercised", "player": ["A", "7"], "dealer": "9", "action": "hit", "total": 18, "alternative_total": 8, "ace_value": 11, "observed": 3, "running_count": -1, "true_count": -0.17, "outcome_percent": [39.0, 9.7, 51.3], "count_scope": "observed portion only"},
+  "native": {"mode": "two-deck hit/stand", "player": ["10", "J"], "dealer": "A", "insurance_action": "decline_insurance", "after_negative_peek_action": "stand", "outcome_percent": [71.8, 20.3, 7.9]},
+  "library": "Hard chart rendered; 20 stands for every dealer rank; 550 starting combinations available locally.",
+  "video": "Five simultaneously connected real canvas.captureStream MediaStreams, independently seeded and paused through public source controls. No source session ID is supplied to the observer.",
+  "five_table_states": [
+    {"player": ["2", "8"], "dealer": "4", "action": "double", "running_count": 2, "observed": 3},
+    {"player": ["3", "Q"], "dealer": "9", "action": "hit", "running_count": 0, "observed": 3},
+    {"player": ["5", "4"], "dealer": "7", "action": "hit", "running_count": 2, "observed": 3},
+    {"player": ["8", "8"], "dealer": "4", "action": "split", "running_count": 1, "observed": 3},
+    {"player": ["J", "9"], "dealer": "5", "action": "stand", "running_count": 0, "observed": 3}
+  ],
+  "performance_limit": "Five-table browser runs produced variable capture-to-response latency and occasional 2.2-second stale expiry during concurrent work. Those statuses were retained. Pixel reuse and a worker media-clock fallback do not establish a universal frame rate or feedback bound.",
+  "single_table_video": {"observations_seen": 127, "running_count": 2, "observed": 3, "action": "double", "reported_latency_ms_at_snapshot": 18},
+  "floating": "In-page compact advisor exercised. Separate Document PiP requested; native always-on-top behavior is not independently certified.",
+  "responsive": "375-pixel content width observed within a requested 390-pixel viewport, with local strategy-table scrolling; override reset.",
+  "display_picker_personal_source_selected": false,
+  "installed_unpacked_extension_exercised": false,
+  "screenshots": ["ace-advice.jpg", "simulator.jpg", "floating-advisor.jpg", "strategy-library.jpg", "configuration.jpg", "guide.jpg", "mobile.jpg"],
+  "scope": "Lab artwork and educational simulation. Arbitrary game graphics and poker strategy are not validated."
+}

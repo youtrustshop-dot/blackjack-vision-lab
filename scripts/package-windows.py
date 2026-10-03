@@ -52,14 +52,18 @@ def main():
             "English is the default; select Italiano for the secondary language.\n"
             "For live screen sharing, open the local app in Chrome or Edge and keep the desktop app running.\n"
             "Card recognition is validated on the lab artwork. See docs/LIVE_VISION.md.\n")
-        for name in ("DESKTOP.md", "STATUS.md", "LIVE_VISION.md"):
+        for name in ("DESKTOP.md", "STATUS.md", "LIVE_VISION.md", "QUICK_START.md", "CLEF.md"):
             archive.write(ROOT / "docs" / name, "Blackjack Vision Lab/docs/" + name)
+        optional = [ROOT / "scripts" / name for name in ("install-clef.ps1", "run-clef.ps1", "clef-runtime.py", "clef_vocabulary.py", "clef-requirements.txt")]
+        optional += sorted(path for path in (ROOT / "extensions" / "chromium").iterdir() if path.is_file())
+        for path in optional:
+            archive.write(path, "Blackjack Vision Lab/" + path.relative_to(ROOT).as_posix())
     with zipfile.ZipFile(output) as archive:
         corrupt = archive.testzip()
         if corrupt:
             raise RuntimeError("Archive CRC verification failed: " + corrupt)
     print(json.dumps({"output": str(output), "created_at": datetime.now(timezone.utc).isoformat(),
-                      "files": len(paths)+4, "bytes": output.stat().st_size,
+                      "files": len(paths)+6+len(optional), "bytes": output.stat().st_size,
                       "sha256": digest(output), "release_binary_hashes_verified": True,
                       "crc_verified": True}))
 

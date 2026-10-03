@@ -4,6 +4,7 @@ param(
     [string]$RustupHome = "",
     [string]$GnuBin = "",
     [string]$ReleaseDirectory = "",
+    [string]$TauriCliScript = "",
     [switch]$BackendOnly,
     [switch]$SkipBackend,
     [switch]$SkipFrontend,
@@ -25,6 +26,21 @@ New-Item -ItemType Directory -Force -Path $bjWork, $bjRelease | Out-Null
 
 function Assert-Exit([string]$Operation) {
     if ($LASTEXITCODE -ne 0) { throw "$Operation failed with exit code $LASTEXITCODE" }
+}
+
+function Invoke-PinnedTauri([string[]]$TauriArguments) {
+    if ($TauriCliScript) {
+        $bjCliPath = [System.IO.Path]::GetFullPath($TauriCliScript)
+        $bjCliPackage = Join-Path (Split-Path -Parent $bjCliPath) "package.json"
+        if (-not (Test-Path -LiteralPath $bjCliPath) -or
+            (Get-Content -LiteralPath $bjCliPackage -Raw | ConvertFrom-Json).version -ne "2.12.1") {
+            throw "A local Tauri CLI must be the pinned official 2.12.1 package"
+        }
+        & node.exe $bjCliPath @TauriArguments
+    } else {
+        & npm.cmd exec --yes --package=@tauri-apps/cli@2.12.1 -- tauri @TauriArguments
+    }
+    Assert-Exit "Pinned Tauri CLI"
 }
 
 $bjOriginalPath = $env:PATH
@@ -75,13 +91,16 @@ import sys
 from PIL import Image, ImageDraw
 root = Path(sys.argv[1]) / "ui" / "src-tauri" / "icons"
 root.mkdir(parents=True, exist_ok=True)
-image = Image.new("RGBA", (256,256), (9,35,28,255))
+image = Image.new("RGBA", (256,256), (17,19,24,255))
 draw = ImageDraw.Draw(image)
-draw.rounded_rectangle((42,28,190,225), radius=18, fill=(247,242,226,255), outline=(217,173,84,255), width=8)
-draw.polygon([(114,65),(72,122),(156,122)], fill=(12,77,55,255))
-draw.ellipse((71,102,117,150), fill=(12,77,55,255))
-draw.ellipse((111,102,157,150), fill=(12,77,55,255))
-draw.polygon([(105,137),(123,137),(131,169),(97,169)], fill=(12,77,55,255))
+gold=(216,184,106,255)
+draw.rounded_rectangle((16,16,240,240),radius=60,fill=(43,40,30,255))
+def cubic(a,b,c,d):
+    return [tuple((1-t)**3*a[i]+3*(1-t)**2*t*b[i]+3*(1-t)*t*t*c[i]+t**3*d[i] for i in (0,1)) for t in [j/40 for j in range(41)]]
+shape=[(128,48),(58,123)]+cubic((58,123),(21,171),(85,208),(123,160))+[(101,213),(155,213),(133,160)]+cubic((133,160),(171,208),(235,171),(197,123))
+draw.polygon(shape,fill=gold)
+eye=cubic((80,133),(101,105),(155,105),(176,133))+cubic((176,133),(155,162),(101,162),(80,133))
+draw.polygon(eye,fill=(17,19,24,255));draw.ellipse((112,117,144,149),fill=gold)
 image.save(root / "icon.png")
 image.save(root / "icon.ico", sizes=[(16,16),(24,24),(32,32),(48,48),(64,64),(128,128),(256,256)])
 '@
@@ -131,7 +150,7 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
         & $PythonExe (Join-Path $bjProject "ui\src-tauri\build-notices.py")
         Assert-Exit "Third-party runtime and dependency notices"
     }
-    $bjProvenanceFiles = @("bjlab/engine.py", "bjlab/solver.py", "bjlab/strategy.py", "bjlab/api.py", "bjlab/live.py", "bjlab/live_api.py", "bjlab/simulator.py", "desktop_launcher.py", "ui/src-tauri/src/main.rs", "ui/src-tauri/Cargo.toml", "ui/src-tauri/tauri.conf.json", "ui/dist/index.html", "docs/REQUIREMENTS.json")
+    $bjProvenanceFiles = @("bjlab/engine.py", "bjlab/solver.py", "bjlab/strategy.py", "bjlab/api.py", "bjlab/live.py", "bjlab/live_api.py", "bjlab/advice.py", "bjlab/advisor_api.py", "bjlab/model_api.py", "bjlab/simulator.py", "desktop_launcher.py", "ui/src-tauri/src/main.rs", "ui/src-tauri/Cargo.toml", "ui/src-tauri/tauri.conf.json", "ui/dist/index.html", "docs/REQUIREMENTS.json")
     $bjProvenanceHashes = [ordered]@{}
     foreach ($bjRelative in $bjProvenanceFiles) {
         $bjProvenancePath = Join-Path $bjProject $bjRelative
@@ -187,9 +206,9 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
                 throw "Native source/config changed; use a full build: $bjNativeInput"
             }
         }
-        & npm.cmd exec --yes --package=@tauri-apps/cli@2.12.1 -- tauri bundle --target $bjTarget --bundles nsis
+        Invoke-PinnedTauri -TauriArguments @("bundle", "--target", $bjTarget, "--bundles", "nsis")
     } else {
-        & npm.cmd exec --yes --package=@tauri-apps/cli@2.12.1 -- tauri build --target $bjTarget
+        Invoke-PinnedTauri -TauriArguments @("build", "--target", $bjTarget)
     }
     Assert-Exit "Tauri desktop and NSIS build"
     Copy-Item -LiteralPath $bjNative -Destination (Join-Path $bjRelease "Blackjack Vision Lab.exe") -Force

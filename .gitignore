@@ -28,3 +28,7 @@ datasets/**/*.jpg
 datasets/**/*.jpeg
 datasets/**/*.mp4
 experiments/shoe_inference/dataset/**/*.png
+
+!release/v1.0.0/
+release/v1.0.0/*
+!release/v1.0.0/*.json

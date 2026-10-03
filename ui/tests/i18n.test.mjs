@@ -18,3 +18,11 @@ test('dynamic fragment spacing and technical values survive localization',()=>{
  assert.equal(locale.t('Round 5 · unità di puntata'),'Round 5 · wager units');
  assert.equal(locale.t('Puntata 2'),'Wager 2');
 });
+test('version one primary and secondary product labels are consistent',()=>{
+ locale.setLanguage('en');assert.equal(locale.t('Strategia base'),'Basic strategy');
+ locale.setLanguage('it');
+ assert.equal(locale.t('Image & manual advice'),'Immagini e carte confermate');
+ assert.equal(locale.t('Why this action & advanced details'),'Motivo del consiglio e dettagli avanzati');
+ assert.match(locale.t('Analysis and education only. Not financial advice. No guaranteed outcomes.'),/Non sono consigli finanziari/);
+ locale.setLanguage('en');
+});

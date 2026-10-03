@@ -109,15 +109,15 @@ screen was selected. This proves the local capture adapter; recognition of
 arbitrary card artwork remains subject to the documented detector calibration.
 See the project requirements audit for authoritative completion evidence.
 
-## Version 0.2.0 live workflow
+## Version 1.0.0 live workflow
 
 English is the default for startup, UI and installer; Italiano is secondary. For display sharing, open the local app in Chrome or Edge using the handoff button and keep the native app running. WebView2 display-media support varies, so the native shell itself is not claimed to implement the browser picker. The lab video demo works without a display picker.
 
 Build a new version into a distinct folder to preserve historical evidence:
 
 ```powershell
-.\scripts\build-desktop.ps1 -ReleaseDirectory .\release\v0.2.0
-python scripts/package-windows.py --release release/v0.2.0 --output ../blackjack-vision-lab-windows-v0.2.0.zip
+.\scripts\build-desktop.ps1 -ReleaseDirectory .\release\v1.0.0
+python scripts/package-windows.py --release release/v1.0.0 --output ../blackjack-vision-lab-windows-v1.0.0.zip
 ```
 
 The manifest/versioned smoke reports distinguish new artifacts from the original v0.1.0 installation reports. Existing statements about installation under `release/installer-smoke.json` refer to that original measured release, not an untested reinstall of a later build. Verify each new frozen backend's live endpoint and native readiness/shutdown against its own digest.
@@ -126,9 +126,9 @@ The manifest/versioned smoke reports distinguish new artifacts from the original
 Reproduce the versioned checks after building:
 
 ```powershell
-.venv/Scripts/python.exe scripts/smoke-desktop.py --release release/v0.2.0 --work ../../work/live-desktop-smoke
-.venv/Scripts/python.exe scripts/smoke-desktop.py --release release/v0.2.0 --work ../../work/live-desktop-smoke --native
-.venv/Scripts/python.exe scripts/smoke-installer.py --release release/v0.2.0 --work ../../work/live-installer-smoke
+.venv/Scripts/python.exe scripts/smoke-desktop.py --release release/v1.0.0 --work ../../work/v1-desktop-smoke
+.venv/Scripts/python.exe scripts/smoke-desktop.py --release release/v1.0.0 --work ../../work/v1-desktop-smoke --native
+.venv/Scripts/python.exe scripts/smoke-installer.py --release release/v1.0.0 --work ../../work/v1-installer-smoke
 ```
 
 The installer check refuses to overwrite a pre-existing user installation. It tests only a newly created workspace directory, with no shortcuts, then uses its generated uninstaller and restores its own test-created registration/preference. Native verification creates a hidden WebView and uses a bounded test-only timer through the normal graceful Exit path; it does not automate desktop windows or claim a personal display-picker test. The frozen/native/installed runtime reads video images through the live endpoint and checks exposed counts through a reveal and second hand.

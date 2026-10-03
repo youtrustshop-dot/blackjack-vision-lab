@@ -23,7 +23,7 @@ from .events import RANKS, SUITS, normalize_rank, normalize_suit
 
 CARD_WIDTH, CARD_HEIGHT = 78, 110
 CARD_COLOR = (250, 246, 234)
-THEMES = {"green": (12, 77, 55), "navy": (20, 40, 66), "burgundy": (84, 30, 50)}
+THEMES = {"green": (12, 77, 55), "navy": (20, 40, 66), "burgundy": (84, 30, 50), "black": (17, 19, 24)}
 FONT_CANDIDATES = ("C:/Windows/Fonts/arialbd.ttf", "C:/Windows/Fonts/DejaVuSans-Bold.ttf",
                    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
                    "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf")
