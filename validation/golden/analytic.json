@@ -1,0 +1,784 @@
+{
+  "schema_version": 1,
+  "description": "Independent hand-derived tiny-shoe fixtures. No third-party code or simulated hidden truth used.",
+  "cases": [
+    {
+      "id": "all-tens-20-v7",
+      "rules": {
+        "max_split_hands": 1
+      },
+      "state": {
+        "player": [
+          "10",
+          "10"
+        ],
+        "dealer": "7",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": 1,
+          "hit": -1,
+          "double": -2,
+          "surrender": -0.5
+        },
+        "provenance": "Only tens remain. Dealer 7+10 stands at17; player20 wins standing, busts on hit or double. Late surrender loses half."
+      }
+    },
+    {
+      "id": "all-tens-11-v6",
+      "state": {
+        "player": [
+          "5",
+          "6"
+        ],
+        "dealer": "6",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": 1,
+          "hit": 1,
+          "double": 2,
+          "surrender": -0.5
+        },
+        "provenance": "Only tens remain. Dealer6+10+10 busts. Player11+10 reaches21; doubling returns2 net units."
+      }
+    },
+    {
+      "id": "split-aces-not-natural",
+      "rules": {
+        "max_split_hands": 2,
+        "resplit": false
+      },
+      "state": {
+        "player": [
+          "A",
+          "A"
+        ],
+        "dealer": "6",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "split": 2
+        },
+        "provenance": "Split aces each receive ten and stand21; these hands are not naturals. Dealer6 draws ten twice and busts; two unit wagers win2 net."
+      }
+    },
+    {
+      "id": "analytic-prepeek11-vA-none",
+      "rules": {
+        "surrender": "none"
+      },
+      "state": {
+        "player": [
+          5,
+          6
+        ],
+        "dealer": "A",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        "peek_resolved": false
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": -1.0,
+          "hit": -0.3333333333333333,
+          "double": 0.0
+        },
+        "provenance": "Pool {9,T,T}. Each physical hole is equally likely. The two tens find dealer natural before any added bet and lose1; hole9 leaves a ten draw making21 against dealer20, returning1 hit or2 double. Hit=(-2+1)/3=-1/3; double=(-2+2)/3=0. Late surrender=(-2-1/2)/3=-5/6; early=-1/2. Prepeek insurance p=2/3, net=1.5p-.5=+.5.",
+        "insurance": {
+          "available": true,
+          "probability_blackjack": 0.6666666666666666,
+          "ev": 0.5,
+          "take": true
+        }
+      }
+    },
+    {
+      "id": "analytic-postpeek11-vA-none",
+      "rules": {
+        "surrender": "none"
+      },
+      "state": {
+        "player": [
+          5,
+          6
+        ],
+        "dealer": "A",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        "peek_resolved": true
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": -1.0,
+          "hit": 1.0,
+          "double": 2.0
+        },
+        "provenance": "Negative peek forces hole9, dealer20. Remaining observed draw must be a ten, making player21; stand loses1, hit wins1, double wins2. Insurance cannot be taken after this resolved check; its hypothetical forced-loss EV is-.5.",
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": -0.5,
+          "take": false
+        }
+      }
+    },
+    {
+      "id": "analytic-prepeek11-vA-late",
+      "rules": {
+        "surrender": "late"
+      },
+      "state": {
+        "player": [
+          5,
+          6
+        ],
+        "dealer": "A",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        "peek_resolved": false
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": -1.0,
+          "hit": -0.3333333333333333,
+          "double": 0.0,
+          "surrender": -0.8333333333333334
+        },
+        "provenance": "Pool {9,T,T}. Each physical hole is equally likely. The two tens find dealer natural before any added bet and lose1; hole9 leaves a ten draw making21 against dealer20, returning1 hit or2 double. Hit=(-2+1)/3=-1/3; double=(-2+2)/3=0. Late surrender=(-2-1/2)/3=-5/6; early=-1/2. Prepeek insurance p=2/3, net=1.5p-.5=+.5.",
+        "insurance": {
+          "available": true,
+          "probability_blackjack": 0.6666666666666666,
+          "ev": 0.5,
+          "take": true
+        }
+      }
+    },
+    {
+      "id": "analytic-postpeek11-vA-late",
+      "rules": {
+        "surrender": "late"
+      },
+      "state": {
+        "player": [
+          5,
+          6
+        ],
+        "dealer": "A",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        "peek_resolved": true
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": -1.0,
+          "hit": 1.0,
+          "double": 2.0,
+          "surrender": -0.5
+        },
+        "provenance": "Negative peek forces hole9, dealer20. Remaining observed draw must be a ten, making player21; stand loses1, hit wins1, double wins2. Insurance cannot be taken after this resolved check; its hypothetical forced-loss EV is-.5.",
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": -0.5,
+          "take": false
+        }
+      }
+    },
+    {
+      "id": "analytic-prepeek11-vA-early",
+      "rules": {
+        "surrender": "early"
+      },
+      "state": {
+        "player": [
+          5,
+          6
+        ],
+        "dealer": "A",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        "peek_resolved": false
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": -1.0,
+          "hit": -0.3333333333333333,
+          "double": 0.0,
+          "surrender": -0.5
+        },
+        "provenance": "Pool {9,T,T}. Each physical hole is equally likely. The two tens find dealer natural before any added bet and lose1; hole9 leaves a ten draw making21 against dealer20, returning1 hit or2 double. Hit=(-2+1)/3=-1/3; double=(-2+2)/3=0. Late surrender=(-2-1/2)/3=-5/6; early=-1/2. Prepeek insurance p=2/3, net=1.5p-.5=+.5.",
+        "insurance": {
+          "available": true,
+          "probability_blackjack": 0.6666666666666666,
+          "ev": 0.5,
+          "take": true
+        }
+      }
+    },
+    {
+      "id": "analytic-postpeek11-vA-early",
+      "rules": {
+        "surrender": "early"
+      },
+      "state": {
+        "player": [
+          5,
+          6
+        ],
+        "dealer": "A",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        "peek_resolved": true
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": -1.0,
+          "hit": 1.0,
+          "double": 2.0,
+          "surrender": -0.5
+        },
+        "provenance": "Negative peek forces hole9, dealer20. Remaining observed draw must be a ten, making player21; stand loses1, hit wins1, double wins2. Insurance cannot be taken after this resolved check; its hypothetical forced-loss EV is-.5.",
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": -0.5,
+          "take": false
+        }
+      }
+    },
+    {
+      "id": "analytic-enhcbust-double-all",
+      "rules": {
+        "enhc": true,
+        "enhc_loss": "all",
+        "surrender": "none"
+      },
+      "state": {
+        "player": [
+          10,
+          10
+        ],
+        "dealer": 10,
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "can_split": false
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": -0.5,
+          "hit": 0.0,
+          "double": 0.0
+        },
+        "provenance": "Two physical assignments: drawA/holeT gives player21 versus20 (+1 hit/+2 double); drawT/holeA busts and dealer has natural (-1 hit, -2 all or -1 OBO double). Stand: holeT pushes20, holeA loses1. Average each pair. OBO refunds the added doubled bet even after a bust."
+      }
+    },
+    {
+      "id": "analytic-enhcbust-jointdouble-all",
+      "rules": {
+        "enhc": true,
+        "enhc_loss": "all",
+        "surrender": "none"
+      },
+      "state": {
+        "player": [
+          8,
+          9
+        ],
+        "dealer": 10,
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "from_split": true,
+        "split_hands": 2,
+        "completed_hands": [
+          {
+            "cards": [
+              10,
+              10,
+              9
+            ],
+            "wager": 2.0,
+            "original_wager": 0.0,
+            "from_split": true
+          }
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "double": -4.0
+        },
+        "provenance": "Pool {A,9,9,9}. Prior split hand is already busted with stake2. Active17 doubles: drawA makes18, any nonnatural dealer has19 and wins; draw9 busts. Every nonnatural assignment loses4 total. HoleA probability1/4 finds natural: all loses4, OBO refunds extras including the prior bust and loses1 total. Thus OBO=(3*-4+-1)/4=-13/4; all=-4. Extra nines ensure hit continuations also terminate before exhaustion."
+      }
+    },
+    {
+      "id": "analytic-enhcbust-double-original",
+      "rules": {
+        "enhc": true,
+        "enhc_loss": "original",
+        "surrender": "none"
+      },
+      "state": {
+        "player": [
+          10,
+          10
+        ],
+        "dealer": 10,
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "can_split": false
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": -0.5,
+          "hit": 0.0,
+          "double": 0.5
+        },
+        "provenance": "Two physical assignments: drawA/holeT gives player21 versus20 (+1 hit/+2 double); drawT/holeA busts and dealer has natural (-1 hit, -2 all or -1 OBO double). Stand: holeT pushes20, holeA loses1. Average each pair. OBO refunds the added doubled bet even after a bust."
+      }
+    },
+    {
+      "id": "analytic-enhcbust-jointdouble-original",
+      "rules": {
+        "enhc": true,
+        "enhc_loss": "original",
+        "surrender": "none"
+      },
+      "state": {
+        "player": [
+          8,
+          9
+        ],
+        "dealer": 10,
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "from_split": true,
+        "split_hands": 2,
+        "completed_hands": [
+          {
+            "cards": [
+              10,
+              10,
+              9
+            ],
+            "wager": 2.0,
+            "original_wager": 0.0,
+            "from_split": true
+          }
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "double": -3.25
+        },
+        "provenance": "Pool {A,9,9,9}. Prior split hand is already busted with stake2. Active17 doubles: drawA makes18, any nonnatural dealer has19 and wins; draw9 busts. Every nonnatural assignment loses4 total. HoleA probability1/4 finds natural: all loses4, OBO refunds extras including the prior bust and loses1 total. Thus OBO=(3*-4+-1)/4=-13/4; all=-4. Extra nines ensure hit continuations also terminate before exhaustion."
+      }
+    },
+    {
+      "id": "analytic-hsa-split21-stops",
+      "rules": {
+        "decks": 1,
+        "surrender": "none",
+        "max_split_hands": 2,
+        "resplit": false,
+        "hit_split_aces": true
+      },
+      "state": {
+        "player": [
+          "A",
+          "A"
+        ],
+        "dealer": 6,
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          12
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "split": 2.0
+        },
+        "provenance": "Only tens remain. Each split ace receivesT and completes at21 despite permission to hit split aces. Dealer6+T+T busts. Each ordinary one-unit21 wins1, total2; no double after a completed21 and no natural bonus."
+      }
+    },
+    {
+      "id": "analytic-splitT-A-stops",
+      "rules": {
+        "decks": 1,
+        "surrender": "none",
+        "max_split_hands": 2,
+        "resplit": false,
+        "hit_split_aces": true
+      },
+      "state": {
+        "player": [
+          10,
+          10
+        ],
+        "dealer": 9,
+        "counts": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "split": 2.0
+        },
+        "provenance": "Only aces remain. Dealer9+A=20 stands. Both split tens receiveA, complete ordinary21 and win1 each. No double after a completed21, total2."
+      }
+    },
+    {
+      "id": "analytic-soft18-v6-S17",
+      "rules": {
+        "decks": 2,
+        "hit_soft17": false
+      },
+      "state": {
+        "player": [
+          "A",
+          7
+        ],
+        "dealer": 6,
+        "counts": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": 1.0,
+          "hit": 1.0,
+          "double": 2.0,
+          "surrender": -0.5
+        },
+        "provenance": "Only aces remain. Dealer6+A is soft17: S17 stands17, H17 adds one ace and stands18. Player soft18 standing wins1 against17 or pushes18. A player hit/double adds an ace to soft19 and wins against either; further optimal hits cannot improve above win1. Double wins2; late surrender=-.5. Two decks provide enough physical aces for all branches."
+      }
+    },
+    {
+      "id": "analytic-soft18-v6-H17",
+      "rules": {
+        "decks": 2,
+        "hit_soft17": true
+      },
+      "state": {
+        "player": [
+          "A",
+          7
+        ],
+        "dealer": 6,
+        "counts": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": 0.0,
+          "hit": 1.0,
+          "double": 2.0,
+          "surrender": -0.5
+        },
+        "provenance": "Only aces remain. Dealer6+A is soft17: S17 stands17, H17 adds one ace and stands18. Player soft18 standing wins1 against17 or pushes18. A player hit/double adds an ace to soft19 and wins against either; further optimal hits cannot improve above win1. Double wins2; late surrender=-.5. Two decks provide enough physical aces for all branches."
+      }
+    },
+    {
+      "id": "analytic-negativepeek-mixed19-vT",
+      "rules": {
+        "surrender": "none"
+      },
+      "state": {
+        "player": [
+          10,
+          9
+        ],
+        "dealer": 10,
+        "counts": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          3
+        ]
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": -0.13333333333333333,
+          "hit": -0.6666666666666666,
+          "double": -1.3333333333333333
+        },
+        "provenance": "Pool {2,8,8,T,T,T} has no dealer-natural possibility. Hole8 wins2/6, holeT loses3/6. Hole2 has dealer12, then draws8 twice out of5 to20 or T three out of5 to bust: contributes(1/6)*(3/5-2/5). Stand=2/6-3/6+1/30=-2/15. A player hit wins only on the lone2, making21; other ranks bust. Marginal hit=(1-5)/6=-2/3, double=-4/3."
+      }
+    },
+    {
+      "id": "analytic-natural-prepeek-insurance",
+      "rules": {},
+      "state": {
+        "player": [
+          "A",
+          10
+        ],
+        "dealer": "A",
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "peek_resolved": false
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": 0.75
+        },
+        "provenance": "Pool {A,T}: holeT natural pushes player natural, holeA has no natural and pays3:2. Expected payout=(0+1.5)/2=.75. Prepeek insurance has p=.5 and net1.5*.5-.5=.25.",
+        "insurance": {
+          "available": true,
+          "probability_blackjack": 0.5,
+          "ev": 0.25,
+          "take": true
+        }
+      }
+    },
+    {
+      "id": "analytic-natural-negativepeek",
+      "rules": {},
+      "state": {
+        "player": [
+          "A",
+          10
+        ],
+        "dealer": "A",
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "peek_resolved": true
+      },
+      "reference": {
+        "engine": "manual-analytic",
+        "action_evs": {
+          "stand": 1.5
+        },
+        "provenance": "Negative peek excludes holeT, so player natural pays3:2 with certainty. Insurance is unavailable after peek.",
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": -0.5,
+          "take": false
+        }
+      }
+    }
+  ],
+  "derivation_source": "validation/reference_engines/extend_analytic_golden.py (no solver imports)",
+  "supplemental_field_contract": "reference.insurance is independently checked by tests/test_validation.py::test_analytic_insurance_goldens; run_golden compares action EVs.",
+  "independent_joint_split_assignments": [
+    "tests/test_solver.py::test_mixed_finite_shoe_split_matches_exhaustive_assignment",
+    "tests/test_solver.py::test_mixed_finite_shoe_split_aces_exhaustive_assignment"
+  ]
+}

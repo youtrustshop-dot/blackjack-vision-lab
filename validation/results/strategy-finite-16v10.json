@@ -1,0 +1,119 @@
+{
+  "method": "finite-shoe-initial-composition-aggregation",
+  "status": "ok",
+  "group": "hard",
+  "value": 16,
+  "dealer": "10",
+  "actions": {
+    "double": -1.0697353959231521,
+    "hit": -0.5348676979615761,
+    "stand": -0.539830678199632,
+    "surrender": -0.5
+  },
+  "ev": {
+    "double": -1.0697353959231521,
+    "hit": -0.5348676979615761,
+    "stand": -0.539830678199632,
+    "surrender": -0.5
+  },
+  "action": "surrender",
+  "best_action": "surrender",
+  "best_evaluated_action": "surrender",
+  "exact": true,
+  "finite_shoe_exact": true,
+  "total_only_basic_strategy_exact": false,
+  "action_details": {
+    "double": {
+      "exact": true,
+      "initial_combinations": 3
+    },
+    "hit": {
+      "exact": true,
+      "initial_combinations": 3
+    },
+    "stand": {
+      "exact": true,
+      "initial_combinations": 3
+    },
+    "surrender": {
+      "exact": true,
+      "initial_combinations": 3
+    }
+  },
+  "conditioning": "negative-peek",
+  "continuation_policy": "full observed composition optimal; not constrained to total-only choices",
+  "aggregation": "finite initial rank pairs conditioned on dealer upcard and negative peek when selected",
+  "initial_combinations": [
+    {
+      "player": [
+        6,
+        10
+      ],
+      "probability": 0.7279693486590039,
+      "status": "ok",
+      "exact": true,
+      "actions": {
+        "stand": -0.5409544390190253,
+        "hit": -0.5346755624525633,
+        "double": -1.0693511249051266,
+        "surrender": -0.5
+      },
+      "error": null
+    },
+    {
+      "player": [
+        7,
+        9
+      ],
+      "probability": 0.1839080459770115,
+      "status": "ok",
+      "exact": true,
+      "actions": {
+        "stand": -0.536809119042101,
+        "hit": -0.5353918420743352,
+        "double": -1.0707836841486704,
+        "surrender": -0.5
+      },
+      "error": null
+    },
+    {
+      "player": [
+        8,
+        8
+      ],
+      "probability": 0.08812260536398467,
+      "status": "ok",
+      "exact": true,
+      "actions": {
+        "stand": -0.536853299237752,
+        "hit": -0.5353610383659223,
+        "double": -1.0707220767318446,
+        "surrender": -0.5
+      },
+      "error": null
+    }
+  ],
+  "nodes": 12135,
+  "latency_ms": 54.65359999652719,
+  "budget": {
+    "timeout_ms": 5000,
+    "max_nodes": 250000
+  },
+  "ev_units": "net profit per original bet",
+  "rules": {
+    "decks": 6,
+    "hit_soft17": false,
+    "blackjack_payout": 1.5,
+    "dealer_peek": true,
+    "enhc": false,
+    "enhc_loss": "all",
+    "double_rule": "any",
+    "double_after_split": true,
+    "resplit": true,
+    "max_split_hands": 4,
+    "resplit_aces": false,
+    "hit_split_aces": false,
+    "surrender": "late",
+    "penetration": 0.75
+  }
+}

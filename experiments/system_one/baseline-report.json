@@ -1,0 +1,1590 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "model": "deterministic_phase_baseline_v1",
+  "split": "test",
+  "cases": 72,
+  "completed": 72,
+  "failure_rate": 0.0,
+  "warmup": 1,
+  "latency_ms_p50": 0.01384999995934777,
+  "latency_ms_p95": 0.02103999686369207,
+  "metrics": {
+    "samples": 72,
+    "accuracy": 1.0,
+    "brier_score": 0.0,
+    "brier_definition": "mean sum across six classes; range 0..2",
+    "ece": 0.0,
+    "ece_bins": 10,
+    "nll": -0.0,
+    "confusion": {
+      "DEALING": {
+        "DEALING": 12,
+        "PLAYER_TURN": 0,
+        "DEALER_TURN": 0,
+        "ROUND_END": 0,
+        "SHUFFLING": 0,
+        "UNCERTAIN": 0
+      },
+      "PLAYER_TURN": {
+        "DEALING": 0,
+        "PLAYER_TURN": 12,
+        "DEALER_TURN": 0,
+        "ROUND_END": 0,
+        "SHUFFLING": 0,
+        "UNCERTAIN": 0
+      },
+      "DEALER_TURN": {
+        "DEALING": 0,
+        "PLAYER_TURN": 0,
+        "DEALER_TURN": 12,
+        "ROUND_END": 0,
+        "SHUFFLING": 0,
+        "UNCERTAIN": 0
+      },
+      "ROUND_END": {
+        "DEALING": 0,
+        "PLAYER_TURN": 0,
+        "DEALER_TURN": 0,
+        "ROUND_END": 12,
+        "SHUFFLING": 0,
+        "UNCERTAIN": 0
+      },
+      "SHUFFLING": {
+        "DEALING": 0,
+        "PLAYER_TURN": 0,
+        "DEALER_TURN": 0,
+        "ROUND_END": 0,
+        "SHUFFLING": 12,
+        "UNCERTAIN": 0
+      },
+      "UNCERTAIN": {
+        "DEALING": 0,
+        "PLAYER_TURN": 0,
+        "DEALER_TURN": 0,
+        "ROUND_END": 0,
+        "SHUFFLING": 0,
+        "UNCERTAIN": 12
+      }
+    },
+    "probability_calibration": "empirical result on this split only; no prior domain guarantee"
+  },
+  "failures": [],
+  "case_results": [
+    {
+      "case_id": "phase-session-0016-0-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.02390000008745119,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-0-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.021699997887481004,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-0-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013500000932253897,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-0-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.015400000847876072,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-0-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.016199999663513154,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-0-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.015400000847876072,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-1-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.020499996026046574,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-1-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013700002455152571,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-1-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.030499999411404133,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-1-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01930000144056976,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-1-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01670000347075984,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-1-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.014000004739500582,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-2-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.014500001270789653,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-2-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.014400000509340316,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-2-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013100005162414163,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-2-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01410000550094992,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-2-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013500000932253897,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0016-2-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.012399999832268804,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-0-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.012899996363557875,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-0-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.014399993233382702,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-0-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.015199999324977398,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-0-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01219999830937013,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-0-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01340000017080456,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-0-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013999997463542968,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-1-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.014299999747890979,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-1-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.015500001609325409,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-1-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013799995940644294,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-1-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01309999788645655,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-1-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01309999788645655,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-1-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013999997463542968,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-2-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.011699994502123445,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-2-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013799995940644294,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-2-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013700002455152571,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-2-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013800003216601908,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-2-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013199998647905886,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0017-2-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.012599994079209864,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-0-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013800003216601908,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-0-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.012799995602108538,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-0-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01479999627918005,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-0-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01219999830937013,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-0-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01309999788645655,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-0-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01750000228639692,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-1-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01460000203223899,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-1-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013899996702093631,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-1-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.012799995602108538,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-1-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.021899999410379678,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-1-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.014700002793688327,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-1-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01359999441774562,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-2-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.012099997547920793,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-2-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01290000363951549,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-2-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01410000550094992,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-2-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013999997463542968,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-2-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.012700002116616815,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0018-2-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01460000203223899,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-0-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01410000550094992,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-0-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013000004400964826,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-0-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013899996702093631,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-0-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.012099997547920793,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-0-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.014099998224992305,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-0-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.014299999747890979,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-1-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013700002455152571,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-1-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013700002455152571,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-1-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013899996702093631,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-1-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013800003216601908,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-1-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013199998647905886,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-1-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01290000363951549,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-2-PLAYER_TURN",
+      "label": "PLAYER_TURN",
+      "prediction": {
+        "phase": "PLAYER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 1.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.014099998224992305,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-2-DEALING",
+      "label": "DEALING",
+      "prediction": {
+        "phase": "DEALING",
+        "probabilities": {
+          "DEALING": 1.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01290000363951549,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-2-UNCERTAIN",
+      "label": "UNCERTAIN",
+      "prediction": {
+        "phase": "UNCERTAIN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 1.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01189999602502212,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-2-DEALER_TURN",
+      "label": "DEALER_TURN",
+      "prediction": {
+        "phase": "DEALER_TURN",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 1.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.01460000203223899,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-2-ROUND_END",
+      "label": "ROUND_END",
+      "prediction": {
+        "phase": "ROUND_END",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 1.0,
+          "SHUFFLING": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.015400000847876072,
+      "correct": true
+    },
+    {
+      "case_id": "phase-session-0019-2-SHUFFLING",
+      "label": "SHUFFLING",
+      "prediction": {
+        "phase": "SHUFFLING",
+        "probabilities": {
+          "DEALING": 0.0,
+          "PLAYER_TURN": 0.0,
+          "DEALER_TURN": 0.0,
+          "ROUND_END": 0.0,
+          "SHUFFLING": 1.0,
+          "UNCERTAIN": 0.0
+        },
+        "model": "deterministic_phase_baseline_v1",
+        "reported_confidence": null,
+        "selected_probability": 1.0,
+        "probability_semantics": "deterministic_one_hot; empirical calibration not assumed"
+      },
+      "latency_ms": 0.013000004400964826,
+      "correct": true
+    }
+  ],
+  "accuracy_all_cases": 1.0,
+  "scope": "phase only; synthetic observed-feature fixtures; never blackjack strategy",
+  "cold_start_included": false
+}

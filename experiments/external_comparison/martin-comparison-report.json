@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "cases": 1,
+  "ground_truth_cards": 13,
+  "source_commit": "5145a1260a7a7750f8a5fd56d60702ea8e66c30d",
+  "source_sha256": "683f8de2808dd66dce450283b625fe25bc18dfd62d03fcb26fe84c11ba592f35",
+  "runner_sha256": "f82fd192731e3efa3dd902b528c4aff58b9478db3c05ae3746a63f9c17839d40",
+  "annotation_sha256": "8be6ab08351d71e04210d9f60e12978769e113f55bc53dd32b3fc6170f726473",
+  "models": [
+    {
+      "name": "bjlab_controlled_template_baseline",
+      "status": "completed",
+      "latency_ms": 5.624200006423052,
+      "metrics": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 13,
+        "precision": null,
+        "recall": 0.0,
+        "rank_correct": 0,
+        "suit_correct": 0,
+        "visible_rank_matches": 0,
+        "visible_suit_matches": 0,
+        "rank_accuracy": null,
+        "suit_accuracy": null,
+        "back_true_positives": 0,
+        "back_false_positives": 0,
+        "back_false_negatives": 0,
+        "back_precision": null,
+        "back_recall": null,
+        "matched_scores": [],
+        "rank_correct_all_ground_truth_fraction": 0.0
+      },
+      "predictions": [],
+      "probability_calibration": "not applied outside controlled renderer domain"
+    },
+    {
+      "name": "martin_original_opencv_rank_template",
+      "status": "completed",
+      "latency_ms": 29.62380000099074,
+      "metrics": {
+        "true_positives": 13,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rank_correct": 13,
+        "suit_correct": 0,
+        "visible_rank_matches": 13,
+        "visible_suit_matches": 0,
+        "rank_accuracy": 1.0,
+        "suit_accuracy": null,
+        "back_true_positives": 0,
+        "back_false_positives": 0,
+        "back_false_negatives": 0,
+        "back_precision": null,
+        "back_recall": null,
+        "matched_scores": [
+          {
+            "score": 1496,
+            "correct": true
+          },
+          {
+            "score": 953,
+            "correct": true
+          },
+          {
+            "score": 834,
+            "correct": true
+          },
+          {
+            "score": 619,
+            "correct": true
+          },
+          {
+            "score": 503,
+            "correct": true
+          },
+          {
+            "score": 958,
+            "correct": true
+          },
+          {
+            "score": 762,
+            "correct": true
+          },
+          {
+            "score": 625,
+            "correct": true
+          },
+          {
+            "score": 537,
+            "correct": true
+          },
+          {
+            "score": 436,
+            "correct": true
+          },
+          {
+            "score": 1021,
+            "correct": true
+          },
+          {
+            "score": 753,
+            "correct": true
+          },
+          {
+            "score": 793,
+            "correct": true
+          }
+        ],
+        "rank_correct_all_ground_truth_fraction": 1.0
+      },
+      "predictions": [
+        {
+          "rank": "J",
+          "suit": null,
+          "bbox": [
+            404,
+            527,
+            125,
+            134
+          ],
+          "face_down": false,
+          "score": 625,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "Q",
+          "suit": null,
+          "bbox": [
+            556,
+            523,
+            112,
+            131
+          ],
+          "face_down": false,
+          "score": 1496,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "K",
+          "suit": null,
+          "bbox": [
+            709,
+            529,
+            112,
+            128
+          ],
+          "face_down": false,
+          "score": 537,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "6",
+          "suit": null,
+          "bbox": [
+            310,
+            377,
+            118,
+            108
+          ],
+          "face_down": false,
+          "score": 762,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "5",
+          "suit": null,
+          "bbox": [
+            824,
+            249,
+            105,
+            91
+          ],
+          "face_down": false,
+          "score": 1021,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "7",
+          "suit": null,
+          "bbox": [
+            461,
+            378,
+            104,
+            106
+          ],
+          "face_down": false,
+          "score": 503,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "9",
+          "suit": null,
+          "bbox": [
+            723,
+            370,
+            107,
+            108
+          ],
+          "face_down": false,
+          "score": 753,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "10",
+          "suit": null,
+          "bbox": [
+            849,
+            371,
+            119,
+            108
+          ],
+          "face_down": false,
+          "score": 793,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "8",
+          "suit": null,
+          "bbox": [
+            598,
+            374,
+            97,
+            105
+          ],
+          "face_down": false,
+          "score": 436,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "4",
+          "suit": null,
+          "bbox": [
+            709,
+            243,
+            93,
+            87
+          ],
+          "face_down": false,
+          "score": 619,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "A",
+          "suit": null,
+          "bbox": [
+            353,
+            259,
+            98,
+            87
+          ],
+          "face_down": false,
+          "score": 953,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "2",
+          "suit": null,
+          "bbox": [
+            477,
+            249,
+            94,
+            88
+          ],
+          "face_down": false,
+          "score": 958,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        },
+        {
+          "rank": "3",
+          "suit": null,
+          "bbox": [
+            598,
+            244,
+            87,
+            86
+          ],
+          "face_down": false,
+          "score": 834,
+          "score_type": "unnormalized_template_pixel_difference",
+          "probability_correct": null
+        }
+      ],
+      "suit_support": false,
+      "compatibility_changes": [
+        "OpenCV4 findContours return tuple adapted to OpenCV3 signature",
+        "imutils.rotate_bound(image,90) replaced with lossless cv2 clockwise 90 degree rotate",
+        "no GUI/test entrypoints or external package execution"
+      ],
+      "algorithm_parameters_changed": false
+    }
+  ],
+  "limitations": "single fixture, manual coarse boxes; source templates may share cards/photographic conditions with fixture; not an independent held-out benchmark"
+}

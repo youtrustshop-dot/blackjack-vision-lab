@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "stage": "build-script-only cache integrity regression after final binary proofs",
+  "current_cached_backend_sha256": "e65d1ba327983bb47eae45642b98b9a76ed8531ca789eab6b6785e954226b330",
+  "current_backend_accepted": {
+    "status": "pass",
+    "recorded_source_hashes_checked": 11,
+    "bundled_data_files_checked": 933,
+    "bundled_python_modules_checked": 18,
+    "launcher_code_checked": true
+  },
+  "actual_archived_stale_backend_sha256": "15acb0a54f7c768db95b6b9d73bf5a4ce0768f261037575858ec8c75f716a8fd",
+  "actual_archived_stale_backend_rejected": true,
+  "stale_guard_exit_code": 1,
+  "stale_rejection_reason": "missing or different-version embedded build provenance",
+  "recorded_hash_mismatch_rejected": true,
+  "cache_restored": true,
+  "release_binary_hashes_unchanged": {
+    "bjlab-backend.exe": "e65d1ba327983bb47eae45642b98b9a76ed8531ca789eab6b6785e954226b330",
+    "Blackjack Vision Lab.exe": "c031b5ea6b0397a3c11b124e96ba31393b550f7d1122023848922dde1469687c",
+    "Blackjack Vision Lab_0.1.0_x64-setup.exe": "5a9f9ef338d541c0ac8a918e7591214c0aec3b1b9566276fe7edffc015a004e1",
+    "WebView2Loader.dll": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5"
+  },
+  "builder_sha256": "a9fac1b1b364aee2b766a2875e6f3b5d0d08343e09776056f67b569c8ba16315",
+  "verification_helper_sha256": "91d5cd29bfa377354312391aab19ea1ab9f1c5b2974eb67a13adfb648117468f",
+  "elapsed_ms": 15273.183500001323,
+  "scope": "Recorded source SHA-256/version and actual bundled data plus compiled bjlab/launcher code. This is not a claim of an unrecorded whole-source digest or verification of every third-party dependency build."
+}

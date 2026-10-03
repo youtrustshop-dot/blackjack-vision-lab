@@ -1,0 +1,24 @@
+{
+  "slope": 1223.0058720837962,
+  "intercept": -33.47294080304722,
+  "residual_radius": 264.0,
+  "training_height_range": [
+    0.027777777777777776,
+    0.18472222222222223
+  ],
+  "geometry": {
+    "front_strip": [
+      0.505,
+      0.525
+    ],
+    "vertical_roi": [
+      0.34,
+      0.755
+    ],
+    "base_min_y": 0.65,
+    "blue_minus_red": 10.0,
+    "row_support": 0.25,
+    "black_level": 50.0,
+    "resize_width": 960
+  }
+}

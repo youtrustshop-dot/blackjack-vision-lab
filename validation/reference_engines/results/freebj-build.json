@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "built",
+  "repository": "kevin-lesenechal/freebj",
+  "revision": "91e9294d51e87ed36d124cfe058571dd9c05a342",
+  "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\freebj-reference",
+  "revision_verified": true,
+  "tracked_tree_clean": true,
+  "license": "MIT",
+  "binary_path": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\freebj-target\\release\\freebj.exe",
+  "binary_sha256": "1b451a2656aee1da6fb755efea254595b6c933e38882a7c0abcd697bce640d2f",
+  "command": [
+    "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\desktop-toolchain\\cargo\\bin\\cargo.EXE",
+    "build",
+    "--release",
+    "--locked",
+    "--target-dir",
+    "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\freebj-target"
+  ],
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "build_log": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\outputs\\blackjack-vision-lab\\validation\\reference_engines\\results\\freebj-build.build.log",
+  "rust_flags": [
+    "-Clink-self-contained=yes",
+    "-Cdlltool=C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\desktop-toolchain\\w64devkit\\bin\\dlltool.exe"
+  ],
+  "target_linker": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\desktop-toolchain\\rustup\\toolchains\\stable-x86_64-pc-windows-gnu\\lib\\rustlib\\x86_64-pc-windows-gnu\\bin\\self-contained\\x86_64-w64-mingw32-gcc.exe",
+  "build_log_sha256": "722df880a1d7482641b4ec7489124cebd8be776926883248755788406839f640",
+  "executed_at": "2026-10-03T00:11:23.990851+00:00"
+}

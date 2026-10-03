@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "progress_report": "docs/STATUS.md",
+  "verification": {
+    "completed_test_run": "246 tests + 10 subtests passed in 28.40s",
+    "frontend_build": "passed",
+    "browser_primary_flows": 7,
+    "browser_advanced_flows": 5,
+    "latest_changes_require_retest": false,
+    "external_comparisons_completed": "hhoppe2000states +279precision diagnoses; BJSS6states/24EV; FreeBJ/mhluska120000rounds per engine",
+    "native_desktop_build_verified": true,
+    "frozen_backend_verified": true,
+    "release_verified": true
+  },
+  "objective": "Complete Blackjack Vision Lab integrating both source specifications",
+  "requirements": [
+    {
+      "id": "rules",
+      "milestone": "M01",
+      "description": "All supported rule configurations and validation",
+      "evidence": "tests/test_engine.py; tests/test_session_properties.py",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "engine",
+      "milestone": "M02",
+      "description": "Deterministic engine, all player actions, insurance, settlement",
+      "evidence": "tests/test_engine.py; tests/test_simulator.py; 384 generated hands",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "solver",
+      "milestone": "M03",
+      "description": "Finite-shoe EV and hidden-information conditioning",
+      "evidence": "tests/test_solver.py; validation/differential/results/hhoppe-2000; validation/reference_engines/results/hhoppe-resolution.json; prepeek-core-audit.json",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "basic_generated",
+      "milestone": "M03",
+      "description": "Generated rule-dependent basic strategy and caching",
+      "evidence": "tests/test_strategy.py; validation/results/strategy-*.json; replacement DP and separate finite composition-continuation cells explicitly labelled",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "joint_split",
+      "milestone": "M04",
+      "description": "Exact joint split/resplit and correct future information",
+      "evidence": "tests/test_solver.py: independent mixed-card permutations and analytic resplit/ace/OBO/21 cases; precision-budget gates",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "hilo",
+      "milestone": "M05",
+      "description": "RC,TC,rounding,history and deviations",
+      "evidence": "tests/test_counting.py; docs/BROWSER_ADVANCED_VERIFICATION.json",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "all_counting",
+      "milestone": "M05",
+      "description": "KO,HiOptI/II,OmegaII,Zen/custom",
+      "evidence": "tests/test_counting.py; CountingPanel browser and custom tags",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "shoe",
+      "milestone": "M06",
+      "description": "Observed/unknown inventory and shuffle detection",
+      "evidence": "tests/test_events.py; tests/test_simulator.py; unknown standalone imports gated",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "deck_posterior",
+      "milestone": "M06",
+      "description": "Known/inferred deck count with defensible posterior",
+      "evidence": "tests/test_vision.py; tests/test_api.py; DeckEstimate browser; experiments/shoe_inference/benchmark-report.json (limited accuracy preserved)",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "events",
+      "milestone": "M07",
+      "description": "Immutable events and correction/replay",
+      "evidence": "tests/test_events.py; video frame inclusive prefix and hash-chain tests",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "replay_ui",
+      "milestone": "M07",
+      "description": "Frame/event timeline and import/export",
+      "evidence": "docs/BROWSER_VERIFICATION.json; docs/BROWSER_ADVANCED_VERIFICATION.json; screenshots/video-replay.png",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "simulator_visual",
+      "milestone": "M08",
+      "description": "Themes,design,animation,overlap,blur,scale,size",
+      "evidence": "tests/test_datasets.py:104 rank/suit-design renders; responsive browser; configurable animation intervals",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "capture",
+      "milestone": "M09",
+      "description": "Screenshot/video/localwindow/native adapters",
+      "evidence": "tests/test_vision.py; tests/test_api.py: PNG/JPEG/local MJPG; LocalWindowCapture; release/installer-native-smoke.json; release/owned-window-capture.png",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "calibration",
+      "milestone": "M09",
+      "description": "ROI and perspective transform",
+      "evidence": "tests/test_calibration.py; four-corner browser flow",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "vision",
+      "milestone": "M10",
+      "description": "Ranks,suits,regions,buttons,ruleOCR,shuffle",
+      "evidence": "validation/results/vision; controlled-font contract; actual pixel metadata; external failures documented",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "onnx",
+      "milestone": "M10",
+      "description": "Optional detector/classifier comparison",
+      "evidence": "ONNXCardDetector contract exists; no trained weights supplied or benchmarked; no positive model result claimed.",
+      "status": "pending",
+      "verified_at": null,
+      "optional": true,
+      "current_acceptance": "Conditional/future research in source specifications; not required to launch or use the delivered controlled-renderer lab."
+    },
+    {
+      "id": "tracking",
+      "milestone": "M11",
+      "description": "No duplication across occlusion/reveal/split",
+      "evidence": "validation/results/vision/tracking-test.json:59/60 final groups, one provisional; identities/reveals tested",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "gate",
+      "milestone": "M12",
+      "description": "Calibrated confidence and integrity gate",
+      "evidence": "validation/results/vision/calibration.json; validation/results/perception-ablation; unknown deck gates; no unsafe certified sample",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "dashboard",
+      "milestone": "M13",
+      "description": "Live table,allEV,threepolicies,shoe,latency,FPS,drops",
+      "evidence": "docs/BROWSER_VERIFICATION.json; docs/BROWSER_ADVANCED_VERIFICATION.json; EV,3policies,shoe,bounding boxes,actual latency/throughput and unmeasured-stream fields",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "montecarlo",
+      "milestone": "M14",
+      "description": "Independent seeded validation and policy experiments",
+      "evidence": "tests/test_monte_carlo.py; validation/results/policies-large.json:34277 completed/time budget; paired cluster intervals",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "golden",
+      "milestone": "M15",
+      "description": "Versioned provenance golden corpus",
+      "evidence": "validation/golden/analytic.json; validation/reference_engines/golden_cases.json; prepeek-core-audit.json; hand-derived provenance and independent permutations",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "differential",
+      "milestone": "M15",
+      "description": "Automated reference comparisons with uncertainty",
+      "evidence": "validation/differential/results/hhoppe-2000; hhoppe-resolution.json:279 pruning discrepancies diagnosed at unchanged1e-7; no unexplained sampled disagreement",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "properties",
+      "milestone": "M15",
+      "description": "Property/unit/integration/regression tests and CI",
+      "evidence": "docs/TEST_RESULTS.xml; tests/test_session_properties.py; .github/workflows/verify.yml",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "reference_hhoppe",
+      "milestone": "M16",
+      "description": "Pinned hhoppe executed and limitations mapped",
+      "evidence": "hhoppe-corpus.json; hhoppe-2000; hhoppe-resolution.json; pinned approximate reference explicitly not exact",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "reference_freebj",
+      "milestone": "M16",
+      "description": "FreeBJ CLI statistics and conditional cases",
+      "evidence": "freebj-build.json; unconditional-stand.json:120000 rounds each engine; forced-card mismatch preserved and excluded",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "reference_mhluska",
+      "milestone": "M16",
+      "description": "mhluska validation and architecture",
+      "evidence": "mhluska-build.json; mhluska-stand.json:120000 rounds each engine; primary architecture inspection",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "reference_mgp",
+      "milestone": "M16",
+      "description": "MGP split/insurance golden",
+      "evidence": "validation/reference_engines/results/mgp-inspection.json; manual and permissive LICENSE.md inspected; legacy WinExe has no supported CLI; no MGP numerical output falsely claimed.",
+      "status": "partial",
+      "verified_at": null,
+      "execution_conditional": true,
+      "current_acceptance": "Reference investigation completed. Numerical black-box comparison is unsupported in the provided legacy runtime; native split/insurance goldens have independent analytic provenance."
+    },
+    {
+      "id": "reference_bjss",
+      "milestone": "M16",
+      "description": "AGPL external isolated comparisons",
+      "evidence": "bjss-expanded-corpus.json:6states/24EV at1e-9; pinned AGPL black-box outside runtime",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "reference_cardsharp",
+      "milestone": "M16",
+      "description": "Documented applicable architectural patterns",
+      "evidence": "cardsharp-inspection.json; source patterns and limitations inspected, no code incorporated",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "vision_references",
+      "milestone": "M17",
+      "description": "Roboflow/Martin vs baseline",
+      "evidence": "experiments/external_comparison/martin-comparison-report.json:ours0/13,reference13/13 on one project fixture; Roboflow unavailable retained",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "discard_tray",
+      "milestone": "M17",
+      "description": "Licensed discardtray benchmark MAE/RMSE",
+      "evidence": "experiments/shoe_inference/benchmark-report.json; experiments/external_discard_tray/benchmark-report.json:41 licensed photos, failed model and safe abstentions preserved",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "laya",
+      "milestone": "M18",
+      "description": "Local optional Laya experimental classification",
+      "evidence": "experiments/system_one/baseline-report.json; adapter contract tests; actual models deferred by user: poi mettiamo laya",
+      "status": "partial",
+      "verified_at": null,
+      "optional": true,
+      "deferred_by_user": true,
+      "current_acceptance": "Adapter and contract tests available; real model benchmark outside current delivery."
+    },
+    {
+      "id": "jev",
+      "milestone": "M18",
+      "description": "Optional Jev API experimental classification",
+      "evidence": "experiments/system_one/baseline-report.json; adapter contract tests; actual models deferred by user: poi mettiamo laya",
+      "status": "partial",
+      "verified_at": null,
+      "optional": true,
+      "deferred_by_user": true,
+      "current_acceptance": "Adapter and contract tests available; real model benchmark outside current delivery."
+    },
+    {
+      "id": "rlcard",
+      "milestone": "M18",
+      "description": "Optional RL comparison retained in roadmap",
+      "evidence": "experiments/rlcard/experiment.json; future simplified-RL comparison, outside native decision engine.",
+      "status": "pending",
+      "verified_at": null,
+      "optional": true,
+      "current_acceptance": "Conditional/future research in source specifications; not required to launch or use the delivered controlled-renderer lab."
+    },
+    {
+      "id": "desktop",
+      "milestone": "M19",
+      "description": "Tauri native build and installation smoke",
+      "evidence": "release/manifest.json; release/backend-smoke.json; release/native-smoke.json; release/installer-smoke.json; release/installer-native-smoke.json; docs/SOURCE_PACKAGE_MANIFEST.json",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "performance",
+      "milestone": "M20",
+      "description": "Measured target FPS/p50/p95 latency,hardware",
+      "evidence": "docs/HARDWARE.json; validation/results/vision; perception-ablation; solver-ui-budget.json; actual full-pixel OCR latency separate from detection throughput",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    },
+    {
+      "id": "delivery",
+      "milestone": "M20",
+      "description": "Installable package and exhaustive completion audit",
+      "evidence": "release/manifest.json; release/backend-smoke.json; release/native-smoke.json; release/installer-smoke.json; release/installer-native-smoke.json; docs/SOURCE_PACKAGE_MANIFEST.json",
+      "status": "verified",
+      "verified_at": "2026-10-03T01:14:10.000983+00:00"
+    }
+  ],
+  "model_rollout": {
+    "current_scope": "deterministic engine and perception baseline",
+    "laya": "prepared, actual integration/benchmark deferred by user: poi mettiamo laya",
+    "jev": "inactive; not requesting credentials"
+  },
+  "acceptance_scope": {
+    "required_system": "Controlled simulator, recorded single-round lab-artwork clips, screenshots, deterministic math and research validation layer.",
+    "conditional_research": "Unavailable vendor models and unsupported legacy reference execution remain recorded; they are not fabricated or core dependencies.",
+    "laya_user_deferral": "poi mettiamo laya",
+    "limitations": "Solver budgets can withhold incomplete optima; external camera artwork is not validated; deck/tray inference failed cases and state-confirmation delays remain visible."
+  }
+}

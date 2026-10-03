@@ -1,0 +1,175 @@
+{
+  "source_commit": "5145a1260a7a7750f8a5fd56d60702ea8e66c30d",
+  "source_photo_sha256": "683f8de2808dd66dce450283b625fe25bc18dfd62d03fcb26fe84c11ba592f35",
+  "label_source": "README portrait order plus manual axis-aligned boxes before running predictions",
+  "iou_threshold": 0.5,
+  "table_corners": [
+    [
+      232,
+      210
+    ],
+    [
+      1028,
+      199
+    ],
+    [
+      1192,
+      776
+    ],
+    [
+      65,
+      764
+    ]
+  ],
+  "canonical_size": [
+    960,
+    600
+  ],
+  "labels": [
+    {
+      "rank": "A",
+      "suit": "C",
+      "bbox": [
+        354,
+        260,
+        97,
+        87
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "2",
+      "suit": "C",
+      "bbox": [
+        478,
+        251,
+        92,
+        85
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "3",
+      "suit": "C",
+      "bbox": [
+        600,
+        244,
+        84,
+        86
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "4",
+      "suit": "C",
+      "bbox": [
+        712,
+        244,
+        90,
+        86
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "5",
+      "suit": "C",
+      "bbox": [
+        830,
+        250,
+        94,
+        89
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "6",
+      "suit": "C",
+      "bbox": [
+        312,
+        380,
+        115,
+        104
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "7",
+      "suit": "C",
+      "bbox": [
+        462,
+        380,
+        102,
+        103
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "8",
+      "suit": "C",
+      "bbox": [
+        600,
+        377,
+        92,
+        103
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "9",
+      "suit": "C",
+      "bbox": [
+        726,
+        372,
+        97,
+        104
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "10",
+      "suit": "C",
+      "bbox": [
+        854,
+        372,
+        90,
+        104
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "J",
+      "suit": "C",
+      "bbox": [
+        407,
+        530,
+        122,
+        128
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "Q",
+      "suit": "C",
+      "bbox": [
+        556,
+        525,
+        111,
+        129
+      ],
+      "face_down": false
+    },
+    {
+      "rank": "K",
+      "suit": "C",
+      "bbox": [
+        714,
+        530,
+        105,
+        128
+      ],
+      "face_down": false
+    }
+  ],
+  "excluded_duplicates": "source README states image1/2 and image3/4 are duplicates; only club1 evaluated",
+  "limitations": "single fixture, manual coarse boxes; source templates may share cards/photographic conditions with fixture; not an independent held-out benchmark"
+}

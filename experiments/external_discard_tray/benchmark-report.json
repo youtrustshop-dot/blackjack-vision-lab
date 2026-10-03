@@ -1,0 +1,454 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "validation_status": "experimental_failures_preserved",
+  "deployment_ready": false,
+  "source_commit": "3d7ab1bfd0b7ea0235bea085488427fcf7520e69",
+  "source_manifest_sha256": "54762a8a25d482d3531821fa2dc93bbc6ec54c97e4ece09c07f5ec5dc82982c9",
+  "runner_sha256": "a67de7ad434b13a80da71f6092fdae13d97516a6af32e51afeddf659a60e92af",
+  "protocol_sha256": "872230d3837133a264856e7526c13d15009e1be98999d91d96748e56985b694d",
+  "frozen_model_sha256": "231e095c5c5e69d9fae4fb9b2940fbca685558d334550e571577d3725d56912c",
+  "training_rows": 17,
+  "training_supported_nonempty_rows": 12,
+  "calibration_rows": 8,
+  "calibration_supported_rows": 4,
+  "fit_measurements": {
+    "train": [
+      {
+        "height_fraction": 0.0,
+        "truth_count": 0
+      },
+      {
+        "height_fraction": 0.027777777777777776,
+        "truth_count": 1
+      },
+      {
+        "height_fraction": 0.0,
+        "truth_count": 16
+      },
+      {
+        "height_fraction": 0.05277777777777778,
+        "truth_count": 32
+      },
+      {
+        "height_fraction": 0.06805555555555555,
+        "truth_count": 48
+      },
+      {
+        "height_fraction": 0.07083333333333333,
+        "truth_count": 52
+      },
+      {
+        "height_fraction": 0.07916666666666666,
+        "truth_count": 64
+      },
+      {
+        "height_fraction": 0.09305555555555556,
+        "truth_count": 80
+      },
+      {
+        "height_fraction": 0.10555555555555556,
+        "truth_count": 96
+      },
+      {
+        "height_fraction": 0.11944444444444445,
+        "truth_count": 112
+      },
+      {
+        "height_fraction": 0.13055555555555556,
+        "truth_count": 128
+      },
+      {
+        "height_fraction": 0.14444444444444443,
+        "truth_count": 144
+      },
+      {
+        "height_fraction": 0.15555555555555556,
+        "truth_count": 156
+      },
+      {
+        "height_fraction": 0.0,
+        "truth_count": 160
+      },
+      {
+        "height_fraction": 0.0,
+        "truth_count": 176
+      },
+      {
+        "height_fraction": 0.18472222222222223,
+        "truth_count": 192
+      },
+      {
+        "height_fraction": 0.0,
+        "truth_count": 208
+      }
+    ],
+    "calibration": [
+      {
+        "height_fraction": 0.20833333333333334,
+        "truth_count": 216
+      },
+      {
+        "height_fraction": 0.2111111111111111,
+        "truth_count": 224
+      },
+      {
+        "height_fraction": 0.22083333333333333,
+        "truth_count": 232
+      },
+      {
+        "height_fraction": 0.0,
+        "truth_count": 240
+      },
+      {
+        "height_fraction": 0.0,
+        "truth_count": 248
+      },
+      {
+        "height_fraction": 0.0,
+        "truth_count": 256
+      },
+      {
+        "height_fraction": 0.0,
+        "truth_count": 264
+      },
+      {
+        "height_fraction": 0.25555555555555554,
+        "truth_count": 272
+      }
+    ]
+  },
+  "test": {
+    "cases": 9,
+    "measured_cases": 0,
+    "failed_cases": 9,
+    "mae_cards": null,
+    "mae_decks": null,
+    "rmse_cards": null,
+    "rmse_decks": null,
+    "signed_bias_cards": null,
+    "p95_absolute_error_cards": null,
+    "max_absolute_error_cards": null,
+    "band_cases": 0,
+    "empirical_band_coverage": null,
+    "extrapolation_cases": 0,
+    "latency_p50_ms": 331.617499999993,
+    "latency_p95_ms": 350.60362000076566
+  },
+  "overflow": {
+    "cases": 7,
+    "measured_cases": 0,
+    "failed_cases": 7,
+    "mae_cards": null,
+    "mae_decks": null,
+    "rmse_cards": null,
+    "rmse_decks": null,
+    "signed_bias_cards": null,
+    "p95_absolute_error_cards": null,
+    "max_absolute_error_cards": null,
+    "band_cases": 0,
+    "empirical_band_coverage": null,
+    "extrapolation_cases": 0,
+    "latency_p50_ms": 320.7897000029334,
+    "latency_p95_ms": 333.0625299982785
+  },
+  "rows": [
+    {
+      "split": "test",
+      "truth_count": 280,
+      "source_sha256": "d7932445e4d4811f56b16412c5a32c825aa044e9a165f44f3ab9a2e7c4f59ba3",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7291666666666666,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 323.346400000446
+    },
+    {
+      "split": "test",
+      "truth_count": 284,
+      "source_sha256": "e5bf42c51b74b9c0f79c9b31f597affb5a3f790e4117d5499dab17119b793367",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7305555555555555,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 335.644400001911
+    },
+    {
+      "split": "test",
+      "truth_count": 288,
+      "source_sha256": "ace030abb357edbb69bce942a88e0249417bf0ae32c650b742170cae08fa178c",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7305555555555555,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 360.172100001364
+    },
+    {
+      "split": "test",
+      "truth_count": 292,
+      "source_sha256": "a834aa6dc082fa794b3e5cd8b962d4e7181741f7506247fb0000a60834c123e9",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7319444444444444,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 328.8976999974693
+    },
+    {
+      "split": "test",
+      "truth_count": 296,
+      "source_sha256": "9d56f881d4b3046c4cc716715dd235fca0629af8922a5e275e73290b72db8795",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7305555555555555,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 317.0780000000377
+    },
+    {
+      "split": "test",
+      "truth_count": 300,
+      "source_sha256": "43078246baab53bbcf3addf1b1da188dfaa92a0432990aabfad4a25e9502a630",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7291666666666666,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 331.617499999993
+    },
+    {
+      "split": "test",
+      "truth_count": 304,
+      "source_sha256": "b3d6604cd44171517c4ffc486513618a9a6021fe3b779f5350af58a66c9c164f",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7319444444444444,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 331.3086999987718
+    },
+    {
+      "split": "test",
+      "truth_count": 308,
+      "source_sha256": "f6c4600288d6346fbb4a8920a08a10ff94c8956f922b8149a4e4e804022e433c",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7333333333333333,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 336.2508999998681
+    },
+    {
+      "split": "test",
+      "truth_count": 312,
+      "source_sha256": "1421536f9853da909dd74dc39c9f882cc3ba005da055aeca4d98e21aba0f2875",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7333333333333333,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 333.6658999978681
+    },
+    {
+      "split": "overflow",
+      "truth_count": 320,
+      "source_sha256": "fae4a020dadb85e83817d9320a6a98eea11a88bd8763cbf3eb7a05ac2cefb201",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7319444444444444,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 320.7897000029334
+    },
+    {
+      "split": "overflow",
+      "truth_count": 328,
+      "source_sha256": "104d1549ded9ce9711036d47bec70b0001b8c213dc4e1987eef2fa840572b3f3",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7277777777777777,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 314.9883000005502
+    },
+    {
+      "split": "overflow",
+      "truth_count": 336,
+      "source_sha256": "e19f2f48e0f857b106a2056cdab6a82bc25bbbc9210a2ba446ee0f53f7998acd",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7291666666666666,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 321.50849999743514
+    },
+    {
+      "split": "overflow",
+      "truth_count": 344,
+      "source_sha256": "8c9b351985be71adef98102d0cbaf20291156fc1254810e7942cbd2c28d69a66",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7361111111111112,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 331.03189999383176
+    },
+    {
+      "split": "overflow",
+      "truth_count": 352,
+      "source_sha256": "b94cc8f14e2f5d9c42c088da6f871378df793f979f73c473c03e75d689c54451",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7375,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 333.9328000001842
+    },
+    {
+      "split": "overflow",
+      "truth_count": 360,
+      "source_sha256": "d6915b97753142158b60a494401deb3af1b75dc8ba1653ef8be96959727420b8",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7388888888888889,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 313.151199996355
+    },
+    {
+      "split": "overflow",
+      "truth_count": 364,
+      "source_sha256": "ecc762f1f4f4ceee9d3d1e1006ffc9e3e3ea621c4cd6a516849f5f25dc8e6e27",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7333333333333333,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "unavailable",
+        "reason": "empty_or_unsupported_back",
+        "estimated_cards": null,
+        "probability_correct": null
+      },
+      "latency_ms": 302.76920000324026
+    }
+  ],
+  "revision_note": "initial holdout revealed unsupported red backs: no pixel tuning; only removal of false zero predictions and exclusion of unsupported calibration residuals",
+  "limitations": [
+    "one recording, not independent sessions",
+    "counts from filenames/source README",
+    "chronological test extrapolates beyond training when measurable",
+    "empirical bands have no claimed probability coverage under temporal dependence",
+    "empty pixels cannot distinguish an unsupported back color",
+    "does not infer exact shoe composition"
+  ]
+}

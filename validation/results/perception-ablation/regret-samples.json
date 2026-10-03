@@ -1,0 +1,742 @@
+[
+  {
+    "session_id": "session-0018",
+    "theme": "burgundy",
+    "frame": 0,
+    "confirmation_frames": 1,
+    "native_context": {
+      "player": [
+        "A",
+        "K",
+        "4",
+        "3"
+      ],
+      "dealer": "4"
+    },
+    "native_analysis": {
+      "actions": {
+        "stand": 0.17228533031225127,
+        "hit": -0.6518486483891093
+      },
+      "best_action": "stand",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 2.561799999966752
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 12.00369999423856
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "stand",
+      "missing_actions": [],
+      "nodes": 1003,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.8241339787013605,
+      "latency_ms": 14.75639999989653,
+      "latency": 14.75639999989653
+    },
+    "vision_context": {
+      "player": [
+        "A",
+        "K",
+        "4",
+        "3"
+      ],
+      "dealer": "4"
+    },
+    "vision_analysis": {
+      "actions": {
+        "stand": 0.17228533031225127,
+        "hit": -0.6518486483891093
+      },
+      "best_action": "stand",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 2.5324000016553327
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 16.582399999606423
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "stand",
+      "missing_actions": [],
+      "nodes": 1003,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.8241339787013605,
+      "latency_ms": 19.342300001881085,
+      "latency": 19.342300001881085
+    },
+    "status": "compared",
+    "ev_regret": 0.0,
+    "action_matches": true
+  },
+  {
+    "session_id": "session-0018",
+    "theme": "burgundy",
+    "frame": 0,
+    "confirmation_frames": 3,
+    "native_context": {
+      "player": [
+        "A",
+        "K",
+        "4",
+        "3"
+      ],
+      "dealer": "4"
+    },
+    "native_analysis": {
+      "actions": {
+        "stand": 0.17228533031225127,
+        "hit": -0.6518486483891093
+      },
+      "best_action": "stand",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 2.561799999966752
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 12.00369999423856
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "stand",
+      "missing_actions": [],
+      "nodes": 1003,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.8241339787013605,
+      "latency_ms": 14.75639999989653,
+      "latency": 14.75639999989653
+    },
+    "vision_context": null,
+    "vision_analysis": null,
+    "status": "withheld",
+    "ev_regret": null,
+    "action_matches": null
+  },
+  {
+    "session_id": "session-0028",
+    "theme": "burgundy",
+    "frame": 0,
+    "confirmation_frames": 1,
+    "native_context": {
+      "player": [
+        "2",
+        "5",
+        "5",
+        "3"
+      ],
+      "dealer": "9"
+    },
+    "native_analysis": {
+      "actions": {
+        "stand": -0.5421598841128561,
+        "hit": -0.5228984676791192
+      },
+      "best_action": "hit",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.6706999993184581
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 15.083599995705299
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "hit",
+      "missing_actions": [],
+      "nodes": 971,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.01926141643373691,
+      "latency_ms": 15.944299993861932,
+      "latency": 15.944299993861932
+    },
+    "vision_context": {
+      "player": [
+        "2",
+        "5",
+        "5",
+        "3"
+      ],
+      "dealer": "9"
+    },
+    "vision_analysis": {
+      "actions": {
+        "stand": -0.5421598841128561,
+        "hit": -0.5228984676791192
+      },
+      "best_action": "hit",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.6635999961872585
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 14.721100000315346
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "hit",
+      "missing_actions": [],
+      "nodes": 971,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.01926141643373691,
+      "latency_ms": 15.568800001346972,
+      "latency": 15.568800001346972
+    },
+    "status": "compared",
+    "ev_regret": 0.0,
+    "action_matches": true
+  },
+  {
+    "session_id": "session-0028",
+    "theme": "burgundy",
+    "frame": 0,
+    "confirmation_frames": 3,
+    "native_context": {
+      "player": [
+        "2",
+        "5",
+        "5",
+        "3"
+      ],
+      "dealer": "9"
+    },
+    "native_analysis": {
+      "actions": {
+        "stand": -0.5421598841128561,
+        "hit": -0.5228984676791192
+      },
+      "best_action": "hit",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.6706999993184581
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 15.083599995705299
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "hit",
+      "missing_actions": [],
+      "nodes": 971,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.01926141643373691,
+      "latency_ms": 15.944299993861932,
+      "latency": 15.944299993861932
+    },
+    "vision_context": null,
+    "vision_analysis": null,
+    "status": "withheld",
+    "ev_regret": null,
+    "action_matches": null
+  },
+  {
+    "session_id": "session-0031",
+    "theme": "burgundy",
+    "frame": 0,
+    "confirmation_frames": 1,
+    "native_context": {
+      "player": [
+        "3",
+        "6"
+      ],
+      "dealer": "8"
+    },
+    "native_analysis": {
+      "actions": {
+        "stand": -0.5236985413609894,
+        "hit": 0.11752214131918637,
+        "double": 0.014198621611645512,
+        "surrender": -0.4999999999999999
+      },
+      "best_action": "hit",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "surrender": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.02010000025620684
+        },
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.9324999991804361
+        },
+        "double": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 9.076200003619306
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 133.49900000321213
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "hit",
+      "missing_actions": [],
+      "nodes": 8601,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.10332351970754086,
+      "latency_ms": 144.65460000064922,
+      "latency": 144.65460000064922
+    },
+    "vision_context": {
+      "player": [
+        "3",
+        "6"
+      ],
+      "dealer": "8"
+    },
+    "vision_analysis": {
+      "actions": {
+        "stand": -0.5236985413609894,
+        "hit": 0.11752214131918637,
+        "double": 0.014198621611645512,
+        "surrender": -0.4999999999999999
+      },
+      "best_action": "hit",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "surrender": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.01630000042496249
+        },
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.9181999994325452
+        },
+        "double": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 9.005799998703878
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 132.11589999991702
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "hit",
+      "missing_actions": [],
+      "nodes": 8601,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.10332351970754086,
+      "latency_ms": 143.48320000135573,
+      "latency": 143.48320000135573
+    },
+    "status": "compared",
+    "ev_regret": 0.0,
+    "action_matches": true
+  },
+  {
+    "session_id": "session-0031",
+    "theme": "burgundy",
+    "frame": 0,
+    "confirmation_frames": 3,
+    "native_context": {
+      "player": [
+        "3",
+        "6"
+      ],
+      "dealer": "8"
+    },
+    "native_analysis": {
+      "actions": {
+        "stand": -0.5236985413609894,
+        "hit": 0.11752214131918637,
+        "double": 0.014198621611645512,
+        "surrender": -0.4999999999999999
+      },
+      "best_action": "hit",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "surrender": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.02010000025620684
+        },
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.9324999991804361
+        },
+        "double": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 9.076200003619306
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 133.49900000321213
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "hit",
+      "missing_actions": [],
+      "nodes": 8601,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.10332351970754086,
+      "latency_ms": 144.65460000064922,
+      "latency": 144.65460000064922
+    },
+    "vision_context": null,
+    "vision_analysis": null,
+    "status": "withheld",
+    "ev_regret": null,
+    "action_matches": null
+  },
+  {
+    "session_id": "session-0086",
+    "theme": "burgundy",
+    "frame": 0,
+    "confirmation_frames": 1,
+    "native_context": {
+      "player": [
+        "8",
+        "2"
+      ],
+      "dealer": "7"
+    },
+    "native_analysis": {
+      "actions": {
+        "stand": -0.48763757038241407,
+        "hit": 0.26763903013096,
+        "double": 0.41663790118785954,
+        "surrender": -0.4999999999999999
+      },
+      "best_action": "double",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "surrender": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.01769999653333798
+        },
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 1.3389000014285557
+        },
+        "double": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 13.177500004530884
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 120.23730000510113
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "double",
+      "missing_actions": [],
+      "nodes": 7876,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.14899887105689952,
+      "latency_ms": 135.91659999656258,
+      "latency": 135.91659999656258
+    },
+    "vision_context": {
+      "player": [
+        "8",
+        "2"
+      ],
+      "dealer": "7"
+    },
+    "vision_analysis": {
+      "actions": {
+        "stand": -0.48763757038241407,
+        "hit": 0.26763903013096,
+        "double": 0.41663790118785954,
+        "surrender": -0.4999999999999999
+      },
+      "best_action": "double",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "surrender": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.015899997379165143
+        },
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 1.2343999987933785
+        },
+        "double": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 12.467299995478243
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 123.79930000315653
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "double",
+      "missing_actions": [],
+      "nodes": 7876,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.14899887105689952,
+      "latency_ms": 138.88930000393884,
+      "latency": 138.88930000393884
+    },
+    "status": "compared",
+    "ev_regret": 0.0,
+    "action_matches": true
+  },
+  {
+    "session_id": "session-0086",
+    "theme": "burgundy",
+    "frame": 0,
+    "confirmation_frames": 3,
+    "native_context": {
+      "player": [
+        "8",
+        "2"
+      ],
+      "dealer": "7"
+    },
+    "native_analysis": {
+      "actions": {
+        "stand": -0.48763757038241407,
+        "hit": 0.26763903013096,
+        "double": 0.41663790118785954,
+        "surrender": -0.4999999999999999
+      },
+      "best_action": "double",
+      "method": "finite-shoe-enumeration",
+      "exact": true,
+      "error": null,
+      "status": "ok",
+      "warnings": [],
+      "action_details": {
+        "surrender": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 0.01769999653333798
+        },
+        "stand": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 1.3389000014285557
+        },
+        "double": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 13.177500004530884
+        },
+        "hit": {
+          "exact": true,
+          "method": "finite-shoe-enumeration",
+          "latency_ms": 120.23730000510113
+        }
+      },
+      "ev_units": "net profit per original bet",
+      "split_dealing": "sequential",
+      "hidden_information": "marginalized",
+      "best_evaluated_action": "double",
+      "missing_actions": [],
+      "nodes": 7876,
+      "peek_resolved": false,
+      "future_peek_integrated": false,
+      "insurance": {
+        "available": false,
+        "probability_blackjack": 0.0,
+        "ev": null,
+        "take": false
+      },
+      "ev_gap": 0.14899887105689952,
+      "latency_ms": 135.91659999656258,
+      "latency": 135.91659999656258
+    },
+    "vision_context": null,
+    "vision_analysis": null,
+    "status": "withheld",
+    "ev_regret": null,
+    "action_matches": null
+  }
+]

@@ -1,0 +1,2033 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "comparison_executed": true,
+  "exact_reference": false,
+  "cases": [
+    {
+      "id": "S17-hard10-v4",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        2,
+        8
+      ],
+      "dealer": 4,
+      "counts": [
+        24,
+        23,
+        24,
+        23,
+        24,
+        24,
+        24,
+        23,
+        24,
+        96
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.20956162082882573,
+          "hit": 0.23414060408916798,
+          "double": 0.46828120817833596,
+          "surrender": -0.49999999999999994
+        },
+        "best_action": "double",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.021500003640539944
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 3.3720999999786727
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 34.512799997173715
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 502.11449999915203
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "double",
+        "missing_actions": [],
+        "nodes": 28511,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.23414060408916798,
+        "latency_ms": 544.0518999967026,
+        "latency": 544.0518999967026
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": -0.2095616208421225,
+          "hit": 0.23414060369412001,
+          "double": 0.46828120738824003,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            2,
+            8
+          ],
+          "dealer": 4,
+          "counts": [
+            24,
+            23,
+            24,
+            23,
+            24,
+            24,
+            24,
+            23,
+            24,
+            96
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "double",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": false,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": false,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:21:53.362327+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 1.3296752587876881e-11,
+          "hit": 3.9504796656153474e-10,
+          "double": 7.900959331230695e-10,
+          "surrender": 5.551115123125783e-17
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    },
+    {
+      "id": "S17-hard12-v2",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        10,
+        2
+      ],
+      "dealer": 2,
+      "counts": [
+        24,
+        22,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        95
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.29582141466233375,
+          "hit": -0.251852015945582,
+          "double": -0.503704031891164,
+          "surrender": -0.49999999999999994
+        },
+        "best_action": "hit",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.02149999636458233
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 8.389599999645725
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 70.38789999933215
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 641.7522000047029
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "hit",
+        "missing_actions": [],
+        "nodes": 28337,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.04396939871675176,
+        "latency_ms": 729.6685999972397,
+        "latency": 729.6685999972397
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": -0.2958214148067204,
+          "hit": -0.2518520179685048,
+          "double": -0.5037040359370096,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            10,
+            2
+          ],
+          "dealer": 2,
+          "counts": [
+            24,
+            22,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            95
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "hit",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": false,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": false,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:21:56.463091+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 1.4438666928739963e-10,
+          "hit": 2.022922829247875e-09,
+          "double": 4.04584565849575e-09,
+          "surrender": 5.551115123125783e-17
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    },
+    {
+      "id": "S17-hard16-v10",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        10,
+        6
+      ],
+      "dealer": 10,
+      "counts": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        23,
+        24,
+        24,
+        24,
+        94
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.5409544390190253,
+          "hit": -0.5346755624525633,
+          "double": -1.0693511249051266,
+          "surrender": -0.5
+        },
+        "best_action": "surrender",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.020799998310394585
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.5451999968499877
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 2.694599999813363
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 7.452400001056958
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "surrender",
+        "missing_actions": [],
+        "nodes": 570,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.03467556245256331,
+        "latency_ms": 10.899000000790693,
+        "latency": 10.899000000790693
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": -0.5409544390190253,
+          "hit": -0.5346755624525634,
+          "double": -1.0693511249051268,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            10,
+            6
+          ],
+          "dealer": 10,
+          "counts": [
+            24,
+            24,
+            24,
+            24,
+            24,
+            23,
+            24,
+            24,
+            24,
+            94
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "surrender",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": false,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": false,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:21:58.445312+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 0.0,
+          "hit": 1.1102230246251565e-16,
+          "double": 2.220446049250313e-16,
+          "surrender": 0.0
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    },
+    {
+      "id": "S17-soft18-v9",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        1,
+        7
+      ],
+      "dealer": 9,
+      "counts": [
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        23,
+        24,
+        23,
+        96
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.18263993715641136,
+          "hit": -0.09846902159307445,
+          "double": -0.28482492950122024,
+          "surrender": -0.49999999999999994
+        },
+        "best_action": "hit",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.028100002964492887
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.7826000000932254
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 7.460199994966388
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 271.0802999936277
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "hit",
+        "missing_actions": [],
+        "nodes": 13694,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.0841709155633369,
+        "latency_ms": 282.3022000011406,
+        "latency": 282.3022000011406
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": -0.18263993715641139,
+          "hit": -0.09846902160465887,
+          "double": -0.2848249295012202,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            1,
+            7
+          ],
+          "dealer": 9,
+          "counts": [
+            23,
+            24,
+            24,
+            24,
+            24,
+            24,
+            23,
+            24,
+            23,
+            96
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "hit",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": false,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": false,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:22:00.691857+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 2.7755575615628914e-17,
+          "hit": 1.1584413983634079e-11,
+          "double": -5.551115123125783e-17,
+          "surrender": 5.551115123125783e-17
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    },
+    {
+      "id": "S17-soft19-v6",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        1,
+        8
+      ],
+      "dealer": 6,
+      "counts": [
+        23,
+        24,
+        24,
+        24,
+        24,
+        23,
+        24,
+        23,
+        24,
+        96
+      ],
+      "native": {
+        "actions": {
+          "stand": 0.49392439764100055,
+          "hit": 0.2401329887475101,
+          "double": 0.4802659774950202,
+          "surrender": -0.49999999999999994
+        },
+        "best_action": "stand",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.021699997887481004
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 2.2427000003517605
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 20.456199999898672
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 412.8936999986763
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "stand",
+        "missing_actions": [],
+        "nodes": 22146,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.013658420145980343,
+        "latency_ms": 440.41220000508474,
+        "latency": 440.41220000508474
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": 0.49392439764100055,
+          "hit": 0.24013298871625374,
+          "double": 0.4802659774325075,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            1,
+            8
+          ],
+          "dealer": 6,
+          "counts": [
+            23,
+            24,
+            24,
+            24,
+            24,
+            23,
+            24,
+            23,
+            24,
+            96
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "stand",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": false,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": false,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:22:03.062588+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 0.0,
+          "hit": 3.125635861245257e-11,
+          "double": 6.251271722490515e-11,
+          "surrender": 5.551115123125783e-17
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    },
+    {
+      "id": "H17-hard10-v4",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": true,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        2,
+        8
+      ],
+      "dealer": 4,
+      "counts": [
+        24,
+        23,
+        24,
+        23,
+        24,
+        24,
+        24,
+        23,
+        24,
+        96
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.20438581035062497,
+          "hit": 0.23334643080430406,
+          "double": 0.4666928616086081,
+          "surrender": -0.49999999999999994
+        },
+        "best_action": "double",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.02359999780310318
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 11.885100000654347
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 43.747900002927054
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 634.791899996344
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "double",
+        "missing_actions": [],
+        "nodes": 29799,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.23334643080430406,
+        "latency_ms": 698.7489999955869,
+        "latency": 698.7489999955869
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": -0.20438581036624093,
+          "hit": 0.23334643032505287,
+          "double": 0.46669286065010573,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            2,
+            8
+          ],
+          "dealer": 4,
+          "counts": [
+            24,
+            23,
+            24,
+            23,
+            24,
+            24,
+            24,
+            23,
+            24,
+            96
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "double",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": true,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": true,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:22:05.967232+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 1.5615952975167602e-11,
+          "hit": 4.792511942852684e-10,
+          "double": 9.585023885705368e-10,
+          "surrender": 5.551115123125783e-17
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    },
+    {
+      "id": "H17-hard12-v2",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": true,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        10,
+        2
+      ],
+      "dealer": 2,
+      "counts": [
+        24,
+        22,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        95
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.2894346194358515,
+          "hit": -0.2522237420752745,
+          "double": -0.504447484150549,
+          "surrender": -0.49999999999999994
+        },
+        "best_action": "hit",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.021200001356191933
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 7.3198000027332455
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 64.61529999796767
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 549.7456999946735
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "hit",
+        "missing_actions": [],
+        "nodes": 30218,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.037210877360577044,
+        "latency_ms": 628.2665000035195,
+        "latency": 628.2665000035195
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": -0.28943461966918493,
+          "hit": -0.2522237449683473,
+          "double": -0.5044474899366946,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            10,
+            2
+          ],
+          "dealer": 2,
+          "counts": [
+            24,
+            22,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            95
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "hit",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": true,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": true,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:22:08.599919+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 2.3333340815057113e-10,
+          "hit": 2.8930728368514735e-09,
+          "double": 5.786145673702947e-09,
+          "surrender": 5.551115123125783e-17
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    },
+    {
+      "id": "H17-hard16-v10",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": true,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        10,
+        6
+      ],
+      "dealer": 10,
+      "counts": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        23,
+        24,
+        24,
+        24,
+        94
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.5409544390190253,
+          "hit": -0.5346755624525633,
+          "double": -1.0693511249051266,
+          "surrender": -0.5
+        },
+        "best_action": "surrender",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.023099993995856494
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.5660999959218316
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 2.63950000226032
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 7.080499999574386
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "surrender",
+        "missing_actions": [],
+        "nodes": 570,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.03467556245256331,
+        "latency_ms": 10.492800000065472,
+        "latency": 10.492800000065472
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": -0.5409544390190253,
+          "hit": -0.5346755624525634,
+          "double": -1.0693511249051268,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            10,
+            6
+          ],
+          "dealer": 10,
+          "counts": [
+            24,
+            24,
+            24,
+            24,
+            24,
+            23,
+            24,
+            24,
+            24,
+            94
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "surrender",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": true,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": true,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:22:10.570296+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 0.0,
+          "hit": 1.1102230246251565e-16,
+          "double": 2.220446049250313e-16,
+          "surrender": 0.0
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    },
+    {
+      "id": "H17-soft18-v9",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": true,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        1,
+        7
+      ],
+      "dealer": 9,
+      "counts": [
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        23,
+        24,
+        23,
+        96
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.18263993715641136,
+          "hit": -0.09846902159307445,
+          "double": -0.28482492950122024,
+          "surrender": -0.49999999999999994
+        },
+        "best_action": "hit",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.021699997887481004
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.7699999987380579
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 8.133299998007715
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 268.0815999992774
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "hit",
+        "missing_actions": [],
+        "nodes": 13694,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.0841709155633369,
+        "latency_ms": 280.2497000011499,
+        "latency": 280.2497000011499
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": -0.18263993715641139,
+          "hit": -0.09846902160465887,
+          "double": -0.2848249295012202,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            1,
+            7
+          ],
+          "dealer": 9,
+          "counts": [
+            23,
+            24,
+            24,
+            24,
+            24,
+            24,
+            23,
+            24,
+            23,
+            96
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "hit",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": true,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": true,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:22:12.791292+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 2.7755575615628914e-17,
+          "hit": 1.1584413983634079e-11,
+          "double": -5.551115123125783e-17,
+          "surrender": 5.551115123125783e-17
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    },
+    {
+      "id": "H17-soft19-v6",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": true,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        1,
+        8
+      ],
+      "dealer": 6,
+      "counts": [
+        23,
+        24,
+        24,
+        24,
+        24,
+        23,
+        24,
+        23,
+        24,
+        96
+      ],
+      "native": {
+        "actions": {
+          "stand": 0.4522203576949168,
+          "hit": 0.23104463151486984,
+          "double": 0.4620892630297397,
+          "surrender": -0.49999999999999994
+        },
+        "best_action": "double",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.023500004317611456
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 2.238300003227778
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 23.390499998640735
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 507.06880000507226
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "double",
+        "missing_actions": [],
+        "nodes": 22400,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.009868905334822875,
+        "latency_ms": 538.0124000002979,
+        "latency": 538.0124000002979
+      },
+      "reference": {
+        "engine": "hhoppe",
+        "method": "external-finite-fresh-shoe-pruned-dp",
+        "exact": false,
+        "comparison_executed": true,
+        "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+        "status": "executed",
+        "actions": {
+          "stand": 0.4522203576949169,
+          "hit": 0.23104463148361348,
+          "double": 0.46208926296722697,
+          "surrender": -0.5
+        },
+        "state": {
+          "player": [
+            1,
+            8
+          ],
+          "dealer": 6,
+          "counts": [
+            23,
+            24,
+            24,
+            24,
+            24,
+            23,
+            24,
+            23,
+            24,
+            96
+          ],
+          "peek_resolved": true,
+          "from_split": false
+        },
+        "best_action": "double",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": true,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        },
+        "effective_rules": {
+          "num_decks": 6,
+          "blackjack_payout": 1.5,
+          "hit_soft17": true,
+          "obo": true,
+          "late_surrender": true,
+          "double_min_total": 0,
+          "double_after_split": true,
+          "split_to_num_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "double_split_aces": false,
+          "cut_card": 0,
+          "num_players": 1
+        },
+        "provenance": {
+          "repository": "hhoppe/blackjack",
+          "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+          "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+          "revision_verified": true,
+          "tracked_tree_clean": true,
+          "license": "MIT",
+          "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+        },
+        "conditioning": "negative-peek",
+        "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+        "effort": 3,
+        "limitations": [
+          "Upstream EFFORT prunes states; error bound unavailable.",
+          "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+          "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+        ],
+        "executed_at": "2026-10-03T00:22:15.621534+00:00"
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": -1.1102230246251565e-16,
+          "hit": 3.125635861245257e-11,
+          "double": 6.251271722490515e-11,
+          "surrender": 5.551115123125783e-17
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true,
+      "passed": true
+    }
+  ],
+  "unsupported_cases": [
+    {
+      "id": "double-none",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "none",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "status": "unsupported",
+      "reason": "hhoppe minimum-total doubling differs from strict native ranges or no-double",
+      "comparison_executed": false
+    },
+    {
+      "id": "ENHC-all",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": false,
+        "enhc": true,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "none",
+        "penetration": 0.75
+      },
+      "status": "unsupported",
+      "reason": "hhoppe obo conflates peek and OBO; adapter supports only AHC with peek",
+      "comparison_executed": false
+    },
+    {
+      "id": "ENHC-OBO",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": false,
+        "enhc": true,
+        "enhc_loss": "original",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "none",
+        "penetration": 0.75
+      },
+      "status": "unsupported",
+      "reason": "hhoppe obo conflates peek and OBO; adapter supports only AHC with peek",
+      "comparison_executed": false
+    },
+    {
+      "id": "early-surrender",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "early",
+        "penetration": 0.75
+      },
+      "status": "unsupported",
+      "reason": "hhoppe Rules has no early surrender",
+      "comparison_executed": false
+    }
+  ],
+  "tolerance": 1e-07,
+  "native_source_sha256": "ea14fa586a3e382a313a09753e21a277ed93258be790188cb8f186fae8a5a40c",
+  "precision_note": "Native complete enumerations compared to pinned effort-pruned reference; numerical agreement is sample validation, not a proven reference error bound.",
+  "scope": "Fresh six-deck nonsplit initial hands, S17/H17, any-two doubling, DAS, late surrender; no arbitrary depleted shoe or split proof.",
+  "executed_at": "2026-10-03T00:22:15.622531+00:00"
+}

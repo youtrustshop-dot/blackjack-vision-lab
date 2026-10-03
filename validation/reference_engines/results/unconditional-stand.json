@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "passed": true,
+  "comparison_executed": true,
+  "exact": false,
+  "rules": {
+    "decks": 6,
+    "hit_soft17": false,
+    "blackjack_payout": 1.5,
+    "dealer_peek": true,
+    "enhc": false,
+    "enhc_loss": "all",
+    "double_rule": "any",
+    "double_after_split": true,
+    "resplit": true,
+    "max_split_hands": 4,
+    "resplit_aces": false,
+    "hit_split_aces": false,
+    "surrender": "late",
+    "penetration": 0.003205128205128205
+  },
+  "policy": "always stand; decline insurance; continue early-surrender phase; fixed wager one",
+  "conditioning": "unconditional initial deal",
+  "shoe": "six decks freshly shuffled every round",
+  "native": {
+    "sampling": {
+      "mean": -0.1569375,
+      "standard_error": 0.002002405040687247,
+      "interval95": [
+        -0.16134476345847704,
+        -0.15253023654152298
+      ],
+      "batches": 12,
+      "degrees_of_freedom": 11,
+      "critical_value": 2.200985,
+      "method": "independent-batch-means-student-t",
+      "approximation": "Normal batch means assumed; choose large batches."
+    },
+    "batch_results": [
+      {
+        "seed": 271828,
+        "rounds": 10000,
+        "ev": -0.1654
+      },
+      {
+        "seed": 376557,
+        "rounds": 10000,
+        "ev": -0.15375
+      },
+      {
+        "seed": 481286,
+        "rounds": 10000,
+        "ev": -0.14635
+      },
+      {
+        "seed": 586015,
+        "rounds": 10000,
+        "ev": -0.16135
+      },
+      {
+        "seed": 690744,
+        "rounds": 10000,
+        "ev": -0.15495
+      },
+      {
+        "seed": 795473,
+        "rounds": 10000,
+        "ev": -0.1537
+      },
+      {
+        "seed": 900202,
+        "rounds": 10000,
+        "ev": -0.1528
+      },
+      {
+        "seed": 1004931,
+        "rounds": 10000,
+        "ev": -0.1558
+      },
+      {
+        "seed": 1109660,
+        "rounds": 10000,
+        "ev": -0.1659
+      },
+      {
+        "seed": 1214389,
+        "rounds": 10000,
+        "ev": -0.14645
+      },
+      {
+        "seed": 1319118,
+        "rounds": 10000,
+        "ev": -0.16555
+      },
+      {
+        "seed": 1423847,
+        "rounds": 10000,
+        "ev": -0.16125
+      }
+    ],
+    "gameplay_source_sha256": "2f12e895f4f0dcae4c60826d4f42109cc98f35a4510b11a44e58fe08c75d5707",
+    "settlement_source_sha256": "e165cdd30005d16ff9e2581e83bb3e1e065a6d07ec5b4cc7b0a452326722ceb8"
+  },
+  "freebj": {
+    "engine": "freebj",
+    "comparison_executed": true,
+    "exact": false,
+    "reference_pin": "91e9294d51e87ed36d124cfe058571dd9c05a342",
+    "native_optimal_policy": false,
+    "status": "executed",
+    "command": [
+      "..\\..\\work\\freebj-target\\release\\freebj.exe",
+      "--ahc",
+      "--s17",
+      "--das",
+      "--db-any2",
+      "--lsurr",
+      "--no-playAA",
+      "--max-splits",
+      "4",
+      "-d",
+      "6",
+      "-p",
+      "1",
+      "-b",
+      "1",
+      "-n",
+      "10000",
+      "-j",
+      "1",
+      "-a",
+      "="
+    ],
+    "validation_eligible": true,
+    "forced_cards_conditioning_matches_native": null,
+    "requested_rules": {
+      "decks": 6,
+      "hit_soft17": false,
+      "blackjack_payout": 1.5,
+      "dealer_peek": true,
+      "enhc": false,
+      "enhc_loss": "all",
+      "double_rule": "any",
+      "double_after_split": true,
+      "resplit": true,
+      "max_split_hands": 4,
+      "resplit_aces": false,
+      "hit_split_aces": false,
+      "surrender": "late",
+      "penetration": 0.003205128205128205
+    },
+    "effective_rules": {
+      "game_type": "ahc",
+      "soft17": "s17",
+      "das": true,
+      "bj_pays": 1.5,
+      "double_down": "any_two",
+      "surrender": "late_surrender",
+      "play_ace_pairs": false,
+      "max_splits": 4,
+      "decks": 6,
+      "penetration_cards": 1
+    },
+    "rule_echo_verified": true,
+    "provenance": {
+      "repository": "kevin-lesenechal/freebj",
+      "revision": "91e9294d51e87ed36d124cfe058571dd9c05a342",
+      "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\freebj-reference",
+      "revision_verified": true,
+      "tracked_tree_clean": true,
+      "license": "MIT",
+      "binary_build_revision_attested": true,
+      "binary_path": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\freebj-target\\release\\freebj.exe",
+      "binary_sha256": "1b451a2656aee1da6fb755efea254595b6c933e38882a7c0abcd697bce640d2f",
+      "build_provenance_note": "Clean checkout pin verified; executable derivation must be attested separately.",
+      "build_receipt": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\outputs\\blackjack-vision-lab\\validation\\reference_engines\\results\\freebj-build.json",
+      "build_receipt_sha256": "19892cf5e2345ae7a3cd65212fc1008d8bab9334e83848232a632f78f57cf2ff"
+    },
+    "sampling": {
+      "mean": -0.16139166666666646,
+      "standard_error": 0.002757626019355499,
+      "interval95": [
+        -0.16746116017087762,
+        -0.1553221731624553
+      ],
+      "batches": 12,
+      "degrees_of_freedom": 11,
+      "critical_value": 2.200985,
+      "method": "independent-batch-means-student-t",
+      "approximation": "Normal batch means assumed; choose large batches."
+    },
+    "batch_results": [
+      {
+        "ev": -0.16109999999999866,
+        "stddev_per_round": 0.9897447900721397,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.16335000000000025,
+        "stddev_per_round": 0.9870608929648862,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.13884999999999997,
+        "stddev_per_round": 0.9941803241624231,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.16420000000000048,
+        "stddev_per_round": 0.9919106555909482,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.1707000000000001,
+        "stddev_per_round": 0.9888929673782156,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.1659,
+        "stddev_per_round": 0.9911485395957309,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.17265000000000025,
+        "stddev_per_round": 0.9887440209548178,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.1604499999999991,
+        "stddev_per_round": 0.9894335224609776,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.16924999999999993,
+        "stddev_per_round": 0.9907459791790858,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.14769999999999958,
+        "stddev_per_round": 0.9929165616152397,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.1613499999999997,
+        "stddev_per_round": 0.9912564937712368,
+        "rounds": 10000
+      },
+      {
+        "ev": -0.16119999999999957,
+        "stddev_per_round": 0.9918230342622246,
+        "rounds": 10000
+      }
+    ],
+    "continuation": "FreeBJ basic chart after forced first action",
+    "conditioning": "pre-peek",
+    "independent_streams": "Separate processes use upstream entropy; upstream exposes no seed argument.",
+    "limitations": [
+      "FreeBJ deals both split replacement cards before the first continuation.",
+      "Forced first action uses FreeBJ chart continuation, not native optimal continuation.",
+      "FreeBJ has no RNG seed flag in the pinned CLI."
+    ],
+    "executed_at": "2026-10-03T00:16:33.845062+00:00"
+  },
+  "native_minus_reference": {
+    "mean": 0.004454166666666465,
+    "standard_error": 0.002430741082385435,
+    "interval95": [
+      -0.0008958579945476421,
+      0.009804191327880572
+    ],
+    "batches": 12,
+    "degrees_of_freedom": 11,
+    "critical_value": 2.200985,
+    "method": "independent-batch-means-student-t",
+    "approximation": "Normal batch means assumed; choose large batches."
+  },
+  "statistical_method": "Independent equal-size batch differences; t interval under approximately normal batch means.",
+  "seed_note": "Native deterministic seed list; independent upstream FreeBJ entropy streams have no exposed seeds.",
+  "native_wrapper": "Disable event storage/snapshot serialization; replace UUID identity generation only. Rank shuffle and gameplay production code unchanged.",
+  "limitations": [
+    "One fixed stand policy only; no optimal continuation, splits, count deviations or betting validation.",
+    "95% statistical consistency check can fail by chance; no repeat-until-pass procedure."
+  ],
+  "latency_seconds": 66.04938209999818,
+  "executed_at": "2026-10-03T00:17:39.894481+00:00"
+}

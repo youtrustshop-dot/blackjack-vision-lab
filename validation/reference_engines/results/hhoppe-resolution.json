@@ -1,0 +1,2820 @@
+{
+  "schema_version": 1,
+  "status": "resolved_in_sample",
+  "original_report": "validation\\differential\\results\\hhoppe-2000\\report.json",
+  "original_report_sha256": "ae121d3c6d7079f2435de21c64007d5398aa6696bcb5f9bf6b3305cb4b88252f",
+  "original_failure_artifact": "validation\\differential\\results\\hhoppe-2000\\DifferentialFailure.json",
+  "original_failures_sha256": "0381e711bd10ab22fd2e3dc52199ab064586d7372e69d461d52a05b8f51c43d6",
+  "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+  "diagnostic_sha256": "3d2ed31717e7fabe847374ddb655525d1889ba3ae5563a72b7ac42dfb3b69776",
+  "original_report_status": "failed",
+  "original_cases": 2000,
+  "original_failed_cases": 279,
+  "original_passing_cases": 1721,
+  "explained_reference_pruning_cases": 279,
+  "unresolved_numerical_disagreements_in_sample": 0,
+  "diagnostic_best_action_disagreements": 0,
+  "original_best_action_disagreements": 0,
+  "max_abs_ev_difference_effort4_diagnostic": 1.81868659021589e-10,
+  "tolerance": 1e-07,
+  "original_effort": 3,
+  "diagnostic_effort": 4,
+  "reference_exact": false,
+  "native_source_changed": false,
+  "original_artifacts_mutated": false,
+  "scope": "Unique fresh-shoe nonsplit 2/3/4-card hands with totals 15..21; five deck counts and S17/H17; negative peek; no arbitrary depleted shoe or split validation.",
+  "precision_note": "1721 original effort3 comparisons and 279 separately diagnosed effort4 failures cover the recorded 2000 samples. Original report remains failed. This does not assert effort4 was executed on the 1721 original passing cases, a proven global pruning error bound, or exactness of the reference.",
+  "resolutions": [
+    {
+      "state_id": "45f7d8d254a6f6e0a0ee",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 0,
+      "effort3_max_abs_ev_difference": 1.906687249197958e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "1e23f69b7eb0ee9377c1",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 1,
+      "effort3_max_abs_ev_difference": 1.7428059295721e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8fbc7d90029da9fa7d80",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 2,
+      "effort3_max_abs_ev_difference": 3.4588705344340553e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f3c3f11b76d1c9d5c31e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 3,
+      "effort3_max_abs_ev_difference": 2.0217892303386886e-07,
+      "effort4_max_abs_ev_difference": 4.163336342344337e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f1129682c938ed6214a0",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 4,
+      "effort3_max_abs_ev_difference": 2.6329859470486383e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "805750a8839168b07fe7",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 5,
+      "effort3_max_abs_ev_difference": 1.7730148010874913e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d64b8bcc7fdd5d38c338",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 6,
+      "effort3_max_abs_ev_difference": 1.1008802636158777e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9bc4a60650eec208b866",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 7,
+      "effort3_max_abs_ev_difference": 2.653283025511044e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "0e2c7f32ae3da5904612",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 8,
+      "effort3_max_abs_ev_difference": 2.903319821778716e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c56223a590f7d76799dd",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 9,
+      "effort3_max_abs_ev_difference": 2.6403271941033424e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f7f4339921f85954ee44",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 10,
+      "effort3_max_abs_ev_difference": 2.8959389480887054e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b073620c96831d4dcde6",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 11,
+      "effort3_max_abs_ev_difference": 2.424148670132631e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "4b346fbc2d13a6633acf",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 12,
+      "effort3_max_abs_ev_difference": 2.3990272790541667e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2b95d50a33994d2a05fb",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 13,
+      "effort3_max_abs_ev_difference": 1.657112455033527e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "ac41fcddc2a355522ae6",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 14,
+      "effort3_max_abs_ev_difference": 3.0528248640138145e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "109c32109a118161c836",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 15,
+      "effort3_max_abs_ev_difference": 4.420526465043206e-06,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "ab1fb01e869f914edbbd",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 16,
+      "effort3_max_abs_ev_difference": 1.7499086988198576e-06,
+      "effort4_max_abs_ev_difference": 6.938893903907228e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c074bc98cb080c3fa711",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 17,
+      "effort3_max_abs_ev_difference": 1.7875160041869176e-06,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "874856cb3768839a2bcb",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 18,
+      "effort3_max_abs_ev_difference": 8.752660389799161e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "11a399e1c338f9bf2b56",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 19,
+      "effort3_max_abs_ev_difference": 2.949529848139676e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c68881b2ac4196ed1067",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 20,
+      "effort3_max_abs_ev_difference": 4.000036571250032e-06,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "67033666e74f20dcc97e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 21,
+      "effort3_max_abs_ev_difference": 1.0559256458098076e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "24d439f9f26b149f4127",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 22,
+      "effort3_max_abs_ev_difference": 4.265831522187735e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "89de0ba4b0fd67bab6c2",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 23,
+      "effort3_max_abs_ev_difference": 6.738997576055672e-06,
+      "effort4_max_abs_ev_difference": 4.163336342344337e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "89ced7edc078cdbb3f0d",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 24,
+      "effort3_max_abs_ev_difference": 1.6891772078309053e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "264cf55cd0ecadea2585",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 25,
+      "effort3_max_abs_ev_difference": 9.467986303718368e-07,
+      "effort4_max_abs_ev_difference": 1.3877787807814457e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f97ae27e5bce18b99d1b",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 26,
+      "effort3_max_abs_ev_difference": 1.1290302892597026e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "4071934715af0d5c507a",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 27,
+      "effort3_max_abs_ev_difference": 1.6731577923145835e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "051bfc0c9a6fc9b1989d",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 28,
+      "effort3_max_abs_ev_difference": 6.238410317771503e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "7ace01febfe6a1dfd9b3",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 29,
+      "effort3_max_abs_ev_difference": 3.0420772351158476e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "e339ef73a672ee81215a",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 30,
+      "effort3_max_abs_ev_difference": 2.6770139027743056e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c41a1319ed19c0d41979",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 31,
+      "effort3_max_abs_ev_difference": 1.4840960790851732e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "882a9ce39020e2d3a7a9",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 32,
+      "effort3_max_abs_ev_difference": 2.0932257271955024e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "bda418a16b9aa191cf45",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 33,
+      "effort3_max_abs_ev_difference": 1.666600445565658e-06,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "15083c29b87c3ca821ae",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 34,
+      "effort3_max_abs_ev_difference": 2.7130406277109387e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "fa337df7ece946d87734",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 35,
+      "effort3_max_abs_ev_difference": 3.8685756448275654e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "7e75b4663b82c2b3b1ad",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 36,
+      "effort3_max_abs_ev_difference": 4.291837950469446e-06,
+      "effort4_max_abs_ev_difference": 2.0816681711721685e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b4b693700742a9923d7f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 37,
+      "effort3_max_abs_ev_difference": 3.15070476208934e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "0644ee621f63cd1582ff",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 38,
+      "effort3_max_abs_ev_difference": 2.987600462578399e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5b1265ef578bbe909753",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 39,
+      "effort3_max_abs_ev_difference": 1.5090385904747983e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "40f1c46258c9db06d958",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 40,
+      "effort3_max_abs_ev_difference": 4.92953139624025e-06,
+      "effort4_max_abs_ev_difference": 3.469446951953614e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "27e9976aea0fbfc54cb8",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 41,
+      "effort3_max_abs_ev_difference": 3.349914811101584e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "250801506c9b9660514c",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 42,
+      "effort3_max_abs_ev_difference": 2.503706391151356e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "a3e3be25616870c8d2d4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 43,
+      "effort3_max_abs_ev_difference": 4.7071936738751763e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9e705e0a43adf9323bbd",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 44,
+      "effort3_max_abs_ev_difference": 8.570750551245565e-06,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5e67973ea2a872c80afd",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 45,
+      "effort3_max_abs_ev_difference": 1.8001137472301032e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "26c925a34f4ec99d61fa",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 46,
+      "effort3_max_abs_ev_difference": 1.1708419699052453e-07,
+      "effort4_max_abs_ev_difference": 1.3877787807814457e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "39e95631000f0a2b9a14",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 47,
+      "effort3_max_abs_ev_difference": 2.840078954929881e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5f981c3208d1268a1928",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 48,
+      "effort3_max_abs_ev_difference": 6.680539825359988e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "3573ac4c9ffa084b0370",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 49,
+      "effort3_max_abs_ev_difference": 2.1850490042329973e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "6a6722dfb43ede80f956",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 50,
+      "effort3_max_abs_ev_difference": 1.6548929221427144e-07,
+      "effort4_max_abs_ev_difference": 1.3877787807814457e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "136dcceec32da918f14a",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 51,
+      "effort3_max_abs_ev_difference": 4.822367106555037e-06,
+      "effort4_max_abs_ev_difference": 1.5937251518494122e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5708a7e282131dfabf14",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 52,
+      "effort3_max_abs_ev_difference": 4.4090602646651433e-07,
+      "effort4_max_abs_ev_difference": 2.3092638912203256e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "53d4515802c28930ecf5",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 53,
+      "effort3_max_abs_ev_difference": 1.3330175146347711e-07,
+      "effort4_max_abs_ev_difference": 3.122502256758253e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "4999221c3a8d5009a607",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 54,
+      "effort3_max_abs_ev_difference": 1.3507569340820424e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "bf7cda2a179082ee28f6",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 55,
+      "effort3_max_abs_ev_difference": 1.8050208358544317e-07,
+      "effort4_max_abs_ev_difference": 9.43689570931383e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9dc59cde6b65b7d5a5a4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 56,
+      "effort3_max_abs_ev_difference": 7.984560260743123e-07,
+      "effort4_max_abs_ev_difference": 4.884981308350689e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9439a51151989cff7df3",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 57,
+      "effort3_max_abs_ev_difference": 1.7192114365460753e-07,
+      "effort4_max_abs_ev_difference": 8.992806499463768e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "504f2daac76ad7a8372d",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 58,
+      "effort3_max_abs_ev_difference": 1.6580456119186238e-07,
+      "effort4_max_abs_ev_difference": 1.199040866595169e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5c2aaac77e003361f0ce",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 59,
+      "effort3_max_abs_ev_difference": 3.0712828021917105e-06,
+      "effort4_max_abs_ev_difference": 1.5010215292932116e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8c5fec74716c1adb27d2",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 60,
+      "effort3_max_abs_ev_difference": 4.860274654960861e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "a144ded60483210892f5",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 61,
+      "effort3_max_abs_ev_difference": 2.511918806846758e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f046aef544087ad37431",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 62,
+      "effort3_max_abs_ev_difference": 1.0344828152753643e-05,
+      "effort4_max_abs_ev_difference": 2.188877551434487e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "bb7f66559cd862180d0f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 63,
+      "effort3_max_abs_ev_difference": 3.229260155390712e-07,
+      "effort4_max_abs_ev_difference": 7.549516567451064e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5d67e320192b551cb84f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 64,
+      "effort3_max_abs_ev_difference": 2.0421758151201175e-07,
+      "effort4_max_abs_ev_difference": 8.659739592076221e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "73ec188b2a4b8fc02f02",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 65,
+      "effort3_max_abs_ev_difference": 1.999862427881638e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "dd19725c82a50286df8c",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 66,
+      "effort3_max_abs_ev_difference": 1.4319911967319854e-07,
+      "effort4_max_abs_ev_difference": 1.0269562977782698e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "faba19e53e06bbeaa827",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 67,
+      "effort3_max_abs_ev_difference": 1.3347955807319067e-07,
+      "effort4_max_abs_ev_difference": 9.658940314238862e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "fb3f8aa071f3b3b7f285",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 68,
+      "effort3_max_abs_ev_difference": 1.5475295707390035e-07,
+      "effort4_max_abs_ev_difference": 5.599687380453133e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5ad42f761538e32c3b27",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 69,
+      "effort3_max_abs_ev_difference": 4.198942868960387e-07,
+      "effort4_max_abs_ev_difference": 2.170486013142181e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "15fa87c5d16d7d8f8c2c",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 70,
+      "effort3_max_abs_ev_difference": 1.274628066427752e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "31cd68ec9fdf3cc8f1ab",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 71,
+      "effort3_max_abs_ev_difference": 1.6950516608660315e-06,
+      "effort4_max_abs_ev_difference": 4.3072767574869886e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b6890afddbc66724896c",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 72,
+      "effort3_max_abs_ev_difference": 2.5225325250843866e-07,
+      "effort4_max_abs_ev_difference": 1.0880185641326534e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "cc61c4eca84bde118131",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 73,
+      "effort3_max_abs_ev_difference": 1.2956085893023328e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "92edfea92527ff4bc172",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 74,
+      "effort3_max_abs_ev_difference": 1.3257576747527366e-07,
+      "effort4_max_abs_ev_difference": 2.1094237467877974e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8c18905a7a1a01929cac",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 75,
+      "effort3_max_abs_ev_difference": 2.452692192955741e-07,
+      "effort4_max_abs_ev_difference": 3.752553823233029e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "09e5d5f1dd3124432ba3",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 76,
+      "effort3_max_abs_ev_difference": 1.1619352735525723e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "4788900ab5d60a1636ee",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 77,
+      "effort3_max_abs_ev_difference": 2.2534237376081734e-07,
+      "effort4_max_abs_ev_difference": 3.885780586188048e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2533fdb559d8115a828a",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 78,
+      "effort3_max_abs_ev_difference": 5.622261410875851e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "cae55da9f318050a0c07",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 79,
+      "effort3_max_abs_ev_difference": 1.4282739579929427e-07,
+      "effort4_max_abs_ev_difference": 1.2212453270876722e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "cb32ac431a1cc6f958a9",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 80,
+      "effort3_max_abs_ev_difference": 1.0221694202172671e-07,
+      "effort4_max_abs_ev_difference": 2.55351295663786e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d71a06e08f536492df4e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 81,
+      "effort3_max_abs_ev_difference": 4.886416784134068e-06,
+      "effort4_max_abs_ev_difference": 3.9098932425041255e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b16140f47e9953be80a9",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 82,
+      "effort3_max_abs_ev_difference": 5.197343821983225e-07,
+      "effort4_max_abs_ev_difference": 4.141131881851834e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8ff6f32afa1b93f07748",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 83,
+      "effort3_max_abs_ev_difference": 1.2826328754655947e-07,
+      "effort4_max_abs_ev_difference": 2.1094237467877974e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "52f4d3df2bcb6ba3ec54",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 84,
+      "effort3_max_abs_ev_difference": 2.2808810828944814e-07,
+      "effort4_max_abs_ev_difference": 7.771561172376096e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d8a066960b4c91f82c13",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 85,
+      "effort3_max_abs_ev_difference": 1.1445951697552914e-07,
+      "effort4_max_abs_ev_difference": 2.55351295663786e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "db2463e50837e22b3be9",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 86,
+      "effort3_max_abs_ev_difference": 6.477763315054785e-07,
+      "effort4_max_abs_ev_difference": 1.3877787807814457e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "180090ef884348e1fdee",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 87,
+      "effort3_max_abs_ev_difference": 1.5164767797060108e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "50cdc892898468a0f3fc",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 88,
+      "effort3_max_abs_ev_difference": 1.5238838947662092e-07,
+      "effort4_max_abs_ev_difference": 4.163336342344337e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9c0ec3af6a4070b80b0d",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 89,
+      "effort3_max_abs_ev_difference": 1.1839806468572078e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f266b8191a4b73c65753",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 90,
+      "effort3_max_abs_ev_difference": 1.9201463399842744e-07,
+      "effort4_max_abs_ev_difference": 1.3877787807814457e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "3686df216de457a63071",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 91,
+      "effort3_max_abs_ev_difference": 4.5856508618102865e-07,
+      "effort4_max_abs_ev_difference": 3.630429290524262e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "299fba2e8a0c3a513c57",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 92,
+      "effort3_max_abs_ev_difference": 1.5208101195041124e-07,
+      "effort4_max_abs_ev_difference": 1.099120794378905e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "858921c76773638fc903",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 93,
+      "effort3_max_abs_ev_difference": 7.45909798871569e-07,
+      "effort4_max_abs_ev_difference": 1.2972956042744954e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d33b0b4e0c4b8edde7a2",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 94,
+      "effort3_max_abs_ev_difference": 5.292650121710429e-07,
+      "effort4_max_abs_ev_difference": 3.3834046675451646e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8d200b0291712e44f023",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 95,
+      "effort3_max_abs_ev_difference": 4.72248992591795e-07,
+      "effort4_max_abs_ev_difference": 2.0843049508556533e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f159f4318dab854a5025",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 96,
+      "effort3_max_abs_ev_difference": 4.916541462840485e-07,
+      "effort4_max_abs_ev_difference": 1.1324274851176597e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2f872047e8fbfefb056f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 97,
+      "effort3_max_abs_ev_difference": 2.447760426571577e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "0138967f500a0017c995",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 98,
+      "effort3_max_abs_ev_difference": 1.0260914184989645e-07,
+      "effort4_max_abs_ev_difference": 3.3306690738754696e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "442fb512b8714c9c6464",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 99,
+      "effort3_max_abs_ev_difference": 4.413386711088485e-07,
+      "effort4_max_abs_ev_difference": 7.37188088351104e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "df7adeaf4b990154aa58",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 100,
+      "effort3_max_abs_ev_difference": 4.547289139678057e-07,
+      "effort4_max_abs_ev_difference": 2.220446049250313e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "08caa8f0619dea11d644",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 101,
+      "effort3_max_abs_ev_difference": 1.6144443892862625e-07,
+      "effort4_max_abs_ev_difference": 9.103828801926284e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "92fe61e0bebc38afb80a",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 102,
+      "effort3_max_abs_ev_difference": 3.289148842733347e-07,
+      "effort4_max_abs_ev_difference": 8.215650382226158e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "860a0c85f5c5f61b6bf8",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 103,
+      "effort3_max_abs_ev_difference": 3.5739147637887936e-06,
+      "effort4_max_abs_ev_difference": 1.3804929421823431e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "66184d784aada9c5a3fa",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 104,
+      "effort3_max_abs_ev_difference": 2.7417071973845353e-07,
+      "effort4_max_abs_ev_difference": 4.9404924595819466e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "4e9b5010356222d500ae",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 105,
+      "effort3_max_abs_ev_difference": 2.1113365630820446e-07,
+      "effort4_max_abs_ev_difference": 4.3048897779840445e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2d1d52956efea83eda76",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 106,
+      "effort3_max_abs_ev_difference": 3.100153032439823e-06,
+      "effort4_max_abs_ev_difference": 2.581268532253489e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "142914bbe9a186fc80d8",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 107,
+      "effort3_max_abs_ev_difference": 1.0170357900296523e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "48f520f6621dfa722265",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 108,
+      "effort3_max_abs_ev_difference": 3.249483276623888e-07,
+      "effort4_max_abs_ev_difference": 6.8833827526759706e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "67550de17e3a0c06e0de",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 109,
+      "effort3_max_abs_ev_difference": 8.548424319521075e-07,
+      "effort4_max_abs_ev_difference": 6.661338147750939e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2ae5b8ec60265800027e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 110,
+      "effort3_max_abs_ev_difference": 1.0998153066044125e-07,
+      "effort4_max_abs_ev_difference": 7.771561172376096e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5e0c99b787737cb8cdee",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 111,
+      "effort3_max_abs_ev_difference": 1.2032292465158356e-07,
+      "effort4_max_abs_ev_difference": 1.9984014443252818e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "00aa0d3c6fc5f5579f1e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 112,
+      "effort3_max_abs_ev_difference": 2.0748028312089772e-07,
+      "effort4_max_abs_ev_difference": 2.4424906541753444e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c43070108db0ee1f66fe",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 113,
+      "effort3_max_abs_ev_difference": 3.963361979719693e-07,
+      "effort4_max_abs_ev_difference": 3.2307490016592055e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "1f35f5f261b50abeb7e4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 114,
+      "effort3_max_abs_ev_difference": 2.852585406422359e-06,
+      "effort4_max_abs_ev_difference": 8.357876890574545e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9341775a4c5a8442026e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 115,
+      "effort3_max_abs_ev_difference": 3.7608145891931954e-07,
+      "effort4_max_abs_ev_difference": 4.8627768478581856e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5e07c8db19339610defb",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 116,
+      "effort3_max_abs_ev_difference": 2.1910299359967356e-06,
+      "effort4_max_abs_ev_difference": 4.773959005888173e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "fa854f51f4dc5ba492ed",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 117,
+      "effort3_max_abs_ev_difference": 1.1942638633577474e-07,
+      "effort4_max_abs_ev_difference": 3.552713678800501e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "57bc165b0ad7e6e9b0c1",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 118,
+      "effort3_max_abs_ev_difference": 1.1202501359885986e-07,
+      "effort4_max_abs_ev_difference": 1.2212453270876722e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "520023668cb937a63829",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 119,
+      "effort3_max_abs_ev_difference": 8.573074449236273e-07,
+      "effort4_max_abs_ev_difference": 3.3806291099836017e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f57f39d6877385d5eae0",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 120,
+      "effort3_max_abs_ev_difference": 1.2884254751988067e-07,
+      "effort4_max_abs_ev_difference": 7.327471962526033e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "1e86a73068dedf7d8f81",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 121,
+      "effort3_max_abs_ev_difference": 2.927607551331951e-07,
+      "effort4_max_abs_ev_difference": 5.278763537397424e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "69e9dc55922b537188b0",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 122,
+      "effort3_max_abs_ev_difference": 2.7221994219894796e-07,
+      "effort4_max_abs_ev_difference": 5.995204332975845e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "3cfd8c5e403d56283af4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 123,
+      "effort3_max_abs_ev_difference": 1.053272562001606e-06,
+      "effort4_max_abs_ev_difference": 2.8199664825478976e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "355dda4ea0994e47abf4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 124,
+      "effort3_max_abs_ev_difference": 3.7663431862178243e-07,
+      "effort4_max_abs_ev_difference": 1.27675647831893e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9b55750796b8e2ab88b0",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 125,
+      "effort3_max_abs_ev_difference": 1.23962928255672e-07,
+      "effort4_max_abs_ev_difference": 6.772360450213455e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "82fa0c2a2c28012c4b45",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 126,
+      "effort3_max_abs_ev_difference": 3.0393531155747944e-07,
+      "effort4_max_abs_ev_difference": 4.6074255521944e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b8d25b92357848428342",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 127,
+      "effort3_max_abs_ev_difference": 1.6163715206574114e-07,
+      "effort4_max_abs_ev_difference": 4.107825191113079e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "622e552bbce58639800f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 128,
+      "effort3_max_abs_ev_difference": 1.3922523389719998e-07,
+      "effort4_max_abs_ev_difference": 1.887379141862766e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "10d872e28136bb490f35",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 129,
+      "effort3_max_abs_ev_difference": 1.0728867054499158e-07,
+      "effort4_max_abs_ev_difference": 1.528360771274606e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "7ef1e2227b90c90b458c",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 130,
+      "effort3_max_abs_ev_difference": 2.1012554790589277e-07,
+      "effort4_max_abs_ev_difference": 1.6889267762110194e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "0be0e01d66518139005d",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 131,
+      "effort3_max_abs_ev_difference": 2.1116971263279716e-07,
+      "effort4_max_abs_ev_difference": 1.3972156764907595e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "aa366feb9b9fd4f409e5",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 132,
+      "effort3_max_abs_ev_difference": 2.2474884020518004e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f5601155cec96bf017ff",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 133,
+      "effort3_max_abs_ev_difference": 3.1167914546492703e-07,
+      "effort4_max_abs_ev_difference": 3.226585665316861e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f6898bb786c1dbf3312d",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 134,
+      "effort3_max_abs_ev_difference": 3.1646327461332113e-07,
+      "effort4_max_abs_ev_difference": 3.0462438127543123e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "a808be82a3e1e3cb8c81",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 135,
+      "effort3_max_abs_ev_difference": 2.9515722776984887e-07,
+      "effort4_max_abs_ev_difference": 5.517808432387028e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "596b6dce3f50fedb0bca",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 136,
+      "effort3_max_abs_ev_difference": 5.584858643881141e-07,
+      "effort4_max_abs_ev_difference": 1.031799645723197e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "e1f3a961e9d6a57061e2",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 137,
+      "effort3_max_abs_ev_difference": 3.0262773820233235e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8dfa7dcdff7d29e093ea",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 138,
+      "effort3_max_abs_ev_difference": 8.200864003438113e-07,
+      "effort4_max_abs_ev_difference": 4.163336342344337e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "e0e9b6bf09bab7c19133",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 139,
+      "effort3_max_abs_ev_difference": 5.146192654792436e-07,
+      "effort4_max_abs_ev_difference": 1.0779155346085645e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "e2785e076e8bcef8e4f8",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 140,
+      "effort3_max_abs_ev_difference": 1.5715688844730735e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "fd2bfc3ae75eade34dd0",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 141,
+      "effort3_max_abs_ev_difference": 1.0188127384510009e-05,
+      "effort4_max_abs_ev_difference": 3.6709742450707905e-11,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "e8df789c54f29546a399",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 142,
+      "effort3_max_abs_ev_difference": 3.6768993307012554e-06,
+      "effort4_max_abs_ev_difference": 1.7105067362521709e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2cfa6f38da5373e32938",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 143,
+      "effort3_max_abs_ev_difference": 3.079304189967935e-07,
+      "effort4_max_abs_ev_difference": 3.3306690738754696e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "e70e9d82a56bb668818b",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 144,
+      "effort3_max_abs_ev_difference": 1.1474137184830369e-07,
+      "effort4_max_abs_ev_difference": 3.2307490016592055e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d456545dc918f7c40bfb",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 145,
+      "effort3_max_abs_ev_difference": 1.0435075514791947e-07,
+      "effort4_max_abs_ev_difference": 6.283862319378386e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "84d4de88a3b1393d87ca",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 146,
+      "effort3_max_abs_ev_difference": 1.4408988760483687e-07,
+      "effort4_max_abs_ev_difference": 5.773159728050814e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f61b56b7f87951d9902b",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 147,
+      "effort3_max_abs_ev_difference": 2.0970992937498212e-07,
+      "effort4_max_abs_ev_difference": 1.9691713537550726e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8035eaed7461438a0782",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 148,
+      "effort3_max_abs_ev_difference": 2.75231266999576e-07,
+      "effort4_max_abs_ev_difference": 3.9690473130349346e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "bf4eaa02538bbd37d4cd",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 149,
+      "effort3_max_abs_ev_difference": 1.7614093872353465e-07,
+      "effort4_max_abs_ev_difference": 2.8688162956314045e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "008006d846a38dbc9966",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 150,
+      "effort3_max_abs_ev_difference": 1.7601041490955538e-07,
+      "effort4_max_abs_ev_difference": 9.631184738623233e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2a068ae95d0b608c30b0",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 151,
+      "effort3_max_abs_ev_difference": 1.45484073510449e-07,
+      "effort4_max_abs_ev_difference": 8.326672684688674e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9cd8071f55b74d83eca9",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 152,
+      "effort3_max_abs_ev_difference": 2.133429367473516e-07,
+      "effort4_max_abs_ev_difference": 1.582067810090848e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d66f2b860cdb6dc68737",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 153,
+      "effort3_max_abs_ev_difference": 1.112617684650985e-07,
+      "effort4_max_abs_ev_difference": 2.334799020786704e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b91f77bf7690488e0bc4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 154,
+      "effort3_max_abs_ev_difference": 3.4573975965512815e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "74fc7a317bef3917348b",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 155,
+      "effort3_max_abs_ev_difference": 3.576606920629999e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "59b016edb1db5f08b683",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 156,
+      "effort3_max_abs_ev_difference": 3.7498401272983983e-07,
+      "effort4_max_abs_ev_difference": 6.67021993194794e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "a4a2490a410360488fa4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 157,
+      "effort3_max_abs_ev_difference": 2.7161468441061487e-07,
+      "effort4_max_abs_ev_difference": 4.43312053732825e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c2a0268412f413525687",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 158,
+      "effort3_max_abs_ev_difference": 2.1889490736948236e-06,
+      "effort4_max_abs_ev_difference": 1.6514567491299204e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f37192c824ad3b5756a2",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 159,
+      "effort3_max_abs_ev_difference": 1.736714280359264e-06,
+      "effort4_max_abs_ev_difference": 2.816877286981878e-11,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "13ecd782810982c1b9bf",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 160,
+      "effort3_max_abs_ev_difference": 3.5188233860061757e-06,
+      "effort4_max_abs_ev_difference": 2.6944557696140237e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "6578fdba160c5720b017",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 161,
+      "effort3_max_abs_ev_difference": 4.550801930847115e-07,
+      "effort4_max_abs_ev_difference": 8.40105762733856e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b3acfe621b8a489631a9",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 162,
+      "effort3_max_abs_ev_difference": 1.1518984854852476e-07,
+      "effort4_max_abs_ev_difference": 2.4158453015843406e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "7c9ba24c6fdf1c9a9763",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 163,
+      "effort3_max_abs_ev_difference": 3.7044413670195286e-06,
+      "effort4_max_abs_ev_difference": 7.45714323624469e-11,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "cb08e55cff7ec9153dc4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 164,
+      "effort3_max_abs_ev_difference": 6.070441538885696e-07,
+      "effort4_max_abs_ev_difference": 9.880984919163893e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "38f4672309b9ed22477e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 165,
+      "effort3_max_abs_ev_difference": 6.025805690534902e-07,
+      "effort4_max_abs_ev_difference": 2.0539125955565396e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8b7fb62ffbe23a029ef8",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 166,
+      "effort3_max_abs_ev_difference": 1.1834887281292339e-07,
+      "effort4_max_abs_ev_difference": 1.6764367671839864e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "25ef7ead5709de7adfac",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 167,
+      "effort3_max_abs_ev_difference": 1.0642086034629017e-07,
+      "effort4_max_abs_ev_difference": 1.6209256159527285e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d14c877e7ed32be4951e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 168,
+      "effort3_max_abs_ev_difference": 1.0034623021404343e-07,
+      "effort4_max_abs_ev_difference": 1.3322676295501878e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c814ea5a19a4be215769",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 169,
+      "effort3_max_abs_ev_difference": 1.397388890711504e-07,
+      "effort4_max_abs_ev_difference": 1.7763568394002505e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5e92f6ddbb6e5f3601c6",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 170,
+      "effort3_max_abs_ev_difference": 1.9640629569939172e-07,
+      "effort4_max_abs_ev_difference": 2.1591062271397732e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "4117ebf6496c4cc1b5a1",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 171,
+      "effort3_max_abs_ev_difference": 3.652942975884699e-07,
+      "effort4_max_abs_ev_difference": 6.709077737809821e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "02d4978ca4c6de468e1d",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 172,
+      "effort3_max_abs_ev_difference": 3.664479282794453e-07,
+      "effort4_max_abs_ev_difference": 8.881784197001252e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "a979f85b47df9979cae7",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 173,
+      "effort3_max_abs_ev_difference": 1.0892245559668279e-07,
+      "effort4_max_abs_ev_difference": 2.475797344914099e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "14993011a5d64460ddad",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 174,
+      "effort3_max_abs_ev_difference": 1.5820301663138636e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f290ec0c6d0786d4d2f8",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 175,
+      "effort3_max_abs_ev_difference": 2.9536863047144313e-06,
+      "effort4_max_abs_ev_difference": 6.459624501964356e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "724da49792a07622189b",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 176,
+      "effort3_max_abs_ev_difference": 3.3050184167215946e-07,
+      "effort4_max_abs_ev_difference": 2.220446049250313e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2dbcd21ffa8c863f1501",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 177,
+      "effort3_max_abs_ev_difference": 1.083684736946644e-07,
+      "effort4_max_abs_ev_difference": 1.1796119636642288e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "15dd37eae81a8ba12efe",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 178,
+      "effort3_max_abs_ev_difference": 1.9868463430050554e-07,
+      "effort4_max_abs_ev_difference": 1.389999226830696e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "552f0e97663ff1a3847e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 179,
+      "effort3_max_abs_ev_difference": 1.7116801609429189e-07,
+      "effort4_max_abs_ev_difference": 9.71445146547012e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8669a7444e2a50a8cf56",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 180,
+      "effort3_max_abs_ev_difference": 1.1954294454330494e-07,
+      "effort4_max_abs_ev_difference": 1.7141843500212417e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b215881293fdb28cbdec",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 181,
+      "effort3_max_abs_ev_difference": 3.5294986722167465e-07,
+      "effort4_max_abs_ev_difference": 4.539701947692265e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "454584036525ce878501",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 182,
+      "effort3_max_abs_ev_difference": 3.3217822119763207e-06,
+      "effort4_max_abs_ev_difference": 3.3815311661911096e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "0db89a2b843b0da85bf5",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 183,
+      "effort3_max_abs_ev_difference": 3.7794846113881064e-07,
+      "effort4_max_abs_ev_difference": 1.2212453270876722e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "cb964e288de4802c8611",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 184,
+      "effort3_max_abs_ev_difference": 4.253639264151232e-07,
+      "effort4_max_abs_ev_difference": 1.3200551762793111e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "64f2a4ac94fb85dd68dc",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 185,
+      "effort3_max_abs_ev_difference": 2.00844200062833e-07,
+      "effort4_max_abs_ev_difference": 2.4319435354414054e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "ac64b368527614e127c4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 186,
+      "effort3_max_abs_ev_difference": 1.6072067854366878e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d6a95ad28b0467652e51",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 187,
+      "effort3_max_abs_ev_difference": 1.0664100058566106e-07,
+      "effort4_max_abs_ev_difference": 1.587618925213974e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "90177537abf4e06a552a",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 188,
+      "effort3_max_abs_ev_difference": 1.2471639698752313e-07,
+      "effort4_max_abs_ev_difference": 8.282263763703668e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "84fb384ca93d098e4294",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 189,
+      "effort3_max_abs_ev_difference": 3.889590270977905e-07,
+      "effort4_max_abs_ev_difference": 2.3159252293680765e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "42d750c7a61bfe0e03d9",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 190,
+      "effort3_max_abs_ev_difference": 1.5611839632168056e-07,
+      "effort4_max_abs_ev_difference": 1.1102230246251565e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d9f6f053ae079de54bad",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 191,
+      "effort3_max_abs_ev_difference": 2.0781717333107075e-07,
+      "effort4_max_abs_ev_difference": 2.5479618415147343e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "31f4304d24a5a1aaf05e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 192,
+      "effort3_max_abs_ev_difference": 2.3111030972300384e-07,
+      "effort4_max_abs_ev_difference": 3.608224830031759e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "6875eac5afa4a0471dfa",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 193,
+      "effort3_max_abs_ev_difference": 8.37025985606088e-07,
+      "effort4_max_abs_ev_difference": 4.210520820890906e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "1f6c08fe011770480064",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 194,
+      "effort3_max_abs_ev_difference": 1.341478939043128e-07,
+      "effort4_max_abs_ev_difference": 5.972999872483342e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5bc0a81e8503ae3a7dbc",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 195,
+      "effort3_max_abs_ev_difference": 1.3953107358410932e-07,
+      "effort4_max_abs_ev_difference": 2.778888230636767e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "da87f965a67fc706de99",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 196,
+      "effort3_max_abs_ev_difference": 3.979595616307452e-07,
+      "effort4_max_abs_ev_difference": 9.839837278313723e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "cba6eb3edf76a9dc8aec",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 197,
+      "effort3_max_abs_ev_difference": 1.4469029473683503e-07,
+      "effort4_max_abs_ev_difference": 2.6263193009246066e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "736aeaf78abefc8be3a4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 198,
+      "effort3_max_abs_ev_difference": 1.214212820843663e-07,
+      "effort4_max_abs_ev_difference": 1.0547118733938987e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c8313471f86fd2cf449b",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 199,
+      "effort3_max_abs_ev_difference": 2.1883262385502533e-07,
+      "effort4_max_abs_ev_difference": 5.972999872483342e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "fefcda17d6eec6f8d478",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 200,
+      "effort3_max_abs_ev_difference": 2.2628131818303032e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "6ec0e7a7f0335f014003",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 201,
+      "effort3_max_abs_ev_difference": 2.036658012793957e-07,
+      "effort4_max_abs_ev_difference": 1.887379141862766e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "fde57b1e411e86f92327",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 202,
+      "effort3_max_abs_ev_difference": 1.3876566207216e-07,
+      "effort4_max_abs_ev_difference": 1.301736496372996e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "15d9c1e474d13f064a10",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 203,
+      "effort3_max_abs_ev_difference": 3.6434885403169304e-07,
+      "effort4_max_abs_ev_difference": 8.049116928532385e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "e6a61f5b15f9472e571f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 204,
+      "effort3_max_abs_ev_difference": 3.1452027304812447e-07,
+      "effort4_max_abs_ev_difference": 5.284106485703433e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "26c6506c895bf295953e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 205,
+      "effort3_max_abs_ev_difference": 1.2256561365830976e-07,
+      "effort4_max_abs_ev_difference": 1.304512053934559e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "a863aaf6dbdb30224773",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 206,
+      "effort3_max_abs_ev_difference": 1.2452008091301536e-07,
+      "effort4_max_abs_ev_difference": 4.3520742565306136e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "70bf82bf06bbb2ded9f4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 207,
+      "effort3_max_abs_ev_difference": 3.849227462326965e-07,
+      "effort4_max_abs_ev_difference": 1.27675647831893e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "7f2e1caec69d2f70c1e3",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 208,
+      "effort3_max_abs_ev_difference": 7.146725804277332e-07,
+      "effort4_max_abs_ev_difference": 1.5767873118299747e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9e2f1c828241e5b63b68",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 209,
+      "effort3_max_abs_ev_difference": 1.4655717062161955e-06,
+      "effort4_max_abs_ev_difference": 6.743355873695123e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "6806ff730c8b6cd349e4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 210,
+      "effort3_max_abs_ev_difference": 3.3320077322263053e-07,
+      "effort4_max_abs_ev_difference": 1.4363510381087963e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "8ae9d83de4b8f62f2452",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 211,
+      "effort3_max_abs_ev_difference": 4.4295798093396677e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "20076339daf06aa563e8",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 212,
+      "effort3_max_abs_ev_difference": 1.2107541494388308e-07,
+      "effort4_max_abs_ev_difference": 8.104628079763643e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5e2e0bbb818054491807",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 213,
+      "effort3_max_abs_ev_difference": 2.42449860410332e-07,
+      "effort4_max_abs_ev_difference": 0.0,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "68dc5455d0c09dc57bc4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 214,
+      "effort3_max_abs_ev_difference": 1.514915989320187e-07,
+      "effort4_max_abs_ev_difference": 3.5293989952833726e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b996cb92d407f6eb4e14",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 215,
+      "effort3_max_abs_ev_difference": 1.346359947695941e-07,
+      "effort4_max_abs_ev_difference": 1.459943277382081e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "e2d2c3b1e2348c1f03e7",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 216,
+      "effort3_max_abs_ev_difference": 1.343980455537075e-07,
+      "effort4_max_abs_ev_difference": 1.532107773982716e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "12290f51818d5fca87d6",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 217,
+      "effort3_max_abs_ev_difference": 1.3147281160974522e-07,
+      "effort4_max_abs_ev_difference": 1.2878587085651816e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "ef3ae35513af6befcefe",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 218,
+      "effort3_max_abs_ev_difference": 3.1131472522094583e-07,
+      "effort4_max_abs_ev_difference": 7.936984403045244e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "92d8fd7dca41db6d3bff",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 219,
+      "effort3_max_abs_ev_difference": 3.575724930593438e-07,
+      "effort4_max_abs_ev_difference": 2.211480998326465e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b7365596b08819aa79a8",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 220,
+      "effort3_max_abs_ev_difference": 4.556808344546859e-07,
+      "effort4_max_abs_ev_difference": 2.2315482794965646e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "cebe63a6db58713d1eb7",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 221,
+      "effort3_max_abs_ev_difference": 1.9582288224642697e-06,
+      "effort4_max_abs_ev_difference": 9.54097911787244e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d8a722450a0921a215f5",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 222,
+      "effort3_max_abs_ev_difference": 2.908099425713573e-07,
+      "effort4_max_abs_ev_difference": 8.196776590807531e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5f15a9d665dd6fd2e730",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 223,
+      "effort3_max_abs_ev_difference": 3.1668025446407455e-07,
+      "effort4_max_abs_ev_difference": 3.615996391204135e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b788330b72dcb22e16f8",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 224,
+      "effort3_max_abs_ev_difference": 2.2468749089066264e-07,
+      "effort4_max_abs_ev_difference": 4.996003610813204e-16,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "35f63a0f7e9562912fa9",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 225,
+      "effort3_max_abs_ev_difference": 1.574730282838388e-07,
+      "effort4_max_abs_ev_difference": 2.0594637106796654e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "a119f672371d99419b0f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 226,
+      "effort3_max_abs_ev_difference": 4.435196844787548e-07,
+      "effort4_max_abs_ev_difference": 5.440092820663267e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "db73a332f37a6d9e0024",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 227,
+      "effort3_max_abs_ev_difference": 2.762088514574046e-07,
+      "effort4_max_abs_ev_difference": 6.546985176214548e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "d10b7f080fe0eaa0ace7",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 228,
+      "effort3_max_abs_ev_difference": 1.958571889601468e-07,
+      "effort4_max_abs_ev_difference": 3.722716579446228e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f9d7b9314dc6de9492af",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 229,
+      "effort3_max_abs_ev_difference": 1.1912591474372292e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "4044e284bfa5b8a80697",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 230,
+      "effort3_max_abs_ev_difference": 4.987392527300294e-07,
+      "effort4_max_abs_ev_difference": 4.9404924595819466e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2a11580315da6c070893",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 231,
+      "effort3_max_abs_ev_difference": 4.798688002516371e-07,
+      "effort4_max_abs_ev_difference": 3.58046925441613e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "df097b0845a3e704e5d0",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 232,
+      "effort3_max_abs_ev_difference": 1.9153095626167627e-07,
+      "effort4_max_abs_ev_difference": 4.860001290296623e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5939e0a11926dc44e001",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 233,
+      "effort3_max_abs_ev_difference": 1.230558050215047e-07,
+      "effort4_max_abs_ev_difference": 4.6455894686658894e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c5d148bc66fd7b97fe57",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 234,
+      "effort3_max_abs_ev_difference": 1.855430824641846e-07,
+      "effort4_max_abs_ev_difference": 9.349812590819795e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "62a9e6ab6fe31a84aaff",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 235,
+      "effort3_max_abs_ev_difference": 5.666835760642641e-07,
+      "effort4_max_abs_ev_difference": 1.02873265461767e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b79cf690c47640df7d03",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 236,
+      "effort3_max_abs_ev_difference": 2.1553645920824316e-07,
+      "effort4_max_abs_ev_difference": 3.844702334276917e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "36a6de0700d7b1ea0580",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 237,
+      "effort3_max_abs_ev_difference": 2.77183550390081e-07,
+      "effort4_max_abs_ev_difference": 1.2367884494324244e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "3b6aafd1b6df01ffe3b4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 238,
+      "effort3_max_abs_ev_difference": 1.9168198783781065e-07,
+      "effort4_max_abs_ev_difference": 5.292433158388121e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "3c775e2b53c6df270eed",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 239,
+      "effort3_max_abs_ev_difference": 1.504693566568155e-07,
+      "effort4_max_abs_ev_difference": 2.675203808477633e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "625f449eff36cc7f5d7c",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 240,
+      "effort3_max_abs_ev_difference": 2.751574899040321e-07,
+      "effort4_max_abs_ev_difference": 2.278177646530821e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "815a0aa204a3e252f4bc",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 241,
+      "effort3_max_abs_ev_difference": 1.182800308252574e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "3bb1d4e1bf46eb79161f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 242,
+      "effort3_max_abs_ev_difference": 3.8574326313711715e-07,
+      "effort4_max_abs_ev_difference": 8.739398094093076e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b322aa0b3528cc31dc51",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 243,
+      "effort3_max_abs_ev_difference": 4.0538207415896643e-07,
+      "effort4_max_abs_ev_difference": 8.624767566800529e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "89244be49a7f308a5078",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 244,
+      "effort3_max_abs_ev_difference": 1.3322880185601127e-06,
+      "effort4_max_abs_ev_difference": 2.8363575377277073e-11,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "4d5bc7ecc2bc5ffaec8a",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 245,
+      "effort3_max_abs_ev_difference": 5.813974415652678e-07,
+      "effort4_max_abs_ev_difference": 1.3877787807814457e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "a9de845f7f06502a8cfe",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 246,
+      "effort3_max_abs_ev_difference": 1.4020773885653481e-06,
+      "effort4_max_abs_ev_difference": 6.270470254143845e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "88e5397fc3537df4407d",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 247,
+      "effort3_max_abs_ev_difference": 1.2170839691627577e-07,
+      "effort4_max_abs_ev_difference": 8.171241461241152e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "2c67a391067c39971fa6",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 248,
+      "effort3_max_abs_ev_difference": 1.6361687876775832e-07,
+      "effort4_max_abs_ev_difference": 1.5543122344752192e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b7d82486c52f8d31ac5e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 249,
+      "effort3_max_abs_ev_difference": 2.135430328120691e-07,
+      "effort4_max_abs_ev_difference": 2.3958168782201028e-11,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "66fcd58e385d555b0d33",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 250,
+      "effort3_max_abs_ev_difference": 1.5941680744924192e-07,
+      "effort4_max_abs_ev_difference": 4.537550890582054e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "a58a064ffc5d103977d2",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 251,
+      "effort3_max_abs_ev_difference": 1.7711130378961215e-07,
+      "effort4_max_abs_ev_difference": 5.784261958297066e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "37debb0cdd57b929a111",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 252,
+      "effort3_max_abs_ev_difference": 1.0550588713797993e-07,
+      "effort4_max_abs_ev_difference": 5.2735593669694936e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "806d9720c2016f7ea9be",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 253,
+      "effort3_max_abs_ev_difference": 1.1780101044633895e-07,
+      "effort4_max_abs_ev_difference": 1.5584755708175635e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "e57b557cf959000dc780",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 254,
+      "effort3_max_abs_ev_difference": 3.0180226084919326e-07,
+      "effort4_max_abs_ev_difference": 4.163336342344337e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "dc22df13df506c53345f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 255,
+      "effort3_max_abs_ev_difference": 1.182917719055876e-07,
+      "effort4_max_abs_ev_difference": 2.4952262478450393e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "eabdce5fd3363b927374",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 256,
+      "effort3_max_abs_ev_difference": 1.2140523608650255e-07,
+      "effort4_max_abs_ev_difference": 2.293165657363261e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "5d1a07cf8175a44d00e6",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 257,
+      "effort3_max_abs_ev_difference": 1.8848297506091072e-07,
+      "effort4_max_abs_ev_difference": 5.551115123125783e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b49793261df1b3504b78",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 258,
+      "effort3_max_abs_ev_difference": 1.6521541690295294e-07,
+      "effort4_max_abs_ev_difference": 1.7208456881689926e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "6375ae117c2c37b7997e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 259,
+      "effort3_max_abs_ev_difference": 1.7869380963819737e-07,
+      "effort4_max_abs_ev_difference": 5.35682609381638e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "eb78cebb14ac77a27292",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 260,
+      "effort3_max_abs_ev_difference": 1.5506578099344637e-07,
+      "effort4_max_abs_ev_difference": 5.488942633746774e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "6be8b8caa816fef8314b",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 261,
+      "effort3_max_abs_ev_difference": 1.2532618081095848e-06,
+      "effort4_max_abs_ev_difference": 7.546741009889502e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b8df3bf64753cb31b303",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 262,
+      "effort3_max_abs_ev_difference": 2.389823784421097e-07,
+      "effort4_max_abs_ev_difference": 2.8910207561239076e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "de743e0a74070c3a3604",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 263,
+      "effort3_max_abs_ev_difference": 1.5620611587552347e-07,
+      "effort4_max_abs_ev_difference": 4.41591208044656e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "4ce09977dd65f224a2ee",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 264,
+      "effort3_max_abs_ev_difference": 2.439215172345133e-07,
+      "effort4_max_abs_ev_difference": 6.505074257034948e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "66ed4282df562a72f84f",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 265,
+      "effort3_max_abs_ev_difference": 1.2097470295652224e-07,
+      "effort4_max_abs_ev_difference": 2.2235685515070713e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9b514b31b25f03665b5e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 266,
+      "effort3_max_abs_ev_difference": 1.1840472077806474e-07,
+      "effort4_max_abs_ev_difference": 1.0702549957386509e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "08b62543d12765a4400a",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 267,
+      "effort3_max_abs_ev_difference": 3.567854779396029e-07,
+      "effort4_max_abs_ev_difference": 3.11972669919669e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "87a1e1e40f4eb264493e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 268,
+      "effort3_max_abs_ev_difference": 3.1102385644743435e-07,
+      "effort4_max_abs_ev_difference": 9.200140649312516e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "3f9b595bba5dcbc5b0a9",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 269,
+      "effort3_max_abs_ev_difference": 2.1425117097129132e-07,
+      "effort4_max_abs_ev_difference": 2.7200464103316335e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "f78e6389b66e48d0680e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 270,
+      "effort3_max_abs_ev_difference": 2.4404406870903728e-06,
+      "effort4_max_abs_ev_difference": 1.81868659021589e-10,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "76c79d2ec5d9bfb9b07e",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 271,
+      "effort3_max_abs_ev_difference": 1.9053412497749278e-07,
+      "effort4_max_abs_ev_difference": 1.4988010832439613e-15,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "c13ceb57e149b46f974d",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 272,
+      "effort3_max_abs_ev_difference": 1.4943641831605126e-07,
+      "effort4_max_abs_ev_difference": 1.44953493652622e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "78ff1c62443ef792be01",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 273,
+      "effort3_max_abs_ev_difference": 1.1283582293519778e-07,
+      "effort4_max_abs_ev_difference": 1.759703494030873e-14,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "b0e5e927319e0d047739",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 274,
+      "effort3_max_abs_ev_difference": 1.5033570888167702e-07,
+      "effort4_max_abs_ev_difference": 4.6118664442929e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "de67362c0e9ece144456",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 275,
+      "effort3_max_abs_ev_difference": 2.087321595220515e-06,
+      "effort4_max_abs_ev_difference": 2.992703307391764e-12,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "abcf9b20ef35b8039384",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 276,
+      "effort3_max_abs_ev_difference": 4.0683828175791525e-07,
+      "effort4_max_abs_ev_difference": 2.7755575615628914e-17,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "9ee66ffe772b98f69d36",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 277,
+      "effort3_max_abs_ev_difference": 1.2043969740416216e-06,
+      "effort4_max_abs_ev_difference": 2.619379713131309e-11,
+      "best_action_agrees_at_unchanged_tolerance": true
+    },
+    {
+      "state_id": "ac65ec7319cc829eb0d4",
+      "original_failed": true,
+      "classification": "explained_by_reference_tracking_truncation_in_sample",
+      "diagnostic_artifact": "validation\\reference_engines\\results\\hhoppe-pruning-all-failures.json",
+      "diagnostic_result_index": 278,
+      "effort3_max_abs_ev_difference": 1.4387403357574158e-07,
+      "effort4_max_abs_ev_difference": 4.4986236957811343e-13,
+      "best_action_agrees_at_unchanged_tolerance": true
+    }
+  ],
+  "generated_at": "2026-10-03T00:39:31.553304+00:00"
+}

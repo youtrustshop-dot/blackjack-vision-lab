@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "built",
+  "provenance": {
+    "repository": "mhluska/blackjack-simulator",
+    "revision": "baf76d24ae1b7b734c5fbc960080380463ac7571",
+    "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\mhluska-reference",
+    "revision_verified": true,
+    "tracked_tree_clean": true,
+    "license": "MIT"
+  },
+  "argv": [
+    "C:\\Users\\User\\AppData\\Local\\Programs\\nodejs\\node.EXE",
+    "C:\\Users\\User\\AppData\\Local\\Programs\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "run",
+    "build"
+  ],
+  "returncode": 0,
+  "build_log": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\outputs\\blackjack-vision-lab\\validation\\reference_engines\\results\\mhluska-build.build.log",
+  "build_log_sha256": "2f434966ffa73fb0ea43aeba707d63e03cab6890f232bb4b5abe3c8e99c98c59",
+  "bundles": {
+    "dist/main.js": "44fc7eb020a66af5106cb841ce74e2f282f21bb0996bade50b5c589668f134cc",
+    "dist/simulate.min.js": "3ae622b04cce96cb1b2a6acb60669781ac4a9d432312b74b1a78ea4bdf02683a",
+    "bin/cli.js": "af403d93ead282c0009e5515d1160c53d2b8972411f4062a620f9c8ce297ea37"
+  },
+  "package_lock_sha256": "a98bb31218a250da7b307b4ad86c6ab63b2f0d46ed7a71d4c80eed244bce734c",
+  "node_version": "v24.21.0",
+  "dependency_note": "External development dependencies previously installed with npm ci --ignore-scripts from the pinned lock; application has no dependency on them.",
+  "built_at": "2026-10-03T00:34:49.658357+00:00"
+}

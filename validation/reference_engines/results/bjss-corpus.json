@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "passed": true,
+  "comparison_executed": true,
+  "exact_reference": false,
+  "provenance": {
+    "repository": "AttackingOrDefending/Blackjack-Strategy-Simulator",
+    "revision": "c7763771e6e2f90ae5a998dc70b7647103f6708d",
+    "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\bjss-reference",
+    "revision_verified": true,
+    "tracked_tree_clean": true,
+    "license": "AGPL-3.0"
+  },
+  "source_url": "https://github.com/AttackingOrDefending/Blackjack-Strategy-Simulator/blob/c7763771e6e2f90ae5a998dc70b7647103f6708d/best_move.py",
+  "source_sha256": "dda51d24250d89915ec5fb9ffc8a146a36deb6952f8830eee406fe0e33e0f17f",
+  "native_sha256": "ea14fa586a3e382a313a09753e21a277ed93258be790188cb8f186fae8a5a40c",
+  "cases": [
+    {
+      "id": "S17-hard16-v10",
+      "status": "passed",
+      "passed": true,
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        10,
+        6
+      ],
+      "dealer": 10,
+      "counts": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        23,
+        24,
+        24,
+        24,
+        94
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.5409544390190253,
+          "hit": -0.5346755624525633,
+          "double": -1.0693511249051266,
+          "surrender": -0.5
+        },
+        "best_action": "surrender",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.019099999917671084
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.37629999860655516
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 1.9702999998116866
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 6.625200003327336
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "surrender",
+        "missing_actions": [],
+        "nodes": 570,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.03467556245256331,
+        "latency_ms": 9.182800000417046,
+        "latency": 9.182800000417046
+      },
+      "reference": {
+        "status": "executed",
+        "comparison_executed": true,
+        "exact": false,
+        "actions": {
+          "stand": -0.5409544390190252,
+          "hit": -0.5346755624525634,
+          "double": -1.0693511249051268,
+          "surrender": -0.5
+        },
+        "best_action": "surrender",
+        "precision_note": "No general exactness claim: upstream explicitly limits split calculation; this corpus excludes splits.",
+        "raw_stdout": "Profits: Stand: -0.5409544390190252, Hit: -0.5346755624525634, Double: -1.0693511249051268, Split: -1000.0, Surrender: -0.5, Insurance: -1000.0\n",
+        "raw_stderr": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\bjss-reference\\best_move.py:613: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+        "argv": [
+          "..\\..\\work\\venv-bjlab\\Scripts\\python.exe",
+          "-I",
+          "-c",
+          "import sys,runpy;sys.path.insert(0,sys.argv[1]);sys.argv=sys.argv[2:];runpy.run_path(sys.argv[0],run_name='__main__')",
+          "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\bjss-reference",
+          "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\bjss-reference\\best_move.py",
+          "--cards=10,6",
+          "--dealer-card=10",
+          "--decks=6",
+          "--splits=1",
+          "--stand17",
+          "--das",
+          "--peek",
+          "--surrender"
+        ],
+        "headless_backend": "Agg",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": false,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        }
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-09,
+        "differences": {
+          "stand": -1.1102230246251565e-16,
+          "hit": 1.1102230246251565e-16,
+          "double": 2.220446049250313e-16,
+          "surrender": 0.0
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true
+    },
+    {
+      "id": "H17-hard16-v10",
+      "status": "passed",
+      "passed": true,
+      "rules": {
+        "decks": 6,
+        "hit_soft17": true,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        10,
+        6
+      ],
+      "dealer": 10,
+      "counts": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        23,
+        24,
+        24,
+        24,
+        94
+      ],
+      "native": {
+        "actions": {
+          "stand": -0.5409544390190253,
+          "hit": -0.5346755624525633,
+          "double": -1.0693511249051266,
+          "surrender": -0.5
+        },
+        "best_action": "surrender",
+        "method": "finite-shoe-enumeration",
+        "exact": true,
+        "error": null,
+        "status": "ok",
+        "warnings": [],
+        "action_details": {
+          "surrender": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.020799998310394585
+          },
+          "stand": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 0.5646000063279644
+          },
+          "double": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 2.208400001109112
+          },
+          "hit": {
+            "exact": true,
+            "method": "finite-shoe-enumeration",
+            "latency_ms": 5.1234000056865625
+          }
+        },
+        "ev_units": "net profit per original bet",
+        "split_dealing": "sequential",
+        "hidden_information": "marginalized",
+        "best_evaluated_action": "surrender",
+        "missing_actions": [],
+        "nodes": 570,
+        "peek_resolved": true,
+        "future_peek_integrated": false,
+        "insurance": {
+          "available": false,
+          "probability_blackjack": 0.0,
+          "ev": null,
+          "take": false
+        },
+        "ev_gap": 0.03467556245256331,
+        "latency_ms": 8.080799998424482,
+        "latency": 8.080799998424482
+      },
+      "reference": {
+        "status": "executed",
+        "comparison_executed": true,
+        "exact": false,
+        "actions": {
+          "stand": -0.5409544390190252,
+          "hit": -0.5346755624525634,
+          "double": -1.0693511249051268,
+          "surrender": -0.5
+        },
+        "best_action": "surrender",
+        "precision_note": "No general exactness claim: upstream explicitly limits split calculation; this corpus excludes splits.",
+        "raw_stdout": "Profits: Stand: -0.5409544390190252, Hit: -0.5346755624525634, Double: -1.0693511249051268, Split: -1000.0, Surrender: -0.5, Insurance: -1000.0\n",
+        "raw_stderr": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\bjss-reference\\best_move.py:613: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+        "argv": [
+          "..\\..\\work\\venv-bjlab\\Scripts\\python.exe",
+          "-I",
+          "-c",
+          "import sys,runpy;sys.path.insert(0,sys.argv[1]);sys.argv=sys.argv[2:];runpy.run_path(sys.argv[0],run_name='__main__')",
+          "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\bjss-reference",
+          "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\bjss-reference\\best_move.py",
+          "--cards=10,6",
+          "--dealer-card=10",
+          "--decks=6",
+          "--splits=1",
+          "--hit17",
+          "--das",
+          "--peek",
+          "--surrender"
+        ],
+        "headless_backend": "Agg",
+        "requested_rules": {
+          "decks": 6,
+          "hit_soft17": true,
+          "blackjack_payout": 1.5,
+          "dealer_peek": true,
+          "enhc": false,
+          "enhc_loss": "all",
+          "double_rule": "any",
+          "double_after_split": true,
+          "resplit": true,
+          "max_split_hands": 4,
+          "resplit_aces": false,
+          "hit_split_aces": false,
+          "surrender": "late",
+          "penetration": 0.75
+        }
+      },
+      "comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-09,
+        "differences": {
+          "stand": -1.1102230246251565e-16,
+          "hit": 1.1102230246251565e-16,
+          "double": 2.220446049250313e-16,
+          "surrender": 0.0
+        },
+        "compared_actions": [
+          "stand",
+          "hit",
+          "double",
+          "surrender"
+        ]
+      },
+      "best_action_agrees": true
+    }
+  ],
+  "scope": "Fresh six-deck initial nonsplit 10,6 against 10, negative American peek, any-two double, late surrender, S17/H17.",
+  "license": "AGPL v3-or-later; external subprocess only, no upstream code copied into application.",
+  "unsupported": [
+    "Splits/resplits",
+    "Initial naturals",
+    "ENHC/OBO/no-peek equivalence",
+    "Early surrender",
+    "Restricted doubling"
+  ],
+  "executed_at": "2026-10-03T00:31:58.286406+00:00"
+}

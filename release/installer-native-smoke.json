@@ -1,0 +1,62 @@
+{
+  "status": "pass",
+  "native_window_created": true,
+  "window_visible": false,
+  "window_title": "Blackjack Vision Lab",
+  "window_size": [
+    1456,
+    979
+  ],
+  "native_binary": "blackjack-vision-lab.exe",
+  "source_independent_launch": true,
+  "native_sha256": "73b5c458de8ba465ab83d1c2f8fc4df9dc33fc10ee5798f86a37e64e21f03dcd",
+  "runtime_path": "Windows System32 only; no Python/Node/Rust/build-tool paths",
+  "backend": {
+    "status": "ok",
+    "version": "0.1.0",
+    "service": "Blackjack Vision Lab",
+    "local_only": true,
+    "truth_boundary": "debug endpoint excluded from solver inputs"
+  },
+  "ephemeral_local_port": true,
+  "ui_asset_bytes": 282393,
+  "ui_matches_final_build": true,
+  "ui_javascript_sha256": "b3f7e4db7ab7a08f965663d3d3fbce7dac28b82b2c4ede7b59e5bfcbc0303633",
+  "bundled_roadmap_matches_final_source": true,
+  "bundled_roadmap_release_verified": true,
+  "bundled_desktop_status": "verified",
+  "bundled_delivery_status": "verified",
+  "fresh_frozen_solver_exact": true,
+  "solver_best_action": "double",
+  "solver_service_latency_ms": 1509.4081000061124,
+  "pixel_perceived_cards": 3,
+  "pixel_rules": {
+    "soft17": "S17",
+    "hole_card": "AHC",
+    "peek": "PEEK",
+    "das": "DAS",
+    "rsa": "NRSA",
+    "surrender": "LS",
+    "blackjack_payout": "BJ3:2",
+    "decks": 6
+  },
+  "native_window_close_exit_code": 0,
+  "owned_backend_exited": true,
+  "local_port_closed": true,
+  "new_mei_leaks": 0,
+  "bootloader_cleanup_wait_ms": 404.2706999971415,
+  "controlled_window_capture": null,
+  "controlled_window_capture_attempt": {
+    "status": "obstructed",
+    "reason": "Windows shutdown notification appeared in the screen compositor over the owned client rectangle; this attempt is not accepted as clean capture proof.",
+    "image_sha256": "d0938b9eb77d7b1b5c32aba4acecc5e6978c6bd0fd750e0cf3c469b06753649b",
+    "preserved_diagnostic": "work/desktop-diagnostics/obstructed-final-capture",
+    "capture_latency_ms": 164.27909999765689
+  },
+  "controlled_window_capture_reference": {
+    "receipt": "owned-window-capture-smoke.json",
+    "stage": "prior fresh final-core/UI build before metadata-only roadmap refresh",
+    "image": "owned-window-capture.png",
+    "sha256": "9e28ff7fa5fe8e194f70d39a869a14114ead111c7a3ab7a68fdcca443ea6d564"
+  }
+}

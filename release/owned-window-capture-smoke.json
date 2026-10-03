@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "stage": "fresh final core and UI, before metadata-only roadmap refresh",
+  "capture": {
+    "adapter": "LocalWindowCapture/mss",
+    "source": "explicit owned native client rectangle",
+    "native_pid": 103636,
+    "rectangle": {
+      "left": 18,
+      "top": 41,
+      "width": 1264,
+      "height": 861
+    },
+    "rgb_standard_deviation": 77.46722039538264,
+    "latency_ms": 166.4435999991838,
+    "image": "owned-window-capture.png",
+    "sha256": "9e28ff7fa5fe8e194f70d39a869a14114ead111c7a3ab7a68fdcca443ea6d564",
+    "other_windows_or_full_screen_captured": false
+  },
+  "provenance": {
+    "backend_sha256": "441c6f2a39f2424728219c052983f29c97fb7f0a67ce35bc7c3be35e3ee063f4",
+    "installer_sha256": "028f90046a0612302608688f9a37a1e4dd01e0e7c5fe7941491a6b14d6404ab1",
+    "installed_native_sha256": "73b5c458de8ba465ab83d1c2f8fc4df9dc33fc10ee5798f86a37e64e21f03dcd",
+    "ui_javascript_sha256": "b3f7e4db7ab7a08f965663d3d3fbce7dac28b82b2c4ede7b59e5bfcbc0303633",
+    "engine_sha256": "3b9b68f6f6d124f17c7d1e6895ce149eb42ab66b06e1ab6e39545d078b5035ba",
+    "solver_sha256": "a219f3d90f82bd4dd22c4f3cafde5001577c86732859b88c9b682577a42f6397",
+    "strategy_sha256": "bf36116f0a8bf89008eafe87c3ec29a4e04c5cf96b997fb870fc802f3dbe9741"
+  },
+  "source_receipts": {
+    "owned-window-capture.png": {
+      "path": "prior-fresh-core-proof/owned-window-capture.png",
+      "sha256": "9e28ff7fa5fe8e194f70d39a869a14114ead111c7a3ab7a68fdcca443ea6d564"
+    },
+    "backend-smoke.json": {
+      "path": "prior-fresh-core-proof/backend-smoke.json",
+      "sha256": "af0815bb29f4395b28595470116312a8ab4bd47b91042acdf7f2e24fdaa3bc9d"
+    },
+    "installer-smoke.json": {
+      "path": "prior-fresh-core-proof/installer-smoke.json",
+      "sha256": "7aa933812a5c65357105433d8fefc0159bbbdc975faa754ff52cc09a482c670b"
+    },
+    "installer-native-smoke.json": {
+      "path": "prior-fresh-core-proof/installer-native-smoke.json",
+      "sha256": "f7a4567901b256b615c2e32e3334aee71bad681cb6f47b408877193bdf99c987"
+    }
+  },
+  "qualification": "This clean actual owned-window MSS capture belongs to the prior fresh-core build. The final metadata-only build changed the backend documentation bundle, while native code, current core and UI were unchanged. Final metadata HTTP/native/installation proofs are recorded separately; this is not asserted as a newly captured image of those new backend bytes."
+}

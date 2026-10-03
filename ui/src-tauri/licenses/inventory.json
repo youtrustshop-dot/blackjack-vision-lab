@@ -1,0 +1,5051 @@
+{
+  "components": [
+    {
+      "ecosystem": "python",
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "license": "MIT",
+      "files": [
+        "python/annotated-doc-0.0.5/annotated_doc-0.0.5.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "license": "MIT",
+      "files": [
+        "python/annotated-types-0.8.0/annotated_types-0.8.0.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "anyio",
+      "version": "4.15.1",
+      "license": "MIT",
+      "files": [
+        "python/anyio-4.15.1/anyio-4.15.1.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "click",
+      "version": "8.5.0",
+      "license": "BSD-3-Clause",
+      "files": [
+        "python/click-8.5.0/click-8.5.0.dist-info/licenses/LICENSE.txt"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "fastapi",
+      "version": "0.142.2",
+      "license": "MIT",
+      "files": [
+        "python/fastapi-0.142.2/fastapi-0.142.2.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "h11",
+      "version": "0.16.0",
+      "license": "MIT",
+      "files": [
+        "python/h11-0.16.0/h11-0.16.0.dist-info/licenses/LICENSE.txt"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "hypothesis",
+      "version": "6.168.3",
+      "license": "MPL-2.0",
+      "files": [
+        "python/hypothesis-6.168.3/hypothesis-6.168.3.dist-info/licenses/LICENSE.txt"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "idna",
+      "version": "3.20",
+      "license": "BSD-3-Clause",
+      "files": [
+        "python/idna-3.20/idna-3.20.dist-info/licenses/LICENSE.md"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "more-itertools",
+      "version": "11.1.0",
+      "license": "MIT",
+      "files": [
+        "python/more-itertools-11.1.0/more_itertools-11.1.0.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "mss",
+      "version": "10.2.0",
+      "license": "MIT License\nCopyright (c) 2013-2026, Micka\u00ebl 'Tiger-222' Schoentgen\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "files": [
+        "python/mss-10.2.0/mss-10.2.0.dist-info/licenses/LICENSE.txt"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "numpy",
+      "version": "2.5.3",
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "files": [
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/LICENSE.txt",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/ma/LICENSE",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/LICENSE.md",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+        "python/numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+        "python/numpy-2.5.3/numpy/_core/include/numpy/random/LICENSE.txt",
+        "python/numpy-2.5.3/numpy/ma/LICENSE",
+        "python/numpy-2.5.3/numpy/random/LICENSE.md"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "opencv-python-headless",
+      "version": "5.0.0.93",
+      "license": "Apache 2.0",
+      "files": [
+        "python/opencv-python-headless-5.0.0.93/cv2/LICENSE-3RD-PARTY.txt",
+        "python/opencv-python-headless-5.0.0.93/cv2/LICENSE.txt",
+        "python/opencv-python-headless-5.0.0.93/opencv_python_headless-5.0.0.93.dist-info/LICENSE-3RD-PARTY.txt",
+        "python/opencv-python-headless-5.0.0.93/opencv_python_headless-5.0.0.93.dist-info/LICENSE.txt"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "opentelemetry-api",
+      "version": "1.45.0",
+      "license": "Apache-2.0",
+      "files": [
+        "python/opentelemetry-api-1.45.0/opentelemetry_api-1.45.0.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "packaging",
+      "version": "26.3",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "files": [
+        "python/packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE",
+        "python/packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+        "python/packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE.BSD"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "pillow",
+      "version": "12.3.0",
+      "license": "MIT-CMU",
+      "files": [
+        "python/pillow-12.3.0/pillow-12.3.0.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "pydantic",
+      "version": "2.13.5",
+      "license": "MIT",
+      "files": [
+        "python/pydantic-2.13.5/pydantic-2.13.5.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "pydantic_core",
+      "version": "2.46.5",
+      "license": "MIT",
+      "files": [
+        "python/pydantic_core-2.46.5/pydantic_core-2.46.5.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "pyinstaller",
+      "version": "6.22.3",
+      "license": "GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones)",
+      "files": [
+        "python/pyinstaller-6.22.3/pyinstaller-6.22.3.dist-info/licenses/COPYING.txt"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.8",
+      "license": null,
+      "files": [
+        "python/pyinstaller-hooks-contrib-2026.8/pyinstaller_hooks_contrib-2026.8.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "pytest",
+      "version": "9.1.1",
+      "license": "MIT",
+      "files": [
+        "python/pytest-9.1.1/pytest-9.1.1.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "setuptools",
+      "version": "84.0.0",
+      "license": "MIT",
+      "files": [
+        "python/setuptools-84.0.0/setuptools-84.0.0.dist-info/licenses/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE",
+        "python/setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD",
+        "python/setuptools-84.0.0/setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE",
+        "python/setuptools-84.0.0/setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt",
+        "python/setuptools-84.0.0/setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE",
+        "python/setuptools-84.0.0/setuptools/config/NOTICE",
+        "python/setuptools-84.0.0/setuptools/config/_validate_pyproject/NOTICE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "sortedcontainers",
+      "version": "2.4.0",
+      "license": "Apache 2.0",
+      "files": [
+        "python/sortedcontainers-2.4.0/sortedcontainers-2.4.0.dist-info/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "starlette",
+      "version": "1.7.0",
+      "license": "BSD-3-Clause",
+      "files": [
+        "python/starlette-1.7.0/starlette-1.7.0.dist-info/licenses/LICENSE.md"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "license": "MIT",
+      "files": [
+        "python/typing-inspection-0.4.4/typing_inspection-0.4.4.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "license": "PSF-2.0",
+      "files": [
+        "python/typing_extensions-4.16.0/typing_extensions-4.16.0.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "python",
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "license": "BSD-3-Clause",
+      "files": [
+        "python/uvicorn-0.54.0/uvicorn-0.54.0.dist-info/licenses/LICENSE.md"
+      ]
+    },
+    {
+      "ecosystem": "runtime",
+      "name": "CPython",
+      "version": "3.12.14",
+      "files": [
+        "runtime/CPython-LICENSE.txt"
+      ]
+    },
+    {
+      "ecosystem": "font",
+      "name": "DejaVu Sans",
+      "version": "2.37",
+      "files": [
+        "font/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "adler2",
+      "version": "2.0.1",
+      "license": "0BSD OR MIT OR Apache-2.0",
+      "repository": "https://github.com/oyvindln/adler2",
+      "files": [
+        "rust/adler2-2.0.1/LICENSE-0BSD",
+        "rust/adler2-2.0.1/LICENSE-APACHE",
+        "rust/adler2-2.0.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "aho-corasick",
+      "version": "1.1.5",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/aho-corasick",
+      "files": [
+        "rust/aho-corasick-1.1.5/COPYING",
+        "rust/aho-corasick-1.1.5/LICENSE-MIT",
+        "rust/aho-corasick-1.1.5/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "alloc-no-stdlib",
+      "version": "3.0.0",
+      "license": "BSD-3-Clause",
+      "repository": "https://github.com/dropbox/rust-alloc-no-stdlib",
+      "files": [
+        "rust/alloc-no-stdlib-3.0.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "alloc-stdlib",
+      "version": "0.3.0",
+      "license": "BSD-3-Clause",
+      "repository": "https://github.com/dropbox/rust-alloc-no-stdlib",
+      "files": [
+        "rust/alloc-stdlib-0.3.0/upstream/LICENSE",
+        "rust/alloc-stdlib-0.3.0/upstream/LICENSE.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "android_system_properties",
+      "version": "0.1.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/nical/android_system_properties",
+      "files": [
+        "rust/android_system_properties-0.1.6/LICENSE-APACHE",
+        "rust/android_system_properties-0.1.6/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "anyhow",
+      "version": "1.0.104",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/anyhow",
+      "files": [
+        "rust/anyhow-1.0.104/LICENSE-APACHE",
+        "rust/anyhow-1.0.104/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "atk",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/atk-0.18.2/COPYRIGHT",
+        "rust/atk-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "atk-sys",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/atk-sys-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "atomic-waker",
+      "version": "1.1.2",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/smol-rs/atomic-waker",
+      "files": [
+        "rust/atomic-waker-1.1.2/LICENSE-APACHE",
+        "rust/atomic-waker-1.1.2/LICENSE-MIT",
+        "rust/atomic-waker-1.1.2/LICENSE-THIRD-PARTY"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "autocfg",
+      "version": "1.5.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/cuviper/autocfg",
+      "files": [
+        "rust/autocfg-1.5.1/LICENSE-APACHE",
+        "rust/autocfg-1.5.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "base64",
+      "version": "0.21.7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/marshallpierce/rust-base64",
+      "files": [
+        "rust/base64-0.21.7/LICENSE-APACHE",
+        "rust/base64-0.21.7/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "base64",
+      "version": "0.22.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/marshallpierce/rust-base64",
+      "files": [
+        "rust/base64-0.22.1/LICENSE-APACHE",
+        "rust/base64-0.22.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "base64",
+      "version": "0.23.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/marshallpierce/rust-base64",
+      "files": [
+        "rust/base64-0.23.1/LICENSE-APACHE",
+        "rust/base64-0.23.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "bit-set",
+      "version": "0.8.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/contain-rs/bit-set",
+      "files": [
+        "rust/bit-set-0.8.0/LICENSE-APACHE",
+        "rust/bit-set-0.8.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "bit-vec",
+      "version": "0.8.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/contain-rs/bit-vec",
+      "files": [
+        "rust/bit-vec-0.8.0/LICENSE-APACHE",
+        "rust/bit-vec-0.8.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "bitflags",
+      "version": "1.3.2",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/bitflags/bitflags",
+      "files": [
+        "rust/bitflags-1.3.2/LICENSE-APACHE",
+        "rust/bitflags-1.3.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "bitflags",
+      "version": "2.13.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/bitflags/bitflags",
+      "files": [
+        "rust/bitflags-2.13.2/LICENSE-APACHE",
+        "rust/bitflags-2.13.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "block-buffer",
+      "version": "0.10.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RustCrypto/utils",
+      "files": [
+        "rust/block-buffer-0.10.4/LICENSE-APACHE",
+        "rust/block-buffer-0.10.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "block2",
+      "version": "0.6.2",
+      "license": "MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/block2-0.6.2/upstream/LICENSE.md",
+        "rust/block2-0.6.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "brotli",
+      "version": "9.0.0",
+      "license": "BSD-3-Clause AND MIT",
+      "repository": "https://github.com/dropbox/rust-brotli",
+      "files": [
+        "rust/brotli-9.0.0/LICENSE.BSD-3-Clause",
+        "rust/brotli-9.0.0/LICENSE.MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "brotli-decompressor",
+      "version": "6.0.1",
+      "license": "BSD-3-Clause/MIT",
+      "repository": "https://github.com/dropbox/rust-brotli-decompressor",
+      "files": [
+        "rust/brotli-decompressor-6.0.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "bs58",
+      "version": "0.5.1",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/Nullus157/bs58-rs",
+      "files": [
+        "rust/bs58-0.5.1/LICENSE-APACHE",
+        "rust/bs58-0.5.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/fitzgen/bumpalo",
+      "files": [
+        "rust/bumpalo-3.20.3/LICENSE-APACHE",
+        "rust/bumpalo-3.20.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "bytemuck",
+      "version": "1.25.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/Lokathor/bytemuck",
+      "files": [
+        "rust/bytemuck-1.25.2/LICENSE-APACHE",
+        "rust/bytemuck-1.25.2/LICENSE-MIT",
+        "rust/bytemuck-1.25.2/LICENSE-ZLIB"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "byteorder",
+      "version": "1.5.0",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/byteorder",
+      "files": [
+        "rust/byteorder-1.5.0/COPYING",
+        "rust/byteorder-1.5.0/LICENSE-MIT",
+        "rust/byteorder-1.5.0/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "bytes",
+      "version": "1.12.1",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/bytes",
+      "files": [
+        "rust/bytes-1.12.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cairo-rs",
+      "version": "0.18.5",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/cairo-rs-0.18.5/COPYRIGHT",
+        "rust/cairo-rs-0.18.5/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cairo-sys-rs",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/cairo-sys-rs-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "camino",
+      "version": "1.2.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/camino-rs/camino",
+      "files": [
+        "rust/camino-1.2.6/LICENSE-APACHE",
+        "rust/camino-1.2.6/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cargo-platform",
+      "version": "0.1.9",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cargo",
+      "files": [
+        "rust/cargo-platform-0.1.9/LICENSE-APACHE",
+        "rust/cargo-platform-0.1.9/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cargo_metadata",
+      "version": "0.19.2",
+      "license": "MIT",
+      "repository": "https://github.com/oli-obk/cargo_metadata",
+      "files": [
+        "rust/cargo_metadata-0.19.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cargo_toml",
+      "version": "1.0.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://gitlab.com/lib.rs/cargo_toml",
+      "files": [
+        "rust/cargo_toml-1.0.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cc",
+      "version": "1.5.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cc-rs",
+      "files": [
+        "rust/cc-1.5.1/LICENSE-APACHE",
+        "rust/cc-1.5.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cesu8",
+      "version": "1.1.0",
+      "license": "Apache-2.0/MIT",
+      "repository": "https://github.com/emk/cesu8-rs",
+      "files": [
+        "rust/cesu8-1.1.0/COPYRIGHT-RUST.txt"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cfb",
+      "version": "0.14.0",
+      "license": "MIT",
+      "repository": "https://github.com/mdsteele/rust-cfb",
+      "files": [
+        "rust/cfb-0.14.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cfg-expr",
+      "version": "0.15.8",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/EmbarkStudios/cfg-expr",
+      "files": [
+        "rust/cfg-expr-0.15.8/LICENSE-APACHE",
+        "rust/cfg-expr-0.15.8/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cfg-if",
+      "files": [
+        "rust/cfg-if-1.0.5/LICENSE-APACHE",
+        "rust/cfg-if-1.0.5/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "chrono",
+      "version": "0.4.45",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/chronotope/chrono",
+      "files": [
+        "rust/chrono-0.4.45/LICENSE.txt"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "combine",
+      "version": "4.6.8",
+      "license": "MIT",
+      "repository": "https://github.com/Marwes/combine",
+      "files": [
+        "rust/combine-4.6.8/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cookie",
+      "version": "0.18.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/SergioBenitez/cookie-rs",
+      "files": [
+        "rust/cookie-0.18.2/LICENSE-APACHE",
+        "rust/cookie-0.18.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "core-foundation",
+      "version": "0.10.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/core-foundation-rs",
+      "files": [
+        "rust/core-foundation-0.10.1/LICENSE-APACHE",
+        "rust/core-foundation-0.10.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "core-foundation-sys",
+      "version": "0.8.7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/core-foundation-rs",
+      "files": [
+        "rust/core-foundation-sys-0.8.7/LICENSE-APACHE",
+        "rust/core-foundation-sys-0.8.7/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "core-graphics",
+      "version": "0.25.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/core-foundation-rs",
+      "files": [
+        "rust/core-graphics-0.25.0/COPYRIGHT",
+        "rust/core-graphics-0.25.0/LICENSE-APACHE",
+        "rust/core-graphics-0.25.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "core-graphics-types",
+      "version": "0.2.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/core-foundation-rs",
+      "files": [
+        "rust/core-graphics-types-0.2.0/LICENSE-APACHE",
+        "rust/core-graphics-types-0.2.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "core_detect",
+      "version": "1.0.0",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/thomcc/core_detect",
+      "files": [
+        "rust/core_detect-1.0.0/LICENSE-APACHE",
+        "rust/core_detect-1.0.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cpufeatures",
+      "version": "0.2.17",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RustCrypto/utils",
+      "files": [
+        "rust/cpufeatures-0.2.17/LICENSE-APACHE",
+        "rust/cpufeatures-0.2.17/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "crc32fast",
+      "version": "1.5.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/srijs/rust-crc32fast",
+      "files": [
+        "rust/crc32fast-1.5.2/LICENSE-APACHE",
+        "rust/crc32fast-1.5.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "crossbeam-channel",
+      "version": "0.5.17",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/crossbeam-rs/crossbeam",
+      "files": [
+        "rust/crossbeam-channel-0.5.17/LICENSE-APACHE",
+        "rust/crossbeam-channel-0.5.17/LICENSE-MIT",
+        "rust/crossbeam-channel-0.5.17/LICENSE-THIRD-PARTY"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "crossbeam-utils",
+      "version": "0.8.23",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/crossbeam-rs/crossbeam",
+      "files": [
+        "rust/crossbeam-utils-0.8.23/LICENSE-APACHE",
+        "rust/crossbeam-utils-0.8.23/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "crypto-common",
+      "version": "0.1.7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RustCrypto/traits",
+      "files": [
+        "rust/crypto-common-0.1.7/LICENSE-APACHE",
+        "rust/crypto-common-0.1.7/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cssparser",
+      "version": "0.37.0",
+      "license": "MPL-2.0",
+      "repository": "https://github.com/servo/rust-cssparser",
+      "files": [
+        "rust/cssparser-0.37.0/LICENSE",
+        "rust/cssparser-0.37.0/Cargo.toml",
+        "source-archives/cssparser-0.37.0.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "cssparser-macros",
+      "version": "0.7.1",
+      "license": "MPL-2.0",
+      "repository": "https://github.com/servo/rust-cssparser",
+      "files": [
+        "rust/cssparser-macros-0.7.1/LICENSE",
+        "rust/cssparser-macros-0.7.1/Cargo.toml",
+        "source-archives/cssparser-macros-0.7.1.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "ctor",
+      "version": "1.0.13",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/mmastrac/linktime",
+      "files": [
+        "rust/ctor-1.0.13/LICENSE-APACHE",
+        "rust/ctor-1.0.13/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "darling",
+      "version": "0.24.1",
+      "license": "MIT",
+      "repository": "https://github.com/TedDriggs/darling",
+      "files": [
+        "rust/darling-0.24.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "darling_core",
+      "version": "0.24.1",
+      "license": "MIT",
+      "repository": "https://github.com/TedDriggs/darling",
+      "files": [
+        "rust/darling_core-0.24.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "darling_macro",
+      "version": "0.24.1",
+      "license": "MIT",
+      "repository": "https://github.com/TedDriggs/darling",
+      "files": [
+        "rust/darling_macro-0.24.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dbus",
+      "version": "0.9.12",
+      "license": "Apache-2.0/MIT",
+      "repository": "https://github.com/diwic/dbus-rs",
+      "files": [
+        "rust/dbus-0.9.12/LICENSE-APACHE",
+        "rust/dbus-0.9.12/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "defmt",
+      "version": "1.1.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/knurling-rs/defmt",
+      "files": [
+        "rust/defmt-1.1.1/LICENSE-APACHE",
+        "rust/defmt-1.1.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "defmt-macros",
+      "version": "1.1.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/knurling-rs/defmt",
+      "files": [
+        "rust/defmt-macros-1.1.1/LICENSE-APACHE",
+        "rust/defmt-macros-1.1.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "defmt-parser",
+      "version": "1.0.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/knurling-rs/defmt",
+      "files": [
+        "rust/defmt-parser-1.0.0/upstream/LICENSE-APACHE",
+        "rust/defmt-parser-1.0.0/upstream/LICENSE-APACHE.source.json",
+        "rust/defmt-parser-1.0.0/upstream/LICENSE-MIT",
+        "rust/defmt-parser-1.0.0/upstream/LICENSE-MIT.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "deranged",
+      "version": "0.5.8",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jhpratt/deranged",
+      "files": [
+        "rust/deranged-0.5.8/LICENSE-Apache",
+        "rust/deranged-0.5.8/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "derive_more",
+      "version": "2.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/JelteF/derive_more",
+      "files": [
+        "rust/derive_more-2.1.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "derive_more-impl",
+      "version": "2.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/JelteF/derive_more",
+      "files": [
+        "rust/derive_more-impl-2.1.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "digest",
+      "version": "0.10.7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RustCrypto/traits",
+      "files": [
+        "rust/digest-0.10.7/LICENSE-APACHE",
+        "rust/digest-0.10.7/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dirs",
+      "version": "7.0.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://codeberg.org/dirs/dirs-rs",
+      "files": [
+        "rust/dirs-7.0.0/LICENSE-APACHE",
+        "rust/dirs-7.0.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dirs-sys",
+      "version": "0.5.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dirs-dev/dirs-sys-rs",
+      "files": [
+        "rust/dirs-sys-0.5.0/LICENSE-APACHE",
+        "rust/dirs-sys-0.5.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dispatch2",
+      "version": "0.3.1",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/dispatch2-0.3.1/upstream/LICENSE.md",
+        "rust/dispatch2-0.3.1/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "displaydoc",
+      "version": "0.2.7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/yaahc/displaydoc",
+      "files": [
+        "rust/displaydoc-0.2.7/LICENSE-APACHE",
+        "rust/displaydoc-0.2.7/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dlopen2",
+      "version": "0.8.2",
+      "license": "MIT",
+      "repository": "https://github.com/OpenByteDev/dlopen2",
+      "files": [
+        "rust/dlopen2-0.8.2/upstream/LICENSE",
+        "rust/dlopen2-0.8.2/upstream/LICENSE.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dlopen2_derive",
+      "version": "0.4.3",
+      "license": "MIT",
+      "repository": "https://github.com/OpenByteDev/dlopen2",
+      "files": [
+        "rust/dlopen2_derive-0.4.3/upstream/LICENSE",
+        "rust/dlopen2_derive-0.4.3/upstream/LICENSE.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dom_query",
+      "version": "0.28.0",
+      "license": "MIT",
+      "repository": "https://github.com/niklak/dom_query",
+      "files": [
+        "rust/dom_query-0.28.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dpi",
+      "version": "0.1.2",
+      "license": "Apache-2.0 AND MIT",
+      "repository": "https://github.com/rust-windowing/winit",
+      "files": [
+        "rust/dpi-0.1.2/LICENSE",
+        "rust/dpi-0.1.2/LICENSE-LIBM-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dtoa",
+      "version": "1.0.11",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/dtoa",
+      "files": [
+        "rust/dtoa-1.0.11/LICENSE-APACHE",
+        "rust/dtoa-1.0.11/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dtoa-short",
+      "version": "0.3.5",
+      "license": "MPL-2.0",
+      "repository": "https://github.com/upsuper/dtoa-short",
+      "files": [
+        "rust/dtoa-short-0.3.5/LICENSE",
+        "rust/dtoa-short-0.3.5/Cargo.toml",
+        "source-archives/dtoa-short-0.3.5.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dunce",
+      "version": "1.0.5",
+      "license": "CC0-1.0 OR MIT-0 OR Apache-2.0",
+      "repository": "https://gitlab.com/kornelski/dunce",
+      "files": [
+        "rust/dunce-1.0.5/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "dyn-clone",
+      "version": "1.0.20",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/dyn-clone",
+      "files": [
+        "rust/dyn-clone-1.0.20/LICENSE-APACHE",
+        "rust/dyn-clone-1.0.20/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "embed-resource",
+      "version": "3.0.11",
+      "license": "MIT",
+      "repository": "https://github.com/nabijaczleweli/rust-embed-resource",
+      "files": [
+        "rust/embed-resource-3.0.11/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "embed_plist",
+      "version": "1.2.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/nvzqz/embed-plist-rs",
+      "files": [
+        "rust/embed_plist-1.2.2/LICENSE-APACHE",
+        "rust/embed_plist-1.2.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "encoding_rs",
+      "version": "0.8.42",
+      "license": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
+      "repository": "https://github.com/hsivonen/encoding_rs",
+      "files": [
+        "rust/encoding_rs-0.8.42/COPYRIGHT",
+        "rust/encoding_rs-0.8.42/LICENSE-APACHE",
+        "rust/encoding_rs-0.8.42/LICENSE-MIT",
+        "rust/encoding_rs-0.8.42/LICENSE-WHATWG"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "equivalent",
+      "version": "1.0.2",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/indexmap-rs/equivalent",
+      "files": [
+        "rust/equivalent-1.0.2/LICENSE-APACHE",
+        "rust/equivalent-1.0.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "erased-serde",
+      "version": "0.4.10",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/erased-serde",
+      "files": [
+        "rust/erased-serde-0.4.10/LICENSE-APACHE",
+        "rust/erased-serde-0.4.10/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "errno",
+      "version": "0.3.14",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/lambda-fairy/rust-errno",
+      "files": [
+        "rust/errno-0.3.14/LICENSE-APACHE",
+        "rust/errno-0.3.14/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "fastrand",
+      "version": "2.5.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/smol-rs/fastrand",
+      "files": [
+        "rust/fastrand-2.5.0/LICENSE-APACHE",
+        "rust/fastrand-2.5.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "fdeflate",
+      "version": "0.3.7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/image-rs/fdeflate",
+      "files": [
+        "rust/fdeflate-0.3.7/LICENSE-APACHE",
+        "rust/fdeflate-0.3.7/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "field-offset",
+      "version": "0.3.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/Diggsey/rust-field-offset",
+      "files": [
+        "rust/field-offset-0.3.6/LICENSE-APACHE",
+        "rust/field-offset-0.3.6/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "find-msvc-tools",
+      "version": "0.1.14",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cc-rs",
+      "files": [
+        "rust/find-msvc-tools-0.1.14/LICENSE-APACHE",
+        "rust/find-msvc-tools-0.1.14/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "flate2",
+      "version": "1.1.10",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/flate2-rs",
+      "files": [
+        "rust/flate2-1.1.10/LICENSE-APACHE",
+        "rust/flate2-1.1.10/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "fnv",
+      "version": "1.0.7",
+      "license": "Apache-2.0 / MIT",
+      "repository": "https://github.com/servo/rust-fnv",
+      "files": [
+        "rust/fnv-1.0.7/LICENSE-APACHE",
+        "rust/fnv-1.0.7/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "foldhash",
+      "version": "0.2.0",
+      "license": "Zlib",
+      "repository": "https://github.com/orlp/foldhash",
+      "files": [
+        "rust/foldhash-0.2.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "foreign-types",
+      "version": "0.5.0",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/sfackler/foreign-types",
+      "files": [
+        "rust/foreign-types-0.5.0/LICENSE-APACHE",
+        "rust/foreign-types-0.5.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "foreign-types-macros",
+      "version": "0.2.4",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/sfackler/foreign-types",
+      "files": [
+        "rust/foreign-types-macros-0.2.4/LICENSE-APACHE",
+        "rust/foreign-types-macros-0.2.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "foreign-types-shared",
+      "version": "0.3.1",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/sfackler/foreign-types",
+      "files": [
+        "rust/foreign-types-shared-0.3.1/LICENSE-APACHE",
+        "rust/foreign-types-shared-0.3.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-url",
+      "files": [
+        "rust/form_urlencoded-1.2.2/LICENSE-APACHE",
+        "rust/form_urlencoded-1.2.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "futures-channel",
+      "version": "0.3.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "files": [
+        "rust/futures-channel-0.3.34/LICENSE-APACHE",
+        "rust/futures-channel-0.3.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "futures-core",
+      "version": "0.3.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "files": [
+        "rust/futures-core-0.3.34/LICENSE-APACHE",
+        "rust/futures-core-0.3.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "futures-executor",
+      "version": "0.3.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "files": [
+        "rust/futures-executor-0.3.34/LICENSE-APACHE",
+        "rust/futures-executor-0.3.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "futures-io",
+      "version": "0.3.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "files": [
+        "rust/futures-io-0.3.34/LICENSE-APACHE",
+        "rust/futures-io-0.3.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "futures-macro",
+      "version": "0.3.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "files": [
+        "rust/futures-macro-0.3.34/LICENSE-APACHE",
+        "rust/futures-macro-0.3.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "futures-sink",
+      "version": "0.3.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "files": [
+        "rust/futures-sink-0.3.34/LICENSE-APACHE",
+        "rust/futures-sink-0.3.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "futures-task",
+      "version": "0.3.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "files": [
+        "rust/futures-task-0.3.34/LICENSE-APACHE",
+        "rust/futures-task-0.3.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "futures-util",
+      "version": "0.3.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "files": [
+        "rust/futures-util-0.3.34/LICENSE-APACHE",
+        "rust/futures-util-0.3.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gdk",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/gdk-0.18.2/COPYRIGHT",
+        "rust/gdk-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gdk-pixbuf",
+      "version": "0.18.5",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/gdk-pixbuf-0.18.5/COPYRIGHT",
+        "rust/gdk-pixbuf-0.18.5/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gdk-pixbuf-sys",
+      "version": "0.18.0",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/gdk-pixbuf-sys-0.18.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gdk-sys",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/gdk-sys-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gdkwayland-sys",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/gdkwayland-sys-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gdkx11",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/gdkx11-0.18.2/COPYRIGHT",
+        "rust/gdkx11-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gdkx11-sys",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/gdkx11-sys-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "generic-array",
+      "version": "0.14.7",
+      "license": "MIT",
+      "repository": "https://github.com/fizyk20/generic-array.git",
+      "files": [
+        "rust/generic-array-0.14.7/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "getrandom",
+      "version": "0.3.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/getrandom",
+      "files": [
+        "rust/getrandom-0.3.4/LICENSE-APACHE",
+        "rust/getrandom-0.3.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "getrandom",
+      "version": "0.4.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/getrandom",
+      "files": [
+        "rust/getrandom-0.4.3/LICENSE-APACHE",
+        "rust/getrandom-0.4.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gio",
+      "version": "0.18.4",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/gio-0.18.4/COPYRIGHT",
+        "rust/gio-0.18.4/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gio-sys",
+      "version": "0.18.1",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/gio-sys-0.18.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "glib",
+      "version": "0.18.5",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/glib-0.18.5/COPYRIGHT",
+        "rust/glib-0.18.5/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "glib-macros",
+      "version": "0.18.5",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/glib-macros-0.18.5/COPYRIGHT",
+        "rust/glib-macros-0.18.5/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "glib-sys",
+      "version": "0.18.1",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/glib-sys-0.18.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "glob",
+      "version": "0.3.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/glob",
+      "files": [
+        "rust/glob-0.3.4/LICENSE-APACHE",
+        "rust/glob-0.3.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gobject-sys",
+      "version": "0.18.0",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/gobject-sys-0.18.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gtk",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/gtk-0.18.2/COPYRIGHT",
+        "rust/gtk-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gtk-sys",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/gtk-sys-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "gtk3-macros",
+      "version": "0.18.2",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk3-rs",
+      "files": [
+        "rust/gtk3-macros-0.18.2/COPYRIGHT",
+        "rust/gtk3-macros-0.18.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "hashbrown",
+      "version": "0.12.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/hashbrown",
+      "files": [
+        "rust/hashbrown-0.12.3/LICENSE-APACHE",
+        "rust/hashbrown-0.12.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/hashbrown",
+      "files": [
+        "rust/hashbrown-0.17.1/LICENSE-APACHE",
+        "rust/hashbrown-0.17.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "heck",
+      "version": "0.4.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/withoutboats/heck",
+      "files": [
+        "rust/heck-0.4.1/LICENSE-APACHE",
+        "rust/heck-0.4.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "heck",
+      "version": "0.5.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/withoutboats/heck",
+      "files": [
+        "rust/heck-0.5.0/LICENSE-APACHE",
+        "rust/heck-0.5.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "hex",
+      "version": "0.4.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/KokaKiwi/rust-hex",
+      "files": [
+        "rust/hex-0.4.3/LICENSE-APACHE",
+        "rust/hex-0.4.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "html5ever",
+      "version": "0.39.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/html5ever",
+      "files": [
+        "rust/html5ever-0.39.0/LICENSE-APACHE",
+        "rust/html5ever-0.39.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "http",
+      "version": "1.5.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/hyperium/http",
+      "files": [
+        "rust/http-1.5.0/LICENSE-APACHE",
+        "rust/http-1.5.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "http-body",
+      "version": "1.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/hyperium/http-body",
+      "files": [
+        "rust/http-body-1.1.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "http-body-util",
+      "version": "0.1.5",
+      "license": "MIT",
+      "repository": "https://github.com/hyperium/http-body",
+      "files": [
+        "rust/http-body-util-0.1.5/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "httparse",
+      "version": "1.10.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/seanmonstar/httparse",
+      "files": [
+        "rust/httparse-1.10.1/LICENSE-APACHE",
+        "rust/httparse-1.10.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "hyper",
+      "version": "1.11.1",
+      "license": "MIT",
+      "repository": "https://github.com/hyperium/hyper",
+      "files": [
+        "rust/hyper-1.11.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "hyper-util",
+      "version": "0.1.21",
+      "license": "MIT",
+      "repository": "https://github.com/hyperium/hyper-util",
+      "files": [
+        "rust/hyper-util-0.1.21/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "iana-time-zone",
+      "version": "0.1.65",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/strawlab/iana-time-zone",
+      "files": [
+        "rust/iana-time-zone-0.1.65/LICENSE-APACHE",
+        "rust/iana-time-zone-0.1.65/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "iana-time-zone-haiku",
+      "version": "0.1.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/strawlab/iana-time-zone",
+      "files": [
+        "rust/iana-time-zone-haiku-0.1.2/LICENSE-APACHE",
+        "rust/iana-time-zone-haiku-0.1.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "ico",
+      "version": "0.5.0",
+      "license": "MIT",
+      "repository": "https://github.com/mdsteele/rust-ico",
+      "files": [
+        "rust/ico-0.5.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "icu_collections",
+      "version": "2.3.0",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/icu_collections-2.3.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "icu_locale_core",
+      "version": "2.3.0",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/icu_locale_core-2.3.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "icu_normalizer",
+      "version": "2.3.0",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/icu_normalizer-2.3.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "icu_normalizer_data",
+      "version": "2.3.0",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/icu_normalizer_data-2.3.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "icu_properties",
+      "version": "2.3.0",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/icu_properties-2.3.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "icu_properties_data",
+      "version": "2.3.0",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/icu_properties_data-2.3.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "icu_provider",
+      "version": "2.3.1",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/icu_provider-2.3.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "ident_case",
+      "version": "1.0.1",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/TedDriggs/ident_case",
+      "files": [
+        "rust/ident_case-1.0.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "idna",
+      "version": "1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-url/",
+      "files": [
+        "rust/idna-1.1.0/LICENSE-APACHE",
+        "rust/idna-1.1.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "idna_adapter",
+      "version": "1.2.2",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/hsivonen/idna_adapter",
+      "files": [
+        "rust/idna_adapter-1.2.2/LICENSE-APACHE",
+        "rust/idna_adapter-1.2.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "indexmap",
+      "version": "1.9.3",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/bluss/indexmap",
+      "files": [
+        "rust/indexmap-1.9.3/LICENSE-APACHE",
+        "rust/indexmap-1.9.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "indexmap",
+      "version": "2.14.2",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/indexmap-rs/indexmap",
+      "files": [
+        "rust/indexmap-2.14.2/LICENSE-APACHE",
+        "rust/indexmap-2.14.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "infer",
+      "version": "0.22.0",
+      "license": "MIT",
+      "repository": "https://github.com/bojand/infer",
+      "files": [
+        "rust/infer-0.22.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "ipnet",
+      "version": "2.12.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/krisprice/ipnet",
+      "files": [
+        "rust/ipnet-2.12.2/LICENSE-APACHE",
+        "rust/ipnet-2.12.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "is-docker",
+      "version": "0.2.0",
+      "license": "MIT",
+      "repository": "https://github.com/TheLarkInn/is-docker",
+      "files": [
+        "rust/is-docker-0.2.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "is-wsl",
+      "version": "0.4.0",
+      "license": "MIT",
+      "repository": "https://github.com/TheLarkInn/is-wsl",
+      "files": [
+        "rust/is-wsl-0.4.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "itoa",
+      "version": "1.0.18",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/itoa",
+      "files": [
+        "rust/itoa-1.0.18/LICENSE-APACHE",
+        "rust/itoa-1.0.18/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "javascriptcore-rs",
+      "version": "1.1.2",
+      "license": "MIT",
+      "repository": "https://github.com/tauri-apps/javascriptcore-rs",
+      "files": [
+        "rust/javascriptcore-rs-1.1.2/.license_template",
+        "rust/javascriptcore-rs-1.1.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "javascriptcore-rs-sys",
+      "version": "1.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/tauri-apps/javascriptcore-rs",
+      "files": [
+        "rust/javascriptcore-rs-sys-1.1.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jiff",
+      "version": "0.2.37",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/jiff",
+      "files": [
+        "rust/jiff-0.2.37/COPYING",
+        "rust/jiff-0.2.37/LICENSE-MIT",
+        "rust/jiff-0.2.37/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jiff-core",
+      "version": "0.1.1",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/jiff",
+      "files": [
+        "rust/jiff-core-0.1.1/COPYING",
+        "rust/jiff-core-0.1.1/LICENSE-MIT",
+        "rust/jiff-core-0.1.1/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jiff-static",
+      "version": "0.2.37",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/jiff",
+      "files": [
+        "rust/jiff-static-0.2.37/COPYING",
+        "rust/jiff-static-0.2.37/LICENSE-MIT",
+        "rust/jiff-static-0.2.37/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jiff-tzdb",
+      "version": "0.1.8",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/jiff",
+      "files": [
+        "rust/jiff-tzdb-0.1.8/COPYING",
+        "rust/jiff-tzdb-0.1.8/LICENSE-MIT",
+        "rust/jiff-tzdb-0.1.8/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jiff-tzdb-platform",
+      "version": "0.1.3",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/jiff",
+      "files": [
+        "rust/jiff-tzdb-platform-0.1.3/COPYING",
+        "rust/jiff-tzdb-platform-0.1.3/LICENSE-MIT",
+        "rust/jiff-tzdb-platform-0.1.3/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jni",
+      "version": "0.21.1",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/jni-rs/jni-rs",
+      "files": [
+        "rust/jni-0.21.1/LICENSE-APACHE",
+        "rust/jni-0.21.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jni-sys",
+      "version": "0.3.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jni-rs/jni-sys",
+      "files": [
+        "rust/jni-sys-0.3.1/LICENSE-APACHE",
+        "rust/jni-sys-0.3.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jni-sys",
+      "version": "0.4.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jni-rs/jni-sys",
+      "files": [
+        "rust/jni-sys-0.4.1/LICENSE-APACHE",
+        "rust/jni-sys-0.4.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jni-sys-macros",
+      "version": "0.4.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jni-rs/jni-sys",
+      "files": [
+        "rust/jni-sys-macros-0.4.1/upstream/LICENSE-APACHE",
+        "rust/jni-sys-macros-0.4.1/upstream/LICENSE-APACHE.source.json",
+        "rust/jni-sys-macros-0.4.1/upstream/LICENSE-MIT",
+        "rust/jni-sys-macros-0.4.1/upstream/LICENSE-MIT.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "js-sys",
+      "version": "0.3.106",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/js-sys",
+      "files": [
+        "rust/js-sys-0.3.106/LICENSE-APACHE",
+        "rust/js-sys-0.3.106/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "json-patch",
+      "version": "4.2.0",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/idubrov/json-patch",
+      "files": [
+        "rust/json-patch-4.2.0/LICENSE-APACHE",
+        "rust/json-patch-4.2.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "jsonptr",
+      "version": "0.7.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/chanced/jsonptr",
+      "files": [
+        "rust/jsonptr-0.7.1/LICENSE-APACHE",
+        "rust/jsonptr-0.7.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "keyboard-types",
+      "version": "0.8.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-windowing/keyboard-types",
+      "files": [
+        "rust/keyboard-types-0.8.3/LICENSE-APACHE",
+        "rust/keyboard-types-0.8.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "libappindicator",
+      "version": "0.9.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": null,
+      "files": [
+        "rust/libappindicator-0.9.0/.license_template",
+        "rust/libappindicator-0.9.0/LICENSE-APACHE",
+        "rust/libappindicator-0.9.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "libappindicator-sys",
+      "version": "0.9.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": null,
+      "files": [
+        "rust/libappindicator-sys-0.9.0/Cargo.toml",
+        "source-archives/libappindicator-sys-0.9.0.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "libc",
+      "version": "0.2.190",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/libc",
+      "files": [
+        "rust/libc-0.2.190/LICENSE-APACHE",
+        "rust/libc-0.2.190/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "libdbus-sys",
+      "version": "0.2.7",
+      "license": "Apache-2.0/MIT",
+      "repository": "https://github.com/diwic/dbus-rs",
+      "files": [
+        "rust/libdbus-sys-0.2.7/LICENSE-APACHE",
+        "rust/libdbus-sys-0.2.7/LICENSE-MIT",
+        "rust/libdbus-sys-0.2.7/vendor/dbus/cmake/modules/COPYING-CMAKE-SCRIPTS",
+        "rust/libdbus-sys-0.2.7/vendor/dbus/COPYING"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "libloading",
+      "version": "0.7.4",
+      "license": "ISC",
+      "repository": "https://github.com/nagisa/rust_libloading/",
+      "files": [
+        "rust/libloading-0.7.4/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "libredox",
+      "version": "0.1.25",
+      "license": "MIT",
+      "repository": "https://gitlab.redox-os.org/redox-os/libredox.git",
+      "files": [
+        "rust/libredox-0.1.25/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "litemap",
+      "version": "0.8.3",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/litemap-0.8.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "lock_api",
+      "version": "0.4.14",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/Amanieu/parking_lot",
+      "files": [
+        "rust/lock_api-0.4.14/LICENSE-APACHE",
+        "rust/lock_api-0.4.14/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "log",
+      "version": "0.4.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/log",
+      "files": [
+        "rust/log-0.4.34/LICENSE-APACHE",
+        "rust/log-0.4.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "markup5ever",
+      "version": "0.39.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/html5ever",
+      "files": [
+        "rust/markup5ever-0.39.0/LICENSE-APACHE",
+        "rust/markup5ever-0.39.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "memchr",
+      "version": "2.8.3",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/memchr",
+      "files": [
+        "rust/memchr-2.8.3/COPYING",
+        "rust/memchr-2.8.3/LICENSE-MIT",
+        "rust/memchr-2.8.3/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "memoffset",
+      "version": "0.9.1",
+      "license": "MIT",
+      "repository": "https://github.com/Gilnaa/memoffset",
+      "files": [
+        "rust/memoffset-0.9.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "mime",
+      "version": "0.3.17",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/hyperium/mime",
+      "files": [
+        "rust/mime-0.3.17/LICENSE-APACHE",
+        "rust/mime-0.3.17/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "miniz_oxide",
+      "version": "0.8.9",
+      "license": "MIT OR Zlib OR Apache-2.0",
+      "repository": "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide",
+      "files": [
+        "rust/miniz_oxide-0.8.9/LICENSE",
+        "rust/miniz_oxide-0.8.9/LICENSE-APACHE.md",
+        "rust/miniz_oxide-0.8.9/LICENSE-MIT.md",
+        "rust/miniz_oxide-0.8.9/LICENSE-ZLIB.md"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "miniz_oxide",
+      "version": "0.9.1",
+      "license": "MIT OR Zlib OR Apache-2.0",
+      "repository": "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide",
+      "files": [
+        "rust/miniz_oxide-0.9.1/LICENSE",
+        "rust/miniz_oxide-0.9.1/LICENSE-APACHE.md",
+        "rust/miniz_oxide-0.9.1/LICENSE-MIT.md",
+        "rust/miniz_oxide-0.9.1/LICENSE-ZLIB.md"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "mio",
+      "version": "1.2.3",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/mio",
+      "files": [
+        "rust/mio-1.2.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "muda",
+      "version": "0.20.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/muda",
+      "files": [
+        "rust/muda-0.20.0/LICENSE-APACHE",
+        "rust/muda-0.20.0/LICENSE-MIT",
+        "rust/muda-0.20.0/LICENSE.spdx"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "multiversion_no_op",
+      "version": "1.0.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/hsivonen/multiversion_no_op",
+      "files": [
+        "rust/multiversion_no_op-1.0.0/COPYRIGHT",
+        "rust/multiversion_no_op-1.0.0/LICENSE-APACHE",
+        "rust/multiversion_no_op-1.0.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "ndk",
+      "version": "0.9.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-mobile/ndk",
+      "files": [
+        "rust/ndk-0.9.0/upstream/LICENSE-APACHE",
+        "rust/ndk-0.9.0/upstream/LICENSE-APACHE.source.json",
+        "rust/ndk-0.9.0/upstream/LICENSE-MIT",
+        "rust/ndk-0.9.0/upstream/LICENSE-MIT.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "ndk-context",
+      "version": "0.1.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-windowing/android-ndk-rs",
+      "files": [
+        "rust/ndk-context-0.1.1/upstream/LICENSE-APACHE",
+        "rust/ndk-context-0.1.1/upstream/LICENSE-APACHE.source.json",
+        "rust/ndk-context-0.1.1/upstream/LICENSE-MIT",
+        "rust/ndk-context-0.1.1/upstream/LICENSE-MIT.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "ndk-sys",
+      "version": "0.6.0+11769913",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-mobile/ndk",
+      "files": [
+        "rust/ndk-sys-0.6.0+11769913/upstream/LICENSE-APACHE",
+        "rust/ndk-sys-0.6.0+11769913/upstream/LICENSE-APACHE.source.json",
+        "rust/ndk-sys-0.6.0+11769913/upstream/LICENSE-MIT",
+        "rust/ndk-sys-0.6.0+11769913/upstream/LICENSE-MIT.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "new_debug_unreachable",
+      "version": "1.0.6",
+      "license": "MIT",
+      "repository": "https://github.com/mbrubeck/rust-debug-unreachable",
+      "files": [
+        "rust/new_debug_unreachable-1.0.6/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "num-conv",
+      "version": "0.2.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jhpratt/num-conv",
+      "files": [
+        "rust/num-conv-0.2.2/LICENSE-Apache",
+        "rust/num-conv-0.2.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "num-traits",
+      "version": "0.2.19",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-num/num-traits",
+      "files": [
+        "rust/num-traits-0.2.19/LICENSE-APACHE",
+        "rust/num-traits-0.2.19/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "num_enum",
+      "version": "0.7.6",
+      "license": "BSD-3-Clause OR MIT OR Apache-2.0",
+      "repository": "https://github.com/illicitonion/num_enum",
+      "files": [
+        "rust/num_enum-0.7.6/LICENSE-APACHE",
+        "rust/num_enum-0.7.6/LICENSE-BSD",
+        "rust/num_enum-0.7.6/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "num_enum_derive",
+      "version": "0.7.6",
+      "license": "BSD-3-Clause OR MIT OR Apache-2.0",
+      "repository": "https://github.com/illicitonion/num_enum",
+      "files": [
+        "rust/num_enum_derive-0.7.6/LICENSE-APACHE",
+        "rust/num_enum_derive-0.7.6/LICENSE-BSD",
+        "rust/num_enum_derive-0.7.6/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2",
+      "version": "0.6.4",
+      "license": "MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-0.6.4/upstream/LICENSE.md",
+        "rust/objc2-0.6.4/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-app-kit",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-app-kit-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-app-kit-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-cloud-kit",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-cloud-kit-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-cloud-kit-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-core-data",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-core-data-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-core-data-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-core-foundation",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-core-foundation-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-core-foundation-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-core-graphics",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-core-graphics-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-core-graphics-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-core-image",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-core-image-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-core-image-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-core-location",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-core-location-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-core-location-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-core-text",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-core-text-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-core-text-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-encode",
+      "version": "4.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-encode-4.1.0/upstream/LICENSE.md",
+        "rust/objc2-encode-4.1.0/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-exception-helper",
+      "version": "0.1.1",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-exception-helper-0.1.1/upstream/LICENSE.md",
+        "rust/objc2-exception-helper-0.1.1/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-foundation",
+      "version": "0.3.2",
+      "license": "MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-foundation-0.3.2/src/copying.rs",
+        "rust/objc2-foundation-0.3.2/src/tests/copying.rs"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-io-surface",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-io-surface-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-io-surface-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-quartz-core",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-quartz-core-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-quartz-core-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-ui-kit",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-ui-kit-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-ui-kit-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-user-notifications",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-user-notifications-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-user-notifications-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "objc2-web-kit",
+      "version": "0.3.2",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/madsmtm/objc2",
+      "files": [
+        "rust/objc2-web-kit-0.3.2/upstream/LICENSE.md",
+        "rust/objc2-web-kit-0.3.2/upstream/LICENSE.md.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "once_cell",
+      "version": "1.21.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/matklad/once_cell",
+      "files": [
+        "rust/once_cell-1.21.4/LICENSE-APACHE",
+        "rust/once_cell-1.21.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "open",
+      "version": "5.4.4",
+      "license": "MIT",
+      "repository": "https://github.com/Byron/open-rs",
+      "files": [
+        "rust/open-5.4.4/LICENSE.md"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "option-ext",
+      "version": "0.2.0",
+      "license": "MPL-2.0",
+      "repository": "https://github.com/soc/option-ext.git",
+      "files": [
+        "rust/option-ext-0.2.0/LICENSE.txt",
+        "rust/option-ext-0.2.0/Cargo.toml",
+        "source-archives/option-ext-0.2.0.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "os_pipe",
+      "version": "1.2.3",
+      "license": "MIT",
+      "repository": "https://github.com/oconnor663/os_pipe.rs",
+      "files": [
+        "rust/os_pipe-1.2.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "pango",
+      "version": "0.18.3",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/pango-0.18.3/COPYRIGHT",
+        "rust/pango-0.18.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "pango-sys",
+      "version": "0.18.0",
+      "license": "MIT",
+      "repository": "https://github.com/gtk-rs/gtk-rs-core",
+      "files": [
+        "rust/pango-sys-0.18.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "parking_lot",
+      "version": "0.12.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/Amanieu/parking_lot",
+      "files": [
+        "rust/parking_lot-0.12.5/LICENSE-APACHE",
+        "rust/parking_lot-0.12.5/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "parking_lot_core",
+      "version": "0.9.12",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/Amanieu/parking_lot",
+      "files": [
+        "rust/parking_lot_core-0.9.12/LICENSE-APACHE",
+        "rust/parking_lot_core-0.9.12/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-url/",
+      "files": [
+        "rust/percent-encoding-2.3.2/LICENSE-APACHE",
+        "rust/percent-encoding-2.3.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "phf",
+      "version": "0.13.1",
+      "license": "MIT",
+      "repository": "https://github.com/rust-phf/rust-phf",
+      "files": [
+        "rust/phf-0.13.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "phf_codegen",
+      "version": "0.13.1",
+      "license": "MIT",
+      "repository": "https://github.com/rust-phf/rust-phf",
+      "files": [
+        "rust/phf_codegen-0.13.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "phf_generator",
+      "version": "0.13.1",
+      "license": "MIT",
+      "repository": "https://github.com/rust-phf/rust-phf",
+      "files": [
+        "rust/phf_generator-0.13.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "phf_macros",
+      "version": "0.13.1",
+      "license": "MIT",
+      "repository": "https://github.com/rust-phf/rust-phf",
+      "files": [
+        "rust/phf_macros-0.13.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "phf_shared",
+      "version": "0.13.1",
+      "license": "MIT",
+      "repository": "https://github.com/rust-phf/rust-phf",
+      "files": [
+        "rust/phf_shared-0.13.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/taiki-e/pin-project-lite",
+      "files": [
+        "rust/pin-project-lite-0.2.17/LICENSE-APACHE",
+        "rust/pin-project-lite-0.2.17/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/pkg-config-rs",
+      "files": [
+        "rust/pkg-config-0.3.34/LICENSE-APACHE",
+        "rust/pkg-config-0.3.34/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "plist",
+      "version": "1.10.1",
+      "license": "MIT",
+      "repository": "https://github.com/ebarnard/rust-plist/",
+      "files": [
+        "rust/plist-1.10.1/Cargo.toml",
+        "source-archives/plist-1.10.1.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "png",
+      "version": "0.17.16",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/image-rs/image-png",
+      "files": [
+        "rust/png-0.17.16/LICENSE-APACHE",
+        "rust/png-0.17.16/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "png",
+      "version": "0.18.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/image-rs/image-png",
+      "files": [
+        "rust/png-0.18.1/LICENSE-APACHE",
+        "rust/png-0.18.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "portable-atomic",
+      "version": "1.15.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/taiki-e/portable-atomic",
+      "files": [
+        "rust/portable-atomic-1.15.0/LICENSE-APACHE",
+        "rust/portable-atomic-1.15.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "portable-atomic-util",
+      "version": "0.2.8",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/taiki-e/portable-atomic-util",
+      "files": [
+        "rust/portable-atomic-util-0.2.8/LICENSE-APACHE",
+        "rust/portable-atomic-util-0.2.8/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "potential_utf",
+      "version": "0.1.6",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/potential_utf-0.1.6/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "powerfmt",
+      "version": "0.2.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jhpratt/powerfmt",
+      "files": [
+        "rust/powerfmt-0.2.0/LICENSE-Apache",
+        "rust/powerfmt-0.2.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "precomputed-hash",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/emilio/precomputed-hash",
+      "files": [
+        "rust/precomputed-hash-0.1.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "proc-macro-crate",
+      "version": "1.3.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/bkchr/proc-macro-crate",
+      "files": [
+        "rust/proc-macro-crate-1.3.1/LICENSE-APACHE",
+        "rust/proc-macro-crate-1.3.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "proc-macro-crate",
+      "version": "2.0.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/bkchr/proc-macro-crate",
+      "files": [
+        "rust/proc-macro-crate-2.0.2/LICENSE-APACHE",
+        "rust/proc-macro-crate-2.0.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "proc-macro-crate",
+      "version": "3.5.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/bkchr/proc-macro-crate",
+      "files": [
+        "rust/proc-macro-crate-3.5.0/LICENSE-APACHE",
+        "rust/proc-macro-crate-3.5.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "proc-macro-error",
+      "version": "1.0.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://gitlab.com/CreepySkeleton/proc-macro-error",
+      "files": [
+        "rust/proc-macro-error-1.0.4/LICENSE-APACHE",
+        "rust/proc-macro-error-1.0.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "proc-macro-error-attr",
+      "version": "1.0.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://gitlab.com/CreepySkeleton/proc-macro-error",
+      "files": [
+        "rust/proc-macro-error-attr-1.0.4/LICENSE-APACHE",
+        "rust/proc-macro-error-attr-1.0.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/proc-macro2",
+      "files": [
+        "rust/proc-macro2-1.0.107/LICENSE-APACHE",
+        "rust/proc-macro2-1.0.107/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "quick-xml",
+      "version": "0.42.0",
+      "license": "MIT",
+      "repository": "https://github.com/tafia/quick-xml",
+      "files": [
+        "rust/quick-xml-0.42.0/LICENSE-MIT.md"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "quote",
+      "version": "1.0.47",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/quote",
+      "files": [
+        "rust/quote-1.0.47/LICENSE-APACHE",
+        "rust/quote-1.0.47/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "r-efi",
+      "version": "5.3.0",
+      "license": "MIT OR Apache-2.0 OR LGPL-2.1-or-later",
+      "repository": "https://github.com/r-efi/r-efi",
+      "files": [
+        "rust/r-efi-5.3.0/Cargo.toml",
+        "source-archives/r-efi-5.3.0.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "r-efi",
+      "version": "6.0.0",
+      "license": "MIT OR Apache-2.0 OR LGPL-2.1-or-later",
+      "repository": "https://github.com/r-efi/r-efi",
+      "files": [
+        "rust/r-efi-6.0.0/Cargo.toml",
+        "source-archives/r-efi-6.0.0.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "raw-window-handle",
+      "version": "0.6.2",
+      "license": "MIT OR Apache-2.0 OR Zlib",
+      "repository": "https://github.com/rust-windowing/raw-window-handle",
+      "files": [
+        "rust/raw-window-handle-0.6.2/LICENSE-APACHE.md",
+        "rust/raw-window-handle-0.6.2/LICENSE-MIT.md",
+        "rust/raw-window-handle-0.6.2/LICENSE-ZLIB.md"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "redox_syscall",
+      "version": "0.5.18",
+      "license": "MIT",
+      "repository": "https://gitlab.redox-os.org/redox-os/syscall",
+      "files": [
+        "rust/redox_syscall-0.5.18/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "redox_users",
+      "version": "0.5.3",
+      "license": "MIT",
+      "repository": "https://gitlab.redox-os.org/redox-os/users",
+      "files": [
+        "rust/redox_users-0.5.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "ref-cast",
+      "version": "1.0.27",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/ref-cast",
+      "files": [
+        "rust/ref-cast-1.0.27/LICENSE-APACHE",
+        "rust/ref-cast-1.0.27/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "ref-cast-impl",
+      "version": "1.0.27",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/ref-cast",
+      "files": [
+        "rust/ref-cast-impl-1.0.27/LICENSE-APACHE",
+        "rust/ref-cast-impl-1.0.27/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "regex",
+      "version": "1.13.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/regex",
+      "files": [
+        "rust/regex-1.13.1/LICENSE-APACHE",
+        "rust/regex-1.13.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "regex-automata",
+      "version": "0.4.18",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/regex",
+      "files": [
+        "rust/regex-automata-0.4.18/LICENSE-APACHE",
+        "rust/regex-automata-0.4.18/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "regex-syntax",
+      "version": "0.8.11",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/regex",
+      "files": [
+        "rust/regex-syntax-0.8.11/LICENSE-APACHE",
+        "rust/regex-syntax-0.8.11/LICENSE-MIT",
+        "rust/regex-syntax-0.8.11/src/unicode_tables/LICENSE-UNICODE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "reqwest",
+      "version": "0.13.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/seanmonstar/reqwest",
+      "files": [
+        "rust/reqwest-0.13.5/LICENSE-APACHE",
+        "rust/reqwest-0.13.5/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "rustc-hash",
+      "version": "2.1.3",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/rust-lang/rustc-hash",
+      "files": [
+        "rust/rustc-hash-2.1.3/LICENSE-APACHE",
+        "rust/rustc-hash-2.1.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "rustc_version",
+      "version": "0.4.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/djc/rustc-version-rs",
+      "files": [
+        "rust/rustc_version-0.4.1/LICENSE-APACHE",
+        "rust/rustc_version-0.4.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "rustversion",
+      "version": "1.0.23",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/rustversion",
+      "files": [
+        "rust/rustversion-1.0.23/LICENSE-APACHE",
+        "rust/rustversion-1.0.23/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "same-file",
+      "version": "1.0.6",
+      "license": "Unlicense/MIT",
+      "repository": "https://github.com/BurntSushi/same-file",
+      "files": [
+        "rust/same-file-1.0.6/COPYING",
+        "rust/same-file-1.0.6/LICENSE-MIT",
+        "rust/same-file-1.0.6/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "schemars",
+      "version": "0.8.22",
+      "license": "MIT",
+      "repository": "https://github.com/GREsau/schemars",
+      "files": [
+        "rust/schemars-0.8.22/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "schemars",
+      "version": "0.9.0",
+      "license": "MIT",
+      "repository": "https://github.com/GREsau/schemars",
+      "files": [
+        "rust/schemars-0.9.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "schemars",
+      "version": "1.2.2",
+      "license": "MIT",
+      "repository": "https://github.com/GREsau/schemars",
+      "files": [
+        "rust/schemars-1.2.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "schemars_derive",
+      "version": "0.8.22",
+      "license": "MIT",
+      "repository": "https://github.com/GREsau/schemars",
+      "files": [
+        "rust/schemars_derive-0.8.22/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "scopeguard",
+      "version": "1.2.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/bluss/scopeguard",
+      "files": [
+        "rust/scopeguard-1.2.0/LICENSE-APACHE",
+        "rust/scopeguard-1.2.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "selectors",
+      "version": "0.38.0",
+      "license": "MPL-2.0",
+      "repository": "https://github.com/servo/stylo",
+      "files": [
+        "rust/selectors-0.38.0/Cargo.toml",
+        "source-archives/selectors-0.38.0.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "semver",
+      "version": "1.0.28",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/semver",
+      "files": [
+        "rust/semver-1.0.28/LICENSE-APACHE",
+        "rust/semver-1.0.28/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "files": [
+        "rust/serde-1.0.229/LICENSE-APACHE",
+        "rust/serde-1.0.229/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde-untagged",
+      "version": "0.1.9",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/serde-untagged",
+      "files": [
+        "rust/serde-untagged-0.1.9/LICENSE-APACHE",
+        "rust/serde-untagged-0.1.9/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde_core",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "files": [
+        "rust/serde_core-1.0.229/LICENSE-APACHE",
+        "rust/serde_core-1.0.229/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "files": [
+        "rust/serde_derive-1.0.229/LICENSE-APACHE",
+        "rust/serde_derive-1.0.229/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde_derive_internals",
+      "version": "0.29.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "files": [
+        "rust/serde_derive_internals-0.29.1/LICENSE-APACHE",
+        "rust/serde_derive_internals-0.29.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde_json",
+      "version": "1.0.151",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/json",
+      "files": [
+        "rust/serde_json-1.0.151/LICENSE-APACHE",
+        "rust/serde_json-1.0.151/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde_repr",
+      "version": "0.1.21",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/serde-repr",
+      "files": [
+        "rust/serde_repr-0.1.21/LICENSE-APACHE",
+        "rust/serde_repr-0.1.21/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde_spanned",
+      "version": "0.6.9",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/serde_spanned-0.6.9/LICENSE-APACHE",
+        "rust/serde_spanned-0.6.9/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde_spanned",
+      "version": "1.1.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/serde_spanned-1.1.1/LICENSE-APACHE",
+        "rust/serde_spanned-1.1.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde_with",
+      "version": "3.24.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jonasbb/serde_with/",
+      "files": [
+        "rust/serde_with-3.24.0/LICENSE-APACHE",
+        "rust/serde_with-3.24.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serde_with_macros",
+      "version": "3.24.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jonasbb/serde_with/",
+      "files": [
+        "rust/serde_with_macros-3.24.0/LICENSE-APACHE",
+        "rust/serde_with_macros-3.24.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serialize-to-javascript",
+      "version": "0.1.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/chippers/serialize-to-javascript",
+      "files": [
+        "rust/serialize-to-javascript-0.1.2/LICENSE-APACHE",
+        "rust/serialize-to-javascript-0.1.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "serialize-to-javascript-impl",
+      "version": "0.1.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/chippers/serialize-to-javascript",
+      "files": [
+        "rust/serialize-to-javascript-impl-0.1.2/LICENSE-APACHE",
+        "rust/serialize-to-javascript-impl-0.1.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "servo_arc",
+      "version": "0.4.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/stylo",
+      "files": [
+        "rust/servo_arc-0.4.3/LICENSE-APACHE",
+        "rust/servo_arc-0.4.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "sha2",
+      "version": "0.10.9",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RustCrypto/hashes",
+      "files": [
+        "rust/sha2-0.10.9/LICENSE-APACHE",
+        "rust/sha2-0.10.9/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "shared_child",
+      "version": "1.1.2",
+      "license": "MIT",
+      "repository": "https://github.com/oconnor663/shared_child.rs",
+      "files": [
+        "rust/shared_child-1.1.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "shlex",
+      "version": "2.0.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/comex/rust-shlex",
+      "files": [
+        "rust/shlex-2.0.1/LICENSE-APACHE",
+        "rust/shlex-2.0.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "sigchld",
+      "version": "0.2.5",
+      "license": "MIT",
+      "repository": "https://github.com/oconnor663/sigchld.rs",
+      "files": [
+        "rust/sigchld-0.2.5/Cargo.toml",
+        "source-archives/sigchld-0.2.5.crate"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "signal-hook",
+      "version": "0.4.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/vorner/signal-hook",
+      "files": [
+        "rust/signal-hook-0.4.4/LICENSE-APACHE",
+        "rust/signal-hook-0.4.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "signal-hook-registry",
+      "version": "1.4.8",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/vorner/signal-hook",
+      "files": [
+        "rust/signal-hook-registry-1.4.8/LICENSE-APACHE",
+        "rust/signal-hook-registry-1.4.8/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "simd-adler32",
+      "version": "0.3.10",
+      "license": "MIT",
+      "repository": "https://github.com/mcountryman/simd-adler32",
+      "files": [
+        "rust/simd-adler32-0.3.10/LICENSE.md"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "simdutf8",
+      "version": "0.1.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rusticstuff/simdutf8",
+      "files": [
+        "rust/simdutf8-0.1.5/LICENSE-Apache",
+        "rust/simdutf8-0.1.5/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "siphasher",
+      "version": "1.0.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jedisct1/rust-siphash",
+      "files": [
+        "rust/siphasher-1.0.4/COPYING",
+        "rust/siphasher-1.0.4/LICENSE-APACHE",
+        "rust/siphasher-1.0.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "slab",
+      "version": "0.4.12",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/slab",
+      "files": [
+        "rust/slab-0.4.12/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "smallvec",
+      "version": "1.16.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-smallvec",
+      "files": [
+        "rust/smallvec-1.16.2/LICENSE-APACHE",
+        "rust/smallvec-1.16.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "socket2",
+      "version": "0.6.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/socket2",
+      "files": [
+        "rust/socket2-0.6.5/LICENSE-APACHE",
+        "rust/socket2-0.6.5/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "softbuffer",
+      "version": "0.4.8",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-windowing/softbuffer",
+      "files": [
+        "rust/softbuffer-0.4.8/LICENSE-APACHE",
+        "rust/softbuffer-0.4.8/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "soup3",
+      "version": "0.5.0",
+      "license": "MIT",
+      "repository": "https://gitlab.gnome.org/World/Rust/soup3-rs",
+      "files": [
+        "rust/soup3-0.5.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "soup3-sys",
+      "version": "0.5.0",
+      "license": "MIT",
+      "repository": "https://gitlab.gnome.org/World/Rust/soup3-rs",
+      "files": [
+        "rust/soup3-sys-0.5.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/storyyeller/stable_deref_trait",
+      "files": [
+        "rust/stable_deref_trait-1.2.1/LICENSE-APACHE",
+        "rust/stable_deref_trait-1.2.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "string_cache",
+      "version": "0.9.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/string-cache",
+      "files": [
+        "rust/string_cache-0.9.0/LICENSE-APACHE",
+        "rust/string_cache-0.9.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "string_cache_codegen",
+      "version": "0.6.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/string-cache",
+      "files": [
+        "rust/string_cache_codegen-0.6.1/LICENSE-APACHE",
+        "rust/string_cache_codegen-0.6.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "strsim",
+      "version": "0.11.1",
+      "license": "MIT",
+      "repository": "https://github.com/rapidfuzz/strsim-rs",
+      "files": [
+        "rust/strsim-0.11.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "swift-rs",
+      "version": "1.0.8",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/Brendonovich/swift-rs",
+      "files": [
+        "rust/swift-rs-1.0.8/LICENSE-APACHE",
+        "rust/swift-rs-1.0.8/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "syn",
+      "version": "1.0.109",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/syn",
+      "files": [
+        "rust/syn-1.0.109/LICENSE-APACHE",
+        "rust/syn-1.0.109/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "syn",
+      "version": "2.0.119",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/syn",
+      "files": [
+        "rust/syn-2.0.119/LICENSE-APACHE",
+        "rust/syn-2.0.119/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "syn",
+      "version": "3.0.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/syn",
+      "files": [
+        "rust/syn-3.0.6/LICENSE-APACHE",
+        "rust/syn-3.0.6/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "sync_wrapper",
+      "version": "1.0.2",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/Actyx/sync_wrapper",
+      "files": [
+        "rust/sync_wrapper-1.0.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "synstructure",
+      "version": "0.14.0",
+      "license": "MIT",
+      "repository": "https://github.com/mystor/synstructure",
+      "files": [
+        "rust/synstructure-0.14.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "system-deps",
+      "version": "6.2.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/gdesmott/system-deps",
+      "files": [
+        "rust/system-deps-6.2.2/LICENSE-APACHE",
+        "rust/system-deps-6.2.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tao",
+      "version": "0.37.1",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/tauri-apps/tao",
+      "files": [
+        "rust/tao-0.37.1/LICENSE",
+        "rust/tao-0.37.1/LICENSE.spdx"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tao-macros",
+      "version": "0.1.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/tauri-apps/tao",
+      "files": [
+        "rust/tao-macros-0.1.4/LICENSE-APACHE",
+        "rust/tao-macros-0.1.4/LICENSE-MIT",
+        "rust/tao-macros-0.1.4/LICENSE.spdx"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "target-lexicon",
+      "version": "0.12.16",
+      "license": "Apache-2.0 WITH LLVM-exception",
+      "repository": "https://github.com/bytecodealliance/target-lexicon",
+      "files": [
+        "rust/target-lexicon-0.12.16/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri",
+      "version": "2.12.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/tauri",
+      "files": [
+        "rust/tauri-2.12.1/LICENSE-APACHE-2.0",
+        "rust/tauri-2.12.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri-build",
+      "version": "2.7.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/tauri",
+      "files": [
+        "rust/tauri-build-2.7.1/LICENSE-APACHE-2.0",
+        "rust/tauri-build-2.7.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri-codegen",
+      "version": "2.7.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/tauri",
+      "files": [
+        "rust/tauri-codegen-2.7.1/LICENSE-APACHE-2.0",
+        "rust/tauri-codegen-2.7.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri-macros",
+      "version": "2.7.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/tauri",
+      "files": [
+        "rust/tauri-macros-2.7.1/LICENSE-APACHE-2.0",
+        "rust/tauri-macros-2.7.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri-plugin",
+      "version": "2.7.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/tauri",
+      "files": [
+        "rust/tauri-plugin-2.7.1/upstream/LICENSE-MIT",
+        "rust/tauri-plugin-2.7.1/upstream/LICENSE-MIT.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri-plugin-shell",
+      "version": "2.4.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/plugins-workspace",
+      "files": [
+        "rust/tauri-plugin-shell-2.4.0/LICENSE.spdx",
+        "rust/tauri-plugin-shell-2.4.0/LICENSE_APACHE-2.0",
+        "rust/tauri-plugin-shell-2.4.0/LICENSE_MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri-runtime",
+      "version": "2.12.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/tauri",
+      "files": [
+        "rust/tauri-runtime-2.12.1/LICENSE-APACHE-2.0",
+        "rust/tauri-runtime-2.12.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri-runtime-wry",
+      "version": "2.12.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/tauri",
+      "files": [
+        "rust/tauri-runtime-wry-2.12.1/LICENSE-APACHE-2.0",
+        "rust/tauri-runtime-wry-2.12.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri-utils",
+      "version": "2.10.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/tauri",
+      "files": [
+        "rust/tauri-utils-2.10.1/LICENSE-APACHE-2.0",
+        "rust/tauri-utils-2.10.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tauri-winres",
+      "version": "0.3.6",
+      "license": "MIT",
+      "repository": "https://github.com/tauri-apps/winres",
+      "files": [
+        "rust/tauri-winres-0.3.6/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tendril",
+      "version": "0.5.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/html5ever",
+      "files": [
+        "rust/tendril-0.5.1/LICENSE-APACHE",
+        "rust/tendril-0.5.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "thiserror",
+      "version": "1.0.69",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/thiserror",
+      "files": [
+        "rust/thiserror-1.0.69/LICENSE-APACHE",
+        "rust/thiserror-1.0.69/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "thiserror",
+      "version": "2.0.21",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/thiserror",
+      "files": [
+        "rust/thiserror-2.0.21/LICENSE-APACHE",
+        "rust/thiserror-2.0.21/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "thiserror-impl",
+      "version": "1.0.69",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/thiserror",
+      "files": [
+        "rust/thiserror-impl-1.0.69/LICENSE-APACHE",
+        "rust/thiserror-impl-1.0.69/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "thiserror-impl",
+      "version": "2.0.21",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/thiserror",
+      "files": [
+        "rust/thiserror-impl-2.0.21/LICENSE-APACHE",
+        "rust/thiserror-impl-2.0.21/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "time",
+      "version": "0.3.55",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/time-rs/time",
+      "files": [
+        "rust/time-0.3.55/LICENSE-Apache",
+        "rust/time-0.3.55/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "time-core",
+      "version": "0.1.9",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/time-rs/time",
+      "files": [
+        "rust/time-core-0.1.9/LICENSE-Apache",
+        "rust/time-core-0.1.9/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "time-macros",
+      "version": "0.2.32",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/time-rs/time",
+      "files": [
+        "rust/time-macros-0.2.32/LICENSE-Apache",
+        "rust/time-macros-0.2.32/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tinystr",
+      "version": "0.8.4",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/tinystr-0.8.4/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tinyvec",
+      "version": "1.13.3",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/Lokathor/tinyvec",
+      "files": [
+        "rust/tinyvec-1.13.3/LICENSE-APACHE.md",
+        "rust/tinyvec-1.13.3/LICENSE-MIT.md",
+        "rust/tinyvec-1.13.3/LICENSE-ZLIB.md"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tokio",
+      "version": "1.53.1",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/tokio",
+      "files": [
+        "rust/tokio-1.53.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tokio-util",
+      "version": "0.7.19",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/tokio",
+      "files": [
+        "rust/tokio-util-0.7.19/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "toml",
+      "version": "0.8.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/toml-0.8.2/LICENSE-APACHE",
+        "rust/toml-0.8.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "toml",
+      "version": "1.1.6+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/toml-1.1.6+spec-1.1.0/LICENSE-APACHE",
+        "rust/toml-1.1.6+spec-1.1.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "toml_datetime",
+      "version": "0.6.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/toml_datetime-0.6.3/LICENSE-APACHE",
+        "rust/toml_datetime-0.6.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "toml_datetime",
+      "version": "1.1.1+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/toml_datetime-1.1.1+spec-1.1.0/LICENSE-APACHE",
+        "rust/toml_datetime-1.1.1+spec-1.1.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "toml_edit",
+      "version": "0.19.15",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/toml_edit-0.19.15/LICENSE-APACHE",
+        "rust/toml_edit-0.19.15/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "toml_edit",
+      "version": "0.20.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/toml_edit-0.20.2/LICENSE-APACHE",
+        "rust/toml_edit-0.20.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "toml_edit",
+      "version": "0.25.15+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/toml_edit-0.25.15+spec-1.1.0/LICENSE-APACHE",
+        "rust/toml_edit-0.25.15+spec-1.1.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "toml_parser",
+      "version": "1.1.3+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/toml_parser-1.1.3+spec-1.1.0/LICENSE-APACHE",
+        "rust/toml_parser-1.1.3+spec-1.1.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "toml_writer",
+      "version": "1.1.2+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml",
+      "files": [
+        "rust/toml_writer-1.1.2+spec-1.1.0/LICENSE-APACHE",
+        "rust/toml_writer-1.1.2+spec-1.1.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tower",
+      "version": "0.5.3",
+      "license": "MIT",
+      "repository": "https://github.com/tower-rs/tower",
+      "files": [
+        "rust/tower-0.5.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tower-http",
+      "version": "0.6.11",
+      "license": "MIT",
+      "repository": "https://github.com/tower-rs/tower-http",
+      "files": [
+        "rust/tower-http-0.6.11/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tower-layer",
+      "version": "0.3.3",
+      "license": "MIT",
+      "repository": "https://github.com/tower-rs/tower",
+      "files": [
+        "rust/tower-layer-0.3.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tower-service",
+      "version": "0.3.3",
+      "license": "MIT",
+      "repository": "https://github.com/tower-rs/tower",
+      "files": [
+        "rust/tower-service-0.3.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tracing",
+      "version": "0.1.44",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/tracing",
+      "files": [
+        "rust/tracing-0.1.44/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tracing-core",
+      "version": "0.1.36",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/tracing",
+      "files": [
+        "rust/tracing-core-0.1.36/LICENSE",
+        "rust/tracing-core-0.1.36/src/spin/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "tray-icon",
+      "version": "0.25.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/tauri-apps/tray-icon",
+      "files": [
+        "rust/tray-icon-0.25.1/LICENSE-APACHE",
+        "rust/tray-icon-0.25.1/LICENSE-MIT",
+        "rust/tray-icon-0.25.1/LICENSE.spdx"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "try-lock",
+      "version": "0.2.5",
+      "license": "MIT",
+      "repository": "https://github.com/seanmonstar/try-lock",
+      "files": [
+        "rust/try-lock-0.2.5/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "typeid",
+      "version": "1.0.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/typeid",
+      "files": [
+        "rust/typeid-1.0.3/LICENSE-APACHE",
+        "rust/typeid-1.0.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "typenum",
+      "version": "1.20.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/paholg/typenum",
+      "files": [
+        "rust/typenum-1.20.1/LICENSE",
+        "rust/typenum-1.20.1/LICENSE-APACHE",
+        "rust/typenum-1.20.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "unicode-ident",
+      "version": "1.0.26",
+      "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "repository": "https://github.com/dtolnay/unicode-ident",
+      "files": [
+        "rust/unicode-ident-1.0.26/LICENSE-APACHE",
+        "rust/unicode-ident-1.0.26/LICENSE-MIT",
+        "rust/unicode-ident-1.0.26/LICENSE-UNICODE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "unicode-segmentation",
+      "version": "1.13.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/unicode-rs/unicode-segmentation",
+      "files": [
+        "rust/unicode-segmentation-1.13.3/COPYRIGHT",
+        "rust/unicode-segmentation-1.13.3/LICENSE-APACHE",
+        "rust/unicode-segmentation-1.13.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "url",
+      "version": "2.5.8",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-url",
+      "files": [
+        "rust/url-2.5.8/LICENSE-APACHE",
+        "rust/url-2.5.8/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "urlpattern",
+      "version": "0.6.0",
+      "license": "MIT",
+      "repository": "https://github.com/denoland/rust-urlpattern",
+      "files": [
+        "rust/urlpattern-0.6.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/hsivonen/utf8_iter",
+      "files": [
+        "rust/utf8_iter-1.0.4/COPYRIGHT",
+        "rust/utf8_iter-1.0.4/LICENSE-APACHE",
+        "rust/utf8_iter-1.0.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "uuid",
+      "version": "1.27.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/uuid-rs/uuid",
+      "files": [
+        "rust/uuid-1.27.0/LICENSE-APACHE",
+        "rust/uuid-1.27.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "version-compare",
+      "version": "0.2.1",
+      "license": "MIT",
+      "repository": "https://gitlab.com/timvisee/version-compare",
+      "files": [
+        "rust/version-compare-0.2.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "version_check",
+      "version": "0.9.5",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/SergioBenitez/version_check",
+      "files": [
+        "rust/version_check-0.9.5/LICENSE-APACHE",
+        "rust/version_check-0.9.5/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "vswhom",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/nabijaczleweli/vswhom.rs",
+      "files": [
+        "rust/vswhom-0.1.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "vswhom-sys",
+      "version": "0.1.3",
+      "license": "MIT",
+      "repository": "https://github.com/nabijaczleweli/vswhom-sys.rs",
+      "files": [
+        "rust/vswhom-sys-0.1.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "walkdir",
+      "version": "2.5.0",
+      "license": "Unlicense/MIT",
+      "repository": "https://github.com/BurntSushi/walkdir",
+      "files": [
+        "rust/walkdir-2.5.0/COPYING",
+        "rust/walkdir-2.5.0/LICENSE-MIT",
+        "rust/walkdir-2.5.0/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "want",
+      "version": "0.3.1",
+      "license": "MIT",
+      "repository": "https://github.com/seanmonstar/want",
+      "files": [
+        "rust/want-0.3.1/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wasi",
+      "version": "0.11.1+wasi-snapshot-preview1",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/bytecodealliance/wasi",
+      "files": [
+        "rust/wasi-0.11.1+wasi-snapshot-preview1/LICENSE-APACHE",
+        "rust/wasi-0.11.1+wasi-snapshot-preview1/LICENSE-Apache-2.0_WITH_LLVM-exception",
+        "rust/wasi-0.11.1+wasi-snapshot-preview1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wasip2",
+      "version": "1.0.4+wasi-0.2.12",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/bytecodealliance/wasi-rs",
+      "files": [
+        "rust/wasip2-1.0.4+wasi-0.2.12/LICENSE-APACHE",
+        "rust/wasip2-1.0.4+wasi-0.2.12/LICENSE-Apache-2.0_WITH_LLVM-exception",
+        "rust/wasip2-1.0.4+wasi-0.2.12/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wasm-bindgen",
+      "version": "0.2.129",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen",
+      "files": [
+        "rust/wasm-bindgen-0.2.129/LICENSE-APACHE",
+        "rust/wasm-bindgen-0.2.129/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wasm-bindgen-futures",
+      "version": "0.4.79",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/futures",
+      "files": [
+        "rust/wasm-bindgen-futures-0.4.79/LICENSE-APACHE",
+        "rust/wasm-bindgen-futures-0.4.79/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.129",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/macro",
+      "files": [
+        "rust/wasm-bindgen-macro-0.2.129/LICENSE-APACHE",
+        "rust/wasm-bindgen-macro-0.2.129/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.129",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/main/crates/macro-support",
+      "files": [
+        "rust/wasm-bindgen-macro-support-0.2.129/LICENSE-APACHE",
+        "rust/wasm-bindgen-macro-support-0.2.129/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.129",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/shared",
+      "files": [
+        "rust/wasm-bindgen-shared-0.2.129/LICENSE-APACHE",
+        "rust/wasm-bindgen-shared-0.2.129/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wasm-streams",
+      "version": "0.5.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/MattiasBuelens/wasm-streams/",
+      "files": [
+        "rust/wasm-streams-0.5.0/LICENSE-APACHE",
+        "rust/wasm-streams-0.5.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "web-sys",
+      "version": "0.3.106",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/web-sys",
+      "files": [
+        "rust/web-sys-0.3.106/LICENSE-APACHE",
+        "rust/web-sys-0.3.106/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "web-time",
+      "version": "1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/daxpedda/web-time",
+      "files": [
+        "rust/web-time-1.1.0/LICENSE-APACHE",
+        "rust/web-time-1.1.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "web_atoms",
+      "version": "0.2.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/html5ever",
+      "files": [
+        "rust/web_atoms-0.2.6/LICENSE-APACHE",
+        "rust/web_atoms-0.2.6/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "webkit2gtk",
+      "version": "2.0.2",
+      "license": "MIT",
+      "repository": "https://github.com/tauri-apps/webkit2gtk-rs",
+      "files": [
+        "rust/webkit2gtk-2.0.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "webkit2gtk-sys",
+      "version": "2.0.2",
+      "license": "MIT",
+      "repository": "https://github.com/tauri-apps/webkit2gtk-rs",
+      "files": [
+        "rust/webkit2gtk-sys-2.0.2/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "webview2-com",
+      "version": "0.39.1",
+      "license": "MIT",
+      "repository": "https://github.com/wravery/webview2-rs",
+      "files": [
+        "rust/webview2-com-0.39.1/upstream/LICENSE",
+        "rust/webview2-com-0.39.1/upstream/LICENSE.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "webview2-com-macros",
+      "version": "0.8.1",
+      "license": "MIT",
+      "repository": "https://github.com/wravery/webview2-rs",
+      "files": [
+        "rust/webview2-com-macros-0.8.1/upstream/LICENSE",
+        "rust/webview2-com-macros-0.8.1/upstream/LICENSE.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "webview2-com-sys",
+      "version": "0.39.1",
+      "license": "MIT",
+      "repository": "https://github.com/wravery/webview2-rs",
+      "files": [
+        "rust/webview2-com-sys-0.39.1/upstream/LICENSE",
+        "rust/webview2-com-sys-0.39.1/upstream/LICENSE.source.json"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "winapi",
+      "version": "0.3.9",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/retep998/winapi-rs",
+      "files": [
+        "rust/winapi-0.3.9/LICENSE-APACHE",
+        "rust/winapi-0.3.9/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "winapi-i686-pc-windows-gnu",
+      "version": "0.4.0",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/retep998/winapi-rs",
+      "files": [
+        "rust/winapi-i686-pc-windows-gnu-0.4.0/lib/libwinapi_oemlicense.a"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "winapi-util",
+      "version": "0.1.11",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/winapi-util",
+      "files": [
+        "rust/winapi-util-0.1.11/COPYING",
+        "rust/winapi-util-0.1.11/LICENSE-MIT",
+        "rust/winapi-util-0.1.11/UNLICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "winapi-x86_64-pc-windows-gnu",
+      "version": "0.4.0",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/retep998/winapi-rs",
+      "files": [
+        "rust/winapi-x86_64-pc-windows-gnu-0.4.0/lib/libwinapi_oemlicense.a"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "window-vibrancy",
+      "version": "0.8.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/tauri-plugin-vibrancy",
+      "files": [
+        "rust/window-vibrancy-0.8.1/LICENSE-APACHE",
+        "rust/window-vibrancy-0.8.1/LICENSE-MIT",
+        "rust/window-vibrancy-0.8.1/LICENSE.spdx"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows",
+      "version": "0.62.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-0.62.2/license-apache-2.0",
+        "rust/windows-0.62.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-collections",
+      "version": "0.3.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-collections-0.3.2/license-apache-2.0",
+        "rust/windows-collections-0.3.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-core",
+      "version": "0.62.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-core-0.62.2/license-apache-2.0",
+        "rust/windows-core-0.62.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-future",
+      "version": "0.3.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-future-0.3.2/license-apache-2.0",
+        "rust/windows-future-0.3.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-implement",
+      "version": "0.60.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-implement-0.60.2/license-apache-2.0",
+        "rust/windows-implement-0.60.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-interface",
+      "version": "0.59.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-interface-0.59.3/license-apache-2.0",
+        "rust/windows-interface-0.59.3/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-link",
+      "version": "0.2.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-link-0.2.1/license-apache-2.0",
+        "rust/windows-link-0.2.1/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-numerics",
+      "version": "0.3.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-numerics-0.3.1/license-apache-2.0",
+        "rust/windows-numerics-0.3.1/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-result",
+      "version": "0.4.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-result-0.4.1/license-apache-2.0",
+        "rust/windows-result-0.4.1/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-strings",
+      "version": "0.5.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-strings-0.5.1/license-apache-2.0",
+        "rust/windows-strings-0.5.1/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-sys",
+      "version": "0.45.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-sys-0.45.0/license-apache-2.0",
+        "rust/windows-sys-0.45.0/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-sys",
+      "version": "0.59.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-sys-0.59.0/license-apache-2.0",
+        "rust/windows-sys-0.59.0/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-sys-0.61.2/license-apache-2.0",
+        "rust/windows-sys-0.61.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-targets",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-targets-0.42.2/license-apache-2.0",
+        "rust/windows-targets-0.42.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-targets",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-targets-0.52.6/license-apache-2.0",
+        "rust/windows-targets-0.52.6/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-threading",
+      "version": "0.2.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-threading-0.2.1/license-apache-2.0",
+        "rust/windows-threading-0.2.1/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows-version",
+      "version": "0.1.7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows-version-0.1.7/license-apache-2.0",
+        "rust/windows-version-0.1.7/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_aarch64_gnullvm-0.42.2/license-apache-2.0",
+        "rust/windows_aarch64_gnullvm-0.42.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_aarch64_gnullvm-0.52.6/license-apache-2.0",
+        "rust/windows_aarch64_gnullvm-0.52.6/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_aarch64_msvc",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_aarch64_msvc-0.42.2/license-apache-2.0",
+        "rust/windows_aarch64_msvc-0.42.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_aarch64_msvc",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_aarch64_msvc-0.52.6/license-apache-2.0",
+        "rust/windows_aarch64_msvc-0.52.6/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_i686_gnu",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_i686_gnu-0.42.2/license-apache-2.0",
+        "rust/windows_i686_gnu-0.42.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_i686_gnu",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_i686_gnu-0.52.6/license-apache-2.0",
+        "rust/windows_i686_gnu-0.52.6/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_i686_gnullvm",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_i686_gnullvm-0.52.6/license-apache-2.0",
+        "rust/windows_i686_gnullvm-0.52.6/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_i686_msvc",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_i686_msvc-0.42.2/license-apache-2.0",
+        "rust/windows_i686_msvc-0.42.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_i686_msvc",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_i686_msvc-0.52.6/license-apache-2.0",
+        "rust/windows_i686_msvc-0.52.6/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_x86_64_gnu",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_x86_64_gnu-0.42.2/license-apache-2.0",
+        "rust/windows_x86_64_gnu-0.42.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_x86_64_gnu",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_x86_64_gnu-0.52.6/license-apache-2.0",
+        "rust/windows_x86_64_gnu-0.52.6/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_x86_64_gnullvm-0.42.2/license-apache-2.0",
+        "rust/windows_x86_64_gnullvm-0.42.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_x86_64_gnullvm-0.52.6/license-apache-2.0",
+        "rust/windows_x86_64_gnullvm-0.52.6/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_x86_64_msvc",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_x86_64_msvc-0.42.2/license-apache-2.0",
+        "rust/windows_x86_64_msvc-0.42.2/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "windows_x86_64_msvc",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "files": [
+        "rust/windows_x86_64_msvc-0.52.6/license-apache-2.0",
+        "rust/windows_x86_64_msvc-0.52.6/license-mit"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "winnow",
+      "version": "0.5.40",
+      "license": "MIT",
+      "repository": "https://github.com/winnow-rs/winnow",
+      "files": [
+        "rust/winnow-0.5.40/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "winnow",
+      "version": "1.0.4",
+      "license": "MIT",
+      "repository": "https://github.com/winnow-rs/winnow",
+      "files": [
+        "rust/winnow-1.0.4/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "winreg",
+      "version": "0.55.0",
+      "license": "MIT",
+      "repository": "https://github.com/gentoo90/winreg-rs",
+      "files": [
+        "rust/winreg-0.55.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wit-bindgen",
+      "version": "0.57.1",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/bytecodealliance/wit-bindgen",
+      "files": [
+        "rust/wit-bindgen-0.57.1/LICENSE-APACHE",
+        "rust/wit-bindgen-0.57.1/LICENSE-Apache-2.0_WITH_LLVM-exception",
+        "rust/wit-bindgen-0.57.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "writeable",
+      "version": "0.6.4",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/writeable-0.6.4/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "wry",
+      "version": "0.57.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/tauri-apps/wry",
+      "files": [
+        "rust/wry-0.57.0/.license_template",
+        "rust/wry-0.57.0/LICENSE-APACHE",
+        "rust/wry-0.57.0/LICENSE-MIT",
+        "rust/wry-0.57.0/LICENSE.spdx"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "x11",
+      "version": "2.21.0",
+      "license": "MIT",
+      "repository": "https://github.com/AltF02/x11-rs.git",
+      "files": [
+        "rust/x11-2.21.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "x11-dl",
+      "version": "2.21.0",
+      "license": "MIT",
+      "repository": "https://github.com/AltF02/x11-rs.git",
+      "files": [
+        "rust/x11-dl-2.21.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "yoke",
+      "version": "0.8.3",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/yoke-0.8.3/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "yoke-derive",
+      "version": "0.8.4",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/yoke-derive-0.8.4/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/zerofrom-0.1.8/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "zerofrom-derive",
+      "version": "0.1.8",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/zerofrom-derive-0.1.8/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "zerotrie",
+      "version": "0.2.5",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/zerotrie-0.2.5/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "zerovec",
+      "version": "0.11.8",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/zerovec-0.11.8/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "zerovec-derive",
+      "version": "0.11.6",
+      "license": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "files": [
+        "rust/zerovec-derive-0.11.6/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "zlib-rs",
+      "version": "0.6.8",
+      "license": "Zlib",
+      "repository": "https://github.com/trifectatechfoundation/zlib-rs",
+      "files": [
+        "rust/zlib-rs-0.6.8/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "cargo-lock",
+      "name": "zmij",
+      "version": "1.0.23",
+      "license": "MIT",
+      "repository": "https://github.com/dtolnay/zmij",
+      "files": [
+        "rust/zmij-1.0.23/LICENSE-MIT"
+      ]
+    },
+    {
+      "ecosystem": "runtime",
+      "name": "Rust standard library and GNU runtime notices",
+      "version": "1.99.0",
+      "files": [
+        "runtime/Rust-COPYRIGHT-library.html",
+        "runtime/rust-licenses/Apache-2.0.txt",
+        "runtime/rust-licenses/BSD-2-Clause.txt",
+        "runtime/rust-licenses/CC-BY-SA-4.0.txt",
+        "runtime/rust-licenses/GCC-exception-3.1.txt",
+        "runtime/rust-licenses/GPL-2.0-only.txt",
+        "runtime/rust-licenses/GPL-3.0-or-later.txt",
+        "runtime/rust-licenses/ISC.txt",
+        "runtime/rust-licenses/LLVM-exception.txt",
+        "runtime/rust-licenses/MIT.txt",
+        "runtime/rust-licenses/NCSA.txt",
+        "runtime/rust-licenses/OFL-1.1.txt",
+        "runtime/rust-licenses/Unicode-3.0.txt"
+      ]
+    },
+    {
+      "ecosystem": "javascript",
+      "name": "react",
+      "version": "19.3.0",
+      "license": "MIT",
+      "files": [
+        "javascript/react-19.3.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "javascript",
+      "name": "react-dom",
+      "version": "19.3.0",
+      "license": "MIT",
+      "files": [
+        "javascript/react-dom-19.3.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "javascript",
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "files": [
+        "javascript/scheduler-0.28.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "javascript",
+      "name": "lucide-react",
+      "version": "0.468.0",
+      "license": "ISC",
+      "files": [
+        "javascript/lucide-react-0.468.0/dist/esm/icons/copyright.js",
+        "javascript/lucide-react-0.468.0/dist/esm/icons/copyright.js.map",
+        "javascript/lucide-react-0.468.0/LICENSE"
+      ]
+    },
+    {
+      "ecosystem": "runtime",
+      "name": "Microsoft WebView2 Loader",
+      "version": "1.0.3800.47",
+      "source": "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.3800.47/microsoft.web.webview2.1.0.3800.47.nupkg",
+      "files": [
+        "runtime/Microsoft-WebView2-1.0.3800.47/LICENSE.txt"
+      ]
+    }
+  ],
+  "unavailable_locked_sources": []
+}

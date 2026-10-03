@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "future_research",
+  "optional": true,
+  "benchmark_executed": false,
+  "purpose": "Compare a reinforcement-learning policy with deterministic policies only after the simplified environment and information model are mapped explicitly.",
+  "production_dependency": false,
+  "reference_pin": null,
+  "training_information": "Observable cards and declared rules only; no hidden hole or future shoe order.",
+  "required_mapping": ["dealing model", "deck and shuffle model", "supported actions", "payout and settlement", "state information", "split support"],
+  "evaluation": ["Independent train/test seeds", "Net profit per original unit", "Paired batch intervals where models match", "EV regret under a compatible deterministic solver", "Latency and unsupported cases"],
+  "metrics": null,
+  "acceptance": "A future optional experiment, as specified by the user; no trained agent or measured advantage is claimed."
+}

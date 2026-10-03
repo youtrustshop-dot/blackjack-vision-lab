@@ -1,0 +1,21 @@
+name: Verify lab
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: ui/package-lock.json
+      - run: python -m pip install -c requirements-lock.txt -e ".[dev]"
+      - run: python -m pytest -q
+      - run: npm ci
+        working-directory: ui
+      - run: npm run build
+        working-directory: ui

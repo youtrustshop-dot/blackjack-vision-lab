@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "comparison_executed": true,
+  "exact_reference": false,
+  "diagnostic_only": true,
+  "original_report_status": "failed",
+  "original_failure_count": 279,
+  "original_report_sha256": "ae121d3c6d7079f2435de21c64007d5398aa6696bcb5f9bf6b3305cb4b88252f",
+  "original_failures_sha256": "0381e711bd10ab22fd2e3dc52199ab064586d7372e69d461d52a05b8f51c43d6",
+  "tolerance": 1e-07,
+  "original_effort": 3,
+  "diagnostic_effort": 4,
+  "expected_cases": 4,
+  "completed_cases": 4,
+  "selection": "First, maximum absolute EV difference, maximum stand difference, median failure; duplicates removed",
+  "diagnostic_failures": 0,
+  "primary_mechanism": {
+    "source_url": "https://github.com/hhoppe/blackjack/blob/2ff98e83adf98396beb4ac82a338db03e551264f/blackjack.py#L1092",
+    "functions": [
+      "make_recent",
+      "add_recent",
+      "reward_after_dealer_hits"
+    ],
+    "effort3_tracked_card_cap": 10,
+    "effort4_tracked_card_cap": 14,
+    "observed": "At card cap add_recent returns the existing tuple, so subsequent dealer draws reuse probabilities without removing those drawn ranks."
+  },
+  "precision_note": "Agreement at effort4 is evidence for truncation cause, not a proven global error bound or an exact reference. Original effort3 report remains failed; no tolerance/input/native-source change.",
+  "provenance": {
+    "repository": "hhoppe/blackjack",
+    "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+    "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+    "revision_verified": true,
+    "tracked_tree_clean": true,
+    "license": "MIT",
+    "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+  },
+  "native_sha256": "ea14fa586a3e382a313a09753e21a277ed93258be790188cb8f186fae8a5a40c",
+  "elapsed_seconds": 0.750174099994183,
+  "executed_at": "2026-10-03T00:36:35.606098+00:00",
+  "results": [
+    {
+      "state_id": "45f7d8d254a6f6e0a0ee",
+      "rules": {
+        "decks": 1,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        2,
+        4,
+        5,
+        5
+      ],
+      "dealer": 1,
+      "counts": [
+        3,
+        3,
+        4,
+        3,
+        2,
+        4,
+        4,
+        4,
+        4,
+        16
+      ],
+      "native_ev": {
+        "stand": -0.6562525399842337,
+        "hit": -0.6168516699143524
+      },
+      "original_effort3_ev": {
+        "stand": -0.6562527306529586,
+        "hit": -0.6168518584697635
+      },
+      "effort4_ev": {
+        "stand": -0.6562525399842338,
+        "hit": -0.6168516699143523
+      },
+      "original_comparison": {
+        "status": "failed",
+        "passed": false,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 1.906687249197958e-07,
+          "hit": 1.8855541117357433e-07
+        },
+        "compared_actions": [
+          "stand",
+          "hit"
+        ]
+      },
+      "diagnostic_comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 1.1102230246251565e-16,
+          "hit": -1.1102230246251565e-16
+        },
+        "compared_actions": [
+          "stand",
+          "hit"
+        ]
+      },
+      "max_abs_diff_effort3": 1.906687249197958e-07,
+      "max_abs_diff_effort4": 1.1102230246251565e-16,
+      "difference_reduction_factor": 1717391197.0,
+      "original_best_action": "hit",
+      "effort4_best_action": "hit",
+      "original_failed": true,
+      "investigation_status": "consistent_with_reference_card_tracking_truncation",
+      "latency_ms": 13.582200001110323
+    },
+    {
+      "state_id": "f046aef544087ad37431",
+      "rules": {
+        "decks": 2,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "dealer": 2,
+      "counts": [
+        5,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        32
+      ],
+      "native_ev": {
+        "stand": -0.27823250821751766,
+        "hit": -0.020160337340867692
+      },
+      "original_effort3_ev": {
+        "stand": -0.27823271347440953,
+        "hit": -0.020170682169020446
+      },
+      "effort4_ev": {
+        "stand": -0.2782325082175176,
+        "hit": -0.02016033734305657
+      },
+      "original_comparison": {
+        "status": "failed",
+        "passed": false,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 2.0525689187200769e-07,
+          "hit": 1.0344828152753643e-05
+        },
+        "compared_actions": [
+          "stand",
+          "hit"
+        ]
+      },
+      "diagnostic_comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": -5.551115123125783e-17,
+          "hit": 2.188877551434487e-12
+        },
+        "compared_actions": [
+          "stand",
+          "hit"
+        ]
+      },
+      "max_abs_diff_effort3": 1.0344828152753643e-05,
+      "max_abs_diff_effort4": 2.188877551434487e-12,
+      "difference_reduction_factor": 4726088.102084162,
+      "original_best_action": "hit",
+      "effort4_best_action": "hit",
+      "original_failed": true,
+      "investigation_status": "consistent_with_reference_card_tracking_truncation",
+      "latency_ms": 535.3033000064897
+    },
+    {
+      "state_id": "b16140f47e9953be80a9",
+      "rules": {
+        "decks": 2,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "dealer": 2,
+      "counts": [
+        8,
+        7,
+        8,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        32
+      ],
+      "native_ev": {
+        "stand": -0.2882554117686883,
+        "hit": -0.524252988000921
+      },
+      "original_effort3_ev": {
+        "stand": -0.2882559315030705,
+        "hit": -0.5242532916577708
+      },
+      "effort4_ev": {
+        "stand": -0.2882554117686883,
+        "hit": -0.5242529880008796
+      },
+      "original_comparison": {
+        "status": "failed",
+        "passed": false,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 5.197343821983225e-07,
+          "hit": 3.0365684977606833e-07
+        },
+        "compared_actions": [
+          "stand",
+          "hit"
+        ]
+      },
+      "diagnostic_comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 0.0,
+          "hit": -4.141131881851834e-14
+        },
+        "compared_actions": [
+          "stand",
+          "hit"
+        ]
+      },
+      "max_abs_diff_effort3": 5.197343821983225e-07,
+      "max_abs_diff_effort4": 4.141131881851834e-14,
+      "difference_reduction_factor": 12550539.249329759,
+      "original_best_action": "stand",
+      "effort4_best_action": "stand",
+      "original_failed": true,
+      "investigation_status": "consistent_with_reference_card_tracking_truncation",
+      "latency_ms": 39.0140999952564
+    },
+    {
+      "state_id": "5e2e0bbb818054491807",
+      "rules": {
+        "decks": 6,
+        "hit_soft17": false,
+        "blackjack_payout": 1.5,
+        "dealer_peek": true,
+        "enhc": false,
+        "enhc_loss": "all",
+        "double_rule": "any",
+        "double_after_split": true,
+        "resplit": true,
+        "max_split_hands": 4,
+        "resplit_aces": false,
+        "hit_split_aces": false,
+        "surrender": "late",
+        "penetration": 0.75
+      },
+      "player": [
+        1,
+        1,
+        4,
+        4
+      ],
+      "dealer": 5,
+      "counts": [
+        22,
+        24,
+        24,
+        22,
+        23,
+        24,
+        24,
+        24,
+        24,
+        96
+      ],
+      "native_ev": {
+        "stand": 0.6719031783673239,
+        "hit": 0.26495050674320053
+      },
+      "original_effort3_ev": {
+        "stand": 0.6719031826765034,
+        "hit": 0.2649502642933401
+      },
+      "effort4_ev": {
+        "stand": 0.6719031783673239,
+        "hit": 0.26495050674320053
+      },
+      "original_comparison": {
+        "status": "failed",
+        "passed": false,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": -4.309179457706591e-09,
+          "hit": 2.42449860410332e-07
+        },
+        "compared_actions": [
+          "stand",
+          "hit"
+        ]
+      },
+      "diagnostic_comparison": {
+        "status": "passed",
+        "passed": true,
+        "tolerance": 1e-07,
+        "differences": {
+          "stand": 0.0,
+          "hit": 0.0
+        },
+        "compared_actions": [
+          "stand",
+          "hit"
+        ]
+      },
+      "max_abs_diff_effort3": 2.42449860410332e-07,
+      "max_abs_diff_effort4": 0.0,
+      "difference_reduction_factor": null,
+      "original_best_action": "stand",
+      "effort4_best_action": "stand",
+      "original_failed": true,
+      "investigation_status": "consistent_with_reference_card_tracking_truncation",
+      "latency_ms": 109.59810000349535
+    }
+  ]
+}

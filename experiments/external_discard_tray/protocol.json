@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "source": "https://github.com/mhluska/blackjack-discard-tray-photos",
+  "commit": "3d7ab1bfd0b7ea0235bea085488427fcf7520e69",
+  "geometry": {
+    "front_strip": [
+      0.505,
+      0.525
+    ],
+    "vertical_roi": [
+      0.34,
+      0.755
+    ],
+    "base_min_y": 0.65,
+    "blue_minus_red": 10.0,
+    "row_support": 0.25,
+    "black_level": 50.0,
+    "resize_width": 960
+  },
+  "split_counts": {
+    "train": [
+      0,
+      1,
+      16,
+      32,
+      48,
+      52,
+      64,
+      80,
+      96,
+      112,
+      128,
+      144,
+      156,
+      160,
+      176,
+      192,
+      208
+    ],
+    "calibration": [
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272
+    ],
+    "test": [
+      280,
+      284,
+      288,
+      292,
+      296,
+      300,
+      304,
+      308,
+      312
+    ],
+    "overflow": [
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      364
+    ]
+  },
+  "model": "ordinary least squares count from normalized front stack height; absent blue support requires abstention",
+  "calibration": "higher 90th percentile absolute residual on measurable later calibration frames; unsupported frames excluded and counted explicitly",
+  "evaluation": "later normal-capacity frames and overflow reported separately; same pixel thresholds and OLS as initial frozen experiment",
+  "revision_note": "initial holdout revealed unsupported red backs: no pixel tuning; only removal of false zero predictions and exclusion of unsupported calibration residuals",
+  "limitations": [
+    "one recording, not independent sessions",
+    "counts from filenames/source README",
+    "chronological test extrapolates beyond training when measurable",
+    "empirical bands have no claimed probability coverage under temporal dependence",
+    "empty pixels cannot distinguish an unsupported back color",
+    "does not infer exact shoe composition"
+  ]
+}

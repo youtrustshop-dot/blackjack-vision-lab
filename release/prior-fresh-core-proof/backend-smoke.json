@@ -1,0 +1,65 @@
+{
+  "status": "pass",
+  "frozen": true,
+  "backend_sha256": "441c6f2a39f2424728219c052983f29c97fb7f0a67ce35bc7c3be35e3ee063f4",
+  "self_test": {
+    "event": "self_test",
+    "status": "ok",
+    "frozen": true,
+    "numpy": "2.5.3",
+    "opencv": "5.0.0",
+    "third_party_notices_bundled": true,
+    "build_provenance": {
+      "version": "0.1.0",
+      "source_sha256": {
+        "bjlab/engine.py": "3b9b68f6f6d124f17c7d1e6895ce149eb42ab66b06e1ab6e39545d078b5035ba",
+        "bjlab/solver.py": "a219f3d90f82bd4dd22c4f3cafde5001577c86732859b88c9b682577a42f6397",
+        "bjlab/strategy.py": "bf36116f0a8bf89008eafe87c3ec29a4e04c5cf96b997fb870fc802f3dbe9741",
+        "bjlab/api.py": "458ce99c4c8dd3aeaaa449d7c64940ed08db3a364dcb6454b213019997d38941",
+        "bjlab/simulator.py": "2f12e895f4f0dcae4c60826d4f42109cc98f35a4510b11a44e58fe08c75d5707",
+        "ui/dist/index.html": "d4540a0c609436039a6300031a791f50481ca5f4ded9dbe25d144d016c9d9b05",
+        "docs/REQUIREMENTS.json": "cf846f8ca9ea0e58be8362f7a43fdb214edb53dfc1eebc910380c2879d15dc88"
+      }
+    },
+    "ui_bundled": true
+  },
+  "started_from": "unrelated work directory, without source PYTHONPATH",
+  "health": {
+    "status": "ok",
+    "version": "0.1.0",
+    "service": "Blackjack Vision Lab",
+    "local_only": true,
+    "truth_boundary": "debug endpoint excluded from solver inputs"
+  },
+  "ui_html_bytes": 409,
+  "ui_matches_final_build": true,
+  "ui_html_sha256": "d4540a0c609436039a6300031a791f50481ca5f4ded9dbe25d144d016c9d9b05",
+  "png_bytes": 16985,
+  "solver_status": "ok",
+  "perceived_cards": 3,
+  "hidden_cards": 1,
+  "perception_solver_status": "ok",
+  "replay_exact_prefix": true,
+  "isolated_solver_latency_ms": 1384.797200000321,
+  "finite_solver_exact": true,
+  "split_context_worker": true,
+  "portable_font_override": true,
+  "pixel_rules": {
+    "soft17": "S17",
+    "hole_card": "AHC",
+    "peek": "PEEK",
+    "das": "DAS",
+    "rsa": "NRSA",
+    "surrender": "LS",
+    "blackjack_payout": "BJ3:2",
+    "decks": 6
+  },
+  "minimal_card_design": true,
+  "standalone_unknown_inventory_gated": true,
+  "uploaded_deck_posterior_uncertain": true,
+  "video_real_jpeg_frames": 4,
+  "video_prefix_replay_no_future_cards": true,
+  "health_version": "0.1.0",
+  "new_mei_leaks": 0,
+  "graceful_exit_code": 0
+}

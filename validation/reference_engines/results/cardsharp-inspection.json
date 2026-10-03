@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "source_inspected",
+  "comparison_executed": false,
+  "engine": "cardsharp",
+  "provenance": {
+    "repository": "mmichie/cardsharp",
+    "revision": "077182caf8851e3c44f93864e71e27978fc27665",
+    "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\cardsharp-reference",
+    "revision_verified": true,
+    "tracked_tree_clean": true,
+    "license": "MIT"
+  },
+  "inspected_at": "2026-10-03T00:37:03.613757+00:00",
+  "source_hashes": {
+    "cardsharp/events/emitter.py": "d1f838e9e27ca666687a088937b4a3a6541effe50705b7fe7a19d7ca32065af3",
+    "cardsharp/state/models.py": "10922c3306f10cf7ac4be160b32ac08002c78eb3609383080d58f02afca6b8f5",
+    "cardsharp/state/transitions.py": "b0da192bdeb86cb7e28f5d8b7247d08bdae7f4ea4054f0f640005d49beb344b1",
+    "cardsharp/engine/base.py": "c7718c6b9993ffb05c689e756f9695792765f7e43070f8124ab085dd73c61cdb",
+    "cardsharp/api/flow.py": "18a9df78aea420d938ef364652229577fc69edb59ed322347fb44cb7351394b3"
+  },
+  "source_urls": {
+    "cardsharp/events/emitter.py": "https://github.com/mmichie/cardsharp/blob/077182caf8851e3c44f93864e71e27978fc27665/cardsharp/events/emitter.py",
+    "cardsharp/state/models.py": "https://github.com/mmichie/cardsharp/blob/077182caf8851e3c44f93864e71e27978fc27665/cardsharp/state/models.py",
+    "cardsharp/state/transitions.py": "https://github.com/mmichie/cardsharp/blob/077182caf8851e3c44f93864e71e27978fc27665/cardsharp/state/transitions.py",
+    "cardsharp/engine/base.py": "https://github.com/mmichie/cardsharp/blob/077182caf8851e3c44f93864e71e27978fc27665/cardsharp/engine/base.py",
+    "cardsharp/api/flow.py": "https://github.com/mmichie/cardsharp/blob/077182caf8851e3c44f93864e71e27978fc27665/cardsharp/api/flow.py"
+  },
+  "patterns": [
+    {
+      "path": "cardsharp/events/emitter.py",
+      "symbols": [
+        "EventEmitter.on",
+        "EventEmitter.once",
+        "EventEmitter.emit",
+        "EventEmitter.remove_all_listeners"
+      ],
+      "observed": "Priority-sorted subscriptions; unsubscribe closures; RLock protects listener lists; recorder game/round context."
+    },
+    {
+      "path": "cardsharp/state/models.py",
+      "symbols": [
+        "HandState",
+        "PlayerState",
+        "DealerState",
+        "GameState"
+      ],
+      "observed": "Frozen dataclasses and explicit dealer visible-card projection; nested list members remain mutable, so immutability is shallow."
+    },
+    {
+      "path": "cardsharp/state/transitions.py",
+      "symbols": [
+        "StateTransitionEngine",
+        "change_stage",
+        "resolve_hands"
+      ],
+      "observed": "dataclasses.replace builds new states and publishes transitions through global EventBus. Functions have event side effects, so pure state-function claim needs qualification."
+    },
+    {
+      "path": "cardsharp/api/flow.py",
+      "symbols": [
+        "EventWaiter.wait_for",
+        "EventWaiter.wait_for_any"
+      ],
+      "observed": "Future-based event waits with predicates, timeout handling and finally unsubscribe; engine/UI can await events rather than poll."
+    }
+  ],
+  "execution_status": "not_executed; architecture inspected only, no EV validation claim"
+}

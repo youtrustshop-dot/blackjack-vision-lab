@@ -1,0 +1,43 @@
+{
+  "method": "infinite-shoe-dp",
+  "rules": {
+    "decks": 6,
+    "hit_soft17": false,
+    "blackjack_payout": 1.5,
+    "dealer_peek": true,
+    "enhc": false,
+    "enhc_loss": "all",
+    "double_rule": "any",
+    "double_after_split": true,
+    "resplit": true,
+    "max_split_hands": 4,
+    "resplit_aces": false,
+    "hit_split_aces": false,
+    "surrender": "late",
+    "penetration": 0.75
+  },
+  "finite_shoe_exact": false,
+  "exactWithinModel": true,
+  "continuation_policy": "optimal total-dependent hit/stand after the initial decision",
+  "group": "hard",
+  "value": "16",
+  "dealer": "10",
+  "cell": {
+    "action": "surrender",
+    "best_action": "surrender",
+    "actions": {
+      "stand": -0.540430333994985,
+      "hit": -0.5398263462810868,
+      "double": -1.0796526925621737,
+      "surrender": -0.49999999999999994
+    },
+    "ev": {
+      "stand": -0.540430333994985,
+      "hit": -0.5398263462810868,
+      "double": -1.0796526925621737,
+      "surrender": -0.49999999999999994
+    },
+    "exactWithinModel": true,
+    "initial_state_probability": 0.06508875739644972
+  }
+}

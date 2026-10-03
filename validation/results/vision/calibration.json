@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "method": "empirical_bins_laplace",
+  "bins": 10,
+  "counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6,
+    1200
+  ],
+  "correct": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6,
+    1200
+  ],
+  "scope": "per-detection correctness, not session integrity",
+  "evaluation": {
+    "supported": 1632,
+    "unsupported": 0,
+    "brier_score": 1.0265853458120188e-05,
+    "ece": 0.0009080301213663495,
+    "counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      1200
+    ]
+  },
+  "fit_split": "calibration",
+  "evaluation_split": "test",
+  "dataset_manifest_sha256": "7fe3b5d7f624bac4c71a1c3c2aea1f7c90daf063c4bff4ef838e110908de481e"
+}

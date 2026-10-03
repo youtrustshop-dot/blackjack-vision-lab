@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "All counting systems and validated custom tags use real exposed events",
+    "Observed-state EV endpoint uses reconstructed detections and reports precision",
+    "Four clicked corners normalize pixels and preserve detections",
+    "Real JPEG video frames scrub backward without exposing later confirmed cards",
+    "Executed policy experiment presents real means, paired uncertainty and raw samples"
+  ],
+  "errors": [],
+  "browser": "isolated Chrome headless"
+}

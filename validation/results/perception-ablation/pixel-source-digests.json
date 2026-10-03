@@ -1,0 +1,1442 @@
+[
+  {
+    "image": "test/session-0007-green-0000.png",
+    "sha256": "19a68e20c73d43288c832ea582eb83dc08f08bd2372ddde9ab531d74a4a0ed19"
+  },
+  {
+    "image": "test/session-0007-green-0001.png",
+    "sha256": "50218f5b1f17c99a5487eb9f2e20ec79b975e4c1ae111912693956b294edaea4"
+  },
+  {
+    "image": "test/session-0007-green-0002.png",
+    "sha256": "e8b033464af73ad1ed8d7b5c73a7a6bba9ace57bb1ed779752e8f8ba544cff29"
+  },
+  {
+    "image": "test/session-0007-green-0003.png",
+    "sha256": "5feba4c5972cfb3876f7377956e8e16429d2b997ff227bbba978b3c9e8a8d264"
+  },
+  {
+    "image": "test/session-0007-green-0004.png",
+    "sha256": "5c85079520a1c3a39abc2cdfa90ba03adfceeac08e0ef7994d7910e28f302a2c"
+  },
+  {
+    "image": "test/session-0007-green-0005.png",
+    "sha256": "aaeb9e0898cb895bf138f738e088fdc17d53af44d45aa56fe370d718347f030e"
+  },
+  {
+    "image": "test/session-0007-navy-0000.png",
+    "sha256": "ee9bd471cd1102262360f8fda0298c7554ae56668d30294c107fc9cc6d49b90a"
+  },
+  {
+    "image": "test/session-0007-navy-0001.png",
+    "sha256": "cbbeb88fefa4b82351c48361d93cd7b1460faf3f03365edb37a639f90918dd7d"
+  },
+  {
+    "image": "test/session-0007-navy-0002.png",
+    "sha256": "a34e2db54835f749e909262318d2288ff0e07d28cfc256801097538489a0550e"
+  },
+  {
+    "image": "test/session-0007-navy-0003.png",
+    "sha256": "78b12d25d26ccca4b46c0ec4e93847e0a63cf0fa16951c8d6086a9fd4bced216"
+  },
+  {
+    "image": "test/session-0007-navy-0004.png",
+    "sha256": "9f84818845ea3346472b82f27d945e245b76fb7415b08e76ae5a0fd92e4b4d87"
+  },
+  {
+    "image": "test/session-0007-navy-0005.png",
+    "sha256": "ac45510d4bd40ffdaa33f048301fbed31a44d8ac27bf6d83410580e74572987e"
+  },
+  {
+    "image": "test/session-0007-burgundy-0000.png",
+    "sha256": "96601e228f620618e8e5dbaea80892648ad0cd9a3c74cc6e709c0a1d3d64b743"
+  },
+  {
+    "image": "test/session-0007-burgundy-0001.png",
+    "sha256": "df7e0be0b7f3bb4193f3ec6e237091470ef2fa4463a0e3e7f4d5f2de74835ea5"
+  },
+  {
+    "image": "test/session-0007-burgundy-0002.png",
+    "sha256": "fcc51f6370967f6018537304a3e9beca78f45d5eb8337d0a296e0760f315e80b"
+  },
+  {
+    "image": "test/session-0007-burgundy-0003.png",
+    "sha256": "b285e659315fb4bc2e17fe7d16933aaa682e0b7ec81991d5e4c76fba5f0b1ce9"
+  },
+  {
+    "image": "test/session-0007-burgundy-0004.png",
+    "sha256": "953753aa579379dbad3526c875e0033148caa0d3c2e148a06a9be67728d55382"
+  },
+  {
+    "image": "test/session-0007-burgundy-0005.png",
+    "sha256": "47935edf39c99f3f3ab829b886d383a45e626f7502bf85e716362a9a2bc5dc29"
+  },
+  {
+    "image": "test/session-0018-green-0000.png",
+    "sha256": "4beab7586727cc6da018ad17ff6ed40232976810a81f41e4608502c6e5212c78"
+  },
+  {
+    "image": "test/session-0018-green-0001.png",
+    "sha256": "e9c3cb025a78a3a188d4875cf61bd577f85e450ba08083b36ad2cd48f84b4252"
+  },
+  {
+    "image": "test/session-0018-green-0002.png",
+    "sha256": "b258d812b14612878b718af76e1be73cb3970480f1a3c65d66cb834805389472"
+  },
+  {
+    "image": "test/session-0018-green-0003.png",
+    "sha256": "8c359c893a1a2eb2a02b50471938fa9d572501c4e01fe1a99f54adb0f94ae1ab"
+  },
+  {
+    "image": "test/session-0018-green-0004.png",
+    "sha256": "82389247fa3d1657bfb8645a65730ab820b732de5c32a8dcf9b01db24721c615"
+  },
+  {
+    "image": "test/session-0018-green-0005.png",
+    "sha256": "43ba1787050b0d549c44e7ad404f1708c6a875cc92fbec4ecd5dd2fd04f91429"
+  },
+  {
+    "image": "test/session-0018-navy-0000.png",
+    "sha256": "0e98a71251f94a18ec719d58d531e671fb3321bb80ec7cae5d4ba7837964ed05"
+  },
+  {
+    "image": "test/session-0018-navy-0001.png",
+    "sha256": "b28dc84e1cfd8c782fff241ad1ad4b1dfee6b269dcb245531d8583251dfdf90f"
+  },
+  {
+    "image": "test/session-0018-navy-0002.png",
+    "sha256": "da21b6021a360cbe038716698bd28fcc8732de4da4cf431be8009bec59709c2d"
+  },
+  {
+    "image": "test/session-0018-navy-0003.png",
+    "sha256": "ddc4f53bdedd75ae7a333150219543877d64995bb0e016f209f506d25cb60694"
+  },
+  {
+    "image": "test/session-0018-navy-0004.png",
+    "sha256": "ea19b54245f7e932e3b4be024888e8c83c62e89dfdbacc4785e4b62aa162e30a"
+  },
+  {
+    "image": "test/session-0018-navy-0005.png",
+    "sha256": "e2bdadd68475f7117b6932825d88aae119cc652a0f39869ad7bd7867ec2fa8be"
+  },
+  {
+    "image": "test/session-0018-burgundy-0000.png",
+    "sha256": "0ad994ec63145f54a16f1e6017aa5c8fee0d68a82ee442f46742084b3738a07e"
+  },
+  {
+    "image": "test/session-0018-burgundy-0001.png",
+    "sha256": "3dcda1e2572ce6cbde2e0b4ee11ef31c949791ba968866c8aa5ed4d0a1b92658"
+  },
+  {
+    "image": "test/session-0018-burgundy-0002.png",
+    "sha256": "9b7d8fbe1fe5e759d35a2d5044893b1f7211c72dc99a57f6619567d47ada3b22"
+  },
+  {
+    "image": "test/session-0018-burgundy-0003.png",
+    "sha256": "624cf27f3818fd0b0def17e26105c54d6493cca7fcf91f52d9ae76bb0c774f51"
+  },
+  {
+    "image": "test/session-0018-burgundy-0004.png",
+    "sha256": "94bbc03df1e522b7df6625cd9a2506af81f29c49d88dfbb352ec4df49b5d23e9"
+  },
+  {
+    "image": "test/session-0018-burgundy-0005.png",
+    "sha256": "88d6aab5a6084aa15469e86556470c54e710779635a2aa293ce8531d338ef086"
+  },
+  {
+    "image": "test/session-0019-green-0000.png",
+    "sha256": "cba996d215ed25a0017da609db5ae37e6aec2844dd20876022d0b7cc86b0ab61"
+  },
+  {
+    "image": "test/session-0019-green-0001.png",
+    "sha256": "d6554b24138e6d1527415df6fae3e3070eae2e48c919f7b9431b6cd636865add"
+  },
+  {
+    "image": "test/session-0019-green-0002.png",
+    "sha256": "9cc776ba96d0160e3f131f0d4c7bb32a99dc088dde144fdb2e761df41a2fa2cf"
+  },
+  {
+    "image": "test/session-0019-green-0003.png",
+    "sha256": "afc09074dd1ec7dad4e9dab9c9ede8912bb1b41b7c0245fa2ba24823bc7aa1fb"
+  },
+  {
+    "image": "test/session-0019-green-0004.png",
+    "sha256": "ae387da3dbe21ebfe234d95136bd567dbbaa81efbc7360a39bcf068bfa1467a8"
+  },
+  {
+    "image": "test/session-0019-green-0005.png",
+    "sha256": "4d1f0ac96d13dbd3211ec0e7f83513deb86272d8ca194fe1ffa9d70e1e9dd7f6"
+  },
+  {
+    "image": "test/session-0019-navy-0000.png",
+    "sha256": "b747ed4b2d59cc420bcbf88aa970d4a88dbadae5d0c230b76f6ee1876e2c932e"
+  },
+  {
+    "image": "test/session-0019-navy-0001.png",
+    "sha256": "8a0e1776dadb551a2248262d3011c4b215783f364386ccd2ff281017ee41a4b2"
+  },
+  {
+    "image": "test/session-0019-navy-0002.png",
+    "sha256": "c53d89779dd429bc1c65f85702a76ea06fa5df628abd9e82ef7352c33791147c"
+  },
+  {
+    "image": "test/session-0019-navy-0003.png",
+    "sha256": "28088c6275de7eef4f6220d683f56b1bad9d9c8770dd103b6632880ff813919a"
+  },
+  {
+    "image": "test/session-0019-navy-0004.png",
+    "sha256": "8f75b6208189d3db8d71da795fb103ac5bbe656c81303669d1f3dcad8f08c023"
+  },
+  {
+    "image": "test/session-0019-navy-0005.png",
+    "sha256": "ac7314cda2c00b980533970412c4e0f11af6f8ac2005d8e5bf2f9d48aa19822a"
+  },
+  {
+    "image": "test/session-0019-burgundy-0000.png",
+    "sha256": "b141b47436f98ab730650470adb34a910a21ccc52fd9c6207511148b9af49905"
+  },
+  {
+    "image": "test/session-0019-burgundy-0001.png",
+    "sha256": "3a8ce2ce6ee5a0930d8f86aac1eaee0b68c715e2525f05938deda8e317ca0e46"
+  },
+  {
+    "image": "test/session-0019-burgundy-0002.png",
+    "sha256": "54b2ce9c7a74ebd51ea66f705168c49cae49863e8cd9be7d60b3093c4cfc327a"
+  },
+  {
+    "image": "test/session-0019-burgundy-0003.png",
+    "sha256": "072554fca253dcfe6e9618877a6cc0448ea0cb97552719ffde739465c1e6421a"
+  },
+  {
+    "image": "test/session-0019-burgundy-0004.png",
+    "sha256": "c2c9677466020d8bf9b02d3966ca9a465ff6c07f3f487baa6da5436752b05273"
+  },
+  {
+    "image": "test/session-0019-burgundy-0005.png",
+    "sha256": "6a2b564cf14282b5ce4cc108238b02daeaedf33a882d338a226ca05747e51981"
+  },
+  {
+    "image": "test/session-0028-green-0000.png",
+    "sha256": "9d984c6fcf3666e1be7b1f946822d5518b4f69019a017aee076dca8332361418"
+  },
+  {
+    "image": "test/session-0028-green-0001.png",
+    "sha256": "7a75095848c4b2427e01e434d604dded47646aff1dd120027009c20ca14dbc9d"
+  },
+  {
+    "image": "test/session-0028-green-0002.png",
+    "sha256": "701cc2bb6e846fb544539778a70df53acdcf099cec48d26284b397022e9e07b6"
+  },
+  {
+    "image": "test/session-0028-green-0003.png",
+    "sha256": "204795221d79058845f6be5919198007273574ba9e91035a54f3b575ed5fb154"
+  },
+  {
+    "image": "test/session-0028-green-0004.png",
+    "sha256": "05e778a2dc7d060f9143dab88a46ce032a9b3e4def9a6fb16e49affef8a469cf"
+  },
+  {
+    "image": "test/session-0028-green-0005.png",
+    "sha256": "60467cae2fff6f3b9350999b1fedb3c130c17a96b48935af69c9671597d8e69d"
+  },
+  {
+    "image": "test/session-0028-navy-0000.png",
+    "sha256": "740776c14823525a1764556abb6a043fe0745244ec2fb29142cf8d24c43a9cc9"
+  },
+  {
+    "image": "test/session-0028-navy-0001.png",
+    "sha256": "b0238aeb7d63eea96f2163a7d37f5874ae5eeb73ddcd666150405ba41c10edc4"
+  },
+  {
+    "image": "test/session-0028-navy-0002.png",
+    "sha256": "e37e99ab98fc5235ffe4d14e0d301d9d728ec75c4563d7378c41cd3973e06ff9"
+  },
+  {
+    "image": "test/session-0028-navy-0003.png",
+    "sha256": "763b179e4b7f69950f66265b6dc3b2f42f8811f4d56b56e8d762bd2ed1813139"
+  },
+  {
+    "image": "test/session-0028-navy-0004.png",
+    "sha256": "d8f08caec8787444cf125b92296aaeeb9662922628edbfead6548cc1c703154f"
+  },
+  {
+    "image": "test/session-0028-navy-0005.png",
+    "sha256": "51792a52d268ebd4fd1e1ca33e68849f274033ac98f2c6ae75b9f2f56b72a217"
+  },
+  {
+    "image": "test/session-0028-burgundy-0000.png",
+    "sha256": "611c164ff37449c904068bce665da0851d202e020407ef70cae3d4f09abf4fe0"
+  },
+  {
+    "image": "test/session-0028-burgundy-0001.png",
+    "sha256": "3ba50bef3c0f0746c82ee937afe9f20793882afdec7456af4cb89663cd6e6307"
+  },
+  {
+    "image": "test/session-0028-burgundy-0002.png",
+    "sha256": "c8369eac65a21e7efe92c227e09914b7e73c145023e550fe80c7578fd4197b2c"
+  },
+  {
+    "image": "test/session-0028-burgundy-0003.png",
+    "sha256": "67b67a2037a5ffbd95f59444ee23569fd3e9310a4de45423af720805612e9da0"
+  },
+  {
+    "image": "test/session-0028-burgundy-0004.png",
+    "sha256": "1e9819a0395ffee359ecd3f77c12a9e177130ff2fc1a85a46ab42e0c576517a1"
+  },
+  {
+    "image": "test/session-0028-burgundy-0005.png",
+    "sha256": "436060a0a71fd0ffde970f1025149d439f23ba5695c475b9625a15bb07bc16f3"
+  },
+  {
+    "image": "test/session-0031-green-0000.png",
+    "sha256": "837c671fe62bac6fe33d6c77ddab7e134b5b0b2bb521aa4ba473a0e916db4162"
+  },
+  {
+    "image": "test/session-0031-green-0001.png",
+    "sha256": "ab718f9e7f3ce59381949cab368e63ea7f71d3bb3f931566604bf78219c2016e"
+  },
+  {
+    "image": "test/session-0031-green-0002.png",
+    "sha256": "39ce9663b5c50aff987d842dfad61f418a0925c554826e709b36b7e88be51b3e"
+  },
+  {
+    "image": "test/session-0031-green-0003.png",
+    "sha256": "3a1fe5b5f2650fd8a07ec3f7c5d10bba5f049185a854bf90dad2a6919f2a1a75"
+  },
+  {
+    "image": "test/session-0031-green-0004.png",
+    "sha256": "6f6466343478346da6d2d7799361c094429a8a5364291cf0814c67c5fe807137"
+  },
+  {
+    "image": "test/session-0031-green-0005.png",
+    "sha256": "e2ec99a37e7928c7ee02a7390424c059154a94f9a5c4e5dc48496ce26527c20a"
+  },
+  {
+    "image": "test/session-0031-navy-0000.png",
+    "sha256": "9fa2f258cf3a23072275edf89540b7e2241a6c6728ada4d799e36c91f37f2492"
+  },
+  {
+    "image": "test/session-0031-navy-0001.png",
+    "sha256": "3536530f59c674f8ef88408dab12cb44a0d4ff001c46e9957f0d6d042d4fefcf"
+  },
+  {
+    "image": "test/session-0031-navy-0002.png",
+    "sha256": "500401e14f533550882ec7e5ae51cd2deabbf52542daf8e0e6861f84b992dfb0"
+  },
+  {
+    "image": "test/session-0031-navy-0003.png",
+    "sha256": "a00774052aea86f98d56eb57bfaf7b06bbaa18aa1d0c0e449a2da22905ab3156"
+  },
+  {
+    "image": "test/session-0031-navy-0004.png",
+    "sha256": "d0dbb7f7bb96fafa76307903b3543602ec8cd08121a6978ef069c81cb8ea999f"
+  },
+  {
+    "image": "test/session-0031-navy-0005.png",
+    "sha256": "f942b4f15be153b99fd8950f009fe69473fb79e0eb0d4ac724d838038fa26cd1"
+  },
+  {
+    "image": "test/session-0031-burgundy-0000.png",
+    "sha256": "bb0daa9f781e81dea4b97372f138d411840cdad471bd83af2635fa9d84acd889"
+  },
+  {
+    "image": "test/session-0031-burgundy-0001.png",
+    "sha256": "c77ebcff7bb564b8db787c6319c349f28f9a5303f656aaad1dce75db340c2717"
+  },
+  {
+    "image": "test/session-0031-burgundy-0002.png",
+    "sha256": "9611f06b326ce3996e953565dff724a0066de6f758bb93fb8f54386345da11eb"
+  },
+  {
+    "image": "test/session-0031-burgundy-0003.png",
+    "sha256": "733336da2ce04dc5215c9ecc123a075af73b3259b87545f43d4120d9eab169df"
+  },
+  {
+    "image": "test/session-0031-burgundy-0004.png",
+    "sha256": "c1f3a8f3a322910f2fca6cbe6f306a6b4511a46d2d41e3ad4d97487a28e7fb63"
+  },
+  {
+    "image": "test/session-0031-burgundy-0005.png",
+    "sha256": "6e1825d467dcc85285a8d4b0fa77f121cab6759bd1212a734320fafe29985084"
+  },
+  {
+    "image": "test/session-0046-green-0000.png",
+    "sha256": "82df2cc9fd2ac86ca6a9effcc50d4b02f6f254f12d79663dd78c9713e5d94591"
+  },
+  {
+    "image": "test/session-0046-green-0001.png",
+    "sha256": "d913f8720d676aec9ce21b0f8c3596990592700bd02af7e4917aefc397bbdb47"
+  },
+  {
+    "image": "test/session-0046-green-0002.png",
+    "sha256": "38250211025e358dfb9196ad81bea4b020740422335f6850b2e49499143b3a80"
+  },
+  {
+    "image": "test/session-0046-green-0003.png",
+    "sha256": "5868e00666befe0a57714d035127b66bd94136dbc3b03f13e55803cc2baff56b"
+  },
+  {
+    "image": "test/session-0046-green-0004.png",
+    "sha256": "bb013b6c98238ec0311612d7d130d9b41053efdd3c3b178e5c9495f87a0fd3a1"
+  },
+  {
+    "image": "test/session-0046-green-0005.png",
+    "sha256": "eb4eb4f947dffd41ecacf5ef3a747d839ba973da6b4d3391f62764428817151f"
+  },
+  {
+    "image": "test/session-0046-navy-0000.png",
+    "sha256": "ccfbfabb7cde72f1d963bcd38d209fcc57170bdb0d85713ca756c9fbe48c9302"
+  },
+  {
+    "image": "test/session-0046-navy-0001.png",
+    "sha256": "4e70a9090252d44f70fbb0569716bf899a2292f5ac9fa6e1611465b994355483"
+  },
+  {
+    "image": "test/session-0046-navy-0002.png",
+    "sha256": "52a86de598cb63ef4e197cc2cb185bc28ea779687168c746e79e8df72ff42005"
+  },
+  {
+    "image": "test/session-0046-navy-0003.png",
+    "sha256": "cf3ffb7a29d074efe108a090fb91ad3f7d876740e55d06a010ddf4daa2e51e8c"
+  },
+  {
+    "image": "test/session-0046-navy-0004.png",
+    "sha256": "b40c5fcb3fd7d81cb51b2113c8dac27e67f26c0d03ad3cf8fe133fc447603e5d"
+  },
+  {
+    "image": "test/session-0046-navy-0005.png",
+    "sha256": "7b27efdb651f9af601eeedb3c0bedf8eb4b8e2a5d71789446a4b781bceb311f3"
+  },
+  {
+    "image": "test/session-0046-burgundy-0000.png",
+    "sha256": "289fd7bb7a3f2170631d17d5ad4947975cb0c156eb25a89db5d7afc90d07c27a"
+  },
+  {
+    "image": "test/session-0046-burgundy-0001.png",
+    "sha256": "742f516729d913c17454e9407567745f4f08008d0d7bbf3c0dbb2b4e27806b67"
+  },
+  {
+    "image": "test/session-0046-burgundy-0002.png",
+    "sha256": "1e4cd768ccce0044e3e9b96fa51611479ab440b96a52066de02f29441fa5b055"
+  },
+  {
+    "image": "test/session-0046-burgundy-0003.png",
+    "sha256": "c363dac137f9f351f7d77d2b7e9a7cd896a3405180096f789c3373832b9164d5"
+  },
+  {
+    "image": "test/session-0046-burgundy-0004.png",
+    "sha256": "0ebccf110198437ae3d035ddc3617d7046ec0ff9b3b40af91863b8f72c86b39b"
+  },
+  {
+    "image": "test/session-0046-burgundy-0005.png",
+    "sha256": "2831647c9a83517f1f88dcd4c27dccacdde6cf78c886b6deb62a83a908f580dc"
+  },
+  {
+    "image": "test/session-0051-green-0000.png",
+    "sha256": "01187f6ec058c69e87d287bf24899bf296aec0c10767b363a4889a0264300936"
+  },
+  {
+    "image": "test/session-0051-green-0001.png",
+    "sha256": "3cd8856c98492f8137be1eee9855eeab5f35df520e416ac75edb66ed5a24646b"
+  },
+  {
+    "image": "test/session-0051-green-0002.png",
+    "sha256": "88a9612830abde91aa47c8a7f4a15996380baa0f29f6d147e9a17e5fd6486843"
+  },
+  {
+    "image": "test/session-0051-green-0003.png",
+    "sha256": "cbb3b96276f034b0b99b7c76fd2c737edc609d01e8ea1eaec4a05cc9a90dec58"
+  },
+  {
+    "image": "test/session-0051-green-0004.png",
+    "sha256": "745588fa4b69d3213a33a9a95e6cc289af690c0b85bb26678706a3424717a516"
+  },
+  {
+    "image": "test/session-0051-green-0005.png",
+    "sha256": "5c0f33d8eea654a012eb7d8d42c774838efec1ee79b671743dd83843a2b36fc5"
+  },
+  {
+    "image": "test/session-0051-navy-0000.png",
+    "sha256": "fab5903caf18cbbbba5734acc414744999e7d09805df3c126bba579d9c9875e6"
+  },
+  {
+    "image": "test/session-0051-navy-0001.png",
+    "sha256": "6ddad7a3f1a5187c4a426943cc4745ff19b10e98504610b8069264afabd3a05e"
+  },
+  {
+    "image": "test/session-0051-navy-0002.png",
+    "sha256": "224cd0324ab728cfe6b10fb7962b85aae2e5650aecc15ae7ed41afb0f5f3211a"
+  },
+  {
+    "image": "test/session-0051-navy-0003.png",
+    "sha256": "9030ab9ff03310c67191702a605938f248a265d9b684936ba380b55adb21f8a4"
+  },
+  {
+    "image": "test/session-0051-navy-0004.png",
+    "sha256": "09c0b2470d1363ccfdf622d53be56e840484c998df7c5f8354d3aa542eac444a"
+  },
+  {
+    "image": "test/session-0051-navy-0005.png",
+    "sha256": "4b8d1ba2dea9165dddfc1fa9e09ed3b49cb971de6d5b483e6aa81004b14438b0"
+  },
+  {
+    "image": "test/session-0051-burgundy-0000.png",
+    "sha256": "bfef10789ffed9a344ba40c255fbb669adbded004476c1fae8c02c3217e973af"
+  },
+  {
+    "image": "test/session-0051-burgundy-0001.png",
+    "sha256": "631314b4984b8f84db2b8e13ab9622cc6f8a1c1db484b42edceec5fff00d8da4"
+  },
+  {
+    "image": "test/session-0051-burgundy-0002.png",
+    "sha256": "b6cf3cd3a73a671d1b95a1c7afc8ada486a779582e62c3911cad573458b430f3"
+  },
+  {
+    "image": "test/session-0051-burgundy-0003.png",
+    "sha256": "d913b1cf737767716eb88243209be8ed99f9e7c7196f2a5cc51f5b16c9ac8ccb"
+  },
+  {
+    "image": "test/session-0051-burgundy-0004.png",
+    "sha256": "4e16285ca235837c1f560c8d3a58b81745456566532be78eb7150b91155b1b8f"
+  },
+  {
+    "image": "test/session-0051-burgundy-0005.png",
+    "sha256": "8f3feae56642da379176e2662de9123655a4edf413a055139fe34e36247f1c88"
+  },
+  {
+    "image": "test/session-0062-green-0000.png",
+    "sha256": "78d66a4e38f079f5ad3b4e32995ef1632789d9318157b20dcc9d91e5eeedb5ea"
+  },
+  {
+    "image": "test/session-0062-green-0001.png",
+    "sha256": "b264178e64490cb1b00a416c77ea5e7d615d7cd32c5faace99b1b91a10bbfa7e"
+  },
+  {
+    "image": "test/session-0062-green-0002.png",
+    "sha256": "144258eacfd960e560a8389f33953969e99cb3067a28bd5907353422025630fa"
+  },
+  {
+    "image": "test/session-0062-green-0003.png",
+    "sha256": "630f9de80eb5b06bcee7f2c471bbfa2f2dbc5387427a2f01e264a10fbdf96831"
+  },
+  {
+    "image": "test/session-0062-green-0004.png",
+    "sha256": "c216eae71da1abe5a698f7f12afe3a5427ebe471ae65377d39531579e1bbd6ed"
+  },
+  {
+    "image": "test/session-0062-green-0005.png",
+    "sha256": "6b993faca6557ff09fc4e2a3adbef14039ec3b1d57f8b5425d2367d20a74b4d8"
+  },
+  {
+    "image": "test/session-0062-navy-0000.png",
+    "sha256": "18be0a1bec914a29f4a00f3f2cd124ee4e2429937ff812b530cb946b32537b2f"
+  },
+  {
+    "image": "test/session-0062-navy-0001.png",
+    "sha256": "1f824d1e5e5320c83f92010b538fc236dfcc90e30e3f26cd6eb90df46daf8682"
+  },
+  {
+    "image": "test/session-0062-navy-0002.png",
+    "sha256": "81df584c03ec40e6c094942862f788cb362091cbbdf82b8968fe469aae4512ef"
+  },
+  {
+    "image": "test/session-0062-navy-0003.png",
+    "sha256": "f5715ec12c47fb6ee0749d36cee7e43879473f371ecb26b003e82d19af3e0c38"
+  },
+  {
+    "image": "test/session-0062-navy-0004.png",
+    "sha256": "d505c5eb4362bdaa0184d4cde8d6acc20409922040744af54d5ccb4e5462bfb3"
+  },
+  {
+    "image": "test/session-0062-navy-0005.png",
+    "sha256": "6afe4922bf64531a5f61ec7ae4f4a80e9bad21efc96c06f99fa299a9dbbd9457"
+  },
+  {
+    "image": "test/session-0062-burgundy-0000.png",
+    "sha256": "a3d96bfb90b100ee0bcf92874b3d1428f6e0f1087faee2ba62f15e1aacc2a29a"
+  },
+  {
+    "image": "test/session-0062-burgundy-0001.png",
+    "sha256": "c0cf7d930d08c21fdf1d4c3208bf2add7e0de048a3580746723f61052a1b13f6"
+  },
+  {
+    "image": "test/session-0062-burgundy-0002.png",
+    "sha256": "03fc5eeea052311d2c7f436806de7984b19325dedb4c4081209f6810423a6b48"
+  },
+  {
+    "image": "test/session-0062-burgundy-0003.png",
+    "sha256": "d639934da069493af356d9ca5bdfda12bfd12c6db23469939ed09231c8390983"
+  },
+  {
+    "image": "test/session-0062-burgundy-0004.png",
+    "sha256": "d0073b2224583a98ddb4e62d41b06ea1d7688a6ba4e233aabf8d9f321ed6b433"
+  },
+  {
+    "image": "test/session-0062-burgundy-0005.png",
+    "sha256": "3c9ad5d4316fc75ed10c74c355203e6e8ce2c826627f0738c667e429247b4cbb"
+  },
+  {
+    "image": "test/session-0064-green-0000.png",
+    "sha256": "1662522e1b4c67d621900cdd6ad687c62d0855c75dfa96fd6405234ad98bc956"
+  },
+  {
+    "image": "test/session-0064-green-0001.png",
+    "sha256": "bc41d14b701cdc509da0d62f16f3ee19522d43d3526b9a6d6b5178cf3a0aa3a1"
+  },
+  {
+    "image": "test/session-0064-green-0002.png",
+    "sha256": "e05f7196ceb01c7bae6c84156e9273527910d4dc4ab9ce1a32f8e52f31cb234d"
+  },
+  {
+    "image": "test/session-0064-green-0003.png",
+    "sha256": "3bd7a0e3c49e1e371fe367c87aec672f3b2c678fdfc77168d3b5e345ed31cc64"
+  },
+  {
+    "image": "test/session-0064-green-0004.png",
+    "sha256": "6199e0268cb043dda9457b723c287ca001f3d2e22ca818b9c5fec429bb77dab1"
+  },
+  {
+    "image": "test/session-0064-green-0005.png",
+    "sha256": "de53a1819ebf4142ef602d907247786c8f1817b86f98f0ee750431fe77d34212"
+  },
+  {
+    "image": "test/session-0064-navy-0000.png",
+    "sha256": "1bef0a72191b3d8e0e4801e28d538a2df4499946a7c02a6b3a3f19a4408dc6fc"
+  },
+  {
+    "image": "test/session-0064-navy-0001.png",
+    "sha256": "7809d35d7cbc9cd34297bf72352bd67bc58d9e1f9b77df5166499a2e45d1a583"
+  },
+  {
+    "image": "test/session-0064-navy-0002.png",
+    "sha256": "32d91e12daef1a9bf63eb862abc1ec62241dc9dec5cbac8d0db9cc1e2dbe14d0"
+  },
+  {
+    "image": "test/session-0064-navy-0003.png",
+    "sha256": "e4059424d51d6222314593bfdfb6b114af8036daec816342861e0c64bdcc31ea"
+  },
+  {
+    "image": "test/session-0064-navy-0004.png",
+    "sha256": "5d7ce8050bf6a6c06de9e1feb7de0fdfada44cb8c61ea786d0876063a324d362"
+  },
+  {
+    "image": "test/session-0064-navy-0005.png",
+    "sha256": "37bd3aa829bfc1564620f1705064bb8360d493834ffb98770e6c1dfd075e6807"
+  },
+  {
+    "image": "test/session-0064-burgundy-0000.png",
+    "sha256": "6bdf89e94f5bdd8db26b8e322359f09b0dc3908a5a7799ce8e75f7f05af4059a"
+  },
+  {
+    "image": "test/session-0064-burgundy-0001.png",
+    "sha256": "0861b73f29ed2fb031484b185f6e06d69ce696cfcae019acbad6df56ceef01c9"
+  },
+  {
+    "image": "test/session-0064-burgundy-0002.png",
+    "sha256": "f87b60b6916263bd1718cff45ea110c3ab9d077d34ca76274c042246cc51b09e"
+  },
+  {
+    "image": "test/session-0064-burgundy-0003.png",
+    "sha256": "a6143ca79f27c19cb049a50f01970b2b3d412bd4daa796a68d28f5bab82f0093"
+  },
+  {
+    "image": "test/session-0064-burgundy-0004.png",
+    "sha256": "47922e7997a309d70c326257cdbbc2ffd0aebc7376c26295f92dac0a62196e9f"
+  },
+  {
+    "image": "test/session-0064-burgundy-0005.png",
+    "sha256": "50d7e3aa41d8279a6b02b65539773c690c60bc176f832104a7a9e1b429a5bfe5"
+  },
+  {
+    "image": "test/session-0072-green-0000.png",
+    "sha256": "a8f3d792ac1f8720b7634fbef9ff3b72e3b5f80a50c44d8cd133040208462f56"
+  },
+  {
+    "image": "test/session-0072-green-0001.png",
+    "sha256": "ecfc55247a06a26ef1326aee3666499482f44b22cbdd401f3e0d82859c9b146f"
+  },
+  {
+    "image": "test/session-0072-green-0002.png",
+    "sha256": "f31f86d190cc3dcbced1bfcb24be9d92c177caeb4112cdaf1ff0679f8c841676"
+  },
+  {
+    "image": "test/session-0072-green-0003.png",
+    "sha256": "b31099fb49b4604363f058d69e86200bec43004174d8c932649e9e0f2eb86414"
+  },
+  {
+    "image": "test/session-0072-green-0004.png",
+    "sha256": "26672c96cbcb5a5baa5d84dec9fdbd37c24beb2a0cc79b6bb72dcb906dee4fb8"
+  },
+  {
+    "image": "test/session-0072-green-0005.png",
+    "sha256": "42da4c70dbba7cdf378e9110b04f6696bf1e07e1206edd0ab0822406d6634c9d"
+  },
+  {
+    "image": "test/session-0072-navy-0000.png",
+    "sha256": "7608972d378e8f2d0ab432d3f8a1e395a7d3a00c637207e7e90c913467c64aea"
+  },
+  {
+    "image": "test/session-0072-navy-0001.png",
+    "sha256": "257580ad45ea00b0730d36df16f0b73a855c82401d5f007daf93040259de4b1e"
+  },
+  {
+    "image": "test/session-0072-navy-0002.png",
+    "sha256": "959e8a1866599675188a0fc5131ef1de14816d6c4faf5a5b6e2ee967e7134aff"
+  },
+  {
+    "image": "test/session-0072-navy-0003.png",
+    "sha256": "293cd34aa69545f29a829e869f0786a6c0c906f5aeee8c95c5d7bc28b166d625"
+  },
+  {
+    "image": "test/session-0072-navy-0004.png",
+    "sha256": "1dfe8392d49797c5e8623350bd4cc92d017184c6f51bdab96862e339698f55a4"
+  },
+  {
+    "image": "test/session-0072-navy-0005.png",
+    "sha256": "2c09956c1a580be5a515145a2c79325d9805633bcaf1ab078dfeca1a952082cb"
+  },
+  {
+    "image": "test/session-0072-burgundy-0000.png",
+    "sha256": "6393b3c169bf195920cbda81792447f4b38941b90a26d82868683b92a11793f5"
+  },
+  {
+    "image": "test/session-0072-burgundy-0001.png",
+    "sha256": "1140c4dff9d1d03a1d74b084eb97110860a3a023d806e7f247e13ea16f093c07"
+  },
+  {
+    "image": "test/session-0072-burgundy-0002.png",
+    "sha256": "d9047f1ce56ff406d55e34660e19d1c16c6538f201f19c3da1a4f73ef971f55a"
+  },
+  {
+    "image": "test/session-0072-burgundy-0003.png",
+    "sha256": "c67a68676e1e413a9ce358208b78b6517accf96693c39a8e163f246716aed243"
+  },
+  {
+    "image": "test/session-0072-burgundy-0004.png",
+    "sha256": "0b4500db7c4a1c6f8bfc5b65b1f6ab12830034983ba080b79d2f0a1ef0ccbc69"
+  },
+  {
+    "image": "test/session-0072-burgundy-0005.png",
+    "sha256": "e37e4024c3cf322bf069f1754bf9b85b4fe367a63b452f8ad5be733b0ff160c1"
+  },
+  {
+    "image": "test/session-0081-green-0000.png",
+    "sha256": "7d82a0787e31f309c0e56410dae84f97a9877679b5343aef7a2fa4acb4aaa677"
+  },
+  {
+    "image": "test/session-0081-green-0001.png",
+    "sha256": "2e45ee112a72f9e19c28d54d0014f0ebb9032b3933a5a06c96f3a4768a61a07b"
+  },
+  {
+    "image": "test/session-0081-green-0002.png",
+    "sha256": "ac262b49a4b96b71bf3d3ab69105585e0ab608ae8f82c43a8d35f91e6c5797ed"
+  },
+  {
+    "image": "test/session-0081-green-0003.png",
+    "sha256": "36998215c64d838ff45174d9512fbaebc2edc34870c61dc7fddb0f2d74f06a6d"
+  },
+  {
+    "image": "test/session-0081-green-0004.png",
+    "sha256": "2e76262debda4b02605f5af171cfc9e78d37cb6e71b9b00538edc4ccd828f077"
+  },
+  {
+    "image": "test/session-0081-green-0005.png",
+    "sha256": "dbf96bc71a828241838e1fd5fcc1a888e55e80b838f0b38d0f5b0a3213dddb4a"
+  },
+  {
+    "image": "test/session-0081-navy-0000.png",
+    "sha256": "3ac44521d208229823159c8002d929191307d8bf5128e596dba6088f4a74ff75"
+  },
+  {
+    "image": "test/session-0081-navy-0001.png",
+    "sha256": "41b242734c65a9b6ae12afb93d6e5ec33b366bdc95f23c8443e7adbca216ef6c"
+  },
+  {
+    "image": "test/session-0081-navy-0002.png",
+    "sha256": "6e670af9c3aea74b6840a4a4aa1ec444726d5723ae4197f9db9365bd37ada42d"
+  },
+  {
+    "image": "test/session-0081-navy-0003.png",
+    "sha256": "c4249c115dd1ee0dae321c373c80d04ae0ed8b4b5b00f3ff2fab415bf123ed16"
+  },
+  {
+    "image": "test/session-0081-navy-0004.png",
+    "sha256": "d3d543951edd5682987fa920e9da378ef3997ee6f8b601086244e3ab2e45056a"
+  },
+  {
+    "image": "test/session-0081-navy-0005.png",
+    "sha256": "205a2d91680d12f9d1a832a4ab2a9c508a73d2c060187540e4cc8bc4c6684f95"
+  },
+  {
+    "image": "test/session-0081-burgundy-0000.png",
+    "sha256": "7646687b6bf551cd55b67dd73d05f5ed7443fc5c8a724764919f386b46155622"
+  },
+  {
+    "image": "test/session-0081-burgundy-0001.png",
+    "sha256": "61b0dd8930ef57416b7c859ffdd67584810456615dff7d38406a2a61d5969b83"
+  },
+  {
+    "image": "test/session-0081-burgundy-0002.png",
+    "sha256": "fe2afebf65998f25da7909927da1cb0b0d651324bd7bddc12b525aa64343e741"
+  },
+  {
+    "image": "test/session-0081-burgundy-0003.png",
+    "sha256": "17cbf3784eba35e9381fd69fe7e3fe528bad56042c279bc0f0a06e3145977771"
+  },
+  {
+    "image": "test/session-0081-burgundy-0004.png",
+    "sha256": "a3304d030d9c07a2481924ace032bc6e1cb1c2f074f50df9c68298e46f6c6694"
+  },
+  {
+    "image": "test/session-0081-burgundy-0005.png",
+    "sha256": "423e71bfce0cedb0713ad65585e5dc80bf00c8d3f7b1870646822e1e104eb0ae"
+  },
+  {
+    "image": "test/session-0084-green-0000.png",
+    "sha256": "8e9b52d2086b0890950600dfd8ab62823545617f0354bbb3564d38c5a7f2c9eb"
+  },
+  {
+    "image": "test/session-0084-green-0001.png",
+    "sha256": "30cf213e2cfc2454b8525567334da5012299b07382d230d54a7379fccaba2620"
+  },
+  {
+    "image": "test/session-0084-green-0002.png",
+    "sha256": "23d41c1692e6646f3bf3dea3b2436d72cf65f4fe2e028a6539266443d4044ba0"
+  },
+  {
+    "image": "test/session-0084-green-0003.png",
+    "sha256": "1ec86be9f6a790ecf72358181e8fc280879de1f59691b60204ac9c5b0670413c"
+  },
+  {
+    "image": "test/session-0084-green-0004.png",
+    "sha256": "694504c0d66b70118fe036f7db5e54947402af1b12246904c584d08ea335eff9"
+  },
+  {
+    "image": "test/session-0084-green-0005.png",
+    "sha256": "115d1a62a993037409f6b7672b26d2ad662ab3ad811a39451294d8c8e1629e86"
+  },
+  {
+    "image": "test/session-0084-navy-0000.png",
+    "sha256": "3efef0435f06e67c1284077142c9ad80d4494679dbe0593244dc633db8e84df8"
+  },
+  {
+    "image": "test/session-0084-navy-0001.png",
+    "sha256": "c7861ca52195c033f6085a75c7d5bf6b6368f838e464b11659829ff55a64e501"
+  },
+  {
+    "image": "test/session-0084-navy-0002.png",
+    "sha256": "cc2ccdc906263c1901f8c90154ee526e6fa67bfdefbb21301feb1cae4c4e9e1d"
+  },
+  {
+    "image": "test/session-0084-navy-0003.png",
+    "sha256": "a83ba1bc68e9d43185bd9991c90f745e5dfd99fe7497f53ab99692cdeab857ee"
+  },
+  {
+    "image": "test/session-0084-navy-0004.png",
+    "sha256": "53e025361241fb75e7a1823719ec27adc710fa560737fcfd4248a7c59c219497"
+  },
+  {
+    "image": "test/session-0084-navy-0005.png",
+    "sha256": "8b63b993994d27b8a4154ece697e8d5971c773329ee85e165f31c576e342639c"
+  },
+  {
+    "image": "test/session-0084-burgundy-0000.png",
+    "sha256": "e42102a3161340fcf9697f401fb1b0078e4e3f42a2ecb54d169dca14b478e3d6"
+  },
+  {
+    "image": "test/session-0084-burgundy-0001.png",
+    "sha256": "eb2351653d95b4af9f27daf6c34437b7dcdcd8e7137039db90c26d732e8207cd"
+  },
+  {
+    "image": "test/session-0084-burgundy-0002.png",
+    "sha256": "939eee6178f74909f5f28b043705b5ce49d3560de6ae3f2f5f5a3f1cafc503f2"
+  },
+  {
+    "image": "test/session-0084-burgundy-0003.png",
+    "sha256": "27a110cb0c5f9749f33e452bdf8b770ae27b4ff3895db2eeea550145f419711d"
+  },
+  {
+    "image": "test/session-0084-burgundy-0004.png",
+    "sha256": "f399db0d6f36b176c04b8612ff0ee948f68538c0c467efcff1cfce0f0d4176e6"
+  },
+  {
+    "image": "test/session-0084-burgundy-0005.png",
+    "sha256": "06f1b767159dc18980b4d636b36bc95d925923f4741f38922aeb3b3af288ffef"
+  },
+  {
+    "image": "test/session-0086-green-0000.png",
+    "sha256": "aa0e0d284cca19da7d416d177420b4ce1bf1d2df9d005c3a85ae7fd9262d89b6"
+  },
+  {
+    "image": "test/session-0086-green-0001.png",
+    "sha256": "0c82f48ab34e8f512ef2ecf193df16cbfe979f2ae650fbf1a99069402f9c2bab"
+  },
+  {
+    "image": "test/session-0086-green-0002.png",
+    "sha256": "baba31dedd0b787ba03dc770bcfc5975370f517f69b77404ed2ebcc86bfc0327"
+  },
+  {
+    "image": "test/session-0086-green-0003.png",
+    "sha256": "2fc18bfe0d3a6ed23f30b48aba5090f0c3488955b5a7eaabc797d08ad6b07157"
+  },
+  {
+    "image": "test/session-0086-green-0004.png",
+    "sha256": "73f3bb436795fcb684daaf42f1fb0038cf49861fe3d2fddee2899605d5a0c382"
+  },
+  {
+    "image": "test/session-0086-green-0005.png",
+    "sha256": "cd562098252d3ce2f97fe1bee7d30d3de61b69d294befa39aeb6fa1d438a7b91"
+  },
+  {
+    "image": "test/session-0086-navy-0000.png",
+    "sha256": "01c2805034800468075a611414f51fe6684bccdf4af0bbef503f6e080176a9bc"
+  },
+  {
+    "image": "test/session-0086-navy-0001.png",
+    "sha256": "def45504e19feddfbd1f95d1ec118564c0583483a4c701535518f64f01f99ae8"
+  },
+  {
+    "image": "test/session-0086-navy-0002.png",
+    "sha256": "e616a2d291c18a9816c94741ba8aeecaacdd0f9bd1083977666e6fc863a30144"
+  },
+  {
+    "image": "test/session-0086-navy-0003.png",
+    "sha256": "4f2a7d78c1ce40a9d26ac3aade79023740f1044bec112c44a2ee3d8cc5ceb9ab"
+  },
+  {
+    "image": "test/session-0086-navy-0004.png",
+    "sha256": "b23f15e5aebe793b3428419753dfcf05a493a6a1d8ff8f5f9d6c908639a200ac"
+  },
+  {
+    "image": "test/session-0086-navy-0005.png",
+    "sha256": "e832714f2adfc7965e4fd24ce196c19b927840320794bd61442bb2224e087fc0"
+  },
+  {
+    "image": "test/session-0086-burgundy-0000.png",
+    "sha256": "49111f27b9532ca6a7a420d71bf2f9a8e9544799491e459675bf4ea6681efcad"
+  },
+  {
+    "image": "test/session-0086-burgundy-0001.png",
+    "sha256": "7048c13e83f684d5357de3b999e1610a10608ff213034c0af35a2523911d84ae"
+  },
+  {
+    "image": "test/session-0086-burgundy-0002.png",
+    "sha256": "faa87b6ae92463fc8f1ed8b672078c9264b94a0abb2a9fc1eb6bc4086500bc8e"
+  },
+  {
+    "image": "test/session-0086-burgundy-0003.png",
+    "sha256": "173c3b03a000a3b1fc25b236f4f7f9ee2cc04302fde1d2cfbfbf9d3f9b10f3fa"
+  },
+  {
+    "image": "test/session-0086-burgundy-0004.png",
+    "sha256": "289bf45e39bb93f4f364688366f715fdc685a11aaa8c68cf46297762b1c2d659"
+  },
+  {
+    "image": "test/session-0086-burgundy-0005.png",
+    "sha256": "885a5452523013fb50e9008535c7d89701f2305f21ac7be60fa8e0bec1850160"
+  },
+  {
+    "image": "test/session-0088-green-0000.png",
+    "sha256": "4423698b491d65bc557c06539556a06859dca380e102443f389b73e485d4829c"
+  },
+  {
+    "image": "test/session-0088-green-0001.png",
+    "sha256": "5cec460f23e7662ee69f9bb5dce84f5040d8c5111bf79a650b7f66de8ac72d9e"
+  },
+  {
+    "image": "test/session-0088-green-0002.png",
+    "sha256": "92d0fea6c07a4e710254523a2fb302d3f4f35d268b7874342c7a809c1e64b355"
+  },
+  {
+    "image": "test/session-0088-green-0003.png",
+    "sha256": "674fe6b147b7352cfa4b566d928ac33802d2ecdde6ff314451d2ce1863bc1b97"
+  },
+  {
+    "image": "test/session-0088-green-0004.png",
+    "sha256": "87f9a8edc0be57ec51b14b833de47ab4c732855856909aa4ed347679afeb92db"
+  },
+  {
+    "image": "test/session-0088-green-0005.png",
+    "sha256": "46099ad765b9ebeadc8038f2921266a70b8029db1b76ec94bd92bd9f521ee3aa"
+  },
+  {
+    "image": "test/session-0088-navy-0000.png",
+    "sha256": "4ccf9a5ba91f98f72322b909976292e27ace1000b3c4a08cb3eb44d4e2372539"
+  },
+  {
+    "image": "test/session-0088-navy-0001.png",
+    "sha256": "0fc897a08e1ce452714218dc21197141679c77bf074e41a4e647144763f5e731"
+  },
+  {
+    "image": "test/session-0088-navy-0002.png",
+    "sha256": "2ed987ec3ba5d67844d4ac730ac71bfb0bd4afa02f96719d04dda2a9c19daf44"
+  },
+  {
+    "image": "test/session-0088-navy-0003.png",
+    "sha256": "09c92e0891a8d440ad2a68345140f8d6558c6b051c4cfc77601d3c832c6ac27f"
+  },
+  {
+    "image": "test/session-0088-navy-0004.png",
+    "sha256": "15eef679f1d04c740724b07c09d5ca73fad1b7eabaef093b856a6e4543bc4f57"
+  },
+  {
+    "image": "test/session-0088-navy-0005.png",
+    "sha256": "3e409e43a3312a96d9d8647b421d315095ac1c8c47093fa1104538a78a31bd82"
+  },
+  {
+    "image": "test/session-0088-burgundy-0000.png",
+    "sha256": "c19d4af4ed6a0f849677e8e6d6446b1f1b398ecd5e50a148093c5e482a8ee415"
+  },
+  {
+    "image": "test/session-0088-burgundy-0001.png",
+    "sha256": "7d26796c94607bde1486a5a41279951de0236dfa065f3a18bcccbbb21128fbf9"
+  },
+  {
+    "image": "test/session-0088-burgundy-0002.png",
+    "sha256": "440ab9aad77f69baa7d4491db395bdb8f937193a0a3d704423d7ec0c03dd1ba8"
+  },
+  {
+    "image": "test/session-0088-burgundy-0003.png",
+    "sha256": "60f4d79577c55d77dc548235bb4ed0f2601294414a855c8df6827ae47bc10967"
+  },
+  {
+    "image": "test/session-0088-burgundy-0004.png",
+    "sha256": "dfa14b759d5b3216627a2682cebde9e1737cc9a14037e67ecf01c0a1a0de3e7a"
+  },
+  {
+    "image": "test/session-0088-burgundy-0005.png",
+    "sha256": "1d03e3e80927f3a7175714bb670933af1e58d1e80c595572b94ae1c0f6e4c2af"
+  },
+  {
+    "image": "test/session-0092-green-0000.png",
+    "sha256": "c093956520f341e537daa9b65f31309eed80634d6568210e9a347d06f4386d76"
+  },
+  {
+    "image": "test/session-0092-green-0001.png",
+    "sha256": "c0e95a252f212459c4a4d50c3ca7a1254f72fd7506a34f846ca83d0cb5c22720"
+  },
+  {
+    "image": "test/session-0092-green-0002.png",
+    "sha256": "ab90c4ce2947124f45cb30279b2a9702db81e9f932a29c1d0d5b86ade26c8b3a"
+  },
+  {
+    "image": "test/session-0092-green-0003.png",
+    "sha256": "56284ca1053956f7ec35507efae942e22638f407db2560de8ba83d2025a2b21b"
+  },
+  {
+    "image": "test/session-0092-green-0004.png",
+    "sha256": "79cbff3d6111a8aef1690c8ca3bb271271cd7a5191b09734859b6fcab0e4278e"
+  },
+  {
+    "image": "test/session-0092-green-0005.png",
+    "sha256": "8abc133df69918d0bff731483fc0387a4257a122adb1c3009e5584d2cb72d194"
+  },
+  {
+    "image": "test/session-0092-navy-0000.png",
+    "sha256": "3797a7f0e381fdba455b75158dbc599eee294f4e0b0b4c8a181c4239e171bc87"
+  },
+  {
+    "image": "test/session-0092-navy-0001.png",
+    "sha256": "320500183fdc11b6b227576cb23a2925ad66b9630e536352044b6813ab444f44"
+  },
+  {
+    "image": "test/session-0092-navy-0002.png",
+    "sha256": "b9c5fef076d3933582b29ff071913495d42066e8def6025ef109a10723c806f3"
+  },
+  {
+    "image": "test/session-0092-navy-0003.png",
+    "sha256": "19a87d99e756eb03fd7c5e0919f438fb3c749c21523d1709127651702c7117e1"
+  },
+  {
+    "image": "test/session-0092-navy-0004.png",
+    "sha256": "49f38522e2e6737f92a32a9088fd3c9edeb35d3326d0526402167a267a3d7d6e"
+  },
+  {
+    "image": "test/session-0092-navy-0005.png",
+    "sha256": "d3bfcfb6438274fa4067f3a00068335829d49c6b8df69f560f9401b335cccdd0"
+  },
+  {
+    "image": "test/session-0092-burgundy-0000.png",
+    "sha256": "942757bd8710afa5c0545c0fa5d2481395bc7aa46a6c26dfda88db519066217e"
+  },
+  {
+    "image": "test/session-0092-burgundy-0001.png",
+    "sha256": "3f516ffd85900879480d176c4b12d23f67816d21a6d1f39e4da14f577c294b37"
+  },
+  {
+    "image": "test/session-0092-burgundy-0002.png",
+    "sha256": "73c8778b8ece495fedf546f791f40e23245605513847aea21c83b1e16bee1e4e"
+  },
+  {
+    "image": "test/session-0092-burgundy-0003.png",
+    "sha256": "34866c893f34966e8e92916b1392915de9a126ec90efa13933b3498f2788a6c6"
+  },
+  {
+    "image": "test/session-0092-burgundy-0004.png",
+    "sha256": "8f9f210ba49d5abbce730385fc9a89b86490d59d287cb2821549383cd7733847"
+  },
+  {
+    "image": "test/session-0092-burgundy-0005.png",
+    "sha256": "e030375b77c014c7f56dc052a91dff8232b9a8a9e85e706277e308115ffc330b"
+  },
+  {
+    "image": "test/session-0096-green-0000.png",
+    "sha256": "766f4cc5ae44c0474fe63ccf55c71c70d6bef45315f428bcb768410db740cd09"
+  },
+  {
+    "image": "test/session-0096-green-0001.png",
+    "sha256": "6716c41ae241b4693803c96bc30d4961a4e75f3fee8cc61b0eca72db0b5e78f7"
+  },
+  {
+    "image": "test/session-0096-green-0002.png",
+    "sha256": "275c8ebd228328e51a2b0c83f2e52db408ddce1dea24052afda9cc9fbe6c6db3"
+  },
+  {
+    "image": "test/session-0096-green-0003.png",
+    "sha256": "1ec2aa60e67b05bf07f2553f2512b3be7f43c09ec4f5e5b1b708adfdc8cbd1dd"
+  },
+  {
+    "image": "test/session-0096-green-0004.png",
+    "sha256": "b078dce6c94c98b3a034e8554620cea0c6926680bac7de4e5981d9b0ae429d5f"
+  },
+  {
+    "image": "test/session-0096-green-0005.png",
+    "sha256": "c98bc9b5f817592274109a56013f648a3cf36967703f7fdd24263e7738b4d3c5"
+  },
+  {
+    "image": "test/session-0096-navy-0000.png",
+    "sha256": "99b0e32280bf45f9c6e767c2e01817973a3e5d178ff56ab400ca889e03205cb4"
+  },
+  {
+    "image": "test/session-0096-navy-0001.png",
+    "sha256": "9186c4a28bf1d124a49644228b20ea380f0d5a4d7c24e468db34ccd118f06453"
+  },
+  {
+    "image": "test/session-0096-navy-0002.png",
+    "sha256": "c9073150c5ab8050df51a3ad8237909a93164ca36dd288338196d62e8c84b20f"
+  },
+  {
+    "image": "test/session-0096-navy-0003.png",
+    "sha256": "f65b2fe9908cc8568c12d46510bc63d0ba71931bbf22c989bbd9ac4efee12d0d"
+  },
+  {
+    "image": "test/session-0096-navy-0004.png",
+    "sha256": "5818228139139a004bd246843998527b800f51465ecde117b43f6b8565128561"
+  },
+  {
+    "image": "test/session-0096-navy-0005.png",
+    "sha256": "c7e9db9e73c8ec6c30acb3bbb2a58ab1bfc3246daeece0c63f09ab1e316221d3"
+  },
+  {
+    "image": "test/session-0096-burgundy-0000.png",
+    "sha256": "d28d1a0bfcf6d64e056243798c10f19b1bd828f5c751caf93fce289a5fbcaf88"
+  },
+  {
+    "image": "test/session-0096-burgundy-0001.png",
+    "sha256": "573de8f2b85548d528328708728becd708ec92fdb7e0cbf57909147d109d8f47"
+  },
+  {
+    "image": "test/session-0096-burgundy-0002.png",
+    "sha256": "6ffe917959d214a431832adef1b933901afb9793d030eeb3c9a91cd81d195a84"
+  },
+  {
+    "image": "test/session-0096-burgundy-0003.png",
+    "sha256": "39adeb64e3fd6db0d77632d0e08d22b4ab82d70ef3db487b507429568e4d266c"
+  },
+  {
+    "image": "test/session-0096-burgundy-0004.png",
+    "sha256": "a164c64bf70425a8a1c4fe49ecca8a9028fcc3dbffec35cad062e0edb00f5d67"
+  },
+  {
+    "image": "test/session-0096-burgundy-0005.png",
+    "sha256": "63dafe29ee19cc2b6c7722927115411372081e14c917835855c2b0ab8ed40086"
+  },
+  {
+    "image": "test/session-0098-green-0000.png",
+    "sha256": "4e18b97610c7ce51b65ebec4756eb15553538cf569d97d00da2ddbda41e07459"
+  },
+  {
+    "image": "test/session-0098-green-0001.png",
+    "sha256": "7b7682a170e82ee414e85ac5e6876906295d80aa748c030e8dfb82e32eddd4e2"
+  },
+  {
+    "image": "test/session-0098-green-0002.png",
+    "sha256": "1dc88ebf97c13b1ef25dc38ed48fcb8df504aa2ad7d59a85d10401f028d59241"
+  },
+  {
+    "image": "test/session-0098-green-0003.png",
+    "sha256": "67d480c79bdf8b8050adbcff48f85a61fd60734e720329cf5ca02a2e2909518c"
+  },
+  {
+    "image": "test/session-0098-green-0004.png",
+    "sha256": "45b245642d6ace0b4d8df363e4b93222565fcfd04512eee7beb191147c64aedb"
+  },
+  {
+    "image": "test/session-0098-green-0005.png",
+    "sha256": "07b12496381dcd13365a6f6bac1e00965c51abe61c7df4eaa48c291d3b3548d8"
+  },
+  {
+    "image": "test/session-0098-navy-0000.png",
+    "sha256": "14866bbb9773b1c98072629eb874efccab29510564f188f6c3ea215f372141ba"
+  },
+  {
+    "image": "test/session-0098-navy-0001.png",
+    "sha256": "7ed65286989cf92b956010aac52df2ba8a8b05bfc3ecfec779bc2e3bcf6c2960"
+  },
+  {
+    "image": "test/session-0098-navy-0002.png",
+    "sha256": "d1d0da42ace48c056e368251a8ae9aeb1e5145fda079f790607939b560c5fb91"
+  },
+  {
+    "image": "test/session-0098-navy-0003.png",
+    "sha256": "1273388448958b28f4b44f3837d3de14c99cc81db16b8bc9b59aea85bebbe35d"
+  },
+  {
+    "image": "test/session-0098-navy-0004.png",
+    "sha256": "12f1d932f198393042cbe77e6f41f97f97dcaa809be66fe65746b483a74aa246"
+  },
+  {
+    "image": "test/session-0098-navy-0005.png",
+    "sha256": "d63919395b6508fd1940a0fc58de4e09a77f4036b6eb4a594b27a8cf58309850"
+  },
+  {
+    "image": "test/session-0098-burgundy-0000.png",
+    "sha256": "841a8ba9adf9e6469ba178b84f171fab0fcad1987cff05f26d38c2fed1e3a0f7"
+  },
+  {
+    "image": "test/session-0098-burgundy-0001.png",
+    "sha256": "e33952284aa9f9417a0191e484ec9fbed95f995b44fda04b61530d73bf2755ec"
+  },
+  {
+    "image": "test/session-0098-burgundy-0002.png",
+    "sha256": "9e4d649879d5580dce4374be91cd2daea76fa546b277ca86e5b71322b8e6cc0e"
+  },
+  {
+    "image": "test/session-0098-burgundy-0003.png",
+    "sha256": "32e95e41b48ba28fce3a3169985f90efc67b4a3a53baf28f4ce9c0d15907fab6"
+  },
+  {
+    "image": "test/session-0098-burgundy-0004.png",
+    "sha256": "b75f382cbe722538b0ca818e84c40b2411c13a322ec08b206c3151005ade8570"
+  },
+  {
+    "image": "test/session-0098-burgundy-0005.png",
+    "sha256": "0c7e61c33b0c0e7f7ca741752d936f217a0c2e826064c86de0ed4b7872e2f497"
+  },
+  {
+    "image": "test/session-0103-green-0000.png",
+    "sha256": "e3d53ad1a5c121fa6ad915c7ab3a606b08fd9cc1b718cf369242946f49a2b82b"
+  },
+  {
+    "image": "test/session-0103-green-0001.png",
+    "sha256": "55219d0a2823f59c3f981784630e8cfefde384c4cee029520c60baf2cfe10499"
+  },
+  {
+    "image": "test/session-0103-green-0002.png",
+    "sha256": "9c37158378c85e14ee59db1923ca86df6f249bee8935c6e8e823e1fd04adffea"
+  },
+  {
+    "image": "test/session-0103-green-0003.png",
+    "sha256": "df88c0e68ca29a26cc827c4efeb00d3e5d864dc6c579d20784aa370c4c80a743"
+  },
+  {
+    "image": "test/session-0103-green-0004.png",
+    "sha256": "18d20aa1417606db675a4f6e9e6bb731b2bf40428c6b205ff636029bec1841e5"
+  },
+  {
+    "image": "test/session-0103-green-0005.png",
+    "sha256": "c396c58dc38c0c908d7911e91f0b72fc880ae3353bc1bb07eb2d0a9a9c38462e"
+  },
+  {
+    "image": "test/session-0103-navy-0000.png",
+    "sha256": "4ba6f6fdf18c70094e803f1515cbdbd0c2901ba865febe288f9329e75c1aa63b"
+  },
+  {
+    "image": "test/session-0103-navy-0001.png",
+    "sha256": "abad75529c05d3fa5f1464f65ca2bf40f0a176406a458096ff33dce3496b57c0"
+  },
+  {
+    "image": "test/session-0103-navy-0002.png",
+    "sha256": "f6a8829f1196c3f9167808fe7008102f9da7c3e4313b08b24ae2772ebc7faea6"
+  },
+  {
+    "image": "test/session-0103-navy-0003.png",
+    "sha256": "b8fe20204c357d399985575b9ebbf011df4e179be6abb3654595f87721f1644f"
+  },
+  {
+    "image": "test/session-0103-navy-0004.png",
+    "sha256": "2db8a305a1ce8e4be2eb283f46d90c136892e51c303b9b88b06e3ab0ad0eda9f"
+  },
+  {
+    "image": "test/session-0103-navy-0005.png",
+    "sha256": "03d4c41c82e897aeabb307187f7ba527fee1cfd4030347d318fd3247a10ced54"
+  },
+  {
+    "image": "test/session-0103-burgundy-0000.png",
+    "sha256": "c99036a97486d53ed5c22368e085a90cd1e9f4fb8f3fc42cc0d1fe0275c1aa01"
+  },
+  {
+    "image": "test/session-0103-burgundy-0001.png",
+    "sha256": "eaac1c0b90db8c1d29068efe70fa595288055d066cdf39ea47dc794bbe208a78"
+  },
+  {
+    "image": "test/session-0103-burgundy-0002.png",
+    "sha256": "39ac0cfe6fd8ac08c9dadbe7e77fe5a46cc04398f488b05aec077b78e5ce75da"
+  },
+  {
+    "image": "test/session-0103-burgundy-0003.png",
+    "sha256": "f53d1f2bd9fce53f1e0f0b3f644db521919062abdc1d208fcc2c9cc96f5bcf2f"
+  },
+  {
+    "image": "test/session-0103-burgundy-0004.png",
+    "sha256": "93c62e49010dfa42bfb87b921d6ace898e3405ada331d25ce6c845113b3474f9"
+  },
+  {
+    "image": "test/session-0103-burgundy-0005.png",
+    "sha256": "f57756dc3b196eabe62ac0c71f15cb86409c3b1ba9b96c5883de15693ceba82c"
+  },
+  {
+    "image": "test/session-0104-green-0000.png",
+    "sha256": "3a33d6bef751a75d30f7b6fd68a4f2e76ee609c5fed6bbb5a26d85850f4ad8c6"
+  },
+  {
+    "image": "test/session-0104-green-0001.png",
+    "sha256": "220d3f8aff2094ef06c370b281e35b5c574dad406cd12acae765b2d4ff24cf86"
+  },
+  {
+    "image": "test/session-0104-green-0002.png",
+    "sha256": "9a446fa82671e8b61aba5ebecdd29507d12b31dab87d3e8d9892528a5efb7239"
+  },
+  {
+    "image": "test/session-0104-green-0003.png",
+    "sha256": "e5d0c9d5cb71203a305a2c1a285414590fd4aa4d594eae32643cf41f848ddf04"
+  },
+  {
+    "image": "test/session-0104-green-0004.png",
+    "sha256": "5eeb7aa39445a3a7d3a509a6ade36ea7e41adf487f73e98e5f6d31f2e81a0ec4"
+  },
+  {
+    "image": "test/session-0104-green-0005.png",
+    "sha256": "e41f55c27e2918f5aadc572d7b173ccfa3ee4d1a37f049f2dde0649ec492705a"
+  },
+  {
+    "image": "test/session-0104-navy-0000.png",
+    "sha256": "60515e96e0877f28812f1907307b02696fb4dcc163a957af7897f8fc5e777c2c"
+  },
+  {
+    "image": "test/session-0104-navy-0001.png",
+    "sha256": "3c07d19022c305b92978b3a23dc9a4e48d9bfd730b60050550acfefc22b2dd42"
+  },
+  {
+    "image": "test/session-0104-navy-0002.png",
+    "sha256": "3b01330985698f5644a9ab291230210227611c100a7dcf6515c4d62ad577ab15"
+  },
+  {
+    "image": "test/session-0104-navy-0003.png",
+    "sha256": "9976cbe9fb7f59c4e214a72476a38c65246d0adbe70cb8fb39b3a5b001b40c49"
+  },
+  {
+    "image": "test/session-0104-navy-0004.png",
+    "sha256": "4963e5520235fed805a4970d9fd2a7d5011ed571047d76066231aa618aad6ad6"
+  },
+  {
+    "image": "test/session-0104-navy-0005.png",
+    "sha256": "1d12be195c73f1b131e7537d0acf5573fd78ce9b88204365dd63a30cc4db1e11"
+  },
+  {
+    "image": "test/session-0104-burgundy-0000.png",
+    "sha256": "83c0e989a4c79821912bdd217f99028d32e45c4324cd73ea1bf67a7698ea4735"
+  },
+  {
+    "image": "test/session-0104-burgundy-0001.png",
+    "sha256": "b1a2f7ba74265f36cc3b308b45a8d9287946ee270532a984559e61300b65a548"
+  },
+  {
+    "image": "test/session-0104-burgundy-0002.png",
+    "sha256": "d6e22c60a87dce4781b92b817c34f3539928659cd8f1836cfa8c01c1cb937999"
+  },
+  {
+    "image": "test/session-0104-burgundy-0003.png",
+    "sha256": "469edc2b8c27ebc06365a1c76d9b99fb2c3ac42fddec882f4905675a273ce305"
+  },
+  {
+    "image": "test/session-0104-burgundy-0004.png",
+    "sha256": "417263a64a046dc12ba5cedf346606e7913b1401f269ad3c7dfef819dbc3776f"
+  },
+  {
+    "image": "test/session-0104-burgundy-0005.png",
+    "sha256": "091eaba1d6ae17eb8c1e6c27c2b487e84abac703caa913e1f67fef45884b593f"
+  },
+  {
+    "image": "test/session-0119-green-0000.png",
+    "sha256": "76a89149a3d948b21f92e090cbcb2e871d13c31a237ac1528d48b2670821b05d"
+  },
+  {
+    "image": "test/session-0119-green-0001.png",
+    "sha256": "ff95fb860edcb71a3dd556356e4270e157c275bad90cadbe53bd82c645a6503a"
+  },
+  {
+    "image": "test/session-0119-green-0002.png",
+    "sha256": "4c3c87ce883737db8546cadccaf5b7c027fc3c5bab00393502eb50bd4acc00d2"
+  },
+  {
+    "image": "test/session-0119-green-0003.png",
+    "sha256": "1fd1db6e81a26ff2c610eeaf50e35c9dca642c883685a3b67266da504c24a734"
+  },
+  {
+    "image": "test/session-0119-green-0004.png",
+    "sha256": "b28dfdf6318b172b1c3f5353af5cf52a6af96462f64b5cb00e266cdaf542c8d3"
+  },
+  {
+    "image": "test/session-0119-green-0005.png",
+    "sha256": "76c52d33ab34bc963197055f51fb3cd1d9e7531a073f5f4c9bb082554828440c"
+  },
+  {
+    "image": "test/session-0119-navy-0000.png",
+    "sha256": "39c89b16911ed3ab663e28e922edfbdce8a62dc3090a5202ab1832a1d91d2022"
+  },
+  {
+    "image": "test/session-0119-navy-0001.png",
+    "sha256": "c452ac7f3a268d046e8ae3c7d86ccebf26a5dc347c80537cc57a9f7ad85d89a0"
+  },
+  {
+    "image": "test/session-0119-navy-0002.png",
+    "sha256": "175c26ac5cb1df878d5ef4fc00e08d71c934b4267b713f2d1429763d41949962"
+  },
+  {
+    "image": "test/session-0119-navy-0003.png",
+    "sha256": "bd30ef616c57d31f1b9793846202fd331f5df37cd1eb62d3c4c3af4ea40e43fb"
+  },
+  {
+    "image": "test/session-0119-navy-0004.png",
+    "sha256": "491073987959cd47dfd13525490bff889c40f7cc74a5dc4d075c32195eb91e1a"
+  },
+  {
+    "image": "test/session-0119-navy-0005.png",
+    "sha256": "d22a5faad368da3dadecddf6a22e63a5e4cf3fba3e8c562dd2420079952fac5e"
+  },
+  {
+    "image": "test/session-0119-burgundy-0000.png",
+    "sha256": "3f8f72674572e1377e7e33ac68cb479650de7bb2776eb6edce294fbda21d1963"
+  },
+  {
+    "image": "test/session-0119-burgundy-0001.png",
+    "sha256": "16b220962f02eafbc50ebac0f88e7f70cdc8c79f5af0ed9572444b27c47694dd"
+  },
+  {
+    "image": "test/session-0119-burgundy-0002.png",
+    "sha256": "3d7af4b2a92b7e507a5c1a5c1bf2e5a1556c5b550f64fc74896616fa5801843f"
+  },
+  {
+    "image": "test/session-0119-burgundy-0003.png",
+    "sha256": "57f2d27c6c6f14805b93f3776866f7fb287646631a9cd30341cceff263c1627d"
+  },
+  {
+    "image": "test/session-0119-burgundy-0004.png",
+    "sha256": "b1c433d4da6b4c5499f9f0b2e8034078aeb33506349185fca8454e38e5309c16"
+  },
+  {
+    "image": "test/session-0119-burgundy-0005.png",
+    "sha256": "99b7b2991ada71412a6023438c0e8e99ba07305ab73a1c3a028d1ac66160fe6d"
+  }
+]

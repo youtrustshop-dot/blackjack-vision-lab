@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "model": "infinite-shoe-dp",
+  "provenance": {
+    "author": "Michael Shackleford / Wizard of Odds",
+    "source_url": "https://wizardofodds.com/games/blackjack/expected-return-infinite-deck/",
+    "examined_at": "2026-10-03",
+    "published_precision_decimals": 6,
+    "code_copied": false,
+    "meaning": "Net expected profit per original unit wager, infinite deck, dealer stands on soft 17; action table conditioned on dealer not having blackjack."
+  },
+  "cases": [
+    {
+      "id": "wizard-infinite-hard16-v10",
+      "player": [10, 6], "dealer": 10, "peek_resolved": true,
+      "rules": {"decks": 6, "hit_soft17": false, "dealer_peek": true, "enhc": false, "blackjack_payout": 1.5, "double_rule": "any", "double_after_split": true, "resplit": true, "max_split_hands": 4, "resplit_aces": false, "hit_split_aces": false, "surrender": "none"},
+      "actions": {"stand": -0.540430, "hit": -0.539826, "double": -1.079653},
+      "best_action": "hit", "tolerance": 0.0000006,
+      "source_url": "https://wizardofodds.com/games/blackjack/expected-return-infinite-deck/",
+      "source_location": "Standing/hitting table: hard total 16 versus dealer 10; doubling table: hard total 16 versus dealer 10."
+    },
+    {
+      "id": "wizard-infinite-soft18-v9-hit-stand",
+      "player": [1, 7], "dealer": 9, "peek_resolved": true,
+      "allowed_actions": ["stand", "hit"],
+      "rules": {"decks": 6, "hit_soft17": false, "dealer_peek": true, "enhc": false, "blackjack_payout": 1.5, "double_rule": "any", "double_after_split": true, "resplit": true, "max_split_hands": 4, "resplit_aces": false, "hit_split_aces": false, "surrender": "none"},
+      "actions": {"stand": -0.183163, "hit": -0.100744},
+      "best_action": "hit", "tolerance": 0.0000006,
+      "source_url": "https://wizardofodds.com/games/blackjack/expected-return-infinite-deck/",
+      "source_location": "Standing/hitting table: soft total 18 versus dealer 9."
+    }
+  ]
+}

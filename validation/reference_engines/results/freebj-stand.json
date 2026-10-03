@@ -1,0 +1,163 @@
+{
+  "engine": "freebj",
+  "comparison_executed": true,
+  "exact": false,
+  "reference_pin": "91e9294d51e87ed36d124cfe058571dd9c05a342",
+  "native_optimal_policy": false,
+  "status": "executed",
+  "command": [
+    "..\\..\\work\\freebj-target\\release\\freebj.exe",
+    "--ahc",
+    "--s17",
+    "--das",
+    "--db-any2",
+    "--lsurr",
+    "--no-playAA",
+    "--max-splits",
+    "4",
+    "-d",
+    "6",
+    "-p",
+    "1",
+    "-b",
+    "1",
+    "-n",
+    "100000",
+    "-j",
+    "1",
+    "-c",
+    "10,6",
+    "--dealer",
+    "10",
+    "-a",
+    "="
+  ],
+  "validation_eligible": true,
+  "requested_rules": {
+    "decks": 6,
+    "hit_soft17": false,
+    "blackjack_payout": 1.5,
+    "dealer_peek": true,
+    "enhc": false,
+    "enhc_loss": "all",
+    "double_rule": "any",
+    "double_after_split": true,
+    "resplit": true,
+    "max_split_hands": 4,
+    "resplit_aces": false,
+    "hit_split_aces": false,
+    "surrender": "late",
+    "penetration": 0.75
+  },
+  "effective_rules": {
+    "game_type": "ahc",
+    "soft17": "s17",
+    "das": true,
+    "bj_pays": 1.5,
+    "double_down": "any_two",
+    "surrender": "late_surrender",
+    "play_ace_pairs": false,
+    "max_splits": 4,
+    "decks": 6,
+    "penetration_cards": 1
+  },
+  "rule_echo_verified": true,
+  "provenance": {
+    "repository": "kevin-lesenechal/freebj",
+    "revision": "91e9294d51e87ed36d124cfe058571dd9c05a342",
+    "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\freebj-reference",
+    "revision_verified": true,
+    "tracked_tree_clean": true,
+    "license": "MIT",
+    "binary_build_revision_attested": true,
+    "binary_path": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\freebj-target\\release\\freebj.exe",
+    "binary_sha256": "1b451a2656aee1da6fb755efea254595b6c933e38882a7c0abcd697bce640d2f",
+    "build_provenance_note": "Clean checkout pin verified; executable derivation must be attested separately.",
+    "build_receipt": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\outputs\\blackjack-vision-lab\\validation\\reference_engines\\results\\freebj-build.json",
+    "build_receipt_sha256": "19892cf5e2345ae7a3cd65212fc1008d8bab9334e83848232a632f78f57cf2ff"
+  },
+  "sampling": {
+    "mean": -0.5742566666666648,
+    "standard_error": 0.0007700760817719221,
+    "interval95": [
+      -0.5759515925715035,
+      -0.572561740761826
+    ],
+    "batches": 12,
+    "degrees_of_freedom": 11,
+    "critical_value": 2.200985,
+    "method": "independent-batch-means-student-t",
+    "approximation": "Normal batch means assumed; choose large batches."
+  },
+  "batch_results": [
+    {
+      "ev": -0.5773599999999941,
+      "stddev_per_round": 0.8164937825978649,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.5701999999999936,
+      "stddev_per_round": 0.8215100174599784,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.5724399999999996,
+      "stddev_per_round": 0.8199507116843627,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.5773200000000074,
+      "stddev_per_round": 0.8165220662559268,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.5738599999999902,
+      "stddev_per_round": 0.8189575125206906,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.570479999999995,
+      "stddev_per_round": 0.8213156002372991,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.5740599999999959,
+      "stddev_per_round": 0.8188173306777344,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.5723000000000116,
+      "stddev_per_round": 0.8200484344197924,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.577639999999994,
+      "stddev_per_round": 0.8162957146689839,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.5756799999999995,
+      "stddev_per_round": 0.8176791691074481,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.5767399999999963,
+      "stddev_per_round": 0.816931849162751,
+      "rounds": 100000
+    },
+    {
+      "ev": -0.5730000000000002,
+      "stddev_per_round": 0.8195594650647215,
+      "rounds": 100000
+    }
+  ],
+  "continuation": "FreeBJ basic chart after forced first action",
+  "conditioning": "pre-peek",
+  "independent_streams": "Separate processes use upstream entropy; upstream exposes no seed argument.",
+  "limitations": [
+    "FreeBJ deals both split replacement cards before the first continuation.",
+    "Forced first action uses FreeBJ chart continuation, not native optimal continuation.",
+    "FreeBJ has no RNG seed flag in the pinned CLI."
+  ],
+  "executed_at": "2026-10-03T00:12:58.854775+00:00"
+}

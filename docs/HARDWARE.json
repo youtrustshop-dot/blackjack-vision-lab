@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-03T00:43:25.089991+00:00",
+  "OS": "Windows-11-10.0.26200-SP0",
+  "CPU": "AMD Ryzen 5 3600 6-Core Processor",
+  "logical_processors": 12,
+  "physical_memory_bytes": 17126506496,
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.3",
+    "opencv-python-headless": "5.0.0.93",
+    "Pillow": "12.3.0",
+    "fastapi": "0.142.2",
+    "pytest": "9.1.1"
+  },
+  "measurement_scope": "Local controlled-renderer and solver measurements in saved reports; GPU inference not measured.",
+  "load_note": "Development builds and separate reference benchmarks ran on the same host; figures are empirical observations, not dedicated-machine guarantees."
+}

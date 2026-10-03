@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "source_commit": "3d7ab1bfd0b7ea0235bea085488427fcf7520e69",
+  "source_manifest_sha256": "54762a8a25d482d3531821fa2dc93bbc6ec54c97e4ece09c07f5ec5dc82982c9",
+  "runner_sha256": "8ee6ac8b82c6ec41fc864d34094b1e33fb4bd8131a4872d3b4c56078bd424023",
+  "protocol_sha256": "54beac34799298fda7344d99c823aea4d1ac6c485594002e5f4818f1ce62fc6b",
+  "frozen_model_sha256": "836394fe77f9ebd92c048d147259ac1b8449aab6b5cbc071fe2d4608be154dfa",
+  "training_rows": 17,
+  "calibration_rows": 8,
+  "test": {
+    "cases": 9,
+    "measured_cases": 9,
+    "failed_cases": 0,
+    "mae_cards": 296.0,
+    "mae_decks": 5.6923076923076925,
+    "signed_bias_cards": -296.0,
+    "p95_absolute_error_cards": 310.4,
+    "max_absolute_error_cards": 312.0,
+    "empirical_band_coverage": 0.0,
+    "extrapolation_cases": 0,
+    "latency_p50_ms": 359.7296000007191,
+    "latency_p95_ms": 369.5531999997911
+  },
+  "overflow": {
+    "cases": 7,
+    "measured_cases": 7,
+    "failed_cases": 0,
+    "mae_cards": 343.42857142857144,
+    "mae_decks": 6.604395604395605,
+    "signed_bias_cards": -343.42857142857144,
+    "p95_absolute_error_cards": 362.8,
+    "max_absolute_error_cards": 364.0,
+    "empirical_band_coverage": 0.0,
+    "extrapolation_cases": 0,
+    "latency_p50_ms": 348.6874000009266,
+    "latency_p95_ms": 352.5199799973052
+  },
+  "rows": [
+    {
+      "split": "test",
+      "truth_count": 280,
+      "source_sha256": "d7932445e4d4811f56b16412c5a32c825aa044e9a165f44f3ab9a2e7c4f59ba3",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7291666666666666,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 362.7963000035379
+    },
+    {
+      "split": "test",
+      "truth_count": 284,
+      "source_sha256": "e5bf42c51b74b9c0f79c9b31f597affb5a3f790e4117d5499dab17119b793367",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7305555555555555,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 367.77230000006966
+    },
+    {
+      "split": "test",
+      "truth_count": 288,
+      "source_sha256": "ace030abb357edbb69bce942a88e0249417bf0ae32c650b742170cae08fa178c",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7305555555555555,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 368.6999999990803
+    },
+    {
+      "split": "test",
+      "truth_count": 292,
+      "source_sha256": "a834aa6dc082fa794b3e5cd8b962d4e7181741f7506247fb0000a60834c123e9",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7319444444444444,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 359.7296000007191
+    },
+    {
+      "split": "test",
+      "truth_count": 296,
+      "source_sha256": "9d56f881d4b3046c4cc716715dd235fca0629af8922a5e275e73290b72db8795",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7305555555555555,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 370.12200000026496
+    },
+    {
+      "split": "test",
+      "truth_count": 300,
+      "source_sha256": "43078246baab53bbcf3addf1b1da188dfaa92a0432990aabfad4a25e9502a630",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7291666666666666,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 353.2353000045987
+    },
+    {
+      "split": "test",
+      "truth_count": 304,
+      "source_sha256": "b3d6604cd44171517c4ffc486513618a9a6021fe3b779f5350af58a66c9c164f",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7319444444444444,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 355.0022999988869
+    },
+    {
+      "split": "test",
+      "truth_count": 308,
+      "source_sha256": "f6c4600288d6346fbb4a8920a08a10ff94c8956f922b8149a4e4e804022e433c",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7333333333333333,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 353.09029999916675
+    },
+    {
+      "split": "test",
+      "truth_count": 312,
+      "source_sha256": "1421536f9853da909dd74dc39c9f882cc3ba005da055aeca4d98e21aba0f2875",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7333333333333333,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 338.7845999968704
+    },
+    {
+      "split": "overflow",
+      "truth_count": 320,
+      "source_sha256": "fae4a020dadb85e83817d9320a6a98eea11a88bd8763cbf3eb7a05ac2cefb201",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7319444444444444,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 345.5774000030942
+    },
+    {
+      "split": "overflow",
+      "truth_count": 328,
+      "source_sha256": "104d1549ded9ce9711036d47bec70b0001b8c213dc4e1987eef2fa840572b3f3",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7277777777777777,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 352.59209999640007
+    },
+    {
+      "split": "overflow",
+      "truth_count": 336,
+      "source_sha256": "e19f2f48e0f857b106a2056cdab6a82bc25bbbc9210a2ba446ee0f53f7998acd",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7291666666666666,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 343.0830000070273
+    },
+    {
+      "split": "overflow",
+      "truth_count": 344,
+      "source_sha256": "8c9b351985be71adef98102d0cbaf20291156fc1254810e7942cbd2c28d69a66",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7361111111111112,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 349.8847000009846
+    },
+    {
+      "split": "overflow",
+      "truth_count": 352,
+      "source_sha256": "b94cc8f14e2f5d9c42c088da6f871378df793f979f73c473c03e75d689c54451",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7375,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 352.3516999994172
+    },
+    {
+      "split": "overflow",
+      "truth_count": 360,
+      "source_sha256": "d6915b97753142158b60a494401deb3af1b75dc8ba1653ef8be96959727420b8",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7388888888888889,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 348.6874000009266
+    },
+    {
+      "split": "overflow",
+      "truth_count": 364,
+      "source_sha256": "ecc762f1f4f4ceee9d3d1e1006ffc9e3e3ea621c4cd6a516849f5f25dc8e6e27",
+      "measurement": {
+        "status": "empty_or_unsupported_back",
+        "height_fraction": 0.0,
+        "base_y_fraction": 0.7333333333333333,
+        "front_y_fraction": null
+      },
+      "prediction": {
+        "status": "experimental",
+        "estimated_cards": 0.0,
+        "estimated_decks": 0.0,
+        "card_interval": [
+          0.0,
+          264.0
+        ],
+        "extrapolation": false,
+        "probability_correct": null,
+        "warning": "one camera, blue-backed cards; interval is an empirical residual band"
+      },
+      "latency_ms": 340.30849999544444
+    }
+  ],
+  "limitations": [
+    "one recording, not independent sessions",
+    "counts from filenames/source README",
+    "chronological test extrapolates beyond training",
+    "empirical bands have no claimed probability coverage under temporal dependence",
+    "empty pixels cannot distinguish an unsupported back color",
+    "does not infer exact shoe composition"
+  ]
+}

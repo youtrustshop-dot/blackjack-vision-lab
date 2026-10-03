@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": [
+    "Initial native session, no fabricated cards",
+    "Seed42 live deal with hidden hole and mathematical EV results",
+    "Actual image rendering, pixel recognition and temporal reconstruction",
+    "Event cursor reconstructs verified prefix without future exposure",
+    "Settlement reveals dealer and updates round result",
+    "Rules applied to new session, independent from prior hand",
+    "390px responsive layout without horizontal overflow"
+  ],
+  "errors": [],
+  "screenshots": [
+    "calibration.png",
+    "counting.png",
+    "experiments.png",
+    "mobile.png",
+    "perception.png",
+    "replay.png",
+    "video-replay.png",
+    "workbench.png"
+  ],
+  "browser": "isolated Chrome headless",
+  "viewport": [
+    1440,
+    1050
+  ]
+}

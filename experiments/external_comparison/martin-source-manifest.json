@@ -1,0 +1,145 @@
+{
+  "source": "https://github.com/martinabeleda/blackjack-tracker",
+  "commit": "5145a1260a7a7750f8a5fd56d60702ea8e66c30d",
+  "license": "MIT",
+  "rows": [
+    {
+      "path": "benchmark_images/club1.png",
+      "bytes": 1384867,
+      "git_blob": "71e85694ea2ce6e267c0eb32fc004902a412eab1",
+      "sha256": "683f8de2808dd66dce450283b625fe25bc18dfd62d03fcb26fe84c11ba592f35"
+    },
+    {
+      "path": "benchmark_images/club3.png",
+      "bytes": 1378425,
+      "git_blob": "a1393b0629d55dc667521fea586724c5bc7ad08e",
+      "sha256": "bee149c75a827ecda42c93f0fdf237f8e33d8692e816e9d31e8a4177b203600a"
+    },
+    {
+      "path": "benchmark_images/diamond1.png",
+      "bytes": 1373100,
+      "git_blob": "6c8d23d5e97f6bec03f5b114a4ae97bba0d13274",
+      "sha256": "d1ad62765fb90388e0c6317799fef170f74a3969402355252fb7af5ad797867a"
+    },
+    {
+      "path": "benchmark_images/diamond3.png",
+      "bytes": 1362714,
+      "git_blob": "1fefb163be4cfaff4e76afd92d02efe75553f8f8",
+      "sha256": "f9c7d6c756c57e45f5f64c39b5e0ae31b35b190180699fe2bbb162e393b6cb87"
+    },
+    {
+      "path": "benchmark_images/heart1.png",
+      "bytes": 1376816,
+      "git_blob": "36f839162256aee631d5364496c362cd9b33519a",
+      "sha256": "907534c61dc674b293a744dc210423989553dc3946e2aec50d986ff4bfb911c1"
+    },
+    {
+      "path": "benchmark_images/heart3.png",
+      "bytes": 1366547,
+      "git_blob": "8f8bd8bbf6b82729ffe99f9615fd8510b788cbbe",
+      "sha256": "62f5f61e2554be65b8cebcead46fe9bcfade3d6d33448c5b80c7331d0d5d747e"
+    },
+    {
+      "path": "benchmark_images/spade1.png",
+      "bytes": 1378850,
+      "git_blob": "358b89d9f4ed18081d39e8ea53e97a74d0e6ad2f",
+      "sha256": "0ff236f66e423256ab701764397c7d0d5491bb8ca9c6ebbfba55e49ddab0e6c5"
+    },
+    {
+      "path": "benchmark_images/spade3.png",
+      "bytes": 1382306,
+      "git_blob": "1df2b88e82c0de1354ba184ee10b7c29f3353003",
+      "sha256": "d60a3519a2e065667d1bd88b0ee00b83c4f950c2525dbdb0fc1248c693cd4f19"
+    },
+    {
+      "path": "cards.py",
+      "bytes": 14903,
+      "git_blob": "9e9783138792333e989dc0d6e836170c5857cc2a",
+      "sha256": "ae7c582dad7898a7545c9ad87417c7edf7278bd38e1afff647d7d73e041dbcac"
+    },
+    {
+      "path": "rank_images/Ace.png",
+      "bytes": 2350,
+      "git_blob": "12860325b03ef6002d644f54ddd9efed93e296b7",
+      "sha256": "4526377874b92cfd80cb0d043bbf632422906731b92e9e902bc86e4f8bb5ff5c"
+    },
+    {
+      "path": "rank_images/Eight.png",
+      "bytes": 2372,
+      "git_blob": "f3faa34de36c401d1df0f350501c0fd51c00ecdf",
+      "sha256": "d4ef1d7c630274196fc806d5886f6be87b6bc66bf1ef133f464cd8843fb70970"
+    },
+    {
+      "path": "rank_images/Five.png",
+      "bytes": 2155,
+      "git_blob": "53919f6cae83ddf294fd8472721a9b1fc73fcf55",
+      "sha256": "7cbc309c2e9b06ab9c8a3c625f02a2d40819507b2fc9a8122bd9328c85e7c715"
+    },
+    {
+      "path": "rank_images/Four.png",
+      "bytes": 2035,
+      "git_blob": "3c48ab2569ea031e501ea1374d50b41c1aa2577c",
+      "sha256": "995bafc030f6133ed2948de5775a107cff4beb602792eb6d02d631fc7f6cfe72"
+    },
+    {
+      "path": "rank_images/Jack.png",
+      "bytes": 1774,
+      "git_blob": "a7f28273d886a77a0c7ef8dc073f156688f84389",
+      "sha256": "c32323ce170e09b8ef42cdc115ededc36eabcf6c2c2bc63cab10dcc8840f01c5"
+    },
+    {
+      "path": "rank_images/King.png",
+      "bytes": 2673,
+      "git_blob": "c4a0afeddba9366393bfdd3e261ccde6de2faefd",
+      "sha256": "93b9535c22fb24e0bd3d4ced1f6d62825fcc42bb1e376f33609c626fcdac9235"
+    },
+    {
+      "path": "rank_images/Nine.png",
+      "bytes": 2399,
+      "git_blob": "984e55d6929cc27b5f4885c6da936cda1a60f264",
+      "sha256": "8cb180cfd149b7658b643672259c69116d1ee25797b2818d5989ba239cb08908"
+    },
+    {
+      "path": "rank_images/Queen.png",
+      "bytes": 2221,
+      "git_blob": "e0406479d6316ae0cb3e1939066b5c11cbb0a448",
+      "sha256": "a3109e509fc9374ea8336bd70ee4061bc2488493af0ce8cd82b03305b68e9f4d"
+    },
+    {
+      "path": "rank_images/README.md",
+      "bytes": 116,
+      "git_blob": "782a0dea75deaac025af8caef7da8cbcb87b3699",
+      "sha256": "00929be9e5a86225b7e2d12e7ac74653d7695412e777040ff00370bb0634d868"
+    },
+    {
+      "path": "rank_images/Seven.png",
+      "bytes": 1752,
+      "git_blob": "9e2edcb823dff8af3e0223102ce6c4ef6621aa73",
+      "sha256": "6349ad203c10dfa708464cf784d2d5408e53cd04f5baf1c688d8642778a0aed6"
+    },
+    {
+      "path": "rank_images/Six.png",
+      "bytes": 2229,
+      "git_blob": "4dbe9a2625b870a76843b44c403b89c0e1effdca",
+      "sha256": "196146546849b66d7df5b2ab4cb3595c35b450250114d0ac0626f6574deea6e7"
+    },
+    {
+      "path": "rank_images/Ten.png",
+      "bytes": 1481,
+      "git_blob": "f4e5bbceead9bbeb5ac04d33c48c3e90e1417117",
+      "sha256": "73a85e544c4605293c3e962224356c829cb8d7bd8688bbce8eeeb39f0e2e5c6d"
+    },
+    {
+      "path": "rank_images/Three.png",
+      "bytes": 2125,
+      "git_blob": "37b867b8ead4c3e6229b890e9c86d36f83cc3494",
+      "sha256": "f1eba45748e6d84b33cd041b55eb39a4e6f6988e6ce977afe94898989b6a60be"
+    },
+    {
+      "path": "rank_images/Two.png",
+      "bytes": 2328,
+      "git_blob": "1a0ed220662c7ee76c9607cbae7bd19a5467aa25",
+      "sha256": "0b3b8ee33165aa966008d93fba634a2f6f7fbb3f514c08707967597db58f1815"
+    }
+  ]
+}

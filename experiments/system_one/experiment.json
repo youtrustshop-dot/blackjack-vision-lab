@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "task": "observed_blackjack_phase_classification",
+  "phases": ["DEALING", "PLAYER_TURN", "DEALER_TURN", "ROUND_END", "SHUFFLING", "UNCERTAIN"],
+  "seed": 17,
+  "sessions": 20,
+  "variants_per_phase": 3,
+  "session_split": [0.6, 0.2, 0.2],
+  "evaluation_split": "test",
+  "warmup": 1,
+  "baseline": "deterministic_phase_baseline_v1",
+  "optional_local_model": "convaiinnovations/laya",
+  "optional_remote_sdk": "typesafe-sdk",
+  "strategy_integration": false,
+  "network_default": false,
+  "model_download_default": false,
+  "status": "framework_written; live optional model benchmarks require dependencies or credentials"
+}

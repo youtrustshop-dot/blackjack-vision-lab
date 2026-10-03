@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "status": "passed",
+      "passed": true,
+      "tolerance": 1e-10,
+      "differences": {
+        "stand": 0.0,
+        "hit": 1.1102230246251565e-16,
+        "double": 2.220446049250313e-16,
+        "surrender": 0.0
+      },
+      "compared_actions": [
+        "stand",
+        "hit",
+        "double",
+        "surrender"
+      ],
+      "engine": "hhoppe",
+      "reference_sha256": "21b0f8af737a5e397f9487973cc96cf6d297c87342497801069d9c85cb373d8a",
+      "reference_exact": false,
+      "scope": "nonsplit [10, 6] versus 10 fresh six-deck S17"
+    }
+  ],
+  "native": {
+    "actions": {
+      "stand": -0.5409544390190253,
+      "hit": -0.5346755624525633,
+      "double": -1.0693511249051266,
+      "surrender": -0.5
+    },
+    "best_action": "surrender",
+    "method": "finite-shoe-enumeration",
+    "exact": true,
+    "error": null,
+    "status": "ok",
+    "warnings": [],
+    "action_details": {
+      "surrender": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 0.03290000313427299
+      },
+      "stand": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 0.5082999996375293
+      },
+      "double": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 2.073800002108328
+      },
+      "hit": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 8.587399999669287
+      }
+    },
+    "ev_units": "net profit per original bet",
+    "split_dealing": "sequential",
+    "hidden_information": "marginalized",
+    "best_evaluated_action": "surrender",
+    "missing_actions": [],
+    "nodes": 570,
+    "peek_resolved": true,
+    "future_peek_integrated": false,
+    "insurance": {
+      "available": false,
+      "probability_blackjack": 0.0,
+      "ev": null,
+      "take": false
+    },
+    "ev_gap": 0.03467556245256331,
+    "latency_ms": 11.397099995519966,
+    "latency": 11.397099995519966
+  },
+  "executed_at": "2026-10-03T00:22:27.876104+00:00",
+  "scope": "One nonsplit hand only; no general split, resplit, OBO, depleted-shoe or table validation."
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "source_inspected",
+  "comparison_executed": false,
+  "engine": "mgp",
+  "provenance": {
+    "repository": "Neurobaby/MGPs-BJ-CA",
+    "revision": "333b79f4fc093ba097f9c55ef889e04fc6b1d1ea",
+    "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\mgp-reference",
+    "revision_verified": true,
+    "tracked_tree_clean": true,
+    "license": "NOASSERTION"
+  },
+  "inspected_at": "2026-10-03T00:33:11.643527+00:00",
+  "help_pdf_sha256": "53dfc6f48634476b0fe59918ee5d6783af4e7009522c93a33b5593e5c72ef2c0",
+  "help_pdf_pages": 13,
+  "help_pdf_metadata": {
+    "format": "PDF 1.2",
+    "title": "Microsoft Word - MGP's BJ CA Help.doc",
+    "author": "Administrator",
+    "subject": "",
+    "keywords": "",
+    "creator": "Pscript.dll Version 5.0",
+    "producer": "AFPL Ghostscript 8.50",
+    "creationDate": "D:20080509205957",
+    "modDate": "D:20080509205957",
+    "trapped": "",
+    "encryption": null
+  },
+  "relevant_pages": [
+    {
+      "page": 2,
+      "character_count": 2833,
+      "has_numbers": false
+    },
+    {
+      "page": 3,
+      "character_count": 1494,
+      "has_numbers": false
+    },
+    {
+      "page": 5,
+      "character_count": 2617,
+      "has_numbers": false
+    },
+    {
+      "page": 9,
+      "character_count": 1361,
+      "has_numbers": false
+    },
+    {
+      "page": 12,
+      "character_count": 823,
+      "has_numbers": false
+    }
+  ],
+  "text_extract": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\mgp-inspection\\mgp-help.txt",
+  "rendered_pages": [
+    {
+      "page": 2,
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\mgp-inspection\\mgp-page-2.png",
+      "sha256": "c6a5cd333a907f0005847d0d9ca73fce43eb7b1861732fde8cc0a0a514b3aaa2"
+    },
+    {
+      "page": 8,
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\mgp-inspection\\mgp-page-8.png",
+      "sha256": "e4bc1b636be1cbe8f758f0ebc717be0b5a08f2d794484571d161dd81799557c2"
+    },
+    {
+      "page": 9,
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\mgp-inspection\\mgp-page-9.png",
+      "sha256": "5193dc1e166f22661c85a79964304062a7f38225b80b7879bb856f0e02c9c237"
+    },
+    {
+      "page": 10,
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\mgp-inspection\\mgp-page-10.png",
+      "sha256": "8df1224d9772fbea434f3175762062edd5dc27b84260bb84d3e84f6e4ff13d70"
+    },
+    {
+      "page": 12,
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\mgp-inspection\\mgp-page-12.png",
+      "sha256": "ebde1af9d2575666875aaa25158ecced4c9e61065026abc03dfcbcd2db6e02e4"
+    }
+  ],
+  "help_pdf_source_url": "https://github.com/Neurobaby/MGPs-BJ-CA/blob/333b79f4fc093ba097f9c55ef889e04fc6b1d1ea/BJ%20CA/MGP%27s%20BJ%20CA%20Help.pdf",
+  "manual_scope": [
+    {
+      "page": 2,
+      "finding": "Distinguishes total-dependent, two-card and composition-dependent continuation. Top-of-deck single-player calculations described as thought exact except BBO."
+    },
+    {
+      "page": 7,
+      "finding": "Real-time analysis can optionally substitute single-split estimates plus a baseline correction."
+    },
+    {
+      "page": 8,
+      "finding": "Three busted-bet conventions explicitly approximate; conditioning varies with hole-card/dealer-check convention."
+    },
+    {
+      "page": 9,
+      "finding": "Post-split CDZ-, CD-P and CD-PN attention differs from full jointly observed sequential split context."
+    },
+    {
+      "page": 10,
+      "finding": "N-card analysis uses existing EVs and does not recalculate them after policy changes."
+    }
+  ],
+  "published_numeric_goldens": [],
+  "golden_note": "All 13 manual pages inspected: no published hand-action EV or full-game EV table suitable for a reproducible numeric golden found.",
+  "license_source_url": "https://github.com/Neurobaby/MGPs-BJ-CA/blob/333b79f4fc093ba097f9c55ef889e04fc6b1d1ea/LICENSE.md",
+  "license_sha256": "2105faf6bae916b42062075b5e5d401eada8dc61263fa73de730e7864819691d",
+  "license_inspection": "Permits redistribution and use in source and binary forms with three retention/nonendorsement conditions and disclaimer; BSD-3-Clause-style text. GitHub NOASSERTION is incomplete classification.",
+  "project_sha256": "87140617308b71a95cdfaa75df2b9ba03ee4f08d396a6755910fc7078cedf1f6",
+  "runtime": "Visual Basic Windows Forms WinExe, .NET Framework 3.5, startup BJCAMainForm; no command-line handler found by source search.",
+  "execution_status": "not_executed",
+  "direct_cli_status": "unsupported: pinned project is a Windows Forms executable with no inspected command-line entrypoint; GUI/manual export remains possible, not validated here."
+}

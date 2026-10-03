@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main",
+  "description": "Local laboratory window. Sidecar lifecycle is controlled exclusively by Rust.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

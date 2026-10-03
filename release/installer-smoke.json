@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "installer": "Blackjack Vision Lab_0.1.0_x64-setup.exe",
+  "version": "0.1.0",
+  "installer_sha256": "5a9f9ef338d541c0ac8a918e7591214c0aec3b1b9566276fe7edffc015a004e1",
+  "install_scope": "current user",
+  "workspace_scoped_install": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\desktop-installer-proof\\f63c83c90bee4f4a82a1f8f0afad9115",
+  "silent_no_shortcuts": true,
+  "installer_exit_code": 0,
+  "installed_file_sha256": {
+    "blackjack-vision-lab.exe": "73b5c458de8ba465ab83d1c2f8fc4df9dc33fc10ee5798f86a37e64e21f03dcd",
+    "bjlab-backend.exe": "e65d1ba327983bb47eae45642b98b9a76ed8531ca789eab6b6785e954226b330",
+    "WebView2Loader.dll": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5"
+  },
+  "installed_native_proof": "installer-native-smoke.json",
+  "uninstaller_exit_code": 0,
+  "owned_installation_removed": true,
+  "owned_registration_removed": true,
+  "preexisting_installation_overwritten": false,
+  "uninstaller_retained_install_location_preference": true,
+  "scoped_test_preference_cleanup": true,
+  "native_binary_difference": "Only Tauri __TAURI_BUNDLE_TYPE_VAR_ marker UNK -> NSS; all other bytes identical"
+}

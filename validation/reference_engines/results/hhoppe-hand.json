@@ -1,0 +1,64 @@
+{
+  "engine": "hhoppe",
+  "method": "external-finite-fresh-shoe-pruned-dp",
+  "exact": false,
+  "comparison_executed": true,
+  "reference_pin": "2ff98e83adf98396beb4ac82a338db03e551264f",
+  "status": "executed",
+  "actions": {
+    "stand": -0.5409544390190253,
+    "hit": -0.5346755624525634,
+    "double": -1.0693511249051268,
+    "surrender": -0.5
+  },
+  "best_action": "surrender",
+  "requested_rules": {
+    "decks": 6,
+    "hit_soft17": false,
+    "blackjack_payout": 1.5,
+    "dealer_peek": true,
+    "enhc": false,
+    "enhc_loss": "all",
+    "double_rule": "any",
+    "double_after_split": true,
+    "resplit": true,
+    "max_split_hands": 4,
+    "resplit_aces": false,
+    "hit_split_aces": false,
+    "surrender": "late",
+    "penetration": 0.75
+  },
+  "effective_rules": {
+    "num_decks": 6,
+    "blackjack_payout": 1.5,
+    "hit_soft17": false,
+    "obo": true,
+    "late_surrender": true,
+    "double_min_total": 0,
+    "double_after_split": true,
+    "split_to_num_hands": 4,
+    "resplit_aces": false,
+    "hit_split_aces": false,
+    "double_split_aces": false,
+    "cut_card": 0,
+    "num_players": 1
+  },
+  "provenance": {
+    "repository": "hhoppe/blackjack",
+    "revision": "2ff98e83adf98396beb4ac82a338db03e551264f",
+    "checkout": "C:\\Users\\User\\Documents\\Codex\\2026-10-03\\miao-che-ne-pensi\\work\\hhoppe-reference",
+    "revision_verified": true,
+    "tracked_tree_clean": true,
+    "license": "MIT",
+    "source_sha256": "20db3225f5651d4fb37054621a56dab324245264a84079ba73103da0f458dd59"
+  },
+  "conditioning": "negative-peek",
+  "continuation": "HAND_AND_INITIAL_CARDS_IN_PRIOR_SPLITS",
+  "effort": 3,
+  "limitations": [
+    "Upstream EFFORT prunes states; error bound unavailable.",
+    "Split continuation forgets prior hit cards and automatically takes allowed resplits.",
+    "Fresh shoe minus current exposed cards only; cut-card effects excluded."
+  ],
+  "executed_at": "2026-10-03T00:07:57.007046+00:00"
+}

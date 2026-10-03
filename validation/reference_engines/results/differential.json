@@ -1,0 +1,99 @@
+{
+  "status": "failed",
+  "comparisons": [
+    {
+      "status": "passed",
+      "passed": true,
+      "tolerance": 1e-10,
+      "differences": {
+        "stand": 0.0,
+        "hit": 1.1102230246251565e-16,
+        "double": 2.220446049250313e-16,
+        "surrender": 0.0
+      },
+      "compared_actions": [
+        "stand",
+        "hit",
+        "double",
+        "surrender"
+      ],
+      "engine": "hhoppe",
+      "reference_sha256": "a5c5ec3d166c4c1f712b404acfe8abfb508240fd10a6f6c3b71c4a86930036e4",
+      "reference_exact": false,
+      "scope": "nonsplit 10,6 versus 10 fresh six-deck S17 negative peek"
+    },
+    {
+      "engine": "freebj",
+      "status": "failed",
+      "passed": false,
+      "scope": "stand 10,6 versus 10 fresh six-deck S17 pre-peek; no insurance",
+      "native_conditional_ev": -0.5409544390190253,
+      "dealer_blackjack_probability": 0.07766990291262135,
+      "native_prepeek_ev": -0.5766084631728874,
+      "sample_mean": -0.5742566666666648,
+      "interval95": [
+        -0.5759515925715035,
+        -0.572561740761826
+      ],
+      "method": "independent-batch-means-student-t",
+      "reference_sha256": "f7cf7faefd74d982b4672c19ad2178d49b5f2145d357508ed8f0bb3a1fd70a68",
+      "reference_exact": false,
+      "note": "A single statistical consistency check can fail at its nominal false-rejection rate."
+    }
+  ],
+  "native": {
+    "actions": {
+      "stand": -0.5409544390190253,
+      "hit": -0.5346755624525633,
+      "double": -1.0693511249051266,
+      "surrender": -0.5
+    },
+    "best_action": "surrender",
+    "method": "finite-shoe-enumeration",
+    "exact": true,
+    "error": null,
+    "status": "ok",
+    "warnings": [],
+    "action_details": {
+      "surrender": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 0.025699999241624027
+      },
+      "stand": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 0.7899000047473237
+      },
+      "double": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 6.663199994363822
+      },
+      "hit": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 11.39580000017304
+      }
+    },
+    "ev_units": "net profit per original bet",
+    "split_dealing": "sequential",
+    "hidden_information": "marginalized",
+    "best_evaluated_action": "surrender",
+    "missing_actions": [],
+    "nodes": 4045,
+    "peek_resolved": true,
+    "future_peek_integrated": false,
+    "insurance": {
+      "available": false,
+      "probability_blackjack": 0.0,
+      "ev": null,
+      "take": false
+    },
+    "ev_gap": 0.03467556245256331,
+    "latency_ms": 19.256299994594883,
+    "latency": 19.256299994594883
+  },
+  "executed_at": "2026-10-03T00:13:11.024329+00:00",
+  "scope": "One nonsplit hand only; no general split, resplit, OBO, depleted-shoe or table validation."
+}

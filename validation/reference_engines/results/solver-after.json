@@ -1,0 +1,75 @@
+{
+  "label": "after",
+  "scenario": "player2,8 dealer4 freshsixdecksS17",
+  "solver_source_sha256": "ea14fa586a3e382a313a09753e21a277ed93258be790188cb8f186fae8a5a40c",
+  "budget": {
+    "timeout_ms": 5000,
+    "max_nodes": 1000000
+  },
+  "counts": [
+    24,
+    23,
+    24,
+    23,
+    24,
+    24,
+    24,
+    23,
+    24,
+    96
+  ],
+  "result": {
+    "actions": {
+      "stand": -0.20956162082882573,
+      "hit": 0.23414060408916798,
+      "double": 0.46828120817833596,
+      "surrender": -0.49999999999999994
+    },
+    "best_action": "double",
+    "method": "finite-shoe-enumeration",
+    "exact": true,
+    "error": null,
+    "status": "ok",
+    "warnings": [],
+    "action_details": {
+      "surrender": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 0.02710000262595713
+      },
+      "stand": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 3.6408000014489517
+      },
+      "double": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 38.84760000073584
+      },
+      "hit": {
+        "exact": true,
+        "method": "finite-shoe-enumeration",
+        "latency_ms": 501.86309999844525
+      }
+    },
+    "ev_units": "net profit per original bet",
+    "split_dealing": "sequential",
+    "hidden_information": "marginalized",
+    "best_evaluated_action": "double",
+    "missing_actions": [],
+    "nodes": 28511,
+    "peek_resolved": false,
+    "future_peek_integrated": false,
+    "insurance": {
+      "available": false,
+      "probability_blackjack": 0.0,
+      "ev": null,
+      "take": false
+    },
+    "ev_gap": 0.23414060408916798,
+    "latency_ms": 548.8735999970231,
+    "latency": 548.8735999970231
+  },
+  "executed_at": "2026-10-03T00:19:05.086366+00:00"
+}

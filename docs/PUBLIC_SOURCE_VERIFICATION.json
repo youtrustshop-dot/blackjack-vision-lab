@@ -1,0 +1,276 @@
+{
+  "status": "pass",
+  "verified_at": "2026-10-03T10:11:12.731801+00:00",
+  "fresh_source_setup": "setup.ps1: new venv, constrained editable installation, npm ci and frontend build passed",
+  "testcases": 246,
+  "subtests": 10,
+  "junit_tests": 256,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 17.348,
+  "actual_source_http_smoke": {
+    "status": "pass",
+    "health": {
+      "status": "ok",
+      "version": "0.1.0",
+      "service": "Blackjack Vision Lab",
+      "local_only": true,
+      "truth_boundary": "debug endpoint excluded from solver inputs"
+    },
+    "compiled_ui_served": true,
+    "seeded_round": true,
+    "hidden_dealer_card_redacted": true,
+    "rendered_png_bytes": 17368,
+    "compiled_ui_sha256": "b3f7e4db7ab7a08f965663d3d3fbce7dac28b82b2c4ede7b59e5bfcbc0303633",
+    "owned_service_stopped": true
+  },
+  "original_runtime_ui_test_hashes": [
+    {
+      "path": "bjlab/__init__.py",
+      "bytes": 111,
+      "sha256": "982cd8434141282614b377d9026fff7e3d6e19a45b0f4e7ca2d2783e8f1e143f"
+    },
+    {
+      "path": "bjlab/api.py",
+      "bytes": 38623,
+      "sha256": "458ce99c4c8dd3aeaaa449d7c64940ed08db3a364dcb6454b213019997d38941"
+    },
+    {
+      "path": "bjlab/calibration.py",
+      "bytes": 18696,
+      "sha256": "1f92a47d97a9c398ac8ab7470ed2a725d8d4c3b921229e6b925f7cad8131a863"
+    },
+    {
+      "path": "bjlab/cli.py",
+      "bytes": 4409,
+      "sha256": "03a1f6cb6dd13c7f19f3e86c6947f2b9876e5acf5e83c09e8b8d51628fe4aded"
+    },
+    {
+      "path": "bjlab/counting.py",
+      "bytes": 13980,
+      "sha256": "76d048fa817a709db91e93337302a7003b6e7e806a5a8e9ded86bf23a1f6a9e0"
+    },
+    {
+      "path": "bjlab/datasets.py",
+      "bytes": 44570,
+      "sha256": "202427274f519e757e5bbb3f43e72e77a8a07d2b3cbf0deac5b589ae8a57de5e"
+    },
+    {
+      "path": "bjlab/engine.py",
+      "bytes": 8527,
+      "sha256": "3b9b68f6f6d124f17c7d1e6895ce149eb42ab66b06e1ab6e39545d078b5035ba"
+    },
+    {
+      "path": "bjlab/events.py",
+      "bytes": 15403,
+      "sha256": "fcd2a75d17ebac64511ff99ebeef8d92d45b012a3de5d90e72300aae07ee8172"
+    },
+    {
+      "path": "bjlab/external_tray_benchmark.py",
+      "bytes": 12350,
+      "sha256": "a67de7ad434b13a80da71f6092fdae13d97516a6af32e51afeddf659a60e92af"
+    },
+    {
+      "path": "bjlab/model_experiments.py",
+      "bytes": 26881,
+      "sha256": "7314ad42421899e2f1019f094031cb9fd66c8f99f5ea07cb3f5deb30d3dc08e4"
+    },
+    {
+      "path": "bjlab/monte_carlo.py",
+      "bytes": 14737,
+      "sha256": "a18afdbf8663489d27eb46899167d715901fd4f587108b120ee7b7f6890097d6"
+    },
+    {
+      "path": "bjlab/references.py",
+      "bytes": 29722,
+      "sha256": "cb538750760a3cb258407c61d19496a3214eb227343ea18497b754c041fbece8"
+    },
+    {
+      "path": "bjlab/shoe_inference_benchmark.py",
+      "bytes": 18394,
+      "sha256": "f4b95309f925fd9a9abd7acbbcb2a6238de69f893ef95bd758fff137d4952c47"
+    },
+    {
+      "path": "bjlab/simulator.py",
+      "bytes": 27512,
+      "sha256": "2f12e895f4f0dcae4c60826d4f42109cc98f35a4510b11a44e58fe08c75d5707"
+    },
+    {
+      "path": "bjlab/solver.py",
+      "bytes": 22849,
+      "sha256": "a219f3d90f82bd4dd22c4f3cafde5001577c86732859b88c9b682577a42f6397"
+    },
+    {
+      "path": "bjlab/strategy.py",
+      "bytes": 28523,
+      "sha256": "bf36116f0a8bf89008eafe87c3ec29a4e04c5cf96b997fb870fc802f3dbe9741"
+    },
+    {
+      "path": "bjlab/validation.py",
+      "bytes": 4204,
+      "sha256": "db7dd8bfe53634030119a355f36eefa82b314d1b23cd68c253c704849aaf823c"
+    },
+    {
+      "path": "bjlab/vision.py",
+      "bytes": 34122,
+      "sha256": "b6dce7fb5686d5788f06bcefc5905e675e7fd98de69d378cb5a89cbd7a129729"
+    },
+    {
+      "path": "desktop_launcher.py",
+      "bytes": 7101,
+      "sha256": "89d54333d1729340b923d97f3c401156af1cd6f7dcbe90fe0898d4cb2c3e04d5"
+    },
+    {
+      "path": "tests/test_api.py",
+      "bytes": 14091,
+      "sha256": "ffd29e12c166e9bf121b6e1304d55a8026282c1b9cd35d0f0a78618c964731eb"
+    },
+    {
+      "path": "tests/test_calibration.py",
+      "bytes": 5504,
+      "sha256": "969e35181f1a06943231350c67969e608190870eee23bede0a15d751a88e8a0e"
+    },
+    {
+      "path": "tests/test_counting.py",
+      "bytes": 3653,
+      "sha256": "9beffb35e690825d115646b9084210ddab0277bb38766974c021612a12225018"
+    },
+    {
+      "path": "tests/test_datasets.py",
+      "bytes": 6824,
+      "sha256": "33f7a4f1649932806230819a55fda11957c05e8d91d348ed4fff23941dcc2fc5"
+    },
+    {
+      "path": "tests/test_engine.py",
+      "bytes": 4821,
+      "sha256": "321a52b17df15651dbc7665dfb51fdb1a0b764592ce84a4c0b793713ddf0df1a"
+    },
+    {
+      "path": "tests/test_events.py",
+      "bytes": 5027,
+      "sha256": "107ecc49e6d3a8274073060a5c75a70f3745cfef5cf0a1ed01bbc7fb698cca4c"
+    },
+    {
+      "path": "tests/test_external_tray_benchmark.py",
+      "bytes": 3226,
+      "sha256": "2258c0c5a6cb267a2f225c565e09f5b4901e99bb2abab2d3168edc173a40e95b"
+    },
+    {
+      "path": "tests/test_model_experiments.py",
+      "bytes": 7419,
+      "sha256": "483136928c63ff9e1782e88ca82a3846d3f3370728828b1b0f0f1e144789a400"
+    },
+    {
+      "path": "tests/test_monte_carlo.py",
+      "bytes": 3517,
+      "sha256": "1e82bb99957cddad1bf5bbfe616e0d399c2252b97c37856cfaa395c337dbd3dd"
+    },
+    {
+      "path": "tests/test_perception_experiments.py",
+      "bytes": 3694,
+      "sha256": "9ab9f064ef0eedb1416973d49fdc5b050d86c78a05f75efa2c7da24ddd55b417"
+    },
+    {
+      "path": "tests/test_references.py",
+      "bytes": 7697,
+      "sha256": "126907dade27de133444a9dd00f089a9292f5c1b98ce80d9c054815d130a0ac3"
+    },
+    {
+      "path": "tests/test_session_properties.py",
+      "bytes": 3128,
+      "sha256": "c77760170332c7b4f4807b7df3ac111fc939d76cee0f7e550bc3f5baf68263d7"
+    },
+    {
+      "path": "tests/test_shoe_inference_benchmark.py",
+      "bytes": 2525,
+      "sha256": "e00ed060c0ce3dedddb6adb1ad45dfeb05299b834f4e79d954c339c7284376b0"
+    },
+    {
+      "path": "tests/test_simulator.py",
+      "bytes": 11668,
+      "sha256": "30d461e193f9066ad635e97bb3367ed532989edc5027f2c16084569dbfe8a978"
+    },
+    {
+      "path": "tests/test_solver.py",
+      "bytes": 14107,
+      "sha256": "07227927058735e07a944d53a2019f4cca8baa9c295c312fed35861d4046cd87"
+    },
+    {
+      "path": "tests/test_strategy.py",
+      "bytes": 11856,
+      "sha256": "22810841cb8045eebf11095a32c6302055ce742722c813cd1f85211e4d38b9fb"
+    },
+    {
+      "path": "tests/test_validation.py",
+      "bytes": 1931,
+      "sha256": "950d1f692b12fa45f5dbbd5e3d54b2b4fc1b92d9692ba4da5b2549888d9ce02d"
+    },
+    {
+      "path": "tests/test_vision.py",
+      "bytes": 7869,
+      "sha256": "fdce4183b8cb763e88f8aa883adcc1ea8069c0bba174dc71ee15a574bfbe1f50"
+    },
+    {
+      "path": "ui/src/api.ts",
+      "bytes": 2198,
+      "sha256": "2f501edd8161d9d73353a315ca0040f3b35f2c083427b3e9034461b74a1dc41c"
+    },
+    {
+      "path": "ui/src/App.tsx",
+      "bytes": 27121,
+      "sha256": "a002ca7130ee0702ecb5c095e6851aee54ef62bef9a0d591da830f9af9fa0334"
+    },
+    {
+      "path": "ui/src/CountingPanel.tsx",
+      "bytes": 4345,
+      "sha256": "85e90e0c3025da5b72246a9b5c4f6a3bc490dad5cb7444e6561e16e36e8da3db"
+    },
+    {
+      "path": "ui/src/DeckEstimate.tsx",
+      "bytes": 1720,
+      "sha256": "60c9eaa015c194ccafa21542596b73a9c7159b9f3f2013a8157bd5c89ea3a33a"
+    },
+    {
+      "path": "ui/src/ExperimentSummary.tsx",
+      "bytes": 2269,
+      "sha256": "15e432da5b0bb90195afe1ed635100703d8ebff66142957a63d9d49cd1915734"
+    },
+    {
+      "path": "ui/src/FrameReplay.tsx",
+      "bytes": 2318,
+      "sha256": "2adfff423a8f9d8efcd89cca3fc145a982d0a5d1426f79b0dbfd519c9cf836bb"
+    },
+    {
+      "path": "ui/src/main.tsx",
+      "bytes": 222,
+      "sha256": "660c19ace773014e29044cde6c524541e39091729fff206704543277e8036d4a"
+    },
+    {
+      "path": "ui/src/style.css",
+      "bytes": 23179,
+      "sha256": "2ad8104890d05a67a89dbc957dd2599734ba462e6f7a9ffb386d553491dee23d"
+    },
+    {
+      "path": "ui/src/vision-report.css",
+      "bytes": 2981,
+      "sha256": "460587c8b9550fbcbb1f1760da5c4470144db1e992b4da8bf14dea83a181978a"
+    },
+    {
+      "path": "ui/src/VisionReport.tsx",
+      "bytes": 3099,
+      "sha256": "06a74c269942c129540983656136c95860453024c1605f0d3636fcde885ea0fb"
+    },
+    {
+      "path": "ui/src/VisionTools.tsx",
+      "bytes": 7831,
+      "sha256": "e5e70833b6b8a2933d34bd64a017f4a9324a31381967aa537812f97b713f4780"
+    },
+    {
+      "path": "ui/src-tauri/src/main.rs",
+      "bytes": 4700,
+      "sha256": "9d908a97fa6a319d871416b41dfda99fd4ea785d19f1af53b0b1ccade8155bde"
+    }
+  ],
+  "github_actions": "separate remote workflow; local evidence does not claim remote CI success"
+}

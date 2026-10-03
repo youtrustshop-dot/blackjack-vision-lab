@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "inspected_at": "2026-10-03",
+  "status": "source_inspection_and_selected_experiments",
+  "comparison_executed": true,
+  "note": "Scope and execution status are per engine. mhluska and BJSS have optional development runners with executed artifacts; CardSharp and MGP are source inspection only. No external engine is a production dependency.",
+  "references": [
+    {
+      "repository": "Neurobaby/MGPs-BJ-CA",
+      "revision": "333b79f4fc093ba097f9c55ef889e04fc6b1d1ea",
+      "source_url": "https://github.com/Neurobaby/MGPs-BJ-CA/blob/333b79f4fc093ba097f9c55ef889e04fc6b1d1ea/README.md",
+      "license_manifest": "NOASSERTION",
+      "license_inspected": "BSD-3-Clause-style permissive license",
+      "license_url": "https://github.com/Neurobaby/MGPs-BJ-CA/blob/333b79f4fc093ba097f9c55ef889e04fc6b1d1ea/LICENSE.md",
+      "execution_status": "not_executed",
+      "inspection_artifact": "results/mgp-inspection.json",
+      "documented_capabilities": ["Author claims exact composition-dependent analysis including splits and insurance", "README points to executable and help PDF"],
+      "integration_limits": ["Pinned project is Windows Forms WinExe targeting .NET Framework 3.5, startup BJCAMainForm; no command-line handler found by source search", "All 13 help pages inspected: no hand-action EV table usable as numeric golden", "Manual distinguishes TD, two-card and composition-dependent continuation, restricted split attention and approximate BBO/single-split modes", "GUI/manual output import remains possible, not executed here; GitHub NOASSERTION is incomplete classification, not absence of license"]
+    },
+    {
+      "repository": "mhluska/blackjack-simulator",
+      "revision": "baf76d24ae1b7b734c5fbc960080380463ac7571",
+      "source_url": "https://github.com/mhluska/blackjack-simulator/blob/baf76d24ae1b7b734c5fbc960080380463ac7571/README.md",
+      "license_manifest": "MIT",
+      "license_url": "https://github.com/mhluska/blackjack-simulator/blob/baf76d24ae1b7b734c5fbc960080380463ac7571/LICENSE",
+      "execution_status": "executed: CLI smoke and public Game.step always-stand sample",
+      "comparison_artifact": "results/mhluska-stand.json",
+      "build_artifact": "results/mhluska-build.json",
+      "documented_capabilities": ["JavaScript library and simulate CLI", "Configurable rules, chart/deviation and betting policies", "Wager, earnings and bankroll simulation statistics"],
+      "integration_limits": ["No exact arbitrary-composition action-EV interface documented in inspected README", "Executed comparison covers fixed wager, no insurance, fresh six-deck S17 shoes and always stand only", "12 independent process batches of 10000 rounds per engine; broad Student-t interval, no exactness claim", "No upstream reproducible RNG seed; independent Math.random streams assumed"]
+    },
+    {
+      "repository": "mmichie/cardsharp",
+      "revision": "077182caf8851e3c44f93864e71e27978fc27665",
+      "source_url": "https://github.com/mmichie/cardsharp/blob/077182caf8851e3c44f93864e71e27978fc27665/README.md",
+      "license_manifest": "MIT",
+      "license_url": "https://github.com/mmichie/cardsharp/blob/077182caf8851e3c44f93864e71e27978fc27665/LICENSE",
+      "execution_status": "not_executed",
+      "inspection_artifact": "results/cardsharp-inspection.json",
+      "documented_capabilities": ["Python simulation CLI and event/state game APIs", "Basic, counting and betting strategies"],
+      "integration_limits": ["No exact finite-composition action-EV claim or direct interface established by inspected README", "Source inspected: frozen dataclasses are shallow with nested lists, and transition methods publish EventBus side effects", "Priority listeners/unsubscribe, recorder context and predicate/timeout async waits are concrete architectural patterns", "Sampling or trace comparison requires additional rule and policy mapping"]
+    },
+    {
+      "repository": "AttackingOrDefending/Blackjack-Strategy-Simulator",
+      "revision": "c7763771e6e2f90ae5a998dc70b7647103f6708d",
+      "source_url": "https://github.com/AttackingOrDefending/Blackjack-Strategy-Simulator/blob/c7763771e6e2f90ae5a998dc70b7647103f6708d/README.md",
+      "license_manifest": "AGPL-3.0",
+      "license_readme": "AGPL v3 or later",
+      "license_url": "https://github.com/AttackingOrDefending/Blackjack-Strategy-Simulator/blob/c7763771e6e2f90ae5a998dc70b7647103f6708d/LICENSE",
+      "execution_status": "executed: isolated unmodified best_move.py CLI nonsplit corpus",
+      "comparison_artifact": "results/bjss-expanded-corpus.json",
+      "documented_capabilities": ["best_move.py hand/upcard/custom-shoe CLI", "Effort-controlled strategy CSV generator", "Independent EV simulation CLI"],
+      "integration_limits": ["Upstream documents approximate split evaluation using first few cards of first hand", "Upstream generator does not weight hand likelihood during play", "Executed scope is fresh six-deck nonsplit, negative American peek, any-two double and late surrender", "Pinned CLI option is --splits although README examples say --split", "No upstream code copied into production runtime; general reference exactness remains false"]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "comparison_executed": true,
+  "model": "infinite-shoe-dp",
+  "results": [
+    {
+      "status": "passed",
+      "passed": true,
+      "tolerance": 6e-07,
+      "differences": {
+        "stand": -3.3399498511332837e-07,
+        "hit": -3.4628108691592274e-07,
+        "double": 3.074378260858879e-07
+      },
+      "compared_actions": [
+        "stand",
+        "hit",
+        "double"
+      ],
+      "id": "wizard-infinite-hard16-v10",
+      "best_action": "hit",
+      "expected_best_action": "hit",
+      "best_action_passed": true,
+      "source_url": "https://wizardofodds.com/games/blackjack/expected-return-infinite-deck/",
+      "finite_shoe_validation": false
+    },
+    {
+      "status": "passed",
+      "passed": true,
+      "tolerance": 6e-07,
+      "differences": {
+        "stand": -3.5667343342704605e-07,
+        "hit": -3.075804153040984e-07
+      },
+      "compared_actions": [
+        "stand",
+        "hit"
+      ],
+      "id": "wizard-infinite-soft18-v9-hit-stand",
+      "best_action": "hit",
+      "expected_best_action": "hit",
+      "best_action_passed": true,
+      "source_url": "https://wizardofodds.com/games/blackjack/expected-return-infinite-deck/",
+      "finite_shoe_validation": false
+    }
+  ],
+  "note": "Published values rounded to six decimals; this is not finite-shoe or split-order validation."
+}

@@ -1,0 +1,4841 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "dataset_manifest_sha256": "ff3f48ddaa5adfec645a8986411b5fe2747080d6532553b6acf89556a9b86fee",
+  "benchmark_runner_sha256": "f4b95309f925fd9a9abd7acbbcb2a6238de69f893ef95bd758fff137d4952c47",
+  "seed": 29,
+  "temporal_holdout": true,
+  "deck_summary": {
+    "samples": 48,
+    "accuracy": 0.4791666666666667,
+    "brier_score": 0.6450053814074984,
+    "ece": 0.11318707237742545,
+    "mean_posterior_max": 0.4569470465763484,
+    "mean_entropy_bits": 1.6367868651670194,
+    "scope": "synthetic shuffled-shoe assumptions, finite deck candidate set"
+  },
+  "deck_by_checkpoint": {
+    "8": {
+      "samples": 10,
+      "accuracy": 0.2,
+      "brier_score": 0.7965423042192359,
+      "ece": 0.049635647047572756,
+      "mean_posterior_max": 0.24963564704757277,
+      "mean_entropy_bits": 2.306593071453765,
+      "scope": "synthetic shuffled-shoe assumptions, finite deck candidate set"
+    },
+    "16": {
+      "samples": 10,
+      "accuracy": 0.5,
+      "brier_score": 0.7332051858787184,
+      "ece": 0.2316924472793639,
+      "mean_posterior_max": 0.35953033231585513,
+      "mean_entropy_bits": 2.037454742091392,
+      "scope": "synthetic shuffled-shoe assumptions, finite deck candidate set"
+    },
+    "32": {
+      "samples": 10,
+      "accuracy": 0.4,
+      "brier_score": 0.6868647190315632,
+      "ece": 0.3289997870522355,
+      "mean_posterior_max": 0.5291535038865299,
+      "mean_entropy_bits": 1.4108700976674446,
+      "scope": "synthetic shuffled-shoe assumptions, finite deck candidate set"
+    },
+    "52": {
+      "samples": 10,
+      "accuracy": 0.7,
+      "brier_score": 0.503735351309113,
+      "ece": 0.2543140074934914,
+      "mean_posterior_max": 0.6067860525950842,
+      "mean_entropy_bits": 1.178609537519914,
+      "scope": "synthetic shuffled-shoe assumptions, finite deck candidate set"
+    },
+    "80": {
+      "samples": 8,
+      "accuracy": 0.625,
+      "brier_score": 0.4695978378967027,
+      "ece": 0.06469964034821198,
+      "mean_posterior_max": 0.560300359651788,
+      "mean_entropy_bits": 1.1538118800864725,
+      "scope": "synthetic shuffled-shoe assumptions, finite deck candidate set"
+    }
+  },
+  "deck_rows": [
+    {
+      "session_id": "shoe-session-0040",
+      "observed_cards": 8,
+      "true_decks": 1,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.23452085382745344,
+        "2": 0.2046407658132411,
+        "4": 0.19067425628088358,
+        "6": 0.1861874189067508,
+        "8": 0.1839767051716712
+      },
+      "confidence": 0.23452085382745344,
+      "entropy_bits": 2.315805846863492,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0040",
+      "observed_cards": 16,
+      "true_decks": 1,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.44313006473226907,
+        "2": 0.19845861142611632,
+        "4": 0.13291064883657322,
+        "6": 0.11645574284740204,
+        "8": 0.10904493215763926
+      },
+      "confidence": 0.44313006473226907,
+      "entropy_bits": 2.0801897110980256,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0040",
+      "observed_cards": 32,
+      "true_decks": 1,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.9939537806749024,
+        "2": 0.005010967427427411,
+        "4": 0.0005542385405888461,
+        "6": 0.00028012978497249933,
+        "8": 0.0002008835721088685
+      },
+      "confidence": 0.9939537806749024,
+      "entropy_bits": 0.05875212013989199,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0040",
+      "observed_cards": 52,
+      "true_decks": 1,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.9999999999714133,
+        "2": 2.848722727490903e-11,
+        "4": 7.850000071278488e-14,
+        "6": 1.44759403817133e-14,
+        "8": 6.466368221530856e-15
+      },
+      "confidence": 0.9999999999714133,
+      "entropy_bits": 1.0435626566050273e-09,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0041",
+      "observed_cards": 8,
+      "true_decks": 2,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.23452085382745372,
+        "2": 0.20464076581324134,
+        "4": 0.1906742562808838,
+        "6": 0.1861874189067504,
+        "8": 0.18397670517167078
+      },
+      "confidence": 0.23452085382745372,
+      "entropy_bits": 2.315805846863492,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0041",
+      "observed_cards": 16,
+      "true_decks": 2,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.20382050284726652,
+        "2": 0.22820576391990424,
+        "4": 0.1986825802757967,
+        "6": 0.18747596889713675,
+        "8": 0.18181518405989575
+      },
+      "confidence": 0.22820576391990424,
+      "entropy_bits": 2.317317722517374,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0041",
+      "observed_cards": 32,
+      "true_decks": 2,
+      "prediction": 6,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.15958122009100098,
+        "4": 0.2782733135877855,
+        "6": 0.2826736209311329,
+        "8": 0.2794718453900805
+      },
+      "confidence": 0.2826736209311329,
+      "entropy_bits": 1.9653123867374853,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0041",
+      "observed_cards": 52,
+      "true_decks": 2,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.7177382462346269,
+        "4": 0.1538464994010309,
+        "6": 0.07581239665743092,
+        "8": 0.05260285770691139
+      },
+      "confidence": 0.7177382462346269,
+      "entropy_bits": 1.264493632923792,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0041",
+      "observed_cards": 80,
+      "true_decks": 2,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.9999704985755978,
+        "4": 2.7082655264057298e-05,
+        "6": 1.8758759766244314e-06,
+        "8": 5.428931614667555e-07
+      },
+      "confidence": 0.9999704985755978,
+      "entropy_bits": 0.0005004521380760742,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0042",
+      "observed_cards": 8,
+      "true_decks": 4,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.27570834415094103,
+        "2": 0.2062119390627616,
+        "4": 0.17932898542180092,
+        "6": 0.17130239849599063,
+        "8": 0.1674483328685058
+      },
+      "confidence": 0.27570834415094103,
+      "entropy_bits": 2.294553499247042,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0042",
+      "observed_cards": 16,
+      "true_decks": 4,
+      "prediction": 4,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.2535414819405293,
+        "4": 0.2547006851671511,
+        "6": 0.2479640583481555,
+        "8": 0.2437937745441642
+      },
+      "confidence": 0.2547006851671511,
+      "entropy_bits": 1.9997765586810994,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0042",
+      "observed_cards": 32,
+      "true_decks": 4,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.60284061806813,
+        "4": 0.18296236111244193,
+        "6": 0.11875744341084533,
+        "8": 0.0954395774085827
+      },
+      "confidence": 0.60284061806813,
+      "entropy_bits": 1.5770125618544204,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0042",
+      "observed_cards": 52,
+      "true_decks": 4,
+      "prediction": 4,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.5193005226330296,
+        "6": 0.2803463454688172,
+        "8": 0.20035313189815318
+      },
+      "confidence": 0.5193005226330296,
+      "entropy_bits": 1.4699772140555192,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0042",
+      "observed_cards": 80,
+      "true_decks": 4,
+      "prediction": 6,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.35388752444072075,
+        "6": 0.36045418130346724,
+        "8": 0.285658294255812
+      },
+      "confidence": 0.36045418130346724,
+      "entropy_bits": 1.57734470204807,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0043",
+      "observed_cards": 8,
+      "true_decks": 6,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.27570834415094103,
+        "2": 0.2062119390627616,
+        "4": 0.17932898542180092,
+        "6": 0.17130239849599063,
+        "8": 0.1674483328685058
+      },
+      "confidence": 0.27570834415094103,
+      "entropy_bits": 2.294553499247042,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0043",
+      "observed_cards": 16,
+      "true_decks": 6,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.3096876461102648,
+        "4": 0.2488828417295087,
+        "6": 0.22625848526524864,
+        "8": 0.2151710268949779
+      },
+      "confidence": 0.3096876461102648,
+      "entropy_bits": 1.9850938609232378,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0043",
+      "observed_cards": 32,
+      "true_decks": 6,
+      "prediction": 4,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.3525967597649226,
+        "6": 0.33303273947612283,
+        "8": 0.31437050075895456
+      },
+      "confidence": 0.3525967597649226,
+      "entropy_bits": 1.5833809533782746,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0043",
+      "observed_cards": 52,
+      "true_decks": 6,
+      "prediction": 6,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.30856367863910683,
+        "6": 0.3476763363868855,
+        "8": 0.3437599849740077
+      },
+      "confidence": 0.3476763363868855,
+      "entropy_bits": 1.5829288289880257,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0043",
+      "observed_cards": 80,
+      "true_decks": 6,
+      "prediction": 6,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.3239691922303142,
+        "6": 0.3647133387865927,
+        "8": 0.3113174689830932
+      },
+      "confidence": 0.3647133387865927,
+      "entropy_bits": 1.5816310909917664,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0044",
+      "observed_cards": 8,
+      "true_decks": 8,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.23452085382745344,
+        "2": 0.2046407658132411,
+        "4": 0.19067425628088222,
+        "6": 0.18618741890675145,
+        "8": 0.18397670517167186
+      },
+      "confidence": 0.23452085382745344,
+      "entropy_bits": 2.315805846863492,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0044",
+      "observed_cards": 16,
+      "true_decks": 8,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.573213125932915,
+        "2": 0.17114475722848468,
+        "4": 0.09824413649673129,
+        "6": 0.08216831585109217,
+        "8": 0.07522966449077689
+      },
+      "confidence": 0.573213125932915,
+      "entropy_bits": 1.8019729692636073,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0044",
+      "observed_cards": 32,
+      "true_decks": 8,
+      "prediction": 8,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.31397418392026877,
+        "6": 0.3418761702469942,
+        "8": 0.344149645832737
+      },
+      "confidence": 0.344149645832737,
+      "entropy_bits": 1.583728212754938,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0044",
+      "observed_cards": 52,
+      "true_decks": 8,
+      "prediction": 4,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.3663839764558739,
+        "6": 0.33343619993720836,
+        "8": 0.30017982360691775
+      },
+      "confidence": 0.3663839764558739,
+      "entropy_bits": 1.580211416801408,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0044",
+      "observed_cards": 80,
+      "true_decks": 8,
+      "prediction": 4,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.4857408571785219,
+        "6": 0.3029916581427142,
+        "8": 0.2112674846787639
+      },
+      "confidence": 0.4857408571785219,
+      "entropy_bits": 1.5018077064811324,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0045",
+      "observed_cards": 8,
+      "true_decks": 1,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.27570834415094064,
+        "2": 0.20621193906276208,
+        "4": 0.17932898542180067,
+        "6": 0.17130239849599102,
+        "8": 0.16744833286850558
+      },
+      "confidence": 0.27570834415094064,
+      "entropy_bits": 2.2945534992470424,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0045",
+      "observed_cards": 16,
+      "true_decks": 1,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.5732131259329154,
+        "2": 0.1711447572284836,
+        "4": 0.09824413649673136,
+        "6": 0.08216831585109223,
+        "8": 0.07522966449077748
+      },
+      "confidence": 0.5732131259329154,
+      "entropy_bits": 1.8019729692636073,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0045",
+      "observed_cards": 32,
+      "true_decks": 1,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.9976809612869417,
+        "2": 0.0020119031275593765,
+        "4": 0.0001711744165133778,
+        "6": 8.033720871427245e-05,
+        "8": 5.562396027134669e-05
+      },
+      "confidence": 0.9976809612869417,
+      "entropy_bits": 0.025383683827931935,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0045",
+      "observed_cards": 52,
+      "true_decks": 1,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.9999999999998888,
+        "2": 1.1112731706794701e-13,
+        "4": 5.655444508519558e-17,
+        "6": 6.41753673944105e-18,
+        "8": 2.274926557631365e-18
+      },
+      "confidence": 0.9999999999998888,
+      "entropy_bits": 4.9461693012242e-12,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0046",
+      "observed_cards": 8,
+      "true_decks": 2,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.27570834415094103,
+        "2": 0.2062119390627616,
+        "4": 0.17932898542180092,
+        "6": 0.17130239849599063,
+        "8": 0.1674483328685058
+      },
+      "confidence": 0.27570834415094103,
+      "entropy_bits": 2.294553499247042,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0046",
+      "observed_cards": 16,
+      "true_decks": 2,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.44313006473226907,
+        "2": 0.19845861142611632,
+        "4": 0.13291064883657322,
+        "6": 0.11645574284740204,
+        "8": 0.10904493215763926
+      },
+      "confidence": 0.44313006473226907,
+      "entropy_bits": 2.0801897110980256,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0046",
+      "observed_cards": 32,
+      "true_decks": 2,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.3123874366119685,
+        "4": 0.26362366036831225,
+        "6": 0.22230088695271544,
+        "8": 0.2016880160670039
+      },
+      "confidence": 0.3123874366119685,
+      "entropy_bits": 1.9795596841972727,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0046",
+      "observed_cards": 52,
+      "true_decks": 2,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.48945339243730873,
+        "4": 0.24133102447046534,
+        "6": 0.15137072911293556,
+        "8": 0.11784485397929038
+      },
+      "confidence": 0.48945339243730873,
+      "entropy_bits": 1.775322599168614,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0046",
+      "observed_cards": 80,
+      "true_decks": 2,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.9946178543955696,
+        "4": 0.004363940742883587,
+        "6": 0.0007163883067615803,
+        "8": 0.0003018165547853215
+      },
+      "confidence": 0.9946178543955696,
+      "entropy_bits": 0.052971366241005985,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0047",
+      "observed_cards": 8,
+      "true_decks": 4,
+      "prediction": 8,
+      "posterior": {
+        "1": 0.15019313481017135,
+        "2": 0.19658574680564397,
+        "4": 0.213697147478896,
+        "6": 0.21860514617059196,
+        "8": 0.22091882473469682
+      },
+      "confidence": 0.22091882473469682,
+      "entropy_bits": 2.3086874832320214,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0047",
+      "observed_cards": 16,
+      "true_decks": 4,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.2739261150632618,
+        "4": 0.25271496529240245,
+        "6": 0.24006647469131398,
+        "8": 0.23329244495302187
+      },
+      "confidence": 0.2739261150632618,
+      "entropy_bits": 1.9972647840033886,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0047",
+      "observed_cards": 32,
+      "true_decks": 4,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.5986208783079133,
+        "4": 0.18504614380243375,
+        "6": 0.11997271918758098,
+        "8": 0.09636025870207186
+      },
+      "confidence": 0.5986208783079133,
+      "entropy_bits": 1.5858399215059615,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0047",
+      "observed_cards": 52,
+      "true_decks": 4,
+      "prediction": 4,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.40214633354485496,
+        "6": 0.3237825921900943,
+        "8": 0.2740710742650507
+      },
+      "confidence": 0.40214633354485496,
+      "entropy_bits": 1.5670608039535403,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0047",
+      "observed_cards": 80,
+      "true_decks": 4,
+      "prediction": 4,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.40219943997919494,
+        "6": 0.3379983908437381,
+        "8": 0.2598021691770669
+      },
+      "confidence": 0.40219943997919494,
+      "entropy_bits": 1.5626236683640817,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0048",
+      "observed_cards": 8,
+      "true_decks": 6,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.23452085382745338,
+        "2": 0.20464076581324103,
+        "4": 0.19067425628088489,
+        "6": 0.1861874189067501,
+        "8": 0.18397670517167053
+      },
+      "confidence": 0.23452085382745338,
+      "entropy_bits": 2.315805846863492,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0048",
+      "observed_cards": 16,
+      "true_decks": 6,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.2330481551699135,
+        "2": 0.2130930275535804,
+        "4": 0.19113151660781108,
+        "6": 0.18332743397161075,
+        "8": 0.17939986669708416
+      },
+      "confidence": 0.2330481551699135,
+      "entropy_bits": 2.3146786758828175,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0048",
+      "observed_cards": 32,
+      "true_decks": 6,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.29610105381385915,
+        "4": 0.2570798510758845,
+        "6": 0.2303614452916692,
+        "8": 0.21645764981858714
+      },
+      "confidence": 0.29610105381385915,
+      "entropy_bits": 1.9895247282084685,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0048",
+      "observed_cards": 52,
+      "true_decks": 6,
+      "prediction": 4,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.4196614178440824,
+        "6": 0.31569172964884074,
+        "8": 0.2646468525070768
+      },
+      "confidence": 0.4196614178440824,
+      "entropy_bits": 1.5583916079578437,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0048",
+      "observed_cards": 80,
+      "true_decks": 6,
+      "prediction": 8,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.2008706317058418,
+        "6": 0.39260029528333407,
+        "8": 0.40652907301082414
+      },
+      "confidence": 0.40652907301082414,
+      "entropy_bits": 1.5226201769080778,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0049",
+      "observed_cards": 8,
+      "true_decks": 8,
+      "prediction": 1,
+      "posterior": {
+        "1": 0.23452085382745308,
+        "2": 0.20464076581324078,
+        "4": 0.1906742562808833,
+        "6": 0.18618741890675117,
+        "8": 0.18397670517167158
+      },
+      "confidence": 0.23452085382745308,
+      "entropy_bits": 2.315805846863492,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0049",
+      "observed_cards": 16,
+      "true_decks": 8,
+      "prediction": 8,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.218852925205056,
+        "4": 0.25649578589501854,
+        "6": 0.26160271250223793,
+        "8": 0.2630485763976874
+      },
+      "confidence": 0.2630485763976874,
+      "entropy_bits": 1.9960904581827363,
+      "correct": true
+    },
+    {
+      "session_id": "shoe-session-0049",
+      "observed_cards": 32,
+      "true_decks": 8,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.5105302835727918,
+        "4": 0.2098228963375378,
+        "6": 0.15138280979702895,
+        "8": 0.12826401029264137
+      },
+      "confidence": 0.5105302835727918,
+      "entropy_bits": 1.7602067240698016,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0049",
+      "observed_cards": 52,
+      "true_decks": 8,
+      "prediction": 2,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.8055003004428781,
+        "4": 0.10814356001776929,
+        "6": 0.05121807734515588,
+        "8": 0.03513806219419668
+      },
+      "confidence": 0.8055003004428781,
+      "entropy_bits": 0.9877092703018876,
+      "correct": false
+    },
+    {
+      "session_id": "shoe-session-0049",
+      "observed_cards": 80,
+      "true_decks": 8,
+      "prediction": 8,
+      "posterior": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.13452131774854276,
+        "6": 0.3973010482669215,
+        "8": 0.4681776339845358
+      },
+      "confidence": 0.4681776339845358,
+      "entropy_bits": 1.4309958775195701,
+      "correct": true
+    }
+  ],
+  "tray_calibration": {
+    "schema_version": 1,
+    "slope_pixels_per_card": 0.9012774209157323,
+    "intercept_pixels": 3.9530146997280995,
+    "interval_radius_cards": 0.6408434893453432,
+    "train_samples": 186,
+    "calibration_samples": 62
+  },
+  "tray_summary": {
+    "samples": 62,
+    "mae_cards": 0.31501430213515974,
+    "p95_error_cards": 0.6394407356471645,
+    "interval_coverage": 0.967741935483871,
+    "latency_ms_p95": 10.34241999477672
+  },
+  "tray_distribution_shift": {
+    "samples": 62,
+    "mae_cards": 13.87127053342959,
+    "p95_error_cards": 46.08140750420253,
+    "interval_coverage": 0.0,
+    "latency_ms_p95": 10.389825004313025
+  },
+  "tray_rows": [
+    {
+      "image": "test/shoe-session-0040-012-baseline.png",
+      "session_id": "shoe-session-0040",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 12.138995239037973,
+      "cards_interval": [
+        11.49815174969263,
+        12.779838728383316
+      ],
+      "estimated_decks": 0.23344221613534563,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.13899523903797295,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          476,
+          141,
+          14
+        ],
+        "height": 14,
+        "width": 141,
+        "normalized_height": 14.893617021276595,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.545500004198402
+    },
+    {
+      "image": "test/shoe-session-0040-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0040",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.319352987435964,
+      "cards_interval": [
+        12.678509498090621,
+        13.960196476781308
+      ],
+      "estimated_decks": 0.2561414036045378,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.3193529874359644,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          475,
+          141,
+          15
+        ],
+        "height": 15,
+        "width": 141,
+        "normalized_height": 15.957446808510639,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.895599999756087
+    },
+    {
+      "image": "test/shoe-session-0040-024-baseline.png",
+      "session_id": "shoe-session-0040",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 23.942572723017886,
+      "cards_interval": [
+        23.301729233672543,
+        24.58341621236323
+      ],
+      "estimated_decks": 0.46043409082726705,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.05742727698211425,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          466,
+          141,
+          24
+        ],
+        "height": 24,
+        "width": 141,
+        "normalized_height": 25.53191489361702,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.806900001014583
+    },
+    {
+      "image": "test/shoe-session-0040-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0040",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 27.48364596821186,
+      "cards_interval": [
+        26.842802478866517,
+        28.124489457557203
+      ],
+      "estimated_decks": 0.5285316532348434,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 3.48364596821186,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          463,
+          141,
+          27
+        ],
+        "height": 27,
+        "width": 141,
+        "normalized_height": 28.72340425531915,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 265.1031999994302
+    },
+    {
+      "image": "test/shoe-session-0040-052-baseline.png",
+      "session_id": "shoe-session-0040",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 52.27115868456968,
+      "cards_interval": [
+        51.630315195224334,
+        52.91200217391502
+      ],
+      "estimated_decks": 1.0052145900878784,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2711586845696772,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          442,
+          141,
+          48
+        ],
+        "height": 48,
+        "width": 141,
+        "normalized_height": 51.06382978723404,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.795800000370946
+    },
+    {
+      "image": "test/shoe-session-0040-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0040",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 59.35330517495763,
+      "cards_interval": [
+        58.71246168561229,
+        59.994148664302976
+      ],
+      "estimated_decks": 1.1414097149030313,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 7.353305174957633,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          436,
+          141,
+          54
+        ],
+        "height": 54,
+        "width": 141,
+        "normalized_height": 57.4468085106383,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.179000000585802
+    },
+    {
+      "image": "test/shoe-session-0041-012-baseline.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 11.573070291175922,
+      "cards_interval": [
+        10.932226801830579,
+        12.213913780521265
+      ],
+      "estimated_decks": 0.22255904406107543,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.426929708824078,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          476,
+          146,
+          14
+        ],
+        "height": 14,
+        "width": 146,
+        "normalized_height": 14.383561643835616,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.947500002454035
+    },
+    {
+      "image": "test/shoe-session-0041-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.852939366848757,
+      "cards_interval": [
+        13.212095877503414,
+        14.4937828561941
+      ],
+      "estimated_decks": 0.26640268013170687,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.8529393668487568,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          474,
+          146,
+          16
+        ],
+        "height": 16,
+        "width": 146,
+        "normalized_height": 16.438356164383563,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.79690000147093
+    },
+    {
+      "image": "test/shoe-session-0041-024-baseline.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 24.112350207376497,
+      "cards_interval": [
+        23.471506718031154,
+        24.75319369672184
+      ],
+      "estimated_decks": 0.463699042449548,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.11235020737649748,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          465,
+          146,
+          25
+        ],
+        "height": 25,
+        "width": 146,
+        "normalized_height": 25.684931506849313,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.37260000500828
+    },
+    {
+      "image": "test/shoe-session-0041-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 27.53215382088575,
+      "cards_interval": [
+        26.891310331540407,
+        28.172997310231093
+      ],
+      "estimated_decks": 0.5294644965554952,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 3.5321538208857497,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          462,
+          146,
+          28
+        ],
+        "height": 28,
+        "width": 146,
+        "normalized_height": 28.767123287671232,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.33200000145007
+    },
+    {
+      "image": "test/shoe-session-0041-052-baseline.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 51.47077911545049,
+      "cards_interval": [
+        50.82993562610515,
+        52.11162260479583
+      ],
+      "estimated_decks": 0.9898226752971249,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.5292208845495097,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          441,
+          146,
+          49
+        ],
+        "height": 49,
+        "width": 146,
+        "normalized_height": 50.342465753424655,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.74590000603348
+    },
+    {
+      "image": "test/shoe-session-0041-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 59.450320880305405,
+      "cards_interval": [
+        58.80947739096006,
+        60.09116436965075
+      ],
+      "estimated_decks": 1.1432754015443347,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 7.450320880305405,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          434,
+          146,
+          56
+        ],
+        "height": 56,
+        "width": 146,
+        "normalized_height": 57.534246575342465,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.317899999383371
+    },
+    {
+      "image": "test/shoe-session-0041-078-baseline.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "baseline",
+      "true_cards": 78,
+      "estimated_cards": 77.68927348568808,
+      "cards_interval": [
+        77.04842999634273,
+        78.33011697503342
+      ],
+      "estimated_decks": 1.494024490109386,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.31072651431192355,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          418,
+          146,
+          72
+        ],
+        "height": 72,
+        "width": 146,
+        "normalized_height": 73.97260273972603,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.09929999418091
+    },
+    {
+      "image": "test/shoe-session-0041-078-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 78,
+      "estimated_cards": 89.08861886405222,
+      "cards_interval": [
+        88.44777537470688,
+        89.72946235339757
+      ],
+      "estimated_decks": 1.7132426704625427,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 11.088618864052222,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          408,
+          146,
+          82
+        ],
+        "height": 82,
+        "width": 146,
+        "normalized_height": 84.24657534246575,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.631099997728597
+    },
+    {
+      "image": "test/shoe-session-0041-104-baseline.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "baseline",
+      "true_cards": 104,
+      "estimated_cards": 103.90776785592564,
+      "cards_interval": [
+        103.2669243665803,
+        104.54861134527098
+      ],
+      "estimated_decks": 1.9982263049216469,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.09223214407435876,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          395,
+          146,
+          95
+        ],
+        "height": 95,
+        "width": 146,
+        "normalized_height": 97.6027397260274,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.671899999375455
+    },
+    {
+      "image": "test/shoe-session-0041-104-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0041",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 104,
+      "estimated_cards": 118.72691684779906,
+      "cards_interval": [
+        118.08607335845372,
+        119.3677603371444
+      ],
+      "estimated_decks": 2.2832099393807512,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 14.72691684779906,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          382,
+          146,
+          108
+        ],
+        "height": 108,
+        "width": 146,
+        "normalized_height": 110.95890410958904,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.266000000934582
+    },
+    {
+      "image": "test/shoe-session-0042-012-baseline.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 12.257031013877771,
+      "cards_interval": [
+        11.616187524532428,
+        12.897874503223115
+      ],
+      "estimated_decks": 0.23571213488226483,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2570310138777714,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          475,
+          150,
+          15
+        ],
+        "height": 15,
+        "width": 150,
+        "normalized_height": 15.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.439799996267539
+    },
+    {
+      "image": "test/shoe-session-0042-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.366567297371883,
+      "cards_interval": [
+        12.72572380802654,
+        14.007410786717227
+      ],
+      "estimated_decks": 0.25704937110330545,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.3665672973718834,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          474,
+          150,
+          16
+        ],
+        "height": 16,
+        "width": 150,
+        "normalized_height": 16.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.608600004867185
+    },
+    {
+      "image": "test/shoe-session-0042-024-baseline.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 24.461930132313,
+      "cards_interval": [
+        23.821086642967657,
+        25.102773621658343
+      ],
+      "estimated_decks": 0.47042173331371157,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.4619301323130003,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          464,
+          150,
+          26
+        ],
+        "height": 26,
+        "width": 150,
+        "normalized_height": 26.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.758900003158487
+    },
+    {
+      "image": "test/shoe-session-0042-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 27.790538982795336,
+      "cards_interval": [
+        27.149695493449993,
+        28.43138247214068
+      ],
+      "estimated_decks": 0.5344334419768334,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 3.7905389827953364,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          461,
+          150,
+          29
+        ],
+        "height": 29,
+        "width": 150,
+        "normalized_height": 29.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.19609999639215
+    },
+    {
+      "image": "test/shoe-session-0042-052-baseline.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 52.2003372196658,
+      "cards_interval": [
+        51.559493730320455,
+        52.84118070901114
+      ],
+      "estimated_decks": 1.0038526388397269,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.20033721966579776,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          439,
+          150,
+          51
+        ],
+        "height": 51,
+        "width": 150,
+        "normalized_height": 51.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.826999994402286
+    },
+    {
+      "image": "test/shoe-session-0042-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 59.967091204124586,
+      "cards_interval": [
+        59.32624771477924,
+        60.60793469346993
+      ],
+      "estimated_decks": 1.1532132923870113,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 7.967091204124586,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          432,
+          150,
+          58
+        ],
+        "height": 58,
+        "width": 150,
+        "normalized_height": 58.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.618300002533942
+    },
+    {
+      "image": "test/shoe-session-0042-078-baseline.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "baseline",
+      "true_cards": 78,
+      "estimated_cards": 77.71967174003038,
+      "cards_interval": [
+        77.07882825068504,
+        78.36051522937572
+      ],
+      "estimated_decks": 1.494609071923661,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.28032825996962174,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          416,
+          150,
+          74
+        ],
+        "height": 74,
+        "width": 150,
+        "normalized_height": 74.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.738299999095034
+    },
+    {
+      "image": "test/shoe-session-0042-078-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 78,
+      "estimated_cards": 89.92457085846561,
+      "cards_interval": [
+        89.28372736912027,
+        90.56541434781096
+      ],
+      "estimated_decks": 1.729318670355108,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 11.924570858465614,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          405,
+          150,
+          85
+        ],
+        "height": 85,
+        "width": 150,
+        "normalized_height": 85.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.57179999386426
+    },
+    {
+      "image": "test/shoe-session-0042-104-baseline.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "baseline",
+      "true_cards": 104,
+      "estimated_cards": 104.34854254388907,
+      "cards_interval": [
+        103.70769905454372,
+        104.98938603323441
+      ],
+      "estimated_decks": 2.006702741228636,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.34854254388906725,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          392,
+          150,
+          98
+        ],
+        "height": 98,
+        "width": 150,
+        "normalized_height": 98.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.989399997517467
+    },
+    {
+      "image": "test/shoe-session-0042-104-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 104,
+      "estimated_cards": 119.88205051280663,
+      "cards_interval": [
+        119.24120702346129,
+        120.52289400215197
+      ],
+      "estimated_decks": 2.3054240483232045,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 15.882050512806629,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          378,
+          150,
+          112
+        ],
+        "height": 112,
+        "width": 150,
+        "normalized_height": 112.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.034499995526858
+    },
+    {
+      "image": "test/shoe-session-0042-156-baseline.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "baseline",
+      "true_cards": 156,
+      "estimated_cards": 155.38721158461823,
+      "cards_interval": [
+        154.74636809527289,
+        156.02805507396357
+      ],
+      "estimated_decks": 2.9882156073965045,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.6127884153817718,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          346,
+          150,
+          144
+        ],
+        "height": 144,
+        "width": 150,
+        "normalized_height": 144.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.168000000703614
+    },
+    {
+      "image": "test/shoe-session-0042-156-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 156,
+      "estimated_cards": 178.68747353799458,
+      "cards_interval": [
+        178.04663004864923,
+        179.32831702733992
+      ],
+      "estimated_decks": 3.4362975680383574,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 22.687473537994578,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          325,
+          150,
+          165
+        ],
+        "height": 165,
+        "width": 150,
+        "normalized_height": 165.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.966400004690513
+    },
+    {
+      "image": "test/shoe-session-0042-208-baseline.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "baseline",
+      "true_cards": 208,
+      "estimated_cards": 207.53541690884148,
+      "cards_interval": [
+        206.89457341949614,
+        208.17626039818683
+      ],
+      "estimated_decks": 3.991065709785413,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.4645830911585165,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          299,
+          150,
+          191
+        ],
+        "height": 191,
+        "width": 150,
+        "normalized_height": 191.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.528200000408106
+    },
+    {
+      "image": "test/shoe-session-0042-208-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0042",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 208,
+      "estimated_cards": 238.6024328466766,
+      "cards_interval": [
+        237.96158935733126,
+        239.24327633602195
+      ],
+      "estimated_decks": 4.58850832397455,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 30.602432846676606,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          271,
+          150,
+          219
+        ],
+        "height": 219,
+        "width": 150,
+        "normalized_height": 219.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.395000004791655
+    },
+    {
+      "image": "test/shoe-session-0043-012-baseline.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 11.824744150178766,
+      "cards_interval": [
+        11.183900660833423,
+        12.46558763952411
+      ],
+      "estimated_decks": 0.22739892596497627,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.17525584982123377,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          475,
+          154,
+          15
+        ],
+        "height": 15,
+        "width": 154,
+        "normalized_height": 14.61038961038961,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.634600002551451
+    },
+    {
+      "image": "test/shoe-session-0043-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.98617846867379,
+      "cards_interval": [
+        13.345334979328447,
+        14.627021958019133
+      ],
+      "estimated_decks": 0.26896497055141905,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.9861784686737902,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          473,
+          154,
+          17
+        ],
+        "height": 17,
+        "width": 154,
+        "normalized_height": 16.558441558441558,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.044799997354858
+    },
+    {
+      "image": "test/shoe-session-0043-024-baseline.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 23.712632901901394,
+      "cards_interval": [
+        23.07178941255605,
+        24.353476391246737
+      ],
+      "estimated_decks": 0.45601217119041143,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2873670980986063,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          464,
+          154,
+          26
+        ],
+        "height": 26,
+        "width": 154,
+        "normalized_height": 25.324675324675326,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.917499995732214
+    },
+    {
+      "image": "test/shoe-session-0043-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 28.03550153889144,
+      "cards_interval": [
+        27.3946580495461,
+        28.676345028236785
+      ],
+      "estimated_decks": 0.539144260363297,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 4.035501538891442,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          460,
+          154,
+          30
+        ],
+        "height": 30,
+        "width": 154,
+        "normalized_height": 29.22077922077922,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.203499997965991
+    },
+    {
+      "image": "test/shoe-session-0043-052-baseline.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 51.8112790423367,
+      "cards_interval": [
+        51.17043555299136,
+        52.45212253168204
+      ],
+      "estimated_decks": 0.9963707508141673,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.18872095766329977,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          438,
+          154,
+          52
+        ],
+        "height": 52,
+        "width": 154,
+        "normalized_height": 50.64935064935065,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.256599998276215
+    },
+    {
+      "image": "test/shoe-session-0043-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 60.45701631631679,
+      "cards_interval": [
+        59.816172826971446,
+        61.09785980566213
+      ],
+      "estimated_decks": 1.1626349291599383,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 8.457016316316789,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          430,
+          154,
+          60
+        ],
+        "height": 60,
+        "width": 154,
+        "normalized_height": 58.44155844155844,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.124299998802599
+    },
+    {
+      "image": "test/shoe-session-0043-078-baseline.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "baseline",
+      "true_cards": 78,
+      "estimated_cards": 77.74849086427697,
+      "cards_interval": [
+        77.10764737493163,
+        78.38933435362232
+      ],
+      "estimated_decks": 1.4951632858514803,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.25150913572302613,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          414,
+          154,
+          76
+        ],
+        "height": 76,
+        "width": 154,
+        "normalized_height": 74.02597402597402,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.567599998263177
+    },
+    {
+      "image": "test/shoe-session-0043-078-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 78,
+      "estimated_cards": 89.63637961599962,
+      "cards_interval": [
+        88.99553612665427,
+        90.27722310534496
+      ],
+      "estimated_decks": 1.7237765310769158,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 11.636379615999616,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          403,
+          154,
+          87
+        ],
+        "height": 87,
+        "width": 154,
+        "normalized_height": 84.74025974025975,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.037000000011176
+    },
+    {
+      "image": "test/shoe-session-0043-104-baseline.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "baseline",
+      "true_cards": 104,
+      "estimated_cards": 104.76641984546477,
+      "cards_interval": [
+        104.12557635611942,
+        105.40726333481011
+      ],
+      "estimated_decks": 2.014738843182015,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.7664198454647675,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          389,
+          154,
+          101
+        ],
+        "height": 101,
+        "width": 154,
+        "normalized_height": 98.37662337662337,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.026200001244433
+    },
+    {
+      "image": "test/shoe-session-0043-104-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 104,
+      "estimated_cards": 119.89646007492993,
+      "cards_interval": [
+        119.25561658558459,
+        120.53730356427528
+      ],
+      "estimated_decks": 2.3057011552871143,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 15.896460074929934,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          375,
+          154,
+          115
+        ],
+        "height": 115,
+        "width": 154,
+        "normalized_height": 112.01298701298701,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.125600001425482
+    },
+    {
+      "image": "test/shoe-session-0043-156-baseline.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "baseline",
+      "true_cards": 156,
+      "estimated_cards": 156.64084348934534,
+      "cards_interval": [
+        156.0,
+        157.2816869786907
+      ],
+      "estimated_decks": 3.0123239132566413,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.6408434893453432,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          341,
+          154,
+          149
+        ],
+        "height": 149,
+        "width": 154,
+        "normalized_height": 145.12987012987014,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.628400002839044
+    },
+    {
+      "image": "test/shoe-session-0043-156-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 156,
+      "estimated_cards": 179.33590383354306,
+      "cards_interval": [
+        178.6950603441977,
+        179.9767473228884
+      ],
+      "estimated_decks": 3.4487673814142896,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 23.335903833543057,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          320,
+          154,
+          170
+        ],
+        "height": 170,
+        "width": 154,
+        "normalized_height": 165.58441558441558,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.074599998712074
+    },
+    {
+      "image": "test/shoe-session-0043-208-baseline.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "baseline",
+      "true_cards": 208,
+      "estimated_cards": 208.51526713322588,
+      "cards_interval": [
+        207.87442364388053,
+        209.15611062257122
+      ],
+      "estimated_decks": 4.009908983331266,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.5152671332258763,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          293,
+          154,
+          197
+        ],
+        "height": 197,
+        "width": 154,
+        "normalized_height": 191.88311688311688,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.2134000005899
+    },
+    {
+      "image": "test/shoe-session-0043-208-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 208,
+      "estimated_cards": 239.85606475140375,
+      "cards_interval": [
+        239.2152212620584,
+        240.4969082407491
+      ],
+      "estimated_decks": 4.612616629834688,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 31.85606475140375,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          264,
+          154,
+          226
+        ],
+        "height": 226,
+        "width": 154,
+        "normalized_height": 220.12987012987014,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.190899996610824
+    },
+    {
+      "image": "test/shoe-session-0043-312-baseline.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "baseline",
+      "true_cards": 312,
+      "estimated_cards": 312.26411442098697,
+      "cards_interval": [
+        311.6232709316416,
+        312.9049579103323
+      ],
+      "estimated_decks": 6.0050791234805185,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2641144209869708,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          197,
+          154,
+          293
+        ],
+        "height": 293,
+        "width": 154,
+        "normalized_height": 285.38961038961037,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.430699996300973
+    },
+    {
+      "image": "test/shoe-session-0043-312-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0043",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 312,
+      "estimated_cards": 359.81566942787754,
+      "cards_interval": [
+        359.1748259385322,
+        360.4565129172229
+      ],
+      "estimated_decks": 6.91953210438226,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 47.81566942787754,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          153,
+          154,
+          337
+        ],
+        "height": 337,
+        "width": 154,
+        "normalized_height": 328.24675324675326,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.892699999909382
+    },
+    {
+      "image": "test/shoe-session-0044-012-baseline.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 12.36170424816967,
+      "cards_interval": [
+        11.720860758824326,
+        13.002547737515012
+      ],
+      "estimated_decks": 0.23772508169557055,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.3617042481696693,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          474,
+          159,
+          16
+        ],
+        "height": 16,
+        "width": 159,
+        "normalized_height": 15.09433962264151,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.480900003632996
+    },
+    {
+      "image": "test/shoe-session-0044-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.408436591088641,
+      "cards_interval": [
+        12.767593101743298,
+        14.049280080433984
+      ],
+      "estimated_decks": 0.2578545498286277,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.4084365910886412,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          473,
+          159,
+          17
+        ],
+        "height": 17,
+        "width": 159,
+        "normalized_height": 16.037735849056602,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.519599999999627
+    },
+    {
+      "image": "test/shoe-session-0044-024-baseline.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 23.875760020278378,
+      "cards_interval": [
+        23.234916530933035,
+        24.51660350962372
+      ],
+      "estimated_decks": 0.4591492311591996,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.12423997972162226,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          463,
+          159,
+          27
+        ],
+        "height": 27,
+        "width": 159,
+        "normalized_height": 25.471698113207548,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.589900004153606
+    },
+    {
+      "image": "test/shoe-session-0044-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 28.06268939195427,
+      "cards_interval": [
+        27.421845902608926,
+        28.703532881299612
+      ],
+      "estimated_decks": 0.5396671036914282,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 4.062689391954269,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          459,
+          159,
+          31
+        ],
+        "height": 31,
+        "width": 159,
+        "normalized_height": 29.245283018867923,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.368700004415587
+    },
+    {
+      "image": "test/shoe-session-0044-052-baseline.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 52.13753327909066,
+      "cards_interval": [
+        51.49668978974532,
+        52.778376768436004
+      ],
+      "estimated_decks": 1.0026448707517435,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.13753327909066115,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          436,
+          159,
+          54
+        ],
+        "height": 54,
+        "width": 159,
+        "normalized_height": 50.943396226415096,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.132999999565072
+    },
+    {
+      "image": "test/shoe-session-0044-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 59.46465967952348,
+      "cards_interval": [
+        58.823816190178135,
+        60.10550316886882
+      ],
+      "estimated_decks": 1.143551147683144,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 7.4646596795234785,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          429,
+          159,
+          61
+        ],
+        "height": 61,
+        "width": 159,
+        "normalized_height": 57.54716981132076,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.990299997094553
+    },
+    {
+      "image": "test/shoe-session-0044-078-baseline.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "baseline",
+      "true_cards": 78,
+      "estimated_cards": 78.305841852065,
+      "cards_interval": [
+        77.66499836271966,
+        78.94668534141034
+      ],
+      "estimated_decks": 1.505881574078173,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.3058418520650008,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          411,
+          159,
+          79
+        ],
+        "height": 79,
+        "width": 159,
+        "normalized_height": 74.52830188679245,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.858900000632275
+    },
+    {
+      "image": "test/shoe-session-0044-078-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 78,
+      "estimated_cards": 89.8198976241737,
+      "cards_interval": [
+        89.17905413482836,
+        90.46074111351905
+      ],
+      "estimated_decks": 1.7273057235418021,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 11.819897624173706,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          400,
+          159,
+          90
+        ],
+        "height": 90,
+        "width": 159,
+        "normalized_height": 84.90566037735849,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.911799995985348
+    },
+    {
+      "image": "test/shoe-session-0044-104-baseline.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "baseline",
+      "true_cards": 104,
+      "estimated_cards": 103.42741808212037,
+      "cards_interval": [
+        102.78657459277503,
+        104.06826157146571
+      ],
+      "estimated_decks": 1.9889888092715455,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.5725819178796314,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          387,
+          159,
+          103
+        ],
+        "height": 103,
+        "width": 159,
+        "normalized_height": 97.16981132075472,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.884700000635348
+    },
+    {
+      "image": "test/shoe-session-0044-104-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 104,
+      "estimated_cards": 119.12840322590496,
+      "cards_interval": [
+        118.48755973655962,
+        119.7692467152503
+      ],
+      "estimated_decks": 2.2909308312674033,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 15.128403225904961,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          372,
+          159,
+          118
+        ],
+        "height": 118,
+        "width": 159,
+        "normalized_height": 111.32075471698113,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.882600003038533
+    },
+    {
+      "image": "test/shoe-session-0044-156-baseline.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "baseline",
+      "true_cards": 156,
+      "estimated_cards": 155.76403522806905,
+      "cards_interval": [
+        155.1231917387237,
+        156.4048787174144
+      ],
+      "estimated_decks": 2.995462215924405,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2359647719309521,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          337,
+          159,
+          153
+        ],
+        "height": 153,
+        "width": 159,
+        "normalized_height": 144.33962264150944,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.983000003558118
+    },
+    {
+      "image": "test/shoe-session-0044-156-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 156,
+      "estimated_cards": 178.79214677228646,
+      "cards_interval": [
+        178.15130328294111,
+        179.4329902616318
+      ],
+      "estimated_decks": 3.4383105148516626,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 22.792146772286458,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          315,
+          159,
+          175
+        ],
+        "height": 175,
+        "width": 159,
+        "normalized_height": 165.0943396226415,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.012099999585189
+    },
+    {
+      "image": "test/shoe-session-0044-208-baseline.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "baseline",
+      "true_cards": 208,
+      "estimated_cards": 208.10065237401773,
+      "cards_interval": [
+        207.45980888467238,
+        208.74149586336307
+      ],
+      "estimated_decks": 4.001935622577264,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.1006523740177272,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          287,
+          159,
+          203
+        ],
+        "height": 203,
+        "width": 159,
+        "normalized_height": 191.50943396226415,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.351599994464777
+    },
+    {
+      "image": "test/shoe-session-0044-208-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 208,
+      "estimated_cards": 238.45589031866797,
+      "cards_interval": [
+        237.81504682932263,
+        239.0967338080133
+      ],
+      "estimated_decks": 4.585690198435922,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 30.45589031866797,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          258,
+          159,
+          232
+        ],
+        "height": 232,
+        "width": 159,
+        "normalized_height": 218.8679245283019,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.048499996424653
+    },
+    {
+      "image": "test/shoe-session-0044-312-baseline.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "baseline",
+      "true_cards": 312,
+      "estimated_cards": 311.7271543229961,
+      "cards_interval": [
+        311.08631083365077,
+        312.36799781234146
+      ],
+      "estimated_decks": 5.994752967749926,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.27284567700388607,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          188,
+          159,
+          302
+        ],
+        "height": 302,
+        "width": 159,
+        "normalized_height": 284.9056603773585,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.728900004120078
+    },
+    {
+      "image": "test/shoe-session-0044-312-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0044",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 312,
+      "estimated_cards": 358.8301097543499,
+      "cards_interval": [
+        358.18926626500456,
+        359.47095324369525
+      ],
+      "estimated_decks": 6.900579033737499,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 46.830109754349905,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          143,
+          159,
+          347
+        ],
+        "height": 347,
+        "width": 159,
+        "normalized_height": 327.35849056603774,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.296799995354377
+    },
+    {
+      "image": "test/shoe-session-0045-012-baseline.png",
+      "session_id": "shoe-session-0045",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 12.138995239037973,
+      "cards_interval": [
+        11.49815174969263,
+        12.779838728383316
+      ],
+      "estimated_decks": 0.23344221613534563,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.13899523903797295,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          476,
+          141,
+          14
+        ],
+        "height": 14,
+        "width": 141,
+        "normalized_height": 14.893617021276595,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.357299997645896
+    },
+    {
+      "image": "test/shoe-session-0045-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0045",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.319352987435964,
+      "cards_interval": [
+        12.678509498090621,
+        13.960196476781308
+      ],
+      "estimated_decks": 0.2561414036045378,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.3193529874359644,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          475,
+          141,
+          15
+        ],
+        "height": 15,
+        "width": 141,
+        "normalized_height": 15.957446808510639,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.781799999065697
+    },
+    {
+      "image": "test/shoe-session-0045-024-baseline.png",
+      "session_id": "shoe-session-0045",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 23.942572723017886,
+      "cards_interval": [
+        23.301729233672543,
+        24.58341621236323
+      ],
+      "estimated_decks": 0.46043409082726705,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.05742727698211425,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          466,
+          141,
+          24
+        ],
+        "height": 24,
+        "width": 141,
+        "normalized_height": 25.53191489361702,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.717199998500291
+    },
+    {
+      "image": "test/shoe-session-0045-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0045",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 27.48364596821186,
+      "cards_interval": [
+        26.842802478866517,
+        28.124489457557203
+      ],
+      "estimated_decks": 0.5285316532348434,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 3.48364596821186,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          463,
+          141,
+          27
+        ],
+        "height": 27,
+        "width": 141,
+        "normalized_height": 28.72340425531915,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.585599997080863
+    },
+    {
+      "image": "test/shoe-session-0045-052-baseline.png",
+      "session_id": "shoe-session-0045",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 52.27115868456968,
+      "cards_interval": [
+        51.630315195224334,
+        52.91200217391502
+      ],
+      "estimated_decks": 1.0052145900878784,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2711586845696772,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          442,
+          141,
+          48
+        ],
+        "height": 48,
+        "width": 141,
+        "normalized_height": 51.06382978723404,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.781000000657514
+    },
+    {
+      "image": "test/shoe-session-0045-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0045",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 59.35330517495763,
+      "cards_interval": [
+        58.71246168561229,
+        59.994148664302976
+      ],
+      "estimated_decks": 1.1414097149030313,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 7.353305174957633,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          129,
+          436,
+          141,
+          54
+        ],
+        "height": 54,
+        "width": 141,
+        "normalized_height": 57.4468085106383,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.949500003131106
+    },
+    {
+      "image": "test/shoe-session-0046-012-baseline.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 11.573070291175922,
+      "cards_interval": [
+        10.932226801830579,
+        12.213913780521265
+      ],
+      "estimated_decks": 0.22255904406107543,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.426929708824078,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          476,
+          146,
+          14
+        ],
+        "height": 14,
+        "width": 146,
+        "normalized_height": 14.383561643835616,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.638999999675434
+    },
+    {
+      "image": "test/shoe-session-0046-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.852939366848757,
+      "cards_interval": [
+        13.212095877503414,
+        14.4937828561941
+      ],
+      "estimated_decks": 0.26640268013170687,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.8529393668487568,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          474,
+          146,
+          16
+        ],
+        "height": 16,
+        "width": 146,
+        "normalized_height": 16.438356164383563,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.580099998856895
+    },
+    {
+      "image": "test/shoe-session-0046-024-baseline.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 24.112350207376497,
+      "cards_interval": [
+        23.471506718031154,
+        24.75319369672184
+      ],
+      "estimated_decks": 0.463699042449548,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.11235020737649748,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          465,
+          146,
+          25
+        ],
+        "height": 25,
+        "width": 146,
+        "normalized_height": 25.684931506849313,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.394200002134312
+    },
+    {
+      "image": "test/shoe-session-0046-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 27.53215382088575,
+      "cards_interval": [
+        26.891310331540407,
+        28.172997310231093
+      ],
+      "estimated_decks": 0.5294644965554952,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 3.5321538208857497,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          462,
+          146,
+          28
+        ],
+        "height": 28,
+        "width": 146,
+        "normalized_height": 28.767123287671232,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.728600001428276
+    },
+    {
+      "image": "test/shoe-session-0046-052-baseline.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 51.47077911545049,
+      "cards_interval": [
+        50.82993562610515,
+        52.11162260479583
+      ],
+      "estimated_decks": 0.9898226752971249,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.5292208845495097,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          441,
+          146,
+          49
+        ],
+        "height": 49,
+        "width": 146,
+        "normalized_height": 50.342465753424655,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.253899996110704
+    },
+    {
+      "image": "test/shoe-session-0046-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 59.450320880305405,
+      "cards_interval": [
+        58.80947739096006,
+        60.09116436965075
+      ],
+      "estimated_decks": 1.1432754015443347,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 7.450320880305405,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          434,
+          146,
+          56
+        ],
+        "height": 56,
+        "width": 146,
+        "normalized_height": 57.534246575342465,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.381699994264636
+    },
+    {
+      "image": "test/shoe-session-0046-078-baseline.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "baseline",
+      "true_cards": 78,
+      "estimated_cards": 77.68927348568808,
+      "cards_interval": [
+        77.04842999634273,
+        78.33011697503342
+      ],
+      "estimated_decks": 1.494024490109386,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.31072651431192355,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          418,
+          146,
+          72
+        ],
+        "height": 72,
+        "width": 146,
+        "normalized_height": 73.97260273972603,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.333600002515595
+    },
+    {
+      "image": "test/shoe-session-0046-078-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 78,
+      "estimated_cards": 89.08861886405222,
+      "cards_interval": [
+        88.44777537470688,
+        89.72946235339757
+      ],
+      "estimated_decks": 1.7132426704625427,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 11.088618864052222,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          408,
+          146,
+          82
+        ],
+        "height": 82,
+        "width": 146,
+        "normalized_height": 84.24657534246575,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.225099998526275
+    },
+    {
+      "image": "test/shoe-session-0046-104-baseline.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "baseline",
+      "true_cards": 104,
+      "estimated_cards": 103.90776785592564,
+      "cards_interval": [
+        103.2669243665803,
+        104.54861134527098
+      ],
+      "estimated_decks": 1.9982263049216469,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.09223214407435876,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          395,
+          146,
+          95
+        ],
+        "height": 95,
+        "width": 146,
+        "normalized_height": 97.6027397260274,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.460799999942537
+    },
+    {
+      "image": "test/shoe-session-0046-104-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0046",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 104,
+      "estimated_cards": 118.72691684779906,
+      "cards_interval": [
+        118.08607335845372,
+        119.3677603371444
+      ],
+      "estimated_decks": 2.2832099393807512,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 14.72691684779906,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          127,
+          382,
+          146,
+          108
+        ],
+        "height": 108,
+        "width": 146,
+        "normalized_height": 110.95890410958904,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.912199999031145
+    },
+    {
+      "image": "test/shoe-session-0047-012-baseline.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 12.257031013877771,
+      "cards_interval": [
+        11.616187524532428,
+        12.897874503223115
+      ],
+      "estimated_decks": 0.23571213488226483,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2570310138777714,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          475,
+          150,
+          15
+        ],
+        "height": 15,
+        "width": 150,
+        "normalized_height": 15.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.627299994463101
+    },
+    {
+      "image": "test/shoe-session-0047-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.366567297371883,
+      "cards_interval": [
+        12.72572380802654,
+        14.007410786717227
+      ],
+      "estimated_decks": 0.25704937110330545,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.3665672973718834,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          474,
+          150,
+          16
+        ],
+        "height": 16,
+        "width": 150,
+        "normalized_height": 16.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.16700000379933
+    },
+    {
+      "image": "test/shoe-session-0047-024-baseline.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 24.461930132313,
+      "cards_interval": [
+        23.821086642967657,
+        25.102773621658343
+      ],
+      "estimated_decks": 0.47042173331371157,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.4619301323130003,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          464,
+          150,
+          26
+        ],
+        "height": 26,
+        "width": 150,
+        "normalized_height": 26.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.518400001979899
+    },
+    {
+      "image": "test/shoe-session-0047-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 27.790538982795336,
+      "cards_interval": [
+        27.149695493449993,
+        28.43138247214068
+      ],
+      "estimated_decks": 0.5344334419768334,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 3.7905389827953364,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          461,
+          150,
+          29
+        ],
+        "height": 29,
+        "width": 150,
+        "normalized_height": 29.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.529899994959123
+    },
+    {
+      "image": "test/shoe-session-0047-052-baseline.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 52.2003372196658,
+      "cards_interval": [
+        51.559493730320455,
+        52.84118070901114
+      ],
+      "estimated_decks": 1.0038526388397269,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.20033721966579776,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          439,
+          150,
+          51
+        ],
+        "height": 51,
+        "width": 150,
+        "normalized_height": 51.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.526299996650778
+    },
+    {
+      "image": "test/shoe-session-0047-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 59.967091204124586,
+      "cards_interval": [
+        59.32624771477924,
+        60.60793469346993
+      ],
+      "estimated_decks": 1.1532132923870113,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 7.967091204124586,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          432,
+          150,
+          58
+        ],
+        "height": 58,
+        "width": 150,
+        "normalized_height": 58.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.57230000110576
+    },
+    {
+      "image": "test/shoe-session-0047-078-baseline.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "baseline",
+      "true_cards": 78,
+      "estimated_cards": 77.71967174003038,
+      "cards_interval": [
+        77.07882825068504,
+        78.36051522937572
+      ],
+      "estimated_decks": 1.494609071923661,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.28032825996962174,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          416,
+          150,
+          74
+        ],
+        "height": 74,
+        "width": 150,
+        "normalized_height": 74.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.954399996378925
+    },
+    {
+      "image": "test/shoe-session-0047-078-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 78,
+      "estimated_cards": 89.92457085846561,
+      "cards_interval": [
+        89.28372736912027,
+        90.56541434781096
+      ],
+      "estimated_decks": 1.729318670355108,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 11.924570858465614,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          405,
+          150,
+          85
+        ],
+        "height": 85,
+        "width": 150,
+        "normalized_height": 85.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.673199994314928
+    },
+    {
+      "image": "test/shoe-session-0047-104-baseline.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "baseline",
+      "true_cards": 104,
+      "estimated_cards": 104.34854254388907,
+      "cards_interval": [
+        103.70769905454372,
+        104.98938603323441
+      ],
+      "estimated_decks": 2.006702741228636,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.34854254388906725,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          392,
+          150,
+          98
+        ],
+        "height": 98,
+        "width": 150,
+        "normalized_height": 98.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.416199998464435
+    },
+    {
+      "image": "test/shoe-session-0047-104-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 104,
+      "estimated_cards": 119.88205051280663,
+      "cards_interval": [
+        119.24120702346129,
+        120.52289400215197
+      ],
+      "estimated_decks": 2.3054240483232045,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 15.882050512806629,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          378,
+          150,
+          112
+        ],
+        "height": 112,
+        "width": 150,
+        "normalized_height": 112.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.296600001107436
+    },
+    {
+      "image": "test/shoe-session-0047-156-baseline.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "baseline",
+      "true_cards": 156,
+      "estimated_cards": 155.38721158461823,
+      "cards_interval": [
+        154.74636809527289,
+        156.02805507396357
+      ],
+      "estimated_decks": 2.9882156073965045,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.6127884153817718,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          346,
+          150,
+          144
+        ],
+        "height": 144,
+        "width": 150,
+        "normalized_height": 144.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.182800000417046
+    },
+    {
+      "image": "test/shoe-session-0047-156-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 156,
+      "estimated_cards": 178.68747353799458,
+      "cards_interval": [
+        178.04663004864923,
+        179.32831702733992
+      ],
+      "estimated_decks": 3.4362975680383574,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 22.687473537994578,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          325,
+          150,
+          165
+        ],
+        "height": 165,
+        "width": 150,
+        "normalized_height": 165.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.101600000576582
+    },
+    {
+      "image": "test/shoe-session-0047-208-baseline.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "baseline",
+      "true_cards": 208,
+      "estimated_cards": 207.53541690884148,
+      "cards_interval": [
+        206.89457341949614,
+        208.17626039818683
+      ],
+      "estimated_decks": 3.991065709785413,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.4645830911585165,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          299,
+          150,
+          191
+        ],
+        "height": 191,
+        "width": 150,
+        "normalized_height": 191.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.565899996028747
+    },
+    {
+      "image": "test/shoe-session-0047-208-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0047",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 208,
+      "estimated_cards": 238.6024328466766,
+      "cards_interval": [
+        237.96158935733126,
+        239.24327633602195
+      ],
+      "estimated_decks": 4.58850832397455,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 30.602432846676606,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          125,
+          271,
+          150,
+          219
+        ],
+        "height": 219,
+        "width": 150,
+        "normalized_height": 219.0,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.598899996490218
+    },
+    {
+      "image": "test/shoe-session-0048-012-baseline.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 11.824744150178766,
+      "cards_interval": [
+        11.183900660833423,
+        12.46558763952411
+      ],
+      "estimated_decks": 0.22739892596497627,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.17525584982123377,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          475,
+          154,
+          15
+        ],
+        "height": 15,
+        "width": 154,
+        "normalized_height": 14.61038961038961,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.853200000885408
+    },
+    {
+      "image": "test/shoe-session-0048-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.98617846867379,
+      "cards_interval": [
+        13.345334979328447,
+        14.627021958019133
+      ],
+      "estimated_decks": 0.26896497055141905,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.9861784686737902,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          473,
+          154,
+          17
+        ],
+        "height": 17,
+        "width": 154,
+        "normalized_height": 16.558441558441558,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.565100000647362
+    },
+    {
+      "image": "test/shoe-session-0048-024-baseline.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 23.712632901901394,
+      "cards_interval": [
+        23.07178941255605,
+        24.353476391246737
+      ],
+      "estimated_decks": 0.45601217119041143,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2873670980986063,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          464,
+          154,
+          26
+        ],
+        "height": 26,
+        "width": 154,
+        "normalized_height": 25.324675324675326,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.892399993783329
+    },
+    {
+      "image": "test/shoe-session-0048-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 28.03550153889144,
+      "cards_interval": [
+        27.3946580495461,
+        28.676345028236785
+      ],
+      "estimated_decks": 0.539144260363297,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 4.035501538891442,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          460,
+          154,
+          30
+        ],
+        "height": 30,
+        "width": 154,
+        "normalized_height": 29.22077922077922,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.134200001426507
+    },
+    {
+      "image": "test/shoe-session-0048-052-baseline.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 51.8112790423367,
+      "cards_interval": [
+        51.17043555299136,
+        52.45212253168204
+      ],
+      "estimated_decks": 0.9963707508141673,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.18872095766329977,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          438,
+          154,
+          52
+        ],
+        "height": 52,
+        "width": 154,
+        "normalized_height": 50.64935064935065,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.846999997331295
+    },
+    {
+      "image": "test/shoe-session-0048-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 60.45701631631679,
+      "cards_interval": [
+        59.816172826971446,
+        61.09785980566213
+      ],
+      "estimated_decks": 1.1626349291599383,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 8.457016316316789,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          430,
+          154,
+          60
+        ],
+        "height": 60,
+        "width": 154,
+        "normalized_height": 58.44155844155844,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.064500001841225
+    },
+    {
+      "image": "test/shoe-session-0048-078-baseline.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "baseline",
+      "true_cards": 78,
+      "estimated_cards": 77.74849086427697,
+      "cards_interval": [
+        77.10764737493163,
+        78.38933435362232
+      ],
+      "estimated_decks": 1.4951632858514803,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.25150913572302613,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          414,
+          154,
+          76
+        ],
+        "height": 76,
+        "width": 154,
+        "normalized_height": 74.02597402597402,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.523900003638119
+    },
+    {
+      "image": "test/shoe-session-0048-078-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 78,
+      "estimated_cards": 89.63637961599962,
+      "cards_interval": [
+        88.99553612665427,
+        90.27722310534496
+      ],
+      "estimated_decks": 1.7237765310769158,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 11.636379615999616,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          403,
+          154,
+          87
+        ],
+        "height": 87,
+        "width": 154,
+        "normalized_height": 84.74025974025975,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.15060000604717
+    },
+    {
+      "image": "test/shoe-session-0048-104-baseline.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "baseline",
+      "true_cards": 104,
+      "estimated_cards": 104.76641984546477,
+      "cards_interval": [
+        104.12557635611942,
+        105.40726333481011
+      ],
+      "estimated_decks": 2.014738843182015,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.7664198454647675,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          389,
+          154,
+          101
+        ],
+        "height": 101,
+        "width": 154,
+        "normalized_height": 98.37662337662337,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.967299996584188
+    },
+    {
+      "image": "test/shoe-session-0048-104-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 104,
+      "estimated_cards": 119.89646007492993,
+      "cards_interval": [
+        119.25561658558459,
+        120.53730356427528
+      ],
+      "estimated_decks": 2.3057011552871143,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 15.896460074929934,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          375,
+          154,
+          115
+        ],
+        "height": 115,
+        "width": 154,
+        "normalized_height": 112.01298701298701,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.839799993438646
+    },
+    {
+      "image": "test/shoe-session-0048-156-baseline.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "baseline",
+      "true_cards": 156,
+      "estimated_cards": 156.64084348934534,
+      "cards_interval": [
+        156.0,
+        157.2816869786907
+      ],
+      "estimated_decks": 3.0123239132566413,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.6408434893453432,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          341,
+          154,
+          149
+        ],
+        "height": 149,
+        "width": 154,
+        "normalized_height": 145.12987012987014,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.789699997578282
+    },
+    {
+      "image": "test/shoe-session-0048-156-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 156,
+      "estimated_cards": 179.33590383354306,
+      "cards_interval": [
+        178.6950603441977,
+        179.9767473228884
+      ],
+      "estimated_decks": 3.4487673814142896,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 23.335903833543057,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          320,
+          154,
+          170
+        ],
+        "height": 170,
+        "width": 154,
+        "normalized_height": 165.58441558441558,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.748300005914643
+    },
+    {
+      "image": "test/shoe-session-0048-208-baseline.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "baseline",
+      "true_cards": 208,
+      "estimated_cards": 208.51526713322588,
+      "cards_interval": [
+        207.87442364388053,
+        209.15611062257122
+      ],
+      "estimated_decks": 4.009908983331266,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.5152671332258763,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          293,
+          154,
+          197
+        ],
+        "height": 197,
+        "width": 154,
+        "normalized_height": 191.88311688311688,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.309599994390737
+    },
+    {
+      "image": "test/shoe-session-0048-208-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 208,
+      "estimated_cards": 239.85606475140375,
+      "cards_interval": [
+        239.2152212620584,
+        240.4969082407491
+      ],
+      "estimated_decks": 4.612616629834688,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 31.85606475140375,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          264,
+          154,
+          226
+        ],
+        "height": 226,
+        "width": 154,
+        "normalized_height": 220.12987012987014,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 7.753199999569915
+    },
+    {
+      "image": "test/shoe-session-0048-312-baseline.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "baseline",
+      "true_cards": 312,
+      "estimated_cards": 312.26411442098697,
+      "cards_interval": [
+        311.6232709316416,
+        312.9049579103323
+      ],
+      "estimated_decks": 6.0050791234805185,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2641144209869708,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          197,
+          154,
+          293
+        ],
+        "height": 293,
+        "width": 154,
+        "normalized_height": 285.38961038961037,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.665699995821342
+    },
+    {
+      "image": "test/shoe-session-0048-312-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0048",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 312,
+      "estimated_cards": 359.81566942787754,
+      "cards_interval": [
+        359.1748259385322,
+        360.4565129172229
+      ],
+      "estimated_decks": 6.91953210438226,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 47.81566942787754,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          123,
+          153,
+          154,
+          337
+        ],
+        "height": 337,
+        "width": 154,
+        "normalized_height": 328.24675324675326,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.926299997256137
+    },
+    {
+      "image": "test/shoe-session-0049-012-baseline.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "baseline",
+      "true_cards": 12,
+      "estimated_cards": 12.36170424816967,
+      "cards_interval": [
+        11.720860758824326,
+        13.002547737515012
+      ],
+      "estimated_decks": 0.23772508169557055,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.3617042481696693,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          474,
+          159,
+          16
+        ],
+        "height": 16,
+        "width": 159,
+        "normalized_height": 15.09433962264151,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.200099997338839
+    },
+    {
+      "image": "test/shoe-session-0049-012-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 12,
+      "estimated_cards": 13.408436591088641,
+      "cards_interval": [
+        12.767593101743298,
+        14.049280080433984
+      ],
+      "estimated_decks": 0.2578545498286277,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 1.4084365910886412,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          473,
+          159,
+          17
+        ],
+        "height": 17,
+        "width": 159,
+        "normalized_height": 16.037735849056602,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.858000001055188
+    },
+    {
+      "image": "test/shoe-session-0049-024-baseline.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "baseline",
+      "true_cards": 24,
+      "estimated_cards": 23.875760020278378,
+      "cards_interval": [
+        23.234916530933035,
+        24.51660350962372
+      ],
+      "estimated_decks": 0.4591492311591996,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.12423997972162226,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          463,
+          159,
+          27
+        ],
+        "height": 27,
+        "width": 159,
+        "normalized_height": 25.471698113207548,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.164599996234756
+    },
+    {
+      "image": "test/shoe-session-0049-024-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 24,
+      "estimated_cards": 28.06268939195427,
+      "cards_interval": [
+        27.421845902608926,
+        28.703532881299612
+      ],
+      "estimated_decks": 0.5396671036914282,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 4.062689391954269,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          459,
+          159,
+          31
+        ],
+        "height": 31,
+        "width": 159,
+        "normalized_height": 29.245283018867923,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.532100000593346
+    },
+    {
+      "image": "test/shoe-session-0049-052-baseline.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "baseline",
+      "true_cards": 52,
+      "estimated_cards": 52.13753327909066,
+      "cards_interval": [
+        51.49668978974532,
+        52.778376768436004
+      ],
+      "estimated_decks": 1.0026448707517435,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.13753327909066115,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          436,
+          159,
+          54
+        ],
+        "height": 54,
+        "width": 159,
+        "normalized_height": 50.943396226415096,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.578000000852626
+    },
+    {
+      "image": "test/shoe-session-0049-052-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 52,
+      "estimated_cards": 59.46465967952348,
+      "cards_interval": [
+        58.823816190178135,
+        60.10550316886882
+      ],
+      "estimated_decks": 1.143551147683144,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 7.4646596795234785,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          429,
+          159,
+          61
+        ],
+        "height": 61,
+        "width": 159,
+        "normalized_height": 57.54716981132076,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.010699995793402
+    },
+    {
+      "image": "test/shoe-session-0049-078-baseline.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "baseline",
+      "true_cards": 78,
+      "estimated_cards": 78.305841852065,
+      "cards_interval": [
+        77.66499836271966,
+        78.94668534141034
+      ],
+      "estimated_decks": 1.505881574078173,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.3058418520650008,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          411,
+          159,
+          79
+        ],
+        "height": 79,
+        "width": 159,
+        "normalized_height": 74.52830188679245,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.547400000679772
+    },
+    {
+      "image": "test/shoe-session-0049-078-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 78,
+      "estimated_cards": 89.8198976241737,
+      "cards_interval": [
+        89.17905413482836,
+        90.46074111351905
+      ],
+      "estimated_decks": 1.7273057235418021,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 11.819897624173706,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          400,
+          159,
+          90
+        ],
+        "height": 90,
+        "width": 159,
+        "normalized_height": 84.90566037735849,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.022700000263285
+    },
+    {
+      "image": "test/shoe-session-0049-104-baseline.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "baseline",
+      "true_cards": 104,
+      "estimated_cards": 103.42741808212037,
+      "cards_interval": [
+        102.78657459277503,
+        104.06826157146571
+      ],
+      "estimated_decks": 1.9889888092715455,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.5725819178796314,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          387,
+          159,
+          103
+        ],
+        "height": 103,
+        "width": 159,
+        "normalized_height": 97.16981132075472,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.595400002377573
+    },
+    {
+      "image": "test/shoe-session-0049-104-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 104,
+      "estimated_cards": 119.12840322590496,
+      "cards_interval": [
+        118.48755973655962,
+        119.7692467152503
+      ],
+      "estimated_decks": 2.2909308312674033,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 15.128403225904961,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          372,
+          159,
+          118
+        ],
+        "height": 118,
+        "width": 159,
+        "normalized_height": 111.32075471698113,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.777100003499072
+    },
+    {
+      "image": "test/shoe-session-0049-156-baseline.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "baseline",
+      "true_cards": 156,
+      "estimated_cards": 155.76403522806905,
+      "cards_interval": [
+        155.1231917387237,
+        156.4048787174144
+      ],
+      "estimated_decks": 2.995462215924405,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.2359647719309521,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          337,
+          159,
+          153
+        ],
+        "height": 153,
+        "width": 159,
+        "normalized_height": 144.33962264150944,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 9.371000000101048
+    },
+    {
+      "image": "test/shoe-session-0049-156-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 156,
+      "estimated_cards": 178.79214677228646,
+      "cards_interval": [
+        178.15130328294111,
+        179.4329902616318
+      ],
+      "estimated_decks": 3.4383105148516626,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 22.792146772286458,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          315,
+          159,
+          175
+        ],
+        "height": 175,
+        "width": 159,
+        "normalized_height": 165.0943396226415,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 8.98099999903934
+    },
+    {
+      "image": "test/shoe-session-0049-208-baseline.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "baseline",
+      "true_cards": 208,
+      "estimated_cards": 208.10065237401773,
+      "cards_interval": [
+        207.45980888467238,
+        208.74149586336307
+      ],
+      "estimated_decks": 4.001935622577264,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.1006523740177272,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          287,
+          159,
+          203
+        ],
+        "height": 203,
+        "width": 159,
+        "normalized_height": 191.50943396226415,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.402800005977042
+    },
+    {
+      "image": "test/shoe-session-0049-208-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 208,
+      "estimated_cards": 238.45589031866797,
+      "cards_interval": [
+        237.81504682932263,
+        239.0967338080133
+      ],
+      "estimated_decks": 4.585690198435922,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 30.45589031866797,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          258,
+          159,
+          232
+        ],
+        "height": 232,
+        "width": 159,
+        "normalized_height": 218.8679245283019,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.034200000518467
+    },
+    {
+      "image": "test/shoe-session-0049-312-baseline.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "baseline",
+      "true_cards": 312,
+      "estimated_cards": 311.7271543229961,
+      "cards_interval": [
+        311.08631083365077,
+        312.36799781234146
+      ],
+      "estimated_decks": 5.994752967749926,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 0.27284567700388607,
+      "covered": true,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          188,
+          159,
+          302
+        ],
+        "height": 302,
+        "width": 159,
+        "normalized_height": 284.9056603773585,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 11.02579999860609
+    },
+    {
+      "image": "test/shoe-session-0049-312-thickness_shift_15pct.png",
+      "session_id": "shoe-session-0049",
+      "scenario": "thickness_shift_15pct",
+      "true_cards": 312,
+      "estimated_cards": 358.8301097543499,
+      "cards_interval": [
+        358.18926626500456,
+        359.47095324369525
+      ],
+      "estimated_decks": 6.900579033737499,
+      "probability": null,
+      "status": "experimental_controlled_renderer",
+      "interval_semantics": "residual quantile from held-out calibration sessions; empirical coverage; no domain-shift guarantee",
+      "absolute_error_cards": 46.830109754349905,
+      "covered": false,
+      "measurement": {
+        "status": "measured",
+        "bbox": [
+          120,
+          143,
+          159,
+          347
+        ],
+        "height": 347,
+        "width": 159,
+        "normalized_height": 327.35849056603774,
+        "normalization": "visible stack width relative to 150px controlled reference",
+        "probability": null
+      },
+      "latency_ms": 10.291499995219056
+    }
+  ],
+  "measurement_failures": [],
+  "provenance": {
+    "font_reference_only": {
+      "repository": "https://github.com/dejavu-fonts/dejavu-fonts",
+      "version": "2.37",
+      "commit": "0eda8a319c08835009849583cd090bb5b141ce25",
+      "license": "Bitstream Vera/Arev notices; DejaVu changes public domain",
+      "license_url": "https://raw.githubusercontent.com/dejavu-fonts/dejavu-fonts/version_2_37/LICENSE",
+      "used_in_tray_images": false
+    },
+    "media_source": "original synthetic RGB rectangles, no fonts or external images",
+    "fixture_license": "repository LICENSE applies; no third-party media redistributed"
+  },
+  "scope": "controlled synthetic validation only; real discard trays remain unvalidated",
+  "probabilities_claim": "deck posteriors evaluated empirically here; tray intervals are not probabilities"
+}
