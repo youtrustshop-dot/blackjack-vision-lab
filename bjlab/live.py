@@ -397,7 +397,8 @@ class LiveObserver:
             # An unclassified initial deal must not enter round 0 history and
             # then be counted again when its first player turn starts round 1.
             can_commit=not external or (lifecycle['stable'] and
-                (self.lifecycle.seen_round or external['phase']=='settled'))
+                (self.lifecycle.seen_round or external['phase']=='settled') and
+                not lifecycle.get('ambiguous_boundary',False))
             emitted = boundary_events + (self.tracker.update(detections, timestamp, round_id=str(self.round)) if can_commit else [])
             self.sequence, self.last_access = sequence, time.monotonic()
             self.frame_count += 1
@@ -409,6 +410,8 @@ class LiveObserver:
             reasons.extend(external.get('reasons', []) if external else [])
             if context and not context_stable:
                 reasons.append("Visible round context is changing; waiting for stable video evidence.")
+            if lifecycle.get('ambiguous_boundary'):
+                reasons.append('The current pixels permit several round histories; exposure commits are paused until an observable boundary.')
             if self.detector.last_diagnostics["rejected_card_candidates"]:
                 reasons.append("Some card-shaped regions could not be read.")
             cards = [c for c in summary["cards"].values() if c.get("on_table")]
@@ -559,6 +562,19 @@ class LiveObserver:
                                               'physical_remaining':remaining, 'composition_remaining':summary['composition_remaining']},
                     "player": player_ranks, "dealer": [c["rank"] for c in dealer],
                     "events": [e.to_dict() for e in emitted], "state": state,
+                    "temporal_evidence":{
+                        'round_hits':self.lifecycle.hits if external else self.context_hits,
+                        'round_required':self.lifecycle.required if external else 2,
+                        'round_stable':lifecycle['stable'] if external else context_stable,
+                        'detected_phase':external.get('phase') if external else context.get('phase'),
+                        'exposure_commit_allowed':can_commit,
+                        'ambiguous_boundary':lifecycle.get('ambiguous_boundary',False),
+                        'tracker_required':self.tracker.stable_frames,
+                        'tracker_pending':[{k:t[k] for k in ('card_id','hits','confirmed','missed','label_pending','candidate_hits')}
+                            for t in summary['tracks'] if not t['confirmed'] or t['missed'] or t['label_pending']],
+                        'observation_timestamp':timestamp,
+                        'turn_provenance':'manual confirmation' if self.manual_turn else 'pixel evidence or unknown',
+                        'scope':'Observed confirmation counters; lifecycle and tracker waits are separate.'},
                     "processing_ms": (time.perf_counter() - started) * 1000,
                     "recognition_profile": external.get('profile', 'lab-template') if external else 'lab-template',
                     "table_bounds": external.get('table_bounds') if external else None,

@@ -4,9 +4,23 @@
     "version": "1.1.1",
     "commit": "4f074efd53066a95d64ca1ed53de03479a8adcba"
   },
-  "parent_commit": "620e6a0dd7f929a116645c53181b4df360b8edbd",
+  "parent_commit": "de3d9bea6bf94d31f498c65dcd53cff3489c0e73",
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
+    {
+      "id": "provider-session-gate",
+      "stage": "Complete original provider sessions",
+      "candidate": "Freegames classic, initial calibration, manual turn disabled",
+      "status": "not_executable",
+      "finding": "No original complete provider video available. Session-disjoint collection protocol and replay runner implemented; zero provider sessions executed. Current calibrated phase remains unknown. See PROVIDER_SESSION_PROTOCOL.md."
+    },
+    {
+      "id": "proposal-cause-audit",
+      "stage": "Proposal versus physical presence",
+      "candidate": "review of 29 preserved learned-adapter extras",
+      "status": "executed",
+      "finding": "Consumed-still assistant diagnostic review: 15 suit fragments, 4 face artwork, 5 badge digits, 2 capture-overlay text, 3 correct corners with inferred-box mismatch. No model promotion; independent presence verification still required."
+    },
     {
       "id": "capture",
       "stage": "Acquisition",
@@ -61,7 +75,7 @@
       "stage": "Temporal confirmation",
       "candidate": "three observations / probabilistic voting alternative",
       "status": "executed",
-      "finding": "Own renderer: three observations/state lose inventory 17/18/19; six retain errors 0/4/4. This sensitivity check is not external-video validation."
+      "finding": "Historical own renderer: three observations/state lose inventory 17/18/19; six retain errors 0/4/4. New separate lifecycle/tracker counters expose sequential waits; pixel unit fixture commits at observation 5 with both windows at 3. No new provider video validation or lowered thresholds."
     },
     {
       "id": "context",

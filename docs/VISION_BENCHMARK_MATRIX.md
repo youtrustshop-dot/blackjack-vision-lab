@@ -6,6 +6,12 @@ learning, usable-state and own-session comparison is in
 receipts in [summary.json](../validation/results/vision-learning-check/summary.json).
 No checkpoint was promoted and no desktop release was replaced.
 
+The next increment is [PROVIDER_SESSION_READINESS.md](PROVIDER_SESSION_READINESS.md):
+classified causes of all 29 learned-adapter extras, observable/ambiguous boundary
+contracts, confirmation counters and an original-video runner. Its
+[session protocol](PROVIDER_SESSION_PROTOCOL.md) has **zero executed provider
+sessions**; this is not a replacement for the preserved 1/3 still result.
+
 This candidate extends commit `20f0fc0aa1ae862ad0ddd20dea2b5d8128a63b1c`.
 The frozen installed/public desktop reference remains **1.1.1** at
 `4f074efd53066a95d64ca1ed53de03479a8adcba`. This change contains no replacement

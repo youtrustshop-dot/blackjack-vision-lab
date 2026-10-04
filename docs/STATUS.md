@@ -1,4 +1,27 @@
-# Unreleased candidate — exposure continuity and Poker Phase 0
+# Current follow-up — original provider-session gate
+
+PR #4 at `de3d9be` remains the parent diagnostic candidate; published/installed
+1.1.1 at `4f074ef` is unchanged. This increment classifies all 29 learned-adapter
+extras, separates witnessed/ambiguous round boundaries, exposes the sequential
+confirmation counters and adds an original-video replay gate for Freegames classic.
+
+- Full Python suite: **449 tests + 10 subtests passed**; **16 focused replay
+  tests passed** after the final transport/privacy and timing guards. These are source/unit
+  checks, not provider-session evidence. Frontend code is unchanged; PR #4's
+  46-test/build result is historical until this follow-up's CI executes it.
+- **Zero original complete provider sessions evaluated**. Exact development /
+  verification recording slots, frozen policy and commands are specified.
+- Calibrated phase is still unknown; the historical assisted 1/3 usable-still
+  outcome is unchanged. No universal vision, independent generalization,
+  count-reconstruction acceptance or economic-return claim.
+- No model promotion, native rebuild/replacement, merge or expanded Poker work.
+
+[Increment and remaining failures](PROVIDER_SESSION_READINESS.md) ·
+[Original recording protocol](PROVIDER_SESSION_PROTOCOL.md).
+
+The earlier candidate records below retain their original source/evidence scope.
+
+# Earlier unreleased candidate — exposure continuity and Poker Phase 0
 
 The published **1.1.1 champion remains frozen** at `4f074ef`. The research
 candidate adds witnessed empty-table boundaries, settled-only rounds,

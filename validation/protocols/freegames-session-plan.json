@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "layout_family": "freegames-classic",
+  "stage": "awaiting-original-recordings",
+  "candidate_fingerprint": null,
+  "policy": {
+    "sample_interval_ms": 350,
+    "advice_deadline_ms": 1500,
+    "min_timely_decision_coverage": 0.95,
+    "min_rounds_per_verification_session": 20,
+    "min_verification_sessions": 2,
+    "max_false_advice_frames": 0,
+    "max_inventory_l1_at_checkpoints": 0,
+    "max_unmatched_exposures": 0,
+    "max_false_reliable_count_frames": 0,
+    "max_manual_interventions": 0
+  },
+  "requested_slots": [
+    {"id": "FG-dev-01", "partition": "development", "minimum_rounds": 20},
+    {"id": "FG-dev-02", "partition": "development", "minimum_rounds": 20},
+    {"id": "FG-verify-01", "partition": "verification", "minimum_rounds": 20},
+    {"id": "FG-verify-02", "partition": "verification", "minimum_rounds": 20}
+  ],
+  "sessions": [],
+  "benchmark_executed": false,
+  "scope": "Collection plan only. No video, performance score or acceptance result is represented by this file."
+}

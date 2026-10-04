@@ -463,6 +463,8 @@ class TemporalTracker:
                 "tracks": [{"card_id": t.card_id, "rank": t.rank, "suit": t.suit,
                             "bbox": list(t.bbox), "zone": t.zone, "score": t.score,
                             "confirmed": t.confirmed, "hits": t.hits, "missed": t.missed,
+                            "label_pending": t.candidate is not None,
+                            "candidate_hits": t.candidate_hits,
                             "lost": t.lost} for t in self.tracks.values()]}
 
 

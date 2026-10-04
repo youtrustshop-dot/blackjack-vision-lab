@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "scope": "Consumed private development stills; three inputs, two moments. Manual diagnostic classification, not new data or AP.",
+  "review_type": "Assistant inspection of native crop montage with magnification; not independent human annotation.",
+  "objects": 29,
+  "primary_causes": {
+    "non_rank_suit": 15,
+    "face_artwork": 4,
+    "ui_badge_text": 5,
+    "capture_overlay_text": 2,
+    "reconstructed_box": 3,
+    "duplicate_corner": 0,
+    "real_corner_unreadable": 0,
+    "unclassified": 0
+  },
+  "secondary_flags": {
+    "already_represented_physical_card": 19
+  },
+  "rank_resolved": 5,
+  "rank_unresolved": 24,
+  "proposals_sha256": "98bb62ab856c293de28e09db0553a387661b69742592b25e5b7190c5b9586190",
+  "annotations_sha256": "59d921badfa09b920154591b214e1111ab2b0b0e0f510cf9c11194bb3b05b27d",
+  "decision": "Corner proposals require independent card-surface/position evidence before becoming physical-card detections. Unreadable true corners retain their gate. No model promoted."
+}
