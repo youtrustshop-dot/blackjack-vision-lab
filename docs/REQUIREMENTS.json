@@ -4,14 +4,14 @@
   "verification": {
     "version": "1.1.1",
     "status": "unreleased-source-verified",
-    "completed_test_run": "514 passed, 2 existing warnings, 10 subtests passed in 96.26s; five stress-lab tests rerun in 3.67s",
+    "completed_test_run": "519 passed, 2 existing warnings, 10 subtests passed in 72.49s; five phase tests also passed in 2.13s",
     "frontend_tests": "46 passed on parent PR #4; UI unchanged, current follow-up not locally rerun",
     "frontend_build": "46 historical frontend tests and TypeScript/Vite passed on parent PR #4; UI unchanged, current follow-up not locally rerun",
     "latest_changes_require_retest": false,
-    "source_evidence": "validation/results/synthetic-stress-lab/verification.json",
+    "source_evidence": "validation/results/visible-phase/verification.json",
     "release_evidence": "release/v1.1.1/",
     "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
-    "verification_scope": "Unchanged reader replay on six paired synthetic continuous videos; 200000 engine invariant rounds; no provider generalization, training or release replacement.",
+    "verification_scope": "Frozen paired synthetic continuous videos: visible phase/context challenger versus unchanged baseline; clean 6/6, overall 6/36 timely full-table-qualified opportunities; no provider transfer certification.",
     "historical_v1_1_1_verification": {
       "version": "1.1.1",
       "status": "source-verified",
@@ -100,7 +100,7 @@
       "source_evidence": "experiments/continuity_phase0/verification.json",
       "verification_scope": "Source tests and single-use owned synthetic/reference holdouts. External provider counts, candidate native artifacts and economic edge remain unverified."
     },
-    "previous_source_evidence": "validation/results/freegames-surface-probe/verification.json"
+    "previous_source_evidence": "validation/results/synthetic-stress-lab/verification.json"
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",
   "requirements": [
@@ -549,6 +549,6 @@
     "required_system": "Controlled simulator, recorded single-round lab-artwork clips, screenshots, deterministic math and research validation layer.",
     "conditional_research": "Unavailable vendor models and unsupported legacy reference execution remain recorded; they are not fabricated or core dependencies.",
     "laya_user_deferral": "Add Laya later.",
-    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Hold\u00e2\u20ac\u2122em calibrated cards/ranking/equity are implemented."
+    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Holdâ€™em calibrated cards/ranking/equity are implemented."
   }
 }

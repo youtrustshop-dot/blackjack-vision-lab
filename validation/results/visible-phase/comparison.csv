@@ -1,0 +1,7 @@
+condition,baseline_timely,challenger_timely,opportunities,phase_correct,sampled,round_starts,final_inventory_l1,missing_exposures_diagnostic,duplicate_exposures_diagnostic,incomplete_or_incorrect_actionable_observations
+clean,0,6,6,87,87,3,0,0,0,0
+overlap,0,0,6,87,87,3,0,1,1,21
+rotation,0,0,6,87,87,3,12,13,0,0
+faded,0,0,6,0,87,0,20,20,0,0
+clipped,0,0,6,87,87,3,6,7,1,0
+covered,0,0,6,87,87,3,9,17,1,0

@@ -1,6 +1,8 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> User-authorized context increment, 2026-10-04: VISION-012 uses visible controls and witnessed temporal boundaries on the frozen VISION-011 development videos. Clean improves 0/6 to 6/6 timely qualified opportunities, overall 0/36 to 6/36; five transfer variants remain incomplete. No default/release promotion, new model, paid API or Poker expansion. See SYNTHETIC_STRESS_LAB.md and the existing matrix.
+
 > User-authorized local simulation extension, 2026-10-04: generate own continuous stress videos while provider capture is unavailable. Existing engine reused; six paired three-round development variants and a 200000-round invariant batch executed. Unchanged reader has unknown phase on all sampled frames; no training or promotion. This does not replace the original-provider video milestone. See SYNTHETIC_STRESS_LAB.md and VISION-011.
 
 > Current user override, 2026-10-04: API budget **zero**, inference **not authorized**. The user reports a safely saved key; this does not authorize spending or image upload. Read-only Billing access redirected to login, so balance, free credits and auto-recharge remain unknown (blocked_credit_verification). Even observed credits would require fresh explicit approval before inference. Do not buy credits, add payment methods or change auto-recharge. Continue independent local preparation, measurement and candidate study; no immediate YOLO training, release replacement or Poker expansion.

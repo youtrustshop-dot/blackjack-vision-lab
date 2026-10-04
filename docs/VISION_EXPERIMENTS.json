@@ -103,9 +103,10 @@
     {
       "id": "context",
       "stage": "Game context",
-      "candidate": "layout-independent card reading + explicit turn",
+      "candidate": "visible-controls-temporal-v1 opt-in synthetic context challenger",
       "status": "executed",
-      "finding": "Manual turn required. Direct-settlement hands with no observable phase/boundary account for four lost exposures in two own sequences. No strategy or count promotion."
+      "finding": "VISION-012: clean 87/87 phase and 6/6 timely qualified opportunities, no manual turn; frozen five-condition transfer remains incomplete. Not a provider/default promotion.",
+      "historical_finding": "Manual turn required. Direct-settlement hands with no observable phase/boundary account for four lost exposures in two own sequences. No strategy or count promotion."
     },
     {
       "id": "integrity",
@@ -141,6 +142,14 @@
       "candidate": "scratch / official pretrained rank / pretrained geometry + shared OCR",
       "status": "executed",
       "finding": "Audited 160 synthetic images/960 labels. Geometry learns memorized corners after development score/NMS selection; provider comparison still fails. No final holdout read."
+    },
+    {
+      "id": "visible-phase-stress",
+      "stage": "Visible phase / continuous development context",
+      "candidate": "unchanged rank reader + visible-controls-temporal-v1",
+      "status": "executed",
+      "finding": "Clean 0/6 -> 6/6; overall 0/36 -> 6/36. Per-rank final drift clean zero. Fading fails phase; rotation/crop/overlap fail complete table evidence.",
+      "result": "validation/results/visible-phase/comparison.json"
     }
   ],
   "comparison": {
@@ -1152,15 +1161,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": {
-    "master": "docs/MASTER_PLAN.md",
-    "version": "1.1",
-    "milestone": "M1",
-    "experiment_id": "VISION-009",
-    "immediate_yolo_training": "superseded in priority, retained as conditional alternative",
-    "api_comparison": "blocked_zero_api_budget; credit verification requires authenticated Billing access",
-    "local_followup": "VISION-010 completed as bounded development probe; original session capture remains blocked; no global reader promotion."
-  },
+  "current_priority": "VISION-012 executed: clean synthetic context accepted for development only; faded controls, rotated/cropped ranks and overlap presence remain failing transfer conditions. No default promotion.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1263,6 +1264,31 @@
         "ID switches",
         "New model training",
         "Profitability"
+      ]
+    },
+    {
+      "experiment_id": "VISION-012",
+      "parent_experiment_id": "VISION-011",
+      "question": "Can visible controls and witnessed clear/deal transitions unlock the frozen clean video without oracle phase?",
+      "status": "executed",
+      "split": "development",
+      "reader_id": "unchanged rank reader + visible-controls-temporal-v1",
+      "assistance": "initial calibrated card/control ROIs only; no per-turn confirmation",
+      "budget": {
+        "max_requests": 0,
+        "max_cost": 0
+      },
+      "result": "validation/results/visible-phase/comparison.json",
+      "report": "docs/SYNTHETIC_STRESS_LAB.md",
+      "decision": "clean 6/6 timely full-table-qualified opportunities; five transfer variants unchanged; no promotion",
+      "what_was_not_tested": [
+        "Independent provider generalization",
+        "Live capture-to-display",
+        "Independent final holdout",
+        "Exact exposure identity",
+        "New models",
+        "Poker expansion",
+        "Native desktop build"
       ]
     }
   ],

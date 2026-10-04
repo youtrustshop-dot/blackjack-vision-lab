@@ -227,7 +227,7 @@ def estimate_actions(player: list[str], upcard: str, counts: list[int], rules: R
 
 class LiveObserver:
     def __init__(self, rules: Rules, *, samples=1500, corners=None, zones=None, layout=None,
-                 fresh_shoe=False, manual_turn=False, output_height=600):
+                 fresh_shoe=False, manual_turn=False, output_height=600, context_challenger=False):
         self.rules, self.samples = rules, samples
         self.corners, self.zones = corners, zones
         self.layout=layout
@@ -256,6 +256,13 @@ class LiveObserver:
         self.external_previous_phase = None
         from .round_lifecycle import RoundLifecycle
         self.lifecycle=RoundLifecycle()
+        self.context_challenger = None
+        if context_challenger:
+            if not layout or manual_turn:
+                raise ValueError('Visible phase challenger requires layout and automatic turn evidence.')
+            from .visible_phase import VisiblePhaseContext, VisibleRoundLifecycle
+            self.context_challenger=VisiblePhaseContext(layout)
+            self.lifecycle=VisibleRoundLifecycle()
         self.history_gap=False
         self.perception_pending=False
         self.last_observation_timestamp=None
@@ -329,6 +336,20 @@ class LiveObserver:
                                        extract_controlled_metadata(image), self.detector.context)
                 self.pixel_cache_key = pixel_key
             detections, context, metadata, external = self.pixel_evidence
+            rejected_card_candidates=self.detector.last_diagnostics['rejected_card_candidates']
+            if self.context_challenger:
+                external=dict(external)
+                detections,presence_evidence=self.context_challenger.covered_presence(image,detections)
+                # Clear only a positively identified unknown body rejection.
+                # Unresolved corner proposals remain blocking evidence.
+                recovered=sum(e['covered'] for e in presence_evidence)
+                rejected_card_candidates=max(0,rejected_card_candidates-recovered)
+                phase_context=self.context_challenger.read(image,detections)
+                phase_context['covered_presence_evidence']=presence_evidence
+                phase_context['raw_rejected_card_candidates']=self.detector.last_diagnostics['rejected_card_candidates']
+                phase_context['effective_rejected_card_candidates']=rejected_card_candidates
+                phase_context['reasons']=list(external.get('reasons',[]))+phase_context['reasons']
+                external.update(phase_context)
             if self.last_observation_timestamp is not None and timestamp-self.last_observation_timestamp>2.5:
                 self.history_gap=True
             self.last_observation_timestamp=timestamp
@@ -365,14 +386,14 @@ class LiveObserver:
             elif external:
                 phase = external['phase']
                 clear_evidence=(phase=='waiting' and not external.get('reasons') and
-                    not self.detector.last_diagnostics['rejected_card_candidates'])
+                    not rejected_card_candidates)
                 lifecycle=self.lifecycle.observe(detections,phase,clear_evidence=clear_evidence)
                 if lifecycle['stable']:
                     if (lifecycle['round_ended'] or lifecycle['new_round']) and self.perception_pending:
                         # A mismatch survived until cards left the table; a
                         # later readable hand cannot repair that missing event.
                         self.history_gap=True
-                    if external.get('reasons') or self.detector.last_diagnostics['rejected_card_candidates']:
+                    if external.get('reasons') or rejected_card_candidates:
                         self.perception_pending=True
                     elif detections:
                         self.perception_pending=False
@@ -399,6 +420,8 @@ class LiveObserver:
             can_commit=not external or (lifecycle['stable'] and
                 (self.lifecycle.seen_round or external['phase']=='settled') and
                 not lifecycle.get('ambiguous_boundary',False))
+            if self.context_challenger:
+                can_commit=lifecycle.get('commit_allowed',False)
             emitted = boundary_events + (self.tracker.update(detections, timestamp, round_id=str(self.round)) if can_commit else [])
             self.sequence, self.last_access = sequence, time.monotonic()
             self.frame_count += 1
@@ -412,7 +435,7 @@ class LiveObserver:
                 reasons.append("Visible round context is changing; waiting for stable video evidence.")
             if lifecycle.get('ambiguous_boundary'):
                 reasons.append('The current pixels permit several round histories; exposure commits are paused until an observable boundary.')
-            if self.detector.last_diagnostics["rejected_card_candidates"]:
+            if rejected_card_candidates:
                 reasons.append("Some card-shaped regions could not be read.")
             cards = [c for c in summary["cards"].values() if c.get("on_table")]
             active_index = max(0, self.last_context.get("hand", 1) - 1) if context_stable else 0
@@ -461,7 +484,7 @@ class LiveObserver:
             observed_integrity=summary['gate']['solver_allowed'] and not self.history_gap and not unknown_removed
             if external:
                 observed_integrity=observed_integrity and lifecycle['stable'] and not self.perception_pending
-                observed_integrity=observed_integrity and not external.get('reasons') and not self.detector.last_diagnostics['rejected_card_candidates']
+                observed_integrity=observed_integrity and not external.get('reasons') and not rejected_card_candidates
             count_reliable=self.fresh_shoe and observed_integrity
             if self.layout:
                 # This prototype does not yet verify backs or full event
@@ -473,7 +496,7 @@ class LiveObserver:
                 # visible-hand basic-policy recommendation.
                 allowed_gate=(lifecycle['stable'] and len(player_ranks)>=2 and len(dealer)==1
                     and self.phase=='player' and bool(allowed) and not external.get('reasons')
-                    and not self.detector.last_diagnostics['rejected_card_candidates']
+                    and not rejected_card_candidates
                     and not unreadable_active and not unreadable_dealer)
             decision = None
             advice = None
@@ -579,6 +602,7 @@ class LiveObserver:
                     "recognition_profile": external.get('profile', 'lab-template') if external else 'lab-template',
                     "table_bounds": external.get('table_bounds') if external else None,
                     "visible_controls": sorted(controls),
+                    "phase_evidence": external if self.context_challenger else None,
                     "scope": "lab artwork and classic green-table printed-rank OCR; unreadable or inconsistent evidence is gated"}
             self.last_report = report
             return copy.deepcopy(report)

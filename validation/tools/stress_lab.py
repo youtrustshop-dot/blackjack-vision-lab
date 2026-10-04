@@ -252,29 +252,35 @@ def match_cards(expected, detected):
     return pairs, missed, [detected[i] for i in remaining]
 
 
-def run(manifest_path, output):
+def run(manifest_path, output, *, context_challenger=False, profiles=None):
     from bjlab.advice import recommend
     from bjlab.live import LiveObserver
     from bjlab.vision_diagnostics import candidate_revision
     path = Path(manifest_path); manifest = json.loads(path.read_text(encoding='utf-8'))
     if manifest.get('kind') != 'own-synthetic-continuous-video' or manifest.get('partition') != 'development':
         raise ValueError('This runner accepts development synthetic videos only')
+    root=Path(__file__).resolve().parents[2]
+    source_paths=['validation/tools/stress_lab.py','bjlab/live.py','bjlab/visible_phase.py','bjlab/corner_vision.py']
+    source_hashes={name:digest(root/name) for name in source_paths}
     reports = []
     for session in manifest['sessions']:
+        if profiles is not None and session['profile'] not in profiles: continue
         video, truth_path = path.parent/session['video'], path.parent/session['truth']
         if digest(video) != session['video_sha256'] or digest(truth_path) != session['truth_sha256']:
             raise ValueError('Frozen input hash mismatch')
         truth = json.loads(truth_path.read_text(encoding='utf-8'))
         observer = LiveObserver(Rules(**manifest['rules']), layout=manifest['layout'], samples=100,
-                                fresh_shoe=True, manual_turn=False)
+                                fresh_shoe=True, manual_turn=False, context_challenger=context_challenger)
         cap = cv2.VideoCapture(str(video)); index = 0; sampled = 0; metrics = Counter(); times = []; traces = []
         next_ms = 0.; opportunities = {}; inventory_max = 0; observed_rounds = set(); rc_max = 0
+        boundary_rounds = Counter(); exposure_matches = Counter(); exposure_wrong = 0
+        exposure_unmatched = 0; event_identity = {}; final_drift = {}
         try:
             while True:
                 ok, pixels = cap.read()
                 if not ok: break
                 if tuple(pixels.shape[1::-1]) != tuple(manifest['source_size']): raise ValueError('Source size changed')
-                label = truth[index]; timestamp = index*1000/manifest['fps']; index += 1
+                truth_index=index; timestamp = index*1000/manifest['fps']; index += 1
                 if timestamp+1e-6 < next_ms: continue
                 next_ms += 350
                 started = time.perf_counter()
@@ -282,7 +288,22 @@ def run(manifest_path, output):
                 result = observer.process(Image.fromarray(cv2.cvtColor(pixels, cv2.COLOR_BGR2RGB)), sampled, 1+timestamp/1000)
                 elapsed = (time.perf_counter()-started)*1000; times.append(elapsed); sampled += 1
                 # Evaluator truth is accessed only AFTER recognition returns.
+                label=truth[truth_index]
                 expected = [c for c in label['cards'] if c['presence'] != 'absent_from_pixels']
+                for event in result['events']:
+                    payload=event['payload']; kind=event['kind']
+                    if kind=='ROUND_STARTED':
+                        if expected: boundary_rounds[label['round']]+=1
+                        else: metrics['false_round_start']+=1
+                    if kind not in ('CARD_CONFIRMED','CARD_REVEALED') or payload.get('rank') is None: continue
+                    # Diagnostic geometric event association, never inference input.
+                    matched,_,_=match_cards(expected,[payload])
+                    identity=event_identity.get(payload['card_id'])
+                    if matched:
+                        identity=matched[0][0]['card_id']; event_identity[payload['card_id']]=identity
+                    if identity is None: exposure_unmatched+=1
+                    elif label['seen'].get(identity)!=payload['rank']: exposure_wrong+=1
+                    else: exposure_matches[identity]+=1
                 pairs, missed, extra = match_cards(expected, result['detections'])
                 frame = Counter(localization_missed=len(missed), localization_extra=len(extra))
                 for card, detection in pairs:
@@ -297,6 +318,7 @@ def run(manifest_path, output):
                 frame['phase_correct' if result['phase'] == phase else 'phase_wrong_or_unknown'] += 1
                 expected_inventory = Counter(label['seen'].values())
                 actual_inventory = Counter(result['state']['known_rank_counts'])
+                final_drift={k:actual_inventory[k]-expected_inventory[k] for k in ('A','2','3','4','5','6','7','8','9','10','J','Q','K')}
                 error = sum(abs(expected_inventory[k]-actual_inventory[k]) for k in set(expected_inventory)|set(actual_inventory))
                 inventory_max = max(inventory_max, error)
                 expected_rc = sum((1 if r in ('2','3','4','5','6') else -1 if r in ('10','J','Q','K','A') else 0)*n
@@ -320,6 +342,7 @@ def run(manifest_path, output):
                     if advice_correct and result['phase']=='player' and opportunity['first_usable_ms'] is None:
                         opportunity['first_usable_ms'] = timestamp+elapsed
                 if result.get('advice') and not advice_correct: frame['false_or_stale_advice'] += 1
+                if result['gate']['solver_allowed'] and not advice_correct: frame['false_actionable_state'] += 1
                 metrics.update(frame)
                 traces.append({'timestamp_ms': timestamp, 'truth_phase': phase, 'metrics': dict(frame),
                                'inventory_l1': error, 'report': result})
@@ -332,16 +355,31 @@ def run(manifest_path, output):
                         'inventory_final_l1': traces[-1]['inventory_l1'], 'observed_rc_max_abs_error': rc_max,
                         'recognized_rounds': len(observed_rounds), 'decision_opportunities': len(opportunities),
                         'timely_usable_opportunities': sum(o['first_usable_ms'] is not None and o['first_usable_ms']-o['first_ms']<=1500 for o in opportunities.values()),
+                        'first_usable_latency_ms': [o['first_usable_ms']-o['first_ms'] if o['first_usable_ms'] is not None else None for o in opportunities.values()],
+                        'round_boundaries': {'expected': len({r['round'] for r in truth if r['cards']}),
+                            'matched':len(boundary_rounds), 'duplicate':sum(max(0,n-1) for n in boundary_rounds.values()),
+                            'false':metrics['false_round_start']},
+                        'exposure_events': {'expected':len(truth[-1]['seen']),
+                            'matched_unique':len(exposure_matches),
+                            'missing':len(set(truth[-1]['seen'])-set(exposure_matches)),
+                            'duplicate':sum(max(0,n-1) for n in exposure_matches.values()),
+                            'wrong_rank':exposure_wrong,'unmatched_geometry':exposure_unmatched,
+                            'association_scope':'diagnostic zone/center association; not independently verified identity'},
+                        'inventory_final_drift_by_rank':final_drift,
                         'offline_processing_ms': {'p50': float(np.percentile(times,50)), 'p95': float(np.percentile(times,95))}})
         print(json.dumps(reports[-1]), flush=True)
     receipt = {'schema': 1, 'scope': manifest['kind'], 'manifest_sha256': digest(path),
                'candidate': candidate_revision(Path(__file__).resolve().parents[2]),
-               'reader': 'unchanged default calibrated LiveObserver; manual turn disabled',
-               'renderer_sha256': digest(__file__), 'original_provider_videos': 0, 'api_requests': 0,
+               'reader': 'unchanged calibrated card detector + visible-controls-temporal-v1' if context_challenger else 'unchanged default calibrated LiveObserver; manual turn disabled',
+               'runner_sha256': digest(__file__), 'source_hashes':source_hashes,
+               'frozen_generator_sha256':manifest.get('generator_source_sha256'),
+               'original_provider_videos': 0, 'api_requests': 0,
                'training_performed': False, 'reader_promoted': False, 'results': reports,
                'timing_scope': 'Offline decoded frame processing, not live capture-to-display',
                'not_measured': ['Independent provider generalization', 'ID switches', 'Exact event-to-card association',
                                 'Independent mathematical correctness', 'Profitability']}
+    if source_hashes!={name:digest(root/name) for name in source_paths}:
+        raise ValueError('Inference/evaluator source changed during the run')
     save_json(output, receipt)
     return receipt
 
@@ -384,11 +422,12 @@ def main():
     parser.add_argument('--rounds', type=int, default=3)
     parser.add_argument('--seed', type=int, default=4100410)
     parser.add_argument('--profiles', default=','.join(PROFILES))
+    parser.add_argument('--context-challenger', action='store_true')
     args = parser.parse_args()
     if args.command == 'generate': generate(args.output, args.rounds, args.seed, args.profiles.split(','))
     elif args.command == 'run':
         if args.manifest is None: parser.error('--manifest required')
-        run(args.manifest, args.output)
+        run(args.manifest, args.output, context_challenger=args.context_challenger, profiles=args.profiles.split(','))
     else:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         result = bulk(args.rounds, args.seed); save_json(args.output, result); print(json.dumps(result))

@@ -1,0 +1,983 @@
+{
+  "schema": 1,
+  "experiment_id": "VISION-012",
+  "partition": "development",
+  "scope": "same frozen paired three-round synthetic game; six graphics conditions",
+  "baseline": {
+    "schema": 1,
+    "scope": "own-synthetic-continuous-video",
+    "manifest_sha256": "adacad619c445c7c6fe9b6d8749ca32178a54b479ff47118af5ca056228aad84",
+    "candidate": {
+      "commit": "74802d377cba6b76d034c516b98da5c666a2bfe6",
+      "working_tree_dirty": true
+    },
+    "reader": "unchanged default calibrated LiveObserver; manual turn disabled",
+    "runner_sha256": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+    "source_hashes": {
+      "validation/tools/stress_lab.py": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+      "bjlab/live.py": "b9499eac9140a53b500b6f8ba95b87e3b54f96c93c0ddac3da4cdb17a896f525",
+      "bjlab/visible_phase.py": "a4061cb384a2b1ee769d23034d0f98931e99c99b1c1d9c1332eccb1c8bb33fae",
+      "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997"
+    },
+    "frozen_generator_sha256": "b6ad66fbd3ae80d52674229ee8fca01de1ce3b3d77aa6ac6a58cd42bf3a459b5",
+    "original_provider_videos": 0,
+    "api_requests": 0,
+    "training_performed": false,
+    "reader_promoted": false,
+    "results": [
+      {
+        "profile": "clean",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 0,
+          "localization_extra": 0,
+          "readable_expected": 310,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 87,
+          "rank_correct": 310,
+          "suit_unknown": 189,
+          "covered_wrong": 39,
+          "suit_correct": 121
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 0,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 0,
+          "missing": 20,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": -1,
+          "3": -2,
+          "4": -3,
+          "5": -2,
+          "6": -4,
+          "7": -3,
+          "8": -1,
+          "9": -1,
+          "10": 0,
+          "J": 0,
+          "Q": -1,
+          "K": -2
+        },
+        "offline_processing_ms": {
+          "p50": 289.7225000015169,
+          "p95": 464.59584000003815
+        }
+      },
+      {
+        "profile": "overlap",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 39,
+          "localization_extra": 0,
+          "readable_expected": 310,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 48,
+          "rank_correct": 310,
+          "suit_unknown": 189,
+          "suit_correct": 121
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 0,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 0,
+          "missing": 20,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": -1,
+          "3": -2,
+          "4": -3,
+          "5": -2,
+          "6": -4,
+          "7": -3,
+          "8": -1,
+          "9": -1,
+          "10": 0,
+          "J": 0,
+          "Q": -1,
+          "K": -2
+        },
+        "offline_processing_ms": {
+          "p50": 300.6891999975778,
+          "p95": 471.5017100006662
+        }
+      },
+      {
+        "profile": "rotation",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 227,
+          "localization_extra": 0,
+          "readable_expected": 310,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 15,
+          "rank_unknown": 14,
+          "suit_unknown": 118,
+          "rank_correct": 104,
+          "covered_wrong": 4
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 0,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 0,
+          "missing": 20,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": -1,
+          "3": -2,
+          "4": -3,
+          "5": -2,
+          "6": -4,
+          "7": -3,
+          "8": -1,
+          "9": -1,
+          "10": 0,
+          "J": 0,
+          "Q": -1,
+          "K": -2
+        },
+        "offline_processing_ms": {
+          "p50": 277.2205000001122,
+          "p95": 487.5964600007137
+        }
+      },
+      {
+        "profile": "faded",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 209,
+          "localization_extra": 2,
+          "readable_expected": 310,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 15,
+          "rank_unknown": 140,
+          "suit_unknown": 140
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 0,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 0,
+          "missing": 20,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": -1,
+          "3": -2,
+          "4": -3,
+          "5": -2,
+          "6": -4,
+          "7": -3,
+          "8": -1,
+          "9": -1,
+          "10": 0,
+          "J": 0,
+          "Q": -1,
+          "K": -2
+        },
+        "offline_processing_ms": {
+          "p50": 205.4016000001866,
+          "p95": 229.32760000076087
+        }
+      },
+      {
+        "profile": "clipped",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 149,
+          "localization_extra": 0,
+          "readable_expected": 250,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 15,
+          "rank_correct": 178,
+          "suit_unknown": 125,
+          "rank_unknown": 22,
+          "suit_correct": 75
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 0,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 0,
+          "missing": 20,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": -1,
+          "3": -2,
+          "4": -3,
+          "5": -2,
+          "6": -4,
+          "7": -3,
+          "8": -1,
+          "9": -1,
+          "10": 0,
+          "J": 0,
+          "Q": -1,
+          "K": -2
+        },
+        "offline_processing_ms": {
+          "p50": 237.19290000008186,
+          "p95": 406.6712699990603
+        }
+      },
+      {
+        "profile": "covered",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 170,
+          "localization_extra": 0,
+          "readable_expected": 141,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 17,
+          "rank_correct": 117,
+          "suit_unknown": 75,
+          "covered_correct": 39,
+          "suit_correct": 42,
+          "unreadable_rank_claim": 10
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 0,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 0,
+          "missing": 20,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": -1,
+          "3": -2,
+          "4": -3,
+          "5": -2,
+          "6": -4,
+          "7": -3,
+          "8": -1,
+          "9": -1,
+          "10": 0,
+          "J": 0,
+          "Q": -1,
+          "K": -2
+        },
+        "offline_processing_ms": {
+          "p50": 218.85000000111177,
+          "p95": 377.4981199989271
+        }
+      }
+    ],
+    "timing_scope": "Offline decoded frame processing, not live capture-to-display",
+    "not_measured": [
+      "Independent provider generalization",
+      "ID switches",
+      "Exact event-to-card association",
+      "Independent mathematical correctness",
+      "Profitability"
+    ]
+  },
+  "challenger": {
+    "schema": 1,
+    "scope": "own-synthetic-continuous-video",
+    "manifest_sha256": "adacad619c445c7c6fe9b6d8749ca32178a54b479ff47118af5ca056228aad84",
+    "candidate": {
+      "commit": "74802d377cba6b76d034c516b98da5c666a2bfe6",
+      "working_tree_dirty": true
+    },
+    "reader": "unchanged calibrated card detector + visible-controls-temporal-v1",
+    "runner_sha256": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+    "source_hashes": {
+      "validation/tools/stress_lab.py": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+      "bjlab/live.py": "b9499eac9140a53b500b6f8ba95b87e3b54f96c93c0ddac3da4cdb17a896f525",
+      "bjlab/visible_phase.py": "a4061cb384a2b1ee769d23034d0f98931e99c99b1c1d9c1332eccb1c8bb33fae",
+      "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997"
+    },
+    "frozen_generator_sha256": "b6ad66fbd3ae80d52674229ee8fca01de1ce3b3d77aa6ac6a58cd42bf3a459b5",
+    "original_provider_videos": 0,
+    "api_requests": 0,
+    "training_performed": false,
+    "reader_promoted": false,
+    "results": [
+      {
+        "profile": "clean",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 0,
+          "localization_extra": 0,
+          "readable_expected": 310,
+          "phase_correct": 87,
+          "rank_presence_state_correct": 87,
+          "rank_correct": 310,
+          "suit_unknown": 189,
+          "covered_correct": 39,
+          "suit_correct": 121
+        },
+        "inventory_max_l1": 3,
+        "inventory_final_l1": 0,
+        "observed_rc_max_abs_error": 2,
+        "recognized_rounds": 3,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 6,
+        "first_usable_latency_ms": [
+          806.4713666669077,
+          826.3646666661471,
+          899.4559999991907,
+          987.3255666667937,
+          1071.8435999988287,
+          949.3203666667468
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 3,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 20,
+          "missing": 0,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0,
+          "J": 0,
+          "Q": 0,
+          "K": 0
+        },
+        "offline_processing_ms": {
+          "p50": 266.1465999990469,
+          "p95": 496.0287900001277
+        }
+      },
+      {
+        "profile": "overlap",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 39,
+          "localization_extra": 0,
+          "readable_expected": 310,
+          "phase_correct": 87,
+          "rank_presence_state_correct": 48,
+          "rank_correct": 310,
+          "suit_unknown": 189,
+          "false_or_stale_advice": 21,
+          "false_actionable_state": 21,
+          "suit_correct": 121
+        },
+        "inventory_max_l1": 3,
+        "inventory_final_l1": 0,
+        "observed_rc_max_abs_error": 2,
+        "recognized_rounds": 3,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 3,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 19,
+          "missing": 1,
+          "duplicate": 1,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0,
+          "J": 0,
+          "Q": 0,
+          "K": 0
+        },
+        "offline_processing_ms": {
+          "p50": 305.3799999979674,
+          "p95": 523.6248099987279
+        }
+      },
+      {
+        "profile": "rotation",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 227,
+          "localization_extra": 0,
+          "readable_expected": 310,
+          "phase_correct": 87,
+          "rank_presence_state_correct": 15,
+          "rank_unknown": 14,
+          "suit_unknown": 118,
+          "rank_correct": 104,
+          "covered_wrong": 4
+        },
+        "inventory_max_l1": 12,
+        "inventory_final_l1": 12,
+        "observed_rc_max_abs_error": 6,
+        "recognized_rounds": 3,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 3,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 7,
+          "missing": 13,
+          "duplicate": 0,
+          "wrong_rank": 1,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": 0,
+          "3": -2,
+          "4": -1,
+          "5": -1,
+          "6": -4,
+          "7": -1,
+          "8": -1,
+          "9": 0,
+          "10": 0,
+          "J": 0,
+          "Q": -1,
+          "K": -1
+        },
+        "offline_processing_ms": {
+          "p50": 310.927399998036,
+          "p95": 495.7684800003335
+        }
+      },
+      {
+        "profile": "faded",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 209,
+          "localization_extra": 2,
+          "readable_expected": 310,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 15,
+          "rank_unknown": 140,
+          "suit_unknown": 140
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 0,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 0,
+          "missing": 20,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": -1,
+          "3": -2,
+          "4": -3,
+          "5": -2,
+          "6": -4,
+          "7": -3,
+          "8": -1,
+          "9": -1,
+          "10": 0,
+          "J": 0,
+          "Q": -1,
+          "K": -2
+        },
+        "offline_processing_ms": {
+          "p50": 216.69069999916246,
+          "p95": 237.8150699998514
+        }
+      },
+      {
+        "profile": "clipped",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 149,
+          "localization_extra": 0,
+          "readable_expected": 250,
+          "phase_correct": 87,
+          "rank_presence_state_correct": 15,
+          "rank_correct": 178,
+          "suit_unknown": 125,
+          "rank_unknown": 22,
+          "suit_correct": 75
+        },
+        "inventory_max_l1": 8,
+        "inventory_final_l1": 6,
+        "observed_rc_max_abs_error": 5,
+        "recognized_rounds": 3,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 3,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 13,
+          "missing": 7,
+          "duplicate": 1,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": 0,
+          "3": 0,
+          "4": -1,
+          "5": -1,
+          "6": -2,
+          "7": -1,
+          "8": 0,
+          "9": 0,
+          "10": 0,
+          "J": 0,
+          "Q": 0,
+          "K": -1
+        },
+        "offline_processing_ms": {
+          "p50": 264.7182000000612,
+          "p95": 385.10609999866574
+        }
+      },
+      {
+        "profile": "covered",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 170,
+          "localization_extra": 0,
+          "readable_expected": 141,
+          "phase_correct": 87,
+          "rank_presence_state_correct": 17,
+          "rank_correct": 117,
+          "suit_unknown": 75,
+          "covered_correct": 39,
+          "suit_correct": 42,
+          "unreadable_rank_claim": 10
+        },
+        "inventory_max_l1": 11,
+        "inventory_final_l1": 9,
+        "observed_rc_max_abs_error": 7,
+        "recognized_rounds": 3,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 3,
+          "matched": 3,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 20,
+          "matched_unique": 3,
+          "missing": 17,
+          "duplicate": 1,
+          "wrong_rank": 7,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": 0,
+          "3": -2,
+          "4": -1,
+          "5": -1,
+          "6": -3,
+          "7": -1,
+          "8": 0,
+          "9": 0,
+          "10": 0,
+          "J": 0,
+          "Q": 0,
+          "K": -1
+        },
+        "offline_processing_ms": {
+          "p50": 253.74849999934668,
+          "p95": 456.19383000048407
+        }
+      }
+    ],
+    "timing_scope": "Offline decoded frame processing, not live capture-to-display",
+    "not_measured": [
+      "Independent provider generalization",
+      "ID switches",
+      "Exact event-to-card association",
+      "Independent mathematical correctness",
+      "Profitability"
+    ]
+  },
+  "advice_diagnostic_breakdown": {
+    "clean": {
+      "emitted_observations": 21,
+      "wrong_basic_action": 0,
+      "outside_player_phase": 0,
+      "incomplete_table_geometry": 0
+    },
+    "overlap": {
+      "emitted_observations": 21,
+      "wrong_basic_action": 0,
+      "outside_player_phase": 0,
+      "incomplete_table_geometry": 21
+    },
+    "rotation": {
+      "emitted_observations": 0,
+      "wrong_basic_action": 0,
+      "outside_player_phase": 0,
+      "incomplete_table_geometry": 0
+    },
+    "faded": {
+      "emitted_observations": 0,
+      "wrong_basic_action": 0,
+      "outside_player_phase": 0,
+      "incomplete_table_geometry": 0
+    },
+    "clipped": {
+      "emitted_observations": 0,
+      "wrong_basic_action": 0,
+      "outside_player_phase": 0,
+      "incomplete_table_geometry": 0
+    },
+    "covered": {
+      "emitted_observations": 0,
+      "wrong_basic_action": 0,
+      "outside_player_phase": 0,
+      "incomplete_table_geometry": 0
+    }
+  },
+  "decision": "accepted as clean synthetic development context; not promoted as default or a provider reader",
+  "strict_actionable_definition": "correct basic action during player phase AND all expected table objects geometrically matched with readable ranks correct; missing hole-card back fails this measure even if move is correct",
+  "identity_limit": "exposure association is zone/center diagnostic; apparent event misses/duplicates are not independently proven physical identity errors",
+  "timing_limit": "offline confirmation delay plus processing of qualifying frame; not live capture-to-display; concurrent CPU runs, no speed superiority claim",
+  "constant_sources": true,
+  "new_independent_provider_sessions": 0,
+  "api_requests": 0,
+  "training": false,
+  "release_replaced": false,
+  "round_end_diagnostic": {
+    "baseline": {
+      "clean": {
+        "expected": 3,
+        "matched_unique": 0,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "overlap": {
+        "expected": 3,
+        "matched_unique": 0,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "rotation": {
+        "expected": 3,
+        "matched_unique": 0,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "faded": {
+        "expected": 3,
+        "matched_unique": 0,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "clipped": {
+        "expected": 3,
+        "matched_unique": 0,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "covered": {
+        "expected": 3,
+        "matched_unique": 0,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      }
+    },
+    "challenger": {
+      "clean": {
+        "expected": 3,
+        "matched_unique": 3,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "overlap": {
+        "expected": 3,
+        "matched_unique": 3,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "rotation": {
+        "expected": 3,
+        "matched_unique": 3,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "faded": {
+        "expected": 3,
+        "matched_unique": 0,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "clipped": {
+        "expected": 3,
+        "matched_unique": 3,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      },
+      "covered": {
+        "expected": 3,
+        "matched_unique": 3,
+        "duplicate": 0,
+        "false": 0,
+        "scope": "post-run visible waiting/empty evidence diagnostic; distinct observer round IDs, not exact boundary timing accuracy"
+      }
+    }
+  },
+  "clean_development_gate": {
+    "passed": true,
+    "scope": "specified clean development acceptance only; no independent provider or final holdout gate",
+    "decision_delay_budget_ms": 1500,
+    "default_promoted": false
+  },
+  "hardware": {
+    "cpu": "AMD Ryzen 5 3600, 6 cores / 12 logical processors",
+    "execution": "Windows, CPU; baseline and challenger concurrently replayed"
+  }
+}
