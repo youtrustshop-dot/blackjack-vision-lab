@@ -30,6 +30,10 @@ Index/body reconciliation uses geometry, never equal face labels. Distinct
 equal cards remain distinct. Unreadable surfaces and covered backs remain
 presence observations rather than disappearing into a missing rank. The
 observer still owns visible phase evidence, temporal confirmation and advice.
+An index and its body may straddle a declared ROI boundary: reconciliation does
+not duplicate the object merely because their centers have different zone labels.
+The emitted role uses the index center when available, otherwise the surface
+center; this is explicit geometric attribution, not learned universal role reading.
 
 ## Data and predeclared evaluation
 

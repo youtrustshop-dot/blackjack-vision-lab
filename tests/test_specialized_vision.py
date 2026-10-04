@@ -126,3 +126,22 @@ def test_native_table_crop_returns_source_coordinates_and_excludes_other_windows
     assert len(found)==1 and found[0].bbox==(138,10,40,90)
     assert np.allclose(tensors[0],91/255.)
     assert detector.last_diagnostics['native_region']==[128,0,128,128]
+
+
+def test_one_physical_card_straddling_regions_does_not_become_two_objects(tmp_path,monkeypatch):
+    import onnxruntime as ort
+    class Session:
+        def __init__(self,path,**kwargs): self.pose=Path(path).name=='pose.onnx'
+        def get_inputs(self): return [type('Input',(),{'name':'input'})()]
+        def run(self,outputs,inputs):
+            if self.pose:
+                return [np.asarray([[[10,10,50,126,0,.8,0,10,10,1,50,10,1,50,126,1,10,126,1],
+                                     [12,12,32,48,.7,0,0,12,12,1,32,12,1,32,48,1,12,48,1]]],np.float32)]
+            rank=np.full((1,14),-8,np.float32); rank[0,6]=8
+            suit=np.full((1,5),-8,np.float32); suit[0,3]=8
+            return [rank,suit]
+    monkeypatch.setattr(ort,'InferenceSession',Session)
+    detector=SpecializedCardDetector(manifest_for(tmp_path),{'dealer':(0,0,1,.5),'player:0':(0,.5,1,.5)})
+    found=detector.detect(np.zeros((128,128,3),np.uint8))
+    assert len(found)==1 and found[0].zone=='dealer' and found[0].bbox==(10,10,40,116)
+    assert detector.last_diagnostics['unmatched_surface_count']==0

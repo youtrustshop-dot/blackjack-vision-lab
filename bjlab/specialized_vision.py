@@ -137,7 +137,10 @@ class SpecializedCardDetector:
             cx,cy=np.asarray(item["quad"]).mean(axis=0)
             choices=[]
             for i,body in enumerate(bodies):
-                if i in used or body["class"]==2 or body["zone"]!=item["zone"]: continue
+                # A card can straddle a declared zone boundary. Physical
+                # reconciliation is geometry-only; index-zone attribution is
+                # retained as provenance, not used to duplicate its body.
+                if i in used or body["class"]==2: continue
                 x,y,w,h=body["bbox"]
                 if x-4<=cx<=x+w+4 and y-4<=cy<=y+h+4:
                     distance=float(np.linalg.norm(np.asarray(body["quad"])[0]-np.asarray(item["quad"])[0]))
@@ -162,6 +165,7 @@ class SpecializedCardDetector:
             "proposal_count":len(proposed),"proposals":proposed,"reconciled":reconciled,"detections":len(detections),
             "unmatched_surface_count":len(bodies)-len(used),
             "unreadable_index_count":sum(p.get('rank') is None for p in proposed if p['class']==0),
+            "zone_assignment":"Visible index center when reconciled; surface center otherwise",
             "rejected_card_candidates":len(issues),"thresholds":dict(self.thresholds),
             "score_semantics":self.manifest["score_type"],"latency_ms":(time.perf_counter()-began)*1000,
             "index_quad_scope":"Conditional index plane estimate; not observed hidden body corners"}
