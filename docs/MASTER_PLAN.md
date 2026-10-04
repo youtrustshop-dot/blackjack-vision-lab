@@ -1,6 +1,18 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Authorized API follow-up, 2026-10-05: [VISION-016](OPENAI_READER_TOURNAMENT.md).
+> Reuse of the existing OpenAI key and EUR10 total cap are resolved. Gemini is
+> deferred at the user's request because it has no credential. Scope now includes
+> reviewed native owned synthetic and historical provider-development crops.
+> Freeze 51 still inputs (44 exact unique inputs, two synthetic sessions rendered
+> six ways each, two historical provider moments); both local readers measured
+> without tuning. A canonical persistent budget and full-JSON deadline are tested.
+> OpenAI remains blocked_existing_key_unavailable: no usable credential was found
+> in the process environment or safely checked likely files. Requests/cost zero;
+> account models, balance and API latency/correctness remain unmeasured. No new
+> local training, model promotion, release replacement or strategic Poker work.
+
 > Executed specialized challenger, 2026-10-05: [VISION-015](SPECIALIZED_CARD_READER.md).
 > Real YOLO26n four-keypoint training on 8,000 owned scenes plus learned rank/suit,
 > 1,000 calibration and 1,000 frozen verification scenes. New verification complete

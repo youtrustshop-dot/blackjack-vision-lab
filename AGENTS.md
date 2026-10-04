@@ -12,10 +12,12 @@
   capabilities. Rank-only blackjack may tolerate an unknown suit; poker may not.
 - API readers return observations only. Existing math owns advice. No oracle phase,
   card annotations or hidden simulator state may enter the reader.
-- Current user authorization (2026-10-04): up to EUR10 equivalent TOTAL R&D API
-  spend across providers/configurations, synthetic owned pixels only. It supersedes
+- Current user authorization (2026-10-05): reuse the existing OpenAI key; up to
+  EUR10 equivalent TOTAL R&D API spend across providers/configurations, reviewed
+  native owned synthetic and historical provider-development crops. The user
+  explicitly requested OpenAI first and has no Gemini credential. It supersedes
   the historical zero budget, but does not provision credentials or authorize
-  purchases/recharge/payment changes. Resolve credential reuse, available account
+  purchases/recharge/payment changes. Credential reuse is resolved; establish available account
   access and a persistent worst-case ledger before enabling inference; the legacy
   runtime gate remains disarmed until these are satisfied. Unknown balance is not
   zero. Keep failures/timeouts reserved when their charges cannot be established.
@@ -23,6 +25,13 @@
   explicit request/spend limit bound to the current spending authorization epoch.
   Secrets remain in the backend environment, never chat,
   source, committed approval files or logs. See `docs/R1_READER_COMPARISON.md`.
+- Use `validation/tools/api_reader_tournament.py` and the canonical ignored
+  `artifacts/api-budget/eur10-total-20261004.json` ledger for this authorization.
+  All real Responses requests now require a durable one-attempt reservation;
+  the historical memory-budget runner cannot spend this allowance. Do not reset
+  the ledger or create another key. Preparation/local measurement is complete;
+  no more local training/tuning before actual API comparison. See
+  `docs/OPENAI_READER_TOURNAMENT.md` for the exact receipt and remaining blocker.
 - Extend `docs/VISION_EXPERIMENTS.json`; keep failed checkpoints and consumed
   regressions. Do not call contract mocks or repeated screenshots independent evidence.
 - Keep private evidence/approvals under ignored `artifacts/`. Publish aggregates only.

@@ -1,0 +1,313 @@
+{
+  "schema": 1,
+  "experiment_id": "VISION-016",
+  "parent_experiment_id": "VISION-015",
+  "status": "prepared_local_executed_api_blocked_existing_key_unavailable",
+  "frozen_perception_commit": "18bfd579c1913bfa902a096fb8a83477ce510edf",
+  "prepared_manifest_sha256": "a2790c048eada1ae90545b8065c2ac6535aa05ffc04defd61102beb6a5bf9046",
+  "oracle_sha256": "8d95af02b5eaa8fbf44a06ea1f4501a040681663b736ca46c6d1eedb51e15102",
+  "configuration_sha256": "5c9ee7c88ef4fe9ba0e75e4484629de4cd61ae40ef1b0f4a52432ba2aeeb2961",
+  "specialized_reader_manifest_sha256": "88c3b41955e0488a87a9a492056c4dd47edd249241ab4e1676923e31e7c3a4f7",
+  "source_hashes": {
+    "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+    "bjlab/ocr.py": "97e279cfc8c3872efba841b536e883202c485f83757420b96561e1f2cc78e44e",
+    "bjlab/overlap_presence.py": "769e2e24474cf2e9cba3b719b752c808ad0b398886f8e21150f6e9ccf1798029",
+    "bjlab/suit_symbols.py": "c9e6fa2ecdefc62ca2634b6ef43ed4ac00b64019d0a9a39667cfbe2e41613be8",
+    "bjlab/specialized_vision.py": "463904c27d05ac83bd5abe08d2fe3a0122910915fcd40eb2565271d22fe3e55b",
+    "bjlab/visible_phase.py": "ea1fc44edba5f1de7a2ab375abdda7b913b2987798729c711de9710161e39613",
+    "bjlab/state_reader.py": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa",
+    "bjlab/vision.py": "742f957f0e0df31f77d719a088fc3e7f648a6d6d2376ba79350a5f0158118a3c",
+    "bjlab/calibration.py": "1f92a47d97a9c398ac8ab7470ed2a725d8d4c3b921229e6b925f7cad8131a863",
+    "bjlab/openai_reader.py": "8fe27304fe02dd8172e3a6ca7dda5217a217e7642f300225a8c2dcd58d4b4bd8",
+    "bjlab/research_budget.py": "5bbfac64c0a1a858ab32368adab431b47d81d24e0fdb7a608fcba1b365846553",
+    "validation/tools/state_reader_comparison.py": "fe1ef6765129c649668fe1da4e178d2e8a881232972394e87f4791ec81523479",
+    "validation/tools/api_reader_tournament.py": "c606123e3e7f941049bb10ea7548fe792f7288b77fe2243c5458432bf2dc5f20"
+  },
+  "inputs": {
+    "planned": 51,
+    "synthetic": 48,
+    "provider_development": 3,
+    "unique_frame_ids": 44,
+    "native_crop_images": 201,
+    "synthetic_physical_sessions": 2,
+    "paired_renderings": 12,
+    "provider_moments": 2,
+    "independent_provider_sessions": 0,
+    "held_out_final": "sealed_untouched",
+    "truth_policy": "Synthetic top-index visibility-mask proxy, not independent human labels. Historical provider phase/controls/totals unannotated."
+  },
+  "local": {
+    "current-local": {
+      "planned_inputs": 51,
+      "completed": 51,
+      "timeouts": 0,
+      "not_executed": 0,
+      "reader_failures": 0,
+      "not_usable_as_player_advice": 49,
+      "rank_presence_states_correct": 23,
+      "complete_state_denominator": 48,
+      "complete_states_correct": 10,
+      "ranks_correct": 71,
+      "ranks_expected": 111,
+      "suits_correct": 40,
+      "suits_expected": 111,
+      "phase_correct": 36,
+      "phase_denominator": 48,
+      "correct_timely_player_states": 0,
+      "annotated_player_opportunity_denominator": 12,
+      "false_accepted_player_states": 2,
+      "accepted_provider_rank_errors": 0,
+      "unverifiable_provider_turn_acceptances": 0,
+      "completed_latency_ms": {
+        "p50": 88.11450000212062,
+        "p95": 230.1673000001756,
+        "max": 440.3152000013506
+      },
+      "reported_usage_upper_cost_usd": null,
+      "latency_scope": "prepared input to complete validated observation, including crop encoding; capture/display excluded",
+      "censoring_note": "Latency percentiles condition on completed results; timeouts/unexecuted stay in correctness denominators. No 2.5s claim from successful requests alone."
+    },
+    "specialized-local": {
+      "planned_inputs": 51,
+      "completed": 51,
+      "timeouts": 0,
+      "not_executed": 0,
+      "reader_failures": 0,
+      "not_usable_as_player_advice": 47,
+      "rank_presence_states_correct": 36,
+      "complete_state_denominator": 48,
+      "complete_states_correct": 17,
+      "ranks_correct": 98,
+      "ranks_expected": 111,
+      "suits_correct": 80,
+      "suits_expected": 111,
+      "phase_correct": 36,
+      "phase_denominator": 48,
+      "correct_timely_player_states": 4,
+      "annotated_player_opportunity_denominator": 12,
+      "false_accepted_player_states": 0,
+      "accepted_provider_rank_errors": 0,
+      "unverifiable_provider_turn_acceptances": 0,
+      "completed_latency_ms": {
+        "p50": 60.14879999565892,
+        "p95": 78.74149999770452,
+        "max": 107.27349999797298
+      },
+      "reported_usage_upper_cost_usd": null,
+      "latency_scope": "prepared input to complete validated observation, including crop encoding; capture/display excluded",
+      "censoring_note": "Latency percentiles condition on completed results; timeouts/unexecuted stay in correctness denominators. No 2.5s claim from successful requests alone."
+    }
+  },
+  "by_domain": {
+    "synthetic": {
+      "current-local": {
+        "planned_inputs": 48,
+        "completed": 48,
+        "timeouts": 0,
+        "not_executed": 0,
+        "reader_failures": 0,
+        "not_usable_as_player_advice": 46,
+        "rank_presence_states_correct": 20,
+        "complete_state_denominator": 48,
+        "complete_states_correct": 10,
+        "ranks_correct": 62,
+        "ranks_expected": 102,
+        "suits_correct": 36,
+        "suits_expected": 102,
+        "phase_correct": 36,
+        "phase_denominator": 48,
+        "correct_timely_player_states": 0,
+        "annotated_player_opportunity_denominator": 12,
+        "false_accepted_player_states": 2,
+        "accepted_provider_rank_errors": 0,
+        "unverifiable_provider_turn_acceptances": 0,
+        "completed_latency_ms": {
+          "p50": 83.69590000074822,
+          "p95": 233.13939999898136,
+          "max": 440.3152000013506
+        },
+        "reported_usage_upper_cost_usd": null,
+        "latency_scope": "prepared input to complete validated observation, including crop encoding; capture/display excluded",
+        "censoring_note": "Latency percentiles condition on completed results; timeouts/unexecuted stay in correctness denominators. No 2.5s claim from successful requests alone."
+      },
+      "specialized-local": {
+        "planned_inputs": 48,
+        "completed": 48,
+        "timeouts": 0,
+        "not_executed": 0,
+        "reader_failures": 0,
+        "not_usable_as_player_advice": 44,
+        "rank_presence_states_correct": 36,
+        "complete_state_denominator": 48,
+        "complete_states_correct": 17,
+        "ranks_correct": 96,
+        "ranks_expected": 102,
+        "suits_correct": 80,
+        "suits_expected": 102,
+        "phase_correct": 36,
+        "phase_denominator": 48,
+        "correct_timely_player_states": 4,
+        "annotated_player_opportunity_denominator": 12,
+        "false_accepted_player_states": 0,
+        "accepted_provider_rank_errors": 0,
+        "unverifiable_provider_turn_acceptances": 0,
+        "completed_latency_ms": {
+          "p50": 60.161400004290044,
+          "p95": 79.33936999797879,
+          "max": 107.27349999797298
+        },
+        "reported_usage_upper_cost_usd": null,
+        "latency_scope": "prepared input to complete validated observation, including crop encoding; capture/display excluded",
+        "censoring_note": "Latency percentiles condition on completed results; timeouts/unexecuted stay in correctness denominators. No 2.5s claim from successful requests alone."
+      }
+    },
+    "provider": {
+      "current-local": {
+        "planned_inputs": 3,
+        "completed": 3,
+        "timeouts": 0,
+        "not_executed": 0,
+        "reader_failures": 0,
+        "not_usable_as_player_advice": 3,
+        "rank_presence_states_correct": 3,
+        "complete_state_denominator": 0,
+        "complete_states_correct": 0,
+        "ranks_correct": 9,
+        "ranks_expected": 9,
+        "suits_correct": 4,
+        "suits_expected": 9,
+        "phase_correct": 0,
+        "phase_denominator": 0,
+        "correct_timely_player_states": 0,
+        "annotated_player_opportunity_denominator": 0,
+        "false_accepted_player_states": 0,
+        "accepted_provider_rank_errors": 0,
+        "unverifiable_provider_turn_acceptances": 0,
+        "completed_latency_ms": {
+          "p50": 175.90990000462625,
+          "p95": 194.72755000024335,
+          "max": 196.81839999975637
+        },
+        "reported_usage_upper_cost_usd": null,
+        "latency_scope": "prepared input to complete validated observation, including crop encoding; capture/display excluded",
+        "censoring_note": "Latency percentiles condition on completed results; timeouts/unexecuted stay in correctness denominators. No 2.5s claim from successful requests alone."
+      },
+      "specialized-local": {
+        "planned_inputs": 3,
+        "completed": 3,
+        "timeouts": 0,
+        "not_executed": 0,
+        "reader_failures": 0,
+        "not_usable_as_player_advice": 3,
+        "rank_presence_states_correct": 0,
+        "complete_state_denominator": 0,
+        "complete_states_correct": 0,
+        "ranks_correct": 2,
+        "ranks_expected": 9,
+        "suits_correct": 0,
+        "suits_expected": 9,
+        "phase_correct": 0,
+        "phase_denominator": 0,
+        "correct_timely_player_states": 0,
+        "annotated_player_opportunity_denominator": 0,
+        "false_accepted_player_states": 0,
+        "accepted_provider_rank_errors": 0,
+        "unverifiable_provider_turn_acceptances": 0,
+        "completed_latency_ms": {
+          "p50": 60.14879999565892,
+          "p95": 63.322649999463465,
+          "max": 63.67529999988619
+        },
+        "reported_usage_upper_cost_usd": null,
+        "latency_scope": "prepared input to complete validated observation, including crop encoding; capture/display excluded",
+        "censoring_note": "Latency percentiles condition on completed results; timeouts/unexecuted stay in correctness denominators. No 2.5s claim from successful requests alone."
+      }
+    }
+  },
+  "api": {
+    "actual_requests": 0,
+    "incurred_cost_usd": "0",
+    "cloud_correctness": null,
+    "cloud_latency": null,
+    "openai_status": "blocked_existing_key_unavailable",
+    "credential_choice": "reuse_existing_no_new_key",
+    "gemini_status": "not_executed_no_credential_user_requested_openai_first",
+    "balance_free_credits_auto_recharge": "unknown, not zero or disabled",
+    "approved_total_cap_eur": "10",
+    "working_cap_usd": "8",
+    "ledger": {
+      "requests_attempted": 0,
+      "max_requests": 90,
+      "max_usd": "8",
+      "accounted_upper_usd": "0",
+      "unknown_charge_requests": 0,
+      "network_attempts_claimed": 0,
+      "unknown_charge_reserved_usd": "0",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    },
+    "pending_configs": [
+      "gpt-6-luna Standard none",
+      "gpt-6-luna Fast none, paired subset",
+      "gpt-6.1-sol low, at most three residual cases"
+    ],
+    "account_model_access": "unverified; read-only model listing refused locally because credential absent"
+  },
+  "protocol": {
+    "deadline_ms": 3000,
+    "target_p95_ms": 2500,
+    "completion": "Complete JSON validated, no first-token shortcut; late responses discarded.",
+    "cost": "Full-context worst-case per-call bound incl long-context/cache-write/Fast multipliers; release only verified reported-usage upper cost. Unknown charges retained.",
+    "hybrid": "Offline A->Luna and B->Luna replay, gate-only routing. No truth-directed selection; combined latency expired.",
+    "scope": "Prepared native development stills, not capture-to-display, R2 identities or universal provider transfer.",
+    "no_new_training": true,
+    "no_runtime_default_promotion": true,
+    "suit_metric": "Zone/rank/suit multiset agreement, not geometric per-card accuracy.",
+    "api_pairing": "Fast and Sol compare only with Standard on the same selected inputs; no global-vs-subset latency shortcut."
+  },
+  "decision": "Do not promote a reader. Complete the authorized OpenAI comparison once the existing credential is accessible. No more local tuning before that result.",
+  "candidate_source_commit": "2f3d62d",
+  "preservation": {
+    "published_v1_1_1_artifacts": [
+      {
+        "file": "bjlab-backend.exe",
+        "sha256": "a1521f6af640c31c151ff929aea4eda5adbdcd88d550d35dd4b5e2677d278613",
+        "matches_previous": true
+      },
+      {
+        "file": "Blackjack Vision Lab_1.1.1_x64-setup.exe",
+        "sha256": "e3b4e86556cd6b02786f3f478d556c6bb4a0db56502a13bf52356a9cd94b34d8",
+        "matches_previous": true
+      },
+      {
+        "file": "Blackjack Vision Lab.exe",
+        "sha256": "88ee9cc2334f04517575f3e5ec0733e6b59b60435c64e49e81c63f10b4663b64",
+        "matches_previous": true
+      },
+      {
+        "file": "WebView2Loader.dll",
+        "sha256": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5",
+        "matches_previous": true
+      }
+    ],
+    "native_build_performed": false,
+    "release_replaced": false,
+    "poker_strategy_changed": false
+  },
+  "tests": {
+    "python_full_suite": {
+      "passed": 553,
+      "subtests": 10,
+      "warnings": 2,
+      "elapsed_seconds": 74.47
+    },
+    "focused_contracts": {
+      "passed": 63,
+      "elapsed_seconds": 2.68
+    },
+    "evidence_check": "passed",
+    "actual_api_inference_tested": false,
+    "frontend_or_native_tested_this_increment": false
+  }
+}

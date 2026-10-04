@@ -4,7 +4,7 @@
     "version": "1.1.1",
     "commit": "4f074efd53066a95d64ca1ed53de03479a8adcba"
   },
-  "parent_commit": "94638a3",
+  "parent_commit": "18bfd579c1913bfa902a096fb8a83477ce510edf",
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
@@ -33,11 +33,11 @@
     },
     {
       "id": "synthetic-api-tournament",
-      "stage": "Request-to-validated-state comparison",
-      "candidate": "available Gemini Flash/Lite, Luna Standard/Fast, Sol residual hard cases",
+      "stage": "Reviewed native development OpenAI tournament",
+      "candidate": "gpt-6-luna Standard/Fast; gpt-6.1-sol residual cases; Gemini deferred",
       "status": "not_executable",
-      "finding": "EUR10 aggregate synthetic-only spending ceiling accepted, but required credential reuse/create choice and account access unresolved. Actual API requests and spend zero; cloud accuracy and p50/p95 unmeasured. Runtime remains disarmed; no paid balance probe.",
-      "evidence": "docs/INDEPENDENT_READER_DECISION.md"
+      "finding": "Credential reuse/EUR10 total/synthetic+provider-native crop scope resolved. 51 stills (44 exact unique) and local comparison prepared, 201 native crops reviewed. Canonical durable reservations and complete-JSON wall deadline tested. Existing OpenAI credential unavailable; calls/cost zero; no cloud numbers.",
+      "evidence": "validation/results/api-reader-tournament/prepared-comparison.json"
     },
     {
       "id": "overlap-presence-identity",
@@ -68,7 +68,7 @@
       "stage": "R1 current hand observation",
       "candidate": "calibrated local versus OpenAI Responses image reader, at most two configurations",
       "status": "not_executable",
-      "finding": "Historical offline runner and zero-budget guard preserved. Latest EUR10 synthetic-only authorization is documented separately; credential/account prerequisites keep inference disarmed. No historical private-pixel upload authorized. Consumed stills remain 3/3 rank/presence, 1/3 conditional usable state, four suits correct and five unknown."
+      "finding": "Historical still reader/zero-budget guard preserved. VISION-016 now authorizes reviewed native historical-provider and owned-synthetic crops, with reuse resolved and one aggregate durable allowance; key access still blocks inference. Legacy memory-budget runner cannot submit real requests outside the canonical ledger."
     },
     {
       "id": "provider-session-gate",
@@ -1201,7 +1201,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "Preserve VISION-015 and sealed final holdout; resolve API credentials/account access while investigating actual graphic-domain transfer and identity instability from frozen evidence. No default release or poker expansion.",
+  "current_priority": "Run authorized same-input OpenAI comparison once existing key is accessible; no new local training/tuning before results.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1382,41 +1382,71 @@
         "multi-hand split vision",
         "profitability"
       ]
+    },
+    {
+      "experiment_id": "VISION-015",
+      "parent_experiment_id": "VISION-014",
+      "status": "executed_local_training",
+      "question": "Does one serious card/index/keypoint and learned rank/suit reader improve the frozen local baseline on same inputs and new complete sessions?",
+      "candidate_source_commit": "94638a3",
+      "baseline_commit": "77a036ac34893fda201959a55f1033d9c106308c",
+      "result": "validation/results/specialized-card-reader/comparison.json",
+      "csv": "validation/results/specialized-card-reader/sessions.csv",
+      "report": "docs/SPECIALIZED_CARD_READER.md",
+      "train_scenes": 8000,
+      "calibration_scenes": 1000,
+      "verification_scenes": 1000,
+      "pose_actual_epochs": 9,
+      "classifier_actual_epochs": 24,
+      "independent_physical_sessions": 2,
+      "distinct_engine_rounds": 12,
+      "paired_difficulty_renderings_per_session": 6,
+      "final_holdout": "sealed_untouched",
+      "api_requests": 0,
+      "actual_api_cost": 0,
+      "cloud_latency": null,
+      "cloud_correctness": null,
+      "decision": "Retain research implementation and frozen evidence; reject default/release, provider, poker and certified R2 promotion. Actual provider graphic adaptation and physical identity stability remain bottlenecks. No new model after verification.",
+      "not_measured": [
+        "New provider full video",
+        "Live capture-to-display",
+        "API inference",
+        "Automatic universal layout/phase",
+        "Poker strategy",
+        "Physical monitor/DPI/minimized capture",
+        "Economic edge"
+      ]
     }
   ],
   "latest_experiment": {
-    "experiment_id": "VISION-015",
-    "parent_experiment_id": "VISION-014",
-    "status": "executed_local_training",
-    "question": "Does one serious card/index/keypoint and learned rank/suit reader improve the frozen local baseline on same inputs and new complete sessions?",
-    "candidate_source_commit": "94638a3",
-    "baseline_commit": "77a036ac34893fda201959a55f1033d9c106308c",
-    "result": "validation/results/specialized-card-reader/comparison.json",
-    "csv": "validation/results/specialized-card-reader/sessions.csv",
-    "report": "docs/SPECIALIZED_CARD_READER.md",
-    "train_scenes": 8000,
-    "calibration_scenes": 1000,
-    "verification_scenes": 1000,
-    "pose_actual_epochs": 9,
-    "classifier_actual_epochs": 24,
-    "independent_physical_sessions": 2,
-    "distinct_engine_rounds": 12,
-    "paired_difficulty_renderings_per_session": 6,
-    "final_holdout": "sealed_untouched",
+    "experiment_id": "VISION-016",
+    "parent_experiment_id": "VISION-015",
+    "status": "prepared_local_executed_api_blocked_existing_key_unavailable",
+    "question": "Does available OpenAI Luna Standard/Fast improve frozen same-input local R1 within the total EUR10 cap and complete-JSON deadline?",
+    "baseline_commit": "18bfd579c1913bfa902a096fb8a83477ce510edf",
+    "result": "validation/results/api-reader-tournament/prepared-comparison.json",
+    "report": "docs/OPENAI_READER_TOURNAMENT.md",
+    "planned_inputs": 51,
+    "unique_frame_ids": 44,
+    "synthetic_physical_sessions": 2,
+    "paired_renderings": 12,
+    "provider_moments": 2,
     "api_requests": 0,
     "actual_api_cost": 0,
     "cloud_latency": null,
     "cloud_correctness": null,
-    "decision": "Retain research implementation and frozen evidence; reject default/release, provider, poker and certified R2 promotion. Actual provider graphic adaptation and physical identity stability remain bottlenecks. No new model after verification.",
+    "credential_choice": "reuse_existing_no_new_key",
+    "gemini": "deferred_no_credential_openai_first",
+    "decision": "Keep local readers frozen. Only existing OpenAI credential location/access remains unresolved; no promotion, training, release or Poker expansion.",
     "not_measured": [
-      "New provider full video",
-      "Live capture-to-display",
-      "API inference",
-      "Automatic universal layout/phase",
-      "Poker strategy",
-      "Physical monitor/DPI/minimized capture",
-      "Economic edge"
-    ]
+      "OpenAI model availability or inference",
+      "API latency/cost/correctness",
+      "Live hybrid capture-to-display",
+      "Independent provider video",
+      "R2 tracking identity",
+      "Final holdout"
+    ],
+    "candidate_source_commit": "2f3d62d"
   },
   "conditional_components": [
     {
@@ -1501,22 +1531,26 @@
   ],
   "api_access_policy": {
     "inference_authorized": false,
-    "authorization_epoch": "2026-10-04-synthetic-tournament-eur10",
+    "authorization_epoch": "2026-10-05-openai-native-development-eur10",
     "max_requests": 0,
     "max_usd": "0",
-    "reason": "Runtime remains disarmed pending required credential reuse choice, available account access and a persistent worst-case spend ledger. Runtime zero limits are not the user's research budget. No calls have occurred.",
+    "reason": "Runtime remains disarmed only because existing OpenAI credential/account access is unavailable. Reuse/crop/spend scope resolved; canonical ledger initialized and all exact native crops reviewed. Requests/cost zero; do not create another key.",
     "research_spending_authorization": {
       "currency": "EUR",
       "total_cap": "10",
-      "scope": "All providers/configurations combined; owned original synthetic pixels only",
+      "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
       "supersedes": "2026-10-04-zero-budget",
       "calls_executed": 0,
       "cost_incurred": "0",
-      "credential_choice": "pending_user_reuse_or_create_answer",
-      "known_environment_credentials": "OpenAI and Gemini absent; no plaintext disclosed",
+      "credential_choice": "reuse_existing_no_new_key",
+      "known_environment_credentials": "OpenAI not accessible in environment or safely checked likely files; Gemini absent and deferred by user",
       "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
-      "runtime_gate": "disarmed",
-      "record": "docs/INDEPENDENT_READER_DECISION.md"
+      "runtime_gate": "disarmed_existing_key_unavailable",
+      "record": "docs/OPENAI_READER_TOURNAMENT.md",
+      "working_cap_usd": "8",
+      "max_requests": 90,
+      "ledger": "artifacts/api-budget/eur10-total-20261004.json",
+      "existing_key_location_question": "pending; path/manager only, never plaintext"
     },
     "credit_check": {
       "status": "blocked_credit_verification",
@@ -1526,7 +1560,7 @@
       "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
       "source": "https://platform.openai.com/settings/organization/billing/overview"
     },
-    "account_actions": "No payment methods, credit purchases or auto-recharge changes authorized. Synthetic-only inference has a EUR10 aggregate ceiling but prerequisites remain unresolved.",
+    "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
     "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json"
   }
 }
