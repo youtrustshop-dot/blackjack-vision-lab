@@ -12,7 +12,7 @@
       "stage": "R1 current hand observation",
       "candidate": "calibrated local versus OpenAI Responses image reader, at most two configurations",
       "status": "not_executable",
-      "finding": "Adapter, schema and private runner implemented. Paid API comparison not executed: key setup, account models, exact crop consent and budget pending. Local consumed regressions remain 3/3 rank/presence states, 1/3 usable conditional study, four correct suits and five unknown. Phase unannotated; no independent full-state or session acceptance. See R1_READER_COMPARISON.md."
+      "finding": "Offline reader/runner prepared. Explicit zero API budget now overrides the prior paid-pilot next step. Billing requires login; free credits and auto-recharge are unknown. No inference/upload. Local historical results unchanged: 3/3 rank/presence, 1/3 conditional usable state, four suits correct and five unknown."
     },
     {
       "id": "provider-session-gate",
@@ -1142,7 +1142,7 @@
     "milestone": "M1",
     "experiment_id": "VISION-009",
     "immediate_yolo_training": "superseded in priority, retained as conditional alternative",
-    "api_comparison": "blocked: key setup, model access, exact-crop consent and bounded budget pending"
+    "api_comparison": "blocked_zero_api_budget; credit verification requires authenticated Billing access"
   },
   "iterations": [
     {
@@ -1166,8 +1166,8 @@
       "output_contract": "bjlab/state_reader.py:HandObservation",
       "privacy_and_cost_approval": null,
       "budget": {
-        "max_requests": null,
-        "max_cost": null
+        "max_requests": 0,
+        "max_cost": 0
       },
       "primary_metrics": [
         "complete_state_accuracy",
@@ -1189,7 +1189,9 @@
         "live integration",
         "Windows physical advisor"
       ],
-      "next_action": "Complete secure credential setup, then approve concrete crop/model/budget proposal before paid pilot"
+      "next_action": "Continue local-only data/annotation/protocol work. Read-only account credit verification when authenticated; no inference without new explicit approval.",
+      "blocker_code": "blocked_zero_api_budget",
+      "credit_verification_status": "blocked_credit_verification"
     }
   ],
   "conditional_components": [
@@ -1250,6 +1252,42 @@
       "source_review_scope": "README and repository listing only, 2026-10-04; no executable or asset audit",
       "license_review": "MIT shown by GitHub; separately check dependencies/assets before reuse",
       "trigger": "Implementation reuse with demonstrated savings after targeted review"
+    },
+    {
+      "id": "C10",
+      "source": "https://huggingface.co/nvidia/LocateAnything-3B",
+      "code_source": "https://github.com/NVlabs/Eagle/tree/main/Embodied",
+      "role": "Visual grounding/localization; not a complete rank/suit/session reader",
+      "status": "source_reviewed",
+      "source_review_scope": "Public model card, 2026-10-04; no weights/code downloaded or executed",
+      "license_review": "Model card specifies NVIDIA non-commercial academic/non-profit research use; code/checkpoint rights differ. No commercial adoption assumed.",
+      "trigger": "Dominant localization failure, compatible hardware and explicitly eligible research scope; no migration now"
+    },
+    {
+      "id": "C11",
+      "source": "https://github.com/GetStream/Vision-Agents",
+      "role": "Streaming/model orchestration framework, not a card-reading checkpoint",
+      "status": "source_reviewed",
+      "source_review_scope": "README and repository license listing, 2026-10-04; no installation",
+      "license_review": "Apache-2.0 code; provider/service/model costs and rights separate",
+      "trigger": "Measured transport/orchestration limitation; network latency and conversational memory do not certify card reading or shoe history"
     }
-  ]
+  ],
+  "api_access_policy": {
+    "inference_authorized": false,
+    "authorization_epoch": "2026-10-04-zero-budget",
+    "max_requests": 0,
+    "max_usd": "0",
+    "reason": "Explicit zero API budget; key presence and existing approval files are not permission. A fresh explicit approval is required even if free credits are later observed.",
+    "credit_check": {
+      "status": "blocked_credit_verification",
+      "balance": null,
+      "free_credit_balance": null,
+      "auto_recharge_enabled": null,
+      "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
+      "source": "https://platform.openai.com/settings/organization/billing/overview"
+    },
+    "account_actions": "No payment methods, credit purchases, auto-recharge changes, or inference calls authorized.",
+    "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json"
+  }
 }

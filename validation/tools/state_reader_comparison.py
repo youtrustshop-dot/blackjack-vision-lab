@@ -27,6 +27,7 @@ from bjlab.state_reader import FrameInput, ReaderResult, LocalVisionReader, anal
 from bjlab.openai_reader import ModelConfig, OpenAIVisionReader, RequestBudget, ResponsesTransport
 from bjlab.engine import Rules
 from bjlab.vision_diagnostics import candidate_revision
+from bjlab.api_access_policy import require_inference_authorization
 
 
 def digest(data):
@@ -170,6 +171,7 @@ def compare(directory, output, *, configuration=None, approval=None):
     configs = []
     budget = None
     if configuration:
+        authorization_epoch = require_inference_authorization()
         configuration_bytes = Path(configuration).read_bytes()
         configs = [ModelConfig(**c) for c in json.loads(configuration_bytes)['models']]
         if not 1 <= len(configs) <= 2 or len({c.model for c in configs}) != len(configs):
@@ -177,8 +179,10 @@ def compare(directory, output, *, configuration=None, approval=None):
         if not approval:
             raise PermissionError('The paid API comparison requires a reviewed authorization file.')
         consent = read_json(approval)
+        if consent.get('spending_authorization_epoch') != authorization_epoch:
+            raise PermissionError('blocked_stale_spending_authorization')
         budget, allowed = authorize(consent, records, configs, digest(configuration_bytes), digest(manifest_bytes))
-        transport = ResponsesTransport()
+        transport = ResponsesTransport(authorization_epoch=authorization_epoch)
         available = set(transport.available_models())
         if any(c.model not in available for c in configs):
             raise PermissionError('A configured model is not listed as available to this account.')
@@ -234,7 +238,7 @@ def compare(directory, output, *, configuration=None, approval=None):
         cost = summaries[reader.name]['cost_usd']
         summaries[reader.name]['cost_per_correct_usable_rank_state_usd'] = str(Decimal(cost)/useful) if cost is not None and useful else None
     root = Path(__file__).resolve().parents[2]
-    components = ['bjlab/state_reader.py', 'bjlab/openai_reader.py',
+    components = ['bjlab/state_reader.py', 'bjlab/openai_reader.py', 'bjlab/api_access_policy.py',
                   'validation/tools/state_reader_comparison.py', 'bjlab/corner_vision.py',
                   'bjlab/calibration.py', 'bjlab/ocr.py', 'bjlab/suit_symbols.py',
                   'bjlab/engine.py', 'bjlab/advice.py']
@@ -250,9 +254,17 @@ def compare(directory, output, *, configuration=None, approval=None):
                              'correct_usable_state_fraction': .95, 'false_accepted_states': 0, 'p95_ms': 5000},
               'scope': 'R1 consumed screenshot regression; no independent generalization or live/session claim',
               'readers': summaries, 'api_comparison_executed': bool(configs),
-              'api_blockers': [] if configs else ['API credential decision, model access, crop consent and budget pending'],
+              'api_blockers': [],
               'decision': 'inconclusive', 'original_provider_sessions': 0,
               'budget': budget.receipt() if budget else None}
+    # A local report records the active denial, not a stale key-setup assumption.
+    # Billing balances and secrets never belong in benchmark reports.
+    if not configs:
+        try:
+            require_inference_authorization()
+        except PermissionError as exc:
+            report['api_blockers'].append(str(exc))
+        report['api_blockers'].append('Account credits/access and exact-crop consent unverified')
     write_json(output/'summary.json', report)
     return report
 

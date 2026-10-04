@@ -8,8 +8,14 @@
   capabilities. Rank-only blackjack may tolerate an unknown suit; poker may not.
 - API readers return observations only. Existing math owns advice. No oracle phase,
   card annotations or hidden simulator state may enter the reader.
-- No paid inference or upload without reviewed native crops, account access and an
-  explicit request/spend limit. Secrets remain in the backend environment, never chat,
+- Current API budget is zero. No inference, including credit-funded inference,
+  without fresh explicit user approval. A saved key or old approval is not consent.
+  Billing verification is read-only; do not buy credits, add payment methods or
+  change auto-recharge. Unknown balance is not zero: use blocked_credit_verification;
+  blocked_no_free_credits requires verified absence. Continue independent local work.
+- Future inference/upload requires reviewed native crops, account access and an
+  explicit request/spend limit bound to the current spending authorization epoch.
+  Secrets remain in the backend environment, never chat,
   source, committed approval files or logs. See `docs/R1_READER_COMPARISON.md`.
 - Extend `docs/VISION_EXPERIMENTS.json`; keep failed checkpoints and consumed
   regressions. Do not call contract mocks or repeated screenshots independent evidence.

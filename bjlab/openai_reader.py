@@ -15,6 +15,7 @@ import time
 from threading import Lock
 
 from .state_reader import FrameInput, HandObservation, ReaderResult
+from .api_access_policy import require_inference_authorization
 
 API_ROOT = 'https://api.openai.com/v1'
 PROMPT = '''Read the visible blackjack table, not its strategy. The images are one
@@ -95,12 +96,16 @@ class RequestBudget:
 
 
 class ResponsesTransport:
-    def __init__(self, api_key=None):
+    def __init__(self, api_key=None, *, authorization_epoch=None):
+        self._authorization_epoch = authorization_epoch
         self._key = api_key or os.environ.get('OPENAI_API_KEY')
         if not self._key:
             raise PermissionError('OPENAI_API_KEY is not configured.')
 
     def post(self, payload, timeout):
+        epoch = require_inference_authorization(self._authorization_epoch)
+        if self._authorization_epoch is None or epoch != self._authorization_epoch:
+            raise PermissionError('blocked_missing_spending_authorization')
         import httpx  # already pinned in the project's dev dependencies
         with httpx.Client(trust_env=False, follow_redirects=False, timeout=timeout) as client:
             with client.stream('POST', API_ROOT+'/responses',

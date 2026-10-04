@@ -1,7 +1,9 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
-> Repository reconciliation, 2026-10-04: the v1.1 priority is accepted. M0 consolidation and the offline M1 reader/runner are implemented on top of candidate 478d1a9. Paid API comparison is blocked pending key setup, account model verification, exact-crop consent and a bounded budget. No new YOLO training, release replacement, or Poker strategy expansion is authorized by this milestone. The following 15 sections preserve the supplied plan; their historical facts are attributed to that supplied review, not new executions. Actual runs are in VISION_EXPERIMENTS.json and R1_READER_COMPARISON.md.
+> Current user override, 2026-10-04: API budget **zero**, inference **not authorized**. The user reports a safely saved key; this does not authorize spending or image upload. Read-only Billing access redirected to login, so balance, free credits and auto-recharge remain unknown (blocked_credit_verification). Even observed credits would require fresh explicit approval before inference. Do not buy credits, add payment methods or change auto-recharge. Continue independent local preparation, measurement and candidate study; no immediate YOLO training, release replacement or Poker expansion.
+
+> Repository reconciliation, 2026-10-04: the v1.1 priority is accepted. M0 consolidation and the offline M1 reader/runner are implemented on top of candidate 478d1a9. The API comparison is now blocked_zero_api_budget; access, exact-crop consent and future explicit allowance remain unverified. The following 15 sections preserve the supplied plan; their historical facts are attributed to that supplied review, not new executions. The override above takes precedence over older paid-pilot suggestions. Actual runs are in VISION_EXPERIMENTS.json and R1_READER_COMPARISON.md.
 
 Repository: youtrustshop-dot/blackjack-vision-lab
 Destinazione proposta: docs/MASTER_PLAN.md

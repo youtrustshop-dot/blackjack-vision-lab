@@ -278,6 +278,9 @@ def test_paid_runner_missing_authorization_does_no_network(tmp_path, monkeypatch
 
 def test_runner_records_reader_error_and_keeps_failed_state_in_denominator(tmp_path, monkeypatch):
     from bjlab.state_reader import ReaderResult
+    policy = tmp_path/'policy.json'
+    write_json(policy, {'api_access_policy': {'inference_authorized': False}})
+    monkeypatch.setattr('bjlab.api_access_policy.MATRIX', policy)
     source = tmp_path/'source.png'
     Image.new('RGB', (200, 100), 'green').save(source)
     manifest = tmp_path/'manifest.json'
@@ -296,4 +299,5 @@ def test_runner_records_reader_error_and_keeps_failed_state_in_denominator(tmp_p
     assert result['rank_presence_states_correct'] == 0
     assert result['complete_state_accuracy'] is None
     assert not report['api_comparison_executed']
+    assert 'blocked_zero_api_budget' in report['api_blockers']
     assert 'private-source-text' not in (tmp_path/'run/private-results.json').read_text()

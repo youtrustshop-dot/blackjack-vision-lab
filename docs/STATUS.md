@@ -1,21 +1,31 @@
 # Current increment — M1 offline reader comparison (API blocked)
 
-The accepted [master plan v1.1](MASTER_PLAN.md) is now the active priority.
-The reader interface, calibrated-local wrapper, structured Responses API adapter
-and private runner are implemented on top of candidate `478d1a9`. No API call or
-upload has occurred. Key setup, account model verification, exact-crop consent
-and bounded budget are pending; no model ID or rate has been invented.
+The accepted [master plan v1.1](MASTER_PLAN.md) remains active, with the user's
+explicit zero-API-budget override. The key is reported saved; it is not consent.
+The real inference transport and runner now deny zero/revoked budgets and stale
+spending approvals before network requests. No inference or upload has occurred.
+Read-only Billing redirected to login: balance, free credits and auto-recharge are
+unknown (`blocked_credit_verification`). Inference is independently
+`blocked_zero_api_budget`, even if credits are later observed, pending fresh approval.
+No payment method, credit purchase or auto-recharge change was performed.
 
 Executed local regression: three consumed images / two game moments, 3/3 exact
 rank/presence states, 4 correct suits and 5 unknown, **1/3 usable conditional rank
 study**. Complete state accuracy is unknown without phase/controls annotations.
 No detector improvement, independent session acceptance or reader promotion.
 
-Executed source checks: **492 Python tests + 10 subtests passed**; evidence
-consistency passed. Contract fakes are not API-quality measurements. No frontend,
+Executed source checks: **504 Python tests + 10 subtests passed** (60.09 seconds);
+52 reader/policy contract tests passed separately before the final runner-report
+change. The prior 492-test receipt remains historical. Contract fakes are not
+API-quality measurements. No frontend,
 native packaging or physical advisor checks in this increment. Published desktop
 1.1.1, Poker Phase 0, old live timeouts and the candidate PR dependency chain are
 preserved. [Detailed scope and runnable commands](R1_READER_COMPARISON.md).
+
+Future API names/prices are documentation-only proposals, with illustrative token
+costs and no runnable allowance. LocateAnything-3B and Vision Agents are conditional
+source reviews in the existing matrix, not installations, experiments or a
+framework migration. [Zero-budget source checks](../validation/results/r1-reader-comparison/zero-budget-policy-checks.json).
 
 The previous candidate records below retain their original evidence scope.
 
