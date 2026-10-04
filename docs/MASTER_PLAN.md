@@ -1,6 +1,8 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> User-authorized local simulation extension, 2026-10-04: generate own continuous stress videos while provider capture is unavailable. Existing engine reused; six paired three-round development variants and a 200000-round invariant batch executed. Unchanged reader has unknown phase on all sampled frames; no training or promotion. This does not replace the original-provider video milestone. See SYNTHETIC_STRESS_LAB.md and VISION-011.
+
 > Current user override, 2026-10-04: API budget **zero**, inference **not authorized**. The user reports a safely saved key; this does not authorize spending or image upload. Read-only Billing access redirected to login, so balance, free credits and auto-recharge remain unknown (blocked_credit_verification). Even observed credits would require fresh explicit approval before inference. Do not buy credits, add payment methods or change auto-recharge. Continue independent local preparation, measurement and candidate study; no immediate YOLO training, release replacement or Poker expansion.
 
 > Autonomous follow-up, 2026-10-04: eight new Freegames native browser stills and one bounded surface/index challenger were evaluated locally. The seam **2 → 7** failure is corrected in development, but BrainPlay regresses and phase/suits remain incomplete. No reader promotion. Continuous capture remains blocked by unavailable verified native/source-picker controls; these sparse stills are explicitly not R2 session evidence. See [the executed probe](FREEGAMES_SURFACE_PROBE.md) and VISION-010 in the existing matrix. The installed release and zero API budget are unchanged.

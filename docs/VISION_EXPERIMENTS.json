@@ -8,6 +8,14 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "synthetic-continuous-stress",
+      "stage": "Local controlled continuous video and engine stress",
+      "candidate": "Existing Blackjack engine, six original visual variants, unchanged calibrated LiveObserver",
+      "status": "executed",
+      "finding": "200000 engine invariant rounds passed. Six paired 3-round development clips: clean 310/310 rank observations, phase unknown in all 522 sampled frames; 0/36 paired decision opportunities timely usable. Rotations/fading remain weak. No promotion.",
+      "evidence": "validation/results/synthetic-stress-lab/summary.json"
+    },
+    {
       "id": "freegames-neutral-index",
       "stage": "Native development stills / surface and corner proposals",
       "candidate": "neutral bright mask + upright index row; same local OCR and initial ROI",
@@ -1232,6 +1240,30 @@
         "API inference"
       ],
       "report": "docs/FREEGAMES_SURFACE_PROBE.md"
+    },
+    {
+      "experiment_id": "VISION-011",
+      "parent_experiment_id": "VISION-010",
+      "question": "Can original local continuous stress videos expose perception and context failures without provider capture?",
+      "status": "executed",
+      "split": "development",
+      "evidence_kind": "own synthetic continuous VP8 video, same paired game seed",
+      "assistance": "initial ROI only; manual turn disabled; truth accessed after inference",
+      "budget": {
+        "max_requests": 0,
+        "max_cost": 0
+      },
+      "reader_id": "unchanged default calibrated LiveObserver",
+      "result": "validation/results/synthetic-stress-lab/summary.json",
+      "decision": "laboratory extension accepted; detector not promoted; phase/context is required even on clean input",
+      "report": "docs/SYNTHETIC_STRESS_LAB.md",
+      "what_was_not_tested": [
+        "External provider generalization",
+        "Visual split hands",
+        "ID switches",
+        "New model training",
+        "Profitability"
+      ]
     }
   ],
   "conditional_components": [
