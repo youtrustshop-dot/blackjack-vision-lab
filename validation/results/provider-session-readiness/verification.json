@@ -3,6 +3,8 @@
   "version": "1.1.1",
   "status": "unreleased-source-verified",
   "parent_commit": "de3d9bea6bf94d31f498c65dcd53cff3489c0e73",
+  "tested_code_commit": "91f5005c4f6314738e1f8f003511c3dca47ada69",
+  "commit_scope": "Full suite for modified core plus focused verification of the final replay module; later receipt binding is metadata-only. Frontend result is explicitly historical.",
   "tests": {
     "python_passed": 449,
     "python_subtests": 10,
