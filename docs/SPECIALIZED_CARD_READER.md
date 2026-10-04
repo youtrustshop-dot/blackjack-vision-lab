@@ -128,6 +128,23 @@ for actual executed commands and result hashes. `--export-only` can re-export
 the **verified own** tensor checkpoints without retraining; old failures stay
 on disk and export alone does not reopen verification.
 
+After calibration, the `select` command binds both new corpora to one reader
+without opening their labels. A second selection for the same corpora is refused.
+
+```powershell
+$baseline = 'artifacts/reader-tournament-r1-20261004/baseline-77a036a'
+& $python -m validation.tools.specialized_card_compare select --data "$research/data" --reader "$research/learning-full/reader.json" --new-sessions "$research/new-sessions" --baseline-root $baseline --calibration-result "$research/results/specialized-calibration.json" --output "$research/selected-reader.json"
+& $python -m validation.tools.specialized_card_compare perception --data "$research/data" --partition verification --selection "$research/selected-reader.json" --output "$research/results/current-local-verification.json"
+& $python -m validation.tools.specialized_card_compare perception --data "$research/data" --partition verification --reader "$research/learning-full/reader.json" --selection "$research/selected-reader.json" --output "$research/results/specialized-verification.json"
+& $python -m validation.tools.specialized_card_compare sessions --data "$research/new-sessions" --partition validation --baseline-root $baseline --selection "$research/selected-reader.json" --output "$research/results/current-local-new-sessions.json"
+& $python -m validation.tools.specialized_card_compare sessions --data "$research/new-sessions" --partition validation --reader "$research/learning-full/reader.json" --selection "$research/selected-reader.json" --output "$research/results/specialized-new-sessions.json"
+```
+
+These commands run paired jobs once, in separate sequential processes; they are
+not a script that may repeatedly tune on verification. Copying a result/receipt
+does not constitute new evidence. Remaining API comparisons do not consume the
+historical final holdout either.
+
 ## API boundary
 
 The aggregate EUR10 synthetic-only allowance is retained. Credentials, billing

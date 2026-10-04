@@ -77,6 +77,43 @@ def verification_complete(claim, output):
     save(ledger_path,ledger)
 
 
+def freeze_selection(data,reader_path,new_sessions,baseline_root,calibration_result,output):
+    """Bind the unconsumed corpora to one evaluated configuration, without labels."""
+    from validation.tools.overlap_session import sources
+    root=Path(__file__).resolve().parents[2]
+    data=Path(data).resolve(); new_sessions=Path(new_sessions).resolve()
+    baseline_root=Path(baseline_root).resolve(); output=Path(output).resolve()
+    bindings=[data/'verification-selection.json',new_sessions/'verification-selection.json']
+    if output.exists() or any(p.exists() for p in bindings):
+        raise ValueError("Selection already frozen; a new version needs fresh verification corpora")
+    calibration=json.loads(Path(calibration_result).read_text(encoding='utf-8'))
+    manifest=json.loads((data/'manifest.json').read_text(encoding='utf-8'))
+    current=sources(root); baseline=sources(baseline_root)
+    if (calibration['partition']!='calibration' or calibration['data_manifest_sha256']!=digest(data/'manifest.json')
+        or calibration['reader_manifest_sha256']!=digest(reader_path)
+        or calibration['source_hashes']!=current or calibration['evaluator_sha256']!=digest(__file__)
+        or calibration['counts']['frames']!=manifest['partitions']['calibration']['count']):
+        raise ValueError("Selection needs the complete unchanged calibration run")
+    for name in ('bjlab/corner_vision.py','bjlab/external_vision.py','bjlab/ocr.py','bjlab/calibration.py','bjlab/vision.py'):
+        if current[name]!=baseline[name]: raise ValueError("Current local perception is not the frozen baseline")
+    freeze=json.loads((new_sessions/'freeze.json').read_text(encoding='utf-8'))
+    session_manifest=new_sessions/freeze['manifests']['validation']['path']
+    if digest(session_manifest)!=freeze['manifests']['validation']['sha256']:
+        raise ValueError("New session manifest changed")
+    selection={"schema":1,"reader_sha256":digest(reader_path),"data_manifest_sha256":digest(data/'manifest.json'),
+        "evaluator_sha256":digest(__file__),"calibration_result_sha256":digest(calibration_result),
+        "verification_previously_used":False,"purpose":"Freeze one challenger for measurement; not a champion promotion",
+        "verification_jobs":{
+            "perception-current":{"corpus_sha256":digest(data/'manifest.json'),"source_hashes":current},
+            "perception-specialized":{"corpus_sha256":digest(data/'manifest.json'),"source_hashes":current},
+            "sessions-current":{"corpus_sha256":digest(session_manifest),"source_hashes":baseline},
+            "sessions-specialized":{"corpus_sha256":digest(session_manifest),"source_hashes":current}},
+        "api_requests":0,"historical_final_holdout":"sealed_untouched"}
+    save(output,selection)
+    for binding in bindings: save(binding,selection)
+    print(json.dumps({"selection_sha256":digest(output),"jobs":list(selection['verification_jobs'])}),flush=True)
+
+
 def geometry_pairs(expected,detected):
     """Maximum global IoU assignment; labels/face values never affect pairing."""
     from scipy.optimize import linear_sum_assignment
@@ -104,6 +141,8 @@ def load_corpus(data,partition,selection=None):
         frozen=json.loads(Path(selection).read_text(encoding="utf-8"))
         if frozen["data_manifest_sha256"]!=digest(data/"manifest.json"): raise ValueError("Wrong selected corpus")
         if frozen.get("verification_previously_used") is not False: raise ValueError("Consumed verification is historical regression only")
+        binding=data/'verification-selection.json'
+        if not binding.exists() or digest(binding)!=digest(selection): raise ValueError("Corpus is not bound to this frozen selection")
     return manifest,json.loads((data/f"{partition}.truth.json").read_text(encoding="utf-8"))
 
 
@@ -206,6 +245,8 @@ def sessions(corpus,partition,output,reader_path=None,profiles=None,selection=No
         raise ValueError("Baseline sessions require an explicit frozen code root")
     claim=verification_claim(selection,"sessions-specialized" if reader_path else "sessions-current",
                              digest(manifest_path),reader_path,code_root) if freeze.get("verification_status") else None
+    if claim is not None and digest(corpus/'verification-selection.json')!=digest(selection):
+        raise ValueError("Session corpus is not bound to this frozen selection")
     manifest=json.loads(manifest_path.read_text(encoding="utf-8"))
     manifest.update(partition="development" if partition=="development" else "verification",original_partition=partition)
     for session in manifest["sessions"]:
@@ -244,11 +285,15 @@ def sessions(corpus,partition,output,reader_path=None,profiles=None,selection=No
 
 
 if __name__=="__main__":
-    parser=argparse.ArgumentParser(); parser.add_argument("command",choices=("perception","sessions"))
-    parser.add_argument("--data",type=Path,required=True); parser.add_argument("--partition",required=True)
+    parser=argparse.ArgumentParser(); parser.add_argument("command",choices=("perception","sessions","select"))
+    parser.add_argument("--data",type=Path,required=True); parser.add_argument("--partition")
     parser.add_argument("--output",type=Path,required=True); parser.add_argument("--reader",type=Path)
     parser.add_argument("--selection",type=Path); parser.add_argument("--limit",type=int); parser.add_argument("--profiles")
     parser.add_argument("--baseline-root",type=Path)
+    parser.add_argument("--new-sessions",type=Path); parser.add_argument("--calibration-result",type=Path)
     args=parser.parse_args()
     if args.command=="perception": perception(args.data,args.partition,args.output,args.reader,args.selection,args.limit)
-    else: sessions(args.data,args.partition,args.output,args.reader,args.profiles.split(',') if args.profiles else None,args.selection,args.baseline_root)
+    elif args.command=="sessions": sessions(args.data,args.partition,args.output,args.reader,args.profiles.split(',') if args.profiles else None,args.selection,args.baseline_root)
+    elif not all((args.reader,args.new_sessions,args.baseline_root,args.calibration_result)):
+        parser.error("select needs --reader, --new-sessions, --baseline-root and --calibration-result")
+    else: freeze_selection(args.data,args.reader,args.new_sessions,args.baseline_root,args.calibration_result,args.output)
