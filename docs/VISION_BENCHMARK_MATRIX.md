@@ -1,5 +1,10 @@
 # Vision benchmark: preserved first increment and learning follow-up
 
+Latest executed gate: [OVERLAP_SESSION_COMPARISON.md](OVERLAP_SESSION_COMPARISON.md),
+VISION-013. Overlap presence/identity development passes; changed-graphic R1 and
+provisional identity continuity still fail. The reference, default API and desktop
+remain preserved. Read the current matrix priority before older next-step notes.
+
 The first-increment results below are historical. The current bounded presence,
 learning, usable-state and own-session comparison is in
 [VISION_LEARNING_CHECK.md](VISION_LEARNING_CHECK.md), with sanitized executed

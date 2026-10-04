@@ -1,6 +1,8 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> User-authorized bounded overlap increment, 2026-10-04: VISION-013 is finished. Reference 5ba11d4 and historical 6/36 are preserved. Development clean/overlap both reach 6/6 rank-only R1 and full-table opportunities; overlap misses/duplicates fall 1/1 to 0/0. Two new seeds yield 7/7 per original-graphic profile but 0/7 per changed-graphic profile, with provisional identity switches retained. Keep the opt-in synthetic profile; no certified R2/default/desktop promotion. See OVERLAP_SESSION_COMPARISON.md for the capability decision and app trial boundary.
+
 > User-authorized context increment, 2026-10-04: VISION-012 uses visible controls and witnessed temporal boundaries on the frozen VISION-011 development videos. Clean improves 0/6 to 6/6 timely qualified opportunities, overall 0/36 to 6/36; five transfer variants remain incomplete. No default/release promotion, new model, paid API or Poker expansion. See SYNTHETIC_STRESS_LAB.md and the existing matrix.
 
 > User-authorized local simulation extension, 2026-10-04: generate own continuous stress videos while provider capture is unavailable. Existing engine reused; six paired three-round development variants and a 200000-round invariant batch executed. Unchanged reader has unknown phase on all sampled frames; no training or promotion. This does not replace the original-provider video milestone. See SYNTHETIC_STRESS_LAB.md and VISION-011.

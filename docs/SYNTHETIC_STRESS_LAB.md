@@ -1,5 +1,9 @@
 # Synthetic Blackjack stress laboratory
 
+Latest bounded follow-up: [OVERLAP_SESSION_COMPARISON.md](OVERLAP_SESSION_COMPARISON.md).
+It separates rank-only R1, complete visible rank/presence and R2 continuity, with
+new frozen synthetic verification. Historical results below remain unchanged.
+
 This extension reuses the existing finite-shoe Blackjack engine. It generates
 continuous original local VP8/WebM clips, a visual gallery, and separate frame
 annotations. It does not change the installed desktop release or default reader.

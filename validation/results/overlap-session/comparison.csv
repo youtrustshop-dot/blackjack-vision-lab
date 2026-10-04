@@ -1,0 +1,13 @@
+partition,group,reader,profile,sessions,opportunities,r1_timely,table_timely,backs_correct,backs_expected,missing_exposures,duplicate_exposures,wrong_exposures,id_switches,inventory_final_max_l1,wrong_basic_observations,certified_count_observations
+development,development,baseline,clean,1,6,6,6,39,39,0,0,0,0,0,0,0
+development,development,baseline,overlap,1,6,6,0,0,39,1,1,0,3,0,0,0
+development,development,candidate,clean,1,6,6,6,39,39,0,0,0,0,0,0,0
+development,development,candidate,overlap,1,6,6,6,39,39,0,0,0,0,0,0,0
+verification,graphic_variation,baseline,clean,2,7,0,0,0,63,1,1,0,9,0,0,0
+verification,graphic_variation,baseline,overlap,2,7,0,0,0,63,0,0,0,0,0,0,0
+verification,new_seed,baseline,clean,2,7,7,7,63,63,0,0,0,1,0,0,0
+verification,new_seed,baseline,overlap,2,7,7,0,0,63,0,0,0,2,0,0,0
+verification,graphic_variation,candidate,clean,2,7,0,0,63,63,0,0,0,7,0,0,0
+verification,graphic_variation,candidate,overlap,2,7,0,0,63,63,0,0,0,0,0,0,0
+verification,new_seed,candidate,clean,2,7,7,7,63,63,0,0,0,1,0,0,0
+verification,new_seed,candidate,overlap,2,7,7,7,63,63,0,0,0,2,0,0,0

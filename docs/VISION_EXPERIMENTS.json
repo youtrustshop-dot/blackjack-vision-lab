@@ -8,6 +8,14 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "overlap-presence-identity",
+      "stage": "Upright overlap presence, physical identity and disabled-control regression",
+      "candidate": "unchanged ranks + patterned blue-back localization + ordered row association + enabled control evidence",
+      "status": "executed",
+      "finding": "Development overlap 6/6 R1 and full-table opportunities, 20/20 exposure identities, no miss/duplicate. New original graphics 7/7 per profile; graphic variations 0/7 per profile despite complete rank/presence tables. Provisional identity switches remain; no R2/default promotion.",
+      "evidence": "validation/results/overlap-session/comparison.json"
+    },
+    {
       "id": "synthetic-continuous-stress",
       "stage": "Local controlled continuous video and engine stress",
       "candidate": "Existing Blackjack engine, six original visual variants, unchanged calibrated LiveObserver",
@@ -1161,7 +1169,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "VISION-012 executed: clean synthetic context accepted for development only; faded controls, rotated/cropped ranks and overlap presence remain failing transfer conditions. No default promotion.",
+  "current_priority": "VISION-013 finished. Rank-only R1 is usable within original synthetic calibrated hit/stand graphics; graphic transfer and provisional identities fail. No default, certified R2 or installed-app promotion. Decide explicit app research integration separately.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1289,6 +1297,30 @@
         "New models",
         "Poker expansion",
         "Native desktop build"
+      ]
+    },
+    {
+      "experiment_id": "VISION-013",
+      "parent_experiment_id": "VISION-012",
+      "status": "executed",
+      "question": "Can separate patterned-back presence and row identity repair overlap without losing clean, then transfer without tuning?",
+      "split": "development plus two new verification seeds; paired graphics, no provider/final holdout",
+      "reader_id": "visible-overlap-temporal-v2; rank detector unchanged",
+      "assistance": "initial card/control ROIs only; no per-turn confirmations; evaluator truth never enters observer",
+      "budget": {
+        "max_requests": 0,
+        "max_cost": 0
+      },
+      "result": "validation/results/overlap-session/comparison.json",
+      "report": "docs/OVERLAP_SESSION_COMPARISON.md",
+      "decision": "Retain opt-in synthetic rank/presence challenger; reject default/desktop and certified R2 promotion.",
+      "what_was_not_tested": [
+        "Independent provider sessions",
+        "Live capture-to-display",
+        "Native minimized capture and monitor/DPI checks",
+        "Poker/suit completeness",
+        "Rotation/fading/crop changes",
+        "Final holdout"
       ]
     }
   ],
