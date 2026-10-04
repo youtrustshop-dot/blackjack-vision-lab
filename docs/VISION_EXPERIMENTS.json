@@ -8,6 +8,14 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "freegames-neutral-index",
+      "stage": "Native development stills / surface and corner proposals",
+      "candidate": "neutral bright mask + upright index row; same local OCR and initial ROI",
+      "status": "executed",
+      "finding": "On eight new sparse Freegames stills: exact nonempty inventories 1/7 -> 6/7; correct conditional rank-study opportunities 0/5 -> 4/5. Phase unknown in all eight, suits incomplete, one missed face. Historical BrainPlay regresses. Research only, no promotion.",
+      "evidence": "validation/results/freegames-surface-probe/summary.json"
+    },
+    {
       "id": "r1-reader-comparison",
       "stage": "R1 current hand observation",
       "candidate": "calibrated local versus OpenAI Responses image reader, at most two configurations",
@@ -19,7 +27,7 @@
       "stage": "Complete original provider sessions",
       "candidate": "Freegames classic, initial calibration, manual turn disabled",
       "status": "not_executable",
-      "finding": "No original complete provider video available. Session-disjoint collection protocol and replay runner implemented; zero provider sessions executed. Current calibrated phase remains unknown. See PROVIDER_SESSION_PROTOCOL.md."
+      "finding": "Zero original complete videos. Autonomous collection attempted, but native window/source-picker controls could not provide a verified continuous recording. Eight new sparse native browser stills acquired instead; explicitly not session evidence. Calibrated phase remains unknown."
     },
     {
       "id": "proposal-cause-audit",
@@ -1142,7 +1150,8 @@
     "milestone": "M1",
     "experiment_id": "VISION-009",
     "immediate_yolo_training": "superseded in priority, retained as conditional alternative",
-    "api_comparison": "blocked_zero_api_budget; credit verification requires authenticated Billing access"
+    "api_comparison": "blocked_zero_api_budget; credit verification requires authenticated Billing access",
+    "local_followup": "VISION-010 completed as bounded development probe; original session capture remains blocked; no global reader promotion."
   },
   "iterations": [
     {
@@ -1192,6 +1201,37 @@
       "next_action": "Continue local-only data/annotation/protocol work. Read-only account credit verification when authenticated; no inference without new explicit approval.",
       "blocker_code": "blocked_zero_api_budget",
       "credit_verification_status": "blocked_credit_verification"
+    },
+    {
+      "experiment_id": "VISION-010",
+      "parent_experiment_id": "VISION-009",
+      "question": "Does a bounded surface/index-row challenger remove the reproduced seam-7 substitution without weakening integrity?",
+      "status": "executed",
+      "component_ids": [
+        "F02",
+        "F03",
+        "F04",
+        "F10"
+      ],
+      "split": "development",
+      "assistance": "one initial ROI; no per-turn flags; truth isolated after inference",
+      "baseline_commit": "a2c7f857824e099ade1b3fd66110de808435b85b",
+      "reader_id": "calibrated-corners-2-presence:neutral-index-v1",
+      "evidence_kind": "sparse browser stills, not original video",
+      "budget": {
+        "max_requests": 0,
+        "max_cost": 0
+      },
+      "result": "validation/results/freegames-surface-probe/summary.json",
+      "decision": "not_promoted; scoped development improvement with BrainPlay regression",
+      "what_was_not_tested": [
+        "continuous provider recording",
+        "independent session generalization",
+        "automatic phase",
+        "physical advisor",
+        "API inference"
+      ],
+      "report": "docs/FREEGAMES_SURFACE_PROBE.md"
     }
   ],
   "conditional_components": [

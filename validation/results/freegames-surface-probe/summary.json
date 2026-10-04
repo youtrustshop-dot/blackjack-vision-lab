@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "candidate": {
+    "commit": "a2c7f857824e099ade1b3fd66110de808435b85b",
+    "working_tree_dirty": true
+  },
+  "manifest_sha256": "47cff41d61c9e80e631d5951540cff09ad7c855c629330b213f8f1793e668c0f",
+  "ocr_checkpoint_sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+  "source_hashes": {
+    "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+    "bjlab/state_reader.py": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa",
+    "validation/tools/surface_profile_comparison.py": "5a39a364039bac5204c8740483dd76cedc148e3e7b71f3216378eee50d85490b"
+  },
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD",
+    "device": "CPU"
+  },
+  "scope": "sparse-browser-screenshots-not-continuous-video",
+  "assistance": "one initial ROI; phase truth only in evaluator",
+  "annotation_origin": "assistant pixel review; no independent human validation; development only",
+  "independent_sessions": 0,
+  "original_provider_videos": 0,
+  "api_requests": 0,
+  "timing_scope": "single cold-glyph read plus conditional analysis; excludes capture, preparation, display; no warm-up",
+  "decision": "research-only; no promotion without independent complete sessions",
+  "aggregates": {
+    "legacy": {
+      "stills": 8,
+      "rank_presence_states_correct": 2,
+      "full_card_states_correct": 1,
+      "decision_opportunities": 5,
+      "correct_conditional_rank_study_opportunities": 0,
+      "false_rank_state_acceptances": 0,
+      "complete_state_correct": 0,
+      "phase_unknown_states": 8,
+      "known_suits_correct": 1,
+      "known_suits_expected": 29,
+      "readable_suits_unknown": 27,
+      "processing_p50_ms": 309.29680000008375,
+      "processing_p95_ms": 582.434844999807,
+      "gate_reasons": {
+        "Table presence is not established.": 1,
+        "Need at least two readable player cards.": 1,
+        "Need exactly one readable dealer upcard.": 2,
+        "A card surface touches a calibrated region edge; check crop/scroll and recalibrate.": 7,
+        "Unresolved local proposals; physical presence is not established for each proposal.": 7,
+        "Player hand has already busted.": 2
+      }
+    },
+    "neutral": {
+      "stills": 8,
+      "rank_presence_states_correct": 7,
+      "full_card_states_correct": 1,
+      "decision_opportunities": 5,
+      "correct_conditional_rank_study_opportunities": 4,
+      "false_rank_state_acceptances": 0,
+      "complete_state_correct": 0,
+      "phase_unknown_states": 8,
+      "known_suits_correct": 1,
+      "known_suits_expected": 29,
+      "readable_suits_unknown": 27,
+      "processing_p50_ms": 134.10880000083125,
+      "processing_p95_ms": 274.24311999875493,
+      "gate_reasons": {
+        "Table presence is not established.": 1,
+        "Need at least two readable player cards.": 1,
+        "Need exactly one readable dealer upcard.": 2,
+        "Unresolved local proposals; physical presence is not established for each proposal.": 3
+      }
+    }
+  },
+  "capture_summary": {
+    "source": "https://freegames.org/blackjack/",
+    "source_size": [
+      1280,
+      1262
+    ],
+    "format": "native browser JPEG screenshots",
+    "stills": 8,
+    "completed_play_money_rounds": 2,
+    "additional_round_opening": 1,
+    "new_independent_sessions": 0,
+    "continuous_capture_status": "blocked_source_picker_not_exposed",
+    "windows_url_stop": "Previous turn stopped native browser control because URL could not be verified",
+    "local_recorder_attempt": "Separate local candidate reached pending sharing; source picker unavailable; test tab closed"
+  },
+  "historical_regressions": {
+    "scope": "three consumed stills, two moments, never new evidence",
+    "legacy": {
+      "exact_rank_inventories": 3,
+      "correct_conditional_rank_states": 1
+    },
+    "neutral": {
+      "exact_rank_inventories": 2,
+      "correct_conditional_rank_states": 1,
+      "negative": "BrainPlay cards lost; cropped Freegames preview still blocked"
+    }
+  },
+  "unchanged": [
+    "installed 1.1.1",
+    "default local reader",
+    "Poker Phase 0",
+    "external advisor",
+    "zero API budget"
+  ]
+}

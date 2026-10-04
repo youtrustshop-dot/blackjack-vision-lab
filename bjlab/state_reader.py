@@ -118,9 +118,16 @@ class VisionReader(Protocol):
 class LocalVisionReader:
     name = VERSION
 
+    def __init__(self, *, surface_profile='legacy'):
+        if surface_profile not in ('legacy', 'neutral'):
+            raise ValueError('Unknown surface profile.')
+        self.surface_profile = surface_profile
+        if surface_profile != 'legacy':
+            self.name = VERSION + ':neutral-index-v1'
+
     def read(self, frame):
         began = time.perf_counter()
-        detector = CornerCardDetector(frame.layout)
+        detector = CornerCardDetector(frame.layout, surface_profile=self.surface_profile)
         detections = detector.detect(Image.open(BytesIO(frame.table_png)))
         reasons = list(detector.context.get('reasons', []))
         if detector.last_diagnostics.get('rejected_card_candidates'):

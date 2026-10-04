@@ -68,22 +68,29 @@ def colored_backs(pixels):
 
 
 class CornerCardDetector:
-    def __init__(self,layout,*,minimum_score=.80):
+    def __init__(self,layout,*,minimum_score=.80,surface_profile='legacy'):
+        if surface_profile not in ('legacy','neutral'):
+            raise ValueError('Unknown surface profile.')
         self.regions=validate_layout(layout)
         self.minimum_score=minimum_score
+        # Research challenger only. The default retains the frozen baseline.
+        # Neutral bright surfaces exclude colored badges and faded table ink;
+        # tinted card stock may require the baseline instead.
+        self.surface_profile=surface_profile
         self.last_diagnostics={}
         self.context={}
         self.debug_images={}
 
     def detect(self,image):
         began=time.perf_counter(); rgb=_rgb(image); height,width=rgb.shape[:2]
-        self.debug_images={}; candidates=[]; detections=[]; rejected=0; surfaces=[]; border_artifacts=[]; geometry_reasons=[]
+        self.debug_images={}; candidates=[]; detections=[]; rejected=0; surfaces=[]; border_artifacts=[]; geometry_reasons=[]; non_index=[]
         boxes={name:region.to_pixels(width,height) for name,region in self.regions.items()}
         for zone in ('dealer','player:0'):
             zx,zy,zw,zh=boxes[zone]; pixels=rgb[zy:zy+zh,zx:zx+zw]
             self.debug_images[zone.replace(':','-')]=pixels.copy()
             hsv=cv2.cvtColor(pixels,cv2.COLOR_RGB2HSV)
-            light=cv2.inRange(hsv,np.array([0,0,145],np.uint8),np.array([179,145,255],np.uint8))
+            floor,saturation=(145,145) if self.surface_profile=='legacy' else (175,65)
+            light=cv2.inRange(hsv,np.array([0,0,floor],np.uint8),np.array([179,saturation,255],np.uint8))
             light=cv2.morphologyEx(light,cv2.MORPH_CLOSE,np.ones((3,3),np.uint8))
             self.debug_images[zone.replace(':','-')+'-surface-mask']=light
             backs=colored_backs(pixels)
@@ -129,6 +136,20 @@ class CornerCardDetector:
                 for gx,gy,gw,gh in groups:
                     # A corner should have a light surface just above/along it.
                     absolute=[zx+bx+gx,zy+by+gy,gw,gh]
+                    if self.surface_profile=='neutral':
+                        # A merged row contains rounded seams between cards as
+                        # well as its outer border. Do not let a seam read as 7
+                        # suppress the actual, taller 2 a few pixels to its right.
+                        # An otherwise unreadable body still fails presence/rank
+                        # validation below; this does not make cropped cards safe.
+                        if gy<=max(2,bh*.03) and gh<bh*.10:
+                            border_artifacts.append({'zone':zone,'bbox':absolute,
+                                'reason':'small component in the rounded top-edge band'})
+                            continue
+                        if gy>bh*.09 or gh>bh*.18:
+                            non_index.append({'zone':zone,'bbox':absolute,
+                                'reason':'outside bounded upright index row; not proof of another card'})
+                            continue
                     if gy<=1 and (gx<=1 or gx+gw>=bw-1) and gh<bh*.10:
                         border_artifacts.append({'zone':zone,'bbox':absolute,
                             'reason':'small dark component at rounded surface boundary, not an interior corner glyph'})
@@ -178,8 +199,10 @@ class CornerCardDetector:
             'rejected_card_candidates':rejected,'detections':len(detections),
             'presence':surfaces,
             'ignored_surface_border_artifacts':border_artifacts,
+            'non_index_proposals':non_index,
             'zone_presence':{zone:('present' if any(d.zone==zone for d in detections) else 'none_observed')
                              for zone in ('dealer','player:0')},
+            'surface_profile':self.surface_profile,
             'threshold':self.minimum_score,'score_semantics':'OCR score, not recognition probability',
             'latency_ms':(time.perf_counter()-began)*1000,
             'scope':'explicit card regions, upright corner glyphs and bounded colored backs; no universal presence/rotation guarantee'}
