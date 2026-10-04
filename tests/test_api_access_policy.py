@@ -21,7 +21,7 @@ def test_zero_budget_blocks_before_network_even_with_a_key_and_old_epoch(tmp_pat
     install_policy(tmp_path, monkeypatch)
     def forbidden(*a, **k):
         raise AssertionError('No network may be reached')
-    monkeypatch.setattr('httpx.Client', forbidden)
+    monkeypatch.setattr('httpx.AsyncClient', forbidden)
     with pytest.raises(PermissionError, match='blocked_zero_api_budget'):
         ResponsesTransport(api_key='unit-test-not-a-key', authorization_epoch='old-consent').post({}, 1)
 
@@ -65,6 +65,6 @@ def test_transport_requires_explicit_current_epoch_even_after_future_approval(tm
     install_policy(tmp_path, monkeypatch, inference_authorized=True, max_requests=1, max_usd='1')
     def forbidden(*a, **k):
         raise AssertionError('No network may be reached')
-    monkeypatch.setattr('httpx.Client', forbidden)
+    monkeypatch.setattr('httpx.AsyncClient', forbidden)
     with pytest.raises(PermissionError, match='blocked_missing_spending_authorization'):
         ResponsesTransport(api_key='unit-test-not-a-key').post({}, 1)
