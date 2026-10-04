@@ -48,6 +48,7 @@ export function LiveAdvisor({report,stale,compact=false}:{report:any;stale:boole
    <p>{report?.count_history==='complete'?'Full observed history from a declared fresh shoe.':report?.count_history==='compromised'?'Observation history is incomplete. Declare a new shoe to restore the count.':'Count covers observed cards only. Earlier cards are unknown.'}</p><p>Remaining inventory: {report?.physical_remaining??'—'} cards. A positive true count describes a higher proportion of tens and aces in the estimated pool; it does not guarantee an outcome.</p>
    {report?.analysis&&<p><span>EV analysis</span>: <span>{analysisLabels[report.analysis.status]||'Not available'}</span>. <span>Basic strategy remains available while estimates run.</span></p>}
    <p>Basic strategy is available offline. Sampling intervals describe simulation uncertainty, not recognition accuracy. EV describes the current action, not the next-round betting edge.</p>
+   {report?.detections?.length>0&&<div><b>Card evidence</b>{report.detections.map((card:any,i:number)=><p key={i}>{card.zone} · {card.visibility==='covered'?'Covered card':card.rank?'Readable rank':'Unreadable face-up card'} · Rank: {card.rank||'Unknown'} · Suit: {card.suit||'Unknown'}</p>)}</div>}
   </div></details>
   <p className="analysis-disclaimer">Analysis and education only. Not financial advice. No guaranteed outcomes.</p>
  </section>);

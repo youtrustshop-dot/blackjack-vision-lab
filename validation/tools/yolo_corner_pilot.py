@@ -111,13 +111,16 @@ def detect(image,layout,checkpoint):
     from bjlab.calibration import NormalizedROI
     from bjlab.vision import CardDetection
     from ultralytics import YOLO
+    from PIL import Image
     import numpy as np
     checkpoint=str(Path(checkpoint).resolve())
     if checkpoint not in _models:_models[checkpoint]=YOLO(checkpoint)
     results=[]
     for zone in ('dealer','player:0'):
         roi=NormalizedROI(*layout[zone]);x,y,w,h=roi.to_pixels(*image.size)
-        predictions=_models[checkpoint].predict(roi.crop(image),imgsz=416,conf=.50,device='cpu',verbose=False)[0]
+        # Ultralytics interprets ndarray inputs as BGR, while ROI.crop is RGB.
+        # PIL carries the RGB contract and prevents a silent channel reversal.
+        predictions=_models[checkpoint].predict(Image.fromarray(roi.crop(image)),imgsz=416,conf=.50,device='cpu',verbose=False)[0]
         for bounds,confidence,label in zip(predictions.boxes.xyxy.tolist(),predictions.boxes.conf.tolist(),predictions.boxes.cls.tolist()):
             a,b,c,d=bounds;glyph_h=d-b
             results.append(CardDetection(predictions.names[int(label)],None,

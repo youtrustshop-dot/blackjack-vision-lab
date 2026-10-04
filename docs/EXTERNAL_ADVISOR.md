@@ -6,6 +6,13 @@ base version, displays **research candidate** in its native title and records it
 code commit, dirty flag and source hashes in the frozen build provenance.
 It is not a replacement release, a new poker strategy or a universal detector.
 
+The vision-learning follow-up changes source code only. It has not rebuilt this
+native candidate or tested physical screen sharing. The existing Windows smoke
+and Chrome-to-native simulator bridge evidence belongs to PR #3; the new source
+detector is `calibrated-corners-2-presence`. A package label `1.1.1` alone does not
+identify either source or binary. Check the candidate title, build provenance,
+detector and local backend URL before comparing versions.
+
 ## Usage and ownership
 
 In the Windows candidate, **Pop out advisor** opens a second Tauri/WebView window

@@ -1,4 +1,10 @@
-# Vision benchmark: first development increment
+# Vision benchmark: preserved first increment and learning follow-up
+
+The first-increment results below are historical. The current bounded presence,
+learning, usable-state and own-session comparison is in
+[VISION_LEARNING_CHECK.md](VISION_LEARNING_CHECK.md), with sanitized executed
+receipts in [summary.json](../validation/results/vision-learning-check/summary.json).
+No checkpoint was promoted and no desktop release was replaced.
 
 This candidate extends commit `20f0fc0aa1ae862ad0ddd20dea2b5d8128a63b1c`.
 The frozen installed/public desktop reference remains **1.1.1** at
@@ -15,14 +21,17 @@ independent sessions. Four unique monitor photos are additional diagnostic
 inputs, excluded from the digital aggregate. Private pixels, paths, diagnostic
 bundles and per-case reports stay in ignored `artifacts/vision-research`.
 
-| Profile | Correct zone/ranks | Missed | Correct suits | Localized objects | Offline p95 |
+| Historical profile | Correct zone/ranks | Missed | Suit outcomes | Localized objects | Offline p95 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Current automatic baseline | 3/9 | 6 | 0/9 | 3/10 | 1680 ms |
-| Baseline, native table ROI | 3/9 | 6 | 0/9 | 3/10 | 1622 ms |
-| Explicit calibrated corner OCR | 9/9 | 0 | 4/9 | 9/10 | 275 ms |
-| YOLO26n rank-corner pilot | 0/9 | 9 | 0/9 | 0/10 | 190 ms |
+| Current automatic baseline | 3/9 | 6 | 3 unknown, 6 missed | 3/10 | 1680 ms |
+| Baseline, native table ROI | 3/9 | 6 | 3 unknown, 6 missed | 3/10 | 1622 ms |
+| Explicit calibrated corner OCR v1 | 9/9 | 0 | 4 correct, 5 unknown | 9/10 | 275 ms |
+| YOLO26n rank-corner pilot | 0/9 | 9 | Not supported | 0/10 | 190 ms |
 
-The tenth object is a visible blue card back, missed by every profile.
+The tenth object is a visible blue card back, missed by every historical profile.
+The follow-up adds a bounded blue-back rule and an explicit regression; it does
+not establish arbitrary-back support. The rank-only pilot returns `suit=None`:
+there is no suit classifier to score at 0/9.
 Localization uses manually approximated rectangles, role matching and IoU >= .30;
 these are development diagnostics, **not detection AP or a generalization test**.
 Rank inventory matching alone can hide wrong object assignments, so geometric

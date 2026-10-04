@@ -32,6 +32,7 @@ class CardDetection:
     logical_hint: str | None = None
     calibrated_probability: float | None = None
     score_type: str = "template_similarity"
+    visibility: str | None = None
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "rank", normalize_rank(self.rank))
@@ -43,6 +44,12 @@ class CardDetection:
             raise ValueError("Bounding box must be x,y,width,height with positive size")
         if self.face_down and (self.rank is not None or self.suit is not None):
             raise ValueError("A hidden detection must not disclose its rank or suit")
+        visibility = self.visibility or ("covered" if self.face_down else "readable" if self.rank else "unreadable")
+        if visibility not in ("readable", "covered", "unreadable"):
+            raise ValueError("A detection is a present object; absence is not a detection")
+        if (visibility == "covered") != self.face_down or (visibility == "readable") != (self.rank is not None):
+            raise ValueError("Visibility must agree with the observed rank and card orientation")
+        object.__setattr__(self, "visibility", visibility)
         if self.calibrated_probability is not None and not 0 <= self.calibrated_probability <= 1:
             raise ValueError("Calibrated probability must be in [0, 1]")
 
@@ -320,6 +327,7 @@ class TemporalTracker:
     def _event_payload(self, track: _Track) -> dict[str, Any]:
         return {"card_id": track.card_id, "rank": track.rank, "suit": track.suit,
                 "face_down": track.face_down, "bbox": list(track.bbox), "zone": track.zone,
+                "visibility": "covered" if track.face_down else "readable" if track.rank else "unreadable",
                 "round_id": self.round_id, "score": track.score,
                 "score_semantics": "raw_similarity_not_probability"}
 

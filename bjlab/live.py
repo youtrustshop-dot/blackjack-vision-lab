@@ -435,6 +435,10 @@ class LiveObserver:
                 reasons.append("Active player cards are not fully visible.")
             if len(player_ranks) < 2 or len(dealer) != 1:
                 reasons.append("Need at least two player cards and exactly one visible dealer upcard.")
+            unreadable_active=any(d.zone==f'player:{active_index}' and d.rank is None for d in detections)
+            unreadable_dealer=any(d.zone=='dealer' and d.rank is None and not d.face_down for d in detections)
+            if unreadable_active or unreadable_dealer:
+                reasons.append("A present face-up card is unreadable; no card may be silently omitted.")
             if self.phase not in ("player", "insurance", "early"):
                 reasons.append("Waiting for a player decision in the video.")
             if context and not context_stable:
@@ -466,7 +470,8 @@ class LiveObserver:
                 # visible-hand basic-policy recommendation.
                 allowed_gate=(lifecycle['stable'] and len(player_ranks)>=2 and len(dealer)==1
                     and self.phase=='player' and bool(allowed) and not external.get('reasons')
-                    and not self.detector.last_diagnostics['rejected_card_candidates'])
+                    and not self.detector.last_diagnostics['rejected_card_candidates']
+                    and not unreadable_active and not unreadable_dealer)
             decision = None
             advice = None
             if allowed_gate:

@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "utc": "2026-10-04T02:20:25.728536+00:00",
+  "parent_commit": "620e6a0dd7f929a116645c53181b4df360b8edbd",
+  "tests": {
+    "python_passed": 431,
+    "python_subtests": 10,
+    "frontend_passed": 46,
+    "targeted_presence_passed": 7,
+    "typescript_vite_build": true,
+    "experiment_matrix_api": 200
+  },
+  "log_sha256": {
+    "python": "d882f0b4cef2ef20ba7082cc04c27098da3469ea48c91a8d8570fe11420fe324",
+    "frontend": "549e387f801d703d87a00de1220a043a88364f0aa724785f92b730d4e1dfe5aa",
+    "build": "25adb7fe9f58f89c1fe0df6f38f1bb2990b33587c635498a120386874cdc9028",
+    "targeted": "80d071253b32a12e2aea6cb947e7b98a3b47f287a9b743feb4fcae289eb10c40"
+  },
+  "source_fingerprint": "2132801b06730906247897961c80550a13e3112ca606f8757799b5f549d0725e",
+  "native_rebuilt": false,
+  "installed_release_replaced": false,
+  "merge_performed": false,
+  "frozen_release_files": [
+    {
+      "file": "bjlab-backend.exe",
+      "sha256": "a1521f6af640c31c151ff929aea4eda5adbdcd88d550d35dd4b5e2677d278613",
+      "matches": true
+    },
+    {
+      "file": "Blackjack Vision Lab_1.1.1_x64-setup.exe",
+      "sha256": "e3b4e86556cd6b02786f3f478d556c6bb4a0db56502a13bf52356a9cd94b34d8",
+      "matches": true
+    },
+    {
+      "file": "Blackjack Vision Lab.exe",
+      "sha256": "88ee9cc2334f04517575f3e5ec0733e6b59b60435c64e49e81c63f10b4663b64",
+      "matches": true
+    },
+    {
+      "file": "WebView2Loader.dll",
+      "sha256": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5",
+      "matches": true
+    }
+  ],
+  "unexecuted": [
+    "new provider full-session recordings",
+    "sealed final holdout",
+    "physical multi-monitor dragging",
+    "mixed DPI",
+    "real display sharing while minimized",
+    "new candidate native executable smoke"
+  ],
+  "scope": "Source suite and own development experiments. No universal vision, count acceptance or economic edge claim."
+}
