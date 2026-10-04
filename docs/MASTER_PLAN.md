@@ -1,6 +1,16 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Executed specialized challenger, 2026-10-05: [VISION-015](SPECIALIZED_CARD_READER.md).
+> Real YOLO26n four-keypoint training on 8,000 owned scenes plus learned rank/suit,
+> 1,000 calibration and 1,000 frozen verification scenes. New verification complete
+> states improve 26/941 to 480/941; two new physical sessions (six paired variants)
+> improve timely R1 9/60 to 17/60, but identity continuity and provider transfer fail.
+> Historical private ranks regress 9/9 to 2/9. Keep the research challenger only:
+> no default/release, poker or certified R2 promotion. Installed 1.1.1 unchanged;
+> historical final holdout sealed. API remains disarmed with zero calls/cost pending
+> credential reuse/create choice and account access. Preserve all negative evidence.
+
 > Latest explicit authorization, 2026-10-04: add one specialized local playing-card
 > challenger to the existing tournament. This supersedes the earlier immediate
 > training deferral, without creating another roadmap. Use a genuinely YOLO26n

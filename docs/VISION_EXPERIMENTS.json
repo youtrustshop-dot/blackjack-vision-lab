@@ -4,9 +4,17 @@
     "version": "1.1.1",
     "commit": "4f074efd53066a95d64ca1ed53de03479a8adcba"
   },
-  "parent_commit": "de3d9bea6bf94d31f498c65dcd53cff3489c0e73",
+  "parent_commit": "94638a3",
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
+    {
+      "id": "specialized-local-card-reader",
+      "stage": "One trained YOLO26n/keypoint + learned rank/suit challenger",
+      "candidate": "YOLO26n-pose, three classes/four points; learned 13+unknown ranks and 4+unknown suits; native table ROI",
+      "status": "executed",
+      "finding": "8,000 owned train / 1,000 calibration / 1,000 frozen verification scenes. Verification exact nonempty states 26/941 -> 480/941, including correct unknown declarations; rank reads 694/2740 -> 2343/2740. Two new physical sessions with six paired variants each: timely R1 9/60 -> 17/60, but diagnostic identity switches 8 -> 119 and one duplicate. Historical provider ranks regress 9/9 -> 2/9. Research retained; default/provider/poker/R2 promotion rejected.",
+      "evidence": "validation/results/specialized-card-reader/comparison.json"
+    },
     {
       "id": "independent-reader-tournament",
       "stage": "New session/seed/graphic-family local baseline",
@@ -1193,7 +1201,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "VISION-014 frozen local baseline executed on new original development/validation sessions; final holdout sealed. New graphic clean reaches 2/5 timely R1 despite 350/350 rank observations. No reader champion or R2 promotion. API comparison awaits credential choice and account verification; EUR10 aggregate authorization does not arm inference. Compact advisor verified separately.",
+  "current_priority": "Preserve VISION-015 and sealed final holdout; resolve API credentials/account access while investigating actual graphic-domain transfer and identity instability from frozen evidence. No default release or poker expansion.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1346,36 +1354,80 @@
         "Rotation/fading/crop changes",
         "Final holdout"
       ]
+    },
+    {
+      "experiment_id": "VISION-014",
+      "parent_experiment_id": "VISION-013",
+      "status": "executed_local_only",
+      "question": "Does the frozen local reader transfer to new original session/seed/family data with timely usable R1, before comparing API candidates?",
+      "baseline_commit": "77a036ac34893fda201959a55f1033d9c106308c",
+      "result": "validation/results/independent-tournament/local-baseline.json",
+      "csv": "validation/results/independent-tournament/local-baseline.csv",
+      "report": "docs/INDEPENDENT_READER_DECISION.md",
+      "independent_sessions_evaluated": 2,
+      "distinct_rounds": 12,
+      "paired_difficulty_renderings_per_session": 6,
+      "final_holdout": "sealed_not_evaluated",
+      "api_requests": 0,
+      "actual_api_cost": 0,
+      "cloud_latency": null,
+      "cloud_correctness": null,
+      "decision": "No champion selection, installed-app replacement or certified R2 promotion. API prerequisite gate unresolved; compact native display delivered separately.",
+      "not_measured": [
+        "API inference",
+        "live capture-to-display",
+        "provider-engine generalization",
+        "mixed-DPI physical capture",
+        "complete poker suits",
+        "multi-hand split vision",
+        "profitability"
+      ]
     }
   ],
   "latest_experiment": {
-    "experiment_id": "VISION-014",
-    "parent_experiment_id": "VISION-013",
-    "status": "executed_local_only",
-    "question": "Does the frozen local reader transfer to new original session/seed/family data with timely usable R1, before comparing API candidates?",
+    "experiment_id": "VISION-015",
+    "parent_experiment_id": "VISION-014",
+    "status": "executed_local_training",
+    "question": "Does one serious card/index/keypoint and learned rank/suit reader improve the frozen local baseline on same inputs and new complete sessions?",
+    "candidate_source_commit": "94638a3",
     "baseline_commit": "77a036ac34893fda201959a55f1033d9c106308c",
-    "result": "validation/results/independent-tournament/local-baseline.json",
-    "csv": "validation/results/independent-tournament/local-baseline.csv",
-    "report": "docs/INDEPENDENT_READER_DECISION.md",
-    "independent_sessions_evaluated": 2,
-    "distinct_rounds": 12,
+    "result": "validation/results/specialized-card-reader/comparison.json",
+    "csv": "validation/results/specialized-card-reader/sessions.csv",
+    "report": "docs/SPECIALIZED_CARD_READER.md",
+    "train_scenes": 8000,
+    "calibration_scenes": 1000,
+    "verification_scenes": 1000,
+    "pose_actual_epochs": 9,
+    "classifier_actual_epochs": 24,
+    "independent_physical_sessions": 2,
+    "distinct_engine_rounds": 12,
     "paired_difficulty_renderings_per_session": 6,
-    "final_holdout": "sealed_not_evaluated",
+    "final_holdout": "sealed_untouched",
     "api_requests": 0,
     "actual_api_cost": 0,
     "cloud_latency": null,
     "cloud_correctness": null,
-    "decision": "No champion selection, installed-app replacement or certified R2 promotion. API prerequisite gate unresolved; compact native display delivered separately.",
-    "not_measured": ["API inference", "live capture-to-display", "provider-engine generalization", "mixed-DPI physical capture", "complete poker suits", "multi-hand split vision", "profitability"]
+    "decision": "Retain research implementation and frozen evidence; reject default/release, provider, poker and certified R2 promotion. Actual provider graphic adaptation and physical identity stability remain bottlenecks. No new model after verification.",
+    "not_measured": [
+      "New provider full video",
+      "Live capture-to-display",
+      "API inference",
+      "Automatic universal layout/phase",
+      "Poker strategy",
+      "Physical monitor/DPI/minimized capture",
+      "Economic edge"
+    ]
   },
   "conditional_components": [
     {
       "id": "C03",
       "source": "https://github.com/ultralytics/ultralytics",
-      "role": "YOLO26 detection/classification",
-      "status": "deferred",
+      "role": "Verified YOLO26n four-keypoint localizer plus learned rank/suit",
+      "status": "executed_research_not_promoted",
       "license_review": "AGPL/Enterprise options recorded in supplied plan; check exact code/checkpoint/data before reuse",
-      "trigger": "M1 measured localization/symbol or local cost/latency limitation with adequate data"
+      "trigger": "Further graphic-domain/geometry evidence; current checkpoint does not transfer to historical providers.",
+      "source_review_scope": "Official wheel 8.4.7 and hashed official COCO backbone; isolated CUDA training and ONNX evaluation executed. No third-party card weights imported.",
+      "evidence": "docs/SPECIALIZED_CARD_READER.md"
     },
     {
       "id": "C04",

@@ -129,8 +129,9 @@ $python = "$research/venv/Scripts/python.exe"
 
 Selected-reader and consumption receipts are private local evidence, not API
 approvals. Verification commands require that receipt and refuse changed sources,
-an altered evaluator or a repeated job. See the published aggregate comparison
-for actual executed commands and result hashes. `--export-only` can re-export
+an altered evaluator or a repeated job. Commands below reproduce the paired
+execution recipe; the published aggregate comparison records result hashes.
+`--export-only` can re-export
 the **verified own** tensor checkpoints without retraining; old failures stay
 on disk and export alone does not reopen verification.
 
@@ -162,7 +163,104 @@ continues independently of that prerequisite.
 
 ## Executed comparison
 
-Results are added here and to `VISION_EXPERIMENTS.json` only after the bounded
-training and frozen paired evaluations complete. An earlier 96-scene execution
-smoke and its repaired exports are retained separately; they are not the serious
-model's accuracy evidence.
+Source frozen for verification: `94638a3`. Published aggregates:
+[comparison JSON](../validation/results/specialized-card-reader/comparison.json)
+and [per-session CSV](../validation/results/specialized-card-reader/sessions.csv).
+Private pixels, traces, tensor checkpoints and ONNX weights remain local. An
+earlier 96-scene execution smoke and its failed/repaired exports are retained
+separately; they are not the serious model's accuracy evidence.
+
+The actual localizer completed **9 epochs**, 2,593 seconds: the predeclared
+2,400-second budget stops at the next epoch boundary, rather than interrupting
+a batch. Forty was a maximum request, not the achieved count. The classifier
+completed 24 epochs on **37,054 training crops / 4,650 calibration crops**; best
+raw joint calibration accuracy was 96.84%. Those crops use annotated index
+planes; that number does not measure whole-image or video recognition.
+Numerical ONNX parity: max absolute differences 0.000275 in the pose export's
+raw output units (mixed coordinates and scores) and 0.00000334 / 0.00000238 for
+classifier logits, on a random tensor.
+
+Calibration geometry diagnosis, same weights and thresholds:
+
+| Stage on 1,000 calibration images | Complete nonempty states / 941 | Extra objects |
+| --- | ---: | ---: |
+| Current local | 15 | 97 |
+| Initial specialized reconciliation | 481 | 187 |
+| Geometry-only cross-zone reconciliation | 552 | 49 |
+
+The preserved audit found 137 unreconciled indices whose containing face body
+had a different declared zone label. Physical association was incorrectly using
+that zone label to split one object into two. Removing that constraint fixes
+this cause; no face-label deduplication, threshold reduction or integrity-gate
+bypass was used. Remaining extras are not all attributed to the same cause.
+Calibration workload contention differs between runs; it was not used to claim
+comparative speed. Selection occurred before reading verification labels.
+
+Frozen **1,000-image verification**, new parent seeds/rank-font families:
+
+| Metric, including misses | Current local | Specialized |
+| --- | ---: | ---: |
+| Complete nonempty states | 26/941 | 480/941 |
+| Observed objects matched | 1,421/3,847 | 3,704/3,847 |
+| Missing / extra objects | 2,426 / 97 | 143 / 53 |
+| Correct readable ranks | 694/2,740 | 2,343/2,740 |
+| Wrong / unknown / missed readable ranks | 33 / 397 / 1,616 | 9 / 376 / 12 |
+| Correct readable suits | 237/2,761 | 2,522/2,761 |
+| Wrong / unknown / missed readable suits | 4 / 899 / 1,621 | 44 / 187 / 8 |
+| Covered backs recognized | 72/682 | 625/682 |
+| False presence on 59 empty scenes | 5 | 0 |
+| Offline CPU processing p50 / p95 / max | 77.9 / 243.2 / 870.5 ms | 56.9 / 84.5 / 172.2 ms |
+
+These are raw counts on clustered synthetic scenes, not a population confidence
+interval or a provider generalization claim. Suit coverage improves considerably
+but wrong suits increase: no poker perception approval follows from these scores.
+The four paired verification jobs are complete in the consumption ledger. Frozen
+pre-run manifests retain their original `verification_used=false` declaration;
+the separate consumption ledger is authoritative for actual use.
+
+Two new six-round physical sessions, each rendered in six paired conditions:
+
+| Video outcome, 60 source decision opportunities | Current local | Specialized |
+| --- | ---: | ---: |
+| Correct rank-only R1 within 1,500 ms | 9/60 | 17/60 |
+| Correct full-table state within 1,500 ms | 0/60 | 17/60 |
+| Missed exposures across 360 paired expected exposures | 174 | 144 |
+| Duplicate / wrong-or-unmatched exposures | 0 / 23 | 1 / 0 |
+| Diagnostic identity switches | 8 | 119 |
+| Wrong/stale basic-advice frames observed | 0 | 0 |
+| Certified count frames | 0 | 0 |
+
+Clean R1 improves from 0/5 to 4/5 for each new family. Overlap R1 remains 4/5
+and 5/5; its exposure reconstruction actually worsens. Rotation obtains most
+exposures but no timely R1. Fading, clipping and popup conditions retain zero
+timely R1. All 60 source opportunities remain in the denominator, including
+conditions that hide necessary glyphs; abstention on absent information is not
+classified as invented certainty. The legacy anchor matcher approximates
+rotated geometry, so 119 is a diagnostic switch count, not rigorous general
+MOT accuracy. Even the clean/overlap failures reject R2 promotion. Zero observed
+wrong/stale advice in this small paired corpus does not establish zero risk.
+
+Historical private development regressions expose the transfer limit: on three
+annotated digital screenshots (two moments plus a repeated preview), the current
+reader has 9/9 ranks, four correct suits/five unknown and the covered back. The
+specialized reader has **2/9 ranks**, five unknown/two missed, one correct suit/
+one wrong/five unknown/two missed, and misclassifies the matched back. It also
+has three extras. The same initial table/card ROIs reach both readers. Four
+unannotated monitor-photo cases remain unscored, with no substitute labels.
+This regression is retained; the model is not promoted on those providers.
+
+**Decision:** keep one trained research challenger and the frozen comparison;
+reject default/desktop, external-provider, poker and certified R2 promotion.
+The measured follow-up needs are actual graphic-domain adaptation and stable
+instance reconstruction. A tracker comparison would require fixed detection
+replay and better geometry correspondence; it cannot repair unreadable ranks
+by itself. No extra detector/framework was introduced after seeing verification.
+
+Validation: **542 app tests, 10 subtests**, **19 isolated research contracts**,
+and evidence consistency passed. One early attempt to run research geometry
+tests in the app environment failed for missing optional SciPy; those tests were
+then run successfully in their intended isolated environment. UI/native tests
+were not repeated because this increment changes neither UI nor native code.
+All four frozen release-file hashes match; no installed release was replaced.
+API inference requests/cost remain zero, with credential/account prerequisites
+unresolved. API accuracy and request-to-validated-JSON latency remain unmeasured.
