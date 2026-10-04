@@ -32,5 +32,7 @@
     "Native build",
     "Physical advisor checks"
   ],
-  "prior_failed_test_run": "518 passed and one test assumption failed: uncompressed backs are already classified by the baseline, so challenger override evidence can be empty. Corrected assertion checks covered detection and tests unknown-body override directly; full suite rerun passed."
+  "prior_failed_test_run": "518 passed and one test assumption failed: uncompressed backs are already classified by the baseline, so challenger override evidence can be empty. Corrected assertion checks covered detection and tests unknown-body override directly; full suite rerun passed.",
+  "tested_code_commit": "0d5c9a26caa166c1cd6aa953f64ebb37d392e085",
+  "source_binding": "All executed inference/evaluator/test hashes verified against committed source. Dirty-worktree execution receipts retained, not rewritten as post-commit runs."
 }
