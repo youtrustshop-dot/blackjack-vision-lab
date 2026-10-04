@@ -1,9 +1,13 @@
 # Vision benchmark: preserved first increment and learning follow-up
 
-Latest executed gate: [OVERLAP_SESSION_COMPARISON.md](OVERLAP_SESSION_COMPARISON.md),
-VISION-013. Overlap presence/identity development passes; changed-graphic R1 and
-provisional identity continuity still fail. The reference, default API and desktop
-remain preserved. Read the current matrix priority before older next-step notes.
+Latest executed gate: [INDEPENDENT_READER_DECISION.md](INDEPENDENT_READER_DECISION.md),
+VISION-014. A new original validation family has 350/350 correct sampled ranks
+but only 2/5 timely usable R1 opportunities. Development/validation are separate
+physical sessions; six difficulty variants per session are paired renderings.
+The final holdout is sealed. API candidates have no invented latency or accuracy:
+credential choice/account access remains unresolved, with actual cost zero.
+The compact native advisor is verified separately in a portable candidate;
+installed 1.1.1, production reader and historical VISION-013 evidence are preserved.
 
 The first-increment results below are historical. The current bounded presence,
 learning, usable-state and own-session comparison is in

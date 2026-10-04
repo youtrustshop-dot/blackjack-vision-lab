@@ -1,0 +1,1736 @@
+{
+  "schema": 1,
+  "experiment": "Independent original synthetic local baseline",
+  "baseline_commit": "77a036ac34893fda201959a55f1033d9c106308c",
+  "baseline_archive_sha256": "c57417395948211378669b5e9d23908de5e70a4aa63c19a274497331fb0f136a",
+  "generator_sha256": "78ea416615709212c53a31933facf9ca4eeb6fec7ad573531b3cb6e1e5ec3866",
+  "freeze_sha256": "6495816b2247668d184db0de7aa77bf5b66bbd3b2ff0a0d6e899728798079a8c",
+  "publication_evaluator": {
+    "version": "derived-face-state-exact-v2",
+    "path": "validation/tools/publish_tournament_baseline.py",
+    "sha256": "ccbb8c318fb36d06e56bd578d1b81e0105005abb92208b409a407fddc9177c44",
+    "geometric_helper_path": "validation/tools/overlap_session.py",
+    "geometric_helper_sha256": "684582ad2df1a39fb4dff51d143fd4b4ea506c96051abc4900505482fa57c04f",
+    "correction": "Initial run's rank/suit exact metrics accepted unknown-rank unreadable objects even when face_down=True. Derived metrics below recompute explicit face state from the original traces without inference or edits to frozen run results."
+  },
+  "partitions": {
+    "development": {
+      "path": "development/manifest.json",
+      "sha256": "7451aed329891a706ac3b5e29c184617593327c57217798fd61f1d09e6324f21",
+      "seed": 4100713,
+      "family": "original-lab-amber"
+    },
+    "validation": {
+      "path": "validation/manifest.json",
+      "sha256": "61830cdc51c4fd6dc3016bc5d83d1a979e7304cdefcb27789ea8634e9fbde78d",
+      "seed": 4100829,
+      "family": "original-lab-slate"
+    },
+    "final_holdout": {
+      "path": "final_holdout/manifest.json",
+      "sha256": "550ba75164162b8bc59210ef6a51480c13794a486c0631ac663cfe0f55b9431d",
+      "seed": 4100961,
+      "family": "original-lab-cobalt"
+    }
+  },
+  "final_holdout": "sealed_not_evaluated",
+  "independent_sessions_evaluated": 2,
+  "distinct_physical_rounds_evaluated": 12,
+  "difficulty_renderings_per_session": 6,
+  "paired_renderings_are_not_independent_rounds": true,
+  "api_requests": 0,
+  "api_cost": 0,
+  "timing_scope": "Offline replay on a contended Windows host: native build and the installed capture backend also ran. This is neither an isolated latency benchmark nor capture-to-display/cloud-request latency.",
+  "reader_input_boundary": "Frozen observer receives RGB pixels, source timestamps and declared ROIs only. Truth, scenario, simulator phase/round/IDs and future frames are consumed only by renderer/evaluator.",
+  "pipeline_config": {
+    "context_challenger": true,
+    "overlap_challenger": true,
+    "manual_turn": false,
+    "fresh_shoe": true,
+    "samples": 100,
+    "calibration": "declared synthetic table/dealer/player/control rectangles",
+    "sampling_ms": 350
+  },
+  "installed_desktop_status": "Unchanged; this is the opt-in research profile from 77a036a, not a measured default desktop release.",
+  "selection_limits": [
+    "No reader promotion from this baseline alone.",
+    "One session/seed/family per partition is insufficient for population accuracy or tail latency claims.",
+    "Six difficulty variants share hands within a session. Family font/paper/back varies, but rendering/layout mechanics are shared.",
+    "Rotation matching uses approximate upright left/top anchors; detector precision and ID metrics there remain diagnostic.",
+    "Clipped combines partial source pixels with stale/narrow player ROI; it is not an isolated OCR test.",
+    "Clipped/covered can make player ranks fundamentally unobservable. Correct abstention is not a missed recommendation on a fully observable hand.",
+    "Suit/rank readability is the existing combined glyph-mask convention (85% ink visibility), not an independent human legibility label.",
+    "No orientation accuracy, provider generalization, live stale-response transport, multi-hand split vision or gray-disabled-control test is demonstrated."
+  ],
+  "private_artifact_root": "artifacts/reader-tournament-r1-20261004",
+  "results": [
+    {
+      "partition": "development",
+      "profile": "clean",
+      "seed": 4100713,
+      "family": "original-lab-amber",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 540,
+      "sampled_frames": 129,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 5,
+      "r1_timely": {
+        "correct": 5,
+        "source_denominator": 5,
+        "observable_denominator": 5
+      },
+      "rank_exact_table_timely": {
+        "correct": 5,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 92,
+        "denominator": 93
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 5,
+        "denominator": 93
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 92,
+          "denominator": 93
+        },
+        "suit": {
+          "correct": 5,
+          "denominator": 93
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 341,
+        "wrong": 0,
+        "unknown": 1,
+        "missed": 0,
+        "denominator": 342
+      },
+      "suits": {
+        "correct": 173,
+        "wrong": 0,
+        "unknown": 169,
+        "missed": 0,
+        "denominator": 342
+      },
+      "presence": {
+        "expected": 375,
+        "missed": 0,
+        "extra": 0,
+        "unreadable_expected": 0,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 0
+      },
+      "backs": {
+        "correct": 33,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 33
+      },
+      "phase": {
+        "correct": 129,
+        "unknown": 0,
+        "wrong_nonunknown": 0,
+        "denominator": 129
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 18,
+      "observable_player_samples": 28,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 30,
+        "missing": 0,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 2
+      },
+      "inventory_final_l1": 0,
+      "inventory_final_drift": {
+        "A": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "J": 0,
+        "Q": 0,
+        "K": 0
+      },
+      "inventory_interim_max_l1": 3,
+      "observed_rc_max_abs_error": 2,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": 916.6666666666663,
+        "p95": 1341.666666666667
+      },
+      "first_qualified_r1_delay_ms": [
+        1142.25046666858,
+        1177.2424666657244,
+        1031.841033332359,
+        1093.8448666662844,
+        882.3962666671505
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 203.72179999685613,
+        "p95": 338.84316000039684,
+        "max": 977.5703999985126,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "1b74a23f9f04c4c2f50782f4df261cb3dfdf5470ee36920e5cc19d88072186ae",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/development/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "ad38fc1ab8db2daeb8033c02fbbfa69785f7e8927ad517c08ba7c39312897c9a",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/development/4100713-original-lab-amber-clean.trace.json",
+      "input_video_sha256": "3f3091b21cf080749f66670948f34c06fe358e68766e03267f0362d02727795a",
+      "input_truth_sha256": "87b499842ad5a00acba1ab42052b848d15ebdb9d5facc69fb097ad238e9d2d25"
+    },
+    {
+      "partition": "development",
+      "profile": "overlap",
+      "seed": 4100713,
+      "family": "original-lab-amber",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 540,
+      "sampled_frames": 129,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 5,
+      "r1_timely": {
+        "correct": 4,
+        "source_denominator": 5,
+        "observable_denominator": 5
+      },
+      "rank_exact_table_timely": {
+        "correct": 4,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 85,
+        "denominator": 93
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 5,
+        "denominator": 93
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 85,
+          "denominator": 93
+        },
+        "suit": {
+          "correct": 5,
+          "denominator": 93
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 334,
+        "wrong": 0,
+        "unknown": 0,
+        "missed": 8,
+        "denominator": 342
+      },
+      "suits": {
+        "correct": 166,
+        "wrong": 0,
+        "unknown": 168,
+        "missed": 8,
+        "denominator": 342
+      },
+      "presence": {
+        "expected": 375,
+        "missed": 8,
+        "extra": 0,
+        "unreadable_expected": 0,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 0
+      },
+      "backs": {
+        "correct": 33,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 33
+      },
+      "phase": {
+        "correct": 129,
+        "unknown": 0,
+        "wrong_nonunknown": 0,
+        "denominator": 129
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 15,
+      "observable_player_samples": 28,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 29,
+        "missing": 1,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 0
+      },
+      "inventory_final_l1": 1,
+      "inventory_final_drift": {
+        "A": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": -1,
+        "J": 0,
+        "Q": 0,
+        "K": 0
+      },
+      "inventory_interim_max_l1": 4,
+      "observed_rc_max_abs_error": 2,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": 916.6666666666642,
+        "p95": 1000.0
+      },
+      "first_qualified_r1_delay_ms": [
+        1257.0115666664296,
+        null,
+        1031.6633333325917,
+        1158.9363666668469,
+        933.3790666666246
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 263.74399999986053,
+        "p95": 419.18796000099974,
+        "max": 445.2945000011823,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "1b74a23f9f04c4c2f50782f4df261cb3dfdf5470ee36920e5cc19d88072186ae",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/development/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "d50c33fe77d901f1731ee299dfd2009279e291adc6cae95ed62f8aea653bf64e",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/development/4100713-original-lab-amber-overlap.trace.json",
+      "input_video_sha256": "4d0de59664e818f61eb1fa8b17222d065f4b71c7b6315686956aa95761ff81cc",
+      "input_truth_sha256": "30f6bf6ef834a520e9e3a76b725ad03c07f61648af394cc191a7faa193fced51"
+    },
+    {
+      "partition": "development",
+      "profile": "rotation",
+      "seed": 4100713,
+      "family": "original-lab-amber",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 540,
+      "sampled_frames": 129,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 5,
+      "r1_timely": {
+        "correct": 0,
+        "source_denominator": 5,
+        "observable_denominator": 5
+      },
+      "rank_exact_table_timely": {
+        "correct": 0,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 93
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 93
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 0,
+          "denominator": 93
+        },
+        "suit": {
+          "correct": 0,
+          "denominator": 93
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 0,
+        "wrong": 0,
+        "unknown": 24,
+        "missed": 318,
+        "denominator": 342
+      },
+      "suits": {
+        "correct": 0,
+        "wrong": 0,
+        "unknown": 24,
+        "missed": 318,
+        "denominator": 342
+      },
+      "presence": {
+        "expected": 375,
+        "missed": 318,
+        "extra": 127,
+        "unreadable_expected": 0,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 0
+      },
+      "backs": {
+        "correct": 33,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 33
+      },
+      "phase": {
+        "correct": 101,
+        "unknown": 28,
+        "wrong_nonunknown": 0,
+        "denominator": 129
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 0,
+      "observable_player_samples": 28,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 0,
+        "missing": 30,
+        "duplicate": 0,
+        "wrong_or_unmatched": 12,
+        "id_switches": 12
+      },
+      "inventory_final_l1": 18,
+      "inventory_final_drift": {
+        "A": -1,
+        "2": 0,
+        "3": -1,
+        "4": -2,
+        "5": -3,
+        "6": -2,
+        "7": -3,
+        "8": 0,
+        "9": -2,
+        "10": -2,
+        "J": -2,
+        "Q": 0,
+        "K": 0
+      },
+      "inventory_interim_max_l1": 19,
+      "observed_rc_max_abs_error": 4,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": null,
+        "p95": null
+      },
+      "first_qualified_r1_delay_ms": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 213.09299999848008,
+        "p95": 400.54615999833914,
+        "max": 451.98940000045695,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "1b74a23f9f04c4c2f50782f4df261cb3dfdf5470ee36920e5cc19d88072186ae",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/development/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "1e238d65f63802596f0258ffa6612c2adbaae276c5925c8bf4b922e48af1a056",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/development/4100713-original-lab-amber-rotation.trace.json",
+      "input_video_sha256": "497a93511c517ecb2e0920c3a9088c83c099c5a0fa4cdd1f1f7a5564851684bb",
+      "input_truth_sha256": "be0fd271a2962bd2f8efb48575f9f612741bb49cd5b0cd7e5bfc74603504123f"
+    },
+    {
+      "partition": "development",
+      "profile": "faded",
+      "seed": 4100713,
+      "family": "original-lab-amber",
+      "rounds": {
+        "expected": 6,
+        "starts": 0,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 0
+      },
+      "decoded_frames": 540,
+      "sampled_frames": 129,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 5,
+      "r1_timely": {
+        "correct": 0,
+        "source_denominator": 5,
+        "observable_denominator": 5
+      },
+      "rank_exact_table_timely": {
+        "correct": 0,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 93
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 93
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 0,
+          "denominator": 93
+        },
+        "suit": {
+          "correct": 0,
+          "denominator": 93
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 0,
+        "wrong": 0,
+        "unknown": 80,
+        "missed": 262,
+        "denominator": 342
+      },
+      "suits": {
+        "correct": 0,
+        "wrong": 0,
+        "unknown": 80,
+        "missed": 262,
+        "denominator": 342
+      },
+      "presence": {
+        "expected": 375,
+        "missed": 295,
+        "extra": 27,
+        "unreadable_expected": 0,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 0
+      },
+      "backs": {
+        "correct": 0,
+        "wrong": 0,
+        "missed": 33,
+        "denominator": 33
+      },
+      "phase": {
+        "correct": 0,
+        "unknown": 129,
+        "wrong_nonunknown": 0,
+        "denominator": 129
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 0,
+      "observable_player_samples": 28,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 0,
+        "missing": 30,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 0
+      },
+      "inventory_final_l1": 30,
+      "inventory_final_drift": {
+        "A": -1,
+        "2": 0,
+        "3": -1,
+        "4": -2,
+        "5": -4,
+        "6": -6,
+        "7": -3,
+        "8": -3,
+        "9": -5,
+        "10": -2,
+        "J": -2,
+        "Q": -1,
+        "K": 0
+      },
+      "inventory_interim_max_l1": 30,
+      "observed_rc_max_abs_error": 7,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": null,
+        "p95": null
+      },
+      "first_qualified_r1_delay_ms": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 199.52550000016345,
+        "p95": 244.79694000037853,
+        "max": 378.53630000245175,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "1b74a23f9f04c4c2f50782f4df261cb3dfdf5470ee36920e5cc19d88072186ae",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/development/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "a3c2948e7d58d4c9bed106113cf48acceb85009103633a93c57522da475ed3cf",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/development/4100713-original-lab-amber-faded.trace.json",
+      "input_video_sha256": "c8381b471aba1a26a57bb53b2df1b60bc20510c551b14c3259aa81598b204500",
+      "input_truth_sha256": "87b499842ad5a00acba1ab42052b848d15ebdb9d5facc69fb097ad238e9d2d25"
+    },
+    {
+      "partition": "development",
+      "profile": "clipped",
+      "seed": 4100713,
+      "family": "original-lab-amber",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 540,
+      "sampled_frames": 129,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 0,
+      "r1_timely": {
+        "correct": 0,
+        "source_denominator": 5,
+        "observable_denominator": 0
+      },
+      "rank_exact_table_timely": {
+        "correct": 0,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 93
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 93
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 0,
+          "denominator": 93
+        },
+        "suit": {
+          "correct": 0,
+          "denominator": 93
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 166,
+        "wrong": 0,
+        "unknown": 7,
+        "missed": 93,
+        "denominator": 266
+      },
+      "suits": {
+        "correct": 94,
+        "wrong": 0,
+        "unknown": 79,
+        "missed": 93,
+        "denominator": 266
+      },
+      "presence": {
+        "expected": 375,
+        "missed": 169,
+        "extra": 69,
+        "unreadable_expected": 76,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 76
+      },
+      "backs": {
+        "correct": 33,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 33
+      },
+      "phase": {
+        "correct": 129,
+        "unknown": 0,
+        "wrong_nonunknown": 0,
+        "denominator": 129
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 0,
+      "observable_player_samples": 0,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 17,
+        "missing": 13,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 3
+      },
+      "inventory_final_l1": 13,
+      "inventory_final_drift": {
+        "A": -1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": -1,
+        "6": -2,
+        "7": 0,
+        "8": -3,
+        "9": -2,
+        "10": -2,
+        "J": -1,
+        "Q": -1,
+        "K": 0
+      },
+      "inventory_interim_max_l1": 15,
+      "observed_rc_max_abs_error": 4,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": 916.6666666666665,
+        "p95": 1083.3333333333326
+      },
+      "first_qualified_r1_delay_ms": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 225.4791999985173,
+        "p95": 340.07772000113613,
+        "max": 377.81470000118134,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "1b74a23f9f04c4c2f50782f4df261cb3dfdf5470ee36920e5cc19d88072186ae",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/development/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "15b3f1b60041af5195ecd2720f6abd8aceff7ad4ff061e1bada5bd555d3c3d08",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/development/4100713-original-lab-amber-clipped.trace.json",
+      "input_video_sha256": "ff294e1db61dd6958234527ff8dd9d4848a9c6c260f8195055e4e41b275e8830",
+      "input_truth_sha256": "ead08d516de505787a999609c392f1b33c24a095b8d808eff426758e11fa3116",
+      "failure_classification": "partial source pixels + stale/narrow player ROI; card localization/OCR effects are confounded",
+      "same_input_cloud_contract": "Use the same declared card ROI availability. A full-table cloud reader that uses out-of-ROI cards has different geometric assistance and must be labeled separately."
+    },
+    {
+      "partition": "development",
+      "profile": "covered",
+      "seed": 4100713,
+      "family": "original-lab-amber",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 540,
+      "sampled_frames": 129,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 0,
+      "r1_timely": {
+        "correct": 0,
+        "source_denominator": 5,
+        "observable_denominator": 0
+      },
+      "rank_exact_table_timely": {
+        "correct": 0,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 93
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 93
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 0,
+          "denominator": 93
+        },
+        "suit": {
+          "correct": 0,
+          "denominator": 93
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 154,
+        "wrong": 0,
+        "unknown": 0,
+        "missed": 2,
+        "denominator": 156
+      },
+      "suits": {
+        "correct": 87,
+        "wrong": 0,
+        "unknown": 67,
+        "missed": 2,
+        "denominator": 156
+      },
+      "presence": {
+        "expected": 375,
+        "missed": 188,
+        "extra": 37,
+        "unreadable_expected": 186,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 186
+      },
+      "backs": {
+        "correct": 33,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 33
+      },
+      "phase": {
+        "correct": 101,
+        "unknown": 28,
+        "wrong_nonunknown": 0,
+        "denominator": 129
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 0,
+      "observable_player_samples": 0,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 16,
+        "missing": 14,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 5
+      },
+      "inventory_final_l1": 14,
+      "inventory_final_drift": {
+        "A": -1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": -1,
+        "6": -2,
+        "7": 0,
+        "8": -3,
+        "9": -2,
+        "10": -2,
+        "J": -2,
+        "Q": -1,
+        "K": 0
+      },
+      "inventory_interim_max_l1": 16,
+      "observed_rc_max_abs_error": 4,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": 958.3333333333339,
+        "p95": 1437.500000000001
+      },
+      "first_qualified_r1_delay_ms": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 231.10909999741125,
+        "p95": 379.3863399994734,
+        "max": 459.7099000020535,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "1b74a23f9f04c4c2f50782f4df261cb3dfdf5470ee36920e5cc19d88072186ae",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/development/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "c94cef2278fc294b4b2c00dbeabee8c0d961cccc7abed4b46efb920226576358",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/development/4100713-original-lab-amber-covered.trace.json",
+      "input_video_sha256": "ca569f0cafa5c8e682d3ddae67d89b5c3409f7d6e08ba118b4a0ec2f2e8c9d0d",
+      "input_truth_sha256": "580d0a092263ca4a2d611c236a4d653d1116c14e6a52fdb5d3b202f7ad891845",
+      "failure_classification": "popup/overlap/rotation/contrast composite; some player glyphs never observable"
+    },
+    {
+      "partition": "validation",
+      "profile": "clean",
+      "seed": 4100829,
+      "family": "original-lab-slate",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 543,
+      "sampled_frames": 130,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 5,
+      "r1_timely": {
+        "correct": 2,
+        "source_denominator": 5,
+        "observable_denominator": 5
+      },
+      "rank_exact_table_timely": {
+        "correct": 2,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 95,
+        "denominator": 95
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 17,
+        "denominator": 95
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 95,
+          "denominator": 95
+        },
+        "suit": {
+          "correct": 17,
+          "denominator": 95
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 350,
+        "wrong": 0,
+        "unknown": 0,
+        "missed": 0,
+        "denominator": 350
+      },
+      "suits": {
+        "correct": 169,
+        "wrong": 0,
+        "unknown": 181,
+        "missed": 0,
+        "denominator": 350
+      },
+      "presence": {
+        "expected": 385,
+        "missed": 0,
+        "extra": 0,
+        "unreadable_expected": 0,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 0
+      },
+      "backs": {
+        "correct": 35,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 35
+      },
+      "phase": {
+        "correct": 109,
+        "unknown": 21,
+        "wrong_nonunknown": 0,
+        "denominator": 130
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 4,
+      "observable_player_samples": 29,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 30,
+        "missing": 0,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 1
+      },
+      "inventory_final_l1": 0,
+      "inventory_final_drift": {
+        "A": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "J": 0,
+        "Q": 0,
+        "K": 0
+      },
+      "inventory_interim_max_l1": 3,
+      "observed_rc_max_abs_error": 3,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": 833.3333333333358,
+        "p95": 1000.0
+      },
+      "first_qualified_r1_delay_ms": [
+        1176.8518666673717,
+        923.1622999977844,
+        null,
+        null,
+        null
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 212.3435999983485,
+        "p95": 366.24463999924046,
+        "max": 573.035000001255,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "e03462fbdbb404dfe5f87f309a3c7a8c16c25ac7d18728ab70b95eee58e27515",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "f347572670bf5f63e588acd39fca7bfd2393b243a6bda8513e55f7de2697f341",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/4100829-original-lab-slate-clean.trace.json",
+      "input_video_sha256": "fe937503daa1aca96c4251dd146c5f13b24e927d2580c9cf277108ff85973153",
+      "input_truth_sha256": "0993990521097179d378f6d32d25ec06573e88f792751cf4f141ac9fab934c55"
+    },
+    {
+      "partition": "validation",
+      "profile": "overlap",
+      "seed": 4100829,
+      "family": "original-lab-slate",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 543,
+      "sampled_frames": 130,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 5,
+      "r1_timely": {
+        "correct": 4,
+        "source_denominator": 5,
+        "observable_denominator": 5
+      },
+      "rank_exact_table_timely": {
+        "correct": 4,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 94,
+        "denominator": 95
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 18,
+        "denominator": 95
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 94,
+          "denominator": 95
+        },
+        "suit": {
+          "correct": 18,
+          "denominator": 95
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 349,
+        "wrong": 0,
+        "unknown": 0,
+        "missed": 1,
+        "denominator": 350
+      },
+      "suits": {
+        "correct": 170,
+        "wrong": 0,
+        "unknown": 179,
+        "missed": 1,
+        "denominator": 350
+      },
+      "presence": {
+        "expected": 385,
+        "missed": 1,
+        "extra": 0,
+        "unreadable_expected": 0,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 0
+      },
+      "backs": {
+        "correct": 35,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 35
+      },
+      "phase": {
+        "correct": 127,
+        "unknown": 3,
+        "wrong_nonunknown": 0,
+        "denominator": 130
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 16,
+      "observable_player_samples": 29,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 30,
+        "missing": 0,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 0
+      },
+      "inventory_final_l1": 0,
+      "inventory_final_drift": {
+        "A": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "J": 0,
+        "Q": 0,
+        "K": 0
+      },
+      "inventory_interim_max_l1": 3,
+      "observed_rc_max_abs_error": 3,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": 833.3333333333358,
+        "p95": 1000.0
+      },
+      "first_qualified_r1_delay_ms": [
+        1260.230666665544,
+        913.6863999992784,
+        1836.724466664844,
+        1095.6340666659053,
+        1083.1747666658557
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 199.067349998586,
+        "p95": 357.26286999852164,
+        "max": 447.8626999989501,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "e03462fbdbb404dfe5f87f309a3c7a8c16c25ac7d18728ab70b95eee58e27515",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "c2cd4cb5d77ba3cef29f35157df4253bbf6d9c9ffc64d2284fdd39be561d735d",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/4100829-original-lab-slate-overlap.trace.json",
+      "input_video_sha256": "a863ef8255803959333d4d0fb2d91b1948dff78b8103c70aa35927a95ce1a639",
+      "input_truth_sha256": "ce17a76293cf4168b79c5b62385145d548a339d9f1368d82d3ae6e4784c9e65e"
+    },
+    {
+      "partition": "validation",
+      "profile": "rotation",
+      "seed": 4100829,
+      "family": "original-lab-slate",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 543,
+      "sampled_frames": 130,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 5,
+      "r1_timely": {
+        "correct": 0,
+        "source_denominator": 5,
+        "observable_denominator": 5
+      },
+      "rank_exact_table_timely": {
+        "correct": 0,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 95
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 95
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 0,
+          "denominator": 95
+        },
+        "suit": {
+          "correct": 0,
+          "denominator": 95
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 0,
+        "wrong": 0,
+        "unknown": 22,
+        "missed": 328,
+        "denominator": 350
+      },
+      "suits": {
+        "correct": 0,
+        "wrong": 0,
+        "unknown": 22,
+        "missed": 328,
+        "denominator": 350
+      },
+      "presence": {
+        "expected": 385,
+        "missed": 328,
+        "extra": 119,
+        "unreadable_expected": 0,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 0
+      },
+      "backs": {
+        "correct": 35,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 35
+      },
+      "phase": {
+        "correct": 101,
+        "unknown": 29,
+        "wrong_nonunknown": 0,
+        "denominator": 130
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 0,
+      "observable_player_samples": 29,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 0,
+        "missing": 30,
+        "duplicate": 0,
+        "wrong_or_unmatched": 11,
+        "id_switches": 12
+      },
+      "inventory_final_l1": 19,
+      "inventory_final_drift": {
+        "A": -1,
+        "2": 0,
+        "3": -1,
+        "4": -2,
+        "5": -2,
+        "6": -3,
+        "7": -3,
+        "8": 0,
+        "9": -2,
+        "10": -2,
+        "J": -2,
+        "Q": 0,
+        "K": -1
+      },
+      "inventory_interim_max_l1": 20,
+      "observed_rc_max_abs_error": 4,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": null,
+        "p95": null
+      },
+      "first_qualified_r1_delay_ms": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 178.92399999982445,
+        "p95": 261.244589999842,
+        "max": 320.9777000010945,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "e03462fbdbb404dfe5f87f309a3c7a8c16c25ac7d18728ab70b95eee58e27515",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "229497d1f12bcd9e9832c38d2919388233bd1015bf6b14b9af094dcc20dd5790",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/4100829-original-lab-slate-rotation.trace.json",
+      "input_video_sha256": "6e6f0fee64fd6dff6c4d60a703a66e2a41043325544666046021713a42c9a15f",
+      "input_truth_sha256": "4957d66fa4f0ed7d64fcd9eb049ed0e66677ea73c3d871c2226622ad951064ef"
+    },
+    {
+      "partition": "validation",
+      "profile": "faded",
+      "seed": 4100829,
+      "family": "original-lab-slate",
+      "rounds": {
+        "expected": 6,
+        "starts": 0,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 0
+      },
+      "decoded_frames": 543,
+      "sampled_frames": 130,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 5,
+      "r1_timely": {
+        "correct": 0,
+        "source_denominator": 5,
+        "observable_denominator": 5
+      },
+      "rank_exact_table_timely": {
+        "correct": 0,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 95
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 95
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 0,
+          "denominator": 95
+        },
+        "suit": {
+          "correct": 0,
+          "denominator": 95
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 0,
+        "wrong": 0,
+        "unknown": 32,
+        "missed": 318,
+        "denominator": 350
+      },
+      "suits": {
+        "correct": 0,
+        "wrong": 0,
+        "unknown": 32,
+        "missed": 318,
+        "denominator": 350
+      },
+      "presence": {
+        "expected": 385,
+        "missed": 353,
+        "extra": 1,
+        "unreadable_expected": 0,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 0
+      },
+      "backs": {
+        "correct": 0,
+        "wrong": 0,
+        "missed": 35,
+        "denominator": 35
+      },
+      "phase": {
+        "correct": 0,
+        "unknown": 130,
+        "wrong_nonunknown": 0,
+        "denominator": 130
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 0,
+      "observable_player_samples": 29,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 0,
+        "missing": 30,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 0
+      },
+      "inventory_final_l1": 30,
+      "inventory_final_drift": {
+        "A": -1,
+        "2": 0,
+        "3": -1,
+        "4": -2,
+        "5": -3,
+        "6": -7,
+        "7": -3,
+        "8": -3,
+        "9": -5,
+        "10": -2,
+        "J": -2,
+        "Q": 0,
+        "K": -1
+      },
+      "inventory_interim_max_l1": 30,
+      "observed_rc_max_abs_error": 7,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": null,
+        "p95": null
+      },
+      "first_qualified_r1_delay_ms": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 212.37529999962135,
+        "p95": 238.55347000062466,
+        "max": 249.35960000220803,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "e03462fbdbb404dfe5f87f309a3c7a8c16c25ac7d18728ab70b95eee58e27515",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "03bfb83091f9667e2a2bc453c8e91c9a1b7d7daac9866a228bd9d10c1a148421",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/4100829-original-lab-slate-faded.trace.json",
+      "input_video_sha256": "2971d69a32ce83835a395bc1581b0352b92ac43430a015bdb649179549997fb5",
+      "input_truth_sha256": "0993990521097179d378f6d32d25ec06573e88f792751cf4f141ac9fab934c55"
+    },
+    {
+      "partition": "validation",
+      "profile": "clipped",
+      "seed": 4100829,
+      "family": "original-lab-slate",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 543,
+      "sampled_frames": 130,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 0,
+      "r1_timely": {
+        "correct": 0,
+        "source_denominator": 5,
+        "observable_denominator": 0
+      },
+      "rank_exact_table_timely": {
+        "correct": 0,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 95
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 95
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 0,
+          "denominator": 95
+        },
+        "suit": {
+          "correct": 0,
+          "denominator": 95
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 178,
+        "wrong": 0,
+        "unknown": 0,
+        "missed": 95,
+        "denominator": 273
+      },
+      "suits": {
+        "correct": 87,
+        "wrong": 0,
+        "unknown": 91,
+        "missed": 95,
+        "denominator": 273
+      },
+      "presence": {
+        "expected": 385,
+        "missed": 172,
+        "extra": 69,
+        "unreadable_expected": 77,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 77
+      },
+      "backs": {
+        "correct": 35,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 35
+      },
+      "phase": {
+        "correct": 127,
+        "unknown": 3,
+        "wrong_nonunknown": 0,
+        "denominator": 130
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 0,
+      "observable_player_samples": 0,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 18,
+        "missing": 12,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 2
+      },
+      "inventory_final_l1": 12,
+      "inventory_final_drift": {
+        "A": -1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": -1,
+        "6": -2,
+        "7": 0,
+        "8": -3,
+        "9": -2,
+        "10": -1,
+        "J": -1,
+        "Q": 0,
+        "K": -1
+      },
+      "inventory_interim_max_l1": 14,
+      "observed_rc_max_abs_error": 3,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": 875.0000000000009,
+        "p95": 1000.0
+      },
+      "first_qualified_r1_delay_ms": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 189.1595500001131,
+        "p95": 312.3729950013512,
+        "max": 413.5833000000275,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "e03462fbdbb404dfe5f87f309a3c7a8c16c25ac7d18728ab70b95eee58e27515",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "d40096f95c26f3722d9eafec3b3db3e9bda1479e196bf97aa6434aa58809d443",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/4100829-original-lab-slate-clipped.trace.json",
+      "input_video_sha256": "3ebf51a1c3fdef7702256366006b95feee393e0687c33d8ad9bdf4cbf85a4482",
+      "input_truth_sha256": "b5257e637a3bb575d263957ae3851fc4eddc233709f4772e371a6b8869b2ce2e",
+      "failure_classification": "partial source pixels + stale/narrow player ROI; card localization/OCR effects are confounded",
+      "same_input_cloud_contract": "Use the same declared card ROI availability. A full-table cloud reader that uses out-of-ROI cards has different geometric assistance and must be labeled separately."
+    },
+    {
+      "partition": "validation",
+      "profile": "covered",
+      "seed": 4100829,
+      "family": "original-lab-slate",
+      "rounds": {
+        "expected": 6,
+        "starts": 6,
+        "duplicate_starts": 0,
+        "observed_empty_closures": 6
+      },
+      "decoded_frames": 543,
+      "sampled_frames": 130,
+      "source_player_opportunities": 5,
+      "observable_rank_only_opportunities": 0,
+      "r1_timely": {
+        "correct": 0,
+        "source_denominator": 5,
+        "observable_denominator": 0
+      },
+      "rank_exact_table_timely": {
+        "correct": 0,
+        "source_denominator": 5
+      },
+      "rank_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 95
+      },
+      "suit_exact_nonempty_frames": {
+        "correct": 0,
+        "denominator": 95
+      },
+      "inherited_exact_metric_status": "Retained original frozen run metrics; use the derived face-state metrics for corrected correctness.",
+      "derived_face_state_exact_nonempty_frames": {
+        "rank": {
+          "correct": 0,
+          "denominator": 95
+        },
+        "suit": {
+          "correct": 0,
+          "denominator": 95
+        },
+        "wrong_back_on_unreadable": 0,
+        "rank_delta_from_inherited": 0,
+        "suit_delta_from_inherited": 0
+      },
+      "ranks": {
+        "correct": 152,
+        "wrong": 0,
+        "unknown": 0,
+        "missed": 7,
+        "denominator": 159
+      },
+      "suits": {
+        "correct": 67,
+        "wrong": 0,
+        "unknown": 85,
+        "missed": 7,
+        "denominator": 159
+      },
+      "presence": {
+        "expected": 385,
+        "missed": 198,
+        "extra": 43,
+        "unreadable_expected": 191,
+        "unreadable_matched": 0,
+        "unreadable_as_absent": 191
+      },
+      "backs": {
+        "correct": 35,
+        "wrong": 0,
+        "missed": 0,
+        "denominator": 35
+      },
+      "phase": {
+        "correct": 101,
+        "unknown": 29,
+        "wrong_nonunknown": 0,
+        "denominator": 130
+      },
+      "false_accepted_current_state": 0,
+      "wrong_or_stale_basic_advice": 0,
+      "safe_rank_only_action_samples": 0,
+      "observable_player_samples": 0,
+      "exposures": {
+        "expected": 30,
+        "matched_unique": 14,
+        "missing": 16,
+        "duplicate": 0,
+        "wrong_or_unmatched": 0,
+        "id_switches": 3
+      },
+      "inventory_final_l1": 16,
+      "inventory_final_drift": {
+        "A": -1,
+        "2": 0,
+        "3": -1,
+        "4": 0,
+        "5": -1,
+        "6": -2,
+        "7": 0,
+        "8": -3,
+        "9": -3,
+        "10": -2,
+        "J": -2,
+        "Q": 0,
+        "K": -1
+      },
+      "inventory_interim_max_l1": 18,
+      "observed_rc_max_abs_error": 4,
+      "certified_count_samples": 0,
+      "confirmation_delay_ms": {
+        "p50": 916.6666666666672,
+        "p95": 1225.0000000000016
+      },
+      "first_qualified_r1_delay_ms": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "observer_internal_processing_ms": {
+        "p50": 186.27139999989595,
+        "p95": 311.3217849988359,
+        "max": 368.2232999999542,
+        "scope": "Observer internal body timer, before response deep-copy. Offline; not capture-to-display or cloud-request latency."
+      },
+      "result_sha256": "e03462fbdbb404dfe5f87f309a3c7a8c16c25ac7d18728ab70b95eee58e27515",
+      "result_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/local.json",
+      "result_hash_scope": "One aggregate result JSON per split, shared by its six profile rows.",
+      "trace_sha256": "72ebcdca885539e22204ad3c24ef7a0cc9affa1b4c8759caa5500596eeb6bfc4",
+      "trace_artifact": "artifacts/reader-tournament-r1-20261004/results/validation/4100829-original-lab-slate-covered.trace.json",
+      "input_video_sha256": "e569ba1082a48a37457f03dd0da0dc669c28998e32700ed5e14efddb5a9d5736",
+      "input_truth_sha256": "11f344aebb5c4fc62fd2919db5963ec76c9712febb1a17ae152c13fe70273062",
+      "failure_classification": "popup/overlap/rotation/contrast composite; some player glyphs never observable"
+    }
+  ],
+  "aggregate_paired_observations": {
+    "sampled_frames": 1554,
+    "rank_exact_nonempty_frames": {
+      "correct": 366,
+      "denominator": 1128
+    },
+    "suit_exact_nonempty_frames": {
+      "correct": 45,
+      "denominator": 1128
+    },
+    "r1_timely": {
+      "correct": 15,
+      "source_denominator": 60,
+      "observable_denominator": 40
+    },
+    "false_accepted_current_state": 0,
+    "certified_count_samples": 0,
+    "derived_face_state_exact_nonempty_frames": {
+      "rank": {
+        "correct": 366,
+        "denominator": 1128
+      },
+      "suit": {
+        "correct": 45,
+        "denominator": 1128
+      },
+      "wrong_back_on_unreadable": 0
+    },
+    "denominator_warning": "Correlated frames and paired renderings. Do not call these independent hands/sessions or infer zero population risk from zero observed false acceptance."
+  }
+}

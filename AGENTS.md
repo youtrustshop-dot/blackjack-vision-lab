@@ -2,17 +2,20 @@
 
 - Read `docs/MASTER_PLAN.md` for the one active priority order (accepted v1.1).
   `ROADMAP.md` and earlier reports retain history; they do not reactivate immediate YOLO training.
-- Current milestone: M1, calibrated local reader versus at most two available
-  OpenAI image-reader configurations. Preserve Poker Phase 0 and the external advisor.
+- Current milestone: M1, frozen local baseline versus available Gemini Flash/Lite,
+  GPT-6 Luna Standard/Fast, and GPT-6.1 Sol only on residual hard cases. Preserve
+  Poker Phase 0; prepare the existing native advisor's compact view independently.
 - R1 image observation, R2 session reconstruction and R3 poker strategy are separate
   capabilities. Rank-only blackjack may tolerate an unknown suit; poker may not.
 - API readers return observations only. Existing math owns advice. No oracle phase,
   card annotations or hidden simulator state may enter the reader.
-- Current API budget is zero. No inference, including credit-funded inference,
-  without fresh explicit user approval. A saved key or old approval is not consent.
-  Billing verification is read-only; do not buy credits, add payment methods or
-  change auto-recharge. Unknown balance is not zero: use blocked_credit_verification;
-  blocked_no_free_credits requires verified absence. Continue independent local work.
+- Current user authorization (2026-10-04): up to EUR10 equivalent TOTAL R&D API
+  spend across providers/configurations, synthetic owned pixels only. It supersedes
+  the historical zero budget, but does not provision credentials or authorize
+  purchases/recharge/payment changes. Resolve credential reuse, available account
+  access and a persistent worst-case ledger before enabling inference; the legacy
+  runtime gate remains disarmed until these are satisfied. Unknown balance is not
+  zero. Keep failures/timeouts reserved when their charges cannot be established.
 - Future inference/upload requires reviewed native crops, account access and an
   explicit request/spend limit bound to the current spending authorization epoch.
   Secrets remain in the backend environment, never chat,

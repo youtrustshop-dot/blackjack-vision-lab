@@ -8,6 +8,30 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "independent-reader-tournament",
+      "stage": "New session/seed/graphic-family local baseline",
+      "candidate": "frozen 77a036a opt-in context/overlap profile; no manual turn",
+      "status": "executed",
+      "finding": "Two original physical sessions, 12 distinct rounds, six paired difficulty renderings each. Development clean 5/5, overlap 4/5; validation clean 2/5 despite 350/350 ranks, overlap 4/5. Rotation/fading 0/5; clipped/covered have zero fully observable opportunities. Final holdout sealed; no champion or certified R2 promotion.",
+      "evidence": "validation/results/independent-tournament/local-baseline.json"
+    },
+    {
+      "id": "compact-native-advisor",
+      "stage": "External compact source-bound display",
+      "candidate": "existing native advisor, 260x220 window; one observer",
+      "status": "executed",
+      "finding": "Portable native executable verifies pin/minimize/reset/hide/reopen and capture-timestamp expiry. Installed 1.1.1 unchanged. HTTP minimized submissions are not actual minimized screen capture; cross-monitor dragging and mixed DPI remain unverified.",
+      "evidence": "validation/results/compact-advisor/verification.json"
+    },
+    {
+      "id": "synthetic-api-tournament",
+      "stage": "Request-to-validated-state comparison",
+      "candidate": "available Gemini Flash/Lite, Luna Standard/Fast, Sol residual hard cases",
+      "status": "not_executable",
+      "finding": "EUR10 aggregate synthetic-only spending ceiling accepted, but required credential reuse/create choice and account access unresolved. Actual API requests and spend zero; cloud accuracy and p50/p95 unmeasured. Runtime remains disarmed; no paid balance probe.",
+      "evidence": "docs/INDEPENDENT_READER_DECISION.md"
+    },
+    {
       "id": "overlap-presence-identity",
       "stage": "Upright overlap presence, physical identity and disabled-control regression",
       "candidate": "unchanged ranks + patterned blue-back localization + ordered row association + enabled control evidence",
@@ -36,7 +60,7 @@
       "stage": "R1 current hand observation",
       "candidate": "calibrated local versus OpenAI Responses image reader, at most two configurations",
       "status": "not_executable",
-      "finding": "Offline reader/runner prepared. Explicit zero API budget now overrides the prior paid-pilot next step. Billing requires login; free credits and auto-recharge are unknown. No inference/upload. Local historical results unchanged: 3/3 rank/presence, 1/3 conditional usable state, four suits correct and five unknown."
+      "finding": "Historical offline runner and zero-budget guard preserved. Latest EUR10 synthetic-only authorization is documented separately; credential/account prerequisites keep inference disarmed. No historical private-pixel upload authorized. Consumed stills remain 3/3 rank/presence, 1/3 conditional usable state, four suits correct and five unknown."
     },
     {
       "id": "provider-session-gate",
@@ -142,7 +166,7 @@
       "stage": "Dataset partition",
       "candidate": "session/family manifests and hashes",
       "status": "available",
-      "finding": "Private cases are development only. New independent validation/final sessions still required. No private pixels distributed."
+      "finding": "Private cases remain consumed development evidence. VISION-014 adds original session/seed/family-disjoint development/validation and a sealed final holdout; shared rendering mechanics are disclosed. No private pixels distributed."
     },
     {
       "id": "learning",
@@ -1169,7 +1193,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "VISION-013 finished. Rank-only R1 is usable within original synthetic calibrated hit/stand graphics; graphic transfer and provisional identities fail. No default, certified R2 or installed-app promotion. Decide explicit app research integration separately.",
+  "current_priority": "VISION-014 frozen local baseline executed on new original development/validation sessions; final holdout sealed. New graphic clean reaches 2/5 timely R1 despite 350/350 rank observations. No reader champion or R2 promotion. API comparison awaits credential choice and account verification; EUR10 aggregate authorization does not arm inference. Compact advisor verified separately.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1324,6 +1348,26 @@
       ]
     }
   ],
+  "latest_experiment": {
+    "experiment_id": "VISION-014",
+    "parent_experiment_id": "VISION-013",
+    "status": "executed_local_only",
+    "question": "Does the frozen local reader transfer to new original session/seed/family data with timely usable R1, before comparing API candidates?",
+    "baseline_commit": "77a036ac34893fda201959a55f1033d9c106308c",
+    "result": "validation/results/independent-tournament/local-baseline.json",
+    "csv": "validation/results/independent-tournament/local-baseline.csv",
+    "report": "docs/INDEPENDENT_READER_DECISION.md",
+    "independent_sessions_evaluated": 2,
+    "distinct_rounds": 12,
+    "paired_difficulty_renderings_per_session": 6,
+    "final_holdout": "sealed_not_evaluated",
+    "api_requests": 0,
+    "actual_api_cost": 0,
+    "cloud_latency": null,
+    "cloud_correctness": null,
+    "decision": "No champion selection, installed-app replacement or certified R2 promotion. API prerequisite gate unresolved; compact native display delivered separately.",
+    "not_measured": ["API inference", "live capture-to-display", "provider-engine generalization", "mixed-DPI physical capture", "complete poker suits", "multi-hand split vision", "profitability"]
+  },
   "conditional_components": [
     {
       "id": "C03",
@@ -1405,10 +1449,23 @@
   ],
   "api_access_policy": {
     "inference_authorized": false,
-    "authorization_epoch": "2026-10-04-zero-budget",
+    "authorization_epoch": "2026-10-04-synthetic-tournament-eur10",
     "max_requests": 0,
     "max_usd": "0",
-    "reason": "Explicit zero API budget; key presence and existing approval files are not permission. A fresh explicit approval is required even if free credits are later observed.",
+    "reason": "Runtime remains disarmed pending required credential reuse choice, available account access and a persistent worst-case spend ledger. Runtime zero limits are not the user's research budget. No calls have occurred.",
+    "research_spending_authorization": {
+      "currency": "EUR",
+      "total_cap": "10",
+      "scope": "All providers/configurations combined; owned original synthetic pixels only",
+      "supersedes": "2026-10-04-zero-budget",
+      "calls_executed": 0,
+      "cost_incurred": "0",
+      "credential_choice": "pending_user_reuse_or_create_answer",
+      "known_environment_credentials": "OpenAI and Gemini absent; no plaintext disclosed",
+      "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
+      "runtime_gate": "disarmed",
+      "record": "docs/INDEPENDENT_READER_DECISION.md"
+    },
     "credit_check": {
       "status": "blocked_credit_verification",
       "balance": null,
@@ -1417,7 +1474,7 @@
       "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
       "source": "https://platform.openai.com/settings/organization/billing/overview"
     },
-    "account_actions": "No payment methods, credit purchases, auto-recharge changes, or inference calls authorized.",
+    "account_actions": "No payment methods, credit purchases or auto-recharge changes authorized. Synthetic-only inference has a EUR10 aggregate ceiling but prerequisites remain unresolved.",
     "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json"
   }
 }

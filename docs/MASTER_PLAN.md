@@ -1,13 +1,32 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Current consolidated user direction, 2026-10-04: preserve VISION-013 and the
+> installed 1.1.1; run a session/seed/family-disjoint Local/Gemini/Luna tournament,
+> with Sol restricted to residual hard cases. The total R&D inference allowance
+> is now **EUR10 equivalent across all providers**, overriding the historical zero
+> budget below. Only owned synthetic pixels are authorized for cloud input; no
+> purchases, payment changes, auto-recharge or replacement installer. Credential
+> choice/account access and a persistent conservative ledger remain prerequisites;
+> the existing runtime inference gate stays disarmed until those are resolved.
+> Interactive acceptance measures request start through fully validated JSON:
+> p95 <=2.5 seconds target, 2.5–4 conditional, >5 offline, with stale/late results
+> withheld. Compact the existing external native advisor in parallel, without
+> selecting or integrating a new reader prematurely. Do not open another roadmap.
+
+> Executed evidence for that direction: [INDEPENDENT_READER_DECISION.md](INDEPENDENT_READER_DECISION.md)
+> records VISION-014, new original local sessions and the sealed final holdout.
+> Validation clean: 350/350 sampled ranks, only 2/5 timely R1. No reader champion.
+> Compact native advisor is delivered as a separate portable research candidate;
+> API calls/spend remain zero pending credential choice and account access.
+
 > User-authorized bounded overlap increment, 2026-10-04: VISION-013 is finished. Reference 5ba11d4 and historical 6/36 are preserved. Development clean/overlap both reach 6/6 rank-only R1 and full-table opportunities; overlap misses/duplicates fall 1/1 to 0/0. Two new seeds yield 7/7 per original-graphic profile but 0/7 per changed-graphic profile, with provisional identity switches retained. Keep the opt-in synthetic profile; no certified R2/default/desktop promotion. See OVERLAP_SESSION_COMPARISON.md for the capability decision and app trial boundary.
 
 > User-authorized context increment, 2026-10-04: VISION-012 uses visible controls and witnessed temporal boundaries on the frozen VISION-011 development videos. Clean improves 0/6 to 6/6 timely qualified opportunities, overall 0/36 to 6/36; five transfer variants remain incomplete. No default/release promotion, new model, paid API or Poker expansion. See SYNTHETIC_STRESS_LAB.md and the existing matrix.
 
 > User-authorized local simulation extension, 2026-10-04: generate own continuous stress videos while provider capture is unavailable. Existing engine reused; six paired three-round development variants and a 200000-round invariant batch executed. Unchanged reader has unknown phase on all sampled frames; no training or promotion. This does not replace the original-provider video milestone. See SYNTHETIC_STRESS_LAB.md and VISION-011.
 
-> Current user override, 2026-10-04: API budget **zero**, inference **not authorized**. The user reports a safely saved key; this does not authorize spending or image upload. Read-only Billing access redirected to login, so balance, free credits and auto-recharge remain unknown (blocked_credit_verification). Even observed credits would require fresh explicit approval before inference. Do not buy credits, add payment methods or change auto-recharge. Continue independent local preparation, measurement and candidate study; no immediate YOLO training, release replacement or Poker expansion.
+> Historical user override, superseded by the consolidated EUR10 direction above: API budget **zero**, inference **not authorized**. The user reports a safely saved key; this does not authorize spending or image upload. Read-only Billing access redirected to login, so balance, free credits and auto-recharge remain unknown (blocked_credit_verification). At that time even observed credits required fresh explicit approval before inference. No purchase, payment-method or auto-recharge changes were authorized. This paragraph preserves historical evidence; the active scope is the consolidated direction above.
 
 > Autonomous follow-up, 2026-10-04: eight new Freegames native browser stills and one bounded surface/index challenger were evaluated locally. The seam **2 → 7** failure is corrected in development, but BrainPlay regresses and phase/suits remain incomplete. No reader promotion. Continuous capture remains blocked by unavailable verified native/source-picker controls; these sparse stills are explicitly not R2 session evidence. See [the executed probe](FREEGAMES_SURFACE_PROBE.md) and VISION-010 in the existing matrix. The installed release and zero API budget are unchanged.
 
