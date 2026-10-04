@@ -32,5 +32,7 @@
     "Model training",
     "Native desktop rebuild",
     "Physical advisor checks"
-  ]
+  ],
+  "tested_code_commit": "0202b3cb4a8227b90c2a57db1f6398e85a8ab025",
+  "source_binding": "All recorded executable/test source hashes match the committed tree; baseline was executed before commit and retains its original dirty-worktree receipt."
 }
