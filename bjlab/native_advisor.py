@@ -36,7 +36,8 @@ class NativeHost:
             identity=secrets.token_hex(16)
             message={'event':'native_advisor','operation':operation,'request_id':identity,
                 'stream_id':self.selected,'table_name':self.table_name,
-                'topmost':self.topmost if topmost is None else topmost}
+                'topmost':self.topmost if topmost is None else topmost,
+                'restore_topmost':operation=='open' and topmost is None}
             self.pending={'request_id':identity,'at':time.monotonic()}
             self.error=None;self.emit(message)
             return identity
@@ -50,7 +51,8 @@ class NativeHost:
             if identity is not None:self.pending=None
             self.visible=bool(message.get('visible',False));self.topmost=bool(message.get('topmost',False))
             self.error=message.get('error')
-            self.proof={key:message.get(key) for key in ('window','main_minimized','monitor_count')}
+            self.proof={key:message.get(key) for key in ('window','main_minimized','monitor_count',
+                'minimized','geometry','scale_factor')}
 
     def status(self):
         with self.lock:
@@ -71,7 +73,7 @@ def same_origin(request):
 
 
 class Control(BaseModel):
-    operation:Literal['open','hide','topmost']
+    operation:Literal['open','hide','topmost','reset','minimize']
     stream_id:str|None=Field(default=None,max_length=80)
     table_name:str=Field(default='Table',max_length=80)
     topmost:bool|None=None
@@ -95,6 +97,8 @@ def control(request:Request,body:Control):
         if observer is None:raise HTTPException(404,'Start observing the selected table first.')
     elif body.stream_id and body.stream_id!=host.status()['stream_id']:
         raise HTTPException(409,'This advisor belongs to another table.')
+    elif body.operation in ('reset','minimize') and not host.status()['stream_id']:
+        raise HTTPException(409,'Open an observed table in the advisor first.')
     try:
         identity=host.control(body.operation,body.stream_id,body.table_name,body.topmost)
     except ValueError as exc:raise HTTPException(503,str(exc)) from exc

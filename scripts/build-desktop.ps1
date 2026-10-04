@@ -8,7 +8,8 @@ param(
     [switch]$BackendOnly,
     [switch]$SkipBackend,
     [switch]$SkipFrontend,
-    [switch]$MetadataOnly
+    [switch]$MetadataOnly,
+    [switch]$PortableOnly
 )
 $ErrorActionPreference = "Stop"
 $bjProject = Split-Path -Parent $PSScriptRoot
@@ -60,6 +61,7 @@ try {
     $env:NPM_CONFIG_CACHE = Join-Path $bjWork "npm-cache"
     $env:PATH = "$CargoHome\bin;$GnuBin;$bjOriginalPath"
     if ($MetadataOnly) {
+        if ($PortableOnly) { throw "Portable-only research builds require a full native build" }
         $SkipFrontend = $true
         $bjPreviousPath = Join-Path $bjWork "build-provenance.json"
         if (-not (Test-Path -LiteralPath $bjPreviousPath)) { throw "Metadata-only packaging requires a previous full build" }
@@ -156,6 +158,8 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
         "bjlab/clef_contract.py", "bjlab/poker.py", "bjlab/poker_api.py",
         "bjlab/poker_vision.py", "bjlab/round_lifecycle.py", "bjlab/table_labels.py", "bjlab/suit_symbols.py")
     $bjProvenanceFiles += @("bjlab/corner_vision.py", "bjlab/vision_diagnostics.py", "bjlab/native_advisor.py", "ui/src-tauri/src/advisor.rs", "ui/src/NativeAdvisor.tsx", "ui/src/native-advisor.ts", "ui/src/advisor-evidence.ts", "ui/src/capture-geometry.ts", "docs/VISION_EXPERIMENTS.json")
+    $bjProvenanceFiles += @("bjlab/visible_phase.py", "bjlab/overlap_presence.py",
+        "ui/src/CompactAdvisor.tsx", "ui/src/compact-advisor.ts", "ui/src/compact-advisor.css")
     foreach ($bjRelative in $bjProvenanceFiles) {
         $bjProvenancePath = Join-Path $bjProject $bjRelative
         if (Test-Path -LiteralPath $bjProvenancePath) {
@@ -212,14 +216,18 @@ print(next(item["version"] for item in data["package"] if item["name"] == "webvi
         }
         Invoke-PinnedTauri -TauriArguments @("bundle", "--target", $bjTarget, "--bundles", "nsis")
     } else {
-        Invoke-PinnedTauri -TauriArguments @("build", "--target", $bjTarget)
+        $bjNativeArguments = @("build", "--target", $bjTarget)
+        if ($PortableOnly) { $bjNativeArguments += "--no-bundle" }
+        Invoke-PinnedTauri -TauriArguments $bjNativeArguments
     }
     Assert-Exit "Tauri desktop and NSIS build"
     Copy-Item -LiteralPath $bjNative -Destination (Join-Path $bjRelease "Blackjack Vision Lab.exe") -Force
     Copy-Item -LiteralPath (Join-Path $bjRuntime "WebView2Loader.dll") -Destination (Join-Path $bjRelease "WebView2Loader.dll") -Force
     $bjInstallers = Join-Path $env:CARGO_TARGET_DIR "$bjTarget\release\bundle\nsis"
-    Get-ChildItem -LiteralPath $bjInstallers -Filter "Blackjack Vision Lab_${bjVersion}_x64-setup.exe" | ForEach-Object {
-        Copy-Item -LiteralPath $_.FullName -Destination $bjRelease -Force
+    if (-not $PortableOnly) {
+        Get-ChildItem -LiteralPath $bjInstallers -Filter "Blackjack Vision Lab_${bjVersion}_x64-setup.exe" | ForEach-Object {
+            Copy-Item -LiteralPath $_.FullName -Destination $bjRelease -Force
+        }
     }
     $bjHashes = Get-ChildItem -LiteralPath $bjRelease -File | Where-Object { $_.Extension -in @(".exe", ".dll") } | ForEach-Object {
         $bjHash = Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256

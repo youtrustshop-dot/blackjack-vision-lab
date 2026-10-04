@@ -1,9 +1,9 @@
 import {useEffect,useState} from 'react';
 import {api} from './api';
-import {LiveAdvisor} from './LiveVision';
+import CompactAdvisor from './CompactAdvisor';
 import {nativeControl} from './native-advisor';
 import {evidenceExpiry} from './advisor-evidence';
-import {localize} from './localize';
+import {advisorSnapshotCurrent} from './compact-advisor';
 
 export default function NativeAdvisor(){
  const stream=new URLSearchParams(location.search).get('advisor')!;
@@ -11,11 +11,17 @@ export default function NativeAdvisor(){
  useEffect(()=>{let active=true,timer:ReturnType<typeof setTimeout>;
   const poll=async()=>{const began=performance.now();try{
    const [state,host]=await Promise.all([api('/native/advisor/'+stream+'/state'),api('/native/advisor/status')]);
-   if(active){setValue(state);setStatus(host);setExpires(evidenceExpiry(state.evidence_ttl_ms,began,performance.now()));setError('')}
+   if(active){setValue(state);setStatus(host);setExpires(advisorSnapshotCurrent(state,host,stream)?evidenceExpiry(state.evidence_ttl_ms,began,performance.now()):0);setError('')}
   }catch(e){if(active){setValue(null);setExpires(0);setError(e instanceof Error?e.message:String(e))}}
   finally{if(active)timer=setTimeout(poll,350)}};void poll();const tick=setInterval(()=>setNow(performance.now()),150);
   return()=>{active=false;clearTimeout(timer);clearInterval(tick)};
  },[stream]);
- const action=async(operation:'hide'|'topmost',topmost?:boolean)=>{try{await nativeControl(operation,stream,undefined,topmost)}catch(e){setError(e instanceof Error?e.message:String(e))}};
- return localize(<main className="external-advisor"><header className="external-advisor-toolbar"><span>{status?.table_name||'Live advisor'}</span><label><input type="checkbox" checked={status?.topmost||false} onChange={e=>void action('topmost',e.target.checked)}/>Always on top</label><button className="text-button" onClick={()=>void action('hide')}>Close</button></header>{status?.tables?.length>1&&<select aria-label="Selected table" value={stream} onChange={e=>{const table=status.tables.find((t:any)=>t.stream_id===e.target.value);void nativeControl('open',table.stream_id,table.table_name)}}>{status.tables.map((table:any)=><option key={table.stream_id} value={table.stream_id}>{table.table_name}</option>)}</select>}{error&&<p role="alert">{error}</p>}<LiveAdvisor report={value?.report} stale={!value||value.stale||now>=expires} compact/><p className="panel-caption">Drag the native title bar to another monitor. This window views one observer; closing it keeps capture active.</p>{value?.evidence_timestamp&&<p className="panel-caption">Evidence: {new Date(value.evidence_timestamp).toLocaleTimeString()} · {value.source_id}</p>}</main>);
+ const action=async(operation:'hide'|'topmost'|'minimize'|'reset',topmost?:boolean)=>{try{await nativeControl(operation,stream,undefined,topmost)}catch(e){setError(e instanceof Error?e.message:String(e))}};
+ const stale=!advisorSnapshotCurrent(value,status,stream)||now>=expires;
+ return <main className="external-advisor">
+  <header className="external-advisor-toolbar"><span title="Drag the native title bar to move this window">{status?.table_name||'Live advisor'}</span><button title="Always on top" aria-label="Always on top" aria-pressed={status?.topmost||false} onClick={()=>void action('topmost',!status?.topmost)}>Pin</button><button title="Reset advisor position and size" aria-label="Reset advisor position" onClick={()=>void action('reset')}>↺</button><button title="Minimize advisor" aria-label="Minimize advisor" onClick={()=>void action('minimize')}>−</button><button title="Close advisor" aria-label="Close advisor" onClick={()=>void action('hide')}>×</button></header>
+  {status?.tables?.length>1&&<select aria-label="Selected table" value={stream} onChange={e=>{setValue(null);setExpires(0);const table=status.tables.find((t:any)=>t.stream_id===e.target.value);void nativeControl('open',table.stream_id,table.table_name).catch(e=>setError(e instanceof Error?e.message:String(e)))}}>{status.tables.map((table:any)=><option key={table.stream_id} value={table.stream_id}>{table.table_name}</option>)}</select>}
+  {error&&<div className="mini-error" role="alert" title={error}>{error}</div>}
+  <CompactAdvisor report={value?.report} stale={stale} ageMs={value?.evidence_timestamp?Date.now()-value.evidence_timestamp:undefined}/>
+ </main>;
 }

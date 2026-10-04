@@ -74,6 +74,7 @@ def main():
         native_ready=temporary/'native-ready.json'
         if args.native:
             environment.update(BJLAB_DESKTOP_SMOKE='1',BJLAB_NATIVE_READY_FILE=str(native_ready),
+                               BJLAB_NATIVE_ADVISOR_GEOMETRY_FILE=str(temporary/'advisor-geometry.json'),
                                BJLAB_NATIVE_SMOKE_EXIT_AFTER_MS='60000' if args.advisor else '45000' if args.external_image else '25000')
             if args.advisor:environment['BJLAB_NATIVE_ADVISOR_SMOKE']='1'
             command=[str(binary)]
@@ -142,7 +143,7 @@ def main():
             asset=re.search(rb'src="([^"]+\.js)"',html).group(1).decode()
             javascript=request(asset)
             assert javascript==(project/'ui/dist'/asset.lstrip('/')).read_bytes()
-            assert b'Share screen' in javascript and b'Floating advisor' in javascript
+            assert b'Share screen' in javascript and b'Open advisor' in javascript
             session=request('/api/sessions',{'seed':42})
             sid=session['session_id']
             session=request('/api/sessions/'+sid+'/deal',{})
@@ -209,7 +210,16 @@ def main():
                     assert status['native_proof']['window']=='advisor'
                     return status
                 initial=native('open');assert initial['native_proof']['main_minimized'],initial
+                assert initial['topmost'],'First compact open should stay on top by default'
+                scale=initial['native_proof']['scale_factor']
+                compact=initial['native_proof']['geometry']
+                assert abs(compact['w']/scale-260)<=1 and abs(compact['h']/scale-220)<=1,compact
+                unpinned=native('topmost',topmost=False);assert not unpinned['topmost']
+                native('hide');assert not native('open')['topmost'],'Reopening should retain explicit unpin'
                 pinned=native('topmost',topmost=True);assert pinned['topmost']
+                minimized=native('minimize');assert minimized['native_proof']['minimized'],minimized
+                reset=native('reset');assert not reset['native_proof']['minimized'],reset
+                assert reset['topmost'] and reset['native_proof']['geometry']['w']==compact['w']
                 for repeat in range(3):native('hide');native('open')
                 assert len(request('/api/native/advisor/status')['tables'])==1
                 # New captured evidence continues while the native main is minimized.
@@ -226,6 +236,9 @@ def main():
                 time.sleep(2.3);expired=request('/api/native/advisor/'+identity+'/state')
                 assert expired['stale'] and expired['report']['advice'] is None
                 report['native_advisor']={'created':True,'singleton_reopen_cycles':3,'always_on_top':True,
+                    'compact_logical_size':[260,220],'geometry_physical':compact,
+                    'scale_factor':scale,'explicit_pin_choice_persisted':True,
+                    'minimize_and_reset_real_window':True,'smoke_preferences_isolated':True,
                     'same_origin_http_bridge':True,'main_minimized':initial['native_proof']['main_minimized'],
                     'monitor_count':initial['native_proof']['monitor_count'],'fresh_source_binding':True,
                     'motion_and_expiry_withhold_advice':True,'personal_picker_selected':False,

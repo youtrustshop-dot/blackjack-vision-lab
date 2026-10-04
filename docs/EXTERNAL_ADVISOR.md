@@ -6,6 +6,31 @@ base version, displays **research candidate** in its native title and records it
 code commit, dirty flag and source hashes in the frozen build provenance.
 It is not a replacement release, a new poker strategy or a universal detector.
 
+## Compact follow-up
+
+The current source reuses that same window and authoritative backend. The default
+content area is **260 x 220 logical pixels**, with a **230 x 180** minimum. It shows
+the essential player/dealer evidence, one large action, LIVE / UNCERTAIN / STALE,
+and a short independent count status. Full EV explanations and inventory remain
+in the main application. Unknown evidence is not a retained recommendation.
+
+Open advisor prefers the native window when its host is available. Hide, minimize,
+reopen, reset position and always-on-top control this same view, without starting
+another observer or capture loop. Always-on-top defaults on for a first window;
+an explicit saved choice is respected. Reset recovers the compact geometry into
+the available monitor work area. Logical dimensions persist across DPI changes;
+negative monitor origins are supported by the geometry code. These unit checks
+do not establish a physical multi-monitor result.
+
+The running installed backend was inspected on **2026-10-04** at `:28445`:
+health reported 1.1.1, and `/api/native/advisor/status` returned **404**. That process
+was the published `release/v1.1.1/bjlab-backend.exe`. It cannot display the new
+research window. A candidate uses its own loopback URL; opening an old browser
+tab does not connect its captures to a different backend.
+
+Compact preparation is independent of reader selection. No new cloud reader or
+uncertified count has been promoted into live advice by this UI change.
+
 The vision-learning follow-up changes source code only. It has not rebuilt this
 native candidate or tested physical screen sharing. The existing Windows smoke
 and Chrome-to-native simulator bridge evidence belongs to PR #3; the new source

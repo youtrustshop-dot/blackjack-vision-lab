@@ -28,10 +28,11 @@ try{
  await table.locator('.probability-grid strong').first().filter({hasText:/%/}).waitFor({timeout:10000});
  checks.push('Independent analysis polling supplies probabilities for the same state');
  const stable=frames.findLast(r=>r.advice);results.initial={player:stable.player,dealer:stable.dealer,action:stable.advice.best_action,count_history:stable.count_history,state_id:stable.state_id};
- await table.getByRole('button',{name:'Floating advisor',exact:true}).click();
- assert.ok(await page.getByRole('complementary',{name:'Floating live advisor'}).isVisible());
- checks.push('Floating advisor uses the same current report');
- await page.getByRole('complementary',{name:'Floating live advisor'}).getByRole('button',{name:'Close advisor',exact:true}).click();
+ await table.getByRole('button',{name:'Open advisor',exact:true}).click();
+ assert.ok(await page.getByRole('complementary',{name:'In-page advisor fallback'}).isVisible());
+ assert.match(await page.getByRole('complementary',{name:'In-page advisor fallback'}).innerText(),/cannot move outside this app/);
+ checks.push('Unavailable native/PiP host is explicitly labelled as in-page fallback');
+ await page.getByRole('complementary',{name:'In-page advisor fallback'}).getByRole('button',{name:'Close advisor',exact:true}).click();
  await table.getByRole('button',{name:'Stop video',exact:true}).click();
  // Exercise the real API contract for a mid-shoe start without changing pixels.
  await page.route('**/api/live',async route=>{

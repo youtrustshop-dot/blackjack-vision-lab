@@ -68,9 +68,32 @@ def test_old_table_view_cannot_close_or_pin_the_new_selected_advisor(monkeypatch
     host.selected='current-table';host.visible=True
     monkeypatch.setattr(module,'host',host)
     with TestClient(app,base_url='http://127.0.0.1:8000') as client:
-        for operation in ('hide','topmost'):
+        for operation in ('hide','topmost','reset','minimize'):
             response=client.post('/api/native/advisor/control',
                 json={'operation':operation,'stream_id':'previous-table','topmost':True},
                 headers={'origin':'http://127.0.0.1:8000','x-bjlab-local':'1'})
             assert response.status_code==409
     assert not messages and host.status()['visible'] and host.selected=='current-table'
+
+
+def test_compact_window_controls_reuse_selected_observer_and_restore_pin_choice(monkeypatch):
+    import bjlab.native_advisor as module
+    from bjlab.live_api import observers
+    messages=[];host=NativeHost(True,messages.append)
+    item=observer();identity='compact-control-test'
+    monkeypatch.setattr(module,'host',host)
+    monkeypatch.setitem(observers,identity,item)
+    before=set(observers)
+    with TestClient(app,base_url='http://127.0.0.1:8000') as client:
+        headers={'origin':'http://127.0.0.1:8000','x-bjlab-local':'1'}
+        assert client.post('/api/native/advisor/control',json={'operation':'reset'},headers=headers).status_code==409
+        for operation in ('open','minimize','reset','hide','open'):
+            response=client.post('/api/native/advisor/control',
+                json={'operation':operation,'stream_id':identity},headers=headers)
+            assert response.status_code==200
+        assert messages[0]['restore_topmost'] and messages[-1]['restore_topmost']
+        assert {message['stream_id'] for message in messages}=={identity}
+        explicit=client.post('/api/native/advisor/control',
+            json={'operation':'open','stream_id':identity,'topmost':False},headers=headers)
+        assert explicit.status_code==200 and not messages[-1]['restore_topmost']
+    assert set(observers)==before and not item.stopped
