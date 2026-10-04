@@ -20,10 +20,12 @@ WORDS = {'HIT':'hit', 'STAND':'stand', 'DOUBLE':'double', 'SPLIT':'split',
 
 
 class VisiblePhaseContext:
-    def __init__(self, layout):
+    def __init__(self, layout, *, overlap_challenger=False):
         if 'controls' not in layout:
             raise ValueError('The phase challenger requires a calibrated controls region.')
         self.roi = NormalizedROI(*layout['controls'])
+        self.layout=layout
+        self.overlap_challenger=overlap_challenger
         self.previous_phase = 'unknown'
         self.previous_dealer = ()
 
@@ -39,6 +41,31 @@ class VisiblePhaseContext:
                if i and 4<=ch<=h*.35 and 2<=cw<=w*.25 and area>=5]
         ink = np.isin(components,ids).astype(np.uint8)*255
         joined = cv2.morphologyEx(ink,cv2.MORPH_CLOSE,np.ones((3,21),np.uint8))
+        panels=[]
+        if self.overlap_challenger:
+            # Bounded enabled style: an accented outline enclosing the caption.
+            # Legible text alone, gray disabled panels and unknown styles do not
+            # prove that the player can act. This is not browser hit-testing.
+            accent=((hsv[:,:,0]>=10)&(hsv[:,:,0]<=55)&(hsv[:,:,1]>25)&(hsv[:,:,2]>110)).astype(np.uint8)*255
+            accent=cv2.morphologyEx(accent,cv2.MORPH_CLOSE,np.ones((3,3),np.uint8))
+            panel_boxes=[cv2.boundingRect(c) for c in cv2.findContours(accent,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)[0]]
+            for px,py,pw,ph in panel_boxes:
+                if h*.30<ph<h*.90 and w*.08<pw<w*.60:
+                    panels.append((px,py,pw,ph))
+            dark=(hsv[:,:,2]<80).astype(np.uint8)*255
+            dark=cv2.morphologyEx(dark,cv2.MORPH_CLOSE,np.ones((5,5),np.uint8))
+            for contour in cv2.findContours(dark,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)[0]:
+                px,py,pw,ph=cv2.boundingRect(contour)
+                if not (h*.30<ph<h*.90 and w*.08<pw<w*.60): continue
+                band=5
+                top=accent[max(0,py-band):py+band,px:px+pw]
+                bottom=accent[py+ph-band:min(h,py+ph+band),px:px+pw]
+                left=accent[py:py+ph,max(0,px-band):px+band]
+                right=accent[py:py+ph,px+pw-band:min(w,px+pw+band)]
+                horizontal=max((top>0).any(axis=0).sum(),(bottom>0).any(axis=0).sum())
+                vertical=max((left>0).any(axis=1).sum(),(right>0).any(axis=1).sum())
+                if horizontal>pw*.50 and vertical>ph*.30:
+                    panels.append((px-band,py-band,pw+2*band,ph+2*band))
         proposals=[]; controls=[]
         for contour in cv2.findContours(joined,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)[0]:
             bx,by,bw,bh=cv2.boundingRect(contour)
@@ -51,9 +78,12 @@ class VisiblePhaseContext:
                 if alternative_score>score: text,score=alternative,alternative_score
             word=re.sub('[^A-Z]','',text.upper())
             accepted=word in WORDS and score>=.80
+            enabled=any(px<bx and py<by and px+pw>bx+bw and py+ph>by+bh
+                        and ph>bh*1.7 for px,py,pw,ph in panels) if self.overlap_challenger else None
             proposals.append({'text':text,'score':score,'accepted':accepted,
-                              'bbox':[x+bx,y+by,bw,bh]})
-            if accepted: controls.append(WORDS[word])
+                              'bbox':[x+bx,y+by,bw,bh], 'enabled_style_evidence':enabled})
+            if accepted and (not self.overlap_challenger or WORDS[word] not in ('hit','stand','double','split','surrender') or enabled):
+                controls.append(WORDS[word])
         controls=set(controls)
         player=[d for d in detections if d.zone=='player:0']
         dealer=tuple(d.rank for d in detections if d.zone=='dealer' and d.rank)
@@ -73,15 +103,18 @@ class VisiblePhaseContext:
             phase='dealer'; rule='dealer face changed after player controls disappeared'
         if phase=='player' and (len(player)<2 or len(dealer)!=1):
             reasons.append('Player controls visible but card presence is incomplete.')
+        if self.overlap_challenger and any(p['accepted'] and not p['enabled_style_evidence']
+                and re.sub('[^A-Z]','',p['text'].upper()) in ('HIT','STAND') for p in proposals):
+            reasons.append('Readable player control lacks supported enabled-style evidence.')
         self.previous_phase=phase
         self.previous_dealer=dealer
         return {'phase':phase,'controls':sorted(controls), 'reasons':reasons,
                 'phase_rule':rule,'control_proposals':proposals,
                 'turn_provenance':'current-pixel controls; temporal transition',
-                'context_version':VERSION}
+                'context_version':'visible-overlap-temporal-v2' if self.overlap_challenger else VERSION}
 
     def covered_presence(self,image,detections):
-        """Classify only existing unknown bodies, not ranks or new card objects.
+        """Classify existing bodies; v2 also localizes separate patterned backs.
 
         Blue patterned body plus bright rim is positive current-pixel evidence.
         Unknown bodies without this evidence retain the original blocking gate.
@@ -108,7 +141,23 @@ class VisiblePhaseContext:
                 'blue_fraction':float(blue.mean()),'texture_range':texture_range,'stripe_variation':stripe_variation,
                 'rim_fraction':float(rim_fraction),'provenance':'current pixels; bounded patterned-back context rule'})
             result.append(replace(d,face_down=True,visibility='covered') if accepted else d)
-        return result,evidence
+        if self.overlap_challenger:
+            from .overlap_presence import patterned_backs
+            backs,proposals=patterned_backs(image,self.layout)
+            for back in backs:
+                same=[i for i,d in enumerate(result) if d.zone==back.zone
+                      and abs(d.bbox[0]-back.bbox[0])<max(6,back.bbox[3]*.08)
+                      and abs(d.bbox[1]-back.bbox[1])<back.bbox[3]*.15]
+                if same:
+                    i=same[0]
+                    if result[i].rank is None and not result[i].face_down:
+                        result[i]=back
+                        evidence.append({'bbox':list(back.bbox),'covered':True,'resolved_body_rejection':True})
+                else:
+                    result.append(back)
+                    evidence.append({'bbox':list(back.bbox),'covered':True,'resolved_body_rejection':False})
+            self.back_proposals=proposals
+        return sorted(result,key=lambda d:(d.zone,d.bbox[0])),evidence
 
 
 class VisibleRoundLifecycle:

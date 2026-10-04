@@ -227,7 +227,8 @@ def estimate_actions(player: list[str], upcard: str, counts: list[int], rules: R
 
 class LiveObserver:
     def __init__(self, rules: Rules, *, samples=1500, corners=None, zones=None, layout=None,
-                 fresh_shoe=False, manual_turn=False, output_height=600, context_challenger=False):
+                 fresh_shoe=False, manual_turn=False, output_height=600, context_challenger=False,
+                 overlap_challenger=False):
         self.rules, self.samples = rules, samples
         self.corners, self.zones = corners, zones
         self.layout=layout
@@ -257,12 +258,16 @@ class LiveObserver:
         from .round_lifecycle import RoundLifecycle
         self.lifecycle=RoundLifecycle()
         self.context_challenger = None
+        if overlap_challenger and not context_challenger:
+            raise ValueError('Overlap challenger requires the opt-in context challenger.')
         if context_challenger:
             if not layout or manual_turn:
                 raise ValueError('Visible phase challenger requires layout and automatic turn evidence.')
             from .visible_phase import VisiblePhaseContext, VisibleRoundLifecycle
-            self.context_challenger=VisiblePhaseContext(layout)
+            self.context_challenger=VisiblePhaseContext(layout,overlap_challenger=overlap_challenger)
             self.lifecycle=VisibleRoundLifecycle()
+            if overlap_challenger:
+                self.tracker.association_mode='ordered_row'
         self.history_gap=False
         self.perception_pending=False
         self.last_observation_timestamp=None
@@ -342,10 +347,12 @@ class LiveObserver:
                 detections,presence_evidence=self.context_challenger.covered_presence(image,detections)
                 # Clear only a positively identified unknown body rejection.
                 # Unresolved corner proposals remain blocking evidence.
-                recovered=sum(e['covered'] for e in presence_evidence)
+                recovered=sum(e['covered'] and e.get('resolved_body_rejection',True) for e in presence_evidence)
                 rejected_card_candidates=max(0,rejected_card_candidates-recovered)
                 phase_context=self.context_challenger.read(image,detections)
                 phase_context['covered_presence_evidence']=presence_evidence
+                if getattr(self.context_challenger,'overlap_challenger',False):
+                    phase_context['back_surface_proposals']=self.context_challenger.back_proposals
                 phase_context['raw_rejected_card_candidates']=self.detector.last_diagnostics['rejected_card_candidates']
                 phase_context['effective_rejected_card_candidates']=rejected_card_candidates
                 phase_context['reasons']=list(external.get('reasons',[]))+phase_context['reasons']
