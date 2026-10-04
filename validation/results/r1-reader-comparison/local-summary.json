@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "candidate": {
+    "commit": "478d1a9dac39927f17703cdd9eb8ec613b677a28",
+    "working_tree_dirty": true
+  },
+  "source_hashes": {
+    "bjlab/state_reader.py": "f72c51539e29f3bb49942eedc801d0ce549088b915254293d238993332637cb6",
+    "bjlab/openai_reader.py": "e7fd28bc35ac990c83747361018a55863e9f81016a74135a155447e5b8f188af",
+    "validation/tools/state_reader_comparison.py": "5192548560df93248e3f6013a8c7e97e4033481070825d7beb101d102220f495",
+    "bjlab/corner_vision.py": "203cde4bbf3af1b3eb3dae0b10280b7c498263def51930ed30b31ec2716f3197",
+    "bjlab/calibration.py": "1f92a47d97a9c398ac8ab7470ed2a725d8d4c3b921229e6b925f7cad8131a863",
+    "bjlab/ocr.py": "97e279cfc8c3872efba841b536e883202c485f83757420b96561e1f2cc78e44e",
+    "bjlab/suit_symbols.py": "c9e6fa2ecdefc62ca2634b6ef43ed4ac00b64019d0a9a39667cfbe2e41613be8",
+    "bjlab/engine.py": "3b9b68f6f6d124f17c7d1e6895ce149eb42ab66b06e1ab6e39545d078b5035ba",
+    "bjlab/advice.py": "626aed67d9255488c0f07df56c70656f2d1f09b23f42f067207c9a39fdf04683"
+  },
+  "local_ocr_checkpoint_sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+  "prepared_manifest_sha256": "6e6edcf8c951f5aa41d6307aed895b8bfb6e55214a7b7e6218574fcc3b399d3a",
+  "oracle_sha256": "a07ad8a11779be9b52342e8e784092912e38ddc7a13e9efe6e7f6f8ba2d0bee1",
+  "hardware": {
+    "os": "Windows",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD",
+    "local_device": "CPU"
+  },
+  "assistance": "initial role calibration only; no oracle phase; suits/history unknown remain unknown",
+  "configured_rules_for_conditional_study": {
+    "decks": 6,
+    "hit_soft17": false,
+    "blackjack_payout": 1.5,
+    "dealer_peek": true,
+    "enhc": false,
+    "enhc_loss": "all",
+    "double_rule": "any",
+    "double_after_split": true,
+    "resplit": true,
+    "max_split_hands": 4,
+    "resplit_aces": false,
+    "hit_split_aces": false,
+    "surrender": "late",
+    "penetration": 0.75
+  },
+  "acceptance": {
+    "scope": "independent supported R1 verification, not this consumed pilot",
+    "correct_usable_state_fraction": 0.95,
+    "false_accepted_states": 0,
+    "p95_ms": 5000
+  },
+  "scope": "R1 consumed screenshot regression; no independent generalization or live/session claim",
+  "readers": {
+    "calibrated-corners-2-presence": {
+      "states": 3,
+      "complete_annotated_states": 0,
+      "complete_state_accuracy": null,
+      "complete_correct_usable_states": 0,
+      "rank_presence_states_correct": 3,
+      "correct_usable_rank_study_states": 1,
+      "false_accepted_rank_states": 0,
+      "full_card_states_correct": 0,
+      "known_suits_correct": 4,
+      "known_suits_expected": 9,
+      "readable_suits_unknown": 5,
+      "states_within_5s": 3,
+      "failures": 0,
+      "processing_p50_ms": 151.50630000061938,
+      "processing_p95_ms": 648.6934800001109,
+      "sampling_note": "One attempt per still; tiny consumed corpus, not a live/session latency estimate.",
+      "cost_usd": null,
+      "cost_per_correct_usable_rank_state_usd": null
+    }
+  },
+  "api_comparison_executed": false,
+  "api_blockers": [
+    "API credential decision, model access, crop consent and budget pending"
+  ],
+  "decision": "inconclusive",
+  "original_provider_sessions": 0,
+  "budget": null,
+  "retained_integration_runs": 3,
+  "independent_game_moments": 2,
+  "repeated_preview_inputs": 1,
+  "iteration_note": "Three local integration runs of the same consumed inputs while completing instrumentation; no local detector or image thresholds changed, no new independent evidence."
+}

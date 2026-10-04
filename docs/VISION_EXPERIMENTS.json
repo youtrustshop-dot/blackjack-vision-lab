@@ -8,6 +8,13 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "r1-reader-comparison",
+      "stage": "R1 current hand observation",
+      "candidate": "calibrated local versus OpenAI Responses image reader, at most two configurations",
+      "status": "not_executable",
+      "finding": "Adapter, schema and private runner implemented. Paid API comparison not executed: key setup, account models, exact crop consent and budget pending. Local consumed regressions remain 3/3 rank/presence states, 1/3 usable conditional study, four correct suits and five unknown. Phase unannotated; no independent full-state or session acceptance. See R1_READER_COMPARISON.md."
+    },
+    {
       "id": "provider-session-gate",
       "stage": "Complete original provider sessions",
       "candidate": "Freegames classic, initial calibration, manual turn disabled",
@@ -1128,5 +1135,121 @@
       "covered_wrong": 0
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
-  }
+  },
+  "current_priority": {
+    "master": "docs/MASTER_PLAN.md",
+    "version": "1.1",
+    "milestone": "M1",
+    "experiment_id": "VISION-009",
+    "immediate_yolo_training": "superseded in priority, retained as conditional alternative",
+    "api_comparison": "blocked: key setup, model access, exact-crop consent and bounded budget pending"
+  },
+  "iterations": [
+    {
+      "experiment_id": "VISION-009",
+      "parent_experiment_id": null,
+      "question": "Does API observation improve correct useful R1 states over the calibrated local baseline?",
+      "status": "blocked",
+      "component_ids": [
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F10"
+      ],
+      "candidate_model_id": null,
+      "candidate_weights_hash": null,
+      "baseline_commit": "478d1a9dac39927f17703cdd9eb8ec613b677a28",
+      "split": "development",
+      "assistance": "initial ROI only; no ground-truth phase",
+      "input_contract": "bjlab/state_reader.py:FrameInput",
+      "output_contract": "bjlab/state_reader.py:HandObservation",
+      "privacy_and_cost_approval": null,
+      "budget": {
+        "max_requests": null,
+        "max_cost": null
+      },
+      "primary_metrics": [
+        "complete_state_accuracy",
+        "useful_coverage",
+        "false_accepted_states",
+        "latency_p95_ms",
+        "cost_per_correct_useful_state"
+      ],
+      "acceptance_rule": "Independent supported R1 >=95% correct usable states; zero visibly wrong accepted in finite sample; validated output p95 <=5s. Consumed pilot cannot certify.",
+      "result": null,
+      "local_integration_evidence": "validation/results/r1-reader-comparison/local-summary.json",
+      "raw_evidence_path": "ignored artifacts/vision-research/r1-api-comparison",
+      "decision": "pending, no model promoted",
+      "what_was_not_tested": [
+        "actual API inference",
+        "account model availability",
+        "independent full-state verification",
+        "original provider session",
+        "live integration",
+        "Windows physical advisor"
+      ],
+      "next_action": "Complete secure credential setup, then approve concrete crop/model/budget proposal before paid pilot"
+    }
+  ],
+  "conditional_components": [
+    {
+      "id": "C03",
+      "source": "https://github.com/ultralytics/ultralytics",
+      "role": "YOLO26 detection/classification",
+      "status": "deferred",
+      "license_review": "AGPL/Enterprise options recorded in supplied plan; check exact code/checkpoint/data before reuse",
+      "trigger": "M1 measured localization/symbol or local cost/latency limitation with adequate data"
+    },
+    {
+      "id": "C04",
+      "source": "https://github.com/FoundationVision/ByteTrack",
+      "role": "Temporal association, not rank reading",
+      "status": "deferred",
+      "license_review": "MIT recorded in supplied plan; pin actual revision before reuse",
+      "trigger": "R2 identity failure with fixed detection replay"
+    },
+    {
+      "id": "C05",
+      "source": "https://github.com/facebookresearch/sam3",
+      "role": "Segmentation/tracking or annotation assistance",
+      "status": "deferred",
+      "license_review": "Custom license recorded in supplied plan; exact assets not adopted",
+      "trigger": "Measured card/badge/background separation failure; compare raw versus masked pixels"
+    },
+    {
+      "id": "C06",
+      "source": "https://github.com/facebookresearch/dinov3",
+      "role": "Crop representations/similarity, not calibrated correctness",
+      "status": "deferred",
+      "license_review": "Custom license recorded in supplied plan; exact assets not adopted",
+      "trigger": "Symbols already localized but example-based discrimination remains limiting"
+    },
+    {
+      "id": "C07",
+      "source": "https://github.com/geaxgx/playing-card-detection",
+      "role": "Printed-corner annotation/dataset reference",
+      "status": "source_reviewed",
+      "source_review_scope": "README and repository listing only, 2026-10-04; no executable or asset audit",
+      "license_review": "MIT shown by GitHub; dataset/checkpoint rights separately required",
+      "trigger": "Return to annotation/training after M1 decision"
+    },
+    {
+      "id": "C08",
+      "source": "https://github.com/roboflow/supervision",
+      "role": "Reusable annotation/zone tooling",
+      "status": "deferred",
+      "license_review": "MIT recorded in supplied plan; pin/check actual dependency before reuse",
+      "trigger": "Concrete tooling gap, not a parallel experiment framework"
+    },
+    {
+      "id": "C09",
+      "source": "https://github.com/roboflow/blackjack-basic-strategy",
+      "role": "Visual basic-strategy demo reference, not an oracle",
+      "status": "source_reviewed",
+      "source_review_scope": "README and repository listing only, 2026-10-04; no executable or asset audit",
+      "license_review": "MIT shown by GitHub; separately check dependencies/assets before reuse",
+      "trigger": "Implementation reuse with demonstrated savings after targeted review"
+    }
+  ]
 }
