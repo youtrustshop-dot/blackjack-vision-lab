@@ -55,7 +55,7 @@ match. No installer was created or installed by this follow-up.
 
 ## Usage and ownership
 
-In the Windows candidate, **Pop out advisor** opens a second Tauri/WebView window
+In the Windows candidate, **Open advisor** opens a second Tauri/WebView window
 for the selected active observer. The native title bar can be dragged outside
 the main application and between monitors. The window is resizable and has an
 optional **Always on top** checkbox. The close button and native X hide only this
