@@ -52,5 +52,7 @@
     "real display sharing while minimized",
     "new candidate native executable smoke"
   ],
-  "scope": "Source suite and own development experiments. No universal vision, count acceptance or economic edge claim."
+  "scope": "Source suite and own development experiments. No universal vision, count acceptance or economic edge claim.",
+  "tested_code_commit": "feeab89934d371466b5fb4658df6a250c3299706",
+  "commit_scope": "Code/tests and executed experiments above; this receipt binding is metadata-only."
 }
