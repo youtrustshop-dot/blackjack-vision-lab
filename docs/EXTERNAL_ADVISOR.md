@@ -31,12 +31,27 @@ tab does not connect its captures to a different backend.
 Compact preparation is independent of reader selection. No new cloud reader or
 uncertified count has been promoted into live advice by this UI change.
 
-The vision-learning follow-up changes source code only. It has not rebuilt this
-native candidate or tested physical screen sharing. The existing Windows smoke
-and Chrome-to-native simulator bridge evidence belongs to PR #3; the new source
-detector is `calibrated-corners-2-presence`. A package label `1.1.1` alone does not
-identify either source or binary. Check the candidate title, build provenance,
-detector and local backend URL before comparing versions.
+The earlier vision-learning follow-up was source-only. The compact follow-up now
+has its own portable build and actual native control smoke, recorded in
+[ADVISOR-002 verification](../validation/results/compact-advisor/verification.json).
+It does not exercise a personal display picker. The earlier Windows/Chrome bridge
+evidence remains attributed to PR #3. The detector is still
+`calibrated-corners-2-presence`; a package label `1.1.1` alone does not identify a
+binary. Check the candidate title, commit, dirty flag, source hashes and backend URL.
+
+![Compact advisor UI contract preview](screenshots/compact-advisor.png)
+
+This preview uses a mocked current snapshot to test the UI, not a new vision
+accuracy measurement. The native smoke separately created the real 260 x 220
+window, checked default pinning and a saved unpinned choice, minimize/reset,
+three close/reopen cycles with the same observer, stale suppression and clean
+process exit. It ran on one monitor at scale 1.0. Main minimization used own images
+submitted over HTTP; it is not proof of continuing physical screen capture.
+
+The portable build is based on `4845c34` with a recorded dirty working tree while
+independent documentation/corpus work was in progress. The embedded source hashes
+were checked by both executable smokes. Installed release manifest hashes still
+match. No installer was created or installed by this follow-up.
 
 ## Usage and ownership
 
@@ -101,9 +116,9 @@ cd ui
 npm test
 npm run build
 cd ..
-./scripts/build-desktop.ps1 -ReleaseDirectory artifacts/vision-research/native-candidate
-.venv/Scripts/python.exe -X utf8 scripts/smoke-desktop.py --release artifacts/vision-research/native-candidate --work artifacts/vision-research/smoke --native --advisor --evidence artifacts/vision-research/native-advisor-smoke.json
-.venv/Scripts/python.exe -X utf8 scripts/smoke-desktop.py --release artifacts/vision-research/native-candidate --work artifacts/vision-research/smoke --evidence artifacts/vision-research/backend-smoke.json
+./scripts/build-desktop.ps1 -PortableOnly -ReleaseDirectory artifacts/compact-advisor/native-candidate
+.venv/Scripts/python.exe -X utf8 scripts/smoke-desktop.py --release artifacts/compact-advisor/native-candidate --work artifacts/compact-advisor/native-smoke-work --native --advisor --evidence artifacts/compact-advisor/native-smoke.json
+.venv/Scripts/python.exe -X utf8 scripts/smoke-desktop.py --release artifacts/compact-advisor/native-candidate --work artifacts/compact-advisor/backend-smoke-work --evidence artifacts/compact-advisor/backend-smoke.json
 ```
 
 The build script uses the previously configured Python/GNU Rust/Tauri build tools;

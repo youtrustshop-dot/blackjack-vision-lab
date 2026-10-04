@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "experiment_id": "ADVISOR-002",
+  "code_commit": "4845c34d1e12dd1c05d835580da7aac175bc54fb",
+  "package_version": "1.1.1",
+  "publication": "portable research candidate only; no installer/replacement",
+  "native": {
+    "status": "pass",
+    "sha256": "4cac45118245043a0c24467bca30f545c26ca46569fe32a0b87613e340de3df7",
+    "mode": "native-hidden",
+    "native_window_created": true,
+    "vision_runtime_identity": {
+      "package_version": "1.1.1",
+      "detector_version": "calibrated-corners-2-presence",
+      "source_fingerprint": "7870e840e29ba523c7a78123d0d05bdc6011df4a99144ebc1766133b99e014b1",
+      "frozen": true,
+      "publication": "research candidate; no installed desktop replacement",
+      "commit": "4845c34d1e12dd1c05d835580da7aac175bc54fb",
+      "working_tree_dirty": true
+    },
+    "ui_matches_build": true,
+    "ui_javascript_sha256": "2cc173d6cbeeaa66d1d39c77d6d40566b8328d532cd9281418f1b3fca766f310",
+    "native_advisor": {
+      "created": true,
+      "singleton_reopen_cycles": 3,
+      "always_on_top": true,
+      "compact_logical_size": [
+        260,
+        220
+      ],
+      "geometry_physical": {
+        "h": 220,
+        "w": 260,
+        "x": 60,
+        "y": 60
+      },
+      "scale_factor": 1.0,
+      "explicit_pin_choice_persisted": true,
+      "minimize_and_reset_real_window": true,
+      "smoke_preferences_isolated": true,
+      "same_origin_http_bridge": true,
+      "main_minimized": true,
+      "monitor_count": 1,
+      "fresh_source_binding": true,
+      "motion_and_expiry_withhold_advice": true,
+      "personal_picker_selected": false,
+      "capture_scope": "controlled session image HTTP submission; personal display sharing while minimized not exercised"
+    },
+    "owned_backend_exited": true,
+    "local_port_closed": true,
+    "new_mei_leaks": 0
+  },
+  "backend": {
+    "status": "pass",
+    "sha256": "12ec7f46773e77e5662364ead07f0581de90f3ea3b27c5c3ee5238870ea1fa92",
+    "mode": "frozen-backend",
+    "ui_matches_build": true,
+    "source_independent_launch": true,
+    "local_port_closed": true,
+    "new_mei_leaks": 0
+  },
+  "ui_contract": {
+    "status": "passed",
+    "scope": "isolated headless Chrome, mocked native state/control contracts; no vision or physical desktop acceptance",
+    "checks": [
+      "Compact 260 \u00c3\u2014 185 content fits without scrolling; soft ace, current action and separate unverified count",
+      "Pin/reset/minimize/hide controls retain selected observer identity; no observer creation route",
+      "Repeated polls cannot renew original evidence; expired action is withheld",
+      "A selected-table mismatch cannot display a previous current action",
+      "Disconnected backend removes action despite previous valid report"
+    ],
+    "geometry": {
+      "width": 260,
+      "height": 185,
+      "scrollWidth": 260,
+      "scrollHeight": 185
+    },
+    "errors": []
+  },
+  "real_rest_browser": {
+    "status": "passed",
+    "scope": "headless Chrome, owned lab canvas video and real local REST service; no personal display picker or external provider footage",
+    "checks": [
+      "Visible application version matches the package and backend version",
+      "Actual video UI displays basic policy from a frame response without Monte Carlo",
+      "Independent analysis polling supplies probabilities for the same state",
+      "Unavailable native/PiP host is explicitly labelled as in-page fallback",
+      "Mid-shoe live video retains a base action and displays unknown TC/inventory",
+      "Five concurrent owned video sources keep separate identities and legal basic advice"
+    ],
+    "errors": []
+  },
+  "tests": {
+    "python_passed": 530,
+    "python_subtests": 10,
+    "python_warnings": 2,
+    "frontend_passed": 52,
+    "frontend_build": "passed",
+    "rust_geometry_tests": 3
+  },
+  "not_verified": [
+    "physical dragging",
+    "physical second monitor",
+    "mixed DPI desktop behavior",
+    "real display/window picker",
+    "actual screen sharing while main minimized",
+    "feedback protection in all capture modes"
+  ],
+  "api_requests": 0,
+  "api_spend": 0,
+  "installed_release_unchanged": [
+    {
+      "file": "bjlab-backend.exe",
+      "sha256": "a1521f6af640c31c151ff929aea4eda5adbdcd88d550d35dd4b5e2677d278613"
+    },
+    {
+      "file": "Blackjack Vision Lab_1.1.1_x64-setup.exe",
+      "sha256": "e3b4e86556cd6b02786f3f478d556c6bb4a0db56502a13bf52356a9cd94b34d8"
+    },
+    {
+      "file": "Blackjack Vision Lab.exe",
+      "sha256": "88ee9cc2334f04517575f3e5ec0733e6b59b60435c64e49e81c63f10b4663b64"
+    },
+    {
+      "file": "WebView2Loader.dll",
+      "sha256": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5"
+    }
+  ]
+}
