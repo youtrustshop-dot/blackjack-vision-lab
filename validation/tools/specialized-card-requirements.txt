@@ -1,0 +1,12 @@
+# Research environment only. Install torch 2.9.1+cu126 and torchvision 0.24.1+cu126
+# separately from https://download.pytorch.org/whl/cu126 for the tested sm_75 GPU.
+# Do not install these into the app environment or package them with a release.
+ultralytics @ https://files.pythonhosted.org/packages/95/01/6ffc2037b91e628f07117002fd89b913a015c85364a8237df8dfaec8f3d8/ultralytics-8.4.7-py3-none-any.whl#sha256=7438696c981cf58d17250b0e4c7e29886bda9cc3e91ffbbf9544c622f65da91c
+numpy==2.5.2
+opencv-python==5.0.0.93
+pillow==12.3.0
+onnx==1.18.0
+onnxruntime==1.30.0
+scipy==1.18.1
+PyYAML==6.0.3
+pytest==8.4.2

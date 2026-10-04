@@ -1,6 +1,19 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Latest explicit authorization, 2026-10-04: add one specialized local playing-card
+> challenger to the existing tournament. This supersedes the earlier immediate
+> training deferral, without creating another roadmap. Use a genuinely YOLO26n
+> backbone, card/index localization with rotation-aware geometry, native patch
+> rectification and learned rank/suit recognition. Start with 10,000 diverse
+> owned synthetic scenes, split by seed and artwork family before training.
+> Measure learning on development/calibration data and compare against the frozen
+> local reader on identical inputs. Preserve all previous failed pilots and the
+> sealed final holdout. API spend remains EUR10 total, subject to credentials and
+> account access; a key's presence alone does not provision consent or balance.
+> No release swap, new framework, poker strategy expansion or premature reader
+> promotion. Other trackers/segmenters remain conditional on measured failures.
+
 > Current consolidated user direction, 2026-10-04: preserve VISION-013 and the
 > installed 1.1.1; run a session/seed/family-disjoint Local/Gemini/Luna tournament,
 > with Sol restricted to residual hard cases. The total R&D inference allowance

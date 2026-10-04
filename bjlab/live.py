@@ -362,7 +362,8 @@ class LiveObserver:
             self.last_observation_timestamp=timestamp
             # Template similarity and OCR token scores have different contracts.
             # Never silently discard an OCR rank accepted by its profile.
-            self.tracker.minimum_score = OCR_RANK_MIN_SCORE if external else .90
+            self.tracker.minimum_score = getattr(self.detector, 'tracking_minimum_score',
+                                                 OCR_RANK_MIN_SCORE if external else .90)
             token = tuple(context.get(k) for k in ("shoe", "round", "hand", "phase", "session"))
             self.context_hits = self.context_hits + 1 if token == self.context_candidate else 1
             self.context_candidate = token
