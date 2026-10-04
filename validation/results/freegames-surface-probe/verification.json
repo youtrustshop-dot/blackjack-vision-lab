@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "tested_code_commit": "bfc0c937cdb8a1ee5337823beb744f14745182df",
+  "executed_utc": "2026-10-04T14:47:24.895313+00:00",
+  "tests": {
+    "python_passed": 509,
+    "python_subtests": 10,
+    "warnings": 2,
+    "duration_seconds": 64.98,
+    "targeted_tests": 5,
+    "frontend_passed": 46,
+    "frontend_passed_scope": "Historical parent PR #4 only; no UI source changes or fresh frontend claim"
+  },
+  "commands": [
+    ".venv/Scripts/python.exe -m validation.tools.surface_profile_comparison <private-manifest> --output <private-results>",
+    ".venv/Scripts/python.exe -m pytest -q",
+    ".venv/Scripts/python.exe scripts/check-evidence.py",
+    "git diff --check"
+  ],
+  "source_hashes": {
+    "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+    "bjlab/state_reader.py": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa",
+    "validation/tools/surface_profile_comparison.py": "5a39a364039bac5204c8740483dd76cedc148e3e7b71f3216378eee50d85490b",
+    "tests/test_neutral_surface.py": "580cd8fcd1e7898fddffa617db0eee5fb84cb0cddcf6a14ac4a15943ce2b3f78"
+  },
+  "source_test_scope": "Full Python suite and targeted private still probe; metadata-only receipt binding follows tested code",
+  "evidence_consistency": true,
+  "diff_check": "passed",
+  "original_provider_videos": 0,
+  "original_provider_sessions_evaluated": 0,
+  "new_native_stills": 8,
+  "independent_sessions": 0,
+  "model_promoted": false,
+  "installed_release_replaced": false,
+  "native_rebuilt": false,
+  "merge_performed": false,
+  "api_requests": 0,
+  "image_uploads": 0,
+  "unexecuted": [
+    "continuous Freegames session benchmark",
+    "independent final holdout",
+    "automatic phase/control recognition",
+    "native advisor physical/mixed-DPI/minimized capture checks",
+    "new native or frontend build",
+    "API comparison"
+  ],
+  "scope": "Research-only geometric challenger. BrainPlay regression retained; no universal recognition or count certification."
+}
