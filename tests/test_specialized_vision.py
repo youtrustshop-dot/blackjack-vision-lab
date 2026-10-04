@@ -103,3 +103,26 @@ def test_training_family_and_parent_seeds_are_disjoint():
     assert len({s["seed"] for s in partitions})==3
     assert not any(set(a["fonts"])&set(b["fonts"]) for i,a in enumerate(partitions) for b in partitions[i+1:])
     assert not set(PARTITIONS["train"]["fonts"])&{"seguisb.ttf","georgiab.ttf"}
+
+
+def test_native_table_crop_returns_source_coordinates_and_excludes_other_windows(tmp_path,monkeypatch):
+    import onnxruntime as ort
+    tensors=[]
+    class Session:
+        def __init__(self,path,**kwargs): self.pose=Path(path).name=='pose.onnx'
+        def get_inputs(self): return [type('Input',(),{'name':'input'})()]
+        def run(self,outputs,inputs):
+            if self.pose:
+                tensors.append(inputs['input'])
+                return [np.asarray([[[10,10,50,100,0,.8,0,10,10,1,50,10,1,50,100,1,10,100,1],
+                                     [12,12,32,48,.7,0,0,12,12,1,32,12,1,32,48,1,12,48,1]]],np.float32)]
+            rank=np.full((1,14),-8,np.float32); rank[0,6]=8
+            suit=np.full((1,5),-8,np.float32); suit[0,3]=8
+            return [rank,suit]
+    monkeypatch.setattr(ort,'InferenceSession',Session)
+    image=np.full((128,256,3),22,np.uint8); image[:,128:]=91
+    detector=SpecializedCardDetector(manifest_for(tmp_path),{'table':(.5,0,.5,1),'player:0':(.5,0,.5,1)})
+    found=detector.detect(image)
+    assert len(found)==1 and found[0].bbox==(138,10,40,90)
+    assert np.allclose(tensors[0],91/255.)
+    assert detector.last_diagnostics['native_region']==[128,0,128,128]

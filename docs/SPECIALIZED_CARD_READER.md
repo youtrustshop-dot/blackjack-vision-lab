@@ -18,8 +18,10 @@ detection checkpoint. The card/keypoint head is newly trained: the downloaded
 model was never itself a 52-card reader. The classifier has 13 ranks plus
 unknown, and four suits plus unknown. OCR is not used for its rank/suit heads.
 
-Full-frame letterboxing is used for detection; classification warps the index
-from native source pixels to 48×72. This normalization cannot restore pixels
+The same declared table ROI is cropped at native resolution before letterboxing
+for detection; classification warps its native index pixels to 48×72. Source
+coordinates are restored explicitly, and excluded-window pixels stay excluded
+from the classifier. This normalization cannot restore pixels
 cut out of the capture. An estimated index plane is not evidence that hidden
 whole-card corners were observed. Proposal scores and softmax margins are
 uncalibrated scores, not percentages of correctness.

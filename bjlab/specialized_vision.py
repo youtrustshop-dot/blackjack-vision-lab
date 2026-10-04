@@ -88,10 +88,14 @@ class SpecializedCardDetector:
 
     def detect(self,image):
         began=time.perf_counter(); pixels=_rgb(image); height,width=pixels.shape[:2]
-        side=self.manifest["imgsz"]; ratio=min(side/width,side/height)
-        rw,rh=round(width*ratio),round(height*ratio); ox,oy=(side-rw)//2,(side-rh)//2
+        from .calibration import NormalizedROI
+        region=NormalizedROI(*(self.layout or {}).get('table',(0,0,1,1)))
+        rx,ry,rw_source,rh_source=region.to_pixels(width,height)
+        native=pixels[ry:ry+rh_source,rx:rx+rw_source]
+        side=self.manifest["imgsz"]; ratio=min(side/rw_source,side/rh_source)
+        rw,rh=round(rw_source*ratio),round(rh_source*ratio); ox,oy=(side-rw)//2,(side-rh)//2
         square=np.full((side,side,3),114,np.uint8)
-        square[oy:oy+rh,ox:ox+rw]=cv2.resize(pixels,(rw,rh),interpolation=cv2.INTER_LINEAR)
+        square[oy:oy+rh,ox:ox+rw]=cv2.resize(native,(rw,rh),interpolation=cv2.INTER_LINEAR)
         tensor=np.ascontiguousarray(square.transpose(2,0,1)[None],dtype=np.float32)/255.
         rows=self.pose.run(None,{self.pose.get_inputs()[0].name:tensor})[0]
         if rows.ndim!=3 or rows.shape[0]!=1 or rows.shape[2]!=19 or not np.isfinite(rows).all(): raise ValueError("Unexpected pose export output")
@@ -99,20 +103,20 @@ class SpecializedCardDetector:
         for row in rows[0]:
             cls=int(np.argmax(row[4:7])); score=float(row[4+cls])
             if score<self.thresholds["proposal"] or cls not in (0,1,2): continue
-            left,top,right,bottom=(row[:4]-np.asarray([ox,oy,ox,oy]))/ratio
-            left,top=max(0,float(left)),max(0,float(top)); right,bottom=min(width,float(right)),min(height,float(bottom))
+            left,top,right,bottom=(row[:4]-np.asarray([ox,oy,ox,oy]))/ratio+[rx,ry,rx,ry]
+            left,top=max(rx,float(left)),max(ry,float(top)); right,bottom=min(rx+rw_source,float(right)),min(ry+rh_source,float(bottom))
             if right-left<2 or bottom-top<2: continue
             box=(round(left),round(top),max(1,round(right-left)),max(1,round(bottom-top)))
             zone=self._zone(box,width,height)
             if zone is None: continue
-            points=row[7:].reshape(4,3).copy(); points[:,:2]=(points[:,:2]-[ox,oy])/ratio
+            points=row[7:].reshape(4,3).copy(); points[:,:2]=(points[:,:2]-[ox,oy])/ratio+[rx,ry]
             proposed.append({"class":cls,"score":score,"bbox":box,"quad":points[:,:2].tolist(),
                              "keypoint_scores":points[:,2].tolist(),"zone":zone})
         proposed=spatial_suppression(proposed)
         patches=[]; indices=[]; issues=[]
         for item in proposed:
             if item["class"]!=0: continue
-            try: patch=ordered_rectification(pixels,item["quad"])
+            try: patch=ordered_rectification(native,np.asarray(item["quad"])-[rx,ry])
             except ValueError:
                 item.update(rank=None,suit=None,geometry="invalid_plane"); issues.append("Index geometry is unresolved")
                 continue
@@ -154,6 +158,7 @@ class SpecializedCardDetector:
                       "provenance":"Explicit card zones; current-pixel keypoint localization and learned rank/suit. Phase remains a separate visible-context reader."}
         self.raw_proposals=proposed
         self.last_diagnostics={"profile":self.version,"detector_version":self.version,"input_size":[width,height],
+            "native_region":[rx,ry,rw_source,rh_source],"detector_input_size":[side,side],
             "proposal_count":len(proposed),"proposals":proposed,"reconciled":reconciled,"detections":len(detections),
             "unmatched_surface_count":len(bodies)-len(used),
             "unreadable_index_count":sum(p.get('rank') is None for p in proposed if p['class']==0),
