@@ -1,5 +1,28 @@
 # Card Lab project instructions
 
+- VISION-024, latest explicit user attachment, 2026-10-05: OFFLINE ONLY.
+  Preserve PR17 sources/scores; add an opt-in versioned numeric-label policy
+  shared by application gate and new evaluator. Retain original text, normalized
+  label, value, declared role and native view. Inconsistent suffixes/roles/views
+  fail closed; unknown labels stay ambiguous. Replay consumed responses only
+  as contract re-evaluation, never fresh model/generalization evidence. Analyze
+  retained Luna timers, leaving unobserved spans unknown. Verify persistent
+  client lifecycle with socketless fixtures, not provider requests. Frozen
+  reader/default gate, weights, popup, engine and sealed holdouts unchanged.
+  No credentials, inference/hybrid, DNS queries/system settings, ledger mutation,
+  new epoch/key/billing, training, tracker or Poker work. Two residual slots stay
+  closed. Propose, but do not execute, the minimum future bounded verification.
+  See docs/NUMERIC_PROVENANCE_ALIGNMENT.md.
+
+- VISION-024 executed offline, completed 2026-10-06: consumed PR17 contract
+  replay only, Gemini 3/3 semantic R1, Luna 2/3 and original timeout discarded.
+  Literal exact-field transcription remains 0/3 for both; semantic complete
+  transcription 3/3 and 1/3. Original rows/sources/weights retained, ledger
+  byte-identical 100/102 and USD5.095785750 upper. 698 tests + 10 subtests pass;
+  45 targeted semantic/lifecycle/stop fixtures. Real pooling speed/DNS repair
+  remains unmeasured. Future five-request maximum is a proposal only; no new
+  scope, cap, epoch or inference. Runtime disarmed, two residual slots closed.
+
 - VISION-023, latest explicit user attachment, 2026-10-05: diagnose the connection
   with read-only traced model GETs and an equivalent independent client. The
   reproduced blocking stage is native DNS, before TCP/TLS; a plain synchronous

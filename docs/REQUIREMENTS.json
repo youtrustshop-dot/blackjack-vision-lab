@@ -4,14 +4,14 @@
   "verification": {
     "version": "1.1.1",
     "status": "unreleased-source-verified",
-    "completed_test_run": "653 passed, 2 existing warnings, 10 subtests passed in 138.43s",
-    "frontend_tests": "52 inherited parent PR15 source/CI; UI unchanged, not rerun locally in VISION-023",
+    "completed_test_run": "698 passed, 2 existing warnings, 10 subtests passed in 105.44s",
+    "frontend_tests": "52 inherited parent CI/source; UI unchanged, not rerun locally in VISION-024",
     "frontend_build": "52 historical frontend tests; parent TypeScript/Vite passed, UI unchanged",
     "latest_changes_require_retest": false,
-    "source_evidence": "validation/results/cloud-connection-paired-smoke/verification.json",
+    "source_evidence": "validation/results/numeric-provenance-alignment/verification.json",
     "release_evidence": "release/v1.1.1/",
     "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
-    "verification_scope": "VISION-023: native DNS stage localized; expiring OS-resolved per-client answers permit the six original frozen PR16 paired calls. Both 2/3 correct timely R1, both 0/3 full transcription. One literal-label Gemini false accept and one Luna complete-state timeout; no promotion/hybrid/release. No final holdout.",
+    "verification_scope": "VISION-024: offline versioned numeric normalization shared by opt-in application gate/evaluator; consumed PR17 contract replay, original scores intact. Retained latency decomposition and socketless pool lifecycle only. Zero provider calls/hybrid, ledger byte-identical, runtime disarmed, no promotion/release/final holdout.",
     "historical_v1_1_1_verification": {
       "version": "1.1.1",
       "status": "source-verified",
@@ -577,6 +577,6 @@
     "required_system": "Controlled simulator, recorded single-round lab-artwork clips, screenshots, deterministic math and research validation layer.",
     "conditional_research": "Unavailable vendor models and unsupported legacy reference execution remain recorded; they are not fabricated or core dependencies.",
     "laya_user_deferral": "Add Laya later.",
-    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Hold\u00e2\u20ac\u2122em calibrated cards/ranking/equity are implemented."
+    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Holdâ€™em calibrated cards/ranking/equity are implemented."
   }
 }

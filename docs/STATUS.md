@@ -1,4 +1,23 @@
-# Current delivery — VISION-021 offline paired-cloud readiness
+# Current delivery — VISION-024 offline numeric provenance alignment
+
+The opt-in numeric-provenance-r1-v1 policy is shared by the application gate and
+new evaluator. Original labels/views are retained; incoherent values/roles/views
+fail closed. Replaying consumed PR17 responses yields Gemini 3/3 semantic usable
+R1 and Luna 2/3, with its timeout still discarded. Semantic transcription 3/3
+versus 1/3; literal transcription remains 0/3 for both. This is contract
+re-evaluation, not fresh model/generalization evidence. PR17 scores stay intact.
+
+Retained latency analysis leaves 47.204 ms unallocated; it does not prove a
+settlement-only fix. A socketless HTTPcore fixture verifies pool lifecycle/reuse,
+not real API speed or resolver repair. 698 Python tests and 10 subtests passed.
+Zero provider requests/hybrid; canonical ledger byte-identical, runtime disarmed.
+Five future requests maximum are proposed but not authorized or executed.
+[Policy, results, limitations and offline commands](NUMERIC_PROVENANCE_ALIGNMENT.md).
+
+The following blocks are historical. Current verification is in REQUIREMENTS.json;
+installed release 1.1.1 and all sealed final holdouts remain unchanged.
+
+# Historical delivery — VISION-021 offline paired-cloud readiness
 
 New owned corpus: 32 stills, six natural source sessions, two disjoint partitions.
 Luna Fast compact and Gemini structured-card-limit-local have 64 prepared native

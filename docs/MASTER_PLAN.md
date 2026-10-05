@@ -1,6 +1,22 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-024, completato 2026-10-06: [allineamento numerico offline](NUMERIC_PROVENANCE_ALIGNMENT.md).
+> Una regola versionata condivisa dal gate applicativo opt-in e dal nuovo evaluator
+> conserva testo, etichetta normalizzata, valore, ruolo e vista. Numeri/ruoli/viste
+> incoerenti restano bloccati; etichette ambigue non diventano totali.
+> Replay delle sei risposte già consumate: Gemini 3/3 R1 semantici, Luna 2/3 e
+> timeout ancora scartato. Trascrizioni semantiche 3/3 e 1/3; letterali entrambe
+> 0/3. **È una rivalutazione del contratto, non nuova accuratezza o generalizzazione.**
+> Punteggi PR17 e sorgenti congelate intatti. Latenza Luna: 47,204 ms aggregati
+> non temporizzati singolarmente; non dimostrato che spostare la contabilizzazione
+> basti. Pool HTTP verificato soltanto con fixture senza socket; DNS non risolto.
+> 698 test + 10 subtest passano. Zero API/hybrid, ledger identico 100/102,
+> USD5,095785750 upper; runtime disarmato, due slot residui chiusi. Proposta futura
+> massima: quattro chiamate su due casi nuovi + una hybrid condizionale,
+> riserva USD2,2138736 ai prezzi congelati. Nessuna modifica al cap/epoca,
+> reader/default, pesi, popup, motore, release o final holdout. Fermarsi qui.
+
 > VISION-023, 2026-10-05: [diagnosi connessione e sei prove originali](CLOUD_CONNECTION_PAIRED_SMOKE.md).
 > Blocco riprodotto nel DNS prima di TCP/TLS; cambiare soltanto client non basta.
 > Risoluzione preventiva con risposte DNS correnti a scadenza, limitata al lotto:
