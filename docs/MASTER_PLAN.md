@@ -1,6 +1,21 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-023, 2026-10-05: [diagnosi connessione e sei prove originali](CLOUD_CONNECTION_PAIRED_SMOKE.md).
+> Blocco riprodotto nel DNS prima di TCP/TLS; cambiare soltanto client non basta.
+> Risoluzione preventiva con risposte DNS correnti a scadenza, limitata al lotto:
+> entrambi i GET autenticati passano con TLS verificato, impostazioni PC invariate.
+> La causa interna al resolver/router rimane sconosciuta; avvio DNS circa 18 s.
+> Eseguite le sei chiamate PR16, stessi hash/payload/evaluator: Luna 2/3 JSON
+> tempestivi e R1 corretti, un timeout completo; Gemini 3/3 JSON tempestivi,
+> 2/3 R1 corretti e un falso accept del contratto letterale delle etichette.
+> Gemini legge valori/ruoli numerici e carte corretti, ma include i valori nelle
+> etichette; non è una nuova confusione badge/totale. Entrambi 0/3 trascrizioni
+> complete. Nessun champion. Ledger 100/102, USD5,095785750 upper; riserve
+> precedenti intatte. Runtime disarmato, nessun hybrid o altra inferenza.
+> Nuovi upper da usage USD0,008595150, non una fattura. 653 test + 10 subtest
+> passano. Conservare risultati e fermarsi; le voci seguenti restano storia.
+
 > VISION-022, 2026-10-05: [smoke fermato al controllo preliminare](PAIRED_CLOUD_SMOKE.md).
 > Autorizzate solo sei richieste identiche alla PR16, ma eseguite **zero**: entrambi
 > i GET di accesso ai modelli scadono a 10s senza stato HTTP. Hash/prezzi/budget

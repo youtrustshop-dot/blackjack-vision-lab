@@ -1,5 +1,26 @@
 # Card Lab project instructions
 
+- VISION-023, latest explicit user attachment, 2026-10-05: diagnose the connection
+  with read-only traced model GETs and an equivalent independent client. The
+  reproduced blocking stage is native DNS, before TCP/TLS; a plain synchronous
+  client alone also failed. Scoped fresh OS DNS answers now permit both exact
+  authenticated model GETs with verified TLS, no system changes. The underlying
+  OS/router resolver cause remains unknown. This scope supersedes VISION-022's
+  no-resumption stop ONLY for its six originally planned frozen PR16 calls.
+  Recheck hashes/prices/access/canonical allowance; no retry, paid warm-up,
+  development/holdout inference, hybrid, training, Poker, UI or release change.
+  Restore the disarmed runtime after the one-shot batch and stop.
+
+- VISION-023 executed: original six PR16 calls, no retry/hybrid. Luna validated
+  2/3 and correct timely usable R1 2/3 (one complete-state timeout); Gemini
+  validated 3/3 but correct timely usable R1 2/3, one false accept under frozen
+  literal-label provenance (correct values/roles, labels append numbers).
+  Both complete transcriptions 0/3. No champion. New reported-usage upper
+  USD0.008595150; ledger 100/102, USD5.095785750 upper, old 94 entries and all
+  thirteen unknowns unchanged. Runtime disarmed; residual two slots closed.
+  Stop: no new API/hybrid/training/R2/Poker/UI/release work in this scope.
+  See docs/CLOUD_CONNECTION_PAIRED_SMOKE.md.
+
 - VISION-022, latest bounded user authorization, 2026-10-05: ONLY the exact
   frozen PR16 paired smoke (three validation cases x two providers; six total,
   no retries/warm-ups/development/holdout/hybrid). Freeze, prices and canonical
