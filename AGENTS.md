@@ -29,9 +29,19 @@
   `artifacts/api-budget/eur10-total-20261004.json` ledger for this authorization.
   All real Responses requests now require a durable one-attempt reservation;
   the historical memory-budget runner cannot spend this allowance. Do not reset
-  the ledger or create another key. Preparation/local measurement is complete;
-  no more local training/tuning before actual API comparison. See
-  `docs/OPENAI_READER_TOURNAMENT.md` for the exact receipt and remaining blocker.
+  the ledger or create another key. Existing key is in ignored .env.local, loaded
+  only into the backend subprocess. Preserve the initial HTTP429 receipt. After
+  the user reported a EUR10 top-up and explicitly requested another attempt,
+  VISION-016 completed 69 new submissions (51 Standard / 15 Fast / 3 Sol), 70
+  lifetime attempts under the unchanged cap. Luna Fast returned all 15 within
+  2.5s, with 39/39 annotated rank/suit tuples, but 0/12 usable synthetic player
+  states. The renderer's unlabelled decorative 20 is interpreted as a dealer
+  total; visibility-proxy disagreements also remain. No reader promotion.
+  USD0.035521 is the conservative upper charge for reported usage only;
+  USD7.386864 of unknown-charge reservations is retained. Neither is an invoice
+  or verified balance. Runtime is disarmed. No more submissions, automatic
+  retries, billing changes or local training/tuning in this increment.
+  See `docs/OPENAI_READER_TOURNAMENT.md`.
 - Extend `docs/VISION_EXPERIMENTS.json`; keep failed checkpoints and consumed
   regressions. Do not call contract mocks or repeated screenshots independent evidence.
 - Keep private evidence/approvals under ignored `artifacts/`. Publish aggregates only.

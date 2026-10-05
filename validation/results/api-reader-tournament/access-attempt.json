@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "experiment_id": "VISION-016",
+  "status": "attempted_blocked_http429_cause_unverified",
+  "source_commit": "f2f9d556d0b351d2fdc411fcde949b28ae7a4512",
+  "recorded_utc": "2026-10-05T10:45:45.022546+00:00",
+  "prepared_manifest_sha256": "a2790c048eada1ae90545b8065c2ac6535aa05ffc04defd61102beb6a5bf9046",
+  "oracle_sha256": "8d95af02b5eaa8fbf44a06ea1f4501a040681663b736ca46c6d1eedb51e15102",
+  "configuration_sha256": "5c9ee7c88ef4fe9ba0e75e4484629de4cd61ae40ef1b0f4a52432ba2aeeb2961",
+  "source_hashes": {
+    "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+    "bjlab/ocr.py": "97e279cfc8c3872efba841b536e883202c485f83757420b96561e1f2cc78e44e",
+    "bjlab/overlap_presence.py": "769e2e24474cf2e9cba3b719b752c808ad0b398886f8e21150f6e9ccf1798029",
+    "bjlab/suit_symbols.py": "c9e6fa2ecdefc62ca2634b6ef43ed4ac00b64019d0a9a39667cfbe2e41613be8",
+    "bjlab/specialized_vision.py": "463904c27d05ac83bd5abe08d2fe3a0122910915fcd40eb2565271d22fe3e55b",
+    "bjlab/visible_phase.py": "ea1fc44edba5f1de7a2ab375abdda7b913b2987798729c711de9710161e39613",
+    "bjlab/state_reader.py": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa",
+    "bjlab/vision.py": "742f957f0e0df31f77d719a088fc3e7f648a6d6d2376ba79350a5f0158118a3c",
+    "bjlab/calibration.py": "1f92a47d97a9c398ac8ab7470ed2a725d8d4c3b921229e6b925f7cad8131a863",
+    "bjlab/openai_reader.py": "8fe27304fe02dd8172e3a6ca7dda5217a217e7642f300225a8c2dcd58d4b4bd8",
+    "bjlab/research_budget.py": "5bbfac64c0a1a858ab32368adab431b47d81d24e0fdb7a608fcba1b365846553",
+    "validation/tools/state_reader_comparison.py": "fe1ef6765129c649668fe1da4e178d2e8a881232972394e87f4791ec81523479",
+    "validation/tools/api_reader_tournament.py": "c606123e3e7f941049bb10ea7548fe792f7288b77fe2243c5458432bf2dc5f20"
+  },
+  "prior_preparation_receipt": "validation/results/api-reader-tournament/prepared-comparison.json",
+  "credential": {
+    "existing_key_received": true,
+    "plaintext_disclosed": false,
+    "ignored_local_env": true,
+    "new_key_created": false
+  },
+  "read_only_access": {
+    "verified_utc": "2026-10-05T10:36:55.580364+00:00",
+    "available_requested_models": [
+      "gpt-6-luna",
+      "gpt-6.1-sol"
+    ],
+    "inference_requests": 0
+  },
+  "api": {
+    "network_attempts": 1,
+    "completed_observations": 0,
+    "first_request": {
+      "model": "gpt-6-luna",
+      "tier": "default",
+      "http_status": 429,
+      "error_type": "ProviderHTTPError",
+      "error_code": null,
+      "failed_attempt_elapsed_ms": 2556.598699999995,
+      "usage_reported": false,
+      "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+    },
+    "per_stage": {
+      "luna-standard": {
+        "planned_inputs": 51,
+        "requests_sent": 1,
+        "completed_observations": 0,
+        "not_executed": 50
+      },
+      "luna-fast": {
+        "planned_inputs": 15,
+        "requests_sent": 0,
+        "completed_observations": 0,
+        "not_executed": 15
+      },
+      "sol-residual": {
+        "planned_inputs": 3,
+        "requests_sent": 0,
+        "completed_observations": 0,
+        "not_executed": 3
+      }
+    },
+    "accuracy": null,
+    "successful_state_latency": null,
+    "actual_invoice_cost_usd": null,
+    "cost_note": "USD0.263268 remains a conservative reservation for the failed request, not measured spend. No reported usage or verified invoice.",
+    "budget": {
+      "requests_attempted": 1,
+      "max_requests": 90,
+      "max_usd": "8",
+      "accounted_upper_usd": "0.263268",
+      "unknown_charge_requests": 1,
+      "network_attempts_claimed": 1,
+      "unknown_charge_reserved_usd": "0.263268",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    },
+    "balance_free_credits_auto_recharge": "unverified",
+    "billing_read_only_check": "In-app browser stopped at Cloudflare human-verification challenge; no challenge solved or account changes.",
+    "gemini": "deferred_no_credential_user_requested_openai_first"
+  },
+  "decision": "Stop after the first HTTP429; no automatic retries or Fast/Sol calls. Resolve account cause before a separately recorded bounded attempt under the same persistent residual budget. No reader comparison, promotion or cloud latency claim is established.",
+  "preserved": {
+    "local_readers_tuned": false,
+    "new_training": false,
+    "final_holdout_evaluated": false,
+    "native_release_replaced": false,
+    "poker_strategy_changed": false
+  },
+  "official_error_reference": "https://developers.openai.com/api/docs/guides/error-codes"
+}

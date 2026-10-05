@@ -8,10 +8,20 @@ Versione del piano: 1.1 — 4 ottobre 2026
 > Freeze 51 still inputs (44 exact unique inputs, two synthetic sessions rendered
 > six ways each, two historical provider moments); both local readers measured
 > without tuning. A canonical persistent budget and full-JSON deadline are tested.
-> OpenAI remains blocked_existing_key_unavailable: no usable credential was found
-> in the process environment or safely checked likely files. Requests/cost zero;
-> account models, balance and API latency/correctness remain unmeasured. No new
-> local training, model promotion, release replacement or strategic Poker work.
+> Existing key is saved in ignored .env.local. Preserve the first HTTP429 receipt.
+> After the user's reported EUR10 top-up and explicit retry request, 69 new
+> submissions completed the planned comparison: 51 Luna Standard, 15 paired Luna
+> Fast, 3 selected Sol cases. Fast: 39/39 annotated rank/suit tuples, p50/p95
+> 1.77/2.22s and no timeout on its small correlated subset; nevertheless 0/12
+> usable synthetic player states. An unlabelled decorative 20 in the renderer is
+> interpreted as a dealer total, closing the integrity gate. Visibility-proxy
+> disagreements remain; neither the zero complete-state score nor 39/39 alone
+> measures general vision quality. Standard has 7/51 timeouts and one validation
+> failure. Offline Standard fallback does not increase timely usable states.
+> Runtime is disarmed; 70 lifetime attempts share the original USD8/90 cap.
+> Reported-usage upper charge USD0.035521 excludes nine unresolved-charge attempts;
+> retained total upper accounting USD7.422385 is not measured spend. No new
+> local training, reader promotion, release replacement or strategic Poker work.
 
 > Executed specialized challenger, 2026-10-05: [VISION-015](SPECIALIZED_CARD_READER.md).
 > Real YOLO26n four-keypoint training on 8,000 owned scenes plus learned rank/suit,

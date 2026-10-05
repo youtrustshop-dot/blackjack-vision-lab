@@ -35,9 +35,9 @@
       "id": "synthetic-api-tournament",
       "stage": "Reviewed native development OpenAI tournament",
       "candidate": "gpt-6-luna Standard/Fast; gpt-6.1-sol residual cases; Gemini deferred",
-      "status": "not_executable",
-      "finding": "Credential reuse/EUR10 total/synthetic+provider-native crop scope resolved. 51 stills (44 exact unique) and local comparison prepared, 201 native crops reviewed. Canonical durable reservations and complete-JSON wall deadline tested. Existing OpenAI credential unavailable; calls/cost zero; no cloud numbers.",
-      "evidence": "validation/results/api-reader-tournament/prepared-comparison.json"
+      "status": "executed",
+      "finding": "69 funded submissions under the same EUR10 allowance: 51 Luna Standard, 15 paired Fast, 3 selected Sol; 70 lifetime attempts including preserved HTTP429. Fast 39/39 annotated ranks/tuples, p95 2221ms, 0 timeouts/15, but 0/12 usable synthetic player states: unlabelled decorative 20 is read as dealer total. Fast full inventories 11/15; visibility-proxy disagreements remain. Standard 7/51 timeouts and one validation failure. No full-state/live/hybrid promotion.",
+      "evidence": "validation/results/api-reader-tournament/funded-comparison.json"
     },
     {
       "id": "overlap-presence-identity",
@@ -67,8 +67,8 @@
       "id": "r1-reader-comparison",
       "stage": "R1 current hand observation",
       "candidate": "calibrated local versus OpenAI Responses image reader, at most two configurations",
-      "status": "not_executable",
-      "finding": "Historical still reader/zero-budget guard preserved. VISION-016 now authorizes reviewed native historical-provider and owned-synthetic crops, with reuse resolved and one aggregate durable allowance; key access still blocks inference. Legacy memory-budget runner cannot submit real requests outside the canonical ledger."
+      "status": "executed",
+      "finding": "Historical still/zero-budget guard preserved. VISION-016 executes bounded actual inference with durable aggregate accounting. Frozen local source, weights and thresholds unchanged. Fast perception/latency promising on a consumed subset, but context/total provenance and visibility annotations prevent promotion; Gemini absent."
     },
     {
       "id": "provider-session-gate",
@@ -1201,7 +1201,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "Run authorized same-input OpenAI comparison once existing key is accessible; no new local training/tuning before results.",
+  "current_priority": "Preserve executed VISION-016 and disarmed runtime. Next bounded research question: explicit provenance for displayed totals and independent visible-index annotation, then fresh session-disjoint verification. No additional API call, local training/tuning, reader promotion, release replacement or Poker expansion in this increment.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1416,37 +1416,125 @@
         "Physical monitor/DPI/minimized capture",
         "Economic edge"
       ]
+    },
+    {
+      "experiment_id": "VISION-016",
+      "parent_experiment_id": "VISION-015",
+      "question": "Does available OpenAI Luna Standard/Fast improve frozen same-input local R1 within the total EUR10 cap and complete-JSON deadline?",
+      "status": "executed",
+      "baseline_commit": "18bfd579c1913bfa902a096fb8a83477ce510edf",
+      "candidate_source_commit": "2f3d62d",
+      "split": "consumed-development",
+      "assistance": "Initial identical table/role/control regions only; no oracle phase or manual per-hand turn",
+      "result": "validation/results/api-reader-tournament/funded-comparison.json",
+      "report": "docs/OPENAI_READER_TOURNAMENT.md",
+      "decision": "Retain Luna Fast as an R1 research candidate, not a promoted full-state reader. Its paired 15-input latency and annotation intersection are promising, but all synthetic player states fail the existing gate. Freeze the run; next research must address ambiguous total provenance and independently annotated visibility before fresh session-disjoint verification. No further paid run or local training in this increment.",
+      "what_was_not_tested": [
+        "Actual invoice charge, account balance and auto-recharge setting",
+        "Live hybrid capture-to-display",
+        "Fast live/offline hybrid routing",
+        "Independent provider video/generalization",
+        "R2 tracking identity",
+        "Final holdout"
+      ]
     }
   ],
   "latest_experiment": {
     "experiment_id": "VISION-016",
     "parent_experiment_id": "VISION-015",
-    "status": "prepared_local_executed_api_blocked_existing_key_unavailable",
+    "status": "executed_no_promotion",
     "question": "Does available OpenAI Luna Standard/Fast improve frozen same-input local R1 within the total EUR10 cap and complete-JSON deadline?",
     "baseline_commit": "18bfd579c1913bfa902a096fb8a83477ce510edf",
-    "result": "validation/results/api-reader-tournament/prepared-comparison.json",
+    "result": "validation/results/api-reader-tournament/funded-comparison.json",
     "report": "docs/OPENAI_READER_TOURNAMENT.md",
     "planned_inputs": 51,
     "unique_frame_ids": 44,
     "synthetic_physical_sessions": 2,
     "paired_renderings": 12,
     "provider_moments": 2,
-    "api_requests": 0,
-    "actual_api_cost": 0,
-    "cloud_latency": null,
-    "cloud_correctness": null,
-    "credential_choice": "reuse_existing_no_new_key",
+    "api_requests": 70,
+    "actual_api_cost": null,
+    "cloud_latency": {
+      "luna-standard": {
+        "p50": 2298.296900000423,
+        "p95": 2838.311629999771,
+        "max": 2991.0337999999683
+      },
+      "luna-fast": {
+        "p50": 1766.0274999998364,
+        "p95": 2221.401409999816,
+        "max": 2418.5288999997283
+      },
+      "sol-residual": {
+        "p50": 2311.561900000015,
+        "p95": 2469.145689999732,
+        "max": 2486.6549999997005
+      }
+    },
+    "cloud_correctness": {
+      "luna-standard": {
+        "planned_inputs": 51,
+        "completed": 43,
+        "timeouts": 7,
+        "reader_failures": 8,
+        "rank_presence_states_correct": 33,
+        "ranks_correct": 87,
+        "ranks_expected": 111,
+        "suits_correct": 87,
+        "suits_expected": 111,
+        "complete_states_correct": 0,
+        "complete_state_denominator": 48,
+        "correct_timely_player_states": 0,
+        "annotated_player_opportunity_denominator": 12
+      },
+      "luna-fast": {
+        "planned_inputs": 15,
+        "completed": 15,
+        "timeouts": 0,
+        "reader_failures": 0,
+        "rank_presence_states_correct": 11,
+        "ranks_correct": 39,
+        "ranks_expected": 39,
+        "suits_correct": 39,
+        "suits_expected": 39,
+        "complete_states_correct": 0,
+        "complete_state_denominator": 12,
+        "correct_timely_player_states": 0,
+        "annotated_player_opportunity_denominator": 12
+      },
+      "sol-residual": {
+        "planned_inputs": 3,
+        "completed": 2,
+        "timeouts": 1,
+        "reader_failures": 1,
+        "rank_presence_states_correct": 2,
+        "ranks_correct": 3,
+        "ranks_expected": 7,
+        "suits_correct": 3,
+        "suits_expected": 7,
+        "complete_states_correct": 0,
+        "complete_state_denominator": 3,
+        "correct_timely_player_states": 0,
+        "annotated_player_opportunity_denominator": 0
+      }
+    },
+    "credential_choice": "reuse_existing_resolved_key_loaded_from_ignored_env",
     "gemini": "deferred_no_credential_openai_first",
-    "decision": "Keep local readers frozen. Only existing OpenAI credential location/access remains unresolved; no promotion, training, release or Poker expansion.",
+    "decision": "Retain Luna Fast as an R1 research candidate, not a promoted full-state reader. Its paired 15-input latency and annotation intersection are promising, but all synthetic player states fail the existing gate. Freeze the run; next research must address ambiguous total provenance and independently annotated visibility before fresh session-disjoint verification. No further paid run or local training in this increment.",
     "not_measured": [
-      "OpenAI model availability or inference",
-      "API latency/cost/correctness",
+      "Actual invoice charge, account balance and auto-recharge setting",
       "Live hybrid capture-to-display",
-      "Independent provider video",
+      "Fast live/offline hybrid routing",
+      "Independent provider video/generalization",
       "R2 tracking identity",
       "Final holdout"
     ],
-    "candidate_source_commit": "2f3d62d"
+    "candidate_source_commit": "2f3d62d",
+    "reserved_unknown_charge_usd": "7.386864",
+    "funded_attempt_requests": 69,
+    "reported_usage_upper_charge_usd": "0.035521000",
+    "ledger_accounted_upper_usd": "7.422385000",
+    "first_attempt_receipt": "validation/results/api-reader-tournament/access-attempt.json"
   },
   "conditional_components": [
     {
@@ -1534,33 +1622,96 @@
     "authorization_epoch": "2026-10-05-openai-native-development-eur10",
     "max_requests": 0,
     "max_usd": "0",
-    "reason": "Runtime remains disarmed only because existing OpenAI credential/account access is unavailable. Reuse/crop/spend scope resolved; canonical ledger initialized and all exact native crops reviewed. Requests/cost zero; do not create another key.",
+    "reason": "Funded offline attempt finished; live inference remains disarmed. Aggregate ledger and uncertain charges are retained.",
     "research_spending_authorization": {
       "currency": "EUR",
       "total_cap": "10",
       "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
       "supersedes": "2026-10-04-zero-budget",
-      "calls_executed": 0,
-      "cost_incurred": "0",
+      "calls_executed": 70,
+      "cost_incurred": null,
       "credential_choice": "reuse_existing_no_new_key",
-      "known_environment_credentials": "OpenAI not accessible in environment or safely checked likely files; Gemini absent and deferred by user",
+      "known_environment_credentials": "Existing OpenAI key reused successfully for actual Luna/Sol inference; Gemini absent and deferred.",
       "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
-      "runtime_gate": "disarmed_existing_key_unavailable",
+      "runtime_gate": "disarmed_after_funded_offline_attempt",
       "record": "docs/OPENAI_READER_TOURNAMENT.md",
       "working_cap_usd": "8",
       "max_requests": 90,
       "ledger": "artifacts/api-budget/eur10-total-20261004.json",
-      "existing_key_location_question": "pending; path/manager only, never plaintext"
+      "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
+      "budget_receipt": {
+        "requests_attempted": 70,
+        "max_requests": 90,
+        "max_usd": "8",
+        "accounted_upper_usd": "7.422385000",
+        "unknown_charge_requests": 9,
+        "network_attempts_claimed": 70,
+        "unknown_charge_reserved_usd": "7.386864",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "user_reported_credit_topup": {
+        "currency": "EUR",
+        "amount": "10",
+        "account_balance_verified": false
+      },
+      "reported_usage_upper_charge_usd": "0.035521000"
     },
     "credit_check": {
+      "status": "unverified_billing_browser_human_verification",
+      "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+      "free_credit_balance": null,
+      "available_credit_balance": null,
+      "auto_recharge_enabled": null,
+      "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+      "source": "https://platform.openai.com/settings/organization/billing/overview"
+    },
+    "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
+    "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
+    "account_model_access": {
+      "checked_utc": "2026-10-05T10:36:55.580364+00:00",
+      "credential_file": ".env.local",
+      "key_disclosed": false,
+      "inference_requests": 0,
+      "inputs_verified": 51,
+      "crops_verified": 168,
+      "budget": {
+        "requests_attempted": 0,
+        "max_requests": 90,
+        "max_usd": "8",
+        "accounted_upper_usd": "0",
+        "unknown_charge_requests": 0,
+        "network_attempts_claimed": 0,
+        "unknown_charge_reserved_usd": "0",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "status": "read_only_access_verified",
+      "available_requested_models": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "balance_and_invoice": "unverified"
+    },
+    "first_inference_failure": {
+      "model": "gpt-6-luna",
+      "tier": "default",
+      "http_status": 429,
+      "error_type": "ProviderHTTPError",
+      "error_code": null,
+      "failed_attempt_elapsed_ms": 2556.598699999995,
+      "usage_reported": false,
+      "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+    },
+    "historical_credit_check": {
       "status": "blocked_credit_verification",
       "balance": null,
       "free_credit_balance": null,
       "auto_recharge_enabled": null,
       "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
       "source": "https://platform.openai.com/settings/organization/billing/overview"
-    },
-    "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
-    "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json"
+    }
   }
 }
