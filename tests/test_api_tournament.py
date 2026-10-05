@@ -61,6 +61,34 @@ def test_deleted_or_corrupt_budget_cannot_reset_allowance(tmp_path):
         PersistentRequestBudget(path, authorization_id='contract', max_requests=5, max_usd='2')
 
 
+def test_authorized_count_extension_preserves_unknown_charge_and_money_ceiling(tmp_path):
+    value = PersistentRequestBudget.initialize(tmp_path/'ledger.json', authorization_id='contract', max_requests=1, max_usd='1')
+    identifier = value.reserve(Decimal('.6'))
+    value.claim_submission(identifier, 'a'*64)
+    extended = value.extend_request_ceiling(max_requests=3, authorization_epoch='new-human-request',
+        authorization_note='Two additional causal probes within the unchanged monetary cap.')
+    assert extended.receipt()['accounted_upper_usd'] == '0.6'
+    assert extended.receipt()['unknown_charge_requests'] == 1
+    assert extended.receipt()['max_usd'] == '1'
+    with pytest.raises(PermissionError): value.reserve(Decimal('.1'))
+    with pytest.raises(PermissionError): extended.reserve(Decimal('.5'))
+    extended.reserve(Decimal('.4'))
+    assert extended.receipt()['accounted_upper_usd'] == '1.0'
+    with pytest.raises(PermissionError):
+        extended.extend_request_ceiling(max_requests=4, authorization_epoch='new-human-request', authorization_note='Replay denied.')
+
+
+def test_request_extension_cannot_clear_stop_or_accept_implicit_authorization(tmp_path):
+    value = PersistentRequestBudget.initialize(tmp_path/'ledger.json', authorization_id='contract', max_requests=1, max_usd='1')
+    for args in ({'max_requests': True, 'authorization_epoch': 'explicit', 'authorization_note': 'Explicit'},
+                 {'max_requests': 2, 'authorization_epoch': '', 'authorization_note': 'Explicit'},
+                 {'max_requests': 2, 'authorization_epoch': 'explicit', 'authorization_note': ''}):
+        with pytest.raises(ValueError): value.extend_request_ceiling(**args)
+    value.stop()
+    with pytest.raises(PermissionError):
+        value.extend_request_ceiling(max_requests=2, authorization_epoch='explicit', authorization_note='Cannot reopen stopped ledger.')
+
+
 def test_luna_fast_and_long_context_have_conservative_audited_reservations():
     standard, fast = config(), config(fast=True)
     assert standard.reasoning_effort == 'none' and standard.service_tier == 'default'

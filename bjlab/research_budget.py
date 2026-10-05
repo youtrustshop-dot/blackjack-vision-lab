@@ -6,6 +6,7 @@ output directory, model or process never resets it. Unknown charges stay reserve
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from decimal import Decimal
+from hashlib import sha256
 import json
 import os
 from pathlib import Path
@@ -111,6 +112,21 @@ class PersistentRequestBudget:
                     raise ValueError('Settlement exceeds reservation.')
             if len(ids) > self.max_requests or self._accounted(value) > self.maximum:
                 raise ValueError('Ledger exceeds authorization.')
+            amendments = value.get('request_limit_amendments', [])
+            if not isinstance(amendments, list):
+                raise ValueError('Invalid request limit history.')
+            epochs, previous = set(), None
+            for amendment in amendments:
+                old, new = amendment['previous_max_requests'], amendment['max_requests']
+                epoch = amendment['authorization_epoch']
+                if (type(old) is not int or type(new) is not int or not 0 < old < new or
+                        (previous is not None and old != previous) or epoch in epochs or
+                        not isinstance(epoch, str) or not epoch or
+                        Decimal(amendment['unchanged_max_usd']) != self.maximum):
+                    raise ValueError('Invalid request limit amendment.')
+                epochs.add(epoch); previous = new
+            if amendments and previous != self.max_requests:
+                raise ValueError('Request limit does not match its authorization history.')
             return value
         except (OSError, ValueError, KeyError, TypeError, ArithmeticError):
             raise PermissionError('Research budget ledger is missing, inconsistent or corrupt.') from None
@@ -131,6 +147,36 @@ class PersistentRequestBudget:
                 'settled_upper_usd': None, 'submitted_utc': datetime.now(timezone.utc).isoformat()})
             atomic_json(self.path, value)
             return identifier
+
+    def extend_request_ceiling(self, *, max_requests, authorization_epoch, authorization_note):
+        """Explicit count-only amendment; never reset charges or increase money.
+
+        Call only for a new human-authorized bounded diagnostic scope. Old
+        handles/runners fail closed after amendment because their ceiling differs.
+        """
+        if (type(max_requests) is not int or max_requests <= self.max_requests or
+                not isinstance(authorization_epoch, str) or not authorization_epoch or
+                not isinstance(authorization_note, str) or not authorization_note.strip()):
+            raise ValueError('An explicit new authorization and increased request count are required.')
+        with ledger_lock(self.path):
+            value = self._load()
+            if value['stopped']:
+                raise PermissionError('A stopped budget cannot be reopened by a request amendment.')
+            history = value.setdefault('request_limit_amendments', [])
+            if any(a['authorization_epoch'] == authorization_epoch for a in history):
+                raise PermissionError('This request amendment was already authorized; do not replay it.')
+            history.append({'authorization_epoch': authorization_epoch,
+                'authorization_note': authorization_note,
+                'previous_max_requests': self.max_requests, 'max_requests': max_requests,
+                'unchanged_max_usd': str(self.maximum),
+                'requests_already_reserved': len(value['entries']),
+                'accounted_upper_usd_before': str(self._accounted(value)),
+                'prior_entries_sha256': sha256(json.dumps(value['entries'], sort_keys=True).encode()).hexdigest(),
+                'amended_utc': datetime.now(timezone.utc).isoformat()})
+            value['max_requests'] = max_requests
+            atomic_json(self.path, value)
+        return type(self)(self.path, authorization_id=self.authorization_id,
+            max_requests=max_requests, max_usd=self.maximum)
 
     def settle(self, identifier, upper_cost):
         cost = positive(upper_cost, zero=True)

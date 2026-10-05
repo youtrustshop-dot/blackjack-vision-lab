@@ -1,5 +1,17 @@
 # Card Lab project instructions
 
+- Latest explicit user authorization, VISION-020, 2026-10-05: isolate the exact
+  Gemini HTTP400 cause with controlled one-change ablations and a deliberate
+  reintroduction. At most twelve extra diagnostic submissions: audit the
+  operational request ceiling 90 -> 102 without changing the USD8 aggregate
+  monetary ceiling or any existing unknown-charge reservation. This new scope
+  supersedes VISION-019's request-count stop only; old evidence stays frozen.
+  Use only the same reviewed owned development pixels, no final holdout, new
+  model, training, Poker, default reader or installed release. No blind retries;
+  expected HTTP400s may continue solely as named causal ablations. Other errors,
+  timeouts or unaudited usage stop the batch. Offline diagnostic deadline 10s
+  does not relax the 3s live deadline. Runtime disarms after every submission.
+
 - Latest user authorization, VISION-019, 2026-10-05: diagnose and resolve Gemini
   using the existing key and unchanged aggregate cap. Three bounded isolation
   submissions completed: minimal text succeeds in 0.962s; legacy structured hand
