@@ -1,0 +1,514 @@
+{
+  "experiment_id": "VISION-021",
+  "status": "prepared_offline_not_benchmarked",
+  "parent_commit": "a5ea45428b670d8a0ff10f5d6d495ad534fa9fde",
+  "contract": "grounded-r1-live-v3",
+  "provider_calls": 0,
+  "ledger_unchanged": true,
+  "ledger_sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+  "freeze_sha256": "d6fe0f0b41f624a717719ebccb3d35222d1fb4b534e1426b329d500ab4dbcbfe",
+  "plan_sha256": "0c8b65a1634fcb2f5876c28f3e83d55f9c36a4fb560e4517a587da665fc14720",
+  "hybrid_plan_sha256": "777ea821f82dcffdc3777117a171f802e989217c3a26054ddc2b57054b64b6e4",
+  "source_hashes": {
+    "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+    "bjlab/ocr.py": "97e279cfc8c3872efba841b536e883202c485f83757420b96561e1f2cc78e44e",
+    "bjlab/overlap_presence.py": "769e2e24474cf2e9cba3b719b752c808ad0b398886f8e21150f6e9ccf1798029",
+    "bjlab/suit_symbols.py": "c9e6fa2ecdefc62ca2634b6ef43ed4ac00b64019d0a9a39667cfbe2e41613be8",
+    "bjlab/specialized_vision.py": "463904c27d05ac83bd5abe08d2fe3a0122910915fcd40eb2565271d22fe3e55b",
+    "bjlab/visible_phase.py": "ea1fc44edba5f1de7a2ab375abdda7b913b2987798729c711de9710161e39613",
+    "bjlab/state_reader.py": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa",
+    "bjlab/vision.py": "742f957f0e0df31f77d719a088fc3e7f648a6d6d2376ba79350a5f0158118a3c",
+    "bjlab/calibration.py": "1f92a47d97a9c398ac8ab7470ed2a725d8d4c3b921229e6b925f7cad8131a863",
+    "bjlab/live_cloud.py": "322c2f7f3565cdd2f300eca94271e1c43f9ad3ab81937925a2c143a5e32ecf9c",
+    "bjlab/live_state.py": "6f5fea94cfb45177bde2835a43ed213082148b2c8cd884b1d48891f0501648e6",
+    "bjlab/grounded_cloud.py": "02c0906b64b5fda34de1e706570a1e10a60de886a69bd1f91f77330bc8755bd2",
+    "bjlab/grounded_state.py": "022fa776692d9ee3f931752873692ec9622f182fff5a1b542e05b070b5fba2c0",
+    "bjlab/hybrid_evidence.py": "f07d5b9fb6ea2656b16c56c2022865ae0c3bc6e29bb92cea47e6974faca855c6",
+    "bjlab/research_budget.py": "5f278731ec7a73231fc3110dfa25811dad0d97b65abf55f4d2b5c625e8f65c3a",
+    "bjlab/openai_reader.py": "8fe27304fe02dd8172e3a6ca7dda5217a217e7642f300225a8c2dcd58d4b4bd8",
+    "bjlab/simulator.py": "2f12e895f4f0dcae4c60826d4f42109cc98f35a4510b11a44e58fe08c75d5707",
+    "bjlab/engine.py": "3b9b68f6f6d124f17c7d1e6895ce149eb42ab66b06e1ab6e39545d078b5035ba",
+    "validation/tools/paired_cloud_prepare.py": "514cd19454a2515cf678bfa73bed8d4ce499d55af357d332d2f7751d8a92b54b",
+    "validation/tools/grounded_corpus.py": "ee4c8e59690783b945b770dd3335204a52807d53f09816e43df8a46a43edfd6b",
+    "validation/tools/stress_lab.py": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+    "validation/tools/api_reader_tournament.py": "c606123e3e7f941049bb10ea7548fe792f7288b77fe2243c5458432bf2dc5f20",
+    "validation/tools/state_reader_comparison.py": "fe1ef6765129c649668fe1da4e178d2e8a881232972394e87f4791ec81523479"
+  },
+  "prompt_sha256": "5c1e53acc9a654a809d595fd2e2f75976bb0cdd61fff13e42f4da829120b76f0",
+  "provider_schema_sha256": {
+    "luna-fast-live-v3": "c4826316a9631a815caf2665f856651547386a637aa139f0dd465c7e427e8110",
+    "gemini-structured-card-limit-local": "e6ecc8a93bfb32276a75e565549b4bfc79c63ef622f3f3ccf601dddd44084bec"
+  },
+  "font_hashes": {
+    "corbelb.ttf": "fa008372f8a94945d0daef9daf0bfb9e3fba3a25fd17f2607d47ac6861bd0303",
+    "bahnschrift.ttf": "eaad201da94cb323401fdb8cc760650803ddf8fd704cb9fa56317e6c69bc6fd6",
+    "candarab.ttf": "ec0dce5170aaaf2cf485d4ba39d86fbba1dd1c76d9140cbf75a6b84b50fb20de",
+    "framd.ttf": "bac844bd41f847cf138737026d41c983387a1065535c32e78aa22c48708b52ad",
+    "impact.ttf": "d8bbdb72e3f930157824b2e59677d3a912d4512c14a948e6656a2e3fb0c935ad",
+    "segoeprb.ttf": "3cced0162ddb9e5f1e63ee1b36fd6e581c090318dce1a0af01b77f5ea9952c80"
+  },
+  "local_manifest_sha256": "88c3b41955e0488a87a9a492056c4dd47edd249241ab4e1676923e31e7c3a4f7",
+  "local_weight_hashes": {
+    "card-pose.onnx": "aaf96a1d171a63b674d39499ee4143c379b02f735d161175ee9ab51508c3088f",
+    "rank-suit.onnx": "ae15ce0a119207204a3d11c6047eae0e79b2a4f90fd5978b282fa9bfc080176a"
+  },
+  "partitions": {
+    "development": {
+      "files": {
+        "frames.json": "6e64ef155ed38afbbd166f269c1c49bb7f14b1f8f4efc0d729c36bffe294a5dd",
+        "oracle.json": "bcdfe94ef2154334663e92cfae1beb740580e9f3b66c167d3009cc58f3b45aec",
+        "visibility-evidence.json": "b9a007e77cd5ea3514cd0b7c5071c05c59914387e73d759b2d51cd02583da27c",
+        "contact-sheet.png": "94fd31c048fbfd7cf05e4a6a9b28836f8019ce217b4962abb26f16c6178a2ef0"
+      },
+      "sessions": [
+        "81005071",
+        "81005073",
+        "81005079"
+      ],
+      "seeds": [
+        81005071,
+        81005073,
+        81005079
+      ],
+      "families": [
+        "owned-paired-jade-corbel",
+        "owned-paired-slate-bahnschrift",
+        "owned-paired-clay-candara"
+      ],
+      "hand_groups": [
+        "81005071:1",
+        "81005071:2",
+        "81005071:3",
+        "81005071:4",
+        "81005071:6",
+        "81005071:7",
+        "81005073:1",
+        "81005073:2",
+        "81005073:3",
+        "81005073:4",
+        "81005073:6",
+        "81005079:1",
+        "81005079:2",
+        "81005079:3"
+      ],
+      "inputs": 16,
+      "decision_opportunities": 11,
+      "object_annotations": 61,
+      "visibility_annotations": {
+        "readable": 47,
+        "covered": 12,
+        "partial": 1,
+        "unreadable": 1
+      },
+      "prepared_payloads": 32,
+      "payload_hashes": {
+        "clean-ui": {
+          "luna-fast-live-v3": "50bf9a6cee1e884afa01e20eba523f6d160af3ddbcc6463bd9b5e57d267898f2",
+          "gemini-structured-card-limit-local": "60ede6eae8d367b7ec9b177e53a7cd5234d9edfe81441a875b5429c23d633a29"
+        },
+        "labelled-totals": {
+          "luna-fast-live-v3": "f2d4408385ef4c4973675ec179e54b7855f96b100f964de02927294f6f412aa5",
+          "gemini-structured-card-limit-local": "034d1efedd0bcbb02aeb1a8147957f8cfa1368b5e4be3fdd7bac0f2a3df69b3c"
+        },
+        "unlabelled-number": {
+          "luna-fast-live-v3": "589d8a4a42df568a3974adfa0c4b197327406bef6c3f69be58a7a1b5545ea31a",
+          "gemini-structured-card-limit-local": "2e314fe9ca886d245edd9639097bdd45ab94874df9b23cd6ac0dcf69b40e4001"
+        },
+        "backs": {
+          "luna-fast-live-v3": "b68fcb92c5f6a3083f6d4a1ff656eb4597868e43da5722ab130dabe235f6f113",
+          "gemini-structured-card-limit-local": "49e4cc029f8f4e660686ee4dae7fc41f31415189d3fa44340e7c0315544313f6"
+        },
+        "overlap": {
+          "luna-fast-live-v3": "646b2d8df26c928edf7b150b32f65341b6169b95d6be6d218917e2b98a4ce0ca",
+          "gemini-structured-card-limit-local": "016d55c39e6b66c2d8448d1830bac84f22621d3bd4dd803b96f717109a871816"
+        },
+        "hard-negatives": {
+          "luna-fast-live-v3": "320e8e24f28d58647a5c0b5d3aed28ac4f790528f7cb08ecdc943e7dcb8fbd1b",
+          "gemini-structured-card-limit-local": "a595fbd79db2388305bd5dcaff6a689eeb347434ef1232827873c6b9d80ca13e"
+        },
+        "rotation": {
+          "luna-fast-live-v3": "041f702eb57f909a4aff14449d50d44b0e8aaffe3f6a2bae34304bc421d135c2",
+          "gemini-structured-card-limit-local": "dd5c1e368697ad0fea306aca1e643d44c3fed81eaad3cc3fdeb68ac4f11e5de8"
+        },
+        "clipping-alt-index": {
+          "luna-fast-live-v3": "6b5ece43236967b10706911873857f3da978c1869a34652aba7332441b0441d6",
+          "gemini-structured-card-limit-local": "88437029ea90eac420197729fb1dc8ccb7415405964a098ca49b4cb2be3f1077"
+        },
+        "partial-index": {
+          "luna-fast-live-v3": "901b2a33962bf1bcb158dfd02d1c263fffbcb2e264ad85ff4c505be31534d101",
+          "gemini-structured-card-limit-local": "1ed2950293b11fdf8a0332ae828c6d1cf6287cba56257f47956932bbe3aa397e"
+        },
+        "popup-unreadable": {
+          "luna-fast-live-v3": "2ff1faf3eaf0f935ac5272c134cff0c7129984aaa3757b9c3b48fd00381b89dd",
+          "gemini-structured-card-limit-local": "4e0dfe135f723291ef67f9db89bb41ab79819cd5619c967f0e4300ddb89730dc"
+        },
+        "faded-blur": {
+          "luna-fast-live-v3": "4f7ac248e0f5331d11e1dd9514fd939092d7273fe09fc27686bcbf43cf6a7f03",
+          "gemini-structured-card-limit-local": "7c4403a30d8f1f31fcf9da1a494b541b4255ed4bb5b701773e0db9822dae7afa"
+        },
+        "disabled-controls": {
+          "luna-fast-live-v3": "9579acbae4171d938e8963ca8058ec38d64ef9b90eb9f19f95e38c40a96c0c90",
+          "gemini-structured-card-limit-local": "058b3930c294ad3b5bc3a496fcbab14d82f88d3115a27e6d3240aec3e1ef356a"
+        },
+        "terminal": {
+          "luna-fast-live-v3": "6009197cbc65ae735cc03538565a1c6d243b48bf8920c116557639d90711895a",
+          "gemini-structured-card-limit-local": "6cae2fa123bf5e6f5ca42443f1ebf367256aad41170cdaa54f218bb75b8b02f7"
+        },
+        "transition-clear": {
+          "luna-fast-live-v3": "311d7d0737f30e802e73a37a5dedac9346437f113f054cead1bb9e5e831ead0e",
+          "gemini-structured-card-limit-local": "185bca909841d76fb8cabe3abe2357b3cbba2eeba95d5870ddb826180e959649"
+        },
+        "transition-dealing": {
+          "luna-fast-live-v3": "7518200fa7cd5a7d987eb190850466ae632c79dddd76ba06a0958b7d7cb1d631",
+          "gemini-structured-card-limit-local": "47055829727b3f9780963cc3759e12bb96816e68e1279ff04a15d70f57f9ffbf"
+        },
+        "transition-after": {
+          "luna-fast-live-v3": "03965dabcbd92f21a3be4dd918724be54dc12a473a200d06a4afed962ff26098",
+          "gemini-structured-card-limit-local": "2eeced171d2f4c6b4b805934478c00369a819b24d64057bf1d984efda82ad432"
+        }
+      }
+    },
+    "validation": {
+      "files": {
+        "frames.json": "cfe6726abbbd1d2b84038323145194ad7078debe2933bbd964afcc39308587d1",
+        "oracle.json": "c3927686b990a27c779cf5f5a8fc97517bd58167f1bb0b1b7610cb0c382db568",
+        "visibility-evidence.json": "b48ac7197e04dbaeae16e9b72e13681e800645daa320b77108cf409b5e3ed061",
+        "contact-sheet.png": "e8a52cc778c68816df6d5118390a3f0dd18f2d0b183727302558bda1c390f7dd"
+      },
+      "sessions": [
+        "81005181",
+        "81005183",
+        "81005187"
+      ],
+      "seeds": [
+        81005181,
+        81005183,
+        81005187
+      ],
+      "families": [
+        "owned-paired-berry-franklin",
+        "owned-paired-moss-impact",
+        "owned-paired-ocean-segoe-print"
+      ],
+      "hand_groups": [
+        "81005181:1",
+        "81005181:2",
+        "81005181:3",
+        "81005181:5",
+        "81005181:6",
+        "81005181:7",
+        "81005183:1",
+        "81005183:2",
+        "81005183:3",
+        "81005183:4",
+        "81005183:6",
+        "81005187:1",
+        "81005187:3",
+        "81005187:4"
+      ],
+      "inputs": 16,
+      "decision_opportunities": 11,
+      "object_annotations": 60,
+      "visibility_annotations": {
+        "readable": 46,
+        "covered": 12,
+        "partial": 1,
+        "unreadable": 1
+      },
+      "prepared_payloads": 32,
+      "payload_hashes": {
+        "clean-ui": {
+          "luna-fast-live-v3": "c7144b0569f029cd75d9fc18cd649faec3e70ae60b731237621c3093c5b97e05",
+          "gemini-structured-card-limit-local": "34b163e1d8de76338cd4ed94319988ee1208103802bc5de0b32b59c595aeff9e"
+        },
+        "labelled-totals": {
+          "luna-fast-live-v3": "1964e454bdbea9039d4209fe7f395800036cfa521292d37db28abf502ab63cf1",
+          "gemini-structured-card-limit-local": "3a91abf633de0788db69d1baaa5f42d34366f11c0f1a719cbe234ef7e3360aad"
+        },
+        "unlabelled-number": {
+          "luna-fast-live-v3": "aee22d83b81372932acfe89f705bf4ac4aa18f6ac5f6967f3d391f0ebaa58486",
+          "gemini-structured-card-limit-local": "7faa1b09bb4a9441ae3266796806960effafdd77fb1ab8d81191f01ccdf6ba17"
+        },
+        "backs": {
+          "luna-fast-live-v3": "54919efddacf17900e6a5441714586b736303c559ab4874ca96e7cdba4d673bb",
+          "gemini-structured-card-limit-local": "bfc75f156e4ac0fd62b1c33be882e536b96462a435a017433d3bae66f44bb5e2"
+        },
+        "overlap": {
+          "luna-fast-live-v3": "f38f835388f40db4b3773b9ab37df14ffab7282262311a73c6eb15453b58020c",
+          "gemini-structured-card-limit-local": "8dc03fe5f4c5156ea5d3f001033b157fbcc5f09f6cef97e1fd82c28f7c123cdd"
+        },
+        "hard-negatives": {
+          "luna-fast-live-v3": "e147b69994dcf273591548b84e1e6f3007921e86e4f469ebde7a9611d5b04858",
+          "gemini-structured-card-limit-local": "7f3d5dfad0bfbbf5cf3d40aa8c4dee793ef5370f0388308c0dc1cbd93b69077c"
+        },
+        "rotation": {
+          "luna-fast-live-v3": "17ef1b2567e99deb09217fee9356711a6ef1dcfe22d31ea4e12c803cf0122a7d",
+          "gemini-structured-card-limit-local": "ae911030925b76d958f316b301e2ec80f2c39da13a796ab4de26ed2ba8369a23"
+        },
+        "clipping-alt-index": {
+          "luna-fast-live-v3": "c50e0008001fe977baca503db3a47891cf2ea059e9b30b2199d299f022489cab",
+          "gemini-structured-card-limit-local": "d2ed34ab4f00c31eee83e93746d9b73d0688a8f0fec9f3c8633adb01d2de4b02"
+        },
+        "partial-index": {
+          "luna-fast-live-v3": "b09bd380ff0c423096ecc7683707ba006f909533622923799049bfa5f2163f95",
+          "gemini-structured-card-limit-local": "c99d5e38cdf1f2bf453179d4567d5c5b4be756a31199f12c028ccf0b6bec2efb"
+        },
+        "popup-unreadable": {
+          "luna-fast-live-v3": "9a3781b520277c74906d44fae925cf682e08062a678e0b37be225f302e1fef08",
+          "gemini-structured-card-limit-local": "bdc419b8aa42d74ed8ef807fe8027ded0159653906197a4382082f81276eec57"
+        },
+        "faded-blur": {
+          "luna-fast-live-v3": "835f040a4d8dd14154620f1d73890dad94115bfffa8de55a5aa9b2e31d0de24d",
+          "gemini-structured-card-limit-local": "bc68e75f100124ff29600971336c0793fdbd1a6fc851f73b89f5eaaaf3ef566b"
+        },
+        "disabled-controls": {
+          "luna-fast-live-v3": "8398e8d9af7ee648e5914b3d702a1a1cffeb40c1a0479fc2452a739833ec1d5b",
+          "gemini-structured-card-limit-local": "9f855c7d23b3ff32e5bef1ec13a3b662143441b3b119fadceb26eb36f1e4b383"
+        },
+        "terminal": {
+          "luna-fast-live-v3": "c0e8d430e2041f9ac7a27d31e01af782fa07e5e6746b870b06436f2cf4cf228e",
+          "gemini-structured-card-limit-local": "becf9c50ccebe6091cd914f827497939848f2ca78f48bcb3daf37b6b01822082"
+        },
+        "transition-clear": {
+          "luna-fast-live-v3": "ab282a8bae7585c68694dcd881bd392c7b22b249a87cfb60175eada066fc17dd",
+          "gemini-structured-card-limit-local": "7e70b5be48d0f895fda1e33f566e446c215831969e72a6eb6725e056d086d10a"
+        },
+        "transition-dealing": {
+          "luna-fast-live-v3": "dc87700c034366acb70bd4287866ecb3cfc26f81b1bedaa177ff4d9f678568e1",
+          "gemini-structured-card-limit-local": "6f8eac8dc99b262a7e1a24aea7b921ffb6052d35ceb7daee8c8728b4b5f5e514"
+        },
+        "transition-after": {
+          "luna-fast-live-v3": "9fd3f7a97c2cf720a8dcaf1dbd39a69add6856130346ac9c94e1b5d2391ba1b9",
+          "gemini-structured-card-limit-local": "e0270d7a3b1ef00f83560e36abb1ae0dee604badc40063223d9ec1dd78433f9d"
+        }
+      }
+    }
+  },
+  "proposed_budget": {
+    "authorization_status": "NOT_AUTHORIZED_OFFLINE_ONLY",
+    "new_requests_executed": 0,
+    "unused_diagnostic_slots": "8 CLOSED; not a new allowance",
+    "currency": "USD",
+    "pricing": "Frozen PR13/15 audited config; reverify before future execution",
+    "reservation_basis": "Whole declared context plus max output, including Luna Fast/long/cache upper multipliers; not expected cost or invoice",
+    "existing_ledger": {
+      "requests_attempted": 94,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.087190600",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 93,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    },
+    "remaining_accounted_margin_usd": "2.912809400",
+    "per_attempt_reserve_usd": {
+      "luna-fast-live-v3": "0.526536",
+      "gemini-structured-card-limit-local": "0.3171328"
+    },
+    "initial_proposal": {
+      "inputs": [
+        "labelled-totals",
+        "rotation",
+        "transition-after"
+      ],
+      "split": "validation",
+      "paired_requests": 6,
+      "worst_case_usd": "2.5310064",
+      "fits_existing_money_margin": true,
+      "purpose": "Small paired smoke; insufficient for full R1 or hybrid promotion"
+    },
+    "full_still_proposal": {
+      "split": "validation",
+      "inputs_per_candidate": 16,
+      "paired_requests": 32,
+      "worst_case_usd": "13.4987008",
+      "fits_existing_money_margin": false
+    },
+    "conditional_hybrid_proposal": {
+      "requests": 5,
+      "candidate": "one measured winner only",
+      "worst_case_usd": "2.632680",
+      "conditions": [
+        "paired gate passed",
+        "fresh explicit scope",
+        "ledger admits each reservation"
+      ],
+      "scenarios": [
+        "stable warm table: 3 independent inputs",
+        "table changes while cloud is pending: 1",
+        "source disconnects while cloud is pending: 1"
+      ]
+    },
+    "full_still_plus_hybrid": {
+      "maximum_requests": 37,
+      "worst_case_usd": "16.1313808",
+      "fits_existing_money_margin": false
+    },
+    "initial_plus_conditional_hybrid": {
+      "maximum_requests": 11,
+      "worst_case_usd": "5.1636864",
+      "fits_existing_money_margin": false,
+      "policy": "The initial six can be proposed within the current margin. Conditional requests require passing results AND new scope AND the ledger admitting each reservation. Completion is not guaranteed."
+    },
+    "warmup_provider_requests": 0,
+    "retries": 0,
+    "budget_policy": "No automatic execution. Do not reset ledger, release uncertain charges, assume HTTP400 free, raise caps or purchase credit. Each future attempt needs a durable reservation. Paid warm-up would need a separate counted authorization."
+  },
+  "candidate_execution": {
+    "luna-fast-live-v3": {
+      "status": "not_executed",
+      "summary": {
+        "planned": 16,
+        "attempted": 0,
+        "not_executed": 16,
+        "independent_sessions": 3,
+        "strict_validated": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "complete_state_correct": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "exact_card_inventory": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "phase_correct": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "controls_correct": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "numeric_provenance_exact": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "false_accept": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "accepted_inexact_card_inventory": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "timely_correct_usable_r1": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "timeouts": 0,
+        "failures": 0,
+        "rank": {
+          "correct": 0,
+          "expected": 0
+        },
+        "suit": {
+          "correct": 0,
+          "expected": 0
+        },
+        "backs": {
+          "correct": 0,
+          "expected": 0
+        },
+        "latency_complete_validated_only_ms": {
+          "count": 0,
+          "p50": null,
+          "p95": null,
+          "max": null
+        },
+        "scope": "R1 still observations only; latency excludes censored failures, whose counts remain visible; session-clustered uncertainty required before promotion"
+      }
+    },
+    "gemini-structured-card-limit-local": {
+      "status": "not_executed",
+      "summary": {
+        "planned": 16,
+        "attempted": 0,
+        "not_executed": 16,
+        "independent_sessions": 3,
+        "strict_validated": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "complete_state_correct": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "exact_card_inventory": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "phase_correct": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "controls_correct": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "numeric_provenance_exact": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "false_accept": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "accepted_inexact_card_inventory": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "timely_correct_usable_r1": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "timeouts": 0,
+        "failures": 0,
+        "rank": {
+          "correct": 0,
+          "expected": 0
+        },
+        "suit": {
+          "correct": 0,
+          "expected": 0
+        },
+        "backs": {
+          "correct": 0,
+          "expected": 0
+        },
+        "latency_complete_validated_only_ms": {
+          "count": 0,
+          "p50": null,
+          "p95": null,
+          "max": null
+        },
+        "scope": "R1 still observations only; latency excludes censored failures, whose counts remain visible; session-clustered uncertainty required before promotion"
+      }
+    }
+  },
+  "assistant_visual_audit": {
+    "owned_contact_sheets": 2,
+    "native_crops": [
+      "development/partial-index/player-0.png",
+      "validation/clipping-alt-index/player-0.png",
+      "validation/popup-unreadable/player-0.png"
+    ],
+    "privacy": "private artifacts only; no provider/user pixels or secret values published",
+    "scope": "engine-rendered evidence masks plus visual audit; geometric visibility proxy, not independent human/provider truth"
+  },
+  "final_holdout": "not_created_not_opened_not_evaluated",
+  "runtime": "disarmed_no_new_authorization",
+  "installed_release": "1.1.1 unchanged",
+  "local_training": false,
+  "actual_hybrid": "planned_not_executed",
+  "limitations": [
+    "fresh sessions/palettes/fonts within an owned renderer; NOT external-provider generalization or R2 certification",
+    "Sampled stills, not six complete captured session videos",
+    "No new candidate accuracy, latency or economic claim"
+  ]
+}

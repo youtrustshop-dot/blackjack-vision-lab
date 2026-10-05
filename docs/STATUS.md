@@ -1,3 +1,17 @@
+# Current delivery — VISION-021 offline paired-cloud readiness
+
+New owned corpus: 32 stills, six natural source sessions, two disjoint partitions.
+Luna Fast compact and Gemini structured-card-limit-local have 64 prepared native
+payloads and one provenance-aware evaluator. **Zero new provider calls.**
+Canonical ledger unchanged; runtime disarmed, closed diagnostic slots remain closed.
+Initial six paired requests would reserve at most USD2.5310064; full validation
+and hybrid completion are not guaranteed by the remaining uncertain-charge margin.
+[Plan, hashes, proposed counts and offline commands](PAIRED_CLOUD_PREPARATION.md).
+
+The following blocks describe historical increments; their API-blocked claims
+and counts are not the current account state. Current verification is in
+`docs/REQUIREMENTS.json`. No installed release or final holdout change.
+
 # Current increment — M1 offline reader comparison (API blocked)
 
 The accepted [master plan v1.1](MASTER_PLAN.md) remains active, with the user's

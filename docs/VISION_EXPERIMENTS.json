@@ -8,6 +8,14 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "paired-cloud-offline-preparation",
+      "stage": "Fresh session-disjoint paired cloud readiness",
+      "candidate": "Luna Fast compact live-v3 vs Gemini structured-card-limit-local",
+      "status": "available",
+      "finding": "32 owned natural-session inputs / six source sessions; 64 offline payloads, common provenance-aware evaluator; initial six proposed requests USD2.5310064 reservation. Zero inference. Full validation/hybrid completion not guaranteed by current uncertain-charge margin.",
+      "evidence": "validation/results/paired-cloud-preparation/summary.json"
+    },
+    {
       "id": "gemini-exact-schema-cause",
       "stage": "Single-constraint causal request ablation",
       "candidate": "Gemini 3.5 Flash Lite structured output, provider card count bound enforced locally",
@@ -1257,7 +1265,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "VISION-020 exact schema cause isolated; retain opt-in structured correction plus all prior evidence. Next fresh verification and actual stable hybrid only in a new bounded user scope. Current diagnostic slots closed; no training, model, Poker, default or installed-release expansion.",
+  "current_priority": "VISION-021 offline deliverable complete; STOP before any new paid request or operational allowance. R1 still undecided.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1553,27 +1561,41 @@
       "final_holdout": "not_opened",
       "reader_promoted": false,
       "release_changed": false
+    },
+    {
+      "experiment_id": "VISION-021",
+      "parent_experiment_id": "VISION-020",
+      "baseline_commit": "a5ea45428b670d8a0ff10f5d6d495ad534fa9fde",
+      "question": "Prepare a fresh paired Luna/Gemini comparison without spending or consuming final holdouts.",
+      "decision": "Offline corpus, exact native payloads, common evaluator and staged worst-case budget ready. No candidate promoted, no network/model calls.",
+      "next_step": "Stop. A new bounded explicit authorization is required for the proposed initial six paired requests. Conditional hybrid needs measured gates and admitting ledger.",
+      "status": "available",
+      "result": "validation/results/paired-cloud-preparation/summary.json",
+      "report": "docs/PAIRED_CLOUD_PREPARATION.md",
+      "api_requests": 0,
+      "new_development_scenes": 16,
+      "new_validation_scenes": 16,
+      "independent_source_sessions": 6,
+      "final_holdout": "not_opened_not_created",
+      "reader_promoted": false,
+      "release_changed": false
     }
   ],
   "latest_experiment": {
-    "experiment_id": "VISION-020",
-    "parent_experiment_id": "VISION-019",
-    "baseline_commit": "48d227ff96403165ad6cd367e9f1448f21d8cc7c",
-    "question": "Which single schema constraint triggers the Gemini HTTP400?",
-    "decision": "Exact c.maxItems=52 trigger isolated by one-change A/B/A. Opt-in structured variant omits only that provider bound; strict local cap unchanged. No promotion.",
-    "next_step": "Fresh session-disjoint same-input verification and actual stable hybrid within a new bounded user scope; preserve current evidence and aggregate ledger.",
-    "status": "executed",
-    "result": "validation/results/gemini-schema-cause/summary.json",
-    "report": "docs/GEMINI_SCHEMA_CAUSE.md",
-    "reserved_attempts": 4,
-    "api_requests_with_body_sent": 3,
-    "pre_submission_dns_timeouts": 1,
-    "actual_api_cost": null,
-    "known_reported_usage_upper_usd": "0.0023373",
-    "new_accounted_upper_including_uncertain_usd": "0.953735700",
-    "new_development_scenes": 0,
-    "reused_development_scenes": 1,
-    "final_holdout": "not_opened",
+    "experiment_id": "VISION-021",
+    "parent_experiment_id": "VISION-020",
+    "baseline_commit": "a5ea45428b670d8a0ff10f5d6d495ad534fa9fde",
+    "question": "Prepare a fresh paired Luna/Gemini comparison without spending or consuming final holdouts.",
+    "decision": "Offline corpus, exact native payloads, common evaluator and staged worst-case budget ready. No candidate promoted, no network/model calls.",
+    "next_step": "Stop. A new bounded explicit authorization is required for the proposed initial six paired requests. Conditional hybrid needs measured gates and admitting ledger.",
+    "status": "available",
+    "result": "validation/results/paired-cloud-preparation/summary.json",
+    "report": "docs/PAIRED_CLOUD_PREPARATION.md",
+    "api_requests": 0,
+    "new_development_scenes": 16,
+    "new_validation_scenes": 16,
+    "independent_source_sessions": 6,
+    "final_holdout": "not_opened_not_created",
     "reader_promoted": false,
     "release_changed": false
   },
@@ -1780,7 +1802,7 @@
       "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
       "source": "https://platform.openai.com/settings/organization/billing/overview"
     },
-    "runtime_gate": "disarmed_after_vision020",
+    "runtime_gate": "disarmed_after_vision020_no_new_authorization",
     "historical_vision016_credit_check": {
       "status": "unverified_billing_browser_human_verification",
       "checked_utc": "2026-10-05T10:45:45.022546+00:00",

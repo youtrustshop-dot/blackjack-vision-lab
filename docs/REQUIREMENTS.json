@@ -4,14 +4,14 @@
   "verification": {
     "version": "1.1.1",
     "status": "unreleased-source-verified",
-    "completed_test_run": "617 passed, 2 existing warnings, 10 subtests passed in 100.00s",
-    "frontend_tests": "52 passed on parent PR14 / 48d227f; UI unchanged, not rerun locally in VISION-020",
-    "frontend_build": "52 historical frontend tests; parent PR14 TypeScript/Vite passed, UI unchanged",
+    "completed_test_run": "630 passed, 2 existing warnings, 10 subtests passed in 105.57s",
+    "frontend_tests": "52 inherited parent PR15 source/CI; UI unchanged, not rerun locally in VISION-021",
+    "frontend_build": "52 historical frontend tests; parent TypeScript/Vite passed, UI unchanged",
     "latest_changes_require_retest": false,
-    "source_evidence": "validation/results/gemini-schema-cause/verification.json",
+    "source_evidence": "validation/results/paired-cloud-preparation/verification.json",
     "release_evidence": "release/v1.1.1/",
     "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
-    "verification_scope": "Exact c.maxItems=52 causal trigger: same request A/B/A 400/200/400. Correct reused owned development still. No final holdout, fresh session, actual hybrid or native paint certification.",
+    "verification_scope": "VISION-021 offline readiness: 32 owned fresh stills, six natural source sessions, 64 paired native payloads, shared strict evaluator, frozen budgets/conditional hybrid plan. Zero new provider calls; ledger/installed release/final holdouts unchanged. No cloud quality or actual hybrid certification.",
     "historical_v1_1_1_verification": {
       "version": "1.1.1",
       "status": "source-verified",
@@ -114,6 +114,13 @@
       "frontend_build": "52 frontend tests; TypeScript/Vite passed for this candidate",
       "source_evidence": "validation/results/gemini-request-fix/verification.json",
       "verification_scope": "Bounded Gemini request isolation: text works, legacy full structured hand schema rejected, JSON-mode correct on one reused owned development still. No session/holdout/hybrid/native-paint certification."
+    },
+    "previous_vision020_source_check": {
+      "completed_test_run": "617 passed, 2 existing warnings, 10 subtests passed in 100.00s",
+      "frontend_tests": "52 passed on parent PR14 / 48d227f; UI unchanged, not rerun locally in VISION-020",
+      "frontend_build": "52 historical frontend tests; parent PR14 TypeScript/Vite passed, UI unchanged",
+      "source_evidence": "validation/results/gemini-schema-cause/verification.json",
+      "verification_scope": "Exact c.maxItems=52 causal trigger: same request A/B/A 400/200/400. Correct reused owned development still. No final holdout, fresh session, actual hybrid or native paint certification."
     }
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",

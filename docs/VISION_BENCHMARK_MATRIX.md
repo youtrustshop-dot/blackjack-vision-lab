@@ -1,3 +1,9 @@
+Current preparation (VISION-021): [paired cloud corpus and plan](PAIRED_CLOUD_PREPARATION.md).
+32 new owned stills / six source sessions; Luna compact vs Gemini structured
+card-limit-local. **Available offline, not executed:** zero new inference, no
+new quality/latency numbers, no promotion. Earlier matrix statements below are
+historical; the current structured candidate is established in PR15.
+
 # Vision benchmark: preserved first increment and learning follow-up
 
 Latest executed gate: [INDEPENDENT_READER_DECISION.md](INDEPENDENT_READER_DECISION.md),

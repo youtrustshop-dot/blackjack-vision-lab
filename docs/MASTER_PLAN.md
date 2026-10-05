@@ -1,6 +1,15 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-021, preparazione offline completata, 2026-10-05: [confronto cloud nuovo](PAIRED_CLOUD_PREPARATION.md).
+> 32 immagini da sei sessioni naturali, sviluppo/validazione separati, 64 payload
+> congelati Luna Fast compact e Gemini structured-card-limit-local, evaluator comune.
+> Nessuna chiamata, nuovo training o modifica del ledger. Prima proposta: sei
+> richieste su tre input di sessioni diverse, riserva prudente USD2,5310064.
+> Il confronto completo e l’ibrido non sono garantiti entro il margine attuale.
+> Final holdout e 1.1.1 invariati. Preparazione conclusa: fermarsi prima di nuova
+> autorizzazione esplicita. PR13–15 restano evidenze storiche, R2/Poker sul radar.
+
 > Ultimo incremento eseguito, 2026-10-05: [VISION-020](GEMINI_SCHEMA_CAUSE.md).
 > Colpevole isolato nella richiesta attuale: `/properties/c/maxItems: 52`.
 > Confronto identico salvo quel vincolo: 400 → 200 → 400 reinserendolo.

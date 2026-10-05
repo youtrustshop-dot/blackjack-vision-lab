@@ -1,5 +1,14 @@
 # Card Lab project instructions
 
+- VISION-021, 2026-10-05: offline preparation only after PR15. Preserve PR13–15
+  source/results, installed 1.1.1 and sealed final holdouts. Prepare fresh
+  session/seed/hand/artwork-disjoint development and validation inputs, frozen
+  Luna Fast live-v3 and Gemini structured-card-limit-local payloads, one strict
+  evaluator, exact proposed counts/worst-case budgets and a conditional hybrid
+  plan. No provider calls (including warm-ups), new authorization epoch, ledger
+  reset/extension, model tuning, Poker/R2 or release changes. The eight unused
+  diagnostic slots are closed. Complete the offline deliverable, then stop.
+
 - Latest explicit user authorization, VISION-020, 2026-10-05: isolate the exact
   Gemini HTTP400 cause with controlled one-change ablations and a deliberate
   reintroduction. At most twelve extra diagnostic submissions: audit the
