@@ -1,5 +1,33 @@
 # Card Lab project instructions
 
+- Latest user authorization, VISION-018, 2026-10-05: retain PR11/12 unchanged;
+  diagnose Gemini's request locally/documentally before one small smoke batch;
+  compare Luna Fast v1/v2/compact grounded live schemas on three NEW owned
+  development scenes. Twelve predeclared still comparisons, then at most four
+  hybrid submissions ONLY for candidates passing the frozen latency/correctness
+  gate. The same lifetime USD8/90 ledger applies; no reset or increased cap.
+  Distinct predeclared still comparisons may continue after a timeout to measure
+  failure rate, retaining its reservation; HTTP/auth/schema errors stop that
+  candidate. No blind retries. No final holdout, local training/tuning, Poker,
+  framework, default reader, installer or installed-release change.
+  The compact profile retains numeric role, observed associated label and named
+  native view; omitting coordinates must never fabricate v2 provenance. Research
+  headless advisor serialization remains distinct from native desktop paint.
+
+- VISION-018 executed: compact Luna Fast is 3/3 timely usable R1 on three new
+  owned still scenes (sample p50/p95 1.99/2.13s), but only 1/3 full grounded
+  transcriptions because two SESSION badges are omitted. Eleven still provider
+  submissions and two actual hybrid submissions; three hybrid trials present no
+  current advice. Changed-table reply is correctly rejected; stable warm trial
+  times out during connection establishment. Gemini's generic INVALID_ARGUMENT
+  identifies no offending field; no blind retry. See
+  `docs/LIVE_READER_DIAGNOSIS.md`. Runtime stays disarmed. Canonical ledger is
+  87 reserved lifetime attempts / 86 claimed network attempts, USD3.8138512 upper
+  including nine unknown charges under the same USD8/90 cap. No promotion,
+  training, R2 expansion, default or installed-release change. Any next bounded
+  stable-hybrid experiment must preserve current-evidence and budget checks;
+  this delivery does not silently start another paid batch.
+
 - Latest user authorization, 2026-10-05: proceed with VISION-017, a NEW grounded
   numeric/visibility contract and same-input Luna Fast/Gemini comparison followed
   by controlled hybrid revalidation. This supersedes VISION-016's stop for its

@@ -1,0 +1,976 @@
+{
+  "experiment_id": "VISION-018",
+  "parent_experiment_id": "VISION-017",
+  "schema": "live-reader-diagnosis-aggregate-v1",
+  "date": "2026-10-05",
+  "baseline_commit": "b4b95168aa0cd290b47e4e780c7450d11764283f",
+  "contract": "grounded-r1-live-v3",
+  "question": "Can a compact grounded R1 response meet the deadline, then produce current advice through actual local-first API fallback?",
+  "source_freeze_sha256": "44e1a8b047c92c2a6ccc14248c414e13e536be7c0dcf95db1acdf23ec742fe3f",
+  "supplemental_source_freeze_sha256": "9e3060f0dfd363dca3d194290adf57a7bbe1ab68d4c910361839cca263dd2f15",
+  "executed_sources": {
+    "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+    "bjlab/ocr.py": "97e279cfc8c3872efba841b536e883202c485f83757420b96561e1f2cc78e44e",
+    "bjlab/overlap_presence.py": "769e2e24474cf2e9cba3b719b752c808ad0b398886f8e21150f6e9ccf1798029",
+    "bjlab/suit_symbols.py": "c9e6fa2ecdefc62ca2634b6ef43ed4ac00b64019d0a9a39667cfbe2e41613be8",
+    "bjlab/specialized_vision.py": "463904c27d05ac83bd5abe08d2fe3a0122910915fcd40eb2565271d22fe3e55b",
+    "bjlab/visible_phase.py": "ea1fc44edba5f1de7a2ab375abdda7b913b2987798729c711de9710161e39613",
+    "bjlab/state_reader.py": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa",
+    "bjlab/vision.py": "742f957f0e0df31f77d719a088fc3e7f648a6d6d2376ba79350a5f0158118a3c",
+    "bjlab/calibration.py": "1f92a47d97a9c398ac8ab7470ed2a725d8d4c3b921229e6b925f7cad8131a863",
+    "bjlab/openai_reader.py": "8fe27304fe02dd8172e3a6ca7dda5217a217e7642f300225a8c2dcd58d4b4bd8",
+    "bjlab/research_budget.py": "5bbfac64c0a1a858ab32368adab431b47d81d24e0fdb7a608fcba1b365846553",
+    "validation/tools/state_reader_comparison.py": "fe1ef6765129c649668fe1da4e178d2e8a881232972394e87f4791ec81523479",
+    "validation/tools/api_reader_tournament.py": "c606123e3e7f941049bb10ea7548fe792f7288b77fe2243c5458432bf2dc5f20",
+    "bjlab/live_state.py": "187269cfb495cfd26a9de3203513e660b81c627d050181aa46f1257af6141955",
+    "bjlab/live_cloud.py": "79d45b073e203a2dbfd611bbe975bf3fc94ba1198621ce3ea3358ab22d0c8e37",
+    "validation/tools/live_reader_diagnosis.py": "a4dbcea0e7eca77665d3a1c5144dc6171229ecdf2e5abf97bcf49577612899f8",
+    "bjlab/grounded_cloud.py": "02c0906b64b5fda34de1e706570a1e10a60de886a69bd1f91f77330bc8755bd2",
+    "bjlab/grounded_state.py": "022fa776692d9ee3f931752873692ec9622f182fff5a1b542e05b070b5fba2c0",
+    "bjlab/hybrid_evidence.py": "f07d5b9fb6ea2656b16c56c2022865ae0c3bc6e29bb92cea47e6974faca855c6"
+  },
+  "supplemental_executed_sources": {
+    "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+    "bjlab/ocr.py": "97e279cfc8c3872efba841b536e883202c485f83757420b96561e1f2cc78e44e",
+    "bjlab/overlap_presence.py": "769e2e24474cf2e9cba3b719b752c808ad0b398886f8e21150f6e9ccf1798029",
+    "bjlab/suit_symbols.py": "c9e6fa2ecdefc62ca2634b6ef43ed4ac00b64019d0a9a39667cfbe2e41613be8",
+    "bjlab/specialized_vision.py": "463904c27d05ac83bd5abe08d2fe3a0122910915fcd40eb2565271d22fe3e55b",
+    "bjlab/visible_phase.py": "ea1fc44edba5f1de7a2ab375abdda7b913b2987798729c711de9710161e39613",
+    "bjlab/state_reader.py": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa",
+    "bjlab/vision.py": "742f957f0e0df31f77d719a088fc3e7f648a6d6d2376ba79350a5f0158118a3c",
+    "bjlab/calibration.py": "1f92a47d97a9c398ac8ab7470ed2a725d8d4c3b921229e6b925f7cad8131a863",
+    "bjlab/openai_reader.py": "8fe27304fe02dd8172e3a6ca7dda5217a217e7642f300225a8c2dcd58d4b4bd8",
+    "bjlab/research_budget.py": "5bbfac64c0a1a858ab32368adab431b47d81d24e0fdb7a608fcba1b365846553",
+    "validation/tools/state_reader_comparison.py": "fe1ef6765129c649668fe1da4e178d2e8a881232972394e87f4791ec81523479",
+    "validation/tools/api_reader_tournament.py": "c606123e3e7f941049bb10ea7548fe792f7288b77fe2243c5458432bf2dc5f20",
+    "bjlab/live_state.py": "187269cfb495cfd26a9de3203513e660b81c627d050181aa46f1257af6141955",
+    "bjlab/live_cloud.py": "1520c38bea1bb15a3613361789a8d2a7e6bae5a100bf2371d99eaccf78e59ee2",
+    "validation/tools/live_reader_diagnosis.py": "43b79bbb18bd4fba2c93c85dfbe5a66eeea6ce79eb9618564b07b19fb4d97377",
+    "bjlab/grounded_cloud.py": "02c0906b64b5fda34de1e706570a1e10a60de886a69bd1f91f77330bc8755bd2",
+    "bjlab/grounded_state.py": "022fa776692d9ee3f931752873692ec9622f182fff5a1b542e05b070b5fba2c0",
+    "bjlab/hybrid_evidence.py": "f07d5b9fb6ea2656b16c56c2022865ae0c3bc6e29bb92cea47e6974faca855c6",
+    "bjlab/bounded_network.py": "3149e6c3366bcda179be4a3605f884f64f67d81a9a07f78edad5a4257a77388f"
+  },
+  "wire_schema_sha256": "67176cbcd51a56b9ad00eb73fa73ff9c2f85bc6083beac7f441b805a44e148ae",
+  "prompt_sha256": {
+    "v1": "0894ce50796bfbfe04287e126836b7e6851bc94137417bb048c0daea66f26475",
+    "v2": "535d33fe66fa01cefac17ed6cf0d4704933d5d80dcd8c398c8605f377f5d8b59",
+    "live": "5c1e53acc9a654a809d595fd2e2f75976bb0cdd61fff13e42f4da829120b76f0"
+  },
+  "weights_sha256": "88c3b41955e0488a87a9a492056c4dd47edd249241ab4e1676923e31e7c3a4f7",
+  "artifact_sha256": {
+    "live-reader-diagnosis-20261005-authorized/cloud-private-results.json": "0edcb4488093b69334c4f8dfe406f1abd7425e73e71bd6927d97ca4448446167",
+    "live-reader-diagnosis-20261005-authorized/cloud-summary.json": "65762d1ef3adb1155b66b573cf12b50e89d3ccb972c8258cb878c1d72ea43ab1",
+    "live-reader-diagnosis-20261005-authorized/hybrid-private-results.json": "92f0dbf9ffbcd1868ffd3fb85b4f9c7932b0b4545c1d5d5e1c7febb1f6fd7832",
+    "live-reader-diagnosis-20261005-authorized/hybrid-summary.json": "50aa2b0f4c43ced38f063169c1a5ec91e1f1066956b22ca22c3b8832c98db297",
+    "live-reader-diagnosis-20261005-authorized/request-audit.json": "d1e5b3dc44b046ac3185c1573023d6d5bb717e352182fc178cdc97a14a754509",
+    "live-reader-diagnosis-20261005-authorized/gemini-generic-error-recovery.json": "83bd2b4d12d59fec9089861d865afe52c2558f7a64550e62ecc64bc50f3a1071"
+  },
+  "supplemental_artifact_sha256": {
+    "live-reader-diagnosis-20261005-warmed/hybrid-private-results.json": "b394359fb8d7111e226b0e4d2e34ee7315553ff0d4350428ee189161aac3e680",
+    "live-reader-diagnosis-20261005-warmed/hybrid-summary.json": "509be31b84f6543f0772ba5ab8b69d9113a2163c5d07eeb68d2dffa9d45e892c"
+  },
+  "data": {
+    "split": "consumed-development",
+    "physical_seeds": [
+      6100511,
+      6100528,
+      6100545
+    ],
+    "empty_transition_seed": 6100562,
+    "scenes_scored": 3,
+    "common_renderer_and_rank_suit_family": true,
+    "truth": "geometric ink visibility proxy plus assistant visual audit; not independent human labels",
+    "provider_transfer_measured": false,
+    "complete_external_sessions_measured": false,
+    "final_holdout": "not_opened_or_created",
+    "assistance": "same initial native table/role/control calibration; no oracle phase, IDs or per-hand turn confirmation",
+    "cloud_pixels": "reviewed new owned synthetic native views only"
+  },
+  "same_input_configs": {
+    "images_per_request": 4,
+    "native_pixel_views_identical": true,
+    "luna_model": "gpt-6-luna",
+    "tier": "fast",
+    "reasoning": "none",
+    "max_output_tokens": 1024,
+    "request_to_validated_json_deadline_ms": 3000,
+    "gemini_model": "gemini-3.5-flash-lite",
+    "gemini_thinking": "MINIMAL",
+    "same_live_prompt_schema_across_providers": true
+  },
+  "predeclared_hybrid_gate": {
+    "inputs": 3,
+    "all_complete_json_within_ms": 3000,
+    "p95_at_most_ms": 2500,
+    "false_accepted_states": 0,
+    "all_three_r1_states_correct_and_usable": true
+  },
+  "latency_denominator": "only completed validated responses; paired with all attempted failure rate; sample percentiles, not production estimates",
+  "readers": {
+    "gemini-lite-live": {
+      "planned": 3,
+      "attempted": 2,
+      "statuses": {
+        "timeout": 1,
+        "error": 1,
+        "not_executed": 1
+      },
+      "validated_json_within_3s": 0,
+      "failure_rate_attempted": 1.0,
+      "latency_complete_ms": {
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "inventory_exact": 0,
+      "rank_presence_exact": 0,
+      "phase_correct": 0,
+      "controls_correct": 0,
+      "complete_grounded_state": 0,
+      "correct_usable_r1": 0,
+      "false_accepted_states": 0,
+      "sample_scope": "three predeclared development scenes; synthetic common renderer, not a population p95 or provider transfer",
+      "hybrid_gate_passed": false
+    },
+    "luna-fast-live": {
+      "planned": 3,
+      "attempted": 3,
+      "statuses": {
+        "completed": 3
+      },
+      "validated_json_within_3s": 3,
+      "failure_rate_attempted": 0.0,
+      "latency_complete_ms": {
+        "p50": 1993.201900000713,
+        "p95": 2131.074250000347,
+        "max": 2146.3934000003064
+      },
+      "inventory_exact": 3,
+      "rank_presence_exact": 3,
+      "phase_correct": 3,
+      "controls_correct": 3,
+      "complete_grounded_state": 1,
+      "correct_usable_r1": 3,
+      "false_accepted_states": 0,
+      "sample_scope": "three predeclared development scenes; synthetic common renderer, not a population p95 or provider transfer",
+      "hybrid_gate_passed": true
+    },
+    "luna-fast-v1": {
+      "planned": 3,
+      "attempted": 3,
+      "statuses": {
+        "timeout": 1,
+        "completed": 2
+      },
+      "validated_json_within_3s": 2,
+      "failure_rate_attempted": 0.33333333333333337,
+      "latency_complete_ms": {
+        "p50": 2119.1925499997524,
+        "p95": 2181.01152499994,
+        "max": 2187.8802999999607
+      },
+      "inventory_exact": 2,
+      "rank_presence_exact": 2,
+      "phase_correct": 2,
+      "controls_correct": 2,
+      "complete_grounded_state": null,
+      "correct_usable_r1": 0,
+      "false_accepted_states": 0,
+      "sample_scope": "three predeclared development scenes; synthetic common renderer, not a population p95 or provider transfer",
+      "hybrid_gate_passed": false
+    },
+    "luna-fast-v2": {
+      "planned": 3,
+      "attempted": 3,
+      "statuses": {
+        "completed": 1,
+        "timeout": 1,
+        "error": 1
+      },
+      "validated_json_within_3s": 1,
+      "failure_rate_attempted": 0.6666666666666667,
+      "latency_complete_ms": {
+        "p50": 2745.3341000000364,
+        "p95": 2745.3341000000364,
+        "max": 2745.3341000000364
+      },
+      "inventory_exact": 1,
+      "rank_presence_exact": 1,
+      "phase_correct": 1,
+      "controls_correct": 1,
+      "complete_grounded_state": 1,
+      "correct_usable_r1": 1,
+      "false_accepted_states": 0,
+      "sample_scope": "three predeclared development scenes; synthetic common renderer, not a population p95 or provider transfer",
+      "hybrid_gate_passed": false
+    }
+  },
+  "still_rows": [
+    {
+      "case_id": "clean-ui",
+      "reader": "gemini-lite-live",
+      "status": "timeout",
+      "elapsed_ms": 11349.85190000043,
+      "inventory_exact": false,
+      "rank_presence_exact": false,
+      "phase_correct": false,
+      "controls_correct": false,
+      "numeric_roles_exact": false,
+      "complete_grounded_state": false,
+      "correct_usable_r1": false,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {
+        "payload_bytes": 58668,
+        "schema_bytes": 1424,
+        "payload_sha256": "788e9052038a001f977f54c90519632f063f5938c44c1bbf04da925788852a6a",
+        "native_image_bytes": 41435,
+        "timing": {
+          "payload_ms": 2.4752000008447794,
+          "reservation_ms": 3.513300000122399,
+          "connect_tcp_ms": 2819.360899999083,
+          "transport_total_ms": 2997.351800000615
+        },
+        "error_type": "TimeoutError"
+      }
+    },
+    {
+      "case_id": "clean-ui",
+      "reader": "luna-fast-v1",
+      "status": "timeout",
+      "elapsed_ms": 3005.2175000000716,
+      "inventory_exact": false,
+      "rank_presence_exact": false,
+      "phase_correct": false,
+      "controls_correct": false,
+      "numeric_roles_exact": false,
+      "complete_grounded_state": false,
+      "correct_usable_r1": false,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {
+        "payload_bytes": 58715,
+        "schema_bytes": 1582,
+        "payload_sha256": "d96d809f9c1af9b81446b2e858b49781f9e122242a5eb8524eb8a90665ee4e74",
+        "native_image_bytes": 41435,
+        "timing": {
+          "payload_ms": 1.8172000000049593,
+          "reservation_ms": 6.57139999930223,
+          "connect_tcp_ms": 443.2974999999715,
+          "start_tls_ms": 293.26489999948535,
+          "send_request_headers_ms": 0.6267999997362494,
+          "send_request_body_ms": 0.2812000002450077,
+          "receive_response_headers_ms": 2210.99569999933,
+          "transport_total_ms": 2983.7739000013244
+        },
+        "error_type": "TimeoutError"
+      }
+    },
+    {
+      "case_id": "clean-ui",
+      "reader": "luna-fast-v2",
+      "status": "completed",
+      "elapsed_ms": 2745.3341000000364,
+      "inventory_exact": true,
+      "rank_presence_exact": true,
+      "phase_correct": true,
+      "controls_correct": true,
+      "numeric_roles_exact": true,
+      "complete_grounded_state": true,
+      "correct_usable_r1": true,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {
+        "payload_bytes": 59528,
+        "schema_bytes": 2031,
+        "payload_sha256": "079210d2847984f7fcbed023449f3440d535ac1cf05b800f924949fcf0bf1350",
+        "native_image_bytes": 41435,
+        "output_json_bytes": 491,
+        "output_json_sha256": "a00f65e88527df9bb773143d8bef049959a7862d0407e28ce74f35cf7d964db0",
+        "timing": {
+          "payload_ms": 2.1635000011883676,
+          "reservation_ms": 5.978000001050532,
+          "observation_parse_validate_ms": 0.2696999999898253,
+          "connect_tcp_ms": 215.43240000028163,
+          "start_tls_ms": 218.40530000008584,
+          "send_request_headers_ms": 0.2451999989716569,
+          "send_request_body_ms": 0.31149999995250255,
+          "receive_response_headers_ms": 2197.585199999594,
+          "headers_received_ms": 2661.2928999984433,
+          "receive_response_body_ms": 54.14380000001984,
+          "body_complete_ms": 2718.491099998573,
+          "provider_json_parse_ms": 0.13030000081926119,
+          "transport_total_ms": 2719.2487999982404
+        },
+        "usage": {
+          "input_tokens": 2327,
+          "input_tokens_details": {
+            "cache_write_tokens": 2324,
+            "cached_tokens": 0
+          },
+          "output_tokens": 156,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2483
+        },
+        "model_returned": "gpt-6-luna",
+        "service_tier_returned": "fast",
+        "price_based_upper_cost_usd": "0.00073775"
+      }
+    },
+    {
+      "case_id": "clean-ui",
+      "reader": "luna-fast-live",
+      "status": "completed",
+      "elapsed_ms": 1953.6716000002343,
+      "inventory_exact": true,
+      "rank_presence_exact": true,
+      "phase_correct": true,
+      "controls_correct": true,
+      "numeric_roles_exact": false,
+      "complete_grounded_state": false,
+      "correct_usable_r1": true,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {
+        "payload_bytes": 58867,
+        "schema_bytes": 1424,
+        "payload_sha256": "deffdb0d265d27b55887db2e2d49ffa97af2eedfca936c236b763e9ec166f446",
+        "native_image_bytes": 41435,
+        "output_json_bytes": 272,
+        "output_json_sha256": "8e6e3f0935d9dae288f789604ea14ece6ee8a58f6757226c0160519b3bc7edf8",
+        "timing": {
+          "payload_ms": 2.02750000062224,
+          "reservation_ms": 5.4037999998399755,
+          "observation_parse_validate_ms": 0.09080000018002465,
+          "connect_tcp_ms": 64.34489999992365,
+          "start_tls_ms": 51.54469999979483,
+          "send_request_headers_ms": 0.2882999997382285,
+          "send_request_body_ms": 0.25629999981902074,
+          "receive_response_headers_ms": 1734.7405000000435,
+          "headers_received_ms": 1888.2536000000982,
+          "receive_response_body_ms": 37.44670000014594,
+          "body_complete_ms": 1926.9509999994625,
+          "provider_json_parse_ms": 0.10019999899668619,
+          "transport_total_ms": 1927.6943000004394
+        },
+        "usage": {
+          "input_tokens": 2237,
+          "input_tokens_details": {
+            "cache_write_tokens": 2234,
+            "cached_tokens": 0
+          },
+          "output_tokens": 111,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2348
+        },
+        "model_returned": "gpt-6-luna",
+        "service_tier_returned": "fast",
+        "price_based_upper_cost_usd": "0.00067025"
+      }
+    },
+    {
+      "case_id": "labelled-totals",
+      "reader": "luna-fast-v2",
+      "status": "timeout",
+      "elapsed_ms": 3016.8588000015006,
+      "inventory_exact": false,
+      "rank_presence_exact": false,
+      "phase_correct": false,
+      "controls_correct": false,
+      "numeric_roles_exact": false,
+      "complete_grounded_state": false,
+      "correct_usable_r1": false,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {
+        "payload_bytes": 66984,
+        "schema_bytes": 2031,
+        "payload_sha256": "a0fd774f94a0254ce02e6912580067300889a406076ccb2625138296c157da1b",
+        "native_image_bytes": 47026,
+        "timing": {
+          "payload_ms": 2.3404000003210967,
+          "reservation_ms": 5.043699999077944,
+          "connect_tcp_ms": 37.27989999970305,
+          "start_tls_ms": 47.309500001574634,
+          "send_request_headers_ms": 0.3347000001667766,
+          "send_request_body_ms": 0.43449999975564424,
+          "receive_response_headers_ms": 2879.5129000009183,
+          "transport_total_ms": 2997.8358999997
+        },
+        "error_type": "TimeoutError"
+      }
+    },
+    {
+      "case_id": "labelled-totals",
+      "reader": "luna-fast-live",
+      "status": "completed",
+      "elapsed_ms": 2146.3934000003064,
+      "inventory_exact": true,
+      "rank_presence_exact": true,
+      "phase_correct": true,
+      "controls_correct": true,
+      "numeric_roles_exact": false,
+      "complete_grounded_state": false,
+      "correct_usable_r1": true,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {
+        "payload_bytes": 66323,
+        "schema_bytes": 1424,
+        "payload_sha256": "aa86946733a2a6adbf9132061462ea72895223eb9359dd13d505d2b7ecfb67cb",
+        "native_image_bytes": 47026,
+        "output_json_bytes": 392,
+        "output_json_sha256": "0c8f373268a70ecf5623a549e66f22c4b84df5472953041fecfc365c4fe88866",
+        "timing": {
+          "payload_ms": 6.036000000676722,
+          "reservation_ms": 6.102100000134669,
+          "observation_parse_validate_ms": 0.08539999907952733,
+          "connect_tcp_ms": 37.17099999994389,
+          "start_tls_ms": 44.19250000137254,
+          "send_request_headers_ms": 0.23329999930865597,
+          "send_request_body_ms": 0.27940000109083485,
+          "receive_response_headers_ms": 1948.18640000085,
+          "headers_received_ms": 2059.163300000364,
+          "receive_response_body_ms": 55.90039999879082,
+          "body_complete_ms": 2116.2970999994286,
+          "provider_json_parse_ms": 0.09750000026542693,
+          "transport_total_ms": 2117.06249999952
+        },
+        "usage": {
+          "input_tokens": 2237,
+          "input_tokens_details": {
+            "cache_write_tokens": 2234,
+            "cached_tokens": 0
+          },
+          "output_tokens": 152,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2389
+        },
+        "model_returned": "gpt-6-luna",
+        "service_tier_returned": "fast",
+        "price_based_upper_cost_usd": "0.00071125"
+      }
+    },
+    {
+      "case_id": "labelled-totals",
+      "reader": "gemini-lite-live",
+      "status": "error",
+      "elapsed_ms": 2363.828300000023,
+      "inventory_exact": false,
+      "rank_presence_exact": false,
+      "phase_correct": false,
+      "controls_correct": false,
+      "numeric_roles_exact": false,
+      "complete_grounded_state": false,
+      "correct_usable_r1": false,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {
+        "payload_bytes": 66124,
+        "schema_bytes": 1424,
+        "payload_sha256": "8a57464c9b4c96bb46a5bb911e1c1214f668bea5050e8c339609c8ddc12a274b",
+        "native_image_bytes": 47026,
+        "timing": {
+          "payload_ms": 1.7507000011391938,
+          "reservation_ms": 6.471400000009453,
+          "connect_tcp_ms": 37.215300000752904,
+          "start_tls_ms": 72.32079999994312,
+          "send_request_headers_ms": 0.2858000007108785,
+          "send_request_body_ms": 0.23580000015499536,
+          "receive_response_headers_ms": 2205.573799999911,
+          "headers_received_ms": 2342.5544000001537,
+          "receive_response_body_ms": 0.5764999987150077,
+          "body_complete_ms": 2344.09659999983,
+          "transport_total_ms": 2344.6991000000708
+        },
+        "error_type": "DiagnosticHTTPError",
+        "http_status": 400,
+        "provider_error": {
+          "category": "unclassified",
+          "body_sha256": "b01105ed229707571186fdc753a734401dcd3dca044538c55285824604725bd3",
+          "status": "INVALID_ARGUMENT",
+          "mentioned_fields": []
+        }
+      }
+    },
+    {
+      "case_id": "labelled-totals",
+      "reader": "luna-fast-v1",
+      "status": "completed",
+      "elapsed_ms": 2187.8802999999607,
+      "inventory_exact": true,
+      "rank_presence_exact": true,
+      "phase_correct": true,
+      "controls_correct": true,
+      "numeric_roles_exact": null,
+      "complete_grounded_state": false,
+      "correct_usable_r1": false,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": true,
+      "diagnostics": {
+        "payload_bytes": 66171,
+        "schema_bytes": 1582,
+        "payload_sha256": "918c7103bcab37dbe24db08d45e7745574046a557a4d6d2bafdac13ae23f4d32",
+        "native_image_bytes": 47026,
+        "output_json_bytes": 424,
+        "output_json_sha256": "2a28a2c826a9ea8aecd8ab6da3dab2913b4683cfbe51f92e394dd32f6080a39e",
+        "timing": {
+          "payload_ms": 1.5662000005249865,
+          "reservation_ms": 5.115299998578848,
+          "observation_parse_validate_ms": 0.06969999958528206,
+          "connect_tcp_ms": 146.24689999982365,
+          "start_tls_ms": 106.56229999949574,
+          "send_request_headers_ms": 0.18960000124934595,
+          "send_request_body_ms": 0.22219999846129213,
+          "receive_response_headers_ms": 1884.8164000010001,
+          "headers_received_ms": 2164.487799998824,
+          "receive_response_body_ms": 0.2977999993163394,
+          "body_complete_ms": 2165.5586999986554,
+          "provider_json_parse_ms": 0.06930000017746352,
+          "transport_total_ms": 2166.047199998502
+        },
+        "usage": {
+          "input_tokens": 2156,
+          "input_tokens_details": {
+            "cache_write_tokens": 2153,
+            "cached_tokens": 0
+          },
+          "output_tokens": 125,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2281
+        },
+        "model_returned": "gpt-6-luna",
+        "service_tier_returned": "fast",
+        "price_based_upper_cost_usd": "0.000664"
+      }
+    },
+    {
+      "case_id": "rotation",
+      "reader": "luna-fast-live",
+      "status": "completed",
+      "elapsed_ms": 1993.201900000713,
+      "inventory_exact": true,
+      "rank_presence_exact": true,
+      "phase_correct": true,
+      "controls_correct": true,
+      "numeric_roles_exact": true,
+      "complete_grounded_state": true,
+      "correct_usable_r1": true,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {
+        "payload_bytes": 165139,
+        "schema_bytes": 1424,
+        "payload_sha256": "59438c6bd4222c86ae98f094aab0af637c7c93e17b9821995e9593815dec72ce",
+        "native_image_bytes": 121136,
+        "output_json_bytes": 315,
+        "output_json_sha256": "ed7c99f49393af1b8c95c3fcb66c9f25556127af7cac022fc515299bd2e2ba8d",
+        "timing": {
+          "payload_ms": 2.499400001397589,
+          "reservation_ms": 5.069299999377108,
+          "observation_parse_validate_ms": 0.088099999629776,
+          "connect_tcp_ms": 51.00210000091465,
+          "start_tls_ms": 79.47210000020277,
+          "send_request_headers_ms": 0.2387000004091533,
+          "send_request_body_ms": 0.45540000064647757,
+          "receive_response_headers_ms": 1750.1936000007845,
+          "headers_received_ms": 1909.3061999992642,
+          "receive_response_body_ms": 57.5141999997868,
+          "body_complete_ms": 1967.8009999988717,
+          "provider_json_parse_ms": 0.08619999971415382,
+          "transport_total_ms": 1968.3538999997836
+        },
+        "usage": {
+          "input_tokens": 2237,
+          "input_tokens_details": {
+            "cache_write_tokens": 2234,
+            "cached_tokens": 0
+          },
+          "output_tokens": 128,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2365
+        },
+        "model_returned": "gpt-6-luna",
+        "service_tier_returned": "fast",
+        "price_based_upper_cost_usd": "0.00068725"
+      }
+    },
+    {
+      "case_id": "rotation",
+      "reader": "luna-fast-v1",
+      "status": "completed",
+      "elapsed_ms": 2050.504799999544,
+      "inventory_exact": true,
+      "rank_presence_exact": true,
+      "phase_correct": true,
+      "controls_correct": true,
+      "numeric_roles_exact": null,
+      "complete_grounded_state": false,
+      "correct_usable_r1": false,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": true,
+      "diagnostics": {
+        "payload_bytes": 164987,
+        "schema_bytes": 1582,
+        "payload_sha256": "476f3590b1d4d37247b9952404cbc9acb71e3a1898b3d0cfae7862b6eca3162c",
+        "native_image_bytes": 121136,
+        "output_json_bytes": 429,
+        "output_json_sha256": "d69ef721f5167370963c0e00941af61e8bac2feacc98a9f801218f595719327e",
+        "timing": {
+          "payload_ms": 4.800799999429728,
+          "reservation_ms": 5.423700000392273,
+          "observation_parse_validate_ms": 0.08539999907952733,
+          "connect_tcp_ms": 37.4074000010296,
+          "start_tls_ms": 51.8078000004607,
+          "send_request_headers_ms": 0.28160000147181563,
+          "send_request_body_ms": 0.47850000009930227,
+          "receive_response_headers_ms": 1844.0436000000773,
+          "headers_received_ms": 1965.4788000007102,
+          "receive_response_body_ms": 53.51449999943725,
+          "body_complete_ms": 2020.0072999996337,
+          "provider_json_parse_ms": 0.08469999920635018,
+          "transport_total_ms": 2020.5936000002112
+        },
+        "usage": {
+          "input_tokens": 2156,
+          "input_tokens_details": {
+            "cache_write_tokens": 2153,
+            "cached_tokens": 0
+          },
+          "output_tokens": 125,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2281
+        },
+        "model_returned": "gpt-6-luna",
+        "service_tier_returned": "fast",
+        "price_based_upper_cost_usd": "0.000664"
+      }
+    },
+    {
+      "case_id": "rotation",
+      "reader": "gemini-lite-live",
+      "status": "not_executed",
+      "elapsed_ms": 0,
+      "inventory_exact": false,
+      "rank_presence_exact": false,
+      "phase_correct": false,
+      "controls_correct": false,
+      "numeric_roles_exact": false,
+      "complete_grounded_state": false,
+      "correct_usable_r1": false,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {}
+    },
+    {
+      "case_id": "rotation",
+      "reader": "luna-fast-v2",
+      "status": "error",
+      "elapsed_ms": 2415.478000000803,
+      "inventory_exact": false,
+      "rank_presence_exact": false,
+      "phase_correct": false,
+      "controls_correct": false,
+      "numeric_roles_exact": false,
+      "complete_grounded_state": false,
+      "correct_usable_r1": false,
+      "false_accepted_state": false,
+      "historical_contract_without_numeric_provenance": false,
+      "diagnostics": {
+        "payload_bytes": 165800,
+        "schema_bytes": 2031,
+        "payload_sha256": "7380c904176d9d1217652488bf2370af659bd41d5d02cf25268b5e4e7890e92c",
+        "native_image_bytes": 121136,
+        "output_json_bytes": 482,
+        "output_json_sha256": "0d1999a608620850857c687b56c9ac638b8688ea43eb95d17515907387c16eff",
+        "timing": {
+          "payload_ms": 2.673099999810802,
+          "reservation_ms": 5.3793000006407965,
+          "connect_tcp_ms": 41.303899999547866,
+          "start_tls_ms": 45.97049999938463,
+          "send_request_headers_ms": 0.23639999926672317,
+          "send_request_body_ms": 0.6794000000809319,
+          "receive_response_headers_ms": 2217.7984999998444,
+          "headers_received_ms": 2338.409699999829,
+          "receive_response_body_ms": 48.47199999858276,
+          "body_complete_ms": 2387.6768999998603,
+          "provider_json_parse_ms": 0.08150000030582305,
+          "transport_total_ms": 2388.1665999997495
+        },
+        "usage": {
+          "input_tokens": 2327,
+          "input_tokens_details": {
+            "cache_write_tokens": 2324,
+            "cached_tokens": 0
+          },
+          "output_tokens": 148,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2475
+        },
+        "model_returned": "gpt-6-luna",
+        "service_tier_returned": "fast",
+        "error_type": "ValidationError",
+        "validation_issues": [
+          {
+            "location": [
+              "numbers",
+              0
+            ],
+            "type": "value_error"
+          }
+        ],
+        "price_based_upper_cost_usd": "0.00072975"
+      }
+    }
+  ],
+  "comparative_sizes": {
+    "v1": {
+      "prompt_utf8_bytes": 799,
+      "schema_compact_bytes": 1582,
+      "request_compact_bytes": 58715,
+      "same_native_images": true,
+      "detail": "high",
+      "max_output_tokens": 1024
+    },
+    "v2": {
+      "prompt_utf8_bytes": 1147,
+      "schema_compact_bytes": 2031,
+      "request_compact_bytes": 59528,
+      "same_native_images": true,
+      "detail": "high",
+      "max_output_tokens": 1024
+    },
+    "live": {
+      "prompt_utf8_bytes": 1094,
+      "schema_compact_bytes": 1424,
+      "request_compact_bytes": 58867,
+      "same_native_images": true,
+      "detail": "high",
+      "max_output_tokens": 1024
+    }
+  },
+  "gemini_diagnosis": {
+    "model_generate_content_verified_readonly": true,
+    "local_rest_field_and_schema_audit_passed": true,
+    "historical_maxLength_mismatch": "hypothesis not a demonstrated historical cause; removing it did not fix the new request",
+    "new_400": {
+      "saved_error_body_sha256": "b01105ed229707571186fdc753a734401dcd3dca044538c55285824604725bd3",
+      "known_public_template": "Request contains an invalid argument.",
+      "provider_code": 400,
+      "provider_status": "INVALID_ARGUMENT",
+      "matched_serializations": [
+        {
+          "indent": 2,
+          "trailing_newline": true
+        }
+      ],
+      "field_specific_cause": "not_provided",
+      "additional_provider_requests": 0,
+      "method": "SHA256 equality to a fixed publicly documented error JSON template; no provider body retained"
+    },
+    "exact_incompatible_argument": "unresolved",
+    "status": "blocked_invalid_argument",
+    "quality_measured": false,
+    "automatic_retries": 0
+  },
+  "hybrid": {
+    "executed_trials": 3,
+    "actual_api_submissions": 2,
+    "correct_presented_states": 0,
+    "false_presented_states": 0,
+    "successful_stable_trial": false,
+    "latency_p95": null,
+    "rows": [
+      {
+        "candidate": "luna-fast-live",
+        "scenario": "stable",
+        "route": "none",
+        "status": null,
+        "presented": false,
+        "reason": "local_frame_already_expired",
+        "capture_updates": 11,
+        "initialization_outside_capture_ms": null,
+        "local_elapsed_ms": 578.0,
+        "revalidation": null,
+        "timing": null,
+        "correct_presented_state": false,
+        "false_presented_state": false,
+        "run": "initial",
+        "transport_trace_ms": null
+      },
+      {
+        "candidate": "luna-fast-live",
+        "scenario": "changed",
+        "route": "fallback",
+        "status": "completed",
+        "presented": false,
+        "reason": null,
+        "capture_updates": 32,
+        "initialization_outside_capture_ms": null,
+        "local_elapsed_ms": null,
+        "revalidation": {
+          "valid": false,
+          "reasons": [
+            "pixels_or_continuity_changed"
+          ],
+          "capture_to_presentation_ms": 2937.0,
+          "original_capture_ns": 16071375000000,
+          "latest_capture_ns": 16074218000000,
+          "latest_sequence": 32,
+          "requested_motion_epoch": 0,
+          "latest_motion_epoch": 1,
+          "mode": "controlled-current-pixel-revalidation",
+          "r2_certified": false
+        },
+        "timing": {
+          "capture_ns": 16071375000000,
+          "local_start_ns": 16071406000000,
+          "local_completed_ns": 16071500000000,
+          "cloud_request_ns": 16071500000000,
+          "cloud_completed_ns": 16074312000000,
+          "presentation_ns": 16074312000000,
+          "local_ms": 94.0,
+          "cloud_ms": 2812.0,
+          "capture_to_headless_presentation_ms": 2937.0
+        },
+        "correct_presented_state": false,
+        "false_presented_state": false,
+        "run": "initial",
+        "transport_trace_ms": {
+          "payload_ms": 2.9678999999305233,
+          "reservation_ms": 5.638900000121794,
+          "observation_parse_validate_ms": 0.11529999937920365,
+          "connect_tcp_ms": 194.47109999964596,
+          "start_tls_ms": 207.8881999987061,
+          "send_request_headers_ms": 0.2733999990596203,
+          "send_request_body_ms": 0.4410999990795972,
+          "receive_response_headers_ms": 2294.7913000007247,
+          "headers_received_ms": 2732.579199999236,
+          "receive_response_body_ms": 52.821100000073784,
+          "body_complete_ms": 2786.5661999985605,
+          "provider_json_parse_ms": 0.15079999866429716,
+          "transport_total_ms": 2787.519899999097
+        }
+      },
+      {
+        "candidate": "luna-fast-live",
+        "scenario": "stable",
+        "route": "fallback",
+        "status": "timeout",
+        "presented": false,
+        "reason": null,
+        "capture_updates": 33,
+        "initialization_outside_capture_ms": 359.5994999996037,
+        "local_elapsed_ms": null,
+        "revalidation": {
+          "valid": false,
+          "reasons": [
+            "original_evidence_deadline_expired"
+          ],
+          "capture_to_presentation_ms": 3078.0,
+          "original_capture_ns": 16402015000000,
+          "latest_capture_ns": 16405031000000,
+          "latest_sequence": 33,
+          "requested_motion_epoch": 0,
+          "latest_motion_epoch": 0,
+          "mode": "controlled-current-pixel-revalidation",
+          "r2_certified": false
+        },
+        "timing": {
+          "capture_ns": 16402015000000,
+          "local_start_ns": 16402015000000,
+          "local_completed_ns": 16402062000000,
+          "cloud_request_ns": 16402062000000,
+          "cloud_completed_ns": 16405093000000,
+          "presentation_ns": 16405093000000,
+          "local_ms": 47.0,
+          "cloud_ms": 3031.0,
+          "capture_to_headless_presentation_ms": 3078.0
+        },
+        "correct_presented_state": false,
+        "false_presented_state": false,
+        "run": "warm-transport-supplement",
+        "transport_trace_ms": {
+          "payload_ms": 4.422400001203641,
+          "reservation_ms": 6.503000000520842,
+          "connect_tcp_ms": 2874.513599999773
+        }
+      }
+    ],
+    "nominal_capture_fps": 12,
+    "scope": "actual provider plus independent owned-native-pixel producer to headless advisor payload; not physical desktop capture/native paint",
+    "r2_certified": false,
+    "decision": "not promoted; stable availability not demonstrated",
+    "attempt_semantics": "Two real-provider fallback attempts (not mocks); warmed attempt timed out before connection completed."
+  },
+  "runtime_repairs": {
+    "supplement": "background loop avoids joining outstanding DNS executor on synchronous caller critical path; original failure retained",
+    "post_execution": "Unaudited model/usage fails before observation parsing; fixed generic-error classification; preparation creates its output parent and requires a manifest; local checks only.",
+    "original_cloud_scores_recomputed": false
+  },
+  "budget": {
+    "new_still_network_submissions": 11,
+    "new_hybrid_network_submissions": 2,
+    "new_pre_network_blocked_reservation": 1,
+    "new_returned_usage_responses": 8,
+    "new_known_usage_upper_usd": "0.00555150",
+    "new_unknown_charge_reservations": 5,
+    "receipt": {
+      "requests_attempted": 87,
+      "max_requests": 90,
+      "max_usd": "8",
+      "accounted_upper_usd": "3.813851200",
+      "unknown_charge_requests": 9,
+      "network_attempts_claimed": 86,
+      "unknown_charge_reserved_usd": "3.6379432",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    },
+    "runtime_inference_authorized": false,
+    "invoice_charge_usd": null,
+    "purchases_payment_recharge_changes": false,
+    "ledger_reset_or_cap_increase": false,
+    "attempt_semantics": "Count claims of real network attempts, not confirmed provider receipt; a connection timeout may precede HTTP submission. Unknown charges remain reserved."
+  },
+  "validation": {
+    "python_full_passed": 596,
+    "python_prior_run_before_guard": 593,
+    "frontend_passed": 52,
+    "frontend_build": "passed",
+    "source_evidence_check": "passed",
+    "targeted_isolated_passed": 13,
+    "retained_failure": "Earlier concurrent targeted run: pre-existing producer count assertion observed 2 updates instead of >=5; 42 passed/1 failed; unchanged test passed in isolation.",
+    "mock_timings_are_not_provider_quality": true,
+    "python_subtests_passed": 10,
+    "python_warnings": 2
+  },
+  "not_measured": [
+    "independent provider transfer",
+    "final holdout",
+    "R2 identity tracking",
+    "actual screen sharing",
+    "native advisor paint",
+    "DPI/monitor/minimized capture",
+    "stable hybrid current advice",
+    "actual invoice charge",
+    "economic edge"
+  ],
+  "decision": "Keep compact grounded Luna as a bounded R1 research candidate and transport guard; no operational hybrid/Gemini/default/release promotion",
+  "next_step": "One bounded initialized stable-hybrid transport/availability experiment with continuous capture and current-evidence revalidation; no automatic new paid batch"
+}

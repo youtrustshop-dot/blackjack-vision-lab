@@ -1,6 +1,22 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Ultimo incremento eseguito, 2026-10-05: [VISION-018](LIVE_READER_DIAGNOSIS.md).
+> Luna Fast con schema grounded compatto: 3/3 stati R1 corretti e utilizzabili,
+> p50/p95 del piccolo campione 1,99/2,13 s. Solo 1/3 trascrizioni complete di
+> tutti i numeri visibili: il badge SESSION 20 manca in due risposte. L'ibrido
+> reale è stato provato con un produttore separato di pixel sintetici nativi:
+> tre tentativi, due chiamate API, nessun consiglio corrente presentato. Una
+> risposta dopo il cambio del tavolo viene scartata; la prova stabile dopo il
+> caricamento del modello termina nel timeout di connessione. Nessuna prova
+> fisica di cattura/paint dell'advisor. Gemini resta bloccato da INVALID_ARGUMENT
+> generico: endpoint/modello/schema controllati, argomento preciso irrisolto.
+> PR11/12, reader locale, Poker e versione installata restano invariati. Runtime
+> disarmato; stesso limite complessivo EUR10/USD8/90, 87 prenotazioni storiche,
+> 86 tentativi di rete. Il prossimo bersaglio è la disponibilità dell'ibrido su
+> un tavolo stabile dopo l'inizializzazione, prima di aprire il tracking R2.
+> Non è una nuova roadmap né una promozione del reader.
+
 > Latest executed increment, 2026-10-05: [VISION-017](GROUNDED_READER_HYBRID.md).
 > New numeric provenance and partial/back/unreadable visibility contract, with
 > a continuous capture/revalidation runner. New owned validation: Local A 28/34
