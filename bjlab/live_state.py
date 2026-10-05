@@ -94,3 +94,17 @@ def wire_schema():
         if isinstance(value, dict): return {k: trim(v) for k, v in value.items() if k not in ('title', 'maxLength')}
         return value
     return trim(LiveObservation.model_json_schema(by_alias=True))
+
+
+def gemini_structured_schema():
+    """VISION-020 opt-in: enforce the card count locally, not in Gemini grammar.
+
+    One-pixel/prompt-identical A/B/A control: c.maxItems=52 gives HTTP400,
+    omitting only that constraint gives HTTP200, reintroducing it gives HTTP400.
+    All other wire constraints and every strict local validator remain intact.
+    This is an empirical trigger in this schema/model, not a general prohibition
+    of maxItems in Google's API or proof of the internal compiler's reason.
+    """
+    schema=wire_schema()
+    schema['properties']['c'].pop('maxItems')
+    return schema

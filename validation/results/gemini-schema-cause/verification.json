@@ -1,0 +1,23 @@
+{
+  "version": "1.1.1",
+  "scope": "Unreleased exact Gemini schema cause and opt-in structured correction; no desktop build or default promotion",
+  "parent_commit": "48d227ff96403165ad6cd367e9f1448f21d8cc7c",
+  "tests": {
+    "python_passed": 617,
+    "python_subtests_passed": 10,
+    "frontend_passed": 52,
+    "frontend_retested_in_this_increment": false,
+    "frontend_evidence": "Unchanged UI, inherited executed checks from PR14 / 48d227f"
+  },
+  "free_local_replay": true,
+  "new_reserved_attempts": 4,
+  "http_request_bodies_sent": 3,
+  "causal_statuses": [
+    400,
+    200,
+    400
+  ],
+  "actual_native_advisor_or_hybrid_tested": false,
+  "final_holdout_opened": false,
+  "private_pixels_published": false
+}

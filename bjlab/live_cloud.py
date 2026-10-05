@@ -16,7 +16,7 @@ from pydantic import ValidationError
 from .grounded_cloud import GeminiTransport, GroundedCloudReader
 from .grounded_state import GroundedObservation, GroundedResult
 from .bounded_network import NETWORK
-from .live_state import LiveObservation, wire_schema
+from .live_state import LiveObservation, gemini_structured_schema, wire_schema
 from .openai_reader import ResponsesTransport, OpenAIVisionReader, ProviderHTTPError, API_ROOT
 from .state_reader import HandObservation
 
@@ -122,13 +122,14 @@ class DiagnosticReader:
     def __init__(self, config, budget, hashes, *, provider, variant, transport, gemini_output='structured'):
         if variant not in ('v1', 'v2', 'live') or provider not in ('openai', 'gemini') or (provider=='gemini' and variant!='live'):
             raise ValueError('Only declared same-model schema comparisons are allowed.')
-        if gemini_output not in ('structured','json-mode') or (gemini_output!='structured' and provider!='gemini'):
+        if gemini_output not in ('structured','json-mode','structured-card-limit-local') or (gemini_output!='structured' and provider!='gemini'):
             raise ValueError('JSON mode is an explicit Gemini-only research variant.')
         self.config, self.budget, self.hashes = config, budget, frozenset(hashes)
         self.provider, self.variant, self.transport = provider, variant, transport
         self.gemini_output = gemini_output
         self.name = ('luna-fast-' if provider=='openai' else 'gemini-lite-')+variant
         if gemini_output=='json-mode': self.name+='-json-mode'
+        if gemini_output=='structured-card-limit-local': self.name+='-structured-card-limit-local'
 
     def payload(self, frame):
         if self.variant == 'v1':
@@ -157,7 +158,8 @@ class DiagnosticReader:
             return {'systemInstruction':{'parts':[{'text':PROMPT}]},'contents':[{'role':'user','parts':parts}],
                 'generationConfig':{'maxOutputTokens':self.config.max_output_tokens,
                     'thinkingConfig':{'thinkingLevel':'MINIMAL','includeThoughts':False},
-                    'responseFormat':{'text':{'mimeType':'APPLICATION_JSON','schema':wire_schema()}}}}
+                    'responseFormat':{'text':{'mimeType':'APPLICATION_JSON','schema':
+                        gemini_structured_schema() if self.gemini_output=='structured-card-limit-local' else wire_schema()}}}}
         return {'model':self.config.model,'instructions':PROMPT,'store':False,
             'input':[{'role':'user','content':content}],'max_output_tokens':self.config.max_output_tokens,
             'reasoning':{'effort':'none'},'service_tier':'fast',
@@ -170,10 +172,14 @@ class DiagnosticReader:
         if self.provider=='gemini':
             diagnostics['output_mode']=self.gemini_output
             diagnostics['schema_enforcement']='strict_local_validation' if self.gemini_output=='json-mode' else 'provider_schema_and_strict_local_validation'
+            if self.gemini_output=='structured-card-limit-local':
+                diagnostics['provider_omitted_constraints']=['/properties/c/maxItems']
+                diagnostics['local_card_count_limit']=52
         clock=diagnostics['timing']
         try:
             payload=self.payload(frame); clock['payload_ms']=(time.perf_counter()-began)*1000
-            schema=(payload['text']['format']['schema'] if self.provider=='openai' else wire_schema())
+            schema=(payload['text']['format']['schema'] if self.provider=='openai' else
+                payload['generationConfig'].get('responseFormat',{}).get('text',{}).get('schema',wire_schema()))
             encoded=json.dumps(payload,separators=(',',':')).encode()
             diagnostics.update(payload_bytes=len(encoded),schema_bytes=len(json.dumps(schema,separators=(',',':'))),
                 payload_sha256=sha256(json.dumps(payload,sort_keys=True).encode()).hexdigest(),

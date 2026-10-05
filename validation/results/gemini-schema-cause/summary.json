@@ -1,0 +1,430 @@
+{
+  "experiment_id": "VISION-020",
+  "parent_commit": "48d227ff96403165ad6cd367e9f1448f21d8cc7c",
+  "preparation_commit": "9ad3cea",
+  "model": "gemini-3.5-flash-lite",
+  "endpoint": "v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "exact_causal_trigger": {
+    "schema_pointer": "/properties/c/maxItems",
+    "value": 52,
+    "request_pointer": "/generationConfig/responseFormat/text/schema/properties/c/maxItems",
+    "changes": [
+      {
+        "pointer": "/generationConfig/responseFormat/text/schema/properties/c/maxItems",
+        "operation": "remove",
+        "before": 52
+      }
+    ],
+    "controlled_statuses": [
+      400,
+      200,
+      400
+    ],
+    "exact_original_reintroduced": true,
+    "successful_reader_payload_matches_executed_probe": true,
+    "internal_provider_reason": "Not disclosed by generic INVALID_ARGUMENT; this establishes a trigger in this full schema, not a universal rejection of maxItems=52."
+  },
+  "rows": [
+    {
+      "probe": "tiny",
+      "status": "timeout",
+      "elapsed_ms": 10038.077300003351,
+      "network_timing": {
+        "connect_tcp_ms": 9738.375099997938,
+        "transport_total_ms": 10007.765700000164
+      },
+      "payload_sha256": "cc7b4883e57df14bd3a737f6406328a03f0d1b10bb3481487790caa87b1af872",
+      "generation_config_delta": [
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/$defs",
+          "operation": "remove",
+          "before": {
+            "LiveCard": {
+              "additionalProperties": false,
+              "properties": {
+                "z": {
+                  "enum": [
+                    "dealer",
+                    "player:0"
+                  ],
+                  "type": "string"
+                },
+                "r": {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "A",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10",
+                        "J",
+                        "Q",
+                        "K"
+                      ],
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "s": {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "C",
+                        "D",
+                        "H",
+                        "S"
+                      ],
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "v": {
+                  "enum": [
+                    "readable",
+                    "partial",
+                    "covered",
+                    "unreadable"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "z",
+                "r",
+                "s",
+                "v"
+              ],
+              "type": "object"
+            },
+            "LiveNumber": {
+              "additionalProperties": false,
+              "properties": {
+                "v": {
+                  "maximum": 1000000,
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "r": {
+                  "enum": [
+                    "player_total",
+                    "dealer_total",
+                    "ui",
+                    "unknown"
+                  ],
+                  "type": "string"
+                },
+                "l": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "w": {
+                  "enum": [
+                    "table",
+                    "dealer",
+                    "player:0",
+                    "controls"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "v",
+                "r",
+                "l",
+                "w"
+              ],
+              "type": "object"
+            }
+          }
+        },
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/properties/a",
+          "operation": "remove",
+          "before": {
+            "items": {
+              "enum": [
+                "hit",
+                "stand",
+                "double",
+                "split",
+                "surrender"
+              ],
+              "type": "string"
+            },
+            "maxItems": 5,
+            "type": "array"
+          }
+        },
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/properties/b",
+          "operation": "remove",
+          "before": {
+            "items": {
+              "enum": [
+                "split",
+                "insurance",
+                "ambiguous_roles",
+                "unreadable_controls",
+                "occluded_table"
+              ],
+              "type": "string"
+            },
+            "maxItems": 5,
+            "type": "array"
+          }
+        },
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/properties/c",
+          "operation": "remove",
+          "before": {
+            "items": {
+              "$ref": "#/$defs/LiveCard"
+            },
+            "maxItems": 52,
+            "type": "array"
+          }
+        },
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/properties/n",
+          "operation": "remove",
+          "before": {
+            "items": {
+              "$ref": "#/$defs/LiveNumber"
+            },
+            "maxItems": 12,
+            "type": "array"
+          }
+        },
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/properties/ok",
+          "operation": "add",
+          "after": {
+            "type": "boolean"
+          }
+        },
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/properties/p",
+          "operation": "remove",
+          "before": {
+            "enum": [
+              "player",
+              "dealer",
+              "waiting",
+              "settled",
+              "unknown"
+            ],
+            "type": "string"
+          }
+        },
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/properties/t",
+          "operation": "remove",
+          "before": {
+            "enum": [
+              "cards_present",
+              "empty",
+              "uncertain"
+            ],
+            "type": "string"
+          }
+        },
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/required",
+          "operation": "replace",
+          "before": [
+            "c",
+            "t",
+            "p",
+            "a",
+            "n",
+            "b"
+          ],
+          "after": [
+            "ok"
+          ]
+        }
+      ],
+      "payload_matches_executed_probe": true
+    },
+    {
+      "probe": "full",
+      "status": "error",
+      "http_status": 400,
+      "elapsed_ms": 1335.9017000002495,
+      "provider_error": {
+        "category": "generic_invalid_argument",
+        "body_sha256": "b01105ed229707571186fdc753a734401dcd3dca044538c55285824604725bd3",
+        "status": "INVALID_ARGUMENT",
+        "mentioned_fields": []
+      },
+      "network_timing": {
+        "connect_tcp_ms": 35.812000001897104,
+        "start_tls_ms": 55.624800002988195,
+        "send_request_headers_ms": 0.24499999926774763,
+        "send_request_body_ms": 0.3555999974196311,
+        "receive_response_headers_ms": 1195.9720000013476,
+        "headers_received_ms": 1317.3306999997294,
+        "receive_response_body_ms": 0.32020000071497634,
+        "body_complete_ms": 1319.2172000017308,
+        "transport_total_ms": 1319.8057000008703
+      },
+      "payload_sha256": "8a57464c9b4c96bb46a5bb911e1c1214f668bea5050e8c339609c8ddc12a274b",
+      "generation_config_delta": [],
+      "payload_matches_executed_probe": true
+    },
+    {
+      "probe": "full-minus-bound-0",
+      "status": "accepted",
+      "http_status": 200,
+      "elapsed_ms": 2271.7907000005653,
+      "network_timing": {
+        "connect_tcp_ms": 36.0846000003221,
+        "start_tls_ms": 55.23679999896558,
+        "send_request_headers_ms": 0.23040000087348744,
+        "send_request_body_ms": 0.2967000000353437,
+        "receive_response_headers_ms": 2111.0838999993575,
+        "headers_received_ms": 2231.750099999772,
+        "receive_response_body_ms": 0.2870999996957835,
+        "body_complete_ms": 2233.103399998072,
+        "provider_json_parse_ms": 0.03670000296551734,
+        "transport_total_ms": 2233.6606999997457
+      },
+      "usage": {
+        "input_tokens": 4816,
+        "output_tokens": 357
+      },
+      "reported_usage_upper_usd": "0.0023373",
+      "validated_full_contract": true,
+      "payload_sha256": "00112d4d31d8c080bbf812acce47f32dbec3070d5e626ac5c7269e33c4622f49",
+      "generation_config_delta": [
+        {
+          "pointer": "/generationConfig/responseFormat/text/schema/properties/c/maxItems",
+          "operation": "remove",
+          "before": 52
+        }
+      ],
+      "payload_matches_executed_probe": true
+    },
+    {
+      "probe": "full-rechallenge",
+      "status": "error",
+      "http_status": 400,
+      "elapsed_ms": 1527.0683000017016,
+      "provider_error": {
+        "category": "generic_invalid_argument",
+        "body_sha256": "b01105ed229707571186fdc753a734401dcd3dca044538c55285824604725bd3",
+        "status": "INVALID_ARGUMENT",
+        "mentioned_fields": []
+      },
+      "network_timing": {
+        "connect_tcp_ms": 36.17680000024848,
+        "start_tls_ms": 57.86669999724836,
+        "send_request_headers_ms": 0.27009999757865444,
+        "send_request_body_ms": 0.3770000002987217,
+        "receive_response_headers_ms": 1376.371399997879,
+        "headers_received_ms": 1503.90680000055,
+        "receive_response_body_ms": 0.5667000004905276,
+        "body_complete_ms": 1505.6693999977142,
+        "transport_total_ms": 1506.5109999995911
+      },
+      "payload_sha256": "8a57464c9b4c96bb46a5bb911e1c1214f668bea5050e8c339609c8ddc12a274b",
+      "generation_config_delta": [],
+      "payload_matches_executed_probe": true
+    }
+  ],
+  "successful_development_metrics": {
+    "inventory_exact": true,
+    "rank_presence_exact": true,
+    "phase_correct": true,
+    "controls_correct": true,
+    "numeric_roles_exact": true,
+    "complete_grounded_state": true,
+    "correct_usable_r1": true,
+    "false_accepted_state": false
+  },
+  "input_scope": "One reused owned development still, same four native views, prompt, model, thinking and token budget; oracle never sent.",
+  "new_reserved_attempts": 4,
+  "new_claimed_network_attempts": 4,
+  "attempts_with_http_request_body_sent": 3,
+  "pre_submission_dns_timeouts": 1,
+  "schema_rejections": 2,
+  "successful_structured_generations": 1,
+  "network_recovery": "Read-only hostname/TLS control verified a freshly observed DNS IPv4; process-only resolution for all three compared submissions. No hosts/firewall/proxy change.",
+  "runtime_inference_authorized": false,
+  "new_reported_usage_upper_usd": "0.0023373",
+  "new_accounted_upper_including_uncertain_usd": "0.953735700",
+  "budget_before": {
+    "requests_attempted": 90,
+    "max_requests": 90,
+    "max_usd": "8",
+    "accounted_upper_usd": "4.133454900",
+    "unknown_charge_requests": 10,
+    "network_attempts_claimed": 89,
+    "unknown_charge_reserved_usd": "3.9550760",
+    "stopped": false,
+    "invoice_and_balance_verified": false,
+    "scope": "all configurations/providers under one aggregate authorization"
+  },
+  "budget_after": {
+    "requests_attempted": 94,
+    "max_requests": 102,
+    "max_usd": "8",
+    "accounted_upper_usd": "5.087190600",
+    "unknown_charge_requests": 13,
+    "network_attempts_claimed": 93,
+    "unknown_charge_reserved_usd": "4.9064744",
+    "stopped": false,
+    "invoice_and_balance_verified": false,
+    "scope": "all configurations/providers under one aggregate authorization"
+  },
+  "count_only_amendment": {
+    "previous_max_requests": 90,
+    "max_requests": 102,
+    "max_new_allowed": 12,
+    "used": 4,
+    "unused_closed": 8,
+    "max_usd_unchanged": "8",
+    "old_entries_and_unknown_charges_preserved": true
+  },
+  "diagnostic_network_deadline_ms": 10000,
+  "unchanged_live_deadline_ms": 3000,
+  "p50_p95": null,
+  "invoice_charge": null,
+  "reader_promoted": false,
+  "installed_release_changed": false,
+  "final_holdout": "not_opened",
+  "independent_verification_sessions": 0,
+  "not_tested": [
+    "Internal provider grammar/compiler reason",
+    "Bare maxItems=52 outside this full schema",
+    "Legacy responseSchema cause",
+    "New provider/session generalization",
+    "Actual stable hybrid",
+    "Native capture-to-paint"
+  ],
+  "source_hashes_at_execution": {
+    "validation/tools/gemini_schema_cause.py": "68b0d576c02b371be1fed6f297170ed1b1d9398bc518b3be3f3b9edbce4594da",
+    "bjlab/research_budget.py": "5f278731ec7a73231fc3110dfa25811dad0d97b65abf55f4d2b5c625e8f65c3a",
+    "bjlab/live_cloud.py": "6f0463a620fbc787f2cd4384cdc9ac6c85fc3446d8b3f39a69df0c4d504b0b16",
+    "bjlab/live_state.py": "187269cfb495cfd26a9de3203513e660b81c627d050181aa46f1257af6141955",
+    "bjlab/grounded_cloud.py": "02c0906b64b5fda34de1e706570a1e10a60de886a69bd1f91f77330bc8755bd2"
+  }
+}

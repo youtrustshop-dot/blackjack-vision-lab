@@ -9,8 +9,23 @@
   Use only the same reviewed owned development pixels, no final holdout, new
   model, training, Poker, default reader or installed release. No blind retries;
   expected HTTP400s may continue solely as named causal ablations. Other errors,
-  timeouts or unaudited usage stop the batch. Offline diagnostic deadline 10s
+  timeouts or unaudited usage stop the batch. A pre-submission DNS stop may
+  resume for distinct probes only after a successful read-only HTTPS control,
+  retaining the failed reservation and stop receipt; no blind retries.
+  Offline diagnostic deadline 10s
   does not relax the 3s live deadline. Runtime disarms after every submission.
+
+- VISION-020 executed: exact schema trigger `/properties/c/maxItems: 52`.
+  Whole-payload one-change A/B/A: 400 / 200 with strictly validated full state
+  in 2.272s / 400 on exact reintroduction. Internal Google reason is still
+  generic; no universal maxItems prohibition claim. See
+  `docs/GEMINI_SCHEMA_CAUSE.md`. Opt-in structured-card-limit-local variant
+  omits only that provider constraint; strict local cap 52 remains enforced.
+  One prior DNS timeout is separate, never counted as schema rejection.
+  Four new reservations, three HTTP bodies sent; canonical ledger 94/102,
+  USD5.0871906 upper including thirteen unknown charges. Remaining eight
+  slots closed and runtime disarmed. No new paid batch, promotion, training,
+  Poker, holdout or installed release change without new user scope.
 
 - Latest user authorization, VISION-019, 2026-10-05: diagnose and resolve Gemini
   using the existing key and unchanged aggregate cap. Three bounded isolation

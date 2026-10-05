@@ -1,6 +1,20 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Ultimo incremento eseguito, 2026-10-05: [VISION-020](GEMINI_SCHEMA_CAUSE.md).
+> Colpevole isolato nella richiesta attuale: `/properties/c/maxItems: 52`.
+> Confronto identico salvo quel vincolo: 400 → 200 → 400 reinserendolo.
+> JSON completo valido in 2,27 s; carte, dorso, fase, controlli e ruoli numerici
+> corretti sullo stesso caso di sviluppo già usato. Correzione opt-in: Gemini
+> riceve lo schema senza quel solo limite; il validatore locale conserva 52.
+> Il motivo interno di Google rimane generico: non è dimostrato che maxItems
+> sia vietato in ogni schema. Un timeout DNS preliminare resta distinto dai 400.
+> Estensione auditata solo delle richieste 90 → 102 per questa diagnosi esplicita;
+> tetto USD8 e tutte le riserve precedenti invariati. Usate 4 nuove prenotazioni,
+> altre 8 chiuse; totale 94, runtime disarmato. Nessuna promozione, nuova sessione,
+> prova dell'ibrido, training, Poker o sostituzione della versione installata.
+> Le voci precedenti sotto restano evidenze storiche congelate.
+
 > Ultimo incremento eseguito, 2026-10-05: [VISION-019](GEMINI_REQUEST_FIX.md).
 > Gemini funziona: richiesta minima in 0,96 s, poi JSON completo corretto in
 > 1,99 s su un caso sintetico di sviluppo già usato. Lo schema strutturato viene

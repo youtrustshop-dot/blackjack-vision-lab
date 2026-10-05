@@ -4,14 +4,14 @@
   "verification": {
     "version": "1.1.1",
     "status": "unreleased-source-verified",
-    "completed_test_run": "605 passed, 2 existing warnings, 10 subtests passed in 67.89s",
-    "frontend_tests": "52 passed; UI source unchanged, rerun for this candidate",
-    "frontend_build": "52 frontend tests; TypeScript/Vite passed for this candidate",
+    "completed_test_run": "617 passed, 2 existing warnings, 10 subtests passed in 100.00s",
+    "frontend_tests": "52 passed on parent PR14 / 48d227f; UI unchanged, not rerun locally in VISION-020",
+    "frontend_build": "52 historical frontend tests; parent PR14 TypeScript/Vite passed, UI unchanged",
     "latest_changes_require_retest": false,
-    "source_evidence": "validation/results/gemini-request-fix/verification.json",
+    "source_evidence": "validation/results/gemini-schema-cause/verification.json",
     "release_evidence": "release/v1.1.1/",
     "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
-    "verification_scope": "Bounded Gemini request isolation: text works, legacy full structured hand schema rejected, JSON-mode correct on one reused owned development still. No session/holdout/hybrid/native-paint certification.",
+    "verification_scope": "Exact c.maxItems=52 causal trigger: same request A/B/A 400/200/400. Correct reused owned development still. No final holdout, fresh session, actual hybrid or native paint certification.",
     "historical_v1_1_1_verification": {
       "version": "1.1.1",
       "status": "source-verified",
@@ -107,6 +107,13 @@
       "frontend_build": "46 historical frontend tests and TypeScript/Vite passed on parent PR #4; UI unchanged, current follow-up not locally rerun",
       "source_evidence": "validation/results/visible-phase/verification.json",
       "verification_scope": "Frozen paired synthetic continuous videos: visible phase/context challenger versus unchanged baseline; clean 6/6, overall 6/36 timely full-table-qualified opportunities; no provider transfer certification."
+    },
+    "previous_vision019_source_check": {
+      "completed_test_run": "605 passed, 2 existing warnings, 10 subtests passed in 67.89s",
+      "frontend_tests": "52 passed; UI source unchanged, rerun for this candidate",
+      "frontend_build": "52 frontend tests; TypeScript/Vite passed for this candidate",
+      "source_evidence": "validation/results/gemini-request-fix/verification.json",
+      "verification_scope": "Bounded Gemini request isolation: text works, legacy full structured hand schema rejected, JSON-mode correct on one reused owned development still. No session/holdout/hybrid/native-paint certification."
     }
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",
@@ -556,6 +563,6 @@
     "required_system": "Controlled simulator, recorded single-round lab-artwork clips, screenshots, deterministic math and research validation layer.",
     "conditional_research": "Unavailable vendor models and unsupported legacy reference execution remain recorded; they are not fabricated or core dependencies.",
     "laya_user_deferral": "Add Laya later.",
-    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Holdâ€™em calibrated cards/ranking/equity are implemented."
+    "limitations": "Current supported layouts have explicit gates. Universal provider accuracy, complete external shoe evaluation and optimal poker betting remain unvalidated. Texas Hold\u00e2\u20ac\u2122em calibrated cards/ranking/equity are implemented."
   }
 }
