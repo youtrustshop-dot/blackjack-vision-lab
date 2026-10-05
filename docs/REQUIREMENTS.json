@@ -4,14 +4,14 @@
   "verification": {
     "version": "1.1.1",
     "status": "unreleased-source-verified",
-    "completed_test_run": "519 passed, 2 existing warnings, 10 subtests passed in 72.49s; five phase tests also passed in 2.13s",
-    "frontend_tests": "46 passed on parent PR #4; UI unchanged, current follow-up not locally rerun",
-    "frontend_build": "46 historical frontend tests and TypeScript/Vite passed on parent PR #4; UI unchanged, current follow-up not locally rerun",
+    "completed_test_run": "605 passed, 2 existing warnings, 10 subtests passed in 67.89s",
+    "frontend_tests": "52 passed; UI source unchanged, rerun for this candidate",
+    "frontend_build": "52 frontend tests; TypeScript/Vite passed for this candidate",
     "latest_changes_require_retest": false,
-    "source_evidence": "validation/results/visible-phase/verification.json",
+    "source_evidence": "validation/results/gemini-request-fix/verification.json",
     "release_evidence": "release/v1.1.1/",
     "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
-    "verification_scope": "Frozen paired synthetic continuous videos: visible phase/context challenger versus unchanged baseline; clean 6/6, overall 6/36 timely full-table-qualified opportunities; no provider transfer certification.",
+    "verification_scope": "Bounded Gemini request isolation: text works, legacy full structured hand schema rejected, JSON-mode correct on one reused owned development still. No session/holdout/hybrid/native-paint certification.",
     "historical_v1_1_1_verification": {
       "version": "1.1.1",
       "status": "source-verified",
@@ -100,7 +100,14 @@
       "source_evidence": "experiments/continuity_phase0/verification.json",
       "verification_scope": "Source tests and single-use owned synthetic/reference holdouts. External provider counts, candidate native artifacts and economic edge remain unverified."
     },
-    "previous_source_evidence": "validation/results/synthetic-stress-lab/verification.json"
+    "previous_source_evidence": "validation/results/synthetic-stress-lab/verification.json",
+    "previous_followup_source_check": {
+      "completed_test_run": "519 passed, 2 existing warnings, 10 subtests passed in 72.49s; five phase tests also passed in 2.13s",
+      "frontend_tests": "46 passed on parent PR #4; UI unchanged, current follow-up not locally rerun",
+      "frontend_build": "46 historical frontend tests and TypeScript/Vite passed on parent PR #4; UI unchanged, current follow-up not locally rerun",
+      "source_evidence": "validation/results/visible-phase/verification.json",
+      "verification_scope": "Frozen paired synthetic continuous videos: visible phase/context challenger versus unchanged baseline; clean 6/6, overall 6/36 timely full-table-qualified opportunities; no provider transfer certification."
+    }
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",
   "requirements": [

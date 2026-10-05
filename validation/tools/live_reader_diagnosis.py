@@ -106,8 +106,10 @@ def rest_errors(value, schema, discovery, path='request'):
         if not isinstance(value,dict):return [path+':object_required']
         fields=schema.get('properties',{});issues=[]
         for key,item in value.items():
-            if key not in fields: issues.append(path+'.'+key+':unknown_field')
-            else:issues.extend(rest_errors(item,fields[key],discovery,path+'.'+key))
+            if key in fields:issues.extend(rest_errors(item,fields[key],discovery,path+'.'+key))
+            elif isinstance(schema.get('additionalProperties'),dict):
+                issues.extend(rest_errors(item,schema['additionalProperties'],discovery,path+'.'+key))
+            else:issues.append(path+'.'+key+':unknown_field')
         return issues
     if kind=='array':
         if not isinstance(value,list):return [path+':array_required']

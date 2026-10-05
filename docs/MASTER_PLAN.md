@@ -1,6 +1,19 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Ultimo incremento eseguito, 2026-10-05: [VISION-019](GEMINI_REQUEST_FIX.md).
+> Gemini funziona: richiesta minima in 0,96 s, poi JSON completo corretto in
+> 1,99 s su un caso sintetico di sviluppo già usato. Lo schema strutturato viene
+> ancora rifiutato; la variante JSON con validazione locale lo aggira. Carte,
+> dorso, turno, azioni e tre numeri con ruolo corretto: nessuna promozione dopo
+> una sola immagine, nessuna nuova sessione o prova dell'ibrido. Il campo esatto
+> rifiutato rimane sconosciuto. Limite live sempre 3 s; attesa diagnostica 10 s.
+> Stessa chiave e budget: 90/90 prenotazioni, runtime disarmato, limite richieste
+> esaurito. Non serve un'altra ricarica per completare questa diagnosi. Confronto
+> fresco e ibrido restano il prossimo bersaglio, entro nuova autorizzazione
+> esplicita per il numero di richieste; nessun reset automatico. PR precedenti,
+> reader predefinito, Poker e versione installata restano invariati.
+
 > Ultimo incremento eseguito, 2026-10-05: [VISION-018](LIVE_READER_DIAGNOSIS.md).
 > Luna Fast con schema grounded compatto: 3/3 stati R1 corretti e utilizzabili,
 > p50/p95 del piccolo campione 1,99/2,13 s. Solo 1/3 trascrizioni complete di

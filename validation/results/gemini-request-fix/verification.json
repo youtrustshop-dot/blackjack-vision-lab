@@ -1,0 +1,16 @@
+{
+  "version": "1.1.1",
+  "scope": "Unreleased Gemini request fix, no new desktop build or default promotion",
+  "parent_commit": "7717ec222436b47d45d5520ce67091f0e66c38ab",
+  "tests": {
+    "python_passed": 605,
+    "python_subtests_passed": 10,
+    "frontend_passed": 52,
+    "frontend_build_passed": true
+  },
+  "free_local_replay": true,
+  "api_submissions": 3,
+  "actual_native_advisor_or_hybrid_tested": false,
+  "final_holdout_opened": false,
+  "private_pixels_published": false
+}

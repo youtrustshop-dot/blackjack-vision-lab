@@ -1,5 +1,18 @@
 # Card Lab project instructions
 
+- Latest user authorization, VISION-019, 2026-10-05: diagnose and resolve Gemini
+  using the existing key and unchanged aggregate cap. Three bounded isolation
+  submissions completed: minimal text succeeds in 0.962s; legacy structured hand
+  schema still HTTP400; explicit JSON MIME mode + schema in prompt succeeds with
+  one correct complete owned development state in 1.993s. Exact rejected schema
+  constraint remains unknown. See `docs/GEMINI_REQUEST_FIX.md`. Keep PR11/12/13
+  evidence and default/release unchanged. JSON mode is an opt-in research variant
+  with unchanged strict local validation and 3s live deadline; diagnostic waited
+  at most 10s and never delivered advice. No hybrid/session/holdout certification.
+  Lifetime ledger now 90/90 reserved attempts, 89 claimed submissions,
+  USD4.1334549 upper including ten uncertain charges. Request ceiling exhausted;
+  runtime disarmed. No automatic new paid batch, reset/increase or billing action.
+
 - Latest user authorization, VISION-018, 2026-10-05: retain PR11/12 unchanged;
   diagnose Gemini's request locally/documentally before one small smoke batch;
   compare Luna Fast v1/v2/compact grounded live schemas on three NEW owned

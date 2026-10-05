@@ -119,12 +119,16 @@ class MeasuredGeminiTransport(GeminiTransport):
 
 
 class DiagnosticReader:
-    def __init__(self, config, budget, hashes, *, provider, variant, transport):
+    def __init__(self, config, budget, hashes, *, provider, variant, transport, gemini_output='structured'):
         if variant not in ('v1', 'v2', 'live') or provider not in ('openai', 'gemini') or (provider=='gemini' and variant!='live'):
             raise ValueError('Only declared same-model schema comparisons are allowed.')
+        if gemini_output not in ('structured','json-mode') or (gemini_output!='structured' and provider!='gemini'):
+            raise ValueError('JSON mode is an explicit Gemini-only research variant.')
         self.config, self.budget, self.hashes = config, budget, frozenset(hashes)
         self.provider, self.variant, self.transport = provider, variant, transport
+        self.gemini_output = gemini_output
         self.name = ('luna-fast-' if provider=='openai' else 'gemini-lite-')+variant
+        if gemini_output=='json-mode': self.name+='-json-mode'
 
     def payload(self, frame):
         if self.variant == 'v1':
@@ -141,6 +145,15 @@ class DiagnosticReader:
             content.extend([{'type':'input_text','text':'View: '+name},
                 {'type':'input_image','detail':'high','image_url':'data:image/png;base64,'+encoded}])
         if self.provider=='gemini':
+            if self.gemini_output=='json-mode':
+                # VISION-019: the full hand schema was rejected by structured
+                # generation. JSON MIME mode plus prompt shape succeeded on the
+                # same owned pixels. This changes serialization, never the local
+                # contract, provenance gate, deadline or production defaults.
+                return {'systemInstruction':{'parts':[{'text':PROMPT},{'text':
+                    'Return exactly one object matching this JSON schema: '+json.dumps(wire_schema(),separators=(',',':'))}]},
+                    'contents':[{'role':'user','parts':parts}],
+                    'generationConfig':{'maxOutputTokens':self.config.max_output_tokens,'responseMimeType':'application/json'}}
             return {'systemInstruction':{'parts':[{'text':PROMPT}]},'contents':[{'role':'user','parts':parts}],
                 'generationConfig':{'maxOutputTokens':self.config.max_output_tokens,
                     'thinkingConfig':{'thinkingLevel':'MINIMAL','includeThoughts':False},
@@ -154,11 +167,13 @@ class DiagnosticReader:
         began=time.perf_counter(); observation=None; status='error'
         diagnostics={'provider':self.provider,'variant':self.variant,'retry_count':0,'timing':{},
             'raw_body_saved':False,'usage_scope':'reported usage upper, not invoice'}
+        if self.provider=='gemini':
+            diagnostics['output_mode']=self.gemini_output
+            diagnostics['schema_enforcement']='strict_local_validation' if self.gemini_output=='json-mode' else 'provider_schema_and_strict_local_validation'
         clock=diagnostics['timing']
         try:
             payload=self.payload(frame); clock['payload_ms']=(time.perf_counter()-began)*1000
-            schema=(payload['text']['format']['schema'] if self.provider=='openai' else
-                payload['generationConfig']['responseFormat']['text']['schema'])
+            schema=(payload['text']['format']['schema'] if self.provider=='openai' else wire_schema())
             encoded=json.dumps(payload,separators=(',',':')).encode()
             diagnostics.update(payload_bytes=len(encoded),schema_bytes=len(json.dumps(schema,separators=(',',':'))),
                 payload_sha256=sha256(json.dumps(payload,sort_keys=True).encode()).hexdigest(),
