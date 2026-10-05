@@ -1,6 +1,18 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Latest executed increment, 2026-10-05: [VISION-017](GROUNDED_READER_HYBRID.md).
+> New numeric provenance and partial/back/unreadable visibility contract, with
+> a continuous capture/revalidation runner. New owned validation: Local A 28/34
+> ranks and 12/34 suits; Local B 33/34 ranks and 4/34 suits. Both phase 0/12,
+> timely usable 0/9. Gemini generation returns HTTP400 in two configurations;
+> Luna Fast exceeds the 3s complete-JSON deadline once. No new cloud quality score
+> or real-API hybrid trial. Producer-thread mocks test stale rejection only.
+> Read-only exports reconcile eight historical funded timeouts conservatively;
+> all four remaining uncertain attempts stay reserved. Same EUR10/USD8/90 cap,
+> 73 lifetime attempts; runtime disarmed. No new training, reader promotion or
+> installed release replacement. Older entries below are historical snapshots.
+
 > Authorized API follow-up, 2026-10-05: [VISION-016](OPENAI_READER_TOURNAMENT.md).
 > Reuse of the existing OpenAI key and EUR10 total cap are resolved. Gemini is
 > deferred at the user's request because it has no credential. Scope now includes

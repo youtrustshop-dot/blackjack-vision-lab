@@ -1,5 +1,30 @@
 # Card Lab project instructions
 
+- Latest user authorization, 2026-10-05: proceed with VISION-017, a NEW grounded
+  numeric/visibility contract and same-input Luna Fast/Gemini comparison followed
+  by controlled hybrid revalidation. This supersedes VISION-016's stop for its
+  frozen increment only; its scores, source and allowance remain unchanged.
+  Both existing keys are now locally available; Gemini model GET access verified.
+  Upload only the reviewed NEW OWNED synthetic corpus to either provider in this
+  increment. No new local training. Retain all nine unknown-charge reservations
+  and the canonical lifetime USD8/90 ledger. No reset/increase or release without
+  billing evidence. Start with twelve still submissions and at most six hybrid
+  submissions, stopping on unknown charge/timeout. No installed release change.
+  V2 requires explicit English player/dealer TOTAL labels; it is not a universal
+  numeric layout profile. Controlled headless presentation is not native paint
+  or real desktop capture evidence. Final holdouts remain sealed.
+
+- VISION-017 execution: new v2 local validation completed; no local training or
+  perception-source edit. Gemini returned HTTP400 in two frozen request-format
+  configurations; one Luna Fast request timed out. Remaining API/hybrid trials
+  not executed. Runtime is disarmed; no blind retries. Read-only usage exports
+  match all prior 69 paid submissions and conservatively reconcile eight funded
+  timeout reservations (whole model/tier input + maximum request output per
+  timeout). Four uncertain reservations remain: initial HTTP429, two Gemini
+  HTTP400s, new Luna timeout. Ledger now 73 lifetime attempts, USD1.5944261 upper,
+  same USD8/90 cap. Both balances verified privately positive, auto-recharge off.
+  See `docs/GROUNDED_READER_HYBRID.md` for executed/unexecuted scope.
+
 - Read `docs/MASTER_PLAN.md` for the one active priority order (accepted v1.1,
   with the latest user-authorized specialized local challenger addendum).
   Earlier training deferrals are history; the user now explicitly authorizes

@@ -1,0 +1,332 @@
+{
+  "experiment_id": "VISION-017",
+  "contract": "grounded-r1-v2",
+  "baseline_commit": "4148a08218ec40c752a2d4f1fd215bc4f21c4b3d",
+  "perception_commit": "18bfd579c1913bfa902a096fb8a83477ce510edf",
+  "status": "executed_partial_no_reader_promotion",
+  "new_owned_inputs": {
+    "development": 12,
+    "validation": 12,
+    "final_holdout": "sealed_not_inspected_or_evaluated",
+    "api_conditions": [
+      "clean-ui",
+      "labelled-totals",
+      "unlabelled-number",
+      "overlap",
+      "rotation",
+      "popup-unreadable"
+    ],
+    "split_scope": "one physical session per partition; correlated scene variants; shared renderer/control font/suit glyphs",
+    "independent_human_visibility_annotations": false,
+    "truth_scope": "all rendered top/bottom indices/pips geometric proxy plus assistant visual audit"
+  },
+  "local_all_cases": {
+    "development": {
+      "contract": "grounded-r1-v2",
+      "split": "development",
+      "readers": {
+        "current-local-v2": {
+          "planned_inputs": 12,
+          "attempted_inputs": 12,
+          "statuses": {
+            "completed": 12
+          },
+          "metrics": {
+            "expected_objects": 45,
+            "predicted_objects": 42,
+            "object_inventory_exact": 2,
+            "rank_presence_exact": 8,
+            "ranks_expected": 34,
+            "ranks_correct": 29,
+            "suits_expected": 34,
+            "suits_correct": 14,
+            "backs_expected": 10,
+            "backs_predicted": 8,
+            "unreadable_objects_expected": 1,
+            "numeric_provenance_exact": 0,
+            "phase_correct": 0,
+            "complete_state_correct": 0,
+            "player_opportunity": 9,
+            "correct_usable_rank_state": 0,
+            "false_total_attribution": 0,
+            "false_accepted_state": 0
+          },
+          "completed_latency_ms": {
+            "p50": 103.6087000002226,
+            "p95": 337.37786000037863,
+            "max": 492.6971999993839
+          },
+          "reported_usage_upper_usd": "0",
+          "cost_scope": "reported usage upper only, not invoice; failures may remain reserved",
+          "sample_scope": "one physical session per partition, correlated scenario variants, not population/provider transfer"
+        },
+        "specialized-local-v2": {
+          "planned_inputs": 12,
+          "attempted_inputs": 12,
+          "statuses": {
+            "completed": 12
+          },
+          "metrics": {
+            "expected_objects": 45,
+            "predicted_objects": 44,
+            "object_inventory_exact": 2,
+            "rank_presence_exact": 10,
+            "ranks_expected": 34,
+            "ranks_correct": 33,
+            "suits_expected": 34,
+            "suits_correct": 15,
+            "backs_expected": 10,
+            "backs_predicted": 10,
+            "unreadable_objects_expected": 1,
+            "numeric_provenance_exact": 0,
+            "phase_correct": 0,
+            "complete_state_correct": 0,
+            "player_opportunity": 9,
+            "correct_usable_rank_state": 0,
+            "false_total_attribution": 0,
+            "false_accepted_state": 0
+          },
+          "completed_latency_ms": {
+            "p50": 63.08824999996432,
+            "p95": 69.43644000048153,
+            "max": 70.41940000090108
+          },
+          "reported_usage_upper_usd": "0",
+          "cost_scope": "reported usage upper only, not invoice; failures may remain reserved",
+          "sample_scope": "one physical session per partition, correlated scenario variants, not population/provider transfer"
+        }
+      },
+      "final_holdout": "sealed_not_evaluated"
+    },
+    "validation": {
+      "contract": "grounded-r1-v2",
+      "split": "validation",
+      "readers": {
+        "current-local-v2": {
+          "planned_inputs": 12,
+          "attempted_inputs": 12,
+          "statuses": {
+            "completed": 12
+          },
+          "metrics": {
+            "expected_objects": 45,
+            "predicted_objects": 42,
+            "object_inventory_exact": 2,
+            "rank_presence_exact": 9,
+            "ranks_expected": 34,
+            "ranks_correct": 28,
+            "suits_expected": 34,
+            "suits_correct": 12,
+            "backs_expected": 10,
+            "backs_predicted": 8,
+            "unreadable_objects_expected": 1,
+            "numeric_provenance_exact": 0,
+            "phase_correct": 0,
+            "complete_state_correct": 0,
+            "player_opportunity": 9,
+            "correct_usable_rank_state": 0,
+            "false_total_attribution": 0,
+            "false_accepted_state": 0
+          },
+          "completed_latency_ms": {
+            "p50": 68.5969500000283,
+            "p95": 149.0103849996558,
+            "max": 149.08699999978126
+          },
+          "reported_usage_upper_usd": "0",
+          "cost_scope": "reported usage upper only, not invoice; failures may remain reserved",
+          "sample_scope": "one physical session per partition, correlated scenario variants, not population/provider transfer"
+        },
+        "specialized-local-v2": {
+          "planned_inputs": 12,
+          "attempted_inputs": 12,
+          "statuses": {
+            "completed": 12
+          },
+          "metrics": {
+            "expected_objects": 45,
+            "predicted_objects": 45,
+            "object_inventory_exact": 0,
+            "rank_presence_exact": 9,
+            "ranks_expected": 34,
+            "ranks_correct": 33,
+            "suits_expected": 34,
+            "suits_correct": 4,
+            "backs_expected": 10,
+            "backs_predicted": 10,
+            "unreadable_objects_expected": 1,
+            "numeric_provenance_exact": 0,
+            "phase_correct": 0,
+            "complete_state_correct": 0,
+            "player_opportunity": 9,
+            "correct_usable_rank_state": 0,
+            "false_total_attribution": 0,
+            "false_accepted_state": 0
+          },
+          "completed_latency_ms": {
+            "p50": 63.30769999931363,
+            "p95": 67.37240999991627,
+            "max": 67.40530000024592
+          },
+          "reported_usage_upper_usd": "0",
+          "cost_scope": "reported usage upper only, not invoice; failures may remain reserved",
+          "sample_scope": "one physical session per partition, correlated scenario variants, not population/provider transfer"
+        }
+      },
+      "final_holdout": "sealed_not_evaluated"
+    }
+  },
+  "local_same_six_api_cases": {
+    "current-local-v2": {
+      "planned_inputs": 6,
+      "attempted_inputs": 6,
+      "statuses": {
+        "completed": 6
+      },
+      "metrics": {
+        "expected_objects": 24,
+        "predicted_objects": 21,
+        "object_inventory_exact": 1,
+        "rank_presence_exact": 5,
+        "ranks_expected": 17,
+        "ranks_correct": 15,
+        "suits_expected": 17,
+        "suits_correct": 7,
+        "backs_expected": 6,
+        "backs_predicted": 5,
+        "unreadable_objects_expected": 1,
+        "numeric_provenance_exact": 0,
+        "phase_correct": 0,
+        "complete_state_correct": 0,
+        "player_opportunity": 5,
+        "correct_usable_rank_state": 0,
+        "false_total_attribution": 0,
+        "false_accepted_state": 0
+      },
+      "completed_latency_ms": {
+        "p50": 124.33255000087229,
+        "p95": 149.05217499972423,
+        "max": 149.08699999978126
+      },
+      "reported_usage_upper_usd": "0",
+      "cost_scope": "reported usage upper only, not invoice; failures may remain reserved",
+      "sample_scope": "one physical session per partition, correlated scenario variants, not population/provider transfer"
+    },
+    "specialized-local-v2": {
+      "planned_inputs": 6,
+      "attempted_inputs": 6,
+      "statuses": {
+        "completed": 6
+      },
+      "metrics": {
+        "expected_objects": 24,
+        "predicted_objects": 23,
+        "object_inventory_exact": 0,
+        "rank_presence_exact": 5,
+        "ranks_expected": 17,
+        "ranks_correct": 17,
+        "suits_expected": 17,
+        "suits_correct": 4,
+        "backs_expected": 6,
+        "backs_predicted": 6,
+        "unreadable_objects_expected": 1,
+        "numeric_provenance_exact": 0,
+        "phase_correct": 0,
+        "complete_state_correct": 0,
+        "player_opportunity": 5,
+        "correct_usable_rank_state": 0,
+        "false_total_attribution": 0,
+        "false_accepted_state": 0
+      },
+      "completed_latency_ms": {
+        "p50": 64.12360000012995,
+        "p95": 67.39035000009608,
+        "max": 67.40530000024592
+      },
+      "reported_usage_upper_usd": "0",
+      "cost_scope": "reported usage upper only, not invoice; failures may remain reserved",
+      "sample_scope": "one physical session per partition, correlated scenario variants, not population/provider transfer"
+    }
+  },
+  "api_attempts": [
+    {
+      "provider": "gemini",
+      "configuration": "responseFormat",
+      "http_status": 400,
+      "elapsed_ms": 2014,
+      "quality_metrics": null
+    },
+    {
+      "provider": "gemini",
+      "configuration": "responseMimeType/responseJsonSchema",
+      "http_status": 400,
+      "elapsed_ms": 1696,
+      "quality_metrics": null,
+      "error_category": "unspecified_provider_error"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-6-luna",
+      "tier": "fast",
+      "status": "timeout",
+      "elapsed_ms": 3170.4157999993186,
+      "quality_metrics": null
+    }
+  ],
+  "api_new_submissions": 3,
+  "api_hybrid_trials": {
+    "planned": 6,
+    "executed": 0,
+    "status": "not_executed_after_provider_failures"
+  },
+  "hybrid_contract_tests": "continuous producer during injected slow cloud; changed-pixel output withheld; not API/native evidence",
+  "historical_results": "PR10/PR11 unchanged; no retrospective total repair or rescoring",
+  "billing_reconciliation": {
+    "scope": "read-only export: exact prior 51 Standard/15 Fast/3 Sol; no new budget",
+    "reported_period_cost_usd": "0.04263181000000000000000000000",
+    "reported_cost_final_invoice": false,
+    "timeout_method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+    "funded_timeouts_reconciled": 8,
+    "retained_uncertain": [
+      "initial OpenAI HTTP429",
+      "two Gemini HTTP400",
+      "new Luna timeout"
+    ]
+  },
+  "budget": {
+    "requests_attempted": 73,
+    "max_requests": 90,
+    "max_usd": "8",
+    "accounted_upper_usd": "1.594426100",
+    "unknown_charge_requests": 4,
+    "network_attempts_claimed": 73,
+    "unknown_charge_reserved_usd": "1.4240696",
+    "stopped": false,
+    "invoice_and_balance_verified": false,
+    "scope": "all configurations/providers under one aggregate authorization"
+  },
+  "runtime": "disarmed",
+  "installed_release": "1.1.1 unchanged",
+  "native_advisor": "unchanged; mixed-DPI/cross-monitor/minimized real desktop capture still unverified",
+  "decision": "No promotion. Diagnose Gemini request/access error and complete-state latency before real-API hybrid. No new local training now.",
+  "artifact_hashes": {
+    "luna_configuration": "0f3f2b9585b45e77d1b7ef6e7143aac280373284f194d3a7f5906263ed662681",
+    "corpus_freeze": "8e3e6acd6e5c008642fd321e76499760818a36c9bff0d02374a9eb6a5f8d02eb",
+    "validation_frames": "75af42564bd48c28a760f76066a0477323aacd2480d29fdf6ea8aaa0105a8561",
+    "validation_oracle": "8532b49028a4da862642095b281239de5766ff0f26d426eebdee46a49d705260"
+  },
+  "validation_checks": {
+    "python_full_suite": {
+      "passed": 585,
+      "subtests_passed": 10,
+      "warnings": 2,
+      "seconds": 78.61
+    },
+    "physical_native_test_this_increment": false,
+    "new_release_build": false,
+    "frontend_tests_passed": 52,
+    "frontend_build": "passed",
+    "evidence_consistency": "passed",
+    "diff_whitespace": "passed"
+  }
+}

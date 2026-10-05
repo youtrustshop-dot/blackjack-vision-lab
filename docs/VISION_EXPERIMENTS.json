@@ -8,6 +8,14 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "grounded-r1-v2-hybrid",
+      "stage": "Numeric provenance, visibility truth, paired API and continuous revalidation",
+      "candidate": "Frozen Local A/B; same grounded schema for Luna Fast/Gemini 3.5 Flash Lite; 3s research deadline",
+      "status": "executed",
+      "finding": "Validation A 28/34 ranks, 12/34 suits; B 33/34 ranks, 4/34 suits. Both phase 0/12, timely usable 0/9. Gemini HTTP400 twice; Luna timeout once; remaining API/hybrid trials not executed. Concurrent producer mocks test stale rejection, not API quality. No promotion.",
+      "evidence": "validation/results/grounded-reader-v2/summary.json"
+    },
+    {
       "id": "specialized-local-card-reader",
       "stage": "One trained YOLO26n/keypoint + learned rank/suit challenger",
       "candidate": "YOLO26n-pose, three classes/four points; learned 13+unknown ranks and 4+unknown suits; native table ROI",
@@ -1201,7 +1209,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "Preserve executed VISION-016 and disarmed runtime. Next bounded research question: explicit provenance for displayed totals and independent visible-index annotation, then fresh session-disjoint verification. No additional API call, local training/tuning, reader promotion, release replacement or Poker expansion in this increment.",
+  "current_priority": "Preserve VISION-017 negative evidence and frozen PR10/11. Diagnose Gemini HTTP400 without blind retries, and complete grounded JSON latency before real-API hybrid. No local tuning/default/release/Poker expansion.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1619,27 +1627,45 @@
   ],
   "api_access_policy": {
     "inference_authorized": false,
-    "authorization_epoch": "2026-10-05-openai-native-development-eur10",
+    "authorization_epoch": "2026-10-05-grounded-v2-eur10",
     "max_requests": 0,
-    "max_usd": "0",
-    "reason": "Funded offline attempt finished; live inference remains disarmed. Aggregate ledger and uncertain charges are retained.",
+    "max_usd": 0,
+    "reason": "VISION-017 Luna-only bounded experiment ended; no automatic further inference or retries.",
     "research_spending_authorization": {
       "currency": "EUR",
       "total_cap": "10",
       "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
       "supersedes": "2026-10-04-zero-budget",
-      "calls_executed": 70,
+      "calls_executed": 73,
       "cost_incurred": null,
       "credential_choice": "reuse_existing_no_new_key",
-      "known_environment_credentials": "Existing OpenAI key reused successfully for actual Luna/Sol inference; Gemini absent and deferred.",
+      "known_environment_credentials": "Both existing keys available; both model GETs verified. Gemini inference HTTP400 unresolved.",
       "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
-      "runtime_gate": "disarmed_after_funded_offline_attempt",
-      "record": "docs/OPENAI_READER_TOURNAMENT.md",
+      "runtime_gate": "disarmed_after_grounded_v2_failures",
+      "record": "docs/GROUNDED_READER_HYBRID.md",
       "working_cap_usd": "8",
       "max_requests": 90,
       "ledger": "artifacts/api-budget/eur10-total-20261004.json",
       "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
       "budget_receipt": {
+        "requests_attempted": 73,
+        "max_requests": 90,
+        "max_usd": "8",
+        "accounted_upper_usd": "1.594426100",
+        "unknown_charge_requests": 4,
+        "network_attempts_claimed": 73,
+        "unknown_charge_reserved_usd": "1.4240696",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "user_reported_credit_topup": {
+        "currency": "EUR",
+        "amount": "10",
+        "account_balance_verified": false
+      },
+      "reported_usage_upper_charge_usd": "0.035521000",
+      "historical_vision016_budget_receipt": {
         "requests_attempted": 70,
         "max_requests": 90,
         "max_usd": "8",
@@ -1650,22 +1676,19 @@
         "stopped": false,
         "invoice_and_balance_verified": false,
         "scope": "all configurations/providers under one aggregate authorization"
-      },
-      "user_reported_credit_topup": {
-        "currency": "EUR",
-        "amount": "10",
-        "account_balance_verified": false
-      },
-      "reported_usage_upper_charge_usd": "0.035521000"
+      }
     },
     "credit_check": {
-      "status": "unverified_billing_browser_human_verification",
-      "checked_utc": "2026-10-05T10:45:45.022546+00:00",
-      "free_credit_balance": null,
+      "status": "verified_read_only_authenticated_billing",
+      "checked_utc": "2026-10-05T13:05:15.438578+00:00",
       "available_credit_balance": null,
-      "auto_recharge_enabled": null,
-      "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
-      "source": "https://platform.openai.com/settings/organization/billing/overview"
+      "currency": "USD",
+      "free_credit_balance": null,
+      "auto_recharge_enabled": false,
+      "source": "https://platform.openai.com/settings/organization/billing/overview",
+      "usage_export": "69 prior requests verified; not final invoice",
+      "balance_verified_privately": true,
+      "available_credit_status": "positive_prepaid_balance"
     },
     "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
     "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
@@ -1712,6 +1735,35 @@
       "auto_recharge_enabled": null,
       "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
       "source": "https://platform.openai.com/settings/organization/billing/overview"
+    },
+    "runtime_gate": "disarmed_after_grounded_v2_failures",
+    "historical_vision016_credit_check": {
+      "status": "unverified_billing_browser_human_verification",
+      "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+      "free_credit_balance": null,
+      "available_credit_balance": null,
+      "auto_recharge_enabled": null,
+      "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+      "source": "https://platform.openai.com/settings/organization/billing/overview"
+    },
+    "gemini_credit_check": {
+      "status": "verified_read_only_paid_prepaid_account",
+      "available_credit_balance": null,
+      "currency": "EUR",
+      "free_credit_balance": "0",
+      "auto_recharge_enabled": false,
+      "source": "https://aistudio.google.com/billing",
+      "cost_delay": "page warns up to 24h or longer; zero current spend cannot settle failed requests",
+      "new_budget_authorized": false,
+      "balance_verified_privately": true,
+      "available_credit_status": "positive_prepaid_balance"
+    },
+    "timeout_reconciliation": {
+      "record": "validation/results/grounded-reader-v2/summary.json",
+      "method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+      "prior_timeouts": 8,
+      "cap_reset": false,
+      "retained_unknown_requests": 4
     }
   }
 }
