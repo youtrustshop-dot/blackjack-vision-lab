@@ -1,5 +1,14 @@
 # Card Lab project instructions
 
+- VISION-022, latest bounded user authorization, 2026-10-05: ONLY the exact
+  frozen PR16 paired smoke (three validation cases x two providers; six total,
+  no retries/warm-ups/development/holdout/hybrid). Freeze, prices and canonical
+  budget pass, but both read-only model metadata GETs time out at 10s with no
+  HTTP status. User requires stopping if a prerequisite fails: ZERO inference,
+  no epoch or reservation, runtime never armed. Ledger remains 94/102,
+  USD5.087190600 upper with all thirteen unknown charges; margin USD2.9128094.
+  Stop here; no automatic resumption or hybrid. See docs/PAIRED_CLOUD_SMOKE.md.
+
 - VISION-021, 2026-10-05: offline preparation only after PR15. Preserve PR13–15
   source/results, installed 1.1.1 and sealed final holdouts. Prepare fresh
   session/seed/hand/artwork-disjoint development and validation inputs, frozen

@@ -8,6 +8,14 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "paired-cloud-smoke-preflight",
+      "stage": "Frozen paired cloud smoke",
+      "candidate": "Luna Fast compact live-v3 vs Gemini structured-card-limit-local",
+      "status": "blocked",
+      "finding": "0/6 inference calls; both authenticated model GETs time out. Freeze/prices/budget pass, ledger unchanged; runtime never armed.",
+      "evidence": "validation/results/paired-cloud-smoke/preflight.json"
+    },
+    {
       "id": "paired-cloud-offline-preparation",
       "stage": "Fresh session-disjoint paired cloud readiness",
       "candidate": "Luna Fast compact live-v3 vs Gemini structured-card-limit-local",
@@ -1265,7 +1273,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "VISION-021 offline deliverable complete; STOP before any new paid request or operational allowance. R1 still undecided.",
+  "current_priority": "VISION-022 stopped at read-only model access timeout. No inference, retries or hybrid; R1 comparison unexecuted. Runtime stays disarmed.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1579,25 +1587,53 @@
       "final_holdout": "not_opened_not_created",
       "reader_promoted": false,
       "release_changed": false
+    },
+    {
+      "experiment_id": "VISION-022",
+      "parent_experiment_id": "VISION-021",
+      "status": "blocked",
+      "question": "Can the exact PR16 six-request paired smoke pass current model-access and unchanged aggregate budget prerequisites?",
+      "candidate_model_ids": [
+        "gpt-6-luna",
+        "gemini-3.5-flash-lite"
+      ],
+      "baseline_commit": "097cbba877fe694f542850c550d8854cf6d12b0c",
+      "split": "validation",
+      "assistance": "Unchanged frozen native table and role crops",
+      "budget": {
+        "max_new_requests": 6,
+        "worst_case_usd": "2.5310064",
+        "unchanged_lifetime_max_usd": "8",
+        "executed_new_requests": 0
+      },
+      "result": "validation/results/paired-cloud-smoke/preflight.json",
+      "report": "docs/PAIRED_CLOUD_SMOKE.md",
+      "decision": "Stop without inference: both read-only model access GETs timed out. No claim about key validity, credit or model quality.",
+      "next_action": "Read-only connectivity diagnosis if resumed; no automatic smoke or hybrid."
     }
   ],
   "latest_experiment": {
-    "experiment_id": "VISION-021",
-    "parent_experiment_id": "VISION-020",
-    "baseline_commit": "a5ea45428b670d8a0ff10f5d6d495ad534fa9fde",
-    "question": "Prepare a fresh paired Luna/Gemini comparison without spending or consuming final holdouts.",
-    "decision": "Offline corpus, exact native payloads, common evaluator and staged worst-case budget ready. No candidate promoted, no network/model calls.",
-    "next_step": "Stop. A new bounded explicit authorization is required for the proposed initial six paired requests. Conditional hybrid needs measured gates and admitting ledger.",
-    "status": "available",
-    "result": "validation/results/paired-cloud-preparation/summary.json",
-    "report": "docs/PAIRED_CLOUD_PREPARATION.md",
-    "api_requests": 0,
-    "new_development_scenes": 16,
-    "new_validation_scenes": 16,
-    "independent_source_sessions": 6,
-    "final_holdout": "not_opened_not_created",
-    "reader_promoted": false,
-    "release_changed": false
+    "experiment_id": "VISION-022",
+    "parent_experiment_id": "VISION-021",
+    "status": "blocked",
+    "question": "Can the exact PR16 six-request paired smoke pass current model-access and unchanged aggregate budget prerequisites?",
+    "candidate_model_ids": [
+      "gpt-6-luna",
+      "gemini-3.5-flash-lite"
+    ],
+    "baseline_commit": "097cbba877fe694f542850c550d8854cf6d12b0c",
+    "split": "validation",
+    "assistance": "Unchanged frozen native table and role crops",
+    "budget": {
+      "max_new_requests": 6,
+      "worst_case_usd": "2.5310064",
+      "unchanged_lifetime_max_usd": "8",
+      "executed_new_requests": 0
+    },
+    "result": "validation/results/paired-cloud-smoke/preflight.json",
+    "report": "docs/PAIRED_CLOUD_SMOKE.md",
+    "decision": "Stop without inference: both read-only model access GETs timed out. No claim about key validity, credit or model quality.",
+    "next_action": "Read-only connectivity diagnosis if resumed; no automatic smoke or hybrid."
   },
   "conditional_components": [
     {
@@ -1830,6 +1866,14 @@
       "prior_timeouts": 8,
       "cap_reset": false,
       "retained_unknown_requests": 4
+    },
+    "paired_smoke_preflight": {
+      "record": "validation/results/paired-cloud-smoke/preflight.json",
+      "status": "blocked_model_access_timeout",
+      "planned_inference_requests": 6,
+      "executed_inference_requests": 0,
+      "runtime_ever_armed": false,
+      "automatic_resumption": false
     }
   },
   "historical_state_snapshots": [
@@ -2373,6 +2417,180 @@
           "source": "https://platform.openai.com/settings/organization/billing/overview"
         },
         "runtime_gate": "disarmed_after_vision019",
+        "historical_vision016_credit_check": {
+          "status": "unverified_billing_browser_human_verification",
+          "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+          "free_credit_balance": null,
+          "available_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "gemini_credit_check": {
+          "status": "user_screenshot_positive_paid_prepaid_credit_and_generation_verified",
+          "available_credit_balance": null,
+          "currency": "EUR",
+          "free_credit_balance": "0",
+          "auto_recharge_enabled": false,
+          "source": "https://aistudio.google.com/billing",
+          "cost_delay": "page warns up to 24h or longer; zero current spend cannot settle failed requests",
+          "new_budget_authorized": false,
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_EUR5_prepaid_credit_in_user_screenshot"
+        },
+        "timeout_reconciliation": {
+          "record": "validation/results/grounded-reader-v2/summary.json",
+          "method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+          "prior_timeouts": 8,
+          "cap_reset": false,
+          "retained_unknown_requests": 4
+        }
+      }
+    },
+    {
+      "source_commit": "097cbba877fe694f542850c550d8854cf6d12b0c",
+      "reason": "Preserve PR16 offline latest-experiment and runtime policy verbatim before VISION-022 preflight-only stop.",
+      "latest_experiment": {
+        "experiment_id": "VISION-021",
+        "parent_experiment_id": "VISION-020",
+        "baseline_commit": "a5ea45428b670d8a0ff10f5d6d495ad534fa9fde",
+        "question": "Prepare a fresh paired Luna/Gemini comparison without spending or consuming final holdouts.",
+        "decision": "Offline corpus, exact native payloads, common evaluator and staged worst-case budget ready. No candidate promoted, no network/model calls.",
+        "next_step": "Stop. A new bounded explicit authorization is required for the proposed initial six paired requests. Conditional hybrid needs measured gates and admitting ledger.",
+        "status": "available",
+        "result": "validation/results/paired-cloud-preparation/summary.json",
+        "report": "docs/PAIRED_CLOUD_PREPARATION.md",
+        "api_requests": 0,
+        "new_development_scenes": 16,
+        "new_validation_scenes": 16,
+        "independent_source_sessions": 6,
+        "final_holdout": "not_opened_not_created",
+        "reader_promoted": false,
+        "release_changed": false
+      },
+      "api_access_policy": {
+        "inference_authorized": false,
+        "authorization_epoch": "2026-10-05-exact-gemini-schema-cause-eur10",
+        "max_requests": 0,
+        "max_usd": "0",
+        "reason": "VISION-020 exact causal witness obtained; unused diagnostic slots closed; no automatic inference",
+        "research_spending_authorization": {
+          "currency": "EUR",
+          "total_cap": "10",
+          "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
+          "supersedes": "2026-10-04-zero-budget",
+          "calls_executed": 93,
+          "cost_incurred": null,
+          "credential_choice": "reuse_existing_no_new_key",
+          "known_environment_credentials": "Existing Gemini key reused; exact schema trigger isolated; no key or billing changes.",
+          "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
+          "runtime_gate": "disarmed_after_bounded_exact_schema_diagnosis",
+          "record": "docs/GEMINI_SCHEMA_CAUSE.md",
+          "working_cap_usd": "8",
+          "max_requests": 102,
+          "ledger": "artifacts/api-budget/eur10-total-20261004.json",
+          "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
+          "budget_receipt": {
+            "requests_attempted": 94,
+            "max_requests": 102,
+            "max_usd": "8",
+            "accounted_upper_usd": "5.087190600",
+            "unknown_charge_requests": 13,
+            "network_attempts_claimed": 93,
+            "unknown_charge_reserved_usd": "4.9064744",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "user_reported_credit_topup": {
+            "currency": "EUR",
+            "amount": "10",
+            "account_balance_verified": false
+          },
+          "reported_usage_upper_charge_usd": "0.035521000",
+          "historical_vision016_budget_receipt": {
+            "requests_attempted": 70,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "7.422385000",
+            "unknown_charge_requests": 9,
+            "network_attempts_claimed": 70,
+            "unknown_charge_reserved_usd": "7.386864",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "lifetime_reserved_attempts": 94,
+          "calls_executed_scope": "claimed durable network attempts, not proof every HTTP body was sent",
+          "request_count_amendment": {
+            "previous_max_requests": 90,
+            "max_requests": 102,
+            "max_new_allowed": 12,
+            "used": 4,
+            "unused_closed": 8,
+            "max_usd_unchanged": "8",
+            "old_entries_and_unknown_charges_preserved": true
+          }
+        },
+        "credit_check": {
+          "status": "verified_read_only_authenticated_billing",
+          "checked_utc": "2026-10-05T13:05:15.438578+00:00",
+          "available_credit_balance": null,
+          "currency": "USD",
+          "free_credit_balance": null,
+          "auto_recharge_enabled": false,
+          "source": "https://platform.openai.com/settings/organization/billing/overview",
+          "usage_export": "69 prior requests verified; not final invoice",
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_prepaid_balance"
+        },
+        "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
+        "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
+        "account_model_access": {
+          "checked_utc": "2026-10-05T10:36:55.580364+00:00",
+          "credential_file": ".env.local",
+          "key_disclosed": false,
+          "inference_requests": 0,
+          "inputs_verified": 51,
+          "crops_verified": 168,
+          "budget": {
+            "requests_attempted": 0,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "0",
+            "unknown_charge_requests": 0,
+            "network_attempts_claimed": 0,
+            "unknown_charge_reserved_usd": "0",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "status": "read_only_access_verified",
+          "available_requested_models": [
+            "gpt-6-luna",
+            "gpt-6.1-sol"
+          ],
+          "balance_and_invoice": "unverified"
+        },
+        "first_inference_failure": {
+          "model": "gpt-6-luna",
+          "tier": "default",
+          "http_status": 429,
+          "error_type": "ProviderHTTPError",
+          "error_code": null,
+          "failed_attempt_elapsed_ms": 2556.598699999995,
+          "usage_reported": false,
+          "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+        },
+        "historical_credit_check": {
+          "status": "blocked_credit_verification",
+          "balance": null,
+          "free_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "runtime_gate": "disarmed_after_vision020_no_new_authorization",
         "historical_vision016_credit_check": {
           "status": "unverified_billing_browser_human_verification",
           "checked_utc": "2026-10-05T10:45:45.022546+00:00",

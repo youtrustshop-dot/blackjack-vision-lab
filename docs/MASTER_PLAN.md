@@ -1,6 +1,13 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-022, 2026-10-05: [smoke fermato al controllo preliminare](PAIRED_CLOUD_SMOKE.md).
+> Autorizzate solo sei richieste identiche alla PR16, ma eseguite **zero**: entrambi
+> i GET di accesso ai modelli scadono a 10s senza stato HTTP. Hash/prezzi/budget
+> verificati; ledger invariato, runtime mai armato. Il vincolo esplicito richiede
+> lo stop prima dell’inferenza: nessun retry o hybrid automatico. La qualità dei
+> candidati non è misurata; non attribuire il timeout a chiave, credito o schema.
+
 > VISION-021, preparazione offline completata, 2026-10-05: [confronto cloud nuovo](PAIRED_CLOUD_PREPARATION.md).
 > 32 immagini da sei sessioni naturali, sviluppo/validazione separati, 64 payload
 > congelati Luna Fast compact e Gemini structured-card-limit-local, evaluator comune.
