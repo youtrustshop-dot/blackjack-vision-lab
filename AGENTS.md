@@ -1,5 +1,33 @@
 # Card Lab project instructions
 
+- VISION-025, explicit human attachment 2026-10-06: execute ONLY four new
+  paired owned-still inferences (two cases x Luna Fast compact/Gemini structured
+  card-limit-local), then at most one conditional local-first hybrid inference.
+  Freeze new sessions/seeds/artwork, payloads, semantic evaluator and selection
+  rule before calls. Audit count ceiling 102 -> 105 from 100 consumed attempts;
+  preserve every old entry/unknown reservation and the lifetime USD8 monetary
+  cap. Batch worst-case <= USD2.2138736. Verify current prices/access/margin first.
+  No retries, paid warm-ups, new budget/key/billing, tuning, holdout, UI, Poker,
+  release or automatic next batch. A single absolute capture-to-headless-advisor
+  deadline includes local/routing/accounting/network/validation/math/serialization;
+  stale results fail closed. Actual connection reuse must be traced, not inferred
+  from the offline fixture. Disarm runtime and close unused slots after this lot.
+  This supersedes VISION-024's offline stop only for this bounded scope.
+
+- VISION-025 executed 2026-10-06: exactly four unique paired submissions;
+  Luna 0/2 strict/timely R1, two header-wait timeouts; Gemini 1/2, one HTTP200
+  local n[0] numeric-label rejection. Zero false accepts on this tiny sample.
+  Neither meets frozen 2/2 gate; no real hybrid. Real Gemini pool reuse traced;
+  no causal speedup or repaired DNS claimed. Broad controller stops retained;
+  scoped one-shot completion used only distinct unconsumed original pairs,
+  unchanged reader/pixels/prompt/evaluator/gate. 740 tests + 10 subtests pass.
+  Request ceiling 102 ->105 audited; money/old entries/13 old unknowns retained.
+  Final ledger 104/105, USD6.153279850 upper, 15 unknowns/USD5.9595464.
+  New reported-usage upper USD0.0044221 plus USD1.053072 timeout reserves;
+  neither is an invoice/current balance. Runtime disarmed, one unused slot
+  closed; no next API/hybrid/training/R2/Poker/UI/release without new human scope.
+  See docs/PAIRED_SEMANTIC_HYBRID.md; prior entries below are historical snapshots.
+
 - VISION-024, latest explicit user attachment, 2026-10-05: OFFLINE ONLY.
   Preserve PR17 sources/scores; add an opt-in versioned numeric-label policy
   shared by application gate and new evaluator. Retain original text, normalized

@@ -1,6 +1,23 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-025, completato 2026-10-06: [quattro chiamate semantiche nuove](PAIRED_SEMANTIC_HYBRID.md).
+> Due stati di sessioni sintetiche nuove, stessi pixel e criteri congelati:
+> Luna 0/2 JSON tempestivi, due timeout in attesa delle intestazioni; Gemini
+> 1/2 R1 corretti, una risposta HTTP200 respinta dal validatore numerico n[0].
+> Nessun candidato passa 2/2: **ibrido non avviato**, nessuna promozione.
+> Riuso reale delle connessioni Gemini osservato; beneficio causale non misurato.
+> Stop troppo ampi del controller conservati; completati soltanto i casi distinti
+> ancora inutilizzati, senza retry o cambi a reader/prompt/evaluator/soglie.
+> 740 test + 10 subtest passano. Stesso tetto USD8, sole richieste 102→105
+> autorizzate: ledger finale 104/105, upper USD6,153279850; riserve vecchie intatte.
+> Nuovi upper da usage USD0,0044221, più USD1,053072 di timeout non riconciliati.
+> Sono contabilità prudente, non spesa fatturata/saldo. Runtime disarmato,
+> ultimo slot chiuso; nessuna altra chiamata o sostituzione della 1.1.1.
+> **Limite principale: ottenere uno stato R1 valido entro 3 s.** Queste due
+> immagini per provider non dimostrano cattura/paint Windows o affidabilità
+> di sessione. Le voci successive restano evidenze storiche, senza nuovo piano.
+
 > VISION-024, completato 2026-10-06: [allineamento numerico offline](NUMERIC_PROVENANCE_ALIGNMENT.md).
 > Una regola versionata condivisa dal gate applicativo opt-in e dal nuovo evaluator
 > conserva testo, etichetta normalizzata, valore, ruolo e vista. Numeri/ruoli/viste

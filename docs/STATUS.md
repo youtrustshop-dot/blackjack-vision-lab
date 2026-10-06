@@ -1,4 +1,26 @@
-# Current delivery — VISION-024 offline numeric provenance alignment
+# Current delivery — VISION-025 four new paired semantic requests
+
+Exactly four unique submissions on two new owned session states, with frozen
+pixels/prompt/evaluator and the shared numeric policy. Luna delivers 0/2 strict
+timely R1 states (two header-wait timeouts); Gemini 1/2 (one HTTP200/local n[0]
+numeric-label rejection). No candidate passes the declared 2/2 gate, so the
+conditional hybrid is skipped. There is no new champion or working-advisor claim.
+
+Per-origin persistent connections are opt-in and traced: Gemini's two HTTP200
+responses reuse its established connection, but no causal speedup is measured.
+An absolute capture deadline includes reservation/claim, network, accounting,
+validation and the optional headless output path. Offline tests cover stale,
+expired and local-only routing; real Windows capture/paint remains unexecuted.
+
+740 Python tests plus 10 subtests pass. Same USD8 lifetime cap; count amendment
+102 ->105 from 100 consumed. Final ledger 104/105, USD6.153279850 accounted upper;
+all old entries/reserves retained. New reported-usage upper USD0.0044221 plus
+USD1.053072 unresolved-timeout reserves, not an invoice or current balance.
+Runtime disarmed and last unused slot closed. No further API/hybrid/training,
+UI, R2/Poker, holdout or installed-release work in this scope.
+[Outcomes, actual trace, accounting and offline commands](PAIRED_SEMANTIC_HYBRID.md).
+
+# Historical delivery — VISION-024 offline numeric provenance alignment
 
 The opt-in numeric-provenance-r1-v1 policy is shared by the application gate and
 new evaluator. Original labels/views are retained; incoherent values/roles/views
