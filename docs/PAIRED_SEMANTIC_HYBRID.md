@@ -48,7 +48,7 @@ after seeing the responses. The final holdout was not opened.
 
 ## Individual outcomes
 
-| Order / case | Requested candidate | Outcome | Complete capture-to-reader ms | Reported input / output tokens | Price-based upper USD |
+| Order / case | Requested candidate | Outcome | Complete prepared-frame-to-reader ms | Reported input / output tokens | Price-based upper USD |
 | --- | --- | --- | ---: | ---: | ---: |
 | 1 / labelled | GPT-6 Luna Fast compact | Timeout; no response headers or observation retained | 3016 | Unknown | Unknown; 0.526536 reserved |
 | 2 / labelled | Gemini 3.5 Flash Lite structured-card-limit-local | Strict valid, semantically complete and usable R1 | 2343 | 4816 / 353 | 0.0023273 |
@@ -118,6 +118,14 @@ source/table/pixel revalidation, existing math and headless serialization, with
 checks before and after serialization. It has no oracle argument or forced API
 route. That hybrid path was verified with offline fixtures, **not real API in
 this lot**, because no candidate met its prerequisites.
+
+For these paired stills, the timestamp is assigned when dispatching an already
+prepared frozen native frame. Disk loading and native crop preparation precede
+that marker; their durations are not included in the four reported reader times.
+There is no solver or advisor serialization in a paired observation request.
+The separate local-first path uses a current producer capture stamp and includes
+those later stages, but was exercised only with offline fixtures here. These
+reader times therefore do not stand in for measured capture-to-advisor latency.
 
 | POST trace, nested within full reader time | Luna labelled | Gemini labelled | Gemini rotated | Luna rotated |
 | --- | ---: | ---: | ---: | ---: |
