@@ -1,0 +1,79 @@
+{
+  "experiment": "VISION-027",
+  "epoch": "2026-10-07-two-provider-offline-diagnostics",
+  "parent_commit": "49d40036bef36fcf0658cf545946896d4d819f41",
+  "case": "fresh-rotated-unknown",
+  "order": [
+    "gemini-structured-card-limit-local",
+    "luna-fast-live-v3"
+  ],
+  "new_requests_maximum": 2,
+  "diagnostic_deadline_ms": 10000,
+  "live_deadline_ms_unchanged": 3000,
+  "scope": "consumed owned case repeated for failure diagnosis, not independent accuracy",
+  "advisor_connected": false,
+  "promote_candidate": false,
+  "retry": 0,
+  "paid_warmup": 0,
+  "hybrid": 0,
+  "batch_maximum_reservation_usd": "0.8436688",
+  "ledger_before": {
+    "sha256": "7793ff458df87b0abf10eca59f71a73e2be242a29c0687a82ae5c692be385895",
+    "receipt": {
+      "requests_attempted": 104,
+      "max_requests": 105,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.153279850",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 103,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "price_check": {
+    "verified_utc_date": "2026-10-07",
+    "sources": [
+      "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "https://developers.openai.com/api/docs/pricing",
+      "https://ai.google.dev/gemini-api/docs/pricing"
+    ],
+    "luna_standard_input": ".10",
+    "luna_standard_output": ".50",
+    "luna_cache_write_upper": ".125",
+    "luna_fast_multiplier": "2",
+    "luna_long_input_multiplier": "2",
+    "luna_long_output_multiplier": "1.5",
+    "gemini_standard_input": ".30",
+    "gemini_output_including_thinking": "2.50",
+    "method": "Current exact-model official pages opened before this authorized scope; no substitution."
+  },
+  "sources": {
+    "bjlab/offline_response_collector.py": "49b7f38313fce3379f801c3d46a8a0307221017232c8f53889135b2d46b42bc3",
+    "validation/tools/two_provider_diagnostics.py": "472edcebfd13250e1899e2c14f06fcbb0cb7d3008bbde7c9d821770775e9ff59",
+    "tests/test_offline_response_collector.py": "1565d1d7b637c81335617254315d67f3fc4a0c2d7f5654e7d8bd587be17a3880",
+    "bjlab/private_observation_store.py": "7a4a6b149a189031eadb3a22c73d1675859d19a7ebba165ab5d6d7a6141809f9",
+    "bjlab/rejected_output_diagnostics.py": "a3a9584dac5ed19260a9413b334d54aa23e39d9a86a4d8ca9b2866d6c98be3b3"
+  },
+  "prior_freeze_sha256": "f81df70de7c4a86d1adb274e0a0169ee72aed3bd888e46e75e411a011b927b58",
+  "payloads": {
+    "luna-fast-live-v3": {
+      "file": "fresh-rotated-unknown/luna-fast-live-v3.request.json",
+      "sha256": "dbd374a2420647c535ac1b0fd66e72a3b015ad44b4a26504ae192fbeb043c07f",
+      "canonical_sha256": "babe153b9161e786d7d01cda50db3a9e5588c049085883d8102d85c27e107b5a"
+    },
+    "gemini-structured-card-limit-local": {
+      "file": "fresh-rotated-unknown/gemini-structured-card-limit-local.request.json",
+      "sha256": "ac928614f15d3764e168326455e7bab1c55606cb634e8ae7df4e9e97df762b7a",
+      "canonical_sha256": "c28fe555037340e15f7a41de4f1a9755cf472093a6d4bbc73f8c84738900658b"
+    }
+  },
+  "image_sha256": [
+    "d7615d9e88ea7f3d09e12dc916d2f2a513ded8ec6081e70fac135043dfc1bdd4",
+    "71f3e2f86f837ec1c32cb6f5f8e3afbd7eac33e60e5ffa788cc3bfe169397e43",
+    "9cc32d0d1b44ea7dcb89c51ea7552854a06f1e322528b02ab9316eb8a990d626",
+    "ab0a8003c678b1cc77abbd272f615c9b67f3636a6051bb93c15fd327599d3efb"
+  ],
+  "authorization_attachment_sha256": "306c7baabf6377035e56d2163539f06f724a58d8869c677b3b0e47821f67f1fc"
+}

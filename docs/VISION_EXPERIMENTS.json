@@ -8,6 +8,15 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "two-provider-offline-diagnostics",
+      "stage": "New response text and extended-wait diagnosis, isolated from live advice",
+      "candidate": "Frozen Gemini structured-card-limit-local and Luna Fast compact on consumed owned PR19 input",
+      "status": "executed",
+      "finding": "Exactly two consumed-case diagnostic requests. Gemini new unlabelled20/dealer_total with null label is correctly rejected at n[0]; Luna strict/semantic/R1-valid at3.578s. Both encrypted locally, never advisor eligible; no p95/champion or independent validation. Runtime disarmed, count106/106 under unchanged USD8, old104 entries/all15 unknown reserves retained; no following batch.",
+      "source_parent_commit": "49d40036bef36fcf0658cf545946896d4d819f41",
+      "evidence": "validation/results/two-provider-diagnostics/summary.json"
+    },
+    {
       "id": "rejected-output-offline-diagnostics",
       "stage": "Private rejected-observation retention and validation-boundary diagnosis",
       "candidate": "Unchanged compact live-v3 reader and numeric-provenance-r1-v1 with opt-in diagnostic tap",
@@ -1309,7 +1318,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "VISION-023 completed the original six PR16 calls after scoped DNS mitigation. Both 2/3 timely correct usable R1, both 0/3 complete transcription; Gemini has one frozen literal-label false accept, Luna one timeout. No champion. Runtime disarmed; stop, no automatic paid batch or hybrid.",
+  "current_priority": "Exactly two consumed-case diagnostic requests. Gemini new unlabelled20/dealer_total with null label is correctly rejected at n[0]; Luna strict/semantic/R1-valid at3.578s. Both encrypted locally, never advisor eligible; no p95/champion or independent validation. Runtime disarmed, count106/106 under unchanged USD8, old104 entries/all15 unknown reserves retained; no following batch.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1672,30 +1681,56 @@
       "reader_promoted": false,
       "release_changed": false,
       "final_holdout": "not_opened"
+    },
+    {
+      "experiment_id": "VISION-027",
+      "parent_experiment_id": "VISION-026",
+      "status": "executed",
+      "baseline_commit": "49d40036bef36fcf0658cf545946896d4d819f41",
+      "question": "Retain exact new Gemini rejection and measure one full Luna completion within10s, outside app/advisor.",
+      "split": "consumed_owned_diagnostic_repeat_not_independent_validation",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite",
+        "gpt-6-luna"
+      ],
+      "budget": {
+        "max_new_requests": 2,
+        "executed_new_requests": 2,
+        "worst_case_usd": "0.8436688",
+        "reported_usage_upper_usd": "0.00289605",
+        "unchanged_lifetime_max_usd": "8"
+      },
+      "result": "validation/results/two-provider-diagnostics/summary.json",
+      "report": "docs/TWO_PROVIDER_DIAGNOSTICS.md",
+      "decision": "Exactly two consumed-case diagnostic requests. Gemini new unlabelled20/dealer_total with null label is correctly rejected at n[0]; Luna strict/semantic/R1-valid at3.578s. Both encrypted locally, never advisor eligible; no p95/champion or independent validation. Runtime disarmed, count106/106 under unchanged USD8, old104 entries/all15 unknown reserves retained; no following batch.",
+      "next_action": "Stop: scope consumed, runtime disarmed; no automatic inference/hybrid/tuning or promotion.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened"
     }
   ],
   "latest_experiment": {
-    "experiment_id": "VISION-023",
-    "parent_experiment_id": "VISION-022",
+    "experiment_id": "VISION-027",
+    "parent_experiment_id": "VISION-026",
     "status": "executed",
-    "baseline_commit": "ff6681a5448b6d90bb4da1af0358cab1912031bd",
-    "question": "Localize connection failure and resume only the original six PR16 paired requests.",
-    "split": "validation",
+    "baseline_commit": "49d40036bef36fcf0658cf545946896d4d819f41",
+    "question": "Retain exact new Gemini rejection and measure one full Luna completion within10s, outside app/advisor.",
+    "split": "consumed_owned_diagnostic_repeat_not_independent_validation",
     "candidate_model_ids": [
-      "gpt-6-luna",
-      "gemini-3.5-flash-lite"
+      "gemini-3.5-flash-lite",
+      "gpt-6-luna"
     ],
     "budget": {
-      "max_new_requests": 6,
-      "executed_new_requests": 6,
-      "worst_case_usd": "2.5310064",
-      "reported_usage_upper_usd": "0.008595150",
+      "max_new_requests": 2,
+      "executed_new_requests": 2,
+      "worst_case_usd": "0.8436688",
+      "reported_usage_upper_usd": "0.00289605",
       "unchanged_lifetime_max_usd": "8"
     },
-    "result": "validation/results/cloud-connection-paired-smoke/summary.json",
-    "report": "docs/CLOUD_CONNECTION_PAIRED_SMOKE.md",
-    "decision": "DNS stage localized; expiring OS-resolved per-client addresses pass both exact authenticated model GETs with unchanged TLS. Six paired calls complete; Luna 2/3 correct timely R1 plus one timeout; Gemini 2/3 plus one literal-label provenance false accept. Both 0/3 complete transcription. No champion or hybrid.",
-    "next_action": "Stop with runtime disarmed. No remaining inference authorization; no automatic hybrid, tuning, R2/Poker or release.",
+    "result": "validation/results/two-provider-diagnostics/summary.json",
+    "report": "docs/TWO_PROVIDER_DIAGNOSTICS.md",
+    "decision": "Exactly two consumed-case diagnostic requests. Gemini new unlabelled20/dealer_total with null label is correctly rejected at n[0]; Luna strict/semantic/R1-valid at3.578s. Both encrypted locally, never advisor eligible; no p95/champion or independent validation. Runtime disarmed, count106/106 under unchanged USD8, old104 entries/all15 unknown reserves retained; no following batch.",
+    "next_action": "Stop: scope consumed, runtime disarmed; no automatic inference/hybrid/tuning or promotion.",
     "reader_promoted": false,
     "release_changed": false,
     "final_holdout": "not_opened"
@@ -1783,33 +1818,33 @@
   ],
   "api_access_policy": {
     "inference_authorized": false,
-    "authorization_epoch": "2026-10-06-paired-semantic-four-plus-one",
+    "authorization_epoch": "2026-10-07-two-provider-offline-diagnostics",
     "max_requests": 0,
     "max_usd": "0",
-    "reason": "VISION-025 original four comparisons consumed; neither passed gate. Hybrid skipped, unused slot closed; no new inference authorized.",
+    "reason": "VISION-027 exactly two diagnostics consumed; no further inference authorized.",
     "research_spending_authorization": {
       "currency": "EUR",
       "total_cap": "10",
       "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
       "supersedes": "2026-10-04-zero-budget",
-      "calls_executed": 103,
+      "calls_executed": 105,
       "cost_incurred": null,
       "credential_choice": "reuse_existing_no_new_key",
       "known_environment_credentials": "Existing Gemini key reused; exact schema trigger isolated; no key or billing changes.",
       "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
-      "runtime_gate": "disarmed_after_paired_semantic_four",
-      "record": "docs/PAIRED_SEMANTIC_HYBRID.md",
+      "runtime_gate": "disarmed_after_two_offline_diagnostics",
+      "record": "docs/TWO_PROVIDER_DIAGNOSTICS.md",
       "working_cap_usd": "8",
-      "max_requests": 105,
+      "max_requests": 106,
       "ledger": "artifacts/api-budget/eur10-total-20261004.json",
       "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
       "budget_receipt": {
-        "requests_attempted": 104,
-        "max_requests": 105,
+        "requests_attempted": 106,
+        "max_requests": 106,
         "max_usd": "8",
-        "accounted_upper_usd": "6.153279850",
+        "accounted_upper_usd": "6.156175900",
         "unknown_charge_requests": 15,
-        "network_attempts_claimed": 103,
+        "network_attempts_claimed": 105,
         "unknown_charge_reserved_usd": "5.9595464",
         "stopped": false,
         "invoice_and_balance_verified": false,
@@ -1932,7 +1967,7 @@
       "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
       "source": "https://platform.openai.com/settings/organization/billing/overview"
     },
-    "runtime_gate": "disarmed_after_paired_semantic_four",
+    "runtime_gate": "disarmed_after_two_offline_diagnostics",
     "historical_vision016_credit_check": {
       "status": "unverified_billing_browser_human_verification",
       "checked_utc": "2026-10-05T10:45:45.022546+00:00",
@@ -1993,6 +2028,38 @@
       "new_unknown_timeout_reserves_usd": "1.0530720",
       "actual_completed_connection_reuse_observed": true,
       "causal_speedup_measured": false
+    },
+    "historical_vision025_closed_scope": {
+      "authorization_epoch": "2026-10-06-paired-semantic-four-plus-one",
+      "reason": "VISION-025 original four comparisons consumed; neither passed gate. Hybrid skipped, unused slot closed; no new inference authorized.",
+      "runtime_gate": "disarmed_after_paired_semantic_four",
+      "budget_receipt": {
+        "requests_attempted": 104,
+        "max_requests": 105,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.153279850",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 103,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      }
+    },
+    "two_provider_diagnostic_execution": {
+      "experiment_id": "VISION-027",
+      "record": "validation/results/two-provider-diagnostics/summary.json",
+      "executed_requests": 2,
+      "retries": 0,
+      "paid_warmups": 0,
+      "hybrid": 0,
+      "advisor_connected": false,
+      "scope_consumed": true,
+      "new_unused_slots_closed": 0,
+      "old_unused_scope_stays_closed": true,
+      "old_reservations_preserved": true,
+      "count_amendment": "105->106; unchanged USD8",
+      "new_reported_usage_upper_usd": "0.00289605"
     }
   },
   "historical_state_snapshots": [

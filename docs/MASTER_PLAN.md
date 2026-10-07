@@ -1,6 +1,18 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-027, completato 2026-10-07: [due diagnosi circoscritte](TWO_PROVIDER_DIAGNOSTICS.md).
+> Stessi pixel/payload consumati, una Gemini e una Luna; attesa separata fino
+> a 10 s, mai nell'advisor. Gemini attribuisce il 20 senza etichetta al totale
+> del banco: il controllo n[0] lo rifiuta correttamente. Luna legge lo stato
+> con provenienza valida in 3,578 s: oltre il limite live di 3 s. Il vecchio
+> testo perso non è recuperato; non sappiamo i tempi dei vecchi timeout.
+> 794 test + 10 subtest passano; output cifrati e verificati. Sole richieste
+> autorizzate 105→106: ledger 106/106, upper USD6,156175900, costo da usage
+> del lotto USD0,00289605, 15 riserve vecchie intatte, tetto USD8 invariato.
+> Runtime disarmato, scope chiuso. Nessuna promozione/ibrido o altro lotto
+> automatico. Serve ancora prova di affidabilità live; nessun nuovo piano.
+
 > VISION-026, completato offline 2026-10-07: [diagnosi degli output rifiutati](REJECTED_OUTPUT_DIAGNOSTICS.md).
 > Il testo sintetico autorizzato potrà essere conservato cifrato prima del
 > rifiuto, con versione del contratto, hash e causa; nessuna chiave/header

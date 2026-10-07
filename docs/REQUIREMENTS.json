@@ -4,14 +4,14 @@
   "verification": {
     "version": "1.1.1",
     "status": "unreleased-source-verified",
-    "completed_test_run": "782 passed, 2 existing warnings, 10 subtests passed in 89.71s",
-    "frontend_tests": "52 verified PR19 head CI; UI unchanged, not rerun locally in VISION-026",
+    "completed_test_run": "794 passed, 2 existing warnings, 10 subtests passed in 91.99s",
+    "frontend_tests": "52 verified PR19 head CI; UI unchanged, not rerun locally in VISION-027",
     "frontend_build": "52 frontend tests on PR19 head CI; TypeScript/Vite passed; no new local UI check",
     "latest_changes_require_retest": false,
-    "source_evidence": "validation/results/rejected-output-diagnostics/verification.json",
+    "source_evidence": "validation/results/two-provider-diagnostics/verification.json",
     "release_evidence": "release/v1.1.1/",
     "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
-    "verification_scope": "VISION-026 offline only: private current-user DPAPI output retention, strict parse/invariant/normalization/R1 diagnosis, unchanged three-second reader and diagnostic-only late/stale fixtures. 15 fabricated cases + actual Windows roundtrip. No API/metadata/DNS/credentials or ledger change, runtime disarmed; prior missing output still missing. Two-request longer-wait diagnosis is proposed only.",
+    "verification_scope": "VISION-027: networkless ten-second standalone collector fixtures then exactly two consumed-case diagnostic inferences. Gemini new unsupported unlabelled total rejected; Luna valid content at3.578s, outside3s. Both protected texts recovered, no advisor/hybrid/promotion. Count106/106, same USD8, all old entries/reserves intact, runtime disarmed. No independent validation or live capture/paint/session proof.",
     "historical_v1_1_1_verification": {
       "version": "1.1.1",
       "status": "source-verified",
@@ -140,6 +140,13 @@
       "release_evidence": "release/v1.1.1/",
       "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
       "verification_scope": "VISION-025: four new paired owned still submissions; Luna 0/2 timely strict R1, Gemini 1/2. Shared frozen numeric policy and real traced per-origin pooling; no causal speedup. No candidate passes 2/2, hybrid skipped. Count-only amendment 102->105, all old entries/unknowns retained, runtime disarmed, one unused slot closed. No promotion, native capture/paint, release or final holdout."
+    },
+    "previous_vision026_source_check": {
+      "completed_test_run": "782 passed, 2 existing warnings, 10 subtests passed in 89.71s",
+      "frontend_tests": "52 verified PR19 head CI; UI unchanged, not rerun locally in VISION-026",
+      "frontend_build": "52 frontend tests on PR19 head CI; TypeScript/Vite passed; no new local UI check",
+      "source_evidence": "validation/results/rejected-output-diagnostics/verification.json",
+      "verification_scope": "VISION-026 offline only: private current-user DPAPI output retention, strict parse/invariant/normalization/R1 diagnosis, unchanged three-second reader and diagnostic-only late/stale fixtures. 15 fabricated cases + actual Windows roundtrip. No API/metadata/DNS/credentials or ledger change, runtime disarmed; prior missing output still missing. Two-request longer-wait diagnosis is proposed only."
     }
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",

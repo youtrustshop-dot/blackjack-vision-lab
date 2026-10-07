@@ -1,4 +1,22 @@
-# Current delivery — VISION-026 rejected output diagnostics, offline only
+# Current delivery — VISION-027 two consumed-case diagnostics, closed
+
+Exactly one Gemini and one Luna response collected separately, up to 10s,
+on unchanged consumed owned PR19 pixels/payloads. Gemini's new text assigns
+unlabelled 20 as dealer_total without a label: strict n[0] rejection is correct.
+Luna's content passes unchanged strict/numeric/R1 checks at 3.578s, outside the
+3s live boundary. Gemini completes at 3.297s. Both texts are encrypted locally,
+hash-verified and excluded from advisor; no p95 or champion from one/model.
+
+794 Python tests + 10 subtests pass. Exact-model access/prices and protected
+storage verified before calls; count ceiling 105->106 audited under the same
+USD8 cap. Final ledger 106/106, USD6.156175900 upper, old 104 entries and all
+15 uncertain reserves intact. New usage upper USD0.00289605, not an invoice.
+No retries, warm-ups, hybrid, tuning, holdout, installed release or automatic
+next batch. Runtime disarmed and pools closed. Historical raw answer remains
+missing; no past timeout completion time or live Windows/session proof.
+[Individual outcomes, timing and decision](TWO_PROVIDER_DIAGNOSTICS.md).
+
+# Historical delivery — VISION-026 rejected output diagnostics, offline only
 
 Future explicitly reviewed owned synthetic outputs can be retained before the
 unchanged strict reader rejects them, with their local cause and contract/policy

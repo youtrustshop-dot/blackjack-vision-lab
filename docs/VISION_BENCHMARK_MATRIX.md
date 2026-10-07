@@ -1,4 +1,11 @@
-Current delivery (VISION-026): [rejected-output diagnostics](REJECTED_OUTPUT_DIAGNOSTICS.md).
+Current delivery (VISION-027): [two consumed-case diagnostics](TWO_PROVIDER_DIAGNOSTICS.md).
+One Gemini and one Luna, exact PR19 pixels/payloads, up to 10s outside the app.
+Gemini's unsupported total attribution is now observed in retained new text;
+Luna has valid R1 content at 3.578s, outside 3s. Full text stays encrypted locally.
+106/106 attempts under unchanged USD8; two new usage receipts USD0.00289605.
+No champion, live/hybrid/session proof, retry or automatic following batch.
+
+Historical delivery (VISION-026): [rejected-output diagnostics](REJECTED_OUTPUT_DIAGNOSTICS.md).
 Zero API calls: 15 fabricated contract cases, protected Windows roundtrip and
 unchanged strict numeric/semantic/R1 boundaries. The rejected PR19 raw text is
 still missing; Luna's real pooled header-wait timeouts stay negative evidence.

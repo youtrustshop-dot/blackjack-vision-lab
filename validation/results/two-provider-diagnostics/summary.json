@@ -1,0 +1,623 @@
+{
+  "experiment": "VISION-027",
+  "access": [
+    {
+      "candidate": "gemini-structured-card-limit-local",
+      "exact_model_access": true,
+      "http_status": 200,
+      "client_initialization_ms": 47.0,
+      "metadata_timing": {
+        "http_status": 200,
+        "headers_received_ms": 250.0,
+        "body_complete_ms": 250.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 250.0,
+        "trace": [
+          {
+            "stage": "connect_tcp",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "connect_tcp",
+            "action": "complete",
+            "at_ms": 31.0,
+            "duration_ms": 31.0
+          },
+          {
+            "stage": "start_tls",
+            "action": "started",
+            "at_ms": 31.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "start_tls",
+            "action": "complete",
+            "at_ms": 125.0,
+            "duration_ms": 94.0
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 125.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 125.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 125.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 125.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 125.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 250.0,
+            "duration_ms": 125.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 250.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 250.0,
+            "duration_ms": 0.0
+          }
+        ],
+        "connect_tcp_attempts": 1,
+        "pool_prior_requests": 0,
+        "reused_connection_observed": false,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true
+      }
+    },
+    {
+      "candidate": "luna-fast-live-v3",
+      "exact_model_access": true,
+      "http_status": 200,
+      "client_initialization_ms": 31.0,
+      "metadata_timing": {
+        "http_status": 200,
+        "headers_received_ms": 1016.0,
+        "body_complete_ms": 1016.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 1016.0,
+        "trace": [
+          {
+            "stage": "connect_tcp",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "connect_tcp",
+            "action": "complete",
+            "at_ms": 32.0,
+            "duration_ms": 32.0
+          },
+          {
+            "stage": "start_tls",
+            "action": "started",
+            "at_ms": 32.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "start_tls",
+            "action": "complete",
+            "at_ms": 79.0,
+            "duration_ms": 47.0
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 79.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 79.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 79.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 79.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 79.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 1016.0,
+            "duration_ms": 937.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 1016.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 1016.0,
+            "duration_ms": 0.0
+          }
+        ],
+        "connect_tcp_attempts": 1,
+        "pool_prior_requests": 0,
+        "reused_connection_observed": false,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true
+      }
+    }
+  ],
+  "initialization_separate": {
+    "private_storage_preflight_ms": 141.0,
+    "dns_preresolution_ms": 5390.0
+  },
+  "attempted_diagnostics": 2,
+  "new_reservations": 2,
+  "maximum_inferences": 2,
+  "count_amendment_executed": true,
+  "new_scope_unused_slots_closed": 0,
+  "old_unused_scope_stays_closed": true,
+  "ledger_before": {
+    "sha256": "7793ff458df87b0abf10eca59f71a73e2be242a29c0687a82ae5c692be385895",
+    "receipt": {
+      "requests_attempted": 104,
+      "max_requests": 105,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.153279850",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 103,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "ledger_after": {
+    "sha256": "b73a4697f0e59c173e8756e00f1ab5c5a297bb329e78d57066397955c1c94c44",
+    "receipt": {
+      "requests_attempted": 106,
+      "max_requests": 106,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.156175900",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 105,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "all_104_historical_entries_unchanged": true,
+  "runtime_disarmed": true,
+  "pools_closed": true,
+  "no_automatic_resumption": true,
+  "advisor_connected": false,
+  "champion_promoted": false,
+  "hybrid_requests": 0,
+  "retries": 0,
+  "paid_warmup": 0,
+  "p95": null,
+  "price_check": {
+    "verified_utc_date": "2026-10-07",
+    "sources": [
+      "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "https://developers.openai.com/api/docs/pricing",
+      "https://ai.google.dev/gemini-api/docs/pricing"
+    ],
+    "luna_standard_input": ".10",
+    "luna_standard_output": ".50",
+    "luna_cache_write_upper": ".125",
+    "luna_fast_multiplier": "2",
+    "luna_long_input_multiplier": "2",
+    "luna_long_output_multiplier": "1.5",
+    "gemini_standard_input": ".30",
+    "gemini_output_including_thinking": "2.50",
+    "method": "Current exact-model official pages opened before this authorized scope; no substitution."
+  },
+  "freeze_sha256": "25a471f0aa3028d9d31e3d7a34d340a32c2a8f77b188baf4265d6a87437ef985",
+  "stop": null,
+  "rows": [
+    {
+      "candidate": "gemini-structured-card-limit-local",
+      "status": "completed",
+      "content_diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "pre_normalization_invariant_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [
+          {
+            "location": [
+              "n",
+              0
+            ],
+            "type": "value_error",
+            "rule": "explicit_total_label_required"
+          }
+        ],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      },
+      "usage": {
+        "input_tokens": 4816,
+        "output_tokens": 300
+      },
+      "reported_usage_upper_usd": "0.0021948",
+      "usage_settled": true,
+      "reserved_usd": "0.3171328",
+      "total_through_validation_ms": 3297.0,
+      "stage_spans": [
+        {
+          "stage": "frozen_payload",
+          "start_ms": 0.0,
+          "end_ms": 0.0
+        },
+        {
+          "stage": "reservation",
+          "start_ms": 0.0,
+          "end_ms": 15.0
+        },
+        {
+          "stage": "post",
+          "start_ms": 15.0,
+          "end_ms": 3297.0
+        },
+        {
+          "stage": "usage_audit_and_settlement",
+          "start_ms": 3297.0,
+          "end_ms": 3297.0
+        },
+        {
+          "stage": "unchanged_contract_normalization_r1",
+          "start_ms": 3297.0,
+          "end_ms": 3297.0
+        }
+      ],
+      "request_post_start_ms": 15.0,
+      "transport": {
+        "http_status": 200,
+        "headers_received_ms": 3282.0,
+        "body_complete_ms": 3282.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 3282.0,
+        "trace": [
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 16.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 16.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 16.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 157.0,
+            "duration_ms": 141.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 157.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 3282.0,
+            "duration_ms": 3125.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 3282.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 3282.0,
+            "duration_ms": 0.0
+          }
+        ],
+        "connect_tcp_attempts": 0,
+        "pool_prior_requests": 1,
+        "reused_connection_observed": true,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true,
+        "submission_claim_ms": 0.0,
+        "post_including_claim_ms": 3282.0
+      },
+      "output_sha256": "7796317783c93f6cb5d1ce63621f03ec8a7f1ed316e728873c755623d04889b4",
+      "output_bytes": 655,
+      "within_unchanged_live_boundary": false,
+      "eligible_for_live": false,
+      "advisor_connected": false,
+      "clock_scope": "diagnostic collect start through accounting and unchanged validation; storage separate",
+      "protected_storage_ms": 15.0,
+      "pool_closed": true,
+      "encrypted_text_recovered_and_hash_verified": true,
+      "full_raw_output_published": false,
+      "completed_bodies": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "strict_usable_content": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "diagnostic_pixel_review": {
+        "matching_face_ranks": [
+          3,
+          3
+        ],
+        "matching_face_suits": [
+          3,
+          3
+        ],
+        "matching_covered_objects": [
+          1,
+          1
+        ],
+        "matching_phase": [
+          1,
+          1
+        ],
+        "matching_controls": [
+          2,
+          2
+        ],
+        "scope": "Consumed owned case inspected after submission; not independent validation or live evidence"
+      },
+      "unsupported_total_attribution": true
+    },
+    {
+      "candidate": "luna-fast-live-v3",
+      "status": "completed",
+      "content_diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "valid_usable_content",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "passed"
+          },
+          {
+            "stage": "number_semantic_normalization",
+            "outcome": "passed"
+          },
+          {
+            "stage": "shared_r1_gate",
+            "outcome": "passed"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      },
+      "usage": {
+        "input_tokens": 2237,
+        "output_tokens": 142
+      },
+      "reported_usage_upper_usd": "0.00070125",
+      "usage_settled": true,
+      "reserved_usd": "0.526536",
+      "total_through_validation_ms": 3578.0,
+      "stage_spans": [
+        {
+          "stage": "frozen_payload",
+          "start_ms": 0.0,
+          "end_ms": 0.0
+        },
+        {
+          "stage": "reservation",
+          "start_ms": 0.0,
+          "end_ms": 0.0
+        },
+        {
+          "stage": "post",
+          "start_ms": 0.0,
+          "end_ms": 3578.0
+        },
+        {
+          "stage": "usage_audit_and_settlement",
+          "start_ms": 3578.0,
+          "end_ms": 3578.0
+        },
+        {
+          "stage": "unchanged_contract_normalization_r1",
+          "start_ms": 3578.0,
+          "end_ms": 3578.0
+        }
+      ],
+      "request_post_start_ms": 0.0,
+      "transport": {
+        "http_status": 200,
+        "headers_received_ms": 3516.0,
+        "body_complete_ms": 3563.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 3563.0,
+        "trace": [
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 0.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 110.0,
+            "duration_ms": 110.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 110.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 3500.0,
+            "duration_ms": 3390.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 3516.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 3563.0,
+            "duration_ms": 47.0
+          }
+        ],
+        "connect_tcp_attempts": 0,
+        "pool_prior_requests": 1,
+        "reused_connection_observed": true,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true,
+        "submission_claim_ms": 15.0,
+        "post_including_claim_ms": 3578.0
+      },
+      "output_sha256": "48eaf9a0042c73af3105832a9c181e083a0ff53230bfa4bda202583ddafebe98",
+      "output_bytes": 351,
+      "within_unchanged_live_boundary": false,
+      "eligible_for_live": false,
+      "advisor_connected": false,
+      "clock_scope": "diagnostic collect start through accounting and unchanged validation; storage separate",
+      "protected_storage_ms": 16.0,
+      "pool_closed": true,
+      "encrypted_text_recovered_and_hash_verified": true,
+      "full_raw_output_published": false,
+      "completed_bodies": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "strict_usable_content": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "diagnostic_pixel_review": {
+        "matching_face_ranks": [
+          3,
+          3
+        ],
+        "matching_face_suits": [
+          3,
+          3
+        ],
+        "matching_covered_objects": [
+          1,
+          1
+        ],
+        "matching_phase": [
+          1,
+          1
+        ],
+        "matching_controls": [
+          2,
+          2
+        ],
+        "scope": "Consumed owned case inspected after submission; not independent validation or live evidence"
+      },
+      "unsupported_total_attribution": false
+    }
+  ],
+  "case": "fresh-rotated-unknown",
+  "scope": "consumed owned case repeated for failure diagnosis, not independent accuracy",
+  "new_reported_usage_upper_usd": "0.00289605",
+  "margin_to_unchanged_cap_usd": "1.843824100",
+  "invoice_or_current_balance": false,
+  "prior_missing_gemini_response_recovered": false,
+  "past_luna_response_times_reconstructed": false,
+  "old_history_sources_weights_payloads_audit_passed": true
+}

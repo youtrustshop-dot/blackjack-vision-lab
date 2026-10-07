@@ -1,5 +1,35 @@
 # Card Lab project instructions
 
+- VISION-027, latest explicit human attachment 2026-10-07: preserve PR20 and
+  execute ONLY two diagnostic inferences, Gemini then Luna, on consumed owned
+  fresh-rotated-unknown PR19 pixels and unchanged prompt/model/schema/output cap.
+  First verify a separate offline collector with early/late/timeout/storage
+  fixtures; all its responses are diagnostic-only, even below three seconds.
+  Maximum diagnostic wait 10s each; unchanged live deadline 3s. No advisor,
+  solver, hybrid, retries, paid warm-up, new model/tuning or automatic follow-up.
+  New audited scope: two slots, lifetime count105->106 from104 attempts; retain
+  every historical entry/uncertain reserve and USD8 monetary cap. Batch reserve
+  <=USD0.8436688; recheck prices/access/canonical margin before submissions.
+  Stop on access/accounting/protected-retention failure, disarm/close unused
+  slots after the bounded lot. Preserve selected output encrypted, contract,
+  hashes, rejection cause, usage and headers/body/validation timing; no secrets
+  or raw provider envelope in reports. Compare returned content with reviewed
+  pixels without relaxing gates. No p95/champion from one request per model.
+  Frozen readers/weights/UI/engine/Poker/holdouts/installed release unchanged.
+  This supersedes VISION-026's offline stop ONLY for these two diagnostics.
+
+- VISION-027 executed: exactly two diagnostics, unchanged consumed case/payloads.
+  Gemini HTTP200 at3.297s: new n[0] attributes unlabelled20 to dealer_total with
+  no label, correctly rejected by explicit_total_label_required. Luna HTTP200
+  at3.578s: strict/semantic/R1 content valid, too late for live. Both outputs
+  encrypted/recovered/hash-verified; neither ever advisor-eligible. Past missing
+  Gemini text and past Luna completion times remain unknown. No p95/promotion.
+  794 tests +10 subtests pass; scope closed, runtime disarmed, pools closed.
+  Exactly two new usage receipts USD0.00289605; final106/106 and
+  USD6.156175900 upper, old104 entries/all15 unknown reserves unchanged, USD8
+  cap retained. No retry/warm-up/hybrid, further inference, tuning, holdout,
+  UI/engine/Poker/weights/release change. See docs/TWO_PROVIDER_DIAGNOSTICS.md.
+
 - VISION-026, explicit latest user attachment 2026-10-07: OFFLINE ONLY.
   Close VISION-025 as no live candidate promoted. Prepare protected local
   retention of selected rejected synthetic outputs before further inference;
