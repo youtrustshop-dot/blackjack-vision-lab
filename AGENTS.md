@@ -1,5 +1,29 @@
 # Card Lab project instructions
 
+- VISION-026, explicit latest user attachment 2026-10-07: OFFLINE ONLY.
+  Close VISION-025 as no live candidate promoted. Prepare protected local
+  retention of selected rejected synthetic outputs before further inference;
+  diagnose exact parsing/strict invariants/semantic normalization/R1 boundaries.
+  Do not weaken controls, reconstruct the missing PR19 output, blame badge 20,
+  rewrite old scores or treat real pooling as a new unimplemented fix.
+  No new API/DNS/access/billing call, epoch/reservation/ledger change, reader,
+  weights, engine, popup, holdout, training, R2/Poker or installed release.
+  Propose only the minimum future content/longer-wait diagnostic lot, specifying
+  count/deadline/reserve and permanent exclusion from current advice after 3s.
+
+- VISION-026 executed: opt-in output-text tap before unchanged strict reader;
+  post-read current-user Windows DPAPI retention, current-user/SYSTEM DACL,
+  Git-ignored storage, bounded 32 records/seven-day access with expiry cleanup.
+  15 fabricated contract cases, actual Windows roundtrip and 42 new networkless
+  fixtures; 782 tests + 10 subtests pass. No fresh cloud quality/latency evidence.
+  Past 566-byte output still missing; no relaxed label/arithmetic gate.
+  Prior source/pixels/models/history audit passes, ledger byte-identical 104/105
+  and USD6.153279850 upper; runtime disarmed and old unused slot closed.
+  Proposed only: two consumed-owned-case diagnostic requests, max10s each,
+  USD0.8436688 snapshot reservation; count105->106 requires new explicit
+  authorization. No new epoch, inference or longer-wait network runner executed.
+  See docs/REJECTED_OUTPUT_DIAGNOSTICS.md. Earlier entries remain history.
+
 - VISION-025, explicit human attachment 2026-10-06: execute ONLY four new
   paired owned-still inferences (two cases x Luna Fast compact/Gemini structured
   card-limit-local), then at most one conditional local-first hybrid inference.

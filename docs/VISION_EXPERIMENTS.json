@@ -8,6 +8,16 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "rejected-output-offline-diagnostics",
+      "stage": "Private rejected-observation retention and validation-boundary diagnosis",
+      "candidate": "Unchanged compact live-v3 reader and numeric-provenance-r1-v1 with opt-in diagnostic tap",
+      "status": "executed",
+      "finding": "Zero provider calls. 15 fabricated contract cases and actual Windows DPAPI/DACL roundtrip preserve exact rejected text without provider envelope/headers. Invariants precede semantic normalization; contradictions/timeouts/stale bodies remain rejected. Frozen PR19 evidence and ledger unchanged. Missing prior 566-byte response remains missing; no live promotion or new latency/accuracy evidence.",
+      "source_parent_commit": "1770c32cc170c0c194c7d5309a2ed6787cc899a3",
+      "evidence": "validation/results/rejected-output-diagnostics/summary.json",
+      "proposal_only": "validation/results/rejected-output-diagnostics/proposal.json"
+    },
+    {
       "id": "paired-semantic-four-plus-one",
       "stage": "Four new paired still responses under shared semantics and an absolute capture deadline",
       "candidate": "Frozen Luna Fast compact live-v3 vs Gemini structured-card-limit-local; numeric-provenance-r1-v1",

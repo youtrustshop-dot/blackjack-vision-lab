@@ -1,3 +1,12 @@
+Current delivery (VISION-026): [rejected-output diagnostics](REJECTED_OUTPUT_DIAGNOSTICS.md).
+Zero API calls: 15 fabricated contract cases, protected Windows roundtrip and
+unchanged strict numeric/semantic/R1 boundaries. The rejected PR19 raw text is
+still missing; Luna's real pooled header-wait timeouts stay negative evidence.
+No live model promotion. Two longer-wait diagnostic requests are proposed only;
+existing runtime/ledger/holdouts/release remain unchanged.
+PR19's four executed comparisons are in [PAIRED_SEMANTIC_HYBRID.md](PAIRED_SEMANTIC_HYBRID.md).
+All older preparation/status descriptions below are historical snapshots.
+
 Current preparation (VISION-021): [paired cloud corpus and plan](PAIRED_CLOUD_PREPARATION.md).
 32 new owned stills / six source sessions; Luna compact vs Gemini structured
 card-limit-local. **Available offline, not executed:** zero new inference, no

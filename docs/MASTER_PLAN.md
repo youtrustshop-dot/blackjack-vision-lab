@@ -1,6 +1,18 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-026, completato offline 2026-10-07: [diagnosi degli output rifiutati](REJECTED_OUTPUT_DIAGNOSTICS.md).
+> Il testo sintetico autorizzato potrà essere conservato cifrato prima del
+> rifiuto, con versione del contratto, hash e causa; nessuna chiave/header
+> salvati. 15 esempi inventati di contratto e roundtrip Windows verificano
+> il percorso: i vincoli numerici precedono la normalizzazione e non sono
+> allentati. 782 test + 10 subtest passano. Il vecchio output Gemini resta perso.
+> Zero API/DNS/credenziali, ledger identico 104/105, runtime disarmato.
+> Proposta soltanto: 1 Gemini + 1 Luna, attesa diagnostica massima 10 s ciascuno,
+> esclusi dall'advisor, riserva USD0,8436688 ai prezzi storici. Dopo 3 s nessun
+> risultato può diventare consiglio corrente. Serve nuova autorizzazione;
+> ultimo slot precedente chiuso. Nessun nuovo piano, training, release o holdout.
+
 > VISION-025, completato 2026-10-06: [quattro chiamate semantiche nuove](PAIRED_SEMANTIC_HYBRID.md).
 > Due stati di sessioni sintetiche nuove, stessi pixel e criteri congelati:
 > Luna 0/2 JSON tempestivi, due timeout in attesa delle intestazioni; Gemini

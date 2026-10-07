@@ -1,4 +1,27 @@
-# Current delivery — VISION-025 four new paired semantic requests
+# Current delivery — VISION-026 rejected output diagnostics, offline only
+
+Future explicitly reviewed owned synthetic outputs can be retained before the
+unchanged strict reader rejects them, with their local cause and contract/policy
+versions. Private current-user Windows DPAPI storage excludes full provider
+envelopes/headers and has current-user/SYSTEM directory access, bounded records
+and seven-day access/expiry cleanup. No default app or paid runner is wired.
+
+15 fabricated contract cases and actual Windows roundtrip are executed;
+782 Python tests + 10 subtests pass, including 42 new offline diagnostic tests.
+Strict numeric invariants precede normalization; totals/card arithmetic,
+original three-second deadline and stale-evidence rejection are preserved.
+The old 566-byte Gemini output is still missing. No new model accuracy or
+latency claim follows from these fixtures. PR19 sources/evidence/ledger audit
+passes; ledger stays 104/105, USD6.153279850 upper and runtime disarmed.
+
+Zero provider, metadata/DNS or billing calls; no credentials loaded, epoch,
+reservation, release, UI, weights, training, R2/Poker or final holdout change.
+A two-request content/late-response diagnostic, max10s each, snapshot reservation
+USD0.8436688, is proposed only and requires fresh explicit authorization.
+No live promotion, hybrid or automatic next batch.
+[Diagnostic boundary, evidence and bounded proposal](REJECTED_OUTPUT_DIAGNOSTICS.md).
+
+# Historical delivery — VISION-025 four new paired semantic requests
 
 Exactly four unique submissions on two new owned session states, with frozen
 pixels/prompt/evaluator and the shared numeric policy. Luna delivers 0/2 strict
