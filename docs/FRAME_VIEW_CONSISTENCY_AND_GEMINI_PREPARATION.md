@@ -81,4 +81,3 @@ The tool exposes preparation and verification only; it has no submission command
 The external ChatGPT review was received in the existing Blackjack conversation and its concrete packet-consistency concern was independently reproduced before implementation. The conversation's current settings were retained; Pro and reasoning effort were not overridden or verified.
 
 Source changes cover packet identity and offline experiment preparation. They do not promote a reader, retrain weights, change thresholds, open final holdouts, expand R2/Poker, replace the installed release, or establish physical Windows capture/advisor/session reliability. Historical model outcomes remain in [PR21's diagnostic report](TWO_PROVIDER_DIAGNOSTICS.md).
-
