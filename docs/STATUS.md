@@ -1,4 +1,23 @@
-# Current delivery — VISION-027 two consumed-case diagnostics, closed
+# Current delivery — VISION-028 native view consistency and offline controls
+
+Changing detail pixels with unchanged table/layout is reproduced: the old
+fingerprint accepted the pending response; the new all-view/geometry binding
+rejects it before the solver. Layout mutation also fails closed. Original 3s
+deadline and 250ms continuity bounds remain. This is a controlled packet
+regression, not a newly observed provider/capture fault or R2 certification.
+
+Five Gemini serialization/view/label controls are prepared and verified offline
+with socket/DNS disabled; zero inference, credentials or model-access calls.
+The existing ChatGPT Blackjack review was received directly. No Pro/effort
+override is claimed. Pixel inputs/reference/transcript stay private and ignored.
+Native crop audit rejects mixed input during preparation; universal runtime
+crop-origin validation is not claimed. Count106/106 and the USD8 ledger remain
+byte-identical, scopes closed and runtime disarmed. Five proposed reservations
+USD1.5856640 fit the historical money margin but are not newly authorized.
+Current executed tests are in REQUIREMENTS.json; installed1.1.1 unchanged.
+[Fix, controls, boundaries and commands](FRAME_VIEW_CONSISTENCY_AND_GEMINI_PREPARATION.md).
+
+# Historical delivery — VISION-027 two consumed-case diagnostics, closed
 
 Exactly one Gemini and one Luna response collected separately, up to 10s,
 on unchanged consumed owned PR19 pixels/payloads. Gemini's new text assigns

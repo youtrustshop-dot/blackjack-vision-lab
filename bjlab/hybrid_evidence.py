@@ -25,6 +25,20 @@ class EvidenceStamp:
     fingerprint: str
 
 
+def frame_fingerprint(frame):
+    """Bind every named image and its geometry, not just the table context.
+
+    This proves packet identity, not that separately supplied crops came from
+    the table. Producers must derive native details from the same acquisition.
+    Frame IDs and capture clocks are intentionally not a freshness renewal.
+    """
+    packet = {'version': 'all-native-views-v1',
+        'images': [(name, sha256(pixels).hexdigest()) for name, pixels in frame.images()],
+        'layout': frame.layout, 'source_size': frame.source_size, 'table_box': frame.table_box}
+    return sha256(json.dumps(packet, sort_keys=True, separators=(',', ':'),
+        allow_nan=False).encode()).hexdigest()
+
+
 class CurrentEvidence:
     def __init__(self, *, max_gap_ms=250, max_age_ms=3000):
         if not 0 < max_gap_ms <= 250 or not 0 < max_age_ms <= 3000:
@@ -35,9 +49,9 @@ class CurrentEvidence:
 
     def capture(self, frame, *, source, table, capture_ns=None):
         now = time.monotonic_ns() if capture_ns is None else capture_ns
-        # Exact pixels including labels/controls. Conservative: even unrelated
-        # visual change invalidates the request. No learned confidence threshold.
-        fingerprint = sha256(frame.table_png+json.dumps(frame.layout, sort_keys=True).encode()).hexdigest()
+        # Every image the reader can see, with names and geometry. Conservative:
+        # even unrelated visual change invalidates the request.
+        fingerprint = frame_fingerprint(frame)
         with self.lock:
             old = self.current
             if old and now <= old.capture_ns:
@@ -67,6 +81,14 @@ class CurrentEvidence:
             reasons = []
             if latest is None: reasons.append('source_disconnected')
             else:
+                # FrameInput is frozen, but its layout dictionary is not. Never
+                # trust a stamp after a caller changes that captured packet.
+                try:
+                    intact = self.frame is not None and frame_fingerprint(self.frame) == latest.fingerprint
+                except (TypeError, ValueError):
+                    intact = False
+                if not intact:
+                    reasons.append('captured_packet_mutated')
                 if (request.source, request.table, request.source_epoch) != (latest.source, latest.table, latest.source_epoch):
                     reasons.append('source_or_table_changed')
                 if request.motion_epoch != latest.motion_epoch or request.fingerprint != latest.fingerprint:
@@ -79,6 +101,7 @@ class CurrentEvidence:
                 'original_capture_ns': request.capture_ns, 'latest_capture_ns': latest.capture_ns if latest else None,
                 'latest_sequence': latest.sequence if latest else None,
                 'requested_motion_epoch': request.motion_epoch, 'latest_motion_epoch': latest.motion_epoch if latest else None,
+                'fingerprint_scope': 'all_named_native_views_and_geometry',
                 'mode': 'controlled-current-pixel-revalidation', 'r2_certified': False}
 
 

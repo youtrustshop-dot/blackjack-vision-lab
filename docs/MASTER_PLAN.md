@@ -1,6 +1,16 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-028, completato offline 2026-10-07: [coerenza dei ritagli e confronto Gemini preparato](FRAME_VIEW_CONSISTENCY_AND_GEMINI_PREPARATION.md).
+> Ricevuta direttamente la revisione nell'altra chat Blackjack. La prova controllata
+> riproduce una lacuna: ritaglio cambiato, tavolo invariato, vecchia risposta ancora
+> ammessa. Ora tutti i pixel/vista/geometria sono associati alla richiesta; il caso
+> viene rifiutato prima del solver, senza rinnovare il termine di tre secondi.
+> Cinque varianti Gemini sono preparate e verificate senza rete: quattro viste o
+> tavolo soltanto, structured o JSON MIME, etichetta BET aggiunta soltanto nei pixel.
+> Zero nuove chiamate; ledger106/106 e USD8 invariati. Nessuna nuova autorizzazione
+> a pagamento, promozione, training, release, holdout o R2/Poker. Non è un nuovo piano.
+
 > VISION-027, completato 2026-10-07: [due diagnosi circoscritte](TWO_PROVIDER_DIAGNOSTICS.md).
 > Stessi pixel/payload consumati, una Gemini e una Luna; attesa separata fino
 > a 10 s, mai nell'advisor. Gemini attribuisce il 20 senza etichetta al totale

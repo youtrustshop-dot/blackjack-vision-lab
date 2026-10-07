@@ -1,5 +1,21 @@
 # Card Lab project instructions
 
+- VISION-028, explicit human requests 2026-10-07: run useful additional tests,
+  consult the OTHER existing ChatGPT Blackjack conversation directly, and
+  complete the authorized follow-up autonomously. Existing chat contacted and
+  reply received; its settings retained, Pro/effort not verified or overridden.
+  Complete reversible offline fixes and concrete preparation. Paid scopes from
+  VISION-027 stay closed: no inference, access/credential checks, budget changes,
+  retry, warm-up, hybrid or promotion without a new bounded human scope.
+  Preserve historical PR/evidence and installed1.1.1. No reader/threshold/weight
+  tuning, holdout, physical-capture claim, R2/Poker or new framework.
+  Current increment binds every named native view and source geometry in
+  CurrentEvidence; initial same-table crop equality is audited in OFFLINE
+  preparation, not claimed as universal runtime origin proof. Five Gemini
+  controls are PREPARED ONLY, original numeric/live gates unchanged.
+  Ledger106/106, USD8 cap and all unknown reserves unchanged, runtime disarmed.
+  See docs/FRAME_VIEW_CONSISTENCY_AND_GEMINI_PREPARATION.md.
+
 - VISION-027, latest explicit human attachment 2026-10-07: preserve PR20 and
   execute ONLY two diagnostic inferences, Gemini then Luna, on consumed owned
   fresh-rotated-unknown PR19 pixels and unchanged prompt/model/schema/output cap.

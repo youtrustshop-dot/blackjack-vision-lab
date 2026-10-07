@@ -4,14 +4,14 @@
   "verification": {
     "version": "1.1.1",
     "status": "unreleased-source-verified",
-    "completed_test_run": "794 passed, 2 existing warnings, 10 subtests passed in 91.99s",
-    "frontend_tests": "52 verified PR19 head CI; UI unchanged, not rerun locally in VISION-027",
+    "completed_test_run": "813 passed, 2 existing warnings, 10 subtests passed in 89.35s",
+    "frontend_tests": "52 verified PR19 head CI; UI unchanged, not rerun locally in VISION-028",
     "frontend_build": "52 frontend tests on PR19 head CI; TypeScript/Vite passed; no new local UI check",
     "latest_changes_require_retest": false,
-    "source_evidence": "validation/results/two-provider-diagnostics/verification.json",
+    "source_evidence": "validation/results/frame-view-consistency/verification.json",
     "release_evidence": "release/v1.1.1/",
     "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
-    "verification_scope": "VISION-027: networkless ten-second standalone collector fixtures then exactly two consumed-case diagnostic inferences. Gemini new unsupported unlabelled total rejected; Luna valid content at3.578s, outside3s. Both protected texts recovered, no advisor/hybrid/promotion. Count106/106, same USD8, all old entries/reserves intact, runtime disarmed. No independent validation or live capture/paint/session proof.",
+    "verification_scope": "VISION-028: controlled all-view packet consistency fix and five offline Gemini payload controls. Changed details invalidate responses before solver; initial crop identity audited only during offline preparation. 813 tests +10 subtests. Existing ChatGPT review received, settings not overridden. Zero provider inference/access/credentials, ledger106/106 byte-identical, runtime disarmed. No live capture/session/R2/model reliability or release claim.",
     "historical_v1_1_1_verification": {
       "version": "1.1.1",
       "status": "source-verified",
@@ -147,7 +147,8 @@
       "frontend_build": "52 frontend tests on PR19 head CI; TypeScript/Vite passed; no new local UI check",
       "source_evidence": "validation/results/rejected-output-diagnostics/verification.json",
       "verification_scope": "VISION-026 offline only: private current-user DPAPI output retention, strict parse/invariant/normalization/R1 diagnosis, unchanged three-second reader and diagnostic-only late/stale fixtures. 15 fabricated cases + actual Windows roundtrip. No API/metadata/DNS/credentials or ledger change, runtime disarmed; prior missing output still missing. Two-request longer-wait diagnosis is proposed only."
-    }
+    },
+    "previous_vision027_verification_source": "validation/results/two-provider-diagnostics/verification.json"
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",
   "requirements": [
