@@ -1,4 +1,22 @@
-# Current delivery — VISION-030 paired total validation, lot closed
+# Current delivery — VISION-031 available-image request repair, lot closed
+
+Numeric source names now derive from actual byte-checked sent images in an
+opt-in builder. C uses provider schema; D logical schema in JSON instructions.
+Roles/global schema/gates remain unchanged; no post-response repair. Exactly
+two corrected D controls on consumed S1/S2 pass: coherent hand usable1828ms;
+printed18 versus card15 safely blocked2110ms for arithmetic alone. Relevant
+total provenance2/2, exact cards2/2, false accepts0/2. Full transcription1/2:
+the unlabelled20 remains incorrectly ui. No new-session/p95/champion proof.
+
+879 Python tests+10 subtests pass;29 new offline fixtures. Reviewer reply
+received directly supports the contract repair and two D controls. Initial
+C preparation superseded before any inference/ledger mutation; C offline only.
+Ledger117/117,upperUSD6.172609200,new usage upperUSD0.0024032; capUSD8/all115
+old entries/15 unknowns intact. Disarmed/pools closed; no hybrid, training,
+holdout,R2/Poker, installed release or physical capture/advisor claim.
+[Builder, before/after, residual errors and commands](GEMINI_AVAILABLE_IMAGE_VIEWS.md).
+
+# Historical delivery — VISION-030 paired total validation, lot closed
 
 Four exact C/D diagnostics on two new owned scenes are HTTP200, strict JSON
 and exact card inventory4/4, all within3s. Correct usable positives0/2;

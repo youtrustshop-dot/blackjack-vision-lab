@@ -1,5 +1,30 @@
 # Card Lab project instructions
 
+- VISION-031 executed: exactly two corrected D controls; S1 usable1828ms,
+  S2 printed18 versus cards15 rejected2110ms for arithmetic alone. Relevant
+  totals2/2, false accepts0/2, complete semantic transcription1/2 (unlabelled20
+  remains ui). C offline only. Preserve frozen requests/source/old outcomes.
+  Suite879+10 subtests, ledger117/117, upperUSD6.172609200, USD8/all115 prior
+  entries/15 unknowns intact. Disarmed/pools closed; no hybrid in this lot.
+  See docs/GEMINI_AVAILABLE_IMAGE_VIEWS.md.
+
+- VISION-031, same explicit human autonomous continuation 2026-10-08:
+  preserve PR24's four negative results and its now-consumed source/pixels.
+  Add only an opt-in request builder: numeric image enum from actual byte-checked
+  frame.images(), role versus image instruction; no output remapping. Global
+  schema, validators, math, evaluator, weights and production defaults frozen.
+  After source/pixel/storage/current model/access/prices/ledger checks, at most
+  two corrected JSON-MIME D diagnostics on consumed S1,S2. Audit count115->117
+  only, reservations<=USD0.6342656, unchanged USD8/all115 old entries/15 unknowns.
+  Same model, thinking/output caps, max10s diagnostic and unchanged3s boundary;
+  every answer excluded from advisor. No retry/warm-up/hybrid, new validation
+  claim, promotion, training, holdout, R2/Poker or installed-release change.
+  Close/disarm after two; storage/access/accounting fault stops further calls.
+  External ChatGPT reply remains advisory, not budget or deployment authority.
+  Its received reply supports this repair and recommends D only. The initial
+  two-C preparation was superseded before any request/ledger change; retain
+  it as unexecuted preparation. C is tested offline only, no API outcome claim.
+
 - VISION-030 executed: four HTTP200/strict responses, exact cards4/4, but
   usable positive0/2 and grounded totals0/4. Every reply declares dealer/player
   image names despite table-only input; unchanged semantic gate rejects all.
