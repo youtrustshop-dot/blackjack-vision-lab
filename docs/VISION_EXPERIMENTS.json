@@ -1386,7 +1386,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "Exactly two consumed-case diagnostic requests. Gemini new unlabelled20/dealer_total with null label is correctly rejected at n[0]; Luna strict/semantic/R1-valid at3.578s. Both encrypted locally, never advisor eligible; no p95/champion or independent validation. Runtime disarmed, count106/106 under unchanged USD8, old104 entries/all15 unknown reserves retained; no following batch.",
+  "current_priority": "Prepared and offline verified; no new inference at this checkpoint. Only opt-in request vocabulary changes; old observations remain unchanged. One frozen 3+1 scope with no retry; fourth only after every exact-content/timing/receipt prerequisite passes. Disarm afterward.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1775,30 +1775,149 @@
       "reader_promoted": false,
       "release_changed": false,
       "final_holdout": "not_opened"
+    },
+    {
+      "experiment_id": "VISION-028",
+      "parent_experiment_id": "VISION-027",
+      "status": "executed",
+      "baseline_commit": "6a5e071da76c76b22453d3a4808a209f0ad74bd8",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/frame-view-consistency/summary.json",
+      "report": "docs/FRAME_VIEW_CONSISTENCY_AND_GEMINI_PREPARATION.md",
+      "decision": "All named-view pixels/geometry bind evidence; changed detail invalidates old reply. Offline only; five controls prepared, no inference.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-029",
+      "parent_experiment_id": "VISION-028",
+      "status": "executed",
+      "baseline_commit": "d0690c18343558b8e169b5c4fcd70b494ec5f203",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/gemini-five-diagnostics/summary.json",
+      "report": "docs/GEMINI_FIVE_DIAGNOSTIC_CONTROLS.md",
+      "decision": "Five consumed-case controls: timely usable R1 4/5, full transcription 0/5. Candidate D only; no promotion.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-030",
+      "parent_experiment_id": "VISION-029",
+      "status": "executed",
+      "baseline_commit": "d9216baf7052f41d90cfa9262e23f1c4ea48ca2f",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/gemini-paired-total-check/summary.json",
+      "report": "docs/GEMINI_PAIRED_TOTAL_CHECK.md",
+      "decision": "Four C/D controls: exact card inventory4/4 but wrong numeric image names; usable positive0/2, total provenance0/4. Gates remain closed.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-031",
+      "parent_experiment_id": "VISION-030",
+      "status": "executed",
+      "baseline_commit": "da9d670c5beefb5ecf842e7caca69876701a1c57",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/gemini-available-image-views/summary.json",
+      "report": "docs/GEMINI_AVAILABLE_IMAGE_VIEWS.md",
+      "decision": "Bound available-image request repair: positive and arithmetic-contradiction controls pass, complete transcription1/2. Two consumed states only.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-032",
+      "parent_experiment_id": "VISION-031",
+      "status": "executed",
+      "baseline_commit": "5134452dc441cd7fbe3989640295e3388bd8644b",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/gemini-bound-session-hybrid/summary.json",
+      "report": "docs/GEMINI_BOUND_SESSION_HYBRID.md",
+      "decision": "Three new sampled states: exact cards3/3, timely positives2/2, safe negative1/1; phase2/3 and complete transcription1/3. Fourth hybrid gate failed and remained unexecuted.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-033",
+      "parent_experiment_id": "VISION-032",
+      "status": "available",
+      "baseline_commit": "da57e74377be612b9dd39ba22fe687063aec10cd",
+      "question": "Can explicit visible phase vocabulary pass three new states before one bounded headless local-first attempt?",
+      "split": "new_owned_sampled_seed_states_shared_renderer_not_full_sessions",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "budget": {
+        "max_new_requests": 4,
+        "executed_new_requests": 0,
+        "worst_case_usd": "1.2685312",
+        "unchanged_lifetime_max_usd": "8"
+      },
+      "result": "validation/results/gemini-visible-phase/verification.json",
+      "report": "docs/GEMINI_VISIBLE_PHASE_CONTRACT.md",
+      "freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
+      "decision": "Prepared and offline verified; no new inference at this checkpoint. Only opt-in request vocabulary changes; old observations remain unchanged.",
+      "next_action": "One frozen 3+1 scope with no retry; fourth only after every exact-content/timing/receipt prerequisite passes. Disarm afterward.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened"
     }
   ],
   "latest_experiment": {
-    "experiment_id": "VISION-027",
-    "parent_experiment_id": "VISION-026",
-    "status": "executed",
-    "baseline_commit": "49d40036bef36fcf0658cf545946896d4d819f41",
-    "question": "Retain exact new Gemini rejection and measure one full Luna completion within10s, outside app/advisor.",
-    "split": "consumed_owned_diagnostic_repeat_not_independent_validation",
+    "experiment_id": "VISION-033",
+    "parent_experiment_id": "VISION-032",
+    "status": "available",
+    "baseline_commit": "da57e74377be612b9dd39ba22fe687063aec10cd",
+    "question": "Can explicit visible phase vocabulary pass three new states before one bounded headless local-first attempt?",
+    "split": "new_owned_sampled_seed_states_shared_renderer_not_full_sessions",
     "candidate_model_ids": [
-      "gemini-3.5-flash-lite",
-      "gpt-6-luna"
+      "gemini-3.5-flash-lite"
     ],
     "budget": {
-      "max_new_requests": 2,
-      "executed_new_requests": 2,
-      "worst_case_usd": "0.8436688",
-      "reported_usage_upper_usd": "0.00289605",
+      "max_new_requests": 4,
+      "executed_new_requests": 0,
+      "worst_case_usd": "1.2685312",
       "unchanged_lifetime_max_usd": "8"
     },
-    "result": "validation/results/two-provider-diagnostics/summary.json",
-    "report": "docs/TWO_PROVIDER_DIAGNOSTICS.md",
-    "decision": "Exactly two consumed-case diagnostic requests. Gemini new unlabelled20/dealer_total with null label is correctly rejected at n[0]; Luna strict/semantic/R1-valid at3.578s. Both encrypted locally, never advisor eligible; no p95/champion or independent validation. Runtime disarmed, count106/106 under unchanged USD8, old104 entries/all15 unknown reserves retained; no following batch.",
-    "next_action": "Stop: scope consumed, runtime disarmed; no automatic inference/hybrid/tuning or promotion.",
+    "result": "validation/results/gemini-visible-phase/verification.json",
+    "report": "docs/GEMINI_VISIBLE_PHASE_CONTRACT.md",
+    "freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
+    "decision": "Prepared and offline verified; no new inference at this checkpoint. Only opt-in request vocabulary changes; old observations remain unchanged.",
+    "next_action": "One frozen 3+1 scope with no retry; fourth only after every exact-content/timing/receipt prerequisite passes. Disarm afterward.",
     "reader_promoted": false,
     "release_changed": false,
     "final_holdout": "not_opened"
@@ -3347,5 +3466,17 @@
       },
       "record": "docs/GEMINI_AVAILABLE_IMAGE_VIEWS.md"
     }
-  ]
+  ],
+  "registry_reconciliation": {
+    "experiment": "VISION-033",
+    "forward_summaries_added": [
+      "VISION-028",
+      "VISION-029",
+      "VISION-030",
+      "VISION-031",
+      "VISION-032"
+    ],
+    "prior_entries_and_result_files_unchanged": true,
+    "new_execution_implied": false
+  }
 }

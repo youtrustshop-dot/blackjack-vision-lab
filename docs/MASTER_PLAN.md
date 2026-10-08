@@ -1,6 +1,16 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-033, preparato 2026-10-08: [contratto visibile delle fasi](GEMINI_VISIBLE_PHASE_CONTRACT.md).
+> Definizioni esplicite per carte rimaste/NEW HAND (`settled`) e tavolo vuoto/DEAL
+> (`waiting`), soltanto nella richiesta opt-in; nessuna riclassificazione delle
+> vecchie risposte o modifica a schema, gate, evaluator, pesi o solver. Tre nuovi
+> stati propri congelati, un quarto ibrido solo dopo tre risultati completi entro3s.
+> 45 nuove prove offline; suite961+10 subtest. Nessuna nuova inferenza al checkpoint.
+> USD8/120 vecchie voci/15 riserve ignote invariati; massimo quattro richieste,
+> riserva1,2685312. Nessun retry, lotto successivo, training/holdout/R2/Poker/release.
+> Registro aggiornato in avanti con evidenze già pubblicate VISION-028–032.
+
 > VISION-032, eseguito 2026-10-08: [tre nuovi stati e collegamento ibrido](GEMINI_BOUND_SESSION_HYBRID.md).
 > Tutte le carte lette3/3: ranghi11/11,semi11/11,dorsi2/2. Due positivi
 > utilizzabili2/2 in1,828/1,563s; negativo astenuto1/1 in1,734s ma fasewaiting

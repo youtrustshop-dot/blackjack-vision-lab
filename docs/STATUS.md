@@ -1,4 +1,22 @@
-# Current delivery — VISION-032 three new states; conditional hybrid closed
+# Current delivery — VISION-033 visible-phase contract prepared
+
+An opt-in request instruction distinguishes remaining cards plus enabled NEW HAND
+(`settled`) from an empty table plus enabled DEAL (`waiting`). No answer relabelling,
+wire/gate/evaluator/local-weight/solver change or historical score repair.
+Three NEW owned sampled states and one conditional fourth input are frozen.
+All three must have exact content/phase/controls/total provenance and complete
+validated observations before3s; only then one actual local-first headless attempt.
+Shared renderer/layout remains; these inputs do not prove full sessions or transfer.
+
+45 new networkless tests and full961+10 subtests pass. All four original PNGs
+reviewed. Zero new provider inference at this preparation checkpoint. USD8 unchanged;
+ledger120/121,upperUSD6.176516500; all120 prior entries/15 unknowns preserved.
+Worst-case four-request reserve1.2685312; no retry/warm-up/following paid lot.
+Forward registry summaries for VISION-028–032 restore the visible funnel without
+changing their results. Current runtime stays disarmed until one-shot preflight.
+[Convention, frozen gate and reproducible commands](GEMINI_VISIBLE_PHASE_CONTRACT.md).
+
+# Historical delivery — VISION-032 three new states; conditional hybrid closed
 
 Three new owned seeds/fonts/palettes use the frozen corrected D request.
 Exact card inventory3/3, ranks11/11, suits11/11, backs2/2; enabled controls3/3.

@@ -1,5 +1,20 @@
 # Card Lab project instructions
 
+- VISION-033, latest human "Ok vai" after PR26, 2026-10-08: preserve its scores,
+  source and closed fourth slot. Add only opt-in visible phase request vocabulary;
+  global wire/gates/evaluator/local weights/engine unchanged. New frozen inputs:
+  one labelled player positive, one terminal negative, one natural empty waiting
+  negative; at most one fourth overlapped held-frame local-first request ONLY
+  after all three exact timely complete semantic observations/valid receipts.
+  Keep original capture3s, structural local fallback disclosed, producer12Hz
+  observed timing, headless JSON only. Count120->124 maximum, audited ceiling
+  121->124/new epoch after preflight; reserve<=USD1.2685312, unchanged USD8/
+  all120 old entries/15 unknowns. No retry/warm-up, following paid lot, default
+  reader/installed release replacement, training/holdout/R2/Poker or physical
+  capture/advisor proof. Close/disarm all scopes after this bounded 3+1.
+  See docs/GEMINI_VISIBLE_PHASE_CONTRACT.md. Review from another ChatGPT chat
+  is technical advice, never budget/deployment authorization.
+
 - VISION-032 executed: three fixed owned D-bound sampled states, HTTP200/strict
   cards3/3, ranks11/11, suits11/11, backs2/2, controls3/3, timely positives2/2.
   Negative safely abstains but phase waiting differs from frozen settled;
