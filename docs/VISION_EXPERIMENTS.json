@@ -1386,7 +1386,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "Prepared and offline verified; no new inference at this checkpoint. Only opt-in request vocabulary changes; old observations remain unchanged. One frozen 3+1 scope with no retry; fourth only after every exact-content/timing/receipt prerequisite passes. Disarm afterward.",
+  "current_priority": "Visible phase3/3 and cards3/3 on new sampled states, but missing SESSION label makes full transcription2/3. Frozen all-three gate fails; conditional fourth closed, no hybrid/champion claim. Scope consumed; runtime disarmed, fourth slot closed. No automatic inference, promotion, training or holdout.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1874,7 +1874,7 @@
     {
       "experiment_id": "VISION-033",
       "parent_experiment_id": "VISION-032",
-      "status": "available",
+      "status": "executed",
       "baseline_commit": "da57e74377be612b9dd39ba22fe687063aec10cd",
       "question": "Can explicit visible phase vocabulary pass three new states before one bounded headless local-first attempt?",
       "split": "new_owned_sampled_seed_states_shared_renderer_not_full_sessions",
@@ -1883,15 +1883,16 @@
       ],
       "budget": {
         "max_new_requests": 4,
-        "executed_new_requests": 0,
+        "executed_new_requests": 3,
         "worst_case_usd": "1.2685312",
-        "unchanged_lifetime_max_usd": "8"
+        "unchanged_lifetime_max_usd": "8",
+        "reported_usage_upper_usd": "0.0032858"
       },
-      "result": "validation/results/gemini-visible-phase/verification.json",
+      "result": "validation/results/gemini-visible-phase/summary.json",
       "report": "docs/GEMINI_VISIBLE_PHASE_CONTRACT.md",
       "freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
-      "decision": "Prepared and offline verified; no new inference at this checkpoint. Only opt-in request vocabulary changes; old observations remain unchanged.",
-      "next_action": "One frozen 3+1 scope with no retry; fourth only after every exact-content/timing/receipt prerequisite passes. Disarm afterward.",
+      "decision": "Visible phase3/3 and cards3/3 on new sampled states, but missing SESSION label makes full transcription2/3. Frozen all-three gate fails; conditional fourth closed, no hybrid/champion claim.",
+      "next_action": "Scope consumed; runtime disarmed, fourth slot closed. No automatic inference, promotion, training or holdout.",
       "reader_promoted": false,
       "release_changed": false,
       "final_holdout": "not_opened"
@@ -1900,7 +1901,7 @@
   "latest_experiment": {
     "experiment_id": "VISION-033",
     "parent_experiment_id": "VISION-032",
-    "status": "available",
+    "status": "executed",
     "baseline_commit": "da57e74377be612b9dd39ba22fe687063aec10cd",
     "question": "Can explicit visible phase vocabulary pass three new states before one bounded headless local-first attempt?",
     "split": "new_owned_sampled_seed_states_shared_renderer_not_full_sessions",
@@ -1909,15 +1910,16 @@
     ],
     "budget": {
       "max_new_requests": 4,
-      "executed_new_requests": 0,
+      "executed_new_requests": 3,
       "worst_case_usd": "1.2685312",
-      "unchanged_lifetime_max_usd": "8"
+      "unchanged_lifetime_max_usd": "8",
+      "reported_usage_upper_usd": "0.0032858"
     },
-    "result": "validation/results/gemini-visible-phase/verification.json",
+    "result": "validation/results/gemini-visible-phase/summary.json",
     "report": "docs/GEMINI_VISIBLE_PHASE_CONTRACT.md",
     "freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
-    "decision": "Prepared and offline verified; no new inference at this checkpoint. Only opt-in request vocabulary changes; old observations remain unchanged.",
-    "next_action": "One frozen 3+1 scope with no retry; fourth only after every exact-content/timing/receipt prerequisite passes. Disarm afterward.",
+    "decision": "Visible phase3/3 and cards3/3 on new sampled states, but missing SESSION label makes full transcription2/3. Frozen all-three gate fails; conditional fourth closed, no hybrid/champion claim.",
+    "next_action": "Scope consumed; runtime disarmed, fourth slot closed. No automatic inference, promotion, training or holdout.",
     "reader_promoted": false,
     "release_changed": false,
     "final_holdout": "not_opened"
@@ -2005,33 +2007,33 @@
   ],
   "api_access_policy": {
     "inference_authorized": false,
-    "authorization_epoch": "2026-10-08-gemini-bound-three-plus-one",
+    "authorization_epoch": "2026-10-08-gemini-visible-phase-three-plus-one",
     "max_requests": 0,
     "max_usd": "0",
-    "reason": "VISION-032 three fixed new states consumed; conditional hybrid quality gate failed, slot closed.",
+    "reason": "VISION-033 three frozen phase controls consumed; missing non-decision SESSION label fails full-transcription gate. Fourth slot closed; no following inference authorized.",
     "research_spending_authorization": {
       "currency": "EUR",
       "total_cap": "10",
       "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
       "supersedes": "2026-10-04-zero-budget",
-      "calls_executed": 119,
+      "calls_executed": 122,
       "cost_incurred": null,
       "credential_choice": "reuse_existing_no_new_key",
       "known_environment_credentials": "Existing Gemini key reused; exact schema trigger isolated; no key or billing changes.",
       "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
-      "runtime_gate": "disarmed_after_bound_three_conditional_closed",
-      "record": "docs/GEMINI_BOUND_SESSION_HYBRID.md",
+      "runtime_gate": "disarmed_after_visible_phase_three_conditional_closed",
+      "record": "validation/results/gemini-visible-phase/summary.json",
       "working_cap_usd": "8",
-      "max_requests": 121,
+      "max_requests": 124,
       "ledger": "artifacts/api-budget/eur10-total-20261004.json",
       "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
       "budget_receipt": {
-        "requests_attempted": 120,
-        "max_requests": 121,
+        "requests_attempted": 123,
+        "max_requests": 124,
         "max_usd": "8",
-        "accounted_upper_usd": "6.176516500",
+        "accounted_upper_usd": "6.179802300",
         "unknown_charge_requests": 15,
-        "network_attempts_claimed": 119,
+        "network_attempts_claimed": 122,
         "unknown_charge_reserved_usd": "5.9595464",
         "stopped": false,
         "invoice_and_balance_verified": false,
@@ -2055,17 +2057,16 @@
         "invoice_and_balance_verified": false,
         "scope": "all configurations/providers under one aggregate authorization"
       },
-      "lifetime_reserved_attempts": 120,
-      "calls_executed_scope": "claimed durable network attempts, not proof every HTTP body was sent",
+      "lifetime_reserved_attempts": 123,
+      "calls_executed_scope": "Lifetime durable network claims; not successful generation count or invoice proof.",
       "request_count_amendment": {
-        "previous_max_requests": 117,
-        "max_requests": 121,
-        "starting_consumed": 117,
-        "max_new_allowed": 4,
-        "used": 3,
-        "unused_closed": 1,
-        "max_usd_unchanged": "8",
-        "old_entries_and_unknown_charges_preserved": true
+        "experiment": "VISION-033",
+        "from": 121,
+        "to": 124,
+        "used_new": 3,
+        "unused_new_closed": 1,
+        "unchanged_max_usd": "8",
+        "old_entries_and_unknown_reservations_preserved": true
       },
       "historical_vision023_snapshot": {
         "calls_executed": 99,
@@ -2094,7 +2095,8 @@
         "unused_closed": 8,
         "max_usd_unchanged": "8",
         "old_entries_and_unknown_charges_preserved": true
-      }
+      },
+      "reported_usage_upper_charge_usd_scope": "Historical original reader tournament receipt retained; current accounting is budget_receipt."
     },
     "credit_check": {
       "status": "verified_read_only_authenticated_billing",
@@ -2154,7 +2156,7 @@
       "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
       "source": "https://platform.openai.com/settings/organization/billing/overview"
     },
-    "runtime_gate": "disarmed_after_bound_three_conditional_closed",
+    "runtime_gate": "disarmed_after_visible_phase_three_conditional_closed",
     "historical_vision016_credit_check": {
       "status": "unverified_billing_browser_human_verification",
       "checked_utc": "2026-10-05T10:45:45.022546+00:00",
@@ -2247,6 +2249,19 @@
       "old_reservations_preserved": true,
       "count_amendment": "105->106; unchanged USD8",
       "new_reported_usage_upper_usd": "0.00289605"
+    },
+    "visible_phase_execution": {
+      "experiment_id": "VISION-033",
+      "record": "validation/results/gemini-visible-phase/summary.json",
+      "executed_requests": 3,
+      "retry": 0,
+      "paid_warmup": 0,
+      "hybrid": 0,
+      "advisor_connected": false,
+      "scope_consumed": true,
+      "unused_conditional_slot_closed": 1,
+      "old_reservations_preserved": true,
+      "reported_usage_upper_usd": "0.0032858"
     }
   },
   "historical_state_snapshots": [
@@ -3465,6 +3480,42 @@
         "scope": "all configurations/providers under one aggregate authorization"
       },
       "record": "docs/GEMINI_AVAILABLE_IMAGE_VIEWS.md"
+    },
+    {
+      "experiment": "VISION-032-closed",
+      "authorization_epoch": "2026-10-08-gemini-bound-three-plus-one",
+      "runtime_gate": "disarmed_after_bound_three_conditional_closed",
+      "budget_receipt": {
+        "requests_attempted": 120,
+        "max_requests": 121,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.176516500",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 119,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "record": "validation/results/gemini-bound-session-hybrid/summary.json"
+    },
+    {
+      "experiment": "VISION-033-closed",
+      "authorization_epoch": "2026-10-08-gemini-visible-phase-three-plus-one",
+      "runtime_gate": "disarmed_after_visible_phase_three_conditional_closed",
+      "budget_receipt": {
+        "requests_attempted": 123,
+        "max_requests": 124,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "record": "validation/results/gemini-visible-phase/summary.json"
     }
   ],
   "registry_reconciliation": {

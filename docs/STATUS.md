@@ -1,20 +1,24 @@
-# Current delivery — VISION-033 visible-phase contract prepared
+# Current delivery — VISION-033 visible phases exact; full-content gate failed
 
-An opt-in request instruction distinguishes remaining cards plus enabled NEW HAND
-(`settled`) from an empty table plus enabled DEAL (`waiting`). No answer relabelling,
-wire/gate/evaluator/local-weight/solver change or historical score repair.
-Three NEW owned sampled states and one conditional fourth input are frozen.
-All three must have exact content/phase/controls/total provenance and complete
-validated observations before3s; only then one actual local-first headless attempt.
-Shared renderer/layout remains; these inputs do not prove full sessions or transfer.
+Exactly three NEW owned sampled states use the opt-in visible phase instruction.
+All HTTP200/strict JSON: player1656ms, ended1547ms, waiting1390ms. Exact cards3/3,
+ranks10/10, suits10/10, back1/1, phase/controls3/3. Positive timely1/1, negatives
+safely abstain2/2, falseaccept0/3; decision-total provenance exact in its one case.
+Full semantic transcription2/3: ended returns20/ui/table with no SESSION label.
+This is a non-decision-label omission, not a wrong card/phase or invented total.
+The predeclared ALL-three full-content gate fails; fourth hybrid NOT executed.
+No gate relaxation, output repair, retry or following paid lot.
 
-45 new networkless tests and full961+10 subtests pass. All four original PNGs
-reviewed. Zero new provider inference at this preparation checkpoint. USD8 unchanged;
-ledger120/121,upperUSD6.176516500; all120 prior entries/15 unknowns preserved.
-Worst-case four-request reserve1.2685312; no retry/warm-up/following paid lot.
-Forward registry summaries for VISION-028–032 restore the visible funnel without
-changing their results. Current runtime stays disarmed until one-shot preflight.
-[Convention, frozen gate and reproducible commands](GEMINI_VISIBLE_PHASE_CONTRACT.md).
+45 new offline fixtures/full961+10 subtests, frontend52, TypeScript/Vite and
+evidence/diff checks pass. Frozen source/weights/old scores unchanged. Forward
+registry summaries restore already published028–032; they are not new executions.
+Original pixels and all selected outputs retained privately and hash verified.
+New usage upperUSD0.0032858; ledger123/124,upper6.179802300,margin1.820197700.
+USD8/all120 old entries/15 unknowns intact; runtime disarmed/pools closed,
+unused fourth slot closed. No hybrid producer/solver runtime timing, operational
+p95, complete session/provider proof, training/holdout/R2/Poker, native
+capture/popup/monitor checks or installed1.1.1 change.
+[Convention, outcomes, failure and commands](GEMINI_VISIBLE_PHASE_CONTRACT.md).
 
 # Historical delivery — VISION-032 three new states; conditional hybrid closed
 

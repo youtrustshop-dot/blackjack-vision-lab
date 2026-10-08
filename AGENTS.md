@@ -1,5 +1,20 @@
 # Card Lab project instructions
 
+- VISION-033 executed 2026-10-08: exactly three new owned phase controls,
+  HTTP200/strict3/3, cards3/3,ranks10/10,suits10/10,back1/1,phase/controls3/3.
+  Positive timely1/1, negatives safe2/2; full transcription2/3: terminal20/ui/
+  table has missing SESSION label. Non-decision omission, no falseaccept0/3;
+  preserve failed predeclared full-content gate. Fourth hybrid NOT executed,
+  slot closed; no capture/solver runtime measurement or following paid lot.
+  45 new offline tests, suite961+10 subtests/UI52/build pass. Ledger123/124,
+  upperUSD6.179802300,newusageUSD0.0032858; USD8/all120 old/15 unknowns intact.
+  Runtime disarmed/pools closed/protected records29. Frozen old code, scores,
+  wire/gates/evaluator/weights/solver and installed1.1.1 preserved. Forward
+  registry summaries028–032 restore published history, not new executions.
+  No retry/warm-up, new paid scope, training/holdout/R2/Poker, default reader
+  promotion/release or physical capture/advisor claim. See
+  docs/GEMINI_VISIBLE_PHASE_CONTRACT.md; technical chat advice is not authority.
+
 - VISION-033, latest human "Ok vai" after PR26, 2026-10-08: preserve its scores,
   source and closed fourth slot. Add only opt-in visible phase request vocabulary;
   global wire/gates/evaluator/local weights/engine unchanged. New frozen inputs:

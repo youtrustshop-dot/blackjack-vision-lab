@@ -1,15 +1,16 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
-> VISION-033, preparato 2026-10-08: [contratto visibile delle fasi](GEMINI_VISIBLE_PHASE_CONTRACT.md).
-> Definizioni esplicite per carte rimaste/NEW HAND (`settled`) e tavolo vuoto/DEAL
-> (`waiting`), soltanto nella richiesta opt-in; nessuna riclassificazione delle
-> vecchie risposte o modifica a schema, gate, evaluator, pesi o solver. Tre nuovi
-> stati propri congelati, un quarto ibrido solo dopo tre risultati completi entro3s.
-> 45 nuove prove offline; suite961+10 subtest. Nessuna nuova inferenza al checkpoint.
-> USD8/120 vecchie voci/15 riserve ignote invariati; massimo quattro richieste,
-> riserva1,2685312. Nessun retry, lotto successivo, training/holdout/R2/Poker/release.
-> Registro aggiornato in avanti con evidenze già pubblicate VISION-028–032.
+> VISION-033, eseguito 2026-10-08: [fasi visibili e risultato](GEMINI_VISIBLE_PHASE_CONTRACT.md).
+> Tre nuovi stati propri: carte3/3, ranghi10/10,semi10/10,dorso1/1,fasi/controlli3/3.
+> Positivo tempestivo1/1, negativi astenuti2/2, nessun falso accetto; tempi1,656/
+> 1,547/1,390s. Trascrizione completa2/3: nel terminale manca l'etichetta SESSION
+> del20 correttamente classificato ui. Il criterio congelato fallisce: quarto
+> ibrido NON eseguito. Nessuna correzione delle risposte o dei punteggi storici.
+> 45 nuove prove offline; suite961+10 subtest/UI52/build. Registro028–032
+> riallineato alle evidenze già pubblicate. USD8/120vecchie voci/15riserve ignote
+> intatti; ledger123/124,upperUSD6,179802300,usage nuovo0,0032858. Runtime disarmato,
+> slot condizionale chiuso; nessun lotto successivo/training/holdout/R2/Poker/release.
 
 > VISION-032, eseguito 2026-10-08: [tre nuovi stati e collegamento ibrido](GEMINI_BOUND_SESSION_HYBRID.md).
 > Tutte le carte lette3/3: ranghi11/11,semi11/11,dorsi2/2. Due positivi

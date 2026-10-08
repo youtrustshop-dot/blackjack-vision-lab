@@ -57,14 +57,21 @@
     "frontend_build": "TypeScript/Vite passed"
   },
   "executed": {
-    "new_provider_inference_requests": 0,
-    "frozen_original_inputs_reviewed": 4,
-    "training": false,
-    "final_holdout": "not_opened",
+    "new_owned_still_requests": 3,
+    "http_200": 3,
+    "three_state_gate_passed": false,
+    "positive_timely": true,
+    "both_negatives_safely_abstain": true,
+    "phase_correct": 3,
+    "complete_semantic_transcription": 2,
+    "protected_text_recovered_and_hash_verified": true,
+    "prior_120_entries_preserved": true,
+    "runtime_disarmed": true,
+    "pools_closed": true,
     "registry_history_preserved": true
   },
   "not_executed": [
-    "New three-control provider lot and conditional fourth",
+    "Conditional fourth local-first hybrid; full transcription gate failed",
     "Complete independent/external-provider sessions",
     "Operational p95 or champion promotion",
     "Native capture/popup/multi-monitor/DPI/minimized checks",

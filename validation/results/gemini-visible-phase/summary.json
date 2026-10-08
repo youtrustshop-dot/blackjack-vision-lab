@@ -1,0 +1,335 @@
+{
+  "experiment": "VISION-033",
+  "request_profile": "gemini-visible-phase-v1",
+  "freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
+  "access": {
+    "exact_model_and_limits": true,
+    "http_status": 200
+  },
+  "initialization": {
+    "dns_ms": 3297.0
+  },
+  "gate": {
+    "correct_timely_positive": 1,
+    "correct_complete_negatives": 2,
+    "exact_card_inventory": 3,
+    "complete_semantic_transcription": 3,
+    "phase_and_controls": 3,
+    "relevant_total_provenance_exact": 3,
+    "false_accepts": 0,
+    "max_complete_ms": 3000,
+    "max_following_hybrid": 1,
+    "deadline_comparison": "complete_ms < 3000",
+    "p95": null,
+    "scope": "New request profile, three sampled owned states; no retrospective repair or promotion."
+  },
+  "gate_passed": false,
+  "hybrid": {
+    "executed": false,
+    "reason": "frozen_visible_phase_quality_or_timing_gate_failed"
+  },
+  "attempted_still_diagnostics": 3,
+  "new_reservations": 3,
+  "maximum_inferences": 4,
+  "unused_slots_closed": 1,
+  "ledger_before": {
+    "sha256": "62968d1e6c7ad515d133dffc3631539d930d966572b7978ef3ab2421366a65f8",
+    "receipt": {
+      "requests_attempted": 120,
+      "max_requests": 121,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.176516500",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 119,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "ledger_after": {
+    "sha256": "be7e585038b53fe2364f67e09482973074679a180b6b7d3dde808f0e29d41b87",
+    "receipt": {
+      "requests_attempted": 123,
+      "max_requests": 124,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.179802300",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 122,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "all_120_historical_entries_unchanged": true,
+  "runtime_disarmed": true,
+  "pools_closed": true,
+  "native_advisor_connected": false,
+  "retry": 0,
+  "paid_warmup": 0,
+  "following_hybrid": false,
+  "p95": null,
+  "stop": null,
+  "rows": [
+    {
+      "case": "phase-player",
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 2262,
+        "output_tokens": 216
+      },
+      "reported_usage_upper_usd": "0.0012186",
+      "usage_settled": true,
+      "total_through_validation_ms": 1656.0,
+      "within_unchanged_live_boundary": true,
+      "relevant_totals_exact": true,
+      "http_status": 200,
+      "returned_phase": "player",
+      "strict_validated": true,
+      "exact_card_inventory": true,
+      "rank": {
+        "correct": 3,
+        "expected": 3
+      },
+      "suit": {
+        "correct": 3,
+        "expected": 3
+      },
+      "backs": {
+        "correct": 1,
+        "expected": 1
+      },
+      "phase_correct": true,
+      "controls_correct": true,
+      "complete_semantic_transcription": true,
+      "literal_complete_transcription": true,
+      "numeric_provenance_exact": true,
+      "numeric_provenance": {
+        "matched": 3,
+        "expected": 3,
+        "extra_or_wrong": 0
+      },
+      "correct_timely_usable_positive": true,
+      "safe_negative": false,
+      "false_accept": false,
+      "missing_ui_labels": 0,
+      "retained_text_hash_reverified": true,
+      "eligible_for_advisor": false,
+      "input_scope": "New owned sampled state sharing renderer/layout/controls; not a full independent session."
+    },
+    {
+      "case": "phase-ended",
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 2262,
+        "output_tokens": 230
+      },
+      "reported_usage_upper_usd": "0.0012536",
+      "usage_settled": true,
+      "total_through_validation_ms": 1547.0,
+      "within_unchanged_live_boundary": true,
+      "relevant_totals_exact": true,
+      "http_status": 200,
+      "returned_phase": "settled",
+      "strict_validated": true,
+      "exact_card_inventory": true,
+      "rank": {
+        "correct": 7,
+        "expected": 7
+      },
+      "suit": {
+        "correct": 7,
+        "expected": 7
+      },
+      "backs": {
+        "correct": 0,
+        "expected": 0
+      },
+      "phase_correct": true,
+      "controls_correct": true,
+      "complete_semantic_transcription": false,
+      "literal_complete_transcription": false,
+      "numeric_provenance_exact": false,
+      "numeric_provenance": {
+        "matched": 0,
+        "expected": 1,
+        "extra_or_wrong": 1
+      },
+      "correct_timely_usable_positive": false,
+      "safe_negative": true,
+      "false_accept": false,
+      "missing_ui_labels": 1,
+      "retained_text_hash_reverified": true,
+      "eligible_for_advisor": false,
+      "input_scope": "New owned sampled state sharing renderer/layout/controls; not a full independent session."
+    },
+    {
+      "case": "phase-waiting",
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 2262,
+        "output_tokens": 54
+      },
+      "reported_usage_upper_usd": "0.0008136",
+      "usage_settled": true,
+      "total_through_validation_ms": 1390.0,
+      "within_unchanged_live_boundary": true,
+      "relevant_totals_exact": true,
+      "http_status": 200,
+      "returned_phase": "waiting",
+      "strict_validated": true,
+      "exact_card_inventory": true,
+      "rank": {
+        "correct": 0,
+        "expected": 0
+      },
+      "suit": {
+        "correct": 0,
+        "expected": 0
+      },
+      "backs": {
+        "correct": 0,
+        "expected": 0
+      },
+      "phase_correct": true,
+      "controls_correct": true,
+      "complete_semantic_transcription": true,
+      "literal_complete_transcription": true,
+      "numeric_provenance_exact": true,
+      "numeric_provenance": {
+        "matched": 1,
+        "expected": 1,
+        "extra_or_wrong": 0
+      },
+      "correct_timely_usable_positive": false,
+      "safe_negative": true,
+      "false_accept": false,
+      "missing_ui_labels": 0,
+      "retained_text_hash_reverified": true,
+      "eligible_for_advisor": false,
+      "input_scope": "New owned sampled state sharing renderer/layout/controls; not a full independent session."
+    }
+  ],
+  "price_check": {
+    "verified_utc_date": "2026-10-08",
+    "model": "gemini-3.5-flash-lite",
+    "input_usd_per_million": ".30",
+    "output_including_thinking_usd_per_million": "2.50",
+    "sources": [
+      "https://ai.google.dev/gemini-api/docs/pricing",
+      "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+      "https://ai.google.dev/api/generate-content"
+    ],
+    "method": "Official pages opened before this bounded scope; frozen request fields checked."
+  },
+  "reported_usage_upper_total_usd": "0.0032858",
+  "prudential_margin_usd": "1.820197700",
+  "new_distinct_owned_seed_states": 3,
+  "complete_new_sessions": 0,
+  "external_provider_sessions": 0,
+  "fourth_case_unconsumed": true,
+  "strict_validated": {
+    "correct": 3,
+    "attempted": 3
+  },
+  "correct_timely_usable_positive_r1": {
+    "correct": 1,
+    "attempted_positive": 1
+  },
+  "safe_negative_abstentions": {
+    "correct": 2,
+    "attempted_negative": 2
+  },
+  "complete_negative_transcription": {
+    "correct": 1,
+    "attempted_negative": 2
+  },
+  "false_accepted_r1": {
+    "count": 0,
+    "attempted": 3
+  },
+  "relevant_total_case_provenance_exact": {
+    "correct": 3,
+    "attempted": 3,
+    "cases_with_explicit_totals": 1,
+    "explicit_totals": 2,
+    "note": "Other two cases have no decision totals; absence is checked, not counted as two new total reads."
+  },
+  "component_inventory_exact": {
+    "correct": 3,
+    "attempted": 3
+  },
+  "rank": {
+    "correct": 10,
+    "expected": 10
+  },
+  "suit": {
+    "correct": 10,
+    "expected": 10
+  },
+  "backs": {
+    "correct": 1,
+    "expected": 1
+  },
+  "phase": {
+    "correct": 3,
+    "attempted": 3
+  },
+  "controls": {
+    "correct": 3,
+    "attempted": 3
+  },
+  "semantic_complete_transcription": {
+    "correct": 2,
+    "attempted": 3
+  },
+  "literal_complete_transcription": {
+    "correct": 2,
+    "attempted": 3
+  },
+  "semantic_numeric_provenance": {
+    "matched": 4,
+    "expected": 5,
+    "extra_or_wrong": 1
+  },
+  "sample_latency": {
+    "p50_ms": 1547.0,
+    "min_ms": 1390.0,
+    "max_ms": 1656.0,
+    "p95_ms": null,
+    "timeout_count": 0,
+    "attempted": 3,
+    "scope": "Complete offline observations, accounting and validation; no capture-to-display or operational percentile proof."
+  },
+  "residual": {
+    "case": "phase-ended",
+    "visible": "SESSION 20",
+    "value_and_role_and_view_correct": true,
+    "returned_label": null,
+    "expected_label": "SESSION",
+    "blocks_live_r1": false,
+    "frozen_full_transcription_gate_failed": true,
+    "interpretation": "Missing non-decision label; no wrong card/phase, hallucinated decision total or false R1 accept in this lot."
+  },
+  "decision": "Visible phase3/3 and cards3/3 on new sampled states, but missing SESSION label makes full transcription2/3. Frozen all-three gate fails; conditional fourth closed, no hybrid/champion claim.",
+  "causal_comparison": "New request and new states differ from PR26; this is not a paired causal estimate of the added instruction.",
+  "protected_storage": {
+    "before": 25,
+    "after": 29,
+    "new_preflight_records": 1,
+    "new_provider_records": 3,
+    "deleted_records": 0
+  },
+  "excluded_private_material": [
+    "keys",
+    "headers",
+    "raw envelopes",
+    "encrypted record identifiers",
+    "pixels",
+    "full selected response text"
+  ]
+}

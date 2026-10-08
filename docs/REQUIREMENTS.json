@@ -11,7 +11,7 @@
     "source_evidence": "validation/results/gemini-visible-phase/verification.json",
     "release_evidence": "release/v1.1.1/",
     "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
-    "verification_scope": "VISION-033 opt-in visible phase request; 45 new networkless fixtures and full961+10 suite. Four owned original images inspected/frozen; zero new provider inference at preparation. Wire/gates/weights/engine unchanged; no training/holdout/R2/Poker/release or physical capture proof.",
+    "verification_scope": "VISION-033:45 networkless tests/full961+10; three new owned stills with exact cards3/3, ranks10/10, suits10/10, back1/1, phase/controls3/3, timely positive1/1, safe negatives2/2, falseaccept0/3. Full transcription2/3: missing SESSION label on ended case. Frozen gate fails; fourth hybrid NOT executed. Ledger123/124,USD8/all120 old/15 unknowns preserved, disarmed. No complete session/provider/operational p95/champion, training/holdout/R2/Poker/release or physical capture proof.",
     "historical_v1_1_1_verification": {
       "version": "1.1.1",
       "status": "source-verified",
