@@ -1,6 +1,26 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-034, completato 2026-10-08: [percorso reale e sessioni](INTEGRATED_R1_SESSION.md).
+> Tavolo proprio con controlli supportati: cattura PNG del browser → lettore
+> locale → advisor compatto. Tre ripetizioni valide in 213/274/327 ms fino al
+> DOM; primo tentativo freddo astenuto per perdita di continuità. Tavolo coperto
+> e vuoto: astensione2/2; disconnessione e scadenza rimuovono il consiglio.
+> Popup separato con stesso motore, chiusura/riapertura/riuso; primo piano,
+> altri monitor e cattura desktop minimizzata restano da verificare.
+> Su due nuove sessioni proprie, il percorso V2 già presente recupera i dorsi:
+> overlap decisioni0→3/3, duplicati1→0; entrambe finiscono con un10 mancante.
+> Nel clean il10 è localizzato ma ignoto15 volte; nell'overlap non localizzato7
+> volte. Conteggio mai certificato. Tempi dei video offline separati dal live.
+> Lotto cloud chiuso: due blocchi locali prima dell'invio, zero nuovi POST e
+> riserve; terzo slot inutilizzato chiuso. DNS preparato fuori dal termine;
+> causa esatta del secondo PermissionError non registrata, non inventata.
+> Ledger123/126, upperUSD6,179802300/USD8, tutte123voci e15ignoti conservati.
+> Criteri R1 e trascrizione separati solo per nuove prove; VISION-0332/3 e quarto
+> slot chiuso invariati. 981test+10subtest, UI52/build. Release1.1.1 preservata.
+> Prossimo bersaglio gratuito: due errori percettivi del10 e sessioni separate;
+> nessun lotto API successivo, training/holdout/Poker o promozione universale.
+
 > VISION-033, eseguito 2026-10-08: [fasi visibili e risultato](GEMINI_VISIBLE_PHASE_CONTRACT.md).
 > Tre nuovi stati propri: carte3/3, ranghi10/10,semi10/10,dorso1/1,fasi/controlli3/3.
 > Positivo tempestivo1/1, negativi astenuti2/2, nessun falso accetto; tempi1,656/

@@ -169,7 +169,8 @@ class IntegratedR1Session:
         actionable = bool(attempt and attempt.get('presented') and validity['valid'])
         observed_current = bool(original and validity['valid'])
         gate = (attempt or {}).get('gate') or {}
-        reasons = gate.get('reasons') or [(attempt or {}).get('reason') or 'Waiting for a readable hand.']
+        reasons = gate.get('reasons', []) if actionable else (
+            gate.get('reasons') or [(attempt or {}).get('reason') or 'Waiting for a readable hand.'])
         if not validity['valid']:
             reasons = validity['reasons']
         report = {'source_id': self.source,

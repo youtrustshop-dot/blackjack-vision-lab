@@ -11,7 +11,7 @@ from decimal import Decimal
 from hashlib import sha256
 from io import BytesIO
 from pathlib import Path
-from threading import Lock
+from threading import Event, Lock, Thread
 import argparse
 import json
 import time
@@ -20,6 +20,7 @@ from PIL import Image, ImageDraw
 
 from bjlab.api_access_policy import MATRIX
 from bjlab.controlled_http import resolve_scope
+from bjlab.dns_lease import DnsLeaseUnavailable, PreparedDnsLease
 from bjlab.grounded_cloud import GeminiConfig
 from bjlab.grounded_state import GroundedResult
 from bjlab.hybrid_evidence import FrozenGroundedLocal
@@ -66,6 +67,7 @@ SOURCES = ('bjlab/integrated_r1.py','bjlab/integration_api.py','bjlab/paired_dea
     'validation/tools/api_reader_tournament.py','validation/tools/paired_cloud_prepare.py',
     'validation/tools/grounded_corpus.py','validation/tools/stress_lab.py',
     'ui/src/IntegrationLab.tsx','ui/src/CompactAdvisor.tsx','ui/src/compact-advisor.ts','ui/src/main.tsx')
+REPAIR_SOURCES = ('validation/tools/integrated_r1_session.py', 'bjlab/dns_lease.py')
 
 
 def ledger_snapshot():
@@ -143,13 +145,29 @@ def prepare():
     return frozen
 
 
-def checked(external_hash):
+def checked(external_hash, implementation_hash=None):
     if file_hash(OUTPUT/'freeze.json')!=external_hash:raise PermissionError('External freeze changed.')
     f=json.loads((OUTPUT/'freeze.json').read_text())
     if f['gates']!=GATES or f['order']!=list(ORDER) or f['specs']!=[list(s) for s in SPECS]:raise PermissionError('Scope changed.')
+    repair = None
+    if implementation_hash:
+        path = OUTPUT/'connection-repair.json'
+        if file_hash(path) != implementation_hash:
+            raise PermissionError('Connection implementation repair changed.')
+        repair = json.loads(path.read_text())
+        if (repair['parent_freeze_sha256'] != external_hash or
+                repair['closed_case'] != 'stable-overlap' or
+                repair['remaining_cases'] != ['changing-rotation', 'contradictory-total'] or
+                repair['scope_epoch'] != EPOCH or repair['following_paid_lot']):
+            raise PermissionError('Repair cannot widen the original three-case scope.')
+        for name, digest in repair['sources'].items():
+            if file_hash(ROOT/name) != digest:
+                raise PermissionError('Frozen repaired implementation changed: '+name)
     for mapping in ('files','sources'):
         for name,digest in f[mapping].items():
             path=(OUTPUT if mapping=='files' else ROOT)/name
+            if mapping == 'sources' and repair and name in REPAIR_SOURCES:
+                continue  # Old code remains reproducible at a703ded, never regraded.
             if file_hash(path)!=digest:raise PermissionError('Frozen input/source changed: '+name)
     if local_snapshot(f['frozen_local']['manifest'])!=f['frozen_local']:raise PermissionError('Weights changed.')
     if file_hash(SYMBOL_FONT)!=f['symbol_font_sha256']:raise PermissionError('Suit font changed.')
@@ -157,6 +175,34 @@ def checked(external_hash):
         if file_hash('C:/Windows/Fonts/'+name)!=digest:raise PermissionError('Font changed.')
     records=json.loads((OUTPUT/'inputs/frames.json').read_text())
     return f,{r['id']:(r,load_frame(OUTPUT/'inputs',r)) for r in records}
+
+
+def prepare_connection_repair(external_hash):
+    """Offline repair of only the remaining slots; no new or replayed paid lot."""
+    frozen=json.loads((OUTPUT/'freeze.json').read_text())
+    if file_hash(OUTPUT/'freeze.json')!=external_hash:
+        raise PermissionError('Original freeze changed.')
+    suspension=json.loads((OUTPUT/'connection-suspension.json').read_text())
+    rows=json.loads((OUTPUT/'cloud-results.json').read_text())
+    before=ledger_snapshot(); raw=json.loads(CANONICAL_LEDGER.read_text())
+    amendment=next(a for a in raw['request_limit_amendments'] if a['authorization_epoch']==EPOCH)
+    entries_hash=sha256(json.dumps(raw['entries'],sort_keys=True).encode()).hexdigest()
+    if (len(rows)!=1 or rows[0]['case']!='stable-overlap' or rows[0]['http_post_attempts']!=0 or
+            not suspension['runtime_disarmed'] or before['receipt']['requests_attempted']!=123 or
+            raw['max_requests']!=126 or entries_hash!=amendment['prior_entries_sha256'] or
+            json.loads(MATRIX.read_text())['api_access_policy']['inference_authorized']):
+        raise PermissionError('Partial scope/accounting cannot be replayed or reset.')
+    path=OUTPUT/'connection-repair.json'
+    if path.exists(): raise PermissionError('Connection repair freeze already exists.')
+    save(path,{'scope_epoch':EPOCH,'parent_freeze_sha256':external_hash,'closed_case':'stable-overlap',
+        'remaining_cases':['changing-rotation','contradictory-total'],'maximum_new_post_requests':2,
+        'following_paid_lot':False,'retry_closed_case':False,'ledger_before_resume':before,
+        'prior_entries_sha256':entries_hash,'prior_cloud_results_sha256':file_hash(OUTPUT/'cloud-results.json'),
+        'sources':{p:file_hash(ROOT/p) for p in REPAIR_SOURCES},
+        'change':'Prepare expiring official OS DNS leases outside capture deadline; reads copy a fresh lease or abstain. No API warm-up.',
+        'old_results_regraded':False,'payload_images_gates_local_reader_unchanged':True})
+    checked(external_hash,file_hash(path))
+    return file_hash(path)
 
 
 def evaluate_local(external_hash):
@@ -182,17 +228,21 @@ def evaluate_local(external_hash):
 class OwnedCloudLot:
     """Shared one-shot lot across views/sessions. No anonymous/generic API proxy."""
     name='gemini-owned-integration'
-    def __init__(self, external_hash):
-        self.hash=external_hash;self.frozen,self.frames=checked(external_hash)
+    def __init__(self, external_hash, implementation_hash=None):
+        self.hash=external_hash;self.implementation_hash=implementation_hash
+        self.frozen,self.frames=checked(external_hash,implementation_hash)
+        repair=json.loads((OUTPUT/'connection-repair.json').read_text()) if implementation_hash else None
         self.original=MATRIX.read_bytes();policy=json.loads(self.original)['api_access_policy']
         before=ledger_snapshot()
-        if (before!=self.frozen['ledger_before'] or policy['inference_authorized'] or policy['max_requests']!=0 or
+        expected=repair['ledger_before_resume'] if repair else self.frozen['ledger_before']
+        slots=2 if repair else 3
+        if (before!=expected or policy['inference_authorized'] or policy['max_requests']!=0 or
             Decimal(policy['max_usd'])!=0 or before['receipt']['stopped'] or
             datetime.now(timezone.utc).date().isoformat()!=PRICE_CHECK['verified_utc_date'] or
             before['receipt']['requests_attempted']!=123 or 3*GeminiConfig().reserve_usd!=MAX_RESERVATION or
-            Decimal(before['receipt']['accounted_upper_usd'])+MAX_RESERVATION>8):
+            Decimal(before['receipt']['accounted_upper_usd'])+slots*GeminiConfig().reserve_usd>8):
             raise PermissionError('Budget/date/policy prerequisites failed before inference.')
-        if len(list((ROOT/DIRECTORY).glob('*.r1diag')))+3>MAX_RECORDS:
+        if len(list((ROOT/DIRECTORY).glob('*.r1diag')))+slots>MAX_RECORDS:
             raise PermissionError('No protected output capacity; no deletion to fit.')
         self.store=PrivateObservationStore(ROOT)
         # Verify an existing retained output, without consuming a fourth record.
@@ -203,7 +253,7 @@ class OwnedCloudLot:
         recovery=None
         self.key=load_key();self.transports=[];self.rows=[];self.used=set();self.lock=Lock();self.pending=False;self.closed=False
         self.old_entries=deepcopy(json.loads(CANONICAL_LEDGER.read_text())['entries'])
-        self.budget=PersistentRequestBudget(CANONICAL_LEDGER,authorization_id=AUTHORIZATION_ID,max_requests=124,max_usd='8')
+        self.budget=PersistentRequestBudget(CANONICAL_LEDGER,authorization_id=AUTHORIZATION_ID,max_requests=126 if repair else 124,max_usd='8')
         dns=resolve_scope()
         probe=PersistentScopedTransport(provider='gemini',authorization_epoch=EPOCH,budget=self.budget,dns_scope=dns,api_key=self.key)
         try:metadata=probe.metadata()
@@ -213,31 +263,49 @@ class OwnedCloudLot:
                 metadata.get('inputTokenLimit')!=GeminiConfig().context_token_limit or metadata.get('outputTokenLimit',0)<1024):
             raise PermissionError('Read-only exact-model access prerequisite failed.')
         if ledger_snapshot()!=before or MATRIX.read_bytes()!=self.original:raise PermissionError('Preflight raced.')
-        claim(OUTPUT/'cloud.execution.claim.json',{'freeze_sha256':external_hash,'maximum_inferences':3,'epoch':EPOCH})
-        self.budget=self.budget.extend_request_ceiling(max_requests=126,authorization_epoch=EPOCH,
-            authorization_note='Human explicit goal continuation: up to three newly frozen owned browser-canvas local-first trials. Prior fourth slot closed, all123 entries/unknowns and USD8 preserved. No retry/warm-up/release.')
-        set_policy({**policy,'inference_authorized':True,'authorization_epoch':EPOCH,'max_requests':3,
-            'max_usd':str(MAX_RESERVATION),'scope':'VISION-034 exactly three frozen owned browser integration cases; no following lot.'})
+        self.dns=PreparedDnsLease(dns).start()
+        if repair:
+            if file_hash(OUTPUT/'cloud-results.json')!=repair['prior_cloud_results_sha256']:
+                self.dns.close();raise PermissionError('Earlier failed result changed.')
+            claim(OUTPUT/'connection-repair.execution.claim.json',{'implementation_sha256':implementation_hash,
+                'maximum_remaining_inferences':2,'same_scope_epoch':EPOCH})
+            self.rows=json.loads((OUTPUT/'cloud-results.json').read_text());self.used={'stable-overlap'}
+        else:
+            claim(OUTPUT/'cloud.execution.claim.json',{'freeze_sha256':external_hash,'maximum_inferences':3,'epoch':EPOCH})
+            self.budget=self.budget.extend_request_ceiling(max_requests=126,authorization_epoch=EPOCH,
+                authorization_note='Human explicit goal continuation: up to three newly frozen owned browser-canvas local-first trials. Prior fourth slot closed, all123 entries/unknowns and USD8 preserved. No retry/warm-up/release.')
+        set_policy({**policy,'inference_authorized':True,'authorization_epoch':EPOCH,'max_requests':slots,
+            'max_usd':str(slots*GeminiConfig().reserve_usd),'scope':'VISION-034 original fixed scope only; closed stable-overlap never replayed. No following lot.'})
 
     def read(self,frame,*,capture_ns):
         with self.lock:
             matching=[name for name in ORDER if self.frames[name][1].frame_id==frame.frame_id]
             if self.closed or self.pending or len(matching)!=1 or matching[0] in self.used:
                 return GroundedResult(frame.frame_id,self.name,'blocked',None,0,{'reason':'Frozen one-shot cloud slot unavailable.'})
-            case=matching[0];checked(self.hash);self.used.add(case);self.pending=True
+            case=matching[0];self.used.add(case);self.pending=True
+        # Scope and source integrity are checked before startup, outside the
+        # decision clock. Payload/image binding is still checked by the reader.
+        # Rehashing large frozen weights here would consume the original budget.
         record,approved=self.frames[case]; request=record['payload'];tap=None;transport=None;stop=False
+        guard_stage='dns_lease'
         try:
-            # Fresh read-only DNS lease before this one POST; no provider warm-up.
-            dns=resolve_scope()
+            # No resolver/subprocess on the decision path. Expired lease blocks.
+            dns=self.dns.snapshot()
+            guard_stage='transport_initialization'
             transport=PersistentScopedTransport(provider='gemini',authorization_epoch=EPOCH,budget=self.budget,dns_scope=dns,api_key=self.key)
+            guard_stage='payload_binding'
             self.transports.append(transport);transport.bind(request['canonical_sha256'],OUTPUT/(case+'.submission.claim.json'))
             tap=_OutputTap(transport)
+            guard_stage='reader_initialization'
             reader=VisiblePhaseDeadlineReader(GeminiConfig(),self.budget,
                 [sha256(p).hexdigest() for _,p in frame.images()],transport=tap)
             scope=OwnedOutputScope('VISION-034',case,'gemini',reader.config.model,request['canonical_sha256'],
                 tuple(sha256(p).hexdigest() for _,p in approved.images()),True)
+            guard_stage='owned_pixel_and_payload_verification'
             scope.verify(reader,frame)
+            guard_stage='deadline_reader'
             result=reader.read(frame,capture_ns=capture_ns)
+            guard_stage='protected_output_storage'
             retention={'retained':False,'reason':'no_selected_output'}
             if tap.text is not None:
                 public,private=inspect_output(tap.text,available_views={'table'})
@@ -253,9 +321,14 @@ class OwnedCloudLot:
             return replace(result,diagnostics={**result.diagnostics,'retention':retention,'owned_integration_case':case})
         except Exception as exc:
             stop=True
-            self.rows.append({'case':case,'status':'blocked','error_type':type(exc).__name__,'raw_error_saved':False})
+            failure={'case':case,'status':'blocked','error_type':type(exc).__name__,
+                'guard_stage':guard_stage,'raw_error_saved':False,
+                'http_post_attempts':transport._request_count if transport is not None else 0}
+            if isinstance(exc,DnsLeaseUnavailable):failure['guard_code']=exc.code
+            self.rows.append(failure)
             save(OUTPUT/'cloud-results.json',self.rows)
-            return GroundedResult(frame.frame_id,self.name,'blocked',None,0,{'error_type':type(exc).__name__})
+            return GroundedResult(frame.frame_id,self.name,'blocked',None,0,
+                {k:v for k,v in failure.items() if k not in ('case','status')})
         finally:
             if tap is not None:tap.text=None
             if transport is not None:transport.close()
@@ -268,24 +341,27 @@ class OwnedCloudLot:
             self.closed=True
         MATRIX.write_bytes(self.original)
         for transport in self.transports:transport.close()
+        preparation=self.dns.close()
         after=ledger_snapshot()
         save(OUTPUT/'cloud-summary.json',{'experiment':'VISION-034','freeze_sha256':self.hash,'rows':self.rows,
             'used_cases':sorted(self.used),'new_reservations':after['receipt']['requests_attempted']-123,
             'unused_new_slots_closed':3-len(self.used),'ledger_before':self.frozen['ledger_before'],'ledger_after':after,
             'all_123_prior_entries_unchanged':json.loads(CANONICAL_LEDGER.read_text())['entries'][:123]==self.old_entries,
             'runtime_disarmed':MATRIX.read_bytes()==self.original,'pools_closed':all(t._closed for t in self.transports),
+            'connection_implementation_sha256':self.implementation_hash,'readonly_dns_preparation':preparation,
             'following_lot':False,'retry':0,'paid_warmup':0,'invoice_and_balance_verified':False})
         self.key=None
 
 
-def serve(external_hash,*,port,cloud_lot=False):
-    frozen,frames=checked(external_hash)
+def serve(external_hash,*,port,cloud_lot=False,implementation_hash=None):
+    frozen,frames=checked(external_hash,implementation_hash)
     from bjlab.integration_api import configure,sessions
     from bjlab.api import app,mount_ui
     import uvicorn
-    lot=None
+    lot=None;shutdown=Event();stop_file=OUTPUT/'server.stop'
+    if stop_file.exists():raise PermissionError('Prior shutdown flag must be reviewed before restart.')
     try:
-        if cloud_lot:lot=OwnedCloudLot(external_hash)
+        if cloud_lot:lot=OwnedCloudLot(external_hash,implementation_hash)
         titles={'stable-overlap':'1 · Carte sovrapposte — lettura stabile',
             'changing-rotation':'2 · Carte ruotate — cambia durante il cloud',
             'contradictory-total':'3 · Totale stampato incoerente — astensione',
@@ -298,10 +374,16 @@ def serve(external_hash,*,port,cloud_lot=False):
             local_factory=lambda:FrozenGroundedLocal(FrozenLocalObservation()),
             cloud_factory=(lambda:lot) if lot else None)
         mount_ui()
-        print(json.dumps({'url':'http://127.0.0.1:'+str(port)+'/?integration=1','cloud_slots':3 if lot else 0,
+        print(json.dumps({'url':'http://127.0.0.1:'+str(port)+'/?integration=1','cloud_slots':3-len(lot.used) if lot else 0,
             'scope':'Owned browser canvas; existing desktop release untouched.'}),flush=True)
-        uvicorn.run(app,host='127.0.0.1',port=port,log_level='warning')
+        server=uvicorn.Server(uvicorn.Config(app,host='127.0.0.1',port=port,log_level='warning'))
+        def watch_stop():
+            while not shutdown.wait(.2):
+                if stop_file.exists():server.should_exit=True;break
+        Thread(target=watch_stop,daemon=True,name='owned-lab-shutdown').start()
+        server.run()
     finally:
+        shutdown.set()
         if lot:lot.close()
         for identity,session in sessions.items():
             session.disconnect();save(OUTPUT/('browser-'+identity+'.json'),session.receipt())
@@ -311,14 +393,19 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--prepare',action='store_true');parser.add_argument('--local',action='store_true')
     parser.add_argument('--serve',action='store_true');parser.add_argument('--cloud-lot',action='store_true')
+    parser.add_argument('--prepare-connection-repair',action='store_true')
+    parser.add_argument('--resume-repair-sha256')
     parser.add_argument('--freeze-sha256');parser.add_argument('--port',type=int,default=8788);args=parser.parse_args()
     if args.prepare:
         if args.local or args.serve or args.cloud_lot:parser.error('Preparation is a separate offline action.')
         prepare();print(json.dumps({'freeze_sha256':file_hash(OUTPUT/'freeze.json'),'provider_calls':0}))
     elif args.freeze_sha256:
-        if args.local:
+        if args.prepare_connection_repair:
+            if args.local or args.serve or args.cloud_lot:parser.error('Repair preparation is offline only.')
+            print(json.dumps({'repair_sha256':prepare_connection_repair(args.freeze_sha256),'provider_calls':0}))
+        elif args.local:
             if args.cloud_lot:parser.error('Local comparison cannot enable cloud.')
             rows=evaluate_local(args.freeze_sha256);print(json.dumps({'rows':len(rows),'provider_calls':0}))
-        elif args.serve:serve(args.freeze_sha256,port=args.port,cloud_lot=args.cloud_lot)
-        else:checked(args.freeze_sha256);print(json.dumps({'checked':True,'provider_calls':0}))
+        elif args.serve:serve(args.freeze_sha256,port=args.port,cloud_lot=args.cloud_lot,implementation_hash=args.resume_repair_sha256)
+        else:checked(args.freeze_sha256,args.resume_repair_sha256);print(json.dumps({'checked':True,'provider_calls':0}))
     else:parser.error('Explicit offline preparation or an external freeze hash is required.')

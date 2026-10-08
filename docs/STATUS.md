@@ -1,4 +1,32 @@
-# Current delivery — VISION-033 visible phases exact; full-content gate failed
+# Current delivery — VISION-034 owned browser integration and full sessions
+
+The opt-in owned layout now has an actual PNG acquisition → unchanged local
+reader → compact main-DOM path. Three warm repeats on one development hand
+take213/274/327ms; cold-gap first attempt abstains, occlusion/empty2/2 safely
+block, source disconnect and original expiry remove advice. Browser popup
+shares the authoritative engine and closes/reopens/reuses; live native popup
+paint, monitor/DPI dragging and minimized desktop sharing are not measured.
+
+Two new owned two-round videos compare the existing V2 presence/ordered-row
+path on identical pixels. Overlap timely opportunities0->3/3, duplicates1->0;
+all four boundaries match, but BOTH final inventories remain one10 short.
+Clean10 localized/unknown15 times; overlap10 missed7 times. No certified count,
+provider generalization or p95 claim. The original clean V1 trace was accidentally
+overwritten by a misnamed V2 output; original result retained, V1 reproduced
+separately, future result/trace overwrites now rejected before evaluation.
+
+Bounded cloud lot permanently closed: two local wrapper failures before any
+provider POST/reservation; third unused slot closed. First DNS preparation
+consumed the deadline; repaired expiring background lease fails fast. Exact
+second PermissionError guard was not logged and remains unknown; future safe
+stage diagnostics have offline tests. Runtime disarmed, repair pools closed,
+ledger123/126 and upperUSD6.179802300/USD8, all123 old entries/15 unknowns intact.
+Final981+10 subtests, UI52/build and evidence checks pass. Installed1.1.1,
+Poker Phase0, sealed holdouts, local weights and historical scores preserved.
+See [report](INTEGRATED_R1_SESSION.md) and
+[results](../validation/results/integrated-r1-session/summary.json).
+
+# Previous checkpoint — VISION-033 visible phases exact; full-content gate failed
 
 Exactly three NEW owned sampled states use the opt-in visible phase instruction.
 All HTTP200/strict JSON: player1656ms, ended1547ms, waiting1390ms. Exact cards3/3,

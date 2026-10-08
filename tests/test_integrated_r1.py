@@ -37,6 +37,7 @@ def test_valid_local_zero_cloud_and_repeated_view_cannot_create_second_engine():
     session.capture(content, sequence=0)
     state = session.analyze()
     assert state['report']['gate']['solver_allowed'] and not state['stale']
+    assert state['report']['gate']['reasons'] == []
     assert state['route'] == 'local' and not state['report']['count_reliable']
     for _ in range(6): assert session.snapshot()['counts']['analysis_count'] == 1
     assert session.receipt()['analysis_count'] == 1

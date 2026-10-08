@@ -8,6 +8,32 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "owned-browser-capture-current-hand",
+      "stage": "R1 actual acquisition and compact advisor",
+      "candidate": "Unchanged local reader on declared outlined-controls owned layout",
+      "status": "executed",
+      "source_parent_commit": "3c23ea3c7c65f4ea06af651a9ca8cc7e3c99d535",
+      "finding": "Native browser PNG to backend to main DOM, three warm repeats212.6/274.3/327.2ms, positives3/4 with cold-gap abstention; occlusion/empty2/2 safely blocked. Popup shares source, close/reopen/reuse; physical/native live popup paint unverified. Count remains unverified. Development demonstration, not independent accuracy/p95.",
+      "evidence": "validation/results/integrated-r1-session/summary.json"
+    },
+    {
+      "id": "owned-bounded-cloud-integration",
+      "stage": "Bounded local-first cloud integration attempt",
+      "candidate": "Three fixed Gemini visible-phase slots; no following lot",
+      "status": "executed",
+      "execution_freeze_sha256": "e1e3487f0eb702324e3868b1821816fb77aafebf14fb2078a23862399d6b6afc",
+      "finding": "Two wrapper attempts, zero provider POSTs/reservations. First DNS preparation consumed original3s deadline; second local PermissionError stage unknown. Third unused slot closed. DNS lease repair and safe stage diagnostics tested offline, not hybrid success or model quality. Runtime disarmed; USD8 and all old123 entries/15 unknowns unchanged.",
+      "evidence": "validation/results/integrated-r1-session/summary.json"
+    },
+    {
+      "id": "owned-complete-session-existing-v2",
+      "stage": "Complete synthetic session reconstruction and covered presence",
+      "candidate": "Existing visible-overlap-temporal-v2 versus visible-controls-temporal-v1, identical frozen videos",
+      "status": "executed",
+      "finding": "Two new owned development two-round sessions, shared renderer. Overlap usable opportunities0->3/3, missing objects26->7, duplicate exposure1->0; clean coverage unchanged1/2. Both final inventories one10 short. Four observed round boundaries correct, zero certified full counts. Offline timing/geometric identity diagnostic only; no new detector/tracker or promotion.",
+      "evidence": "validation/results/integrated-r1-session/summary.json"
+    },
+    {
       "id": "gemini-bound-new-states-conditional-hybrid",
       "stage": "R1 functional validation and offline hybrid integration",
       "candidate": "Frozen available-image-views-v1 D; three new owned seeds then at most one gated headless local-first",
@@ -1386,7 +1412,7 @@
     },
     "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
   },
-  "current_priority": "Visible phase3/3 and cards3/3 on new sampled states, but missing SESSION label makes full transcription2/3. Frozen all-three gate fails; conditional fourth closed, no hybrid/champion claim. Scope consumed; runtime disarmed, fourth slot closed. No automatic inference, promotion, training or holdout. Offline source-error guard fixed and verified; historical paid results unchanged.",
+  "current_priority": "Keep opt-in local integration and existing V2 comparison. Local DOM demonstrated; both session inventories remain one10 short, cloud hybrid not demonstrated. No promotion. Only free diagnosis of observed rank10 failures and separate-session evaluation; current paid lot permanently closed. No automatic following inference, holdout, training, native release or Poker strategy.",
   "iterations": [
     {
       "experiment_id": "VISION-009",
@@ -1910,41 +1936,33 @@
     }
   ],
   "latest_experiment": {
-    "experiment_id": "VISION-033",
-    "parent_experiment_id": "VISION-032",
+    "experiment_id": "VISION-034",
+    "parent_experiment_id": "VISION-033",
     "status": "executed",
-    "baseline_commit": "da57e74377be612b9dd39ba22fe687063aec10cd",
-    "question": "Can explicit visible phase vocabulary pass three new states before one bounded headless local-first attempt?",
-    "split": "new_owned_sampled_seed_states_shared_renderer_not_full_sessions",
+    "baseline_commit": "3c23ea3c7c65f4ea06af651a9ca8cc7e3c99d535",
+    "question": "Does actual owned browser acquisition reach a safe current-hand compact view and reconstruct complete observable sessions?",
+    "split": "owned development; local browser repeated hand and two complete shared-renderer sessions",
     "candidate_model_ids": [
-      "gemini-3.5-flash-lite"
+      "frozen-local",
+      "existing-visible-overlap-v2",
+      "gemini-3.5-flash-lite (no new provider inference)"
     ],
     "budget": {
-      "max_new_requests": 4,
-      "executed_new_requests": 3,
-      "worst_case_usd": "1.2685312",
+      "max_new_requests": 3,
+      "executed_new_requests": 0,
+      "new_reservations": 0,
+      "worst_case_usd": "0.9513984",
       "unchanged_lifetime_max_usd": "8",
-      "reported_usage_upper_usd": "0.0032858"
+      "reported_usage_upper_usd": "0"
     },
-    "result": "validation/results/gemini-visible-phase/summary.json",
-    "report": "docs/GEMINI_VISIBLE_PHASE_CONTRACT.md",
-    "freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
-    "decision": "Visible phase3/3 and cards3/3 on new sampled states, but missing SESSION label makes full transcription2/3. Frozen all-three gate fails; conditional fourth closed, no hybrid/champion claim.",
-    "next_action": "Scope consumed; runtime disarmed, fourth slot closed. No automatic inference, promotion, training or holdout.",
+    "result": "validation/results/integrated-r1-session/summary.json",
+    "report": "docs/INTEGRATED_R1_SESSION.md",
+    "freeze_sha256": "e1e3487f0eb702324e3868b1821816fb77aafebf14fb2078a23862399d6b6afc",
+    "decision": "Keep opt-in local integration and existing V2 comparison. Local DOM demonstrated; both session inventories remain one10 short, cloud hybrid not demonstrated. No promotion.",
+    "next_action": "Only free diagnosis of observed rank10 failures and separate-session evaluation; current paid lot permanently closed. No automatic following inference, holdout, training, native release or Poker strategy.",
     "reader_promoted": false,
     "release_changed": false,
-    "final_holdout": "not_opened",
-    "posthoc_offline_source_repair": {
-      "status": "offline_verified",
-      "result": "validation/results/gemini-visible-phase/source-failure-audit.json",
-      "new_pytest_regressions": 2,
-      "new_provider_requests": 0,
-      "ledger_changed": false,
-      "old_freeze_rejected": true,
-      "consumed_source_preserved": true,
-      "slot_reopened": false,
-      "decision": "Preserve producer/no_current_capture cause and null unreached timing; no API/solver/advisor on either source failure."
-    }
+    "final_holdout": "not_opened"
   },
   "conditional_components": [
     {
@@ -2029,10 +2047,10 @@
   ],
   "api_access_policy": {
     "inference_authorized": false,
-    "authorization_epoch": "2026-10-08-gemini-visible-phase-three-plus-one",
+    "authorization_epoch": "2026-10-08-owned-browser-integration-three",
     "max_requests": 0,
     "max_usd": "0",
-    "reason": "VISION-033 three frozen phase controls consumed; missing non-decision SESSION label fails full-transcription gate. Fourth slot closed; no following inference authorized.",
+    "reason": "VISION-034 permanently closed after local guard failure; zero new POSTs/reservations. Residual slots and prior fourth slot are not authorization for a following lot.",
     "research_spending_authorization": {
       "currency": "EUR",
       "total_cap": "10",
@@ -2043,15 +2061,15 @@
       "credential_choice": "reuse_existing_no_new_key",
       "known_environment_credentials": "Existing Gemini key reused; exact schema trigger isolated; no key or billing changes.",
       "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
-      "runtime_gate": "disarmed_after_visible_phase_three_conditional_closed",
-      "record": "validation/results/gemini-visible-phase/summary.json",
+      "runtime_gate": "disarmed_after_owned_integration_local_guard_failure",
+      "record": "validation/results/integrated-r1-session/summary.json",
       "working_cap_usd": "8",
-      "max_requests": 124,
+      "max_requests": 126,
       "ledger": "artifacts/api-budget/eur10-total-20261004.json",
       "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
       "budget_receipt": {
         "requests_attempted": 123,
-        "max_requests": 124,
+        "max_requests": 126,
         "max_usd": "8",
         "accounted_upper_usd": "6.179802300",
         "unknown_charge_requests": 15,
@@ -2082,6 +2100,18 @@
       "lifetime_reserved_attempts": 123,
       "calls_executed_scope": "Lifetime durable network claims; not successful generation count or invoice proof.",
       "request_count_amendment": {
+        "experiment": "VISION-034",
+        "from": 124,
+        "to": 126,
+        "new_reservations": 0,
+        "local_wrapper_attempts": 2,
+        "provider_posts": 0,
+        "frozen_case_slots_closed": 3,
+        "unchanged_max_usd": "8",
+        "old_entries_and_unknown_reservations_preserved": true,
+        "residual_slots_are_not_authorization": true
+      },
+      "historical_vision033_request_count_amendment": {
         "experiment": "VISION-033",
         "from": 121,
         "to": 124,
@@ -2118,7 +2148,19 @@
         "max_usd_unchanged": "8",
         "old_entries_and_unknown_charges_preserved": true
       },
-      "reported_usage_upper_charge_usd_scope": "Historical original reader tournament receipt retained; current accounting is budget_receipt."
+      "reported_usage_upper_charge_usd_scope": "Historical original reader tournament receipt retained; current accounting is budget_receipt.",
+      "historical_vision033_budget_receipt": {
+        "requests_attempted": 123,
+        "max_requests": 124,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      }
     },
     "credit_check": {
       "status": "verified_read_only_authenticated_billing",
@@ -2178,7 +2220,7 @@
       "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
       "source": "https://platform.openai.com/settings/organization/billing/overview"
     },
-    "runtime_gate": "disarmed_after_visible_phase_three_conditional_closed",
+    "runtime_gate": "disarmed_after_owned_integration_local_guard_failure",
     "historical_vision016_credit_check": {
       "status": "unverified_billing_browser_human_verification",
       "checked_utc": "2026-10-05T10:45:45.022546+00:00",
@@ -2284,6 +2326,43 @@
       "unused_conditional_slot_closed": 1,
       "old_reservations_preserved": true,
       "reported_usage_upper_usd": "0.0032858"
+    },
+    "historical_vision033_closed_scope": {
+      "authorization_epoch": "2026-10-08-gemini-visible-phase-three-plus-one",
+      "runtime_gate": "disarmed_after_visible_phase_three_conditional_closed",
+      "visible_phase_execution": {
+        "experiment_id": "VISION-033",
+        "record": "validation/results/gemini-visible-phase/summary.json",
+        "executed_requests": 3,
+        "retry": 0,
+        "paid_warmup": 0,
+        "hybrid": 0,
+        "advisor_connected": false,
+        "scope_consumed": true,
+        "unused_conditional_slot_closed": 1,
+        "old_reservations_preserved": true,
+        "reported_usage_upper_usd": "0.0032858"
+      }
+    },
+    "integrated_session_execution": {
+      "experiment": "VISION-034",
+      "record": "validation/results/integrated-r1-session/summary.json",
+      "provider_posts": 0,
+      "new_reservations": 0,
+      "unused_slot_closed": true,
+      "all_123_previous_entries_unchanged": true,
+      "budget_receipt": {
+        "requests_attempted": 123,
+        "max_requests": 126,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      }
     }
   },
   "historical_state_snapshots": [
@@ -3538,6 +3617,61 @@
         "scope": "all configurations/providers under one aggregate authorization"
       },
       "record": "validation/results/gemini-visible-phase/summary.json"
+    },
+    {
+      "experiment": "VISION-034-closed",
+      "authorization_epoch": "2026-10-08-owned-browser-integration-three",
+      "runtime_gate": "disarmed_after_owned_integration_local_guard_failure",
+      "budget_receipt": {
+        "requests_attempted": 123,
+        "max_requests": 126,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "record": "validation/results/integrated-r1-session/summary.json",
+      "previous_latest_experiment": {
+        "experiment_id": "VISION-033",
+        "parent_experiment_id": "VISION-032",
+        "status": "executed",
+        "baseline_commit": "da57e74377be612b9dd39ba22fe687063aec10cd",
+        "question": "Can explicit visible phase vocabulary pass three new states before one bounded headless local-first attempt?",
+        "split": "new_owned_sampled_seed_states_shared_renderer_not_full_sessions",
+        "candidate_model_ids": [
+          "gemini-3.5-flash-lite"
+        ],
+        "budget": {
+          "max_new_requests": 4,
+          "executed_new_requests": 3,
+          "worst_case_usd": "1.2685312",
+          "unchanged_lifetime_max_usd": "8",
+          "reported_usage_upper_usd": "0.0032858"
+        },
+        "result": "validation/results/gemini-visible-phase/summary.json",
+        "report": "docs/GEMINI_VISIBLE_PHASE_CONTRACT.md",
+        "freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
+        "decision": "Visible phase3/3 and cards3/3 on new sampled states, but missing SESSION label makes full transcription2/3. Frozen all-three gate fails; conditional fourth closed, no hybrid/champion claim.",
+        "next_action": "Scope consumed; runtime disarmed, fourth slot closed. No automatic inference, promotion, training or holdout.",
+        "reader_promoted": false,
+        "release_changed": false,
+        "final_holdout": "not_opened",
+        "posthoc_offline_source_repair": {
+          "status": "offline_verified",
+          "result": "validation/results/gemini-visible-phase/source-failure-audit.json",
+          "new_pytest_regressions": 2,
+          "new_provider_requests": 0,
+          "ledger_changed": false,
+          "old_freeze_rejected": true,
+          "consumed_source_preserved": true,
+          "slot_reopened": false,
+          "decision": "Preserve producer/no_current_capture cause and null unreached timing; no API/solver/advisor on either source failure."
+        }
+      }
     }
   ],
   "registry_reconciliation": {

@@ -252,13 +252,21 @@ def match_cards(expected, detected):
     return pairs, missed, [detected[i] for i in remaining]
 
 
-def run(manifest_path, output, *, context_challenger=False, profiles=None):
+def run(manifest_path, output, *, context_challenger=False, profiles=None, overlap_challenger=False):
+    target = Path(output)
+    if target.suffix.lower() != '.json':
+        raise ValueError('Use a results.json file in a fresh result directory.')
+    if target.exists():
+        raise FileExistsError('A consumed result must not be overwritten.')
     from bjlab.advice import recommend
     from bjlab.live import LiveObserver
     from bjlab.vision_diagnostics import candidate_revision
     path = Path(manifest_path); manifest = json.loads(path.read_text(encoding='utf-8'))
     if manifest.get('kind') != 'own-synthetic-continuous-video' or manifest.get('partition') != 'development':
         raise ValueError('This runner accepts development synthetic videos only')
+    selected = [s for s in manifest['sessions'] if profiles is None or s['profile'] in profiles]
+    if any((target.parent/(s['profile']+'.trace.json')).exists() for s in selected):
+        raise FileExistsError('Use a fresh result directory to preserve previous traces.')
     root=Path(__file__).resolve().parents[2]
     source_paths=['validation/tools/stress_lab.py','bjlab/live.py','bjlab/visible_phase.py','bjlab/corner_vision.py']
     source_hashes={name:digest(root/name) for name in source_paths}
@@ -270,7 +278,8 @@ def run(manifest_path, output, *, context_challenger=False, profiles=None):
             raise ValueError('Frozen input hash mismatch')
         truth = json.loads(truth_path.read_text(encoding='utf-8'))
         observer = LiveObserver(Rules(**manifest['rules']), layout=manifest['layout'], samples=100,
-                                fresh_shoe=True, manual_turn=False, context_challenger=context_challenger)
+                                fresh_shoe=True, manual_turn=False, context_challenger=context_challenger,
+                                overlap_challenger=overlap_challenger)
         cap = cv2.VideoCapture(str(video)); index = 0; sampled = 0; metrics = Counter(); times = []; traces = []
         next_ms = 0.; opportunities = {}; inventory_max = 0; observed_rounds = set(); rc_max = 0
         boundary_rounds = Counter(); exposure_matches = Counter(); exposure_wrong = 0
@@ -348,7 +357,7 @@ def run(manifest_path, output, *, context_challenger=False, profiles=None):
                                'inventory_l1': error, 'report': result})
         finally: cap.release(); observer.stop()
         if index != session['frames'] or index != len(truth): raise ValueError('Incomplete decode or truth timeline')
-        target = Path(output); target.parent.mkdir(parents=True, exist_ok=True)
+        target.parent.mkdir(parents=True, exist_ok=True)
         save_json(target.parent/f'{session["profile"]}.trace.json', traces)
         reports.append({'profile': session['profile'], 'decoded_frames': index, 'sampled_frames': sampled,
                         'metrics': dict(metrics), 'inventory_max_l1': inventory_max,
@@ -370,7 +379,9 @@ def run(manifest_path, output, *, context_challenger=False, profiles=None):
         print(json.dumps(reports[-1]), flush=True)
     receipt = {'schema': 1, 'scope': manifest['kind'], 'manifest_sha256': digest(path),
                'candidate': candidate_revision(Path(__file__).resolve().parents[2]),
-               'reader': 'unchanged calibrated card detector + visible-controls-temporal-v1' if context_challenger else 'unchanged default calibrated LiveObserver; manual turn disabled',
+               'reader': ('existing visible-overlap-temporal-v2 / ordered-row association' if overlap_challenger else
+                    'unchanged calibrated card detector + visible-controls-temporal-v1' if context_challenger else
+                    'unchanged default calibrated LiveObserver; manual turn disabled'),
                'runner_sha256': digest(__file__), 'source_hashes':source_hashes,
                'frozen_generator_sha256':manifest.get('generator_source_sha256'),
                'original_provider_videos': 0, 'api_requests': 0,
@@ -423,11 +434,16 @@ def main():
     parser.add_argument('--seed', type=int, default=4100410)
     parser.add_argument('--profiles', default=','.join(PROFILES))
     parser.add_argument('--context-challenger', action='store_true')
+    parser.add_argument('--overlap-challenger', action='store_true',
+        help='Compare the existing opt-in presence/ordered-row path on identical decoded frames.')
     args = parser.parse_args()
     if args.command == 'generate': generate(args.output, args.rounds, args.seed, args.profiles.split(','))
     elif args.command == 'run':
         if args.manifest is None: parser.error('--manifest required')
-        run(args.manifest, args.output, context_challenger=args.context_challenger, profiles=args.profiles.split(','))
+        if args.overlap_challenger and not args.context_challenger:
+            parser.error('--overlap-challenger requires --context-challenger')
+        run(args.manifest, args.output, context_challenger=args.context_challenger,
+            profiles=args.profiles.split(','), overlap_challenger=args.overlap_challenger)
     else:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         result = bulk(args.rounds, args.seed); save_json(args.output, result); print(json.dumps(result))

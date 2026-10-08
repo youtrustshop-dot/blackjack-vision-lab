@@ -1,5 +1,30 @@
 # Card Lab project instructions
 
+- VISION-034 executed 2026-10-08: opt-in real owned canvas PNG acquisition,
+  unchanged local reader and compact authoritative view. Supported outlined
+  controls development hand:3/4 positive attempts, cold-gap abstention; three
+  main-DOM two-RAF receipts213/274/327ms, not independent accuracy/p95/native
+  paint. Actual occlusion/empty2/2 safe; disconnect/expiry no residual action.
+  Browser popup open/close/reopen/reuse, no second engine. Chrome background
+  capture can age out; physical monitors/DPI/minimization not verified.
+  Two new owned two-round videos: existing V2 overlap timely0->3/3, duplicate
+  exposure1->0, four boundaries correct. Both final inventories one10 short:
+  clean localizes but cannot read15 appearances; overlap misses7 appearances.
+  No new detector/tracker/training/R2 or Poker strategy; no certified counts.
+  Current bounded cloud lot permanently closed: two local wrapper failures,
+  ZERO provider POSTs/reservations, third unused slot closed. First synchronous
+  DNS exceeded capture clock; background expiring DNS repair measured only up
+  to a second local PermissionError, exact guard not recorded. Safe forward
+  stage tracing has offline tests, never reconstruct/retry the old failure.
+  Ledger123/126, USD6.179802300 upper/USD8, all123 entries/15unknowns intact;
+  residual slots are NOT following-lot permission. Disarmed/pools closed.
+  Preserve PR27 failed full-transcription2/3/closed fourth and all historical
+  scores. Full981+10 subtests/UI52/build pass. Installed1.1.1 unchanged.
+  Preserve ignored original freezes and exact-byte source snapshots; no paid
+  restart, holdout, provider transfer, new strategy or native release claim.
+  See docs/INTEGRATED_R1_SESSION.md; current summary and verification are
+  validation/results/integrated-r1-session/. Future run outputs must be fresh.
+
 - VISION-033 posthoc offline review repair, 2026-10-08: direct Blackjack chat
   review found ready-without-capture/timing KeyError. Preserve consumed runner
   at5ffa402 and original freeze/three responses/scores/ledger. Amended wrapper
