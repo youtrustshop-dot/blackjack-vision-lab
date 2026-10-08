@@ -8,6 +8,16 @@
   "publication": "unreleased research candidate; installed release unchanged",
   "stages": [
     {
+      "id": "gemini-bound-new-states-conditional-hybrid",
+      "stage": "R1 functional validation and offline hybrid integration",
+      "candidate": "Frozen available-image-views-v1 D; three new owned seeds then at most one gated headless local-first",
+      "status": "executed",
+      "source_parent_commit": "5134452dc441cd7fbe3989640295e3388bd8644b",
+      "execution_freeze_sha256": "57cdefc57c2a3b014caa48a1372efb5454331fe58271cb161cfa94e7e660bd7f",
+      "finding": "Three HTTP200/strict/exact card inventories,11/11 ranks/suits,2/2 backs; timely positives2/2, safe negative1/1, phase2/3. Negative waiting vs settled fails frozen exact phase criterion; hybrid NOT executed. Full transcription1/3, falseaccept0/3.37 integrated offline tests preserve payload/original3s/no solver on semantic rejection; no production/default wiring or promotion.",
+      "evidence": "validation/results/gemini-bound-session-hybrid/summary.json"
+    },
+    {
       "id": "gemini-available-numeric-image-binding",
       "stage": "R1 request-contract repair",
       "candidate": "available-image-views-v1; C/D builder, two corrected D controls",
@@ -1876,33 +1886,33 @@
   ],
   "api_access_policy": {
     "inference_authorized": false,
-    "authorization_epoch": "2026-10-08-gemini-available-view-two",
+    "authorization_epoch": "2026-10-08-gemini-bound-three-plus-one",
     "max_requests": 0,
     "max_usd": "0",
-    "reason": "VISION-031 exactly two corrected D controls consumed; closed and disarmed.",
+    "reason": "VISION-032 three fixed new states consumed; conditional hybrid quality gate failed, slot closed.",
     "research_spending_authorization": {
       "currency": "EUR",
       "total_cap": "10",
       "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
       "supersedes": "2026-10-04-zero-budget",
-      "calls_executed": 116,
+      "calls_executed": 119,
       "cost_incurred": null,
       "credential_choice": "reuse_existing_no_new_key",
       "known_environment_credentials": "Existing Gemini key reused; exact schema trigger isolated; no key or billing changes.",
       "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
-      "runtime_gate": "disarmed_after_available_view_two",
-      "record": "docs/GEMINI_AVAILABLE_IMAGE_VIEWS.md",
+      "runtime_gate": "disarmed_after_bound_three_conditional_closed",
+      "record": "docs/GEMINI_BOUND_SESSION_HYBRID.md",
       "working_cap_usd": "8",
-      "max_requests": 117,
+      "max_requests": 121,
       "ledger": "artifacts/api-budget/eur10-total-20261004.json",
       "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
       "budget_receipt": {
-        "requests_attempted": 117,
-        "max_requests": 117,
+        "requests_attempted": 120,
+        "max_requests": 121,
         "max_usd": "8",
-        "accounted_upper_usd": "6.172609200",
+        "accounted_upper_usd": "6.176516500",
         "unknown_charge_requests": 15,
-        "network_attempts_claimed": 116,
+        "network_attempts_claimed": 119,
         "unknown_charge_reserved_usd": "5.9595464",
         "stopped": false,
         "invoice_and_balance_verified": false,
@@ -1926,14 +1936,14 @@
         "invoice_and_balance_verified": false,
         "scope": "all configurations/providers under one aggregate authorization"
       },
-      "lifetime_reserved_attempts": 117,
+      "lifetime_reserved_attempts": 120,
       "calls_executed_scope": "claimed durable network attempts, not proof every HTTP body was sent",
       "request_count_amendment": {
-        "previous_max_requests": 102,
-        "max_requests": 105,
-        "starting_consumed": 100,
-        "max_new_allowed": 5,
-        "used": 4,
+        "previous_max_requests": 117,
+        "max_requests": 121,
+        "starting_consumed": 117,
+        "max_new_allowed": 4,
+        "used": 3,
         "unused_closed": 1,
         "max_usd_unchanged": "8",
         "old_entries_and_unknown_charges_preserved": true
@@ -2025,7 +2035,7 @@
       "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
       "source": "https://platform.openai.com/settings/organization/billing/overview"
     },
-    "runtime_gate": "disarmed_after_available_view_two",
+    "runtime_gate": "disarmed_after_bound_three_conditional_closed",
     "historical_vision016_credit_check": {
       "status": "unverified_billing_browser_human_verification",
       "checked_utc": "2026-10-05T10:45:45.022546+00:00",
@@ -3318,6 +3328,24 @@
         "scope": "all configurations/providers under one aggregate authorization"
       },
       "record": "docs/GEMINI_PAIRED_TOTAL_CHECK.md"
+    },
+    {
+      "experiment": "VISION-031-closed",
+      "authorization_epoch": "2026-10-08-gemini-available-view-two",
+      "runtime_gate": "disarmed_after_available_view_two",
+      "budget_receipt": {
+        "requests_attempted": 117,
+        "max_requests": 117,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.172609200",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 116,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "record": "docs/GEMINI_AVAILABLE_IMAGE_VIEWS.md"
     }
   ]
 }

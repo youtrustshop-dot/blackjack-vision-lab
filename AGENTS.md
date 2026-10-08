@@ -1,5 +1,35 @@
 # Card Lab project instructions
 
+- VISION-032 executed: three fixed owned D-bound sampled states, HTTP200/strict
+  cards3/3, ranks11/11, suits11/11, backs2/2, controls3/3, timely positives2/2.
+  Negative safely abstains but phase waiting differs from frozen settled;
+  phase2/3/full transcription1/3. Frozen quality gate fails: fourth hybrid NOT
+  executed, no producer/solver/capture latency claimed. Preserve phase mismatch;
+  single-frame waiting/settled distinction is underspecified, not a proven sole
+  perception fault.37 integrated networkless fixtures; suite916+10 subtests.
+  Ledger120/121, upperUSD6.176516500, newusageUSD0.0039073; USD8/all117old/
+  15unknown preserved. Runtime disarmed/pools closed/unused slot closed. No
+  following paid lot, retry, training/holdout/R2/Poker, release replacement or
+  physical capture/advisor proof. See docs/GEMINI_BOUND_SESSION_HYBRID.md.
+
+- VISION-032, same human 2026-10-08 "continue until everything is done":
+  preserve PR25 repair and all consumed controls. One bounded next lot only:
+  three new owned seeds/fonts/palettes, two player positives (labelled totals,
+  rotation), one ended/disabled-controls negative. Same bound-D/model/caps and
+  frozen global schema/gates/evaluator/local sources. Only after all three pass
+  the predeclared exact-card/phase/controls/total-provenance/timeliness/false-
+  accept gate, at most ONE fourth inference through genuine local_first_attempt
+  on a fourth pre-frozen owned seed. Natural local routing, no turn/phase flag;
+  existing original3s capture->solver->serialize/revalidation deadline. Continuous
+  12Hz held-frame pixel producer, headless lab JSON only; no Windows capture,
+  physical popup, complete sessions, provider transfer, R2 or champion claim.
+  Count117->121 at most, reservations<=USD1.2685312, USD8 unchanged; preserve
+  all117 old entries/15 unknowns. Verify source/pixels/retention capacity/current
+  model/access/prices/ledger first; stop on storage/access/accounting failures.
+  No retry, paid warm-up, second hybrid, next lot, training/holdout/Poker/release
+  change. Disarm/close all scopes after lot; unused conditional slot stays closed.
+  ChatGPT review is technical advice, never financial/deployment authorization.
+
 - VISION-031 executed: exactly two corrected D controls; S1 usable1828ms,
   S2 printed18 versus cards15 rejected2110ms for arithmetic alone. Relevant
   totals2/2, false accepts0/2, complete semantic transcription1/2 (unlabelled20

@@ -1,4 +1,28 @@
-# Current delivery — VISION-031 available-image request repair, lot closed
+# Current delivery — VISION-032 three new states; conditional hybrid closed
+
+Three new owned seeds/fonts/palettes use the frozen corrected D request.
+Exact card inventory3/3, ranks11/11, suits11/11, backs2/2; enabled controls3/3.
+Both positive R1 states are correct in1828/1563ms. The ended state abstains
+safely in1734ms but returns waiting instead of reference settled. Phase2/3,
+complete semantic transcription1/3; unlabelled20 remains ui in rotation.
+False accepts0/3. Frozen exact-phase gate fails: fourth hybrid NOT executed.
+Single-frame waiting/settled definitions are underspecified; preserve mismatch,
+do not relabel this batch as success. Three sampled states are not full sessions.
+
+37 networkless integration tests exercise corrected payload at post, original
+capture3s, deadline during local/gate/solver/serialization, no solver on semantic
+rejection, terminal-phase rejection, geometry/source/pixel changes including
+return to old pixels, zero cloud on usable local, and conditional receipt gate.
+Full suite916+10 subtests passes. Both PR25 CI checks pass; frontend unchanged.
+Direct ChatGPT review informed integration checks; Pro/effort not verified.
+
+New usage upperUSD0.0039073; ledger120/121,upperUSD6.176516500,margin1.823483500.
+USD8, all117 old entries and15 unknown reserves intact. Disarmed/pools closed;
+unused conditional slot closed. No hybrid/producer runtime measurement, new
+training/holdout/R2/Poker, native capture/popup proof, or installed1.1.1 change.
+[Adapter, results, phase limitation and commands](GEMINI_BOUND_SESSION_HYBRID.md).
+
+# Historical delivery — VISION-031 available-image request repair, lot closed
 
 Numeric source names now derive from actual byte-checked sent images in an
 opt-in builder. C uses provider schema; D logical schema in JSON instructions.

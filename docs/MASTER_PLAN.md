@@ -1,6 +1,17 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-032, eseguito 2026-10-08: [tre nuovi stati e collegamento ibrido](GEMINI_BOUND_SESSION_HYBRID.md).
+> Tutte le carte lette3/3: ranghi11/11,semi11/11,dorsi2/2. Due positivi
+> utilizzabili2/2 in1,828/1,563s; negativo astenuto1/1 in1,734s ma fasewaiting
+> controsettled. Il criterio congelato fallisce: quarto ibrido NON eseguito.
+> Trascrizione completa1/3; resta ui sul20 senza etichetta. Nessun falso accetto.
+> Distinzione terminale non definita nel contratto single-frame: conservare
+> mismatch e mancata promozione, chiarirla offline prima di altro confronto.
+> 37 prove integrate offline; suite916+10 subtest. Ledger120/121,
+> upperUSD6,176516500; capUSD8/117vecchi/15ignoti intatti. Runtime disarmato,
+> slot condizionale chiuso. Nessun training/holdout/R2/Poker/release/cattura reale.
+
 > VISION-031, eseguito 2026-10-08: [provenienza delle immagini Gemini](GEMINI_AVAILABLE_IMAGE_VIEWS.md).
 > Corretto il contratto opt-in: le viste dei numeri derivano dalle immagini
 > realmente inviate, non dai ruoli calibrati. Due D sugli stessi casi consumati:

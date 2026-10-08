@@ -1,0 +1,452 @@
+{
+  "experiment": "VISION-032",
+  "request_profile": "gemini-available-image-views-v1",
+  "freeze_sha256": "57cdefc57c2a3b014caa48a1372efb5454331fe58271cb161cfa94e7e660bd7f",
+  "access": {
+    "exact_model_and_limits": true,
+    "http_status": 200
+  },
+  "initialization": {
+    "dns_ms": 3421.0
+  },
+  "gate": {
+    "correct_timely_positives": 2,
+    "correct_complete_negative": 1,
+    "exact_card_inventory": 3,
+    "phase_and_controls": 3,
+    "relevant_total_provenance_exact": 3,
+    "false_accepts": 0,
+    "max_complete_ms": 3000,
+    "max_following_hybrid": 1,
+    "p95": null,
+    "deadline_comparison": "complete_ms < 3000",
+    "scope": "Tiny new-seed owned still gate; shared renderer, not provider/full-session/champion proof."
+  },
+  "gate_passed": false,
+  "hybrid": {
+    "executed": false,
+    "reason": "frozen_new_state_quality_or_timing_gate_failed"
+  },
+  "attempted_still_diagnostics": 3,
+  "new_reservations": 3,
+  "maximum_inferences": 4,
+  "unused_slots_closed": 1,
+  "ledger_before": {
+    "sha256": "1d3c5870331ac79f7f15bdb7bda91dd22b9a277fb5313a7e01f14b6c1c21a7ea",
+    "receipt": {
+      "requests_attempted": 117,
+      "max_requests": 117,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.172609200",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 116,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "ledger_after": {
+    "sha256": "62968d1e6c7ad515d133dffc3631539d930d966572b7978ef3ab2421366a65f8",
+    "receipt": {
+      "requests_attempted": 120,
+      "max_requests": 121,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.176516500",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 119,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "all_117_historical_entries_unchanged": true,
+  "runtime_disarmed": true,
+  "pools_closed": true,
+  "native_advisor_connected": false,
+  "retry": 0,
+  "paid_warmup": 0,
+  "following_hybrid": false,
+  "p95": null,
+  "stop": null,
+  "rows": [
+    {
+      "case": "new-total",
+      "available_views": [
+        "table"
+      ],
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 2072,
+        "output_tokens": 342
+      },
+      "reported_usage_upper_usd": "0.0014766",
+      "usage_settled": true,
+      "total_through_validation_ms": 1828.0,
+      "within_unchanged_live_boundary": true,
+      "output_sha256": "611055861152313ca552048eec56e5fbb117bd9f0d043316417a58ef761aca31",
+      "output_bytes": 761,
+      "relevant_totals_exact": true,
+      "http_status": 200,
+      "semantic_gate": {
+        "strict_wire_validated": true,
+        "expected_usable_r1": true,
+        "semantic_usable_r1": true,
+        "semantic_correct_usable_r1": true,
+        "semantic_timely_correct_usable_r1": true,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": true,
+        "semantic_numeric_provenance_exact": true,
+        "literal_complete_transcription": true,
+        "normalized_numbers": [
+          {
+            "observed_text": "SESSION",
+            "normalized_label": "SESSION",
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          },
+          {
+            "observed_text": "DEALER TOTAL",
+            "normalized_label": "DEALER TOTAL",
+            "value": 10,
+            "declared_role": "dealer_total",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          },
+          {
+            "observed_text": "PLAYER TOTAL",
+            "normalized_label": "PLAYER TOTAL",
+            "value": 9,
+            "declared_role": "player_total",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          }
+        ],
+        "gate_reasons": []
+      },
+      "component_transcription": {
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "exact_card_inventory": true,
+        "phase_correct": true,
+        "controls_correct": true,
+        "scope": "Diagnostic transcription only; cannot make rejected full state usable"
+      },
+      "field_comparison": {
+        "case": "new-total",
+        "observed_phase": "player",
+        "expected_phase": "player",
+        "observed_controls": [
+          "hit",
+          "stand"
+        ],
+        "expected_controls": [
+          "hit",
+          "stand"
+        ],
+        "observed_blockers": [],
+        "expected_blockers": [],
+        "observed_table": "cards_present",
+        "expected_table": "cards_present"
+      },
+      "protected_text_recovered_and_hash_verified": true,
+      "headers_received_ms": 1797.0,
+      "body_complete_ms": 1797.0,
+      "reused_connection_observed": false,
+      "advisor_eligible": false
+    },
+    {
+      "case": "new-rotation",
+      "available_views": [
+        "table"
+      ],
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 2072,
+        "output_tokens": 187
+      },
+      "reported_usage_upper_usd": "0.0010891",
+      "usage_settled": true,
+      "total_through_validation_ms": 1563.0,
+      "within_unchanged_live_boundary": true,
+      "output_sha256": "287bb8dbb262b2b444365950c1a35bcf6ef01490746991e3236b9e1882174dad",
+      "output_bytes": 407,
+      "relevant_totals_exact": true,
+      "http_status": 200,
+      "semantic_gate": {
+        "strict_wire_validated": true,
+        "expected_usable_r1": true,
+        "semantic_usable_r1": true,
+        "semantic_correct_usable_r1": true,
+        "semantic_timely_correct_usable_r1": true,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "literal_complete_transcription": false,
+        "normalized_numbers": [
+          {
+            "observed_text": "SESSION 20",
+            "normalized_label": "SESSION",
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          },
+          {
+            "observed_text": null,
+            "normalized_label": null,
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "ambiguous",
+            "issues": [],
+            "blocks_r1": false
+          }
+        ],
+        "gate_reasons": []
+      },
+      "component_transcription": {
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "exact_card_inventory": true,
+        "phase_correct": true,
+        "controls_correct": true,
+        "scope": "Diagnostic transcription only; cannot make rejected full state usable"
+      },
+      "field_comparison": {
+        "case": "new-rotation",
+        "observed_phase": "player",
+        "expected_phase": "player",
+        "observed_controls": [
+          "hit",
+          "stand"
+        ],
+        "expected_controls": [
+          "hit",
+          "stand"
+        ],
+        "observed_blockers": [],
+        "expected_blockers": [],
+        "observed_table": "cards_present",
+        "expected_table": "cards_present"
+      },
+      "protected_text_recovered_and_hash_verified": true,
+      "headers_received_ms": 1547.0,
+      "body_complete_ms": 1547.0,
+      "reused_connection_observed": false,
+      "advisor_eligible": false
+    },
+    {
+      "case": "new-ended",
+      "available_views": [
+        "table"
+      ],
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 2072,
+        "output_tokens": 288
+      },
+      "reported_usage_upper_usd": "0.0013416",
+      "usage_settled": true,
+      "total_through_validation_ms": 1734.0,
+      "within_unchanged_live_boundary": true,
+      "output_sha256": "24971c8f28f8293f73bbf0e29049cdb9907ac68633acda1773a3ac4a766a2b47",
+      "output_bytes": 626,
+      "relevant_totals_exact": true,
+      "http_status": 200,
+      "semantic_gate": {
+        "strict_wire_validated": true,
+        "expected_usable_r1": false,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": true,
+        "literal_complete_transcription": false,
+        "normalized_numbers": [
+          {
+            "observed_text": "SESSION",
+            "normalized_label": "SESSION",
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          }
+        ],
+        "gate_reasons": [
+          "Observed phase is not a player decision.",
+          "Need exactly one readable dealer upcard.",
+          "Player hand has already busted.",
+          "Player turn is not established."
+        ]
+      },
+      "component_transcription": {
+        "rank": {
+          "correct": 5,
+          "expected": 5
+        },
+        "suit": {
+          "correct": 5,
+          "expected": 5
+        },
+        "backs": {
+          "correct": 0,
+          "expected": 0
+        },
+        "exact_card_inventory": true,
+        "phase_correct": false,
+        "controls_correct": true,
+        "scope": "Diagnostic transcription only; cannot make rejected full state usable"
+      },
+      "field_comparison": {
+        "case": "new-ended",
+        "observed_phase": "waiting",
+        "expected_phase": "settled",
+        "observed_controls": [],
+        "expected_controls": [],
+        "observed_blockers": [],
+        "expected_blockers": [],
+        "observed_table": "cards_present",
+        "expected_table": "cards_present"
+      },
+      "protected_text_recovered_and_hash_verified": true,
+      "headers_received_ms": 1703.0,
+      "body_complete_ms": 1703.0,
+      "reused_connection_observed": false,
+      "advisor_eligible": false
+    }
+  ],
+  "price_check": {
+    "verified_utc_date": "2026-10-08",
+    "model": "gemini-3.5-flash-lite",
+    "input_usd_per_million": ".30",
+    "output_including_thinking_usd_per_million": "2.50",
+    "sources": [
+      "https://ai.google.dev/gemini-api/docs/pricing",
+      "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+      "https://ai.google.dev/api/generate-content"
+    ],
+    "method": "Official pages opened before this bounded scope; frozen request fields checked."
+  },
+  "reported_usage_upper_total_usd": "0.0039073",
+  "prudential_margin_usd": "1.823483500",
+  "new_distinct_owned_seed_states": 3,
+  "complete_new_sessions": 0,
+  "external_provider_sessions": 0,
+  "fourth_case_unconsumed": true,
+  "strict_validated": {
+    "correct": 3,
+    "attempted": 3
+  },
+  "correct_timely_usable_positive_r1": {
+    "correct": 2,
+    "attempted_positive": 2
+  },
+  "safe_negative_abstentions": {
+    "correct": 1,
+    "attempted_negative": 1
+  },
+  "complete_negative_transcription": {
+    "correct": 0,
+    "attempted_negative": 1
+  },
+  "false_accepted_r1": {
+    "count": 0,
+    "attempted": 3
+  },
+  "relevant_total_case_provenance_exact": {
+    "correct": 3,
+    "attempted": 3,
+    "cases_with_explicit_totals": 1,
+    "explicit_totals": 2,
+    "note": "Other two scenes contain no decision totals; exact absence/no fabricated total is checked."
+  },
+  "component_inventory_exact": {
+    "correct": 3,
+    "attempted": 3
+  },
+  "rank": {
+    "correct": 11,
+    "expected": 11
+  },
+  "suit": {
+    "correct": 11,
+    "expected": 11
+  },
+  "backs": {
+    "correct": 2,
+    "expected": 2
+  },
+  "phase": {
+    "correct": 2,
+    "attempted": 3
+  },
+  "controls": {
+    "correct": 3,
+    "attempted": 3
+  },
+  "semantic_complete_transcription": {
+    "correct": 1,
+    "attempted": 3
+  },
+  "literal_complete_transcription": {
+    "correct": 1,
+    "attempted": 3
+  },
+  "sample_latency": {
+    "p50_ms": 1734,
+    "min_ms": 1563,
+    "max_ms": 1828,
+    "p95_ms": null,
+    "timeout_count": 0,
+    "attempted": 3,
+    "scope": "Three offline complete observations; not operational capture-to-display or p95 evidence."
+  },
+  "decision": "Gate failed on exact terminal phase: waiting vs settled. Hybrid not executed; keep ui/unknown residual. No promotion or retrospective relabel.",
+  "phase_interpretation": "Single-frame contract enumerates waiting/settled but does not define the visible distinction. Record as a frozen-reference mismatch, not isolated perception defect or corrected success.",
+  "excluded_private_material": [
+    "keys",
+    "headers",
+    "raw envelopes",
+    "encrypted record identifiers",
+    "pixels",
+    "full selected response text"
+  ]
+}
