@@ -1,5 +1,19 @@
 # Card Lab project instructions
 
+- VISION-029, human continuation 2026-10-08 immediately after the concrete PR22
+  five-control delivery: execute the prepared Gemini A-E diagnostics once within
+  the existing lifetime USD8 cap. Count-only audited amendment106->111; maximum
+  five new reservations USD1.5856640, all106 previous entries/unknowns preserved.
+  Verify original preparation freeze, runner freeze, current exact-model
+  access/prices and actual protected storage first. Read only the existing
+  Gemini credential; no OpenAI inference, new billing/key or credit purchase.
+  Same model, pixels, caps, thinking, local schema/gates/evaluator. Each result
+  diagnostic-only even below3s; max10s collector, unchanged3s live boundary.
+  No retry/warm-up, following hybrid, promotion, holdout, training, R2/Poker,
+  framework or installed-release replacement. Disarm/close after this lot;
+  access/accounting/private-retention failures stop further submissions.
+  Latest human request supersedes VISION-028's offline stop ONLY for these five.
+
 - VISION-028, explicit human requests 2026-10-07: run useful additional tests,
   consult the OTHER existing ChatGPT Blackjack conversation directly, and
   complete the authorized follow-up autonomously. Existing chat contacted and

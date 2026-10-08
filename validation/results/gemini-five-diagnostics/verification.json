@@ -1,0 +1,42 @@
+{
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "experiment": "VISION-029",
+  "source_parent_commit": "d0690c18343558b8e169b5c4fcd70b494ec5f203",
+  "tests": {
+    "python_passed": 825,
+    "python_subtests_passed": 10,
+    "python_seconds": 96.67,
+    "python_existing_warnings": 2,
+    "new_networkless_tests": 12,
+    "targeted_passed": 24,
+    "frontend_passed": 52,
+    "frontend_scope": "PR22 head CI passed; UI unchanged, not rerun locally in VISION-029"
+  },
+  "executed": {
+    "frozen_gemini_controls": 5,
+    "all_http_200": true,
+    "protected_text_recovered_and_verified": true,
+    "all_106_historical_entries_unchanged": true,
+    "runtime_disarmed": true,
+    "pools_closed": true
+  },
+  "source_sha256": {
+    "validation/tools/gemini_five_diagnostics.py": "c49a1513d3bc91a625eb47d0b63a8061e46db2c338fd09cb479b4b2fc25fb3a3",
+    "bjlab/offline_response_collector.py": "49b7f38313fce3379f801c3d46a8a0307221017232c8f53889135b2d46b42bc3",
+    "bjlab/paired_persistent_http.py": "1c242c3451e472bba8dd9ae5e9fb6432b8c24da01a0fd385ddef05d5725d9c62",
+    "bjlab/paired_deadline_reader.py": "dcf359e3df510c0dd2c70a8dd6c592635992bb9f45a00fba80fd6507416aad46",
+    "bjlab/private_observation_store.py": "7a4a6b149a189031eadb3a22c73d1675859d19a7ebba165ab5d6d7a6141809f9",
+    "bjlab/rejected_output_diagnostics.py": "a3a9584dac5ed19260a9413b334d54aa23e39d9a86a4d8ca9b2866d6c98be3b3",
+    "bjlab/controlled_http.py": "e7701d5415d45750784fbdca2c94306f7ca292ee04d4a750519468b5a1a33ab6",
+    "tests/test_gemini_five_diagnostics.py": "0ce83d5f3e5f0a70d20d218383a53b7deb7cee8968b152b2130cd600d510acd9"
+  },
+  "freeze_sha256": "25042d9a86d2fdd6e8c1179568f95a1b4caee1442446d8ec1c1babf85d8600ed",
+  "not_executed": [
+    "Independent new-session validation",
+    "Actual local-first hybrid or screen capture-to-display",
+    "New reviewer reply",
+    "Pro/effort selection",
+    "Training, holdout, R2/Poker or installed release replacement"
+  ]
+}

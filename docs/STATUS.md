@@ -1,4 +1,23 @@
-# Current delivery — VISION-028 native view consistency and offline controls
+# Current delivery — VISION-029 five Gemini controls, lot closed
+
+Exactly A-E ran once on the consumed owned PR19 hand with frozen pixels,
+payloads, strict schema, numeric policy and evaluator. All HTTP200;4/5 correct
+usable R1 within3s,0/5 complete semantic/literal numeric transcription. Original
+four-view structured request again invents unlabelled dealer_total and is
+correctly rejected. Other variants omit/misclassify UI provenance; E attributes
+BET20 to a crop that clips20. Card-only transcription is correct in all five,
+but does not revive A. No champion, independent accuracy or operational p95.
+
+825 tests +10 subtests pass;12 new networkless runner tests. Existing Gemini
+key reused without disclosure; protected output recovered/hash-verified.
+Count106->111 audited under unchanged USD8. All106 historical entries and15
+unknown reserves retained. Final111/111,upperUSD6.165045900; new usage upper
+USD0.00887, not invoice/balance. Runtime disarmed, all pools closed, no hybrid.
+The new ChatGPT technical review was requested directly; response not yet
+claimed. Installed1.1.1, weights, training, holdouts and R2/Poker unchanged.
+[Outcomes, numeric errors, accounting and commands](GEMINI_FIVE_DIAGNOSTIC_CONTROLS.md).
+
+# Historical delivery — VISION-028 native view consistency and offline controls
 
 Changing detail pixels with unchanged table/layout is reproduced: the old
 fingerprint accepted the pending response; the new all-view/geometry binding

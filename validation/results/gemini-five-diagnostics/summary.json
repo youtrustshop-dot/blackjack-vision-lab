@@ -1,0 +1,838 @@
+{
+  "experiment": "VISION-029",
+  "access": {
+    "exact_model_and_limits": true,
+    "http_status": 200,
+    "timing": {
+      "http_status": 200,
+      "headers_received_ms": 281.0,
+      "body_complete_ms": 281.0,
+      "provider_json_parse_ms": 0.0,
+      "transport_total_ms": 281.0,
+      "trace": [
+        {
+          "stage": "connect_tcp",
+          "action": "started",
+          "at_ms": 0.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "connect_tcp",
+          "action": "complete",
+          "at_ms": 47.0,
+          "duration_ms": 47.0
+        },
+        {
+          "stage": "start_tls",
+          "action": "started",
+          "at_ms": 47.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "start_tls",
+          "action": "complete",
+          "at_ms": 172.0,
+          "duration_ms": 125.0
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "started",
+          "at_ms": 172.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "complete",
+          "at_ms": 172.0,
+          "duration_ms": 0.0
+        },
+        {
+          "stage": "send_request_body",
+          "action": "started",
+          "at_ms": 172.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "send_request_body",
+          "action": "complete",
+          "at_ms": 172.0,
+          "duration_ms": 0.0
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "started",
+          "at_ms": 172.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "complete",
+          "at_ms": 281.0,
+          "duration_ms": 109.0
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "started",
+          "at_ms": 281.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "complete",
+          "at_ms": 281.0,
+          "duration_ms": 0.0
+        }
+      ],
+      "connect_tcp_attempts": 1,
+      "pool_prior_requests": 0,
+      "reused_connection_observed": false,
+      "worker_completed": true,
+      "pool_closed": false,
+      "dns_resolution_outside_request": true
+    }
+  },
+  "initialization": {
+    "storage_preflight_ms": 187.0,
+    "dns_ms": 3203.0
+  },
+  "attempted_diagnostics": 5,
+  "maximum_inferences": 5,
+  "new_reservations": 5,
+  "count_amendment_executed": true,
+  "unused_slots_closed": 0,
+  "ledger_before": {
+    "sha256": "b73a4697f0e59c173e8756e00f1ab5c5a297bb329e78d57066397955c1c94c44",
+    "receipt": {
+      "requests_attempted": 106,
+      "max_requests": 106,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.156175900",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 105,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "ledger_after": {
+    "sha256": "114067512e9cdfe954c0a8614fb4b4c5c3888c549b5cc665636bd2ab10efc966",
+    "receipt": {
+      "requests_attempted": 111,
+      "max_requests": 111,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.165045900",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 110,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "all_106_historical_entries_unchanged": true,
+  "runtime_disarmed": true,
+  "pools_closed": true,
+  "advisor_connected": false,
+  "champion_promoted": false,
+  "hybrid_requests": 0,
+  "retries": 0,
+  "paid_warmup": 0,
+  "p95": null,
+  "price_check": {
+    "verified_utc_date": "2026-10-08",
+    "model": "gemini-3.5-flash-lite",
+    "input_usd_per_million": ".30",
+    "output_including_thinking_usd_per_million": "2.50",
+    "sources": [
+      "https://ai.google.dev/gemini-api/docs/pricing",
+      "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+      "https://ai.google.dev/api/generate-content"
+    ],
+    "method": "Official pages opened before this bounded scope; frozen request fields checked."
+  },
+  "freeze_sha256": "25042d9a86d2fdd6e8c1179568f95a1b4caee1442446d8ec1c1babf85d8600ed",
+  "prepared_sha256": "3783df4d50421c79df3cc2575f2f8ced8577f73c384af9e3723a1859e789876e",
+  "stop": null,
+  "rows": [
+    {
+      "cell": "A",
+      "mode": "structured-card-limit-local",
+      "available_views": [
+        "controls",
+        "dealer",
+        "player:0",
+        "table"
+      ],
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 4816,
+        "output_tokens": 300
+      },
+      "reported_usage_upper_usd": "0.0021948",
+      "usage_settled": true,
+      "total_through_validation_ms": 2141.0,
+      "within_unchanged_live_boundary": true,
+      "output_sha256": "7796317783c93f6cb5d1ce63621f03ec8a7f1ed316e728873c755623d04889b4",
+      "output_bytes": 655,
+      "evaluation": {
+        "strict_validated": false,
+        "status": "completed",
+        "elapsed_ms": 2141.0,
+        "expected_usable_r1": true,
+        "usable_r1": false,
+        "correct_usable_r1": false,
+        "timely_correct_usable_r1": false,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": false,
+        "inventory_mismatches": {
+          "missing_tuples": 4,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 0,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 0,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 0,
+          "expected": 1
+        },
+        "phase_correct": false,
+        "controls_correct": false,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 0
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "policy": "numeric-provenance-r1-v1",
+        "strict_wire_validated": false,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "No completed observation."
+        ],
+        "evidence_scope": "New consumed-case diagnostic control; not independent accuracy",
+        "component_transcription": {
+          "rank": {
+            "correct": 3,
+            "expected": 3
+          },
+          "suit": {
+            "correct": 3,
+            "expected": 3
+          },
+          "backs": {
+            "correct": 1,
+            "expected": 1
+          },
+          "exact_card_inventory": true,
+          "phase_correct": true,
+          "controls_correct": true,
+          "scope": "Diagnostic transcription only; cannot make rejected full state usable"
+        },
+        "eligible_for_advisor": false
+      },
+      "http_status": 200,
+      "headers_received_ms": 2109.0,
+      "body_complete_ms": 2125.0,
+      "reused_connection_observed": true,
+      "diagnostic_category": "pre_normalization_invariant_rejection",
+      "strict_issues": [
+        {
+          "location": [
+            "n",
+            0
+          ],
+          "type": "value_error",
+          "rule": "explicit_total_label_required"
+        }
+      ],
+      "selected_text_encrypted_and_hash_verified": true,
+      "protected_storage_ms": 15.0,
+      "advisor_eligible": false
+    },
+    {
+      "cell": "B",
+      "mode": "json-mode",
+      "available_views": [
+        "controls",
+        "dealer",
+        "player:0",
+        "table"
+      ],
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 5247,
+        "output_tokens": 260
+      },
+      "reported_usage_upper_usd": "0.0022241",
+      "usage_settled": true,
+      "total_through_validation_ms": 1812.0,
+      "within_unchanged_live_boundary": true,
+      "output_sha256": "1d866e9274a17305781a07471d6908390bfd938c880d4d155684181e91e90248",
+      "output_bytes": 563,
+      "evaluation": {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 1812.0,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": true,
+        "timely_correct_usable_r1": true,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 1
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "policy": "numeric-provenance-r1-v1",
+        "strict_wire_validated": true,
+        "semantic_usable_r1": true,
+        "semantic_correct_usable_r1": true,
+        "semantic_timely_correct_usable_r1": true,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 1,
+          "expected": 2,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [
+          {
+            "observed_text": "SESSION 20",
+            "normalized_label": "SESSION",
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          }
+        ],
+        "gate_reasons": [],
+        "evidence_scope": "New consumed-case diagnostic control; not independent accuracy",
+        "component_transcription": {
+          "rank": {
+            "correct": 3,
+            "expected": 3
+          },
+          "suit": {
+            "correct": 3,
+            "expected": 3
+          },
+          "backs": {
+            "correct": 1,
+            "expected": 1
+          },
+          "exact_card_inventory": true,
+          "phase_correct": true,
+          "controls_correct": true,
+          "scope": "Diagnostic transcription only; cannot make rejected full state usable"
+        },
+        "eligible_for_advisor": false
+      },
+      "http_status": 200,
+      "headers_received_ms": 1781.0,
+      "body_complete_ms": 1781.0,
+      "reused_connection_observed": false,
+      "diagnostic_category": "valid_usable_content",
+      "strict_issues": [],
+      "selected_text_encrypted_and_hash_verified": true,
+      "protected_storage_ms": 31.0,
+      "advisor_eligible": false
+    },
+    {
+      "cell": "C",
+      "mode": "structured-card-limit-local",
+      "available_views": [
+        "table"
+      ],
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 1545,
+        "output_tokens": 298
+      },
+      "reported_usage_upper_usd": "0.0012085",
+      "usage_settled": true,
+      "total_through_validation_ms": 1953.0,
+      "within_unchanged_live_boundary": true,
+      "output_sha256": "18ffda6dbf443b2db228bbd6a359cc64553c73ce438ccb7abcbbc2c007fe4cb6",
+      "output_bytes": 644,
+      "evaluation": {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 1953.0,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": true,
+        "timely_correct_usable_r1": true,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 2
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "policy": "numeric-provenance-r1-v1",
+        "strict_wire_validated": true,
+        "semantic_usable_r1": true,
+        "semantic_correct_usable_r1": true,
+        "semantic_timely_correct_usable_r1": true,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 1,
+          "expected": 2,
+          "extra_or_wrong": 1
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [
+          {
+            "observed_text": "SESSION 20",
+            "normalized_label": "SESSION",
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          },
+          {
+            "observed_text": null,
+            "normalized_label": null,
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "ambiguous",
+            "issues": [],
+            "blocks_r1": false
+          }
+        ],
+        "gate_reasons": [],
+        "evidence_scope": "New consumed-case diagnostic control; not independent accuracy",
+        "component_transcription": {
+          "rank": {
+            "correct": 3,
+            "expected": 3
+          },
+          "suit": {
+            "correct": 3,
+            "expected": 3
+          },
+          "backs": {
+            "correct": 1,
+            "expected": 1
+          },
+          "exact_card_inventory": true,
+          "phase_correct": true,
+          "controls_correct": true,
+          "scope": "Diagnostic transcription only; cannot make rejected full state usable"
+        },
+        "eligible_for_advisor": false
+      },
+      "http_status": 200,
+      "headers_received_ms": 1938.0,
+      "body_complete_ms": 1938.0,
+      "reused_connection_observed": false,
+      "diagnostic_category": "valid_usable_content",
+      "strict_issues": [],
+      "selected_text_encrypted_and_hash_verified": true,
+      "protected_storage_ms": 31.0,
+      "advisor_eligible": false
+    },
+    {
+      "cell": "D",
+      "mode": "json-mode",
+      "available_views": [
+        "table"
+      ],
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 1976,
+        "output_tokens": 186
+      },
+      "reported_usage_upper_usd": "0.0010578",
+      "usage_settled": true,
+      "total_through_validation_ms": 1485.0,
+      "within_unchanged_live_boundary": true,
+      "output_sha256": "1bd35d1d09077ad5c4839bee885e015720a073d0870b5c1a9d5c73339b17d98f",
+      "output_bytes": 406,
+      "evaluation": {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 1485.0,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": true,
+        "timely_correct_usable_r1": true,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 2
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "policy": "numeric-provenance-r1-v1",
+        "strict_wire_validated": true,
+        "semantic_usable_r1": true,
+        "semantic_correct_usable_r1": true,
+        "semantic_timely_correct_usable_r1": true,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 1,
+          "expected": 2,
+          "extra_or_wrong": 1
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [
+          {
+            "observed_text": "SESSION 20",
+            "normalized_label": "SESSION",
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          },
+          {
+            "observed_text": null,
+            "normalized_label": null,
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "ambiguous",
+            "issues": [],
+            "blocks_r1": false
+          }
+        ],
+        "gate_reasons": [],
+        "evidence_scope": "New consumed-case diagnostic control; not independent accuracy",
+        "component_transcription": {
+          "rank": {
+            "correct": 3,
+            "expected": 3
+          },
+          "suit": {
+            "correct": 3,
+            "expected": 3
+          },
+          "backs": {
+            "correct": 1,
+            "expected": 1
+          },
+          "exact_card_inventory": true,
+          "phase_correct": true,
+          "controls_correct": true,
+          "scope": "Diagnostic transcription only; cannot make rejected full state usable"
+        },
+        "eligible_for_advisor": false
+      },
+      "http_status": 200,
+      "headers_received_ms": 1453.0,
+      "body_complete_ms": 1453.0,
+      "reused_connection_observed": false,
+      "diagnostic_category": "valid_usable_content",
+      "strict_issues": [],
+      "selected_text_encrypted_and_hash_verified": true,
+      "protected_storage_ms": 15.0,
+      "advisor_eligible": false
+    },
+    {
+      "cell": "E",
+      "mode": "structured-card-limit-local",
+      "available_views": [
+        "controls",
+        "dealer",
+        "player:0",
+        "table"
+      ],
+      "status": "completed",
+      "error_type": null,
+      "usage": {
+        "input_tokens": 4816,
+        "output_tokens": 296
+      },
+      "reported_usage_upper_usd": "0.0021848",
+      "usage_settled": true,
+      "total_through_validation_ms": 2656.0,
+      "within_unchanged_live_boundary": true,
+      "output_sha256": "84724fa06c0c27f70a33b2cc1d9e2bd06a13458abb53cd4aed1cb68935cef752",
+      "output_bytes": 643,
+      "evaluation": {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 2656.0,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": true,
+        "timely_correct_usable_r1": true,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 1,
+          "expected": 2,
+          "extra_or_wrong": 1
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "policy": "numeric-provenance-r1-v1",
+        "strict_wire_validated": true,
+        "semantic_usable_r1": true,
+        "semantic_correct_usable_r1": true,
+        "semantic_timely_correct_usable_r1": true,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 1,
+          "expected": 2,
+          "extra_or_wrong": 1
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [
+          {
+            "observed_text": "SESSION",
+            "normalized_label": "SESSION",
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          },
+          {
+            "observed_text": "BET",
+            "normalized_label": null,
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "dealer",
+            "status": "ambiguous",
+            "issues": [],
+            "blocks_r1": false
+          }
+        ],
+        "gate_reasons": [],
+        "evidence_scope": "New consumed-case diagnostic control; not independent accuracy",
+        "component_transcription": {
+          "rank": {
+            "correct": 3,
+            "expected": 3
+          },
+          "suit": {
+            "correct": 3,
+            "expected": 3
+          },
+          "backs": {
+            "correct": 1,
+            "expected": 1
+          },
+          "exact_card_inventory": true,
+          "phase_correct": true,
+          "controls_correct": true,
+          "scope": "Diagnostic transcription only; cannot make rejected full state usable"
+        },
+        "eligible_for_advisor": false
+      },
+      "http_status": 200,
+      "headers_received_ms": 2609.0,
+      "body_complete_ms": 2609.0,
+      "reused_connection_observed": false,
+      "diagnostic_category": "valid_usable_content",
+      "strict_issues": [],
+      "selected_text_encrypted_and_hash_verified": true,
+      "protected_storage_ms": 31.0,
+      "advisor_eligible": false
+    }
+  ],
+  "reported_usage_upper_total_usd": "0.0088700",
+  "independent_hands": 0,
+  "consumed_hands": 1,
+  "strict_validated": {
+    "correct": 4,
+    "attempted": 5
+  },
+  "correct_timely_usable_r1": {
+    "correct": 4,
+    "attempted": 5
+  },
+  "false_accepted_r1": {
+    "count": 0,
+    "attempted": 5
+  },
+  "exact_accepted_card_inventory": {
+    "correct": 4,
+    "attempted": 5
+  },
+  "semantic_complete_transcription": {
+    "correct": 0,
+    "attempted": 5
+  },
+  "literal_complete_transcription": {
+    "correct": 0,
+    "attempted": 5
+  },
+  "component_diagnostic_rank": {
+    "correct": 15,
+    "expected": 15
+  },
+  "component_diagnostic_suit": {
+    "correct": 15,
+    "expected": 15
+  },
+  "component_diagnostic_backs": {
+    "correct": 5,
+    "expected": 5
+  },
+  "prudential_margin_usd": "1.834954100",
+  "scope": "Five interventions on one consumed owned hand; component diagnostics do not revive rejected full states; not independent accuracy or operational p95.",
+  "decision": "No promotion. Provisional table-only JSON candidate for new session-disjoint validation.",
+  "excluded_private_material": [
+    "keys",
+    "headers",
+    "raw provider envelopes",
+    "encrypted record identifiers",
+    "pixel inputs",
+    "full selected output text"
+  ]
+}

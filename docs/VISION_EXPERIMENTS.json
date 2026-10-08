@@ -20,11 +20,22 @@
       "id": "gemini-five-request-controls",
       "stage": "Frozen serialization/view/pixel-label diagnostic controls",
       "candidate": "Existing Gemini model, MINIMAL, cap1024; structured vs JSON MIME; four views vs table; BET pixel control",
-      "status": "available",
-      "source_parent_commit": "6a5e071da76c76b22453d3a4808a209f0ad74bd8",
-      "finding": "Five payloads prepared and verified with socket/DNS denied;0 provider requests. Original gates/evaluator unchanged. Consumed development diagnostic, not independent validation. Snapshot historical reservation USD1.5856640, count106/106 exhausted; new bounded authorization required before any submission.",
+      "status": "executed",
+      "source_parent_commit": "d0690c18343558b8e169b5c4fcd70b494ec5f203",
+      "finding": "Exactly five frozen A-E diagnostics on one consumed hand:4/5 correct timely R1,0/5 complete numeric transcription; original structured/four-view n[0] invented dealer_total correctly rejected. Every raw card component correct; diagnostic components cannot revive rejected full state. One observation/cell, no p95/champion. Selected texts protected; ledger111/111, USD6.165045900 upper under USD8, all old reserves retained. Runtime disarmed, no hybrid.",
       "freeze_sha256": "3783df4d50421c79df3cc2575f2f8ced8577f73c384af9e3723a1859e789876e",
-      "evidence": "validation/results/frame-view-consistency/summary.json"
+      "evidence": "validation/results/gemini-five-diagnostics/summary.json",
+      "preparation_evidence": {
+        "id": "gemini-five-request-controls",
+        "stage": "Frozen serialization/view/pixel-label diagnostic controls",
+        "candidate": "Existing Gemini model, MINIMAL, cap1024; structured vs JSON MIME; four views vs table; BET pixel control",
+        "status": "available",
+        "source_parent_commit": "6a5e071da76c76b22453d3a4808a209f0ad74bd8",
+        "finding": "Five payloads prepared and verified with socket/DNS denied;0 provider requests. Original gates/evaluator unchanged. Consumed development diagnostic, not independent validation. Snapshot historical reservation USD1.5856640, count106/106 exhausted; new bounded authorization required before any submission.",
+        "freeze_sha256": "3783df4d50421c79df3cc2575f2f8ced8577f73c384af9e3723a1859e789876e",
+        "evidence": "validation/results/frame-view-consistency/summary.json"
+      },
+      "execution_freeze_sha256": "25042d9a86d2fdd6e8c1179568f95a1b4caee1442446d8ec1c1babf85d8600ed"
     },
     {
       "id": "two-provider-offline-diagnostics",

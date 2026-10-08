@@ -1,6 +1,17 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-029, eseguito 2026-10-08: [cinque controlli Gemini](GEMINI_FIVE_DIAGNOSTIC_CONTROLS.md).
+> Eseguite soltanto A-E congelate, una volta ciascuna, sulla stessa mano consumata:
+> 4/5 stati R1 corretti entro3s;0/5 trascrizioni numeriche complete. Tutte le
+> carte sono lette nei componenti; A resta respinta per un totale senza etichetta.
+> D impiega1,485s in questa singola prova: candidata per verifica su sessioni
+> nuove, non champion. E indica una vista che taglia il valore20: grounding errato.
+> 825 test +10 subtest passano. CapUSD8 e15 riserve ignote invariati; ledger111/111,
+> upperUSD6,165045900, usage nuovoUSD0,00887. Runtime disarmato, nessun hybrid.
+> Richiesta direttamente un'altra revisione nella chat Blackjack; risposta ancora
+> da verificare. Non è un nuovo piano, training, release, holdout o R2/Poker.
+
 > VISION-028, completato offline 2026-10-07: [coerenza dei ritagli e confronto Gemini preparato](FRAME_VIEW_CONSISTENCY_AND_GEMINI_PREPARATION.md).
 > Ricevuta direttamente la revisione nell'altra chat Blackjack. La prova controllata
 > riproduce una lacuna: ritaglio cambiato, tavolo invariato, vecchia risposta ancora
