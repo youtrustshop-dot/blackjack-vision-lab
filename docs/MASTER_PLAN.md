@@ -1,6 +1,17 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> VISION-030, eseguito 2026-10-08: [confronto C/D su totali](GEMINI_PAIRED_TOTAL_CHECK.md).
+> Ricevuta la revisione direttamente nell'altra chat Blackjack; eseguite le
+> quattro richieste circoscritte su due nuove scene proprie. Carte e JSON4/4;
+> mani positive utilizzabili0/2: Gemini confonde il ruolo banco/giocatore con
+> immagini separate mai inviate. Il controllo resta chiuso correttamente.
+> La contraddizione15 contro18 viene letta e respinta, ma provenienza completa0/4.
+> Il corpus preliminare di cinque scene resta solo locale: entrambi0/3 positivi.
+> 850 test+10 subtest; ledger115/115, upperUSD6,170206000, capUSD8 invariato.
+> Correggere il contratto in una variante opt-in, conservando questi risultati.
+> Nessun hybrid, modello nuovo, training, holdout, release o R2/Poker.
+
 > VISION-029, eseguito 2026-10-08: [cinque controlli Gemini](GEMINI_FIVE_DIAGNOSTIC_CONTROLS.md).
 > Eseguite soltanto A-E congelate, una volta ciascuna, sulla stessa mano consumata:
 > 4/5 stati R1 corretti entro3s;0/5 trascrizioni numeriche complete. Tutte le

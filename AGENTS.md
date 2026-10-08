@@ -1,5 +1,32 @@
 # Card Lab project instructions
 
+- VISION-030 executed: four HTTP200/strict responses, exact cards4/4, but
+  usable positive0/2 and grounded totals0/4. Every reply declares dealer/player
+  image names despite table-only input; unchanged semantic gate rejects all.
+  Counterfactual18 versus cards15 also blocks; safe negative2/2 is not exact
+  grounded content. Preserve this negative result and all executed source.
+  Preliminary five local cases never submitted. Full suite850+10 subtests.
+  Ledger115/115, upperUSD6.170206000, USD8/all111 previous entries/15 unknowns
+  intact. Runtime disarmed, scope consumed, all pools closed; no hybrid.
+  See docs/GEMINI_PAIRED_TOTAL_CHECK.md. Follow-up request-contract correction
+  must be opt-in and separate; no post-response remapping or weaker gate.
+
+- VISION-030, continuing the same explicit human 2026-10-08 autonomous request:
+  preserve the executed PR23 five-control result and its USD8 cap. The directly
+  received ChatGPT technical review is advisory, not financial authorization.
+  Its narrower four-request C/D comparison replaces the preliminary proposed
+  five new paid cases: two new owned scenes, one coherent, one counterfactual
+  explicit-total contradiction. Order S1-C,S1-D,S2-D,S2-C; same table pixels in
+  each pair, frozen model/caps/prompt/local validators/evaluator, max10s
+  diagnostic, unchanged3s live criterion, never advisor. No retry/warm-up,
+  tuning, hybrid, training, holdout, R2/Poker or installed-release change.
+  Audit count111->115 only after input/source/storage/current access/prices and
+  canonical margin pass; four worst-case reservations<=USD1.2685312. Keep all111
+  previous entries and all uncertain charges; no monetary cap increase. Close
+  scope/disarm after the four, stop on integrity/access/accounting/storage fault.
+  Preliminary five-scene corpus/local comparison remains OFFLINE evidence;
+  none of those five inputs was sent to a provider. No retroactive score repair.
+
 - VISION-029, human continuation 2026-10-08 immediately after the concrete PR22
   five-control delivery: execute the prepared Gemini A-E diagnostics once within
   the existing lifetime USD8 cap. Count-only audited amendment106->111; maximum

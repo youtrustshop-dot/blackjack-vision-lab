@@ -1,4 +1,27 @@
-# Current delivery — VISION-029 five Gemini controls, lot closed
+# Current delivery — VISION-030 paired total validation, lot closed
+
+Four exact C/D diagnostics on two new owned scenes are HTTP200, strict JSON
+and exact card inventory4/4, all within3s. Correct usable positives0/2;
+grounded relevant totals0/4: replies assign dealer/player image views that
+were never sent. The unchanged semantic gate rejects all. Contradictory18
+versus visible-card15 is retained and safely rejected2/2, but both also have
+wrong views, so grounded correct-content abstention remains0/2.
+
+The preliminary five-scene local comparison ran OFFLINE only; both readers
+have0/3 usable positives,2/2 safe negatives,1/5 exact full card state. Phase
+is not established. Those five images were never submitted to a provider.
+
+850 Python tests+10 subtests pass;25 new offline tests. The existing ChatGPT
+Blackjack review was received directly and informed the narrower four-call
+design; no Pro/effort override verified. Ledger115/115, USD6.170206000 upper;
+new usage upperUSD0.0051601, all111 old entries/15 unknowns and USD8 cap intact.
+Runtime disarmed, pools closed, no hybrid, tuning, holdout, R2/Poker, installed
+release replacement or physical advisor claim. Next: opt-in request contract
+that distinguishes card roles from actually supplied image names, not gate
+relaxation or post-response view repair.
+[Outcomes, request ambiguity, offline corpus and commands](GEMINI_PAIRED_TOTAL_CHECK.md).
+
+# Historical delivery — VISION-029 five Gemini controls, lot closed
 
 Exactly A-E ran once on the consumed owned PR19 hand with frozen pixels,
 payloads, strict schema, numeric policy and evaluator. All HTTP200;4/5 correct

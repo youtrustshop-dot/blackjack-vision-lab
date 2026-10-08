@@ -1,0 +1,59 @@
+{
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "experiment": "VISION-030",
+  "source_parent_commit": "d9216baf7052f41d90cfa9262e23f1c4ea48ca2f",
+  "tests": {
+    "python_passed": 850,
+    "python_subtests_passed": 10,
+    "python_seconds": 98.7,
+    "python_existing_warnings": 2,
+    "new_networkless_tests": 25,
+    "targeted_passed": 25,
+    "frontend_passed": 52,
+    "frontend_scope": "PR23 head CI passed; UI unchanged, not rerun locally in VISION-030"
+  },
+  "executed": {
+    "paired_gemini_requests": 4,
+    "all_http_200": true,
+    "protected_text_recovered_and_verified": true,
+    "all_111_historical_entries_unchanged": true,
+    "runtime_disarmed": true,
+    "pools_closed": true,
+    "offline_local_cases_per_reader": 5,
+    "chatgpt_previous_review_received_directly": true
+  },
+  "source_sha256": {
+    "validation/tools/gemini_new_session_prepare.py": "0938d8496867c8aef09e7b96fe8cce2bd1b1fbdf70ff0da0caf46d3481c1aa86",
+    "validation/tools/gemini_request_ablation.py": "b4275ac38585cc328703246b98affe47faab71ae5158dc7cfdf56abcd806338d",
+    "validation/tools/paired_cloud_prepare.py": "514cd19454a2515cf678bfa73bed8d4ce499d55af357d332d2f7751d8a92b54b",
+    "validation/tools/grounded_corpus.py": "ee4c8e59690783b945b770dd3335204a52807d53f09816e43df8a46a43edfd6b",
+    "validation/tools/stress_lab.py": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+    "validation/tools/api_reader_tournament.py": "c606123e3e7f941049bb10ea7548fe792f7288b77fe2243c5458432bf2dc5f20",
+    "validation/tools/numeric_semantic_score.py": "3a47f5e8c49166d0350edf9bc0a5e82662b68bd7cd82d0d3951d93ddb1f3b1a4",
+    "bjlab/live_cloud.py": "322c2f7f3565cdd2f300eca94271e1c43f9ad3ab81937925a2c143a5e32ecf9c",
+    "bjlab/live_state.py": "6f5fea94cfb45177bde2835a43ed213082148b2c8cd884b1d48891f0501648e6",
+    "bjlab/numeric_provenance.py": "b137d47fdd9aa687e9b99b1a2d276f90f7971b487eed8200644510ac1f78f817",
+    "bjlab/hybrid_evidence.py": "002a34e3215ec0f4653f50a48d9f4caeab3d418c9e9588afde383db87e49bee2",
+    "bjlab/grounded_state.py": "022fa776692d9ee3f931752873692ec9622f182fff5a1b542e05b070b5fba2c0",
+    "bjlab/state_reader.py": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa",
+    "validation/tools/gemini_paired_total_check.py": "7dcb97ade516d6f3c6149e34684d509a2b2c69f5f9a8cd6dbee547c5cbfbfbaa",
+    "validation/tools/gemini_five_diagnostics.py": "c49a1513d3bc91a625eb47d0b63a8061e46db2c338fd09cb479b4b2fc25fb3a3",
+    "tests/test_gemini_paired_total_check.py": "5b6e23be5ec964aa6ae1d412a8756ddcc77e036c0423f58101c06c0318a9a53b",
+    "tests/test_gemini_new_session_prepare.py": "e638f6240d441d76500a59f4658c385821a2a772cf9741158febf40ca5396b46",
+    "bjlab/offline_response_collector.py": "49b7f38313fce3379f801c3d46a8a0307221017232c8f53889135b2d46b42bc3",
+    "bjlab/paired_persistent_http.py": "1c242c3451e472bba8dd9ae5e9fb6432b8c24da01a0fd385ddef05d5725d9c62",
+    "bjlab/paired_deadline_reader.py": "dcf359e3df510c0dd2c70a8dd6c592635992bb9f45a00fba80fd6507416aad46",
+    "bjlab/private_observation_store.py": "7a4a6b149a189031eadb3a22c73d1675859d19a7ebba165ab5d6d7a6141809f9",
+    "bjlab/rejected_output_diagnostics.py": "a3a9584dac5ed19260a9413b334d54aa23e39d9a86a4d8ca9b2866d6c98be3b3",
+    "bjlab/controlled_http.py": "e7701d5415d45750784fbdca2c94306f7ca292ee04d4a750519468b5a1a33ab6"
+  },
+  "freeze_sha256": "a068fce367d04434c28637df2e75d0e337bd8fe54c2f42dddf19674c8fcfb1a7",
+  "not_executed": [
+    "Corrected available-view request contract",
+    "Actual local-first hybrid or screen capture-to-display",
+    "Full sessions or provider transfer",
+    "Pro/effort selection",
+    "Training, holdout, R2/Poker or installed release replacement"
+  ]
+}
