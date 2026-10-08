@@ -446,3 +446,25 @@
 - Validate relevant source changes with `.venv/Scripts/python.exe -m pytest -q` and
   `.venv/Scripts/python.exe scripts/check-evidence.py`. UI checks apply if UI changes.
 - Explain progress and limits to the user in Italian; public implementation docs are English.
+- VISION-034, latest explicit human "ok vai fai tutto tu goal", 2026-10-08:
+  complete the proposed owned-layout capture-to-advisor integration increment.
+  Preserve all prior results/sources/closed slots and installed1.1.1. Freeze
+  separate current-hand R1 sufficiency and full-transcription criteria before
+  new evaluation; preserve the semantic/card/number/current-evidence gates.
+  Real owned browser-canvas PNG acquisition at native resolution, no oracle
+  phase/turn/round input. At most THREE newly frozen Gemini local-first slots:
+  stable overlap, rotation with actual pixels changing while cloud is pending,
+  and a counterfactual contradictory printed total. Local routing stays natural;
+  a usable local result spends no cloud request. No retry or paid warm-up.
+  Count123->126 at most, count ceiling124->126/new epoch only after preflight;
+  reserve<=USD0.9513984, unchanged USD8/all123 historical entries/15 unknowns.
+  Reuse existing Gemini key privately; verify current model/access/prices,
+  frozen pixels/code, ledger and existing protected output recovery first.
+  Main/popup share one engine; receipt binds original capture/action/expiry.
+  Report browser DOM rendering separately from physical desktop/native paint.
+  Local complete-session reconstruction may be measured offline, never pass
+  renderer phase or identities into the reader. No provider transfer claim,
+  training/holdout/R2/Poker expansion, release replacement/merge/billing change.
+  Close/disarm this lot after three or an integrity/accounting/storage failure.
+  No following paid lot. Technical review from another chat is advisory only.
+

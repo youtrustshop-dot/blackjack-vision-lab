@@ -844,4 +844,6 @@ from .model_api import router as model_router
 app.include_router(model_router)
 from .poker_api import router as poker_router
 app.include_router(poker_router)
+from .integration_api import router as integration_router
+app.include_router(integration_router)
 mount_ui()
