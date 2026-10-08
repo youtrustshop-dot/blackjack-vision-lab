@@ -238,13 +238,42 @@ def run_headless(record,frame,truth,budget,transport,store):
                 ready.set();done.wait(1/12)
         except Exception as exc:
             errors.append(type(exc).__name__);evidence.disconnect();done.set();ready.set()
-    worker = Thread(target=producer,daemon=True,name='vision033-owned-pixel-producer');worker.start()
-    if not ready.wait(2):
-        done.set();worker.join(2);transport.close()
-        return {'executed':False,'reason':'producer_not_ready'}
     before = budget.receipt()
+    worker = Thread(target=producer,daemon=True,name='vision033-owned-pixel-producer');worker.start()
+    def unavailable(reason, path_value=None):
+        # Source failure has no presentation boundary. Keep the actual cause and
+        # counters; never manufacture timing/revalidation from an absent frame.
+        done.set();worker.join(2);transport.close()
+        with lock:count=len(captures)
+        value={**(path_value or {}),'executed':False,'route':'none','status':'blocked',
+            'presented':False,'reason':reason,'advice':None,'advisor_payload':None,
+            'timing':None,'revalidation':None,'evaluation':None,
+            'cloud_reserved_attempts':budget.receipt()['requests_attempted']-before['requests_attempted'],
+            'http_post_transport_attempts':transport._request_count,
+            'physical_capture_or_window':False,'oracle_supplied_to_path':False,'forced_fallback':False,
+            'pre_capture_initialization_ms':initialization_ms,
+            'http_pool_initialization_ms':transport.initialization_ms,
+            'local_first_invoked':path_value is not None,
+            'producer':{'nominal_hz':12,'captures_before_source_failure':count,
+                'maximum_observed_gap_ms':None,'latest_capture_age_at_boundary_ms':None,
+                'error_types':list(errors),'worker_stopped':not worker.is_alive()},
+            'retention':{'retained':False,'reason':'source_not_available'},
+            'transport_closed':transport._closed}
+        save(OUTPUT/'hybrid.json',value)
+        return value
     try:
+        if not ready.wait(2):
+            return unavailable('producer_not_ready')
+        stamp,_=evidence.snapshot()
+        if errors or stamp is None:
+            with lock:captured=bool(captures)
+            return unavailable(('producer_failed_before_path' if captured else
+                'producer_failed_before_capture') if errors else 'no_current_capture')
         value=local_first_attempt(evidence,local,cloud)
+        if value.get('reason')=='no_current_capture':
+            # The producer can disappear after the initial snapshot but before
+            # local_first_attempt takes its own. Preserve its early result.
+            return unavailable(value['reason'],value)
         boundary=value['timing']['presentation_ns'];latest=value['revalidation'].get('latest_capture_ns')
         with lock:observed=[n for n in captures if n<=boundary]
         value.update(executed=True,cloud_reserved_attempts=budget.receipt()['requests_attempted']-before['requests_attempted'],

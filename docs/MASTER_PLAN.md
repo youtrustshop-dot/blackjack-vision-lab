@@ -7,10 +7,14 @@ Versione del piano: 1.1 — 4 ottobre 2026
 > 1,547/1,390s. Trascrizione completa2/3: nel terminale manca l'etichetta SESSION
 > del20 correttamente classificato ui. Il criterio congelato fallisce: quarto
 > ibrido NON eseguito. Nessuna correzione delle risposte o dei punteggi storici.
-> 45 nuove prove offline; suite961+10 subtest/UI52/build. Registro028–032
+> 47 nuove prove offline; suite963+10 subtest/UI52/build. Registro028–032
 > riallineato alle evidenze già pubblicate. USD8/120vecchie voci/15riserve ignote
 > intatti; ledger123/124,upperUSD6,179802300,usage nuovo0,0032858. Runtime disarmato,
 > slot condizionale chiuso; nessun lotto successivo/training/holdout/R2/Poker/release.
+> Revisione ricevuta direttamente dall'altra chat: corretto il ramo di sorgente
+> assente, due regressioni senza rete e zero API/solver/consigli. Il codice
+> consumato resta versionato; il vecchio freeze respinge la sorgente aggiornata.
+> Nessun risultato del lotto cambiato o quarto slot riaperto.
 
 > VISION-032, eseguito 2026-10-08: [tre nuovi stati e collegamento ibrido](GEMINI_BOUND_SESSION_HYBRID.md).
 > Tutte le carte lette3/3: ranghi11/11,semi11/11,dorsi2/2. Due positivi

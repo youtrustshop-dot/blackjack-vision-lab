@@ -9,8 +9,8 @@ This is a non-decision-label omission, not a wrong card/phase or invented total.
 The predeclared ALL-three full-content gate fails; fourth hybrid NOT executed.
 No gate relaxation, output repair, retry or following paid lot.
 
-45 new offline fixtures/full961+10 subtests, frontend52, TypeScript/Vite and
-evidence/diff checks pass. Frozen source/weights/old scores unchanged. Forward
+47 new offline fixtures/full963+10 subtests, frontend52, TypeScript/Vite and
+evidence/diff checks pass. Consumed source preserved; weights/old scores unchanged. Forward
 registry summaries restore already published028–032; they are not new executions.
 Original pixels and all selected outputs retained privately and hash verified.
 New usage upperUSD0.0032858; ledger123/124,upper6.179802300,margin1.820197700.
@@ -18,6 +18,13 @@ USD8/all120 old entries/15 unknowns intact; runtime disarmed/pools closed,
 unused fourth slot closed. No hybrid producer/solver runtime timing, operational
 p95, complete session/provider proof, training/holdout/R2/Poker, native
 capture/popup/monitor checks or installed1.1.1 change.
+Direct Progetto Blackjack visivo review identified a source-error branch in the
+consumed runner. Two controlled before cases produce KeyError; amended handling
+preserves producer/no_current_capture causes and null unreached timing. Two new
+networkless regressions have zero API/local/solver calls, no advice and closed
+resources. Full amended963+10 suite passes; actual three-call scores/ledger stay
+unchanged. Consumed runner preserved at5ffa402; current old freeze is rejected,
+no fourth reopened or new paid freeze. [Offline receipt](../validation/results/gemini-visible-phase/source-failure-audit.json).
 [Convention, outcomes, failure and commands](GEMINI_VISIBLE_PHASE_CONTRACT.md).
 
 # Historical delivery — VISION-032 three new states; conditional hybrid closed

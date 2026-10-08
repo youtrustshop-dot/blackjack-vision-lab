@@ -4,14 +4,14 @@
   "verification": {
     "version": "1.1.1",
     "status": "unreleased-source-verified",
-    "completed_test_run": "961 passed, 2 existing warnings, 10 subtests passed in 101.83s",
+    "completed_test_run": "963 passed, 2 existing warnings, 10 subtests passed in 99.72s",
     "frontend_tests": "52 passed locally in VISION-033 after forward registry reconciliation",
     "frontend_build": "52 frontend tests passed locally; TypeScript/Vite build passed",
     "latest_changes_require_retest": false,
     "source_evidence": "validation/results/gemini-visible-phase/verification.json",
     "release_evidence": "release/v1.1.1/",
     "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
-    "verification_scope": "VISION-033:45 networkless tests/full961+10; three new owned stills with exact cards3/3, ranks10/10, suits10/10, back1/1, phase/controls3/3, timely positive1/1, safe negatives2/2, falseaccept0/3. Full transcription2/3: missing SESSION label on ended case. Frozen gate fails; fourth hybrid NOT executed. Ledger123/124,USD8/all120 old/15 unknowns preserved, disarmed. No complete session/provider/operational p95/champion, training/holdout/R2/Poker/release or physical capture proof.",
+    "verification_scope": "VISION-033:45 networkless tests/full961+10; three new owned stills with exact cards3/3, ranks10/10, suits10/10, back1/1, phase/controls3/3, timely positive1/1, safe negatives2/2, falseaccept0/3. Full transcription2/3: missing SESSION label on ended case. Frozen gate fails; fourth hybrid NOT executed. Ledger123/124,USD8/all120 old/15 unknowns preserved, disarmed. No complete session/provider/operational p95/champion, training/holdout/R2/Poker/release or physical capture proof. Posthoc source-error guard: two offline regressions, original KeyError reproduced twice then cause-preserving blocked receipts; zero API/solver/advice, resources closed. Consumed source preserved; current old freeze rejected, no slot reopened.",
     "historical_v1_1_1_verification": {
       "version": "1.1.1",
       "status": "source-verified",
@@ -188,6 +188,18 @@
       "release_evidence": "release/v1.1.1/",
       "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
       "verification_scope": "VISION-032:37 networkless adapter/local-first deadline and conditional-slot checks; three new owned bound-D sampled states, exact cards3/3, timely positives2/2, safe negative1/1 but terminal phase waiting vs settled differs. Complete transcription1/3, falseaccept0/3. Frozen gate fails: conditional hybrid not executed. Ledger120/121 under USD8,117 old entries/15 unknowns preserved, disarmed. No external/session/operational p95/champion, training/holdout/R2/Poker/installed-release/physical capture claim."
+    },
+    "previous_vision033_consumed_source_check": {
+      "version": "1.1.1",
+      "status": "unreleased-source-verified",
+      "completed_test_run": "961 passed, 2 existing warnings, 10 subtests passed in 101.83s",
+      "frontend_tests": "52 passed locally in VISION-033 after forward registry reconciliation",
+      "frontend_build": "52 frontend tests passed locally; TypeScript/Vite build passed",
+      "latest_changes_require_retest": false,
+      "source_evidence": "validation/results/gemini-visible-phase/verification.json",
+      "release_evidence": "release/v1.1.1/",
+      "release_evidence_scope": "Frozen published champion at 4f074ef; does not verify this unreleased candidate.",
+      "verification_scope": "VISION-033:45 networkless tests/full961+10; three new owned stills with exact cards3/3, ranks10/10, suits10/10, back1/1, phase/controls3/3, timely positive1/1, safe negatives2/2, falseaccept0/3. Full transcription2/3: missing SESSION label on ended case. Frozen gate fails; fourth hybrid NOT executed. Ledger123/124,USD8/all120 old/15 unknowns preserved, disarmed. No complete session/provider/operational p95/champion, training/holdout/R2/Poker/release or physical capture proof."
     }
   },
   "objective": "Complete Blackjack Vision Lab integrating both source specifications",

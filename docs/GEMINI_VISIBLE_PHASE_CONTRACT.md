@@ -52,8 +52,19 @@ PR26 had phase2/3/full transcription1/3; this new lot has phase3/3/full transcri
 
 Verification: **45** new networkless tests; full **961 passed +10 subtests** in101.83s (two existing warnings). Frontend **52** passed locally and TypeScript/Vite build passed after registry reconciliation. [Sanitized result](../validation/results/gemini-visible-phase/summary.json) and [source verification](../validation/results/gemini-visible-phase/verification.json). Original input PNGs, complete selected texts and record identifiers stay private; selected text hashes were recovered and verified.
 
+## Subsequent offline source-failure repair
+
+The directly received review in **Progetto Blackjack visivo** inspected preparation commit `5ffa402`, without executing code or viewing private PNGs. It identified a concrete runner error: producer failure can signal `ready` without a current capture; `local_first_attempt` then returns `no_current_capture` without timing, and the old wrapper accesses `timing` unconditionally. Disappearance between the outer check and the inner snapshot also needs an explicit early-return branch.
+
+Both controlled before/after reproductions raised `KeyError` with the consumed runner. The amended wrapper checks producer errors/current capture after `ready`, handles the inner `no_current_capture` return separately and preserves the cause and actual request counters. Unreached presentation/revalidation/evaluation timing stays `null`; no synthetic zero timestamp. Both repaired paths close the worker/transport and return no advice. Two targeted socket/DNS-free pytest regressions pass, with zero local reads, API reservations/posts or solver calls. [Offline audit receipt](../validation/results/gemini-visible-phase/source-failure-audit.json); its four fabricated before/after flows are not model observations or additional pytest tests.
+
+This correction was made **after** the three-call lot closed; the fourth was never reached. Consumed runner bytes are preserved and hash-verified locally, and preparation source remains versioned at `5ffa402c39e3897b8667848bc9315b9ae9d17217`. Original freeze/inputs/requests/observations/scores and canonical ledger remain unchanged. The current amended runner intentionally rejects the old source freeze; **no new paid freeze, inference scope or reopened slot is created**. The source verification separates the consumed execution manifest from the amended offline-tested source. Full amended suite **963 passed +10 subtests** in99.72s, two existing warnings; **47** new offline tests across this increment. Previous961-test execution evidence remains historical. UI52/build unchanged and verified earlier in this increment.
+
 ```powershell
 .venv/Scripts/python.exe -m pytest tests/test_visible_phase_deadline_reader.py tests/test_gemini_visible_phase_check.py -q
+.venv/Scripts/python.exe -m pytest tests/test_headless_source_failure.py -q
+# The following commands describe the consumed source at preparation commit5ffa402.
+# Amended current source rejects its old hash before inference; the scope is closed.
 .venv/Scripts/python.exe -m validation.tools.gemini_visible_phase_check --prepare
 .venv/Scripts/python.exe -m validation.tools.gemini_visible_phase_check --freeze-sha256 b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13
 # Historical one-shot execution command, only within this human-authorized frozen scope:

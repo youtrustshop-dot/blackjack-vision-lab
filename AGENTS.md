@@ -1,5 +1,17 @@
 # Card Lab project instructions
 
+- VISION-033 posthoc offline review repair, 2026-10-08: direct Blackjack chat
+  review found ready-without-capture/timing KeyError. Preserve consumed runner
+  at5ffa402 and original freeze/three responses/scores/ledger. Amended wrapper
+  checks producer/current capture and inner no_current_capture separately,
+  retains cause/counters/null unreached timing, closes worker/transport.
+  Two real fake-source regressions: zero local/API/solver/advice; four controlled
+  before/after audit flows are not new model observations or extra pytest count.
+  Full963+10 suite/47 new offline tests; prior UI52/build pass. Current amended
+  source intentionally rejects old freeze; no new paid freeze or reopened slot.
+  Ledger123/124/upper6.179802300/USD8/15unknown unchanged. API remains disarmed,
+  no next paid lot, holdout/training/R2/Poker/release or physical capture proof.
+
 - VISION-033 executed 2026-10-08: exactly three new owned phase controls,
   HTTP200/strict3/3, cards3/3,ranks10/10,suits10/10,back1/1,phase/controls3/3.
   Positive timely1/1, negatives safe2/2; full transcription2/3: terminal20/ui/
