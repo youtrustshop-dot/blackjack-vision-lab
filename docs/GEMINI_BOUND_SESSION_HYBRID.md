@@ -28,6 +28,8 @@ The ended pixels contain player Q♥, 5♦, 10♠ (25), dealer 10♠, 9♦ (19),
 
 The unchanged request enumerates these phase names without a visible rule distinguishing them. A single post-hand image does not itself establish how that taxonomy should separate a completed hand from waiting for the next one. Therefore the evidence establishes a **mismatch with the frozen phase reference**; attributing it exclusively to a perception defect would go beyond the test. The renderer reference, historical score and failed gate remain unchanged.
 
+A [post-hoc offline contract audit](../validation/results/gemini-bound-session-hybrid/phase-contract-audit.json) changes only the phase field of the known reference to each of the two names. Both fabricated projections validate under the unchanged strict contract and both block R1. This checks legal representations and the safety gate; it is **not** a pair of independently rendered histories, proof that both physical phases are correct, a new model result or a reason to reopen the failed slot.
+
 A future offline clarification should define phase observability and inspect short sequences around completion and **NEW HAND**, keeping this batch as a consumed regression. If two histories are visually indistinguishable, the temporal distinction belongs to a temporal state layer or explicit uncertainty. This report does not add a phase alias, weaken R1 or recalculate this batch as a success.
 
 ## Opt-in adapter and integrated offline proof

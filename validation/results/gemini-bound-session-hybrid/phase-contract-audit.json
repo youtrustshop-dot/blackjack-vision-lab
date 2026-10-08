@@ -1,0 +1,37 @@
+{
+  "experiment": "VISION-032",
+  "kind": "Post-hoc OFFLINE contract audit, no new model or renderer history",
+  "input_table_sha256": "18cffc7b956a4893f29c69c49960232f4772c2d84be31c979bf98ff1c05954b4",
+  "frozen_live_state_source_sha256": "6f5fea94cfb45177bde2835a43ed213082148b2c8cd884b1d48891f0501648e6",
+  "frozen_prompt_source_sha256": "322c2f7f3565cdd2f300eca94271e1c43f9ad3ab81937925a2c143a5e32ecf9c",
+  "global_contract_changed": false,
+  "historical_scores_changed": false,
+  "hybrid_executed": false,
+  "provider_requests": 0,
+  "fabricated_phase_projections": [
+    {
+      "fabricated_phase_projection": "settled",
+      "strict_wire_validated": true,
+      "r1_usable": false,
+      "gate_reasons": [
+        "Observed phase is not a player decision.",
+        "Need exactly one readable dealer upcard.",
+        "Player hand has already busted.",
+        "Player turn is not established."
+      ]
+    },
+    {
+      "fabricated_phase_projection": "waiting",
+      "strict_wire_validated": true,
+      "r1_usable": false,
+      "gate_reasons": [
+        "Observed phase is not a player decision.",
+        "Need exactly one readable dealer upcard.",
+        "Player hand has already busted.",
+        "Player turn is not established."
+      ]
+    }
+  ],
+  "finding": "Both phase names are legal with the same known reference fields and both block R1. The current request gives no explicit visible rule distinguishing these enum values.",
+  "claim_limit": "Not a pair of independently rendered histories, not proof both phases are physically correct, not correction of the failed frozen criterion or new model accuracy."
+}
