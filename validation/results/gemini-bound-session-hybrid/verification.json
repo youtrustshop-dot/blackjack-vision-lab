@@ -63,6 +63,18 @@
     "pools_closed": true,
     "chatgpt_integration_review_received_directly": true
   },
+  "posthoc_offline_phase_audit": {
+    "source": "validation/tools/terminal_phase_audit.py",
+    "source_sha256": "24a14ecb0980d6db306f7b8a04d4a0850f3c1269e2c94e21b6a24c1334c166e9",
+    "receipt": "validation/results/gemini-bound-session-hybrid/phase-observability-audit.json",
+    "legitimate_adjacent_stages": 2,
+    "decoded_changed_pixels": 119430,
+    "fabricated_integrated_gate_assertions": 8,
+    "provider_requests": 0,
+    "ledger_changed": false,
+    "historical_scores_changed": false,
+    "counts_as_model_observations_or_additional_pytest_tests": false
+  },
   "not_executed": [
     "Conditional fourth local-first hybrid; gate failed",
     "Actual held-frame producer or solver timing measurement",

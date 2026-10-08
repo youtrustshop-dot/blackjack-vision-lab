@@ -1,0 +1,247 @@
+{
+  "experiment": "VISION-032",
+  "kind": "Post-hoc OFFLINE bounded observability and gate audit",
+  "frozen_execution_hash": "57cdefc57c2a3b014caa48a1372efb5454331fe58271cb161cfa94e7e660bd7f",
+  "provider_requests": 0,
+  "ledger_changed": false,
+  "source_sha256": {
+    "validation/tools/terminal_phase_audit.py": "24a14ecb0980d6db306f7b8a04d4a0850f3c1269e2c94e21b6a24c1334c166e9",
+    "validation/tools/stress_lab.py": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+    "validation/tools/grounded_corpus.py": "ee4c8e59690783b945b770dd3335204a52807d53f09816e43df8a46a43edfd6b",
+    "validation/tools/paired_cloud_prepare.py": "514cd19454a2515cf678bfa73bed8d4ce499d55af357d332d2f7751d8a92b54b",
+    "bjlab/live_cloud.py": "322c2f7f3565cdd2f300eca94271e1c43f9ad3ab81937925a2c143a5e32ecf9c",
+    "bjlab/live_state.py": "6f5fea94cfb45177bde2835a43ed213082148b2c8cd884b1d48891f0501648e6",
+    "bjlab/numeric_provenance.py": "b137d47fdd9aa687e9b99b1a2d276f90f7971b487eed8200644510ac1f78f817",
+    "bjlab/state_reader.py": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa"
+  },
+  "actual_serialized_request_sha256": "0158f396aaefe94aa3f78d3bea2bf1e80acf0fc28e738bb4ca7982c30a674362",
+  "actual_phase_schema": {
+    "enum": [
+      "player",
+      "dealer",
+      "waiting",
+      "settled",
+      "unknown"
+    ],
+    "type": "string"
+  },
+  "phase_instruction_excerpt": "p visible phase; Unknown phase stays unknown",
+  "explicit_waiting_settled_discriminating_rule_in_request": false,
+  "reference_assignment_sites": [
+    "stress_lab.timeline adds settled after dealer progression",
+    "grounded_corpus.render uses stage phase; disabled-controls forces settled",
+    "waiting selects DEAL; settled selects NEW HAND"
+  ],
+  "legitimate_adjacent_stages": [
+    {
+      "name": "terminal",
+      "timeline_index": 8,
+      "render_condition": "disabled-controls",
+      "stage_phase": "settled",
+      "observed_truth_phase": "settled",
+      "cards_in_pixels": 5,
+      "decoded_pixels_sha256": "9e586d285db9ab98663b31bed2bb73fd7b6ac57aa9f386040b2ce914ad1212f1",
+      "native_views": [
+        "table"
+      ],
+      "source_size": [
+        1024,
+        768
+      ],
+      "layout": {
+        "table": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "dealer": [
+          0.0791015625,
+          0.15885416666666666,
+          0.841796875,
+          0.2916666666666667
+        ],
+        "player:0": [
+          0.0791015625,
+          0.5299479166666666,
+          0.841796875,
+          0.2903645833333333
+        ],
+        "controls": [
+          0.0498046875,
+          0.8489583333333334,
+          0.900390625,
+          0.12109375
+        ]
+      },
+      "table_box": [
+        0,
+        0,
+        1024,
+        768
+      ]
+    },
+    {
+      "name": "next-waiting",
+      "timeline_index": 9,
+      "render_condition": "transition-clear",
+      "stage_phase": "waiting",
+      "observed_truth_phase": "waiting",
+      "cards_in_pixels": 0,
+      "decoded_pixels_sha256": "897f2036c61e200cb5962c863b68e67df7573da4c9bb8ae7c5df8faf51556a41",
+      "native_views": [
+        "table"
+      ],
+      "source_size": [
+        1024,
+        768
+      ],
+      "layout": {
+        "table": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "dealer": [
+          0.0791015625,
+          0.15885416666666666,
+          0.841796875,
+          0.2916666666666667
+        ],
+        "player:0": [
+          0.0791015625,
+          0.5299479166666666,
+          0.841796875,
+          0.2903645833333333
+        ],
+        "controls": [
+          0.0498046875,
+          0.8489583333333334,
+          0.900390625,
+          0.12109375
+        ]
+      },
+      "table_box": [
+        0,
+        0,
+        1024,
+        768
+      ]
+    }
+  ],
+  "decoded_changed_pixels": 119430,
+  "visual_discriminant_in_this_replay": "Terminal has final cards, NEW HAND and disabled HIT/STAND/DOUBLE; next waiting is empty with DEAL.",
+  "observability_result": "These two legitimate replay inputs differ; no single-frame collision demonstrated. Request does not specify the phase naming convention.",
+  "fabricated_gate_matrix": [
+    {
+      "fabricated_fixture": "consumed-ended-reference",
+      "phase": "waiting",
+      "strict_wire_validated": true,
+      "r1_usable": false,
+      "gate_reasons": [
+        "Observed phase is not a player decision.",
+        "Need exactly one readable dealer upcard.",
+        "Player hand has already busted.",
+        "Player turn is not established."
+      ],
+      "mock_posts": 1,
+      "solver_calls": 0,
+      "headless_payload_presentable": false
+    },
+    {
+      "fabricated_fixture": "consumed-ended-reference",
+      "phase": "settled",
+      "strict_wire_validated": true,
+      "r1_usable": false,
+      "gate_reasons": [
+        "Observed phase is not a player decision.",
+        "Need exactly one readable dealer upcard.",
+        "Player hand has already busted.",
+        "Player turn is not established."
+      ],
+      "mock_posts": 1,
+      "solver_calls": 0,
+      "headless_payload_presentable": false
+    },
+    {
+      "fabricated_fixture": "consumed-ended-reference",
+      "phase": "unknown",
+      "strict_wire_validated": true,
+      "r1_usable": false,
+      "gate_reasons": [
+        "Need exactly one readable dealer upcard.",
+        "Player hand has already busted.",
+        "Player turn is not established."
+      ],
+      "mock_posts": 1,
+      "solver_calls": 0,
+      "headless_payload_presentable": false
+    },
+    {
+      "fabricated_fixture": "consumed-ended-reference",
+      "phase": "player",
+      "strict_wire_validated": true,
+      "r1_usable": false,
+      "gate_reasons": [
+        "Need exactly one readable dealer upcard.",
+        "Player hand has already busted.",
+        "No enabled player decision control is observed."
+      ],
+      "mock_posts": 1,
+      "solver_calls": 0,
+      "headless_payload_presentable": false
+    },
+    {
+      "fabricated_fixture": "otherwise-valid-r1-fixture",
+      "phase": "waiting",
+      "strict_wire_validated": true,
+      "r1_usable": false,
+      "gate_reasons": [
+        "Observed phase is not a player decision.",
+        "Player turn is not established."
+      ],
+      "mock_posts": 1,
+      "solver_calls": 0,
+      "headless_payload_presentable": false
+    },
+    {
+      "fabricated_fixture": "otherwise-valid-r1-fixture",
+      "phase": "settled",
+      "strict_wire_validated": true,
+      "r1_usable": false,
+      "gate_reasons": [
+        "Observed phase is not a player decision.",
+        "Player turn is not established."
+      ],
+      "mock_posts": 1,
+      "solver_calls": 0,
+      "headless_payload_presentable": false
+    },
+    {
+      "fabricated_fixture": "otherwise-valid-r1-fixture",
+      "phase": "unknown",
+      "strict_wire_validated": true,
+      "r1_usable": false,
+      "gate_reasons": [
+        "Player turn is not established."
+      ],
+      "mock_posts": 1,
+      "solver_calls": 0,
+      "headless_payload_presentable": false
+    },
+    {
+      "fabricated_fixture": "otherwise-valid-r1-fixture",
+      "phase": "player",
+      "strict_wire_validated": true,
+      "r1_usable": true,
+      "gate_reasons": [],
+      "mock_posts": 1,
+      "solver_calls": 1,
+      "headless_payload_presentable": true
+    }
+  ],
+  "historical_scores_changed": false,
+  "hybrid_executed": false,
+  "claim_limit": "A two-stage source/pixel audit and eight fabricated safety fixtures; not exhaustive observability, model reclassification, new inference, full-session tracking or promotion."
+}
