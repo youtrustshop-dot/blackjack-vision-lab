@@ -93,7 +93,14 @@ class IntegratedR1Session:
             self.displays = self.displays[-128:]
             return copy.deepcopy(row)
 
-    def capture(self, content, *, sequence, capture_age_ms=0):
+    def capture(self, content, *, sequence, capture_age_ms=0, received_ns=None):
+        # Anchor acquisition before decoding, and before a threadpool queue
+        # when the HTTP boundary supplies its own monotonic receipt. Processing
+        # time must consume evidence lifetime, never move capture forward.
+        received_ns = self.clock() if received_ns is None else received_ns
+        if (type(received_ns) is not int or received_ns < 0 or
+                received_ns > self.clock()):
+            raise ValueError('A server monotonic receipt is required.')
         if type(sequence) is not int or sequence < 0:
             raise ValueError('Nonnegative sequence required.')
         if type(capture_age_ms) not in (int, float) or not 0 <= capture_age_ms <= 1000:
@@ -118,15 +125,15 @@ class IntegratedR1Session:
             if sequence <= self.sequence:
                 raise ValueError('Out-of-order capture must not renew evidence.')
             stamp = self.evidence.capture(frame, source=self.source, table=self.table,
-                                          capture_ns=now-int(capture_age_ms*1_000_000))
+                                          capture_ns=received_ns-int(capture_age_ms*1_000_000))
             self.sequence = sequence
             self.capture_count += 1
             self.captures.append({'sequence': sequence, 'capture_ns': stamp.capture_ns,
-                                  'received_ns': now, 'pixel_sha256': digest,
+                                  'received_ns': received_ns, 'ingested_ns': now, 'pixel_sha256': digest,
                                   'source_epoch': stamp.source_epoch, 'motion_epoch': stamp.motion_epoch})
             self.captures = self.captures[-2048:]
         return {'sequence': sequence, 'frame_id': frame.frame_id,
-                'capture_count': self.capture_count, 'received_ns': now,
+                'capture_count': self.capture_count, 'received_ns': received_ns, 'ingested_ns': now,
                 'capture_ns': stamp.capture_ns, 'source_id': self.source}
 
     def analyze(self):

@@ -1,0 +1,33 @@
+{
+  "version": "1.1.1",
+  "review": "PR28-original-capture-clock",
+  "executed_utc_date": "2026-10-09",
+  "baseline_commit": "c0763226148aad511a4643641ef7d9fe356c08b6",
+  "tests": {
+    "python_passed": 984,
+    "python_subtests_passed": 10,
+    "python_elapsed_seconds": 122.55,
+    "python_warnings": 2,
+    "frontend_passed": 52,
+    "frontend_scope": "Unchanged frontend; successful VISION-034 check retained; new GitHub check required on this corrective commit."
+  },
+  "new_networkless_tests": 3,
+  "provider_posts": 0,
+  "new_reservations": 0,
+  "runtime_disarmed": true,
+  "ledger_byte_identical": true,
+  "historical_measurements_preserved": true,
+  "historical_verification_sha256": "1a46dfdd220db00bf943d3be21c6ae4ea068d4aa08bf65f1926fb841a6c9dc06",
+  "source_hashes": {
+    "bjlab/integrated_r1.py": "87af58926af65a4a20f66bd095667f9ffcc0318d1f98bd9ddf08bedd709f0f21",
+    "bjlab/integration_api.py": "f513359775c66a63f3ee7ade039655a711bf924fd223e3236f9310498a93ecb3",
+    "tests/test_integrated_r1.py": "63a0c9d8a296f1e8a0d0197b6830b6b34e2bf2debd58974ebfdc7ad603e25cc6"
+  },
+  "not_executed": [
+    "New provider request",
+    "Historical benchmark re-evaluation",
+    "Final holdout",
+    "Native build/install",
+    "Main-chain merge"
+  ]
+}

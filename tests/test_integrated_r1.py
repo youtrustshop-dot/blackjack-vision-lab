@@ -97,6 +97,36 @@ def test_original_age_expires_even_when_identical_new_frames_arrive(monkeypatch)
     assert 'original_evidence_deadline_expired' in state['revalidation']['reasons']
 
 
+def test_decoding_delay_consumes_lifetime_instead_of_renewing_capture(monkeypatch):
+    from bjlab import integrated_r1 as implementation
+    session, content, _ = setup()
+    received = time.monotonic_ns()
+    tick = [received]
+    session.clock = lambda: tick[0]
+    prepare = implementation.prepare_frame
+    def delayed_prepare(*args, **kwargs):
+        tick[0] += 4_000_000_000
+        return prepare(*args, **kwargs)
+    monkeypatch.setattr(implementation, 'prepare_frame', delayed_prepare)
+    ack = session.capture(content, sequence=0)
+    stamp, _ = session.evidence.snapshot()
+    validity = session.evidence.revalidate(stamp, now_ns=tick[0])
+    assert ack['capture_ns'] == received and ack['ingested_ns'] == tick[0]
+    assert not validity['valid']
+    assert 'original_evidence_deadline_expired' in validity['reasons']
+
+
+def test_queue_delay_preserves_the_http_boundary_and_original_browser_age():
+    session, content, _ = setup()
+    received = time.monotonic_ns()
+    session.clock = lambda: received+4_000_000_000
+    ack = session.capture(content, sequence=0, received_ns=received, capture_age_ms=90)
+    stamp, _ = session.evidence.snapshot()
+    assert ack['capture_ns'] == received-90_000_000
+    assert ack['received_ns'] == received
+    assert not session.evidence.revalidate(stamp, now_ns=session.clock())['valid']
+
+
 def test_dom_receipt_is_bound_to_original_action_and_not_a_freshness_renewal():
     session, content, other = setup()
     session.capture(content, sequence=0); state = session.analyze()
@@ -159,3 +189,30 @@ def test_cross_origin_rejected_and_cloud_unconfigured_no_inference(client):
     assert state['stale'] and state['report']['advice'] is None
     assert client.post(prefix+'/sessions/'+identity+'/capture', content=content, headers=headers,
         params={'sequence':1,'captured_epoch_ms':time.time()*1000}).status_code == 422
+
+
+def test_http_capture_timestamps_before_dispatching_to_a_delayed_threadpool(client, monkeypatch):
+    client, path, image, content = client
+    api.configure(layout=LAYOUT, sources={
+        'owned': {'title': 'Owned', 'path': str(path), 'pixel_sha256': pixel_digest(image)}},
+        local_factory=lambda: Local(True))
+    prefix = '/api/research/r1'
+    headers = {'x-bjlab-local': '1'}
+    identity = client.post(prefix+'/sessions', json={}, headers=headers).json()['session_id']
+    value = api.sessions[identity]
+    received = time.monotonic_ns()
+    tick = [received]
+    value.clock = lambda: tick[0]
+    async def delayed_dispatch(fn, *args, **kwargs):
+        tick[0] += 4_000_000_000
+        return fn(*args, **kwargs)
+    monkeypatch.setattr(api, 'run_in_threadpool', delayed_dispatch)
+    monkeypatch.setattr(api.time, 'time', lambda: 100.)
+    response = client.post(prefix+'/sessions/'+identity+'/capture', content=content,
+        headers=headers, params={'sequence':0, 'captured_epoch_ms':99_980.})
+    assert response.status_code == 200
+    assert int(response.json()['capture_ns']) == received-20_000_000
+    stamp, _ = value.evidence.snapshot()
+    validity = value.evidence.revalidate(stamp, now_ns=tick[0])
+    assert not validity['valid']
+    assert 'original_evidence_deadline_expired' in validity['reasons']

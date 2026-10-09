@@ -1,5 +1,17 @@
 # Card Lab project instructions
 
+- PR28 review, human request 2026-10-09: review the incremental diff against
+  PR27 before considering merge; destination clarification is pending. The
+  existing base is a research branch with27 open ancestors, not main. Do not
+  treat review of PR28 as approval of that whole chain or a native release.
+  Corrected original capture timing: anchor monotonic receipt before threadpool
+  dispatch/decode, retain browser age; never renew stale acquisition through
+  processing delays. Three new networkless regressions and explicit before/
+  after clock simulations. VISION034 source/receipts/scores/hash evidence remain
+  historical and unchanged. Cloud permanently closed, no new inference/ledger,
+  weights/training/holdout/Poker/release work. See docs/PR28_REVIEW.md and separate
+  validation/results/pr28-review/verification.json for forward checks.
+
 - VISION-034 executed 2026-10-08: opt-in real owned canvas PNG acquisition,
   unchanged local reader and compact authoritative view. Supported outlined
   controls development hand:3/4 positive attempts, cold-gap abstention; three

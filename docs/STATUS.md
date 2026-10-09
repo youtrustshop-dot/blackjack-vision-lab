@@ -1,4 +1,18 @@
-# Current delivery — VISION-034 owned browser integration and full sessions
+# Current source review — PR28 acquisition clock, 9 October 2026
+
+The PR28 review found and corrected a capture-clock defect: worker queue and
+image preparation could shift the apparent acquisition forward. The timestamp
+is now anchored before dispatch/decode; processing delays consume its original
+lifetime. Three new networkless regressions and explicit before/after fabricated
+four-second clock controls pass. Full984+10 subtests pass; unchanged UI52/build
+evidence retained, new GitHub checks required for the corrective commit.
+The original VISION034 empirical receipts and981-test verification stay intact.
+No new API/ledger/holdout/weights/Poker/native release action. PR28 is stacked
+on a research branch with27 open ancestors; merge destination is pending human
+clarification, and this incremental review is not approval of that entire chain.
+See [review](PR28_REVIEW.md) and [forward checks](../validation/results/pr28-review/verification.json).
+
+# Previous measured delivery — VISION-034 owned browser integration and full sessions
 
 The opt-in owned layout now has an actual PNG acquisition → unchanged local
 reader → compact main-DOM path. Three warm repeats on one development hand

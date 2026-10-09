@@ -98,11 +98,12 @@ async def capture(identity: str, request: Request, sequence: int,
                     raise HTTPException(413, 'Owned canvas capture exceeds its budget.')
         # Both clocks are on this local machine. Browser performance.now is used
         # separately for capture-to-DOM measurements; no server/client span sums.
+        received_ns = value.clock()
         age = time.time()*1000-captured_epoch_ms
         if not 0 <= age <= 1000:
             raise ValueError('Browser acquisition age is invalid or expired.')
         ack = await run_in_threadpool(value.capture, bytes(content),
-                                      sequence=sequence, capture_age_ms=age)
+                                      sequence=sequence, capture_age_ms=age, received_ns=received_ns)
         ack['capture_ns'] = str(ack['capture_ns'])  # JS safe even after long machine uptime.
         return ack
     except (ValueError, PermissionError, OSError) as exc:

@@ -1,0 +1,55 @@
+{
+  "version": "1.1.1",
+  "review": "PR28-original-capture-clock",
+  "executed_utc_date": "2026-10-09",
+  "baseline_commit": "c0763226148aad511a4643641ef7d9fe356c08b6",
+  "baseline_source_sha256": "11313633dbbdf0f9c1519f0c68b43053451a89629808f03d12df74a3dc188d59",
+  "scope": "Two fabricated clock delays replayed on owned white PNG; not actual latency or perception evidence.",
+  "rows": [
+    {
+      "implementation": "before",
+      "case": "decode",
+      "simulated_delay_ms": 4000,
+      "timestamp_shift_ms": 4000.0,
+      "accepted_as_current": true,
+      "reasons": []
+    },
+    {
+      "implementation": "before",
+      "case": "threadpool",
+      "simulated_delay_ms": 4000,
+      "timestamp_shift_ms": 4000.0,
+      "accepted_as_current": true,
+      "reasons": []
+    },
+    {
+      "implementation": "after",
+      "case": "decode",
+      "simulated_delay_ms": 4000,
+      "timestamp_shift_ms": 0.0,
+      "accepted_as_current": false,
+      "reasons": [
+        "latest_capture_stale",
+        "original_evidence_deadline_expired"
+      ]
+    },
+    {
+      "implementation": "after",
+      "case": "threadpool",
+      "simulated_delay_ms": 4000,
+      "timestamp_shift_ms": 0.0,
+      "accepted_as_current": false,
+      "reasons": [
+        "latest_capture_stale",
+        "original_evidence_deadline_expired"
+      ]
+    }
+  ],
+  "provider_posts": 0,
+  "historical_scores_modified": false,
+  "source_hashes": {
+    "bjlab/integrated_r1.py": "87af58926af65a4a20f66bd095667f9ffcc0318d1f98bd9ddf08bedd709f0f21",
+    "bjlab/integration_api.py": "f513359775c66a63f3ee7ade039655a711bf924fd223e3236f9310498a93ecb3",
+    "tests/test_integrated_r1.py": "63a0c9d8a296f1e8a0d0197b6830b6b34e2bf2debd58974ebfdc7ad603e25cc6"
+  }
+}

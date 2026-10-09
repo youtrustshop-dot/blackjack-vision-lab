@@ -1,6 +1,14 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Revisione PR28, 2026-10-09: [controllo e correzione](PR28_REVIEW.md).
+> L'attesa nel backend poteva spostare in avanti l'ora della cattura; ora resta
+> ancorata prima della coda/elaborazione. Tre nuove regressioni senza rete;
+> suite984+10subtest. Prove VISION034 e981test originali conservati. Nessuna
+> nuova chiamata o modifica al registro spese. La PR28 punta al ramo della27:
+> destinazione del merge da chiarire; revisione della28 non significa approvare
+> tutta la catena fino a main. Nessuna release installata sostituita.
+
 > VISION-034, completato 2026-10-08: [percorso reale e sessioni](INTEGRATED_R1_SESSION.md).
 > Tavolo proprio con controlli supportati: cattura PNG del browser → lettore
 > locale → advisor compatto. Tre ripetizioni valide in 213/274/327 ms fino al
