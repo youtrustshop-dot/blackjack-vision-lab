@@ -5,7 +5,9 @@ if (-not (Test-Path -LiteralPath ".venv\Scripts\python.exe")) {
     & $PythonExe -m venv .venv
     if ($LASTEXITCODE -ne 0) { throw "Python environment creation failed." }
 }
-& .\.venv\Scripts\python.exe -m pip install -c requirements-lock.txt -e ".[dev]"
+# Independent PokerKit/Treys references are required by the complete test suite.
+# The heavyweight model-training environment remains a separate opt-in setup.
+& .\.venv\Scripts\python.exe -m pip install -c requirements-lock.txt -e ".[dev,research]"
 if ($LASTEXITCODE -ne 0) { throw "Python dependency installation failed." }
 Push-Location ui
 try {

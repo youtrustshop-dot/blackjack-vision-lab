@@ -1,6 +1,19 @@
 # Card Lab project instructions
 
-- PR28 review, human request 2026-10-09: review the incremental diff against
+- Main consolidation, latest explicit human authorization 2026-10-09:
+  audit the complete research chain and integrate the reviewed source in main.
+  This resolves the PR28 destination question and supersedes earlier merge
+  deferrals only. Preserve every original commit/measurement/freeze and use a
+  merge commit after current checks pass; no force push or branch deletion.
+  API lots stay closed/disarmed; no inference, keys/billing/accounting changes,
+  private uploads, new models/training/holdout or Poker strategy expansion.
+  Installed desktop1.1.1 stays intact. Source integration is not promotion of
+  a reader, universal vision, a financial edge or a newly verified installer.
+  Keep one current audit in docs/MAIN_AUDIT.md and reproducible checks; clearly
+  separate source readiness from outstanding perception/physical-device proof.
+
+- Historical PR28 review, human request 2026-10-09 (merge deferral superseded
+  by the main-consolidation authorization above): review the incremental diff against
   PR27 before considering merge; destination clarification is pending. The
   existing base is a research branch with27 open ancestors, not main. Do not
   treat review of PR28 as approval of that whole chain or a native release.

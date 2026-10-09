@@ -90,17 +90,43 @@ def test_json_mode_rejects_invalid_provider_json_without_advice(invalid):
     assert result.diagnostics['validation_issues']
 
 
-def test_json_mode_discard_late_valid_reply_preserves_three_second_contract():
-    from dataclasses import replace
-    import time
+def test_json_mode_discard_late_valid_reply_preserves_three_second_contract(monkeypatch):
+    from types import SimpleNamespace
+    from bjlab import live_cloud
+    clock = [0.]
+    # Change only the reader module's clock. No sleep or machine-load race:
+    # this case specifically reaches a complete reply after the real 3s gate.
+    monkeypatch.setattr(live_cloud, 'time', SimpleNamespace(perf_counter=lambda: clock[0]))
     class Reply:
         def post(self,payload,timeout):
-            time.sleep(.03)
+            assert timeout == 3
+            clock[0] = 4.
             return {'model':'gemini-3.5-flash-lite','status':'completed','service_tier':'default',
                 'usage':{'input_tokens':100,'output_tokens':90},
                 'output':[{'type':'message','content':[{'type':'output_text','text':observed().model_dump_json(by_alias=True)}]}]}
-    f,reader=json_reader(Reply());reader.config=replace(reader.config,timeout_seconds=.01)
+    f,reader=json_reader(Reply())
     result=reader.read(f)
     assert result.status=='timeout' and result.observation is None
     assert result.diagnostics['late_complete_json_discarded']
     assert GeminiConfig().timeout_seconds==3
+
+
+def test_json_mode_expiry_before_dispatch_is_not_mislabeled_as_late_reply(monkeypatch):
+    from types import SimpleNamespace
+    from bjlab import live_cloud
+    clock = [0.]
+    monkeypatch.setattr(live_cloud, 'time', SimpleNamespace(perf_counter=lambda: clock[0]))
+    class NoPost:
+        def post(self, *args, **kwargs):
+            raise AssertionError('An expired request may not reach a transport.')
+    f, reader = json_reader(NoPost())
+    build_payload = reader.payload
+    def slow_payload(native):
+        value = build_payload(native)
+        clock[0] = 4.
+        return value
+    monkeypatch.setattr(reader, 'payload', slow_payload)
+    result = reader.read(f)
+    assert result.status == 'timeout' and result.observation is None
+    assert result.diagnostics['error_type'] == 'TimeoutError'
+    assert not result.diagnostics.get('late_complete_json_discarded', False)

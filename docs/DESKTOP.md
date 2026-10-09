@@ -1,5 +1,13 @@
 # Native desktop build
 
+The [9 October source audit](MAIN_AUDIT.md) compiles the locked Windows shell
+and passes its three advisor-geometry unit tests. It does not replace the
+installed 1.1.1 package or certify physical capture/monitor/DPI behavior.
+The all-platform Cargo lock includes Linux GTK/WebKit dependencies with
+RUSTSEC-2024-0429 (`glib`) and RUSTSEC-2024-0370 (`proc-macro-error`). Neither
+is present in the locked Windows target graph. Linux native packaging needs
+a separate dependency repair/review before approval.
+
 The native shell is Tauri 2. It launches the frozen Python backend as a bundled
 sidecar, receives its actual ephemeral localhost URL, and opens the React UI in
 WebView2. Python, Node, and Rust are build dependencies; they are not needed by a

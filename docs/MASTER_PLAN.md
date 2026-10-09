@@ -1,6 +1,17 @@
 # Card Lab — documento madre, decisioni e registro delle iterazioni
 Versione del piano: 1.1 — 4 ottobre 2026
 
+> Consolidamento main, 2026-10-09: il consenso esplicito ora autorizza audit e
+> integrazione dell'intera catena; la precedente domanda sulla destinazione
+> del merge è superata. [Audit](MAIN_AUDIT.md) e [avvio su un altro PC](RUN_FROM_SOURCE.md).
+> Si conservano tutti61commit originali e risultati, con una PR verso main e
+> commit di merge. 985test Python+10subtest, UI52/build e avvio reale senza chiavi
+> passano. Setup include PokerKit/Treys; test di scadenza reso deterministico.
+> Nessun termine/gate operativo indebolito. Ledger identico, API disarmate,
+> release installata1.1.1 preservata. Le due sessioni complete restano un10
+> corto: consolidare il codice non significa certificare il conteggio o
+> promuovere un modello. Le verifiche fisiche del popup restano separate.
+
 > Revisione PR28, 2026-10-09: [controllo e correzione](PR28_REVIEW.md).
 > L'attesa nel backend poteva spostare in avanti l'ora della cattura; ora resta
 > ancorata prima della coda/elaborazione. Tre nuove regressioni senza rete;

@@ -1,4 +1,21 @@
-# Current source review — PR28 acquisition clock, 9 October 2026
+# Current source consolidation — main audit, 9 October 2026
+
+The human has explicitly authorized integrating the reviewed research chain
+into main. This supersedes the earlier pending merge-destination question.
+All 61 original commits, frozen measurements and failures remain preserved;
+the consolidation uses a new main-targeted PR and a merge commit. Local checks:
+985 Python tests +10 subtests, 52 frontend tests/build, real no-key source boot
+and local simulator PNG pass. Fresh setup now includes the independent poker
+test references; the deadline test is deterministic without weakening runtime
+gates. Locked Windows compile and three native geometry tests pass; physical
+monitor/capture checks remain unverified. Two Rust Linux-only dependency
+advisories remain documented. Paid execution stays disarmed and its ledger is byte-identical. Installed
+Windows1.1.1, holdouts and reader promotion remain separate. The two full owned
+videos still finish one10 short; count reliability is not declared complete.
+See [audit and limits](MAIN_AUDIT.md), [source setup](RUN_FROM_SOURCE.md) and
+[forward verification](../validation/results/main-consolidation/verification.json).
+
+# Previous source review — PR28 acquisition clock, 9 October 2026
 
 The PR28 review found and corrected a capture-clock defect: worker queue and
 image preparation could shift the apparent acquisition forward. The timestamp

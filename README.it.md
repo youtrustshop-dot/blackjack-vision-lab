@@ -1,5 +1,12 @@
 # Blackjack Vision Lab
 
+> **Codice aggiornato e app installata sono due cose diverse.** `main` riunisce
+> gli incrementi di ricerca successivi alla 1.1.1; l'installer già pubblicato
+> resta quello precedente. Le API sono disattivate e il merge non certifica
+> una visione universale né un rendimento economico. Per un altro PC, clona il
+> repository, esegui `setup.ps1` e poi `run.ps1`. [Controlli del merge](docs/MAIN_AUDIT.md)
+> · [Avvio da sorgente e dati privati](docs/RUN_FROM_SOURCE.md).
+
 
 
 Laboratorio open source locale per simulazioni di blackjack, visione video continua, conteggio delle carte e analisi matematica. L'inglese è la lingua principale; seleziona **Italiano** per l'interfaccia secondaria.

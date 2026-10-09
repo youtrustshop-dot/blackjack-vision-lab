@@ -22,3 +22,5 @@ jobs:
         working-directory: ui
       - run: npm test
         working-directory: ui
+      - name: Verify source startup without API credentials
+        run: python scripts/smoke-source.py --output artifacts/ci-source-smoke
