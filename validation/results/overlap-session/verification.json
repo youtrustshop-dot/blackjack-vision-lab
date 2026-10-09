@@ -1,0 +1,19 @@
+{
+  "baseline_commit": "5ba11d48d441e4e7187e5aff9f415f0ba7dd628c",
+  "inference_commit": "ef769f542c4a8c44ce6769096ca546425ce02398",
+  "candidate_matches_pre_verification_freeze": true,
+  "evaluator_matches_freeze": true,
+  "historical_evidence_unchanged": true,
+  "new_inputs_checked_by_sha256": true,
+  "no_tuning_after_verification": true,
+  "tests": {
+    "python_passed": 529,
+    "subtests_passed": 10,
+    "warnings": 2,
+    "seconds": 88.33,
+    "frontend_local": "not rerun; no UI changes",
+    "native": "not built/tested"
+  },
+  "api_requests": 0,
+  "timing_scope": "Offline replay. Baseline and candidate ran concurrently on the same host; this is not a controlled hardware speed comparison."
+}

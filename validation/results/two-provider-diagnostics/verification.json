@@ -1,0 +1,47 @@
+{
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "experiment": "VISION-027",
+  "source_parent_commit": "49d40036bef36fcf0658cf545946896d4d819f41",
+  "tests": {
+    "python_passed": 794,
+    "python_subtests_passed": 10,
+    "python_seconds": 91.99,
+    "python_existing_warnings": 2,
+    "new_networkless_collector_tests": 12,
+    "frontend_passed": 52,
+    "frontend_scope": "PR19 Windows CI; UI unchanged, no new local or physical UI test",
+    "frontend_ci": "https://github.com/youtrustshop-dot/blackjack-vision-lab/actions/runs/37533835121"
+  },
+  "executed": {
+    "diagnostic_inferences": 2,
+    "exact_model_metadata_gets": 2,
+    "actual_windows_protected_storage_preflight_and_two_outputs": true,
+    "historical_sources_models_weights_pixels_and_104_entries_unchanged": true,
+    "one_shot_claims_and_two_settled_usage_receipts": true,
+    "runtime_disarmed": true,
+    "output_text_confined_to_private_dpapi_ciphertext": true,
+    "final_holdout_not_opened": true
+  },
+  "not_executed": [
+    "Independent validation/generalization or session reliability",
+    "Live/hybrid/advisor/capture-to-display proof",
+    "Paid retry/warm-up/automatic following batch",
+    "Recovery of the missing PR19 Gemini body or latency of past timed-out Luna attempts",
+    "Reader/prompt/schema/policy/weights/tuning/UI/Poker/engine/release modifications"
+  ],
+  "source_sha256": {
+    "bjlab/offline_response_collector.py": "49b7f38313fce3379f801c3d46a8a0307221017232c8f53889135b2d46b42bc3",
+    "validation/tools/two_provider_diagnostics.py": "472edcebfd13250e1899e2c14f06fcbb0cb7d3008bbde7c9d821770775e9ff59",
+    "tests/test_offline_response_collector.py": "1565d1d7b637c81335617254315d67f3fc4a0c2d7f5654e7d8bd587be17a3880",
+    "bjlab/private_observation_store.py": "7a4a6b149a189031eadb3a22c73d1675859d19a7ebba165ab5d6d7a6141809f9",
+    "bjlab/rejected_output_diagnostics.py": "a3a9584dac5ed19260a9413b334d54aa23e39d9a86a4d8ca9b2866d6c98be3b3"
+  },
+  "freeze_sha256": "25a471f0aa3028d9d31e3d7a34d340a32c2a8f77b188baf4265d6a87437ef985",
+  "ledger_after_sha256": "b73a4697f0e59c173e8756e00f1ab5c5a297bb329e78d57066397955c1c94c44",
+  "raw_provider_observation_published": false,
+  "timing_clock": {
+    "monotonic_resolution_seconds": 0.015625,
+    "zero_subspan_means_below_resolution_not_no_work": true
+  }
+}

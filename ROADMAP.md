@@ -1,5 +1,9 @@
 # Blackjack Vision Lab roadmap
 
+Current priorities are governed by [MASTER_PLAN.md](docs/MASTER_PLAN.md), accepted v1.1.
+This document retains historical workstreams; its R1/R2 labels predate the master plan
+and do not override the current locale/API comparison before additional training.
+
 ## Reliability programme: complete-session vision and Texas Hold'em
 
 The target is measured correctness over complete games, not a subjective 10/10

@@ -1,0 +1,135 @@
+{
+  "experiment_id": "VISION-019",
+  "parent_commit": "7717ec222436b47d45d5520ce67091f0e66c38ab",
+  "model": "gemini-3.5-flash-lite",
+  "api_submissions": 3,
+  "rows": [
+    {
+      "probe": "minimal-text",
+      "status": "completed",
+      "elapsed_ms": 961.8209999971441,
+      "usage": {
+        "input_tokens": 6,
+        "output_tokens": 1
+      },
+      "reported_usage_upper_usd": "0.0000043",
+      "network_timing": {
+        "connect_tcp_ms": 79.54290000270703,
+        "start_tls_ms": 80.62160000190488,
+        "send_request_headers_ms": 0.24879999909899198,
+        "send_request_body_ms": 0.1374000021314714,
+        "receive_response_headers_ms": 579.965799999627,
+        "headers_received_ms": 936.0926999979711,
+        "receive_response_body_ms": 1.621399998839479,
+        "body_complete_ms": 940.2405000000726,
+        "provider_json_parse_ms": 0.027000001864507794,
+        "transport_total_ms": 940.8364999981131
+      },
+      "payload_matches_executed_probe": true
+    },
+    {
+      "probe": "compatibility-image",
+      "status": "error",
+      "elapsed_ms": 1532.1540999975696,
+      "http_status": 400,
+      "provider_error": {
+        "category": "generic_invalid_argument",
+        "body_sha256": "b01105ed229707571186fdc753a734401dcd3dca044538c55285824604725bd3",
+        "status": "INVALID_ARGUMENT",
+        "mentioned_fields": []
+      },
+      "payload_matches_executed_probe": true
+    },
+    {
+      "probe": "json-mode-image",
+      "status": "completed",
+      "elapsed_ms": 1992.923100002372,
+      "usage": {
+        "input_tokens": 5247,
+        "output_tokens": 357
+      },
+      "reported_usage_upper_usd": "0.0024666",
+      "validated_json": true,
+      "output_json_bytes": 787,
+      "network_timing": {
+        "connect_tcp_ms": 47.72890000094776,
+        "start_tls_ms": 55.48089999865624,
+        "send_request_headers_ms": 0.2144999998563435,
+        "send_request_body_ms": 0.2733999972406309,
+        "receive_response_headers_ms": 1768.7555000011344,
+        "headers_received_ms": 1972.595999999612,
+        "receive_response_body_ms": 0.4496000001381617,
+        "body_complete_ms": 1973.8563999999315,
+        "provider_json_parse_ms": 0.02719999974942766,
+        "transport_total_ms": 1974.2646999984572
+      },
+      "payload_matches_executed_probe": true,
+      "visible_faces": 3,
+      "backs": 1,
+      "visible_numbers": 3,
+      "metrics": {
+        "inventory_exact": true,
+        "rank_presence_exact": true,
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_roles_exact": true,
+        "complete_grounded_state": true,
+        "correct_usable_r1": true,
+        "false_accepted_state": false
+      }
+    }
+  ],
+  "diagnosis": "Minimal generation and identical native images work; configured full structured hand schemas are rejected. Exact offending constraint/server reason remains unknown.",
+  "workaround": "Explicit json-mode variant: application/json output + unchanged hand schema in prompt, strict local validation.",
+  "successful_image_cases": 1,
+  "independent_verification_sessions": 0,
+  "sample_scope": "One reused owned development still, four identical native views; not generalization or live hybrid evidence.",
+  "diagnostic_network_deadline_ms": 10000,
+  "unchanged_reader_deadline_ms": 3000,
+  "latency_p50_p95": null,
+  "invoice_charge": null,
+  "new_reported_usage_upper_usd": "0.0024709",
+  "new_accounted_upper_including_uncertain_usd": "0.319603700",
+  "budget_before": {
+    "requests_attempted": 87,
+    "max_requests": 90,
+    "max_usd": "8",
+    "accounted_upper_usd": "3.813851200",
+    "unknown_charge_requests": 9,
+    "network_attempts_claimed": 86,
+    "unknown_charge_reserved_usd": "3.6379432",
+    "stopped": false,
+    "invoice_and_balance_verified": false,
+    "scope": "all configurations/providers under one aggregate authorization"
+  },
+  "budget_after": {
+    "requests_attempted": 90,
+    "max_requests": 90,
+    "max_usd": "8",
+    "accounted_upper_usd": "4.133454900",
+    "unknown_charge_requests": 10,
+    "network_attempts_claimed": 89,
+    "unknown_charge_reserved_usd": "3.9550760",
+    "stopped": false,
+    "invoice_and_balance_verified": false,
+    "scope": "all configurations/providers under one aggregate authorization"
+  },
+  "runtime_inference_authorized": false,
+  "final_holdout": "not_opened",
+  "reader_promoted": false,
+  "installed_release_changed": false,
+  "not_tested": [
+    "Fresh session-disjoint verification",
+    "Provider transfer",
+    "Actual local-first hybrid",
+    "Native advisor capture-to-paint",
+    "Final holdout",
+    "Exact single schema-constraint rejection cause"
+  ],
+  "source_hashes": {
+    "bjlab/live_cloud.py": "6f0463a620fbc787f2cd4384cdc9ac6c85fc3446d8b3f39a69df0c4d504b0b16",
+    "bjlab/live_state.py": "187269cfb495cfd26a9de3203513e660b81c627d050181aa46f1257af6141955",
+    "validation/tools/live_reader_diagnosis.py": "35c2c30a4e5a24488e12e3ae53fe2ac87565190da2dcdba8ac7cdc7647a3e454",
+    "validation/tools/gemini_request_diagnosis.py": "bf51ac1d615656ff975d9f34edd738c53e248aeb7c540f548aa037e0999ff1f0"
+  }
+}

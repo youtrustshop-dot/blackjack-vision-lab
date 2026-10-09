@@ -1,0 +1,816 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows",
+  "tls": "OpenSSL 3.5.8 25 Aug 2026",
+  "packages": {
+    "httpx": "0.28.1",
+    "httpcore": "1.0.9",
+    "anyio": "4.15.1",
+    "certifi": "2026.7.22"
+  },
+  "environment_presence_only": {
+    "HTTP_PROXY": false,
+    "HTTPS_PROXY": false,
+    "ALL_PROXY": false,
+    "NO_PROXY": false,
+    "SSL_CERT_FILE": false,
+    "SSL_CERT_DIR": false,
+    "OPENAI_BASE_URL": false
+  },
+  "proxy_policy": "trust_env=False, direct HTTPS",
+  "permission_profile": "danger-full-access with network enabled; no explicit sandbox rejection observed",
+  "inference_calls": 0,
+  "image_uploads": 0,
+  "rows": [
+    {
+      "provider": "openai",
+      "client": "project",
+      "method": "GET",
+      "official_host": "api.openai.com",
+      "endpoint": "/v1/models/gpt-6-luna",
+      "elapsed_ms": 10009.434100000362,
+      "stage_at_stop": "dns_resolution_pending",
+      "events": [
+        {
+          "stage": "connect_tcp",
+          "action": "started",
+          "at_ms": 316.1997999995947
+        },
+        {
+          "stage": "dns",
+          "action": "started",
+          "at_ms": 320.0278000003891,
+          "family": 0
+        },
+        {
+          "stage": "connect_tcp",
+          "action": "failed",
+          "at_ms": 10008.054899999479,
+          "exception_type": "CancelledError"
+        }
+      ],
+      "retry_count": 0,
+      "tls_verified": true,
+      "trust_env": false,
+      "redirects": false,
+      "body_and_headers_saved": false,
+      "exceptions": [
+        "TimeoutError",
+        "CancelledError"
+      ],
+      "worker_completed": true
+    },
+    {
+      "provider": "openai",
+      "client": "independent",
+      "method": "GET",
+      "official_host": "api.openai.com",
+      "endpoint": "/v1/models/gpt-6-luna",
+      "elapsed_ms": 2339.511500000299,
+      "stage_at_stop": "completed_or_unobserved",
+      "events": [
+        {
+          "stage": "connect_tcp",
+          "action": "started",
+          "at_ms": 34.29440000036266
+        },
+        {
+          "stage": "dns",
+          "action": "started",
+          "at_ms": 34.314200000153505,
+          "family": 0
+        },
+        {
+          "stage": "dns",
+          "action": "complete",
+          "at_ms": 1404.504199999792,
+          "address_count": 2,
+          "families": [
+            2
+          ]
+        },
+        {
+          "stage": "connect_tcp",
+          "action": "complete",
+          "at_ms": 1435.263199999099
+        },
+        {
+          "stage": "start_tls",
+          "action": "started",
+          "at_ms": 1435.3164999993169
+        },
+        {
+          "stage": "start_tls",
+          "action": "complete",
+          "at_ms": 1505.2747999998246
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "started",
+          "at_ms": 1505.3781999995408
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "complete",
+          "at_ms": 1505.573499998718
+        },
+        {
+          "stage": "send_request_body",
+          "action": "started",
+          "at_ms": 1505.5799999990995
+        },
+        {
+          "stage": "send_request_body",
+          "action": "complete",
+          "at_ms": 1505.6222999992315
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "started",
+          "at_ms": 1505.626799998936
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "complete",
+          "at_ms": 2336.0384999996313
+        },
+        {
+          "stage": "http",
+          "action": "headers",
+          "at_ms": 2336.7832000003546,
+          "status": 200
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "started",
+          "at_ms": 2337.140300000101
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "complete",
+          "at_ms": 2338.0903999986913
+        }
+      ],
+      "retry_count": 0,
+      "tls_verified": true,
+      "trust_env": false,
+      "redirects": false,
+      "body_and_headers_saved": false,
+      "result": {
+        "http_status": 200,
+        "model_access_verified": true
+      },
+      "worker_completed": true
+    },
+    {
+      "provider": "gemini",
+      "client": "project",
+      "method": "GET",
+      "official_host": "generativelanguage.googleapis.com",
+      "endpoint": "/v1beta/models/gemini-3.5-flash-lite",
+      "elapsed_ms": 307.00570000044536,
+      "stage_at_stop": "completed_or_unobserved",
+      "events": [
+        {
+          "stage": "connect_tcp",
+          "action": "started",
+          "at_ms": 51.22320000009495
+        },
+        {
+          "stage": "dns",
+          "action": "started",
+          "at_ms": 51.743899999564746,
+          "family": 0
+        },
+        {
+          "stage": "dns",
+          "action": "complete",
+          "at_ms": 115.59560000023339,
+          "address_count": 8,
+          "families": [
+            2
+          ]
+        },
+        {
+          "stage": "connect_tcp",
+          "action": "complete",
+          "at_ms": 148.58810000077938
+        },
+        {
+          "stage": "start_tls",
+          "action": "started",
+          "at_ms": 148.6254999999801
+        },
+        {
+          "stage": "start_tls",
+          "action": "complete",
+          "at_ms": 203.11749999927997
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "started",
+          "at_ms": 203.87029999983497
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "complete",
+          "at_ms": 204.1441000001214
+        },
+        {
+          "stage": "send_request_body",
+          "action": "started",
+          "at_ms": 204.15610000054585
+        },
+        {
+          "stage": "send_request_body",
+          "action": "complete",
+          "at_ms": 204.22569999936968
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "started",
+          "at_ms": 204.23490000030142
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "complete",
+          "at_ms": 303.5268999992695
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "started",
+          "at_ms": 303.92679999931715
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "complete",
+          "at_ms": 304.3438000004244
+        }
+      ],
+      "retry_count": 0,
+      "tls_verified": true,
+      "trust_env": false,
+      "redirects": false,
+      "body_and_headers_saved": false,
+      "result": {
+        "http_status": 200,
+        "model_access_verified": true
+      },
+      "worker_completed": true
+    },
+    {
+      "provider": "gemini",
+      "client": "independent",
+      "method": "GET",
+      "official_host": "generativelanguage.googleapis.com",
+      "endpoint": "/v1beta/models/gemini-3.5-flash-lite",
+      "elapsed_ms": 235.77389999991283,
+      "stage_at_stop": "completed_or_unobserved",
+      "events": [
+        {
+          "stage": "connect_tcp",
+          "action": "started",
+          "at_ms": 31.434799999260576
+        },
+        {
+          "stage": "dns",
+          "action": "started",
+          "at_ms": 31.453899999178248,
+          "family": 0
+        },
+        {
+          "stage": "dns",
+          "action": "complete",
+          "at_ms": 47.75650000010501,
+          "address_count": 8,
+          "families": [
+            2
+          ]
+        },
+        {
+          "stage": "connect_tcp",
+          "action": "complete",
+          "at_ms": 77.7803999990283
+        },
+        {
+          "stage": "start_tls",
+          "action": "started",
+          "at_ms": 77.84329999958572
+        },
+        {
+          "stage": "start_tls",
+          "action": "complete",
+          "at_ms": 130.4571999990003
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "started",
+          "at_ms": 130.5477999994764
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "complete",
+          "at_ms": 130.76189999992494
+        },
+        {
+          "stage": "send_request_body",
+          "action": "started",
+          "at_ms": 130.7703999991645
+        },
+        {
+          "stage": "send_request_body",
+          "action": "complete",
+          "at_ms": 130.81899999997404
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "started",
+          "at_ms": 130.82509999912872
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "complete",
+          "at_ms": 234.6428000000742
+        },
+        {
+          "stage": "http",
+          "action": "headers",
+          "at_ms": 234.86419999971986,
+          "status": 200
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "started",
+          "at_ms": 234.91089999879478
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "complete",
+          "at_ms": 235.29989999951795
+        }
+      ],
+      "retry_count": 0,
+      "tls_verified": true,
+      "trust_env": false,
+      "redirects": false,
+      "body_and_headers_saved": false,
+      "result": {
+        "http_status": 200,
+        "model_access_verified": true
+      },
+      "worker_completed": true
+    }
+  ],
+  "budget_before": {
+    "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+    "receipt": {
+      "requests_attempted": 94,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.087190600",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 93,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "budget_after": {
+    "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+    "receipt": {
+      "requests_attempted": 94,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.087190600",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 93,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "ledger_unchanged": true,
+  "runtime_disarmed_after": true,
+  "all_access_verified": false,
+  "python_executable": "project .venv/Scripts/python.exe",
+  "scope": "Read-only connection evidence; does not arm inference.",
+  "additional_controls": {
+    "dns-family-control": [
+      {
+        "host": "api.openai.com",
+        "family": 0,
+        "method": "DNS only, no HTTP",
+        "result": {
+          "address_count": 2,
+          "families": [
+            2
+          ]
+        },
+        "worker_completed": true,
+        "elapsed_ms": 20.435599999473197
+      },
+      {
+        "host": "api.openai.com",
+        "family": 2,
+        "method": "DNS only, no HTTP",
+        "exceptions": [
+          "TimeoutError",
+          "CancelledError"
+        ],
+        "worker_completed": true,
+        "elapsed_ms": 10007.956999999806
+      },
+      {
+        "host": "generativelanguage.googleapis.com",
+        "family": 0,
+        "method": "DNS only, no HTTP",
+        "result": {
+          "address_count": 8,
+          "families": [
+            2
+          ]
+        },
+        "worker_completed": true,
+        "elapsed_ms": 5.768900000475696
+      },
+      {
+        "host": "generativelanguage.googleapis.com",
+        "family": 2,
+        "method": "DNS only, no HTTP",
+        "exceptions": [
+          "TimeoutError",
+          "CancelledError"
+        ],
+        "worker_completed": true,
+        "elapsed_ms": 10020.36169999883
+      }
+    ],
+    "post-diagnosis-project-access": {
+      "rows": [
+        {
+          "provider": "openai",
+          "client": "project",
+          "method": "GET",
+          "official_host": "api.openai.com",
+          "endpoint": "/v1/models/gpt-6-luna",
+          "elapsed_ms": 10007.170400000177,
+          "stage_at_stop": "dns_resolution_pending",
+          "events": [
+            {
+              "stage": "connect_tcp",
+              "action": "started",
+              "at_ms": 130.8336000001873
+            },
+            {
+              "stage": "dns",
+              "action": "started",
+              "at_ms": 132.35830000121496,
+              "family": 0
+            },
+            {
+              "stage": "connect_tcp",
+              "action": "failed",
+              "at_ms": 10005.899300000237,
+              "exception_type": "CancelledError"
+            }
+          ],
+          "retry_count": 0,
+          "tls_verified": true,
+          "trust_env": false,
+          "redirects": false,
+          "body_and_headers_saved": false,
+          "exceptions": [
+            "TimeoutError",
+            "CancelledError"
+          ],
+          "worker_completed": true
+        },
+        {
+          "provider": "gemini",
+          "client": "project",
+          "method": "GET",
+          "official_host": "generativelanguage.googleapis.com",
+          "endpoint": "/v1beta/models/gemini-3.5-flash-lite",
+          "elapsed_ms": 229.9841000003653,
+          "stage_at_stop": "completed_or_unobserved",
+          "events": [
+            {
+              "stage": "connect_tcp",
+              "action": "started",
+              "at_ms": 32.86429999934626
+            },
+            {
+              "stage": "dns",
+              "action": "started",
+              "at_ms": 33.554800000274554,
+              "family": 0
+            },
+            {
+              "stage": "dns",
+              "action": "complete",
+              "at_ms": 36.89459999986866,
+              "address_count": 8,
+              "families": [
+                2
+              ]
+            },
+            {
+              "stage": "connect_tcp",
+              "action": "complete",
+              "at_ms": 70.40239999878395
+            },
+            {
+              "stage": "start_tls",
+              "action": "started",
+              "at_ms": 70.44680000035441
+            },
+            {
+              "stage": "start_tls",
+              "action": "complete",
+              "at_ms": 129.20089999897755
+            },
+            {
+              "stage": "send_request_headers",
+              "action": "started",
+              "at_ms": 129.81099999888102
+            },
+            {
+              "stage": "send_request_headers",
+              "action": "complete",
+              "at_ms": 130.05650000013702
+            },
+            {
+              "stage": "send_request_body",
+              "action": "started",
+              "at_ms": 130.06549999954586
+            },
+            {
+              "stage": "send_request_body",
+              "action": "complete",
+              "at_ms": 130.12259999959497
+            },
+            {
+              "stage": "receive_response_headers",
+              "action": "started",
+              "at_ms": 130.12949999938428
+            },
+            {
+              "stage": "receive_response_headers",
+              "action": "complete",
+              "at_ms": 226.7560999989655
+            },
+            {
+              "stage": "receive_response_body",
+              "action": "started",
+              "at_ms": 227.2782999989431
+            },
+            {
+              "stage": "receive_response_body",
+              "action": "complete",
+              "at_ms": 227.67659999954049
+            }
+          ],
+          "retry_count": 0,
+          "tls_verified": true,
+          "trust_env": false,
+          "redirects": false,
+          "body_and_headers_saved": false,
+          "result": {
+            "http_status": 200,
+            "model_access_verified": true
+          },
+          "worker_completed": true
+        }
+      ],
+      "purpose": "single controlled revalidation after isolated DNS delay; no changed timeout/config",
+      "inference_calls": 0,
+      "ledger_before": {
+        "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+        "receipt": {
+          "requests_attempted": 94,
+          "max_requests": 102,
+          "max_usd": "8",
+          "accounted_upper_usd": "5.087190600",
+          "unknown_charge_requests": 13,
+          "network_attempts_claimed": 93,
+          "unknown_charge_reserved_usd": "4.9064744",
+          "stopped": false,
+          "invoice_and_balance_verified": false,
+          "scope": "all configurations/providers under one aggregate authorization"
+        }
+      },
+      "ledger_after": {
+        "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+        "receipt": {
+          "requests_attempted": 94,
+          "max_requests": 102,
+          "max_usd": "8",
+          "accounted_upper_usd": "5.087190600",
+          "unknown_charge_requests": 13,
+          "network_attempts_claimed": 93,
+          "unknown_charge_reserved_usd": "4.9064744",
+          "stopped": false,
+          "invoice_and_balance_verified": false,
+          "scope": "all configurations/providers under one aggregate authorization"
+        }
+      }
+    },
+    "controlled-access": {
+      "rows": [
+        {
+          "provider": "openai",
+          "method": "GET",
+          "deadline_seconds": 10,
+          "retry_count": 0,
+          "error_type": "TimeoutError",
+          "http_status": null,
+          "model_access_verified": false,
+          "timings": {
+            "transport_total_ms": 10014.910300000338,
+            "dns_separate_ms": null
+          }
+        },
+        {
+          "provider": "gemini",
+          "method": "GET",
+          "deadline_seconds": 10,
+          "retry_count": 0,
+          "error_type": "TimeoutError",
+          "http_status": null,
+          "model_access_verified": false,
+          "timings": {
+            "transport_total_ms": 10011.149199999636,
+            "dns_separate_ms": null
+          }
+        }
+      ],
+      "inference_calls": 0,
+      "ledger_before": {
+        "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+        "receipt": {
+          "requests_attempted": 94,
+          "max_requests": 102,
+          "max_usd": "8",
+          "accounted_upper_usd": "5.087190600",
+          "unknown_charge_requests": 13,
+          "network_attempts_claimed": 93,
+          "unknown_charge_reserved_usd": "4.9064744",
+          "stopped": false,
+          "invoice_and_balance_verified": false,
+          "scope": "all configurations/providers under one aggregate authorization"
+        }
+      },
+      "ledger_after": {
+        "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+        "receipt": {
+          "requests_attempted": 94,
+          "max_requests": 102,
+          "max_usd": "8",
+          "accounted_upper_usd": "5.087190600",
+          "unknown_charge_requests": 13,
+          "network_attempts_claimed": 93,
+          "unknown_charge_reserved_usd": "4.9064744",
+          "stopped": false,
+          "invoice_and_balance_verified": false,
+          "scope": "all configurations/providers under one aggregate authorization"
+        }
+      },
+      "transport": "opt-in synchronous control, no DNS/proxy/IP/TLS changes",
+      "all_access_verified": false
+    },
+    "windows-dns-control": [
+      {
+        "host": "api.openai.com",
+        "elapsed_ms": 7839.5913,
+        "records": [
+          {
+            "TTL": 60
+          },
+          {
+            "TTL": 60
+          }
+        ],
+        "status": "resolved"
+      },
+      {
+        "host": "generativelanguage.googleapis.com",
+        "elapsed_ms": 7033.8744,
+        "records": [
+          {
+            "TTL": 216
+          },
+          {
+            "TTL": 216
+          },
+          {
+            "TTL": 216
+          },
+          {
+            "TTL": 216
+          },
+          {
+            "TTL": 216
+          },
+          {
+            "TTL": 216
+          },
+          {
+            "TTL": 216
+          },
+          {
+            "TTL": 216
+          }
+        ],
+        "status": "resolved"
+      }
+    ],
+    "scoped-dns-access": {
+      "rows": [
+        {
+          "provider": "openai",
+          "method": "GET",
+          "retry_count": 0,
+          "http_status": 200,
+          "model_access_verified": true,
+          "timings": {
+            "connect_tcp_ms": 32.61399999973946,
+            "start_tls_ms": 38.41410000131873,
+            "send_request_headers_ms": 0.17630000002100132,
+            "send_request_body_ms": 0.042300000131945126,
+            "receive_response_headers_ms": 758.4060999997746,
+            "headers_received_ms": 874.8761999995622,
+            "receive_response_body_ms": 0.2674999996088445,
+            "body_complete_ms": 875.4635000004782,
+            "provider_json_parse_ms": 0.02499999936844688,
+            "transport_total_ms": 875.8228000006056,
+            "dns_separate_ms": null
+          }
+        },
+        {
+          "provider": "gemini",
+          "method": "GET",
+          "retry_count": 0,
+          "http_status": 200,
+          "model_access_verified": true,
+          "timings": {
+            "connect_tcp_ms": 30.877999999574968,
+            "start_tls_ms": 51.46269999931974,
+            "send_request_headers_ms": 0.24929999926825985,
+            "send_request_body_ms": 0.046299999667098746,
+            "receive_response_headers_ms": 99.667500000578,
+            "headers_received_ms": 208.93139999861887,
+            "receive_response_body_ms": 0.47029999950609636,
+            "body_complete_ms": 209.6146999992925,
+            "provider_json_parse_ms": 0.036299999919719994,
+            "transport_total_ms": 210.21309999923687,
+            "dns_separate_ms": null
+          }
+        }
+      ],
+      "all_access_verified": true,
+      "scope_receipt": {
+        "api.openai.com": {
+          "resolution_ms": 8875.0
+        },
+        "generativelanguage.googleapis.com": {
+          "resolution_ms": 8859.000000000378
+        }
+      },
+      "inference_calls": 0,
+      "ledger_before": {
+        "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+        "receipt": {
+          "requests_attempted": 94,
+          "max_requests": 102,
+          "max_usd": "8",
+          "accounted_upper_usd": "5.087190600",
+          "unknown_charge_requests": 13,
+          "network_attempts_claimed": 93,
+          "unknown_charge_reserved_usd": "4.9064744",
+          "stopped": false,
+          "invoice_and_balance_verified": false,
+          "scope": "all configurations/providers under one aggregate authorization"
+        }
+      },
+      "ledger_after": {
+        "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+        "receipt": {
+          "requests_attempted": 94,
+          "max_requests": 102,
+          "max_usd": "8",
+          "accounted_upper_usd": "5.087190600",
+          "unknown_charge_requests": 13,
+          "network_attempts_claimed": 93,
+          "unknown_charge_reserved_usd": "4.9064744",
+          "stopped": false,
+          "invoice_and_balance_verified": false,
+          "scope": "all configurations/providers under one aggregate authorization"
+        }
+      },
+      "system_network_settings_changed": false
+    }
+  },
+  "limits": "Native DNS pending localized; underlying OS/router/security-driver reason unisolated. IPv6 and async client bugs are not established."
+}

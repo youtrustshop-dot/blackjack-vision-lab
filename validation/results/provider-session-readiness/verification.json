@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "parent_commit": "de3d9bea6bf94d31f498c65dcd53cff3489c0e73",
+  "tested_code_commit": "91f5005c4f6314738e1f8f003511c3dca47ada69",
+  "commit_scope": "Full suite for modified core plus focused verification of the final replay module; later receipt binding is metadata-only. Frontend result is explicitly historical.",
+  "tests": {
+    "python_passed": 449,
+    "python_subtests": 10,
+    "frontend_passed": 46,
+    "frontend_passed_scope": "Historical parent PR #4 only; unchanged UI not locally rerun in this follow-up",
+    "full_python_suite": "449 passed, 2 existing warnings, 10 subtests passed in 72.01s",
+    "final_replay_module": "16 passed in 1.90s after final timing, transport and privacy changes",
+    "boundary_contracts": "5 passed in 3.29s; included in full suite",
+    "frontend": "Not locally rerun; no UI source changes. Historical parent PR #4: 46 tests and TypeScript/Vite passed.",
+    "diff_check": "passed",
+    "missing_recording_preflight": "Fails with No original provider recordings supplied; no benchmark score emitted"
+  },
+  "commands": [
+    ".venv/Scripts/python.exe -X utf8 -m pytest -q",
+    ".venv/Scripts/python.exe -X utf8 -m pytest tests/test_provider_session_replay.py -q",
+    ".venv/Scripts/python.exe -X utf8 -m validation.tools.provider_session_replay validation/protocols/freegames-session-plan.json --check-only",
+    "git diff --check"
+  ],
+  "source_fingerprint": "b8fe33bb3d5287582dc3ce8dc2312a55a485bb24225f7bf949fed2606d813afa",
+  "candidate_fingerprint": "88eb5c05ab67d8de5bfdc00ffcb59f254a866bd1bdbc09ba7000acc663083470",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "opencv-python-headless": "5.0.0.93",
+    "onnxruntime": "1.30.0"
+  },
+  "original_provider_sessions_executed": 0,
+  "provider_session_gate_passed": null,
+  "model_promoted": false,
+  "native_rebuilt": false,
+  "installed_release_replaced": false,
+  "merge_performed": false,
+  "unexecuted": [
+    "Original complete Freegames recordings and session gate",
+    "Autonomous calibrated Freegames phase/control implementation",
+    "New model training or comparison",
+    "Independent suit/presence component evaluation",
+    "Physical advisor dragging / mixed DPI / actual minimized capture",
+    "New native build and sealed final holdout"
+  ],
+  "scope": "Source and unit checks only. Consumed-still diagnostic labels are assistant review, not independent human truth. No new provider performance or economic claim."
+}

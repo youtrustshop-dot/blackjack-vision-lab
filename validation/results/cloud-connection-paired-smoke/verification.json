@@ -1,0 +1,34 @@
+{
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "source_parent_commit": "ff6681a5448b6d90bb4da1af0358cab1912031bd",
+  "freeze_sha256": "d6fe0f0b41f624a717719ebccb3d35222d1fb4b534e1426b329d500ab4dbcbfe",
+  "tests": {
+    "python_passed": 653,
+    "python_subtests_passed": 10,
+    "python_seconds": 138.43,
+    "python_existing_warnings": 2,
+    "targeted_deadline_and_scope_tests": 23,
+    "frontend_passed": 52,
+    "frontend_scope": "Inherited parent source/CI; UI unchanged, not rerun locally in VISION-023"
+  },
+  "executed": {
+    "paired_provider_requests": 6,
+    "retries": 0,
+    "paid_warmups": 0,
+    "original_94_ledger_entries_preserved": true,
+    "old_unknown_charges_preserved": 13,
+    "shared_evaluator_rows_identical": true,
+    "installed_release_unchanged": true,
+    "runtime_disarmed": true
+  },
+  "not_executed": [
+    "actual hybrid",
+    "development/holdout inference",
+    "new local training/tuning",
+    "R2/Poker expansion",
+    "physical capture/native advisor paint",
+    "installer/release replacement"
+  ],
+  "scope": "Three owned validation stills, not universal transfer, reliable latency distribution, game-session reconstruction or economic certification."
+}

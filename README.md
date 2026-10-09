@@ -1,5 +1,13 @@
 # Blackjack Vision Lab
 
+> **Source and installed release are different checkpoints.** The source now
+> consolidates the research increments following desktop 1.1.1, including
+> calibration, experiment records, the compact external advisor, independent
+> poker-engine checks and opt-in owned capture. API inference stays disabled;
+> no reader is promoted merely by merging its experiment. The existing Windows
+> 1.1.1 download is unchanged. See the [main audit](docs/MAIN_AUDIT.md) and
+> [source setup and migration](docs/RUN_FROM_SOURCE.md) before resuming on another PC.
+
 
 
 A local, open-source blackjack simulation and visual analysis lab. Share a screen, follow exposed cards across hands, and read a clear action with basic strategy, expected value and modeled outcome probabilities.

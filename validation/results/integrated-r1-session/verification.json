@@ -1,0 +1,36 @@
+{
+  "version": "1.1.1",
+  "experiment": "VISION-034",
+  "source_parent_commit": "3c23ea3c7c65f4ea06af651a9ca8cc7e3c99d535",
+  "tests": {
+    "python_passed": 981,
+    "python_subtests_passed": 10,
+    "python_elapsed_seconds": 103.52,
+    "python_warnings": 2,
+    "frontend_passed": 52,
+    "frontend_build": "TypeScript/Vite passed"
+  },
+  "targeted_new_tests": 18,
+  "cloud_posts": 0,
+  "new_reservations": 0,
+  "runtime_disarmed": true,
+  "original_results_preserved": true,
+  "source_hashes": {
+    "bjlab/integrated_r1.py": "11313633dbbdf0f9c1519f0c68b43053451a89629808f03d12df74a3dc188d59",
+    "bjlab/integration_api.py": "61c52b69b4efeb4b3ece01f70fbc6d5688694d2095cd73698b66368e661baf95",
+    "bjlab/dns_lease.py": "0d93e80d56921b69848f75229c9a018602eb597c1743cfee987dd3fb1f3f21f7",
+    "ui/src/IntegrationLab.tsx": "362baf7d9b924cdb0edd01441b23714004335d82986a69b5f2196ed4d99f8b8d",
+    "validation/tools/integrated_r1_session.py": "1ddb22de557b9a249f1f811e2543ce4af4d9bfefc313230989474f6b945e632b",
+    "validation/tools/stress_lab.py": "d90e7dbdeb4868aecf204abfcd9d5bb9b312b97aaae978ca24c78e194c6581ef",
+    "validation/tools/owned_local_demo.py": "4125eb75f0476df6796d667e37d3976fb515370081138b99d4b9c194ef1346c8",
+    "validation/tools/integrated_r1_summary.py": "3e27df265816d543d995ef079f5229efe310db29c7476c883cea4339074bec8c"
+  },
+  "not_executed": [
+    "New provider inference in this lot",
+    "Final holdout",
+    "Native desktop build/install",
+    "Physical monitor drag/DPI/always-on-top/minimized desktop sharing",
+    "New strategy/training/R2/Poker work"
+  ],
+  "result": "Opt-in local browser path demonstrated; complete inventory and cloud hybrid not accepted."
+}

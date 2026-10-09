@@ -1,0 +1,63 @@
+{
+  "experiment": "VISION-026",
+  "status": "proposed_not_authorized",
+  "executed_requests": 0,
+  "purpose": "new rejected-content diagnosis and right-censored latency, never live advice",
+  "input_case": "fresh-rotated-unknown",
+  "input_kind": "consumed owned PR19 case; not independent quality evidence",
+  "prior_freeze_sha256": "f81df70de7c4a86d1adb274e0a0169ee72aed3bd888e46e75e411a011b927b58",
+  "request_payload_sha256": {
+    "gemini-structured-card-limit-local": "ac928614f15d3764e168326455e7bab1c55606cb634e8ae7df4e9e97df762b7a",
+    "luna-fast-live-v3": "dbd374a2420647c535ac1b0fd66e72a3b015ad44b4a26504ae192fbeb043c07f"
+  },
+  "request_canonical_sha256": {
+    "gemini-structured-card-limit-local": "c28fe555037340e15f7a41de4f1a9755cf472093a6d4bbc73f8c84738900658b",
+    "luna-fast-live-v3": "babe153b9161e786d7d01cda50db3a9e5588c049085883d8102d85c27e107b5a"
+  },
+  "provider_order": [
+    "gemini-structured-card-limit-local",
+    "luna-fast-live-v3"
+  ],
+  "maximum_inference_attempts": 2,
+  "retry_count": 0,
+  "paid_warmup_count": 0,
+  "hybrid_attempts": 0,
+  "live_eligibility": false,
+  "advisor_connected": false,
+  "live_deadline_ms_unchanged": 3000,
+  "proposed_diagnostic_deadline_ms": 10000,
+  "maximum_sequential_inference_wait_ms": 20000,
+  "reserve_usd_per_request_from_preserved_price_snapshot": {
+    "gemini-structured-card-limit-local": "0.3171328",
+    "luna-fast-live-v3": "0.5265360"
+  },
+  "proposed_maximum_reservation_usd": "0.8436688",
+  "unchanged_current_accounted_upper_usd": "6.153279850",
+  "current_prudential_margin_usd_not_balance": "1.846720150",
+  "would_leave_prudential_margin_usd_not_balance": "1.003051350",
+  "current_ledger_sha256": "7793ff458df87b0abf10eca59f71a73e2be242a29c0687a82ae5c692be385895",
+  "current_requests_consumed": 104,
+  "current_request_ceiling": 105,
+  "proposed_request_ceiling_requiring_explicit_authorization": 106,
+  "old_unused_slot_remains_closed": true,
+  "new_authorization_epoch_created": false,
+  "prices_access_checked_this_increment": false,
+  "ledger_mutated": false,
+  "preconditions": [
+    "Explicit human authorization of exactly these two diagnostic submissions and count amendment",
+    "New bounded scope binds reviewed owned hashes, payloads and unchanged contract/policy",
+    "Current read-only model/access, prices and canonical allowance checked before paid submission",
+    "Separate offline-only longer-wait collector prepared/tested before any paid submission",
+    "Actual Windows private retention preflight succeeds; stop on failed storage",
+    "Every old reservation preserved and lifetime USD8 monetary cap unchanged",
+    "No advisor/evidence/solver linkage; after 3s always unusable for current advice",
+    "One submission per provider, no retry; fail closed on access/accounting/storage failure",
+    "All usage audited; unknown costs stay reserved; pool closed at 10s; runtime disarmed after lot"
+  ],
+  "limitations": [
+    "A new answer cannot recover the discarded PR19 text and may not reproduce the rejection",
+    "If Luna has no complete body at 10s, result is censored >10s, not an exact latency",
+    "Two repeated consumed inputs cannot establish p95, reliability or a champion",
+    "No longer-wait network execution runner was enabled or executed in this offline increment"
+  ]
+}

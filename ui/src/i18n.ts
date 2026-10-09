@@ -186,7 +186,29 @@ for(const [key,value] of Object.entries(messages)){
  const it=(englishKeys?value:key).trim(),en=(englishKeys?key:value).trim();
  primary.set(it,en);if(!secondary.has(en))secondary.set(en,it);
 }
-for(const [en,it] of Object.entries({...liveItalian,...versionOneItalian,...reliabilityItalian})){primary.set(it,en);secondary.set(en,it)}
+const visionItalian:Record<string,string>={"Always on top": "Sempre in primo piano", "Live advisor": "Advisor live", "Close": "Chiudi", "Recognition profile": "Profilo di riconoscimento", "Automatic · current baseline": "Automatico · baseline attuale", "Calibrated corners · research": "Angoli calibrati · ricerca", "Region": "Regione", "Table": "Tavolo", "Dealer cards": "Carte del banco", "Player cards": "Carte del giocatore", "Controls (diagnostic)": "Controlli (diagnostica)", "Drag a region on the video": "Trascina una regione sul video", "Apply native regions": "Applica le regioni native", "Save private vision diagnostic": "Salva diagnostica vision privata", "Normalized regions": "Regioni normalizzate", "VISION EXPERIMENT FUNNEL": "FUNNEL DEGLI ESPERIMENTI VISION", "Evidence before promotion.": "Le prove prima della promozione.", "Export experiment matrix": "Esporta matrice esperimenti", "Executed development comparison": "Confronto di sviluppo eseguito", "Stage": "Fase", "Candidate": "Candidato", "Finding / next proof": "Risultato / prossima verifica", "Correct zone / ranks": "Zone / ranghi corretti", "Suit reads": "Semi letti", "Offline p95": "p95 offline", "proposed": "proposto", "available": "disponibile", "executed": "eseguito", "rejected": "bocciato", "Drag the native title bar to another monitor. This window views one observer; closing it keeps capture active.": "Trascina la barra nativa su un altro monitor. Questa finestra mostra un solo observer; chiuderla mantiene attiva la cattura."};
+Object.assign(visionItalian,{
+  'Card evidence':'Evidenza delle carte','Readable':'Leggibile','Covered':'Coperta','Unreadable':'Illeggibile',
+  'Covered card':'Carta coperta','Readable rank':'Rango leggibile','Unreadable face-up card':'Carta scoperta illeggibile',
+  'Rank unknown':'Rango sconosciuto','Suit unknown':'Seme sconosciuto','none_observed':'Nessuna carta rilevata',
+  'readable':'leggibile','covered':'coperta','unreadable':'illeggibile',
+  'Historical development comparison':'Confronto storico di sviluppo',
+  'Presence and usable-state follow-up':'Verifica di presenza e stato utilizzabile',
+  'Suits: correct / wrong / unknown / missed':'Semi: corretti / errati / sconosciuti / mancati',
+  'Objects: missed / extra':'Oggetti: mancati / extra','Correctly usable stills':'Immagini correttamente utilizzabili',
+  'Not supported':'Non supportato','Not measured':'Non misurato','YOLO learning diagnostics':'Diagnostica apprendimento YOLO',
+  'Initialization / task':'Inizializzazione / compito','Learning gate':'Controllo apprendimento',
+  'Development observations':'Osservazioni di sviluppo','Passed':'Superato','Not passed':'Non superato',
+  'Matched correct ranks':'Ranghi corretti associati','Rank inventory intersection':'Intersezione inventario ranghi',
+  'Fixed .50 gate':'Controllo a soglia fissa .50','Own-renderer development sessions':'Sessioni di sviluppo con renderer interno',
+  'Usable decision states':'Stati decisionali utilizzabili','Correct face observations':'Osservazioni corrette delle carte scoperte',
+  'Inventory L1 error':'Errore L1 inventario','Observed RC error':'Errore RC osservato',
+  'These are synthetic sequences with simulated manual turn confirmation. Repeated observations are not unique card exposures or new provider recordings.':'Queste sono sequenze sintetiche con conferma manuale simulata del turno. Osservazioni ripetute non sono esposizioni di carte uniche o nuove registrazioni di provider.',
+  'Complete count remains unverified for this research profile.':'Il conteggio completo resta non verificato per questo profilo di ricerca.',
+  'Repeated stills and offline timing do not measure independent sessions, first stable video latency or count reconstruction.':'Immagini ripetute e tempi offline non misurano sessioni indipendenti, latenza video stabile o ricostruzione del conteggio.',
+  'Train examples are deliberately reused to check memorization. Passing this check would permit a comparison; it would not prove generalization.':'Gli esempi di training vengono riutilizzati intenzionalmente per verificare la memorizzazione. Superare questo controllo permette un confronto, ma non dimostra generalizzazione.'
+});
+for(const [en,it] of Object.entries({...visionItalian,...liveItalian,...versionOneItalian,...reliabilityItalian})){primary.set(it,en);secondary.set(en,it)}
 export function t(text:string):string{
  const raw=text.trim();
  let translated=language==='en'?(primary.get(raw)||raw):(secondary.get(raw)||raw);

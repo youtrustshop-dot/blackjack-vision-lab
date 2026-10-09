@@ -1,0 +1,1482 @@
+{
+  "experiment": "VISION-025",
+  "freeze_sha256": "f81df70de7c4a86d1adb274e0a0169ee72aed3bd888e46e75e411a011b927b58",
+  "gate": {
+    "required_cases_per_candidate": 2,
+    "correct_timely_semantic_r1": 2,
+    "false_accepts": 0,
+    "unsupported_known_suits": 0,
+    "required_inventory_exact": 2,
+    "max_ms": 3000,
+    "sample_p95_ms": 2500,
+    "p95_scope": "two observations only; not an operational/population latency claim",
+    "selection": [
+      "eligible only",
+      "semantic_complete_transcriptions descending",
+      "sample p95 ascending",
+      "reported usage upper cost ascending",
+      "candidate name ascending"
+    ],
+    "hybrid_max_requests": 1,
+    "hybrid_route": "actual local gate only; no oracle forcing",
+    "capture_deadline_ms": 3000,
+    "latest_capture_gap_ms": 250
+  },
+  "attempted_comparisons": 4,
+  "planned_comparisons": 4,
+  "maximum_new_inferences": 5,
+  "rows": [
+    {
+      "case_id": "fresh-labelled",
+      "candidate": "luna-fast-live-v3",
+      "independent_session": "semantic-91006011",
+      "status": "timeout",
+      "elapsed_ms": 3016.0,
+      "metrics": {
+        "strict_validated": false,
+        "status": "timeout",
+        "elapsed_ms": 3016.0,
+        "expected_usable_r1": true,
+        "usable_r1": false,
+        "correct_usable_r1": false,
+        "timely_correct_usable_r1": false,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": false,
+        "inventory_mismatches": {
+          "missing_tuples": 4,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 0,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 0,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 0,
+          "expected": 1
+        },
+        "phase_correct": false,
+        "controls_correct": false,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 3,
+          "extra_or_wrong": 0
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "policy": "numeric-provenance-r1-v1",
+        "strict_wire_validated": false,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 3,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "No completed observation."
+        ],
+        "evidence_scope": "NEW owned sampled still response, not contract replay or provider generalization"
+      },
+      "usage": null,
+      "provider_usage": null,
+      "reported_usage_upper_usd": null,
+      "timing": {
+        "payload_ms": 0.0,
+        "reservation_ms": 0.0,
+        "post_and_claim_ms": 3016.0,
+        "receipt_ms": 0.0
+      },
+      "stage_spans": [
+        {
+          "stage": "payload",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 0.0
+        },
+        {
+          "stage": "reservation",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 0.0
+        },
+        {
+          "stage": "post_and_claim",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 3016.0
+        },
+        {
+          "stage": "receipt",
+          "start_after_capture_ms": 3016.0,
+          "end_after_capture_ms": 3016.0
+        }
+      ],
+      "network": {
+        "transport_total_ms": 3000.0,
+        "trace": [
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 0.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 109.0,
+            "duration_ms": 109.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 109.0,
+            "duration_ms": null
+          }
+        ],
+        "connect_tcp_attempts": 0,
+        "pool_prior_requests": 1,
+        "reused_connection_observed": false,
+        "worker_completed": true,
+        "pool_closed": true,
+        "dns_resolution_outside_request": true,
+        "submission_claim_ms": 16.0,
+        "post_including_claim_ms": 3016.0
+      },
+      "error_type": "TimeoutError",
+      "validation_issues": null,
+      "output_json_sha256": null
+    },
+    {
+      "case_id": "fresh-labelled",
+      "candidate": "gemini-structured-card-limit-local",
+      "independent_session": "semantic-91006011",
+      "status": "completed",
+      "elapsed_ms": 2343.0,
+      "metrics": {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 2343.0,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": false,
+        "timely_correct_usable_r1": false,
+        "false_accept": true,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 3,
+          "extra_or_wrong": 3
+        },
+        "unsafe_attributed_total": true,
+        "unsupported_known_suit_tuples": 0,
+        "policy": "numeric-provenance-r1-v1",
+        "strict_wire_validated": true,
+        "semantic_usable_r1": true,
+        "semantic_correct_usable_r1": true,
+        "semantic_timely_correct_usable_r1": true,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": true,
+        "semantic_numeric_provenance_exact": true,
+        "semantic_numeric_provenance": {
+          "matched": 3,
+          "expected": 3,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [
+          {
+            "observed_text": "SESSION 20",
+            "normalized_label": "SESSION",
+            "value": 20,
+            "declared_role": "ui",
+            "source_view": "table",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          },
+          {
+            "observed_text": "DEALER TOTAL 8",
+            "normalized_label": "DEALER TOTAL",
+            "value": 8,
+            "declared_role": "dealer_total",
+            "source_view": "dealer",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          },
+          {
+            "observed_text": "PLAYER TOTAL 20",
+            "normalized_label": "PLAYER TOTAL",
+            "value": 20,
+            "declared_role": "player_total",
+            "source_view": "player:0",
+            "status": "normalized",
+            "issues": [],
+            "blocks_r1": false
+          }
+        ],
+        "gate_reasons": [],
+        "evidence_scope": "NEW owned sampled still response, not contract replay or provider generalization"
+      },
+      "usage": {
+        "input_tokens": 4816,
+        "output_tokens": 353
+      },
+      "provider_usage": {
+        "promptTokenCount": 4816,
+        "candidatesTokenCount": 353,
+        "totalTokenCount": 5169,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 492
+          },
+          {
+            "modality": "IMAGE",
+            "tokenCount": 4324
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "reported_usage_upper_usd": "0.0023273",
+      "timing": {
+        "payload_ms": 0.0,
+        "reservation_ms": 15.0,
+        "post_and_claim_ms": 2328.0,
+        "usage_audit_ms": 0.0,
+        "settlement_ms": 0.0,
+        "strict_parse_ms": 0.0,
+        "semantic_gate_ms": 0.0,
+        "receipt_ms": 0.0
+      },
+      "stage_spans": [
+        {
+          "stage": "payload",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 0.0
+        },
+        {
+          "stage": "reservation",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 15.0
+        },
+        {
+          "stage": "post_and_claim",
+          "start_after_capture_ms": 15.0,
+          "end_after_capture_ms": 2343.0
+        },
+        {
+          "stage": "usage_audit",
+          "start_after_capture_ms": 2343.0,
+          "end_after_capture_ms": 2343.0
+        },
+        {
+          "stage": "settlement",
+          "start_after_capture_ms": 2343.0,
+          "end_after_capture_ms": 2343.0
+        },
+        {
+          "stage": "strict_parse",
+          "start_after_capture_ms": 2343.0,
+          "end_after_capture_ms": 2343.0
+        },
+        {
+          "stage": "semantic_gate",
+          "start_after_capture_ms": 2343.0,
+          "end_after_capture_ms": 2343.0
+        },
+        {
+          "stage": "receipt",
+          "start_after_capture_ms": 2343.0,
+          "end_after_capture_ms": 2343.0
+        }
+      ],
+      "network": {
+        "http_status": 200,
+        "headers_received_ms": 2328.0,
+        "body_complete_ms": 2328.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 2328.0,
+        "trace": [
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 0.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 94.0,
+            "duration_ms": 94.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 94.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 2328.0,
+            "duration_ms": 2234.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 2328.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 2328.0,
+            "duration_ms": 0.0
+          }
+        ],
+        "connect_tcp_attempts": 0,
+        "pool_prior_requests": 1,
+        "reused_connection_observed": true,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true,
+        "submission_claim_ms": 0.0,
+        "post_including_claim_ms": 2328.0
+      },
+      "error_type": null,
+      "validation_issues": null,
+      "output_json_sha256": "df7a7f483a49264c869dc618b5db9adfbf5cca36c90f3f7e9f2c8cda79c9c04f"
+    },
+    {
+      "case_id": "fresh-rotated-unknown",
+      "candidate": "gemini-structured-card-limit-local",
+      "independent_session": "semantic-91006019",
+      "status": "error",
+      "elapsed_ms": 2219.0,
+      "metrics": {
+        "strict_validated": false,
+        "status": "error",
+        "elapsed_ms": 2219.0,
+        "expected_usable_r1": true,
+        "usable_r1": false,
+        "correct_usable_r1": false,
+        "timely_correct_usable_r1": false,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": false,
+        "inventory_mismatches": {
+          "missing_tuples": 4,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 0,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 0,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 0,
+          "expected": 1
+        },
+        "phase_correct": false,
+        "controls_correct": false,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 0
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "policy": "numeric-provenance-r1-v1",
+        "strict_wire_validated": false,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "No completed observation."
+        ],
+        "evidence_scope": "NEW owned sampled still response, not contract replay or provider generalization"
+      },
+      "usage": {
+        "input_tokens": 4816,
+        "output_tokens": 260
+      },
+      "provider_usage": {
+        "promptTokenCount": 4816,
+        "candidatesTokenCount": 260,
+        "totalTokenCount": 5076,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 492
+          },
+          {
+            "modality": "IMAGE",
+            "tokenCount": 4324
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "reported_usage_upper_usd": "0.0020948",
+      "timing": {
+        "payload_ms": 0.0,
+        "reservation_ms": 0.0,
+        "post_and_claim_ms": 2203.0,
+        "usage_audit_ms": 0.0,
+        "settlement_ms": 16.0,
+        "strict_parse_ms": 0.0,
+        "receipt_ms": 0.0
+      },
+      "stage_spans": [
+        {
+          "stage": "payload",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 0.0
+        },
+        {
+          "stage": "reservation",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 0.0
+        },
+        {
+          "stage": "post_and_claim",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 2203.0
+        },
+        {
+          "stage": "usage_audit",
+          "start_after_capture_ms": 2203.0,
+          "end_after_capture_ms": 2203.0
+        },
+        {
+          "stage": "settlement",
+          "start_after_capture_ms": 2203.0,
+          "end_after_capture_ms": 2219.0
+        },
+        {
+          "stage": "strict_parse",
+          "start_after_capture_ms": 2219.0,
+          "end_after_capture_ms": 2219.0
+        },
+        {
+          "stage": "receipt",
+          "start_after_capture_ms": 2219.0,
+          "end_after_capture_ms": 2219.0
+        }
+      ],
+      "network": {
+        "http_status": 200,
+        "headers_received_ms": 2187.0,
+        "body_complete_ms": 2187.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 2187.0,
+        "trace": [
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 0.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 62.0,
+            "duration_ms": 62.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 62.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 2187.0,
+            "duration_ms": 2125.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 2187.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 2187.0,
+            "duration_ms": 0.0
+          }
+        ],
+        "connect_tcp_attempts": 0,
+        "pool_prior_requests": 2,
+        "reused_connection_observed": true,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true,
+        "submission_claim_ms": 16.0,
+        "post_including_claim_ms": 2203.0
+      },
+      "error_type": "ValidationError",
+      "validation_issues": [
+        {
+          "location": [
+            "n",
+            0
+          ],
+          "type": "value_error"
+        }
+      ],
+      "output_json_sha256": "033c4a50a5ad8b6522fe6f5bca8fcc2f2b515a30240dc25b1222618a6e0022de"
+    },
+    {
+      "case_id": "fresh-rotated-unknown",
+      "candidate": "luna-fast-live-v3",
+      "independent_session": "semantic-91006019",
+      "status": "timeout",
+      "elapsed_ms": 3016.0,
+      "metrics": {
+        "strict_validated": false,
+        "status": "timeout",
+        "elapsed_ms": 3016.0,
+        "expected_usable_r1": true,
+        "usable_r1": false,
+        "correct_usable_r1": false,
+        "timely_correct_usable_r1": false,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": false,
+        "inventory_mismatches": {
+          "missing_tuples": 4,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 0,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 0,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 0,
+          "expected": 1
+        },
+        "phase_correct": false,
+        "controls_correct": false,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 0
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "policy": "numeric-provenance-r1-v1",
+        "strict_wire_validated": false,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "No completed observation."
+        ],
+        "evidence_scope": "NEW owned sampled still response, not contract replay or provider generalization"
+      },
+      "usage": null,
+      "provider_usage": null,
+      "reported_usage_upper_usd": null,
+      "timing": {
+        "payload_ms": 0.0,
+        "reservation_ms": 0.0,
+        "post_and_claim_ms": 3016.0,
+        "receipt_ms": 0.0
+      },
+      "stage_spans": [
+        {
+          "stage": "payload",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 0.0
+        },
+        {
+          "stage": "reservation",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 0.0
+        },
+        {
+          "stage": "post_and_claim",
+          "start_after_capture_ms": 0.0,
+          "end_after_capture_ms": 3016.0
+        },
+        {
+          "stage": "receipt",
+          "start_after_capture_ms": 3016.0,
+          "end_after_capture_ms": 3016.0
+        }
+      ],
+      "network": {
+        "transport_total_ms": 3000.0,
+        "trace": [
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 0.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 203.0,
+            "duration_ms": 203.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 203.0,
+            "duration_ms": null
+          }
+        ],
+        "connect_tcp_attempts": 0,
+        "pool_prior_requests": 1,
+        "reused_connection_observed": false,
+        "worker_completed": true,
+        "pool_closed": true,
+        "dns_resolution_outside_request": true,
+        "submission_claim_ms": 16.0,
+        "post_including_claim_ms": 3016.0
+      },
+      "error_type": "TimeoutError",
+      "validation_issues": null,
+      "output_json_sha256": null
+    }
+  ],
+  "candidates": {
+    "luna-fast-live-v3": {
+      "attempted": 2,
+      "planned": 2,
+      "gate_passed": false,
+      "validated": 0,
+      "correct_timely_semantic_r1": 0,
+      "semantic_false_accepts": 0,
+      "semantic_complete_transcriptions": 0,
+      "literal_exact_json_fields": 0,
+      "complete_ms_individual": [
+        3016.0,
+        3016.0
+      ],
+      "validated_latency_ms": {
+        "n": 0,
+        "p50": null,
+        "p95_sample_only": null,
+        "max": null,
+        "scope": "n <= 2, completed only; not an operational p95, censored failures retained separately"
+      },
+      "failures": 2,
+      "timeouts": 2,
+      "reported_usage_upper_usd": "0",
+      "rank": {
+        "correct": 0,
+        "expected": 6
+      },
+      "suit": {
+        "correct": 0,
+        "expected": 6
+      },
+      "backs": {
+        "correct": 0,
+        "expected": 2
+      },
+      "exact_card_inventory": 0,
+      "phase_correct": 0,
+      "controls_correct": 0,
+      "semantic_numeric_provenance_exact": 0,
+      "semantic_numeric_tuples": {
+        "matched": 0,
+        "expected": 5,
+        "extra_or_wrong": 0
+      }
+    },
+    "gemini-structured-card-limit-local": {
+      "attempted": 2,
+      "planned": 2,
+      "gate_passed": false,
+      "validated": 1,
+      "correct_timely_semantic_r1": 1,
+      "semantic_false_accepts": 0,
+      "semantic_complete_transcriptions": 1,
+      "literal_exact_json_fields": 0,
+      "complete_ms_individual": [
+        2343.0,
+        2219.0
+      ],
+      "validated_latency_ms": {
+        "n": 1,
+        "p50": 2343.0,
+        "p95_sample_only": 2343.0,
+        "max": 2343.0,
+        "scope": "n <= 2, completed only; not an operational p95, censored failures retained separately"
+      },
+      "failures": 1,
+      "timeouts": 0,
+      "reported_usage_upper_usd": "0.0044221",
+      "rank": {
+        "correct": 3,
+        "expected": 6
+      },
+      "suit": {
+        "correct": 3,
+        "expected": 6
+      },
+      "backs": {
+        "correct": 1,
+        "expected": 2
+      },
+      "exact_card_inventory": 1,
+      "phase_correct": 1,
+      "controls_correct": 1,
+      "semantic_numeric_provenance_exact": 1,
+      "semantic_numeric_tuples": {
+        "matched": 3,
+        "expected": 5,
+        "extra_or_wrong": 0
+      }
+    }
+  },
+  "selected_for_single_trial": null,
+  "hybrid": {
+    "executed": false,
+    "reason": "neither_candidate_passed_frozen_correctness_latency_gate"
+  },
+  "hybrid_usage": null,
+  "hybrid_reported_usage_upper_usd": null,
+  "hybrid_network": null,
+  "access": [
+    {
+      "candidate": "luna-fast-live-v3",
+      "http_status": 200,
+      "exact_model_access": true,
+      "client_initialization_ms": 32.0,
+      "timing": {
+        "http_status": 200,
+        "headers_received_ms": 906.0,
+        "body_complete_ms": 906.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 906.0,
+        "trace": [
+          {
+            "stage": "connect_tcp",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "connect_tcp",
+            "action": "complete",
+            "at_ms": 62.0,
+            "duration_ms": 62.0
+          },
+          {
+            "stage": "start_tls",
+            "action": "started",
+            "at_ms": 62.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "start_tls",
+            "action": "complete",
+            "at_ms": 140.0,
+            "duration_ms": 78.0
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 140.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 140.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 140.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 140.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 140.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 906.0,
+            "duration_ms": 766.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 906.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 906.0,
+            "duration_ms": 0.0
+          }
+        ],
+        "connect_tcp_attempts": 1,
+        "pool_prior_requests": 0,
+        "reused_connection_observed": false,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true
+      }
+    },
+    {
+      "candidate": "gemini-structured-card-limit-local",
+      "http_status": 200,
+      "exact_model_access": true,
+      "client_initialization_ms": 31.0,
+      "timing": {
+        "http_status": 200,
+        "headers_received_ms": 250.0,
+        "body_complete_ms": 250.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 250.0,
+        "trace": [
+          {
+            "stage": "connect_tcp",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "connect_tcp",
+            "action": "complete",
+            "at_ms": 47.0,
+            "duration_ms": 47.0
+          },
+          {
+            "stage": "start_tls",
+            "action": "started",
+            "at_ms": 47.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "start_tls",
+            "action": "complete",
+            "at_ms": 125.0,
+            "duration_ms": 78.0
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 125.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 125.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 125.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 125.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 125.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 250.0,
+            "duration_ms": 125.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 250.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 250.0,
+            "duration_ms": 0.0
+          }
+        ],
+        "connect_tcp_attempts": 1,
+        "pool_prior_requests": 0,
+        "reused_connection_observed": false,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true
+      }
+    }
+  ],
+  "cold_initialization": {
+    "local_initialization_and_first_read_ms": 1234.0,
+    "dns_preresolution_ms": 3485.0,
+    "dns_hosts": {
+      "api.openai.com": {
+        "resolution_ms": 1750.0
+      },
+      "generativelanguage.googleapis.com": {
+        "resolution_ms": 1735.000000000582
+      }
+    }
+  },
+  "pricing": {
+    "verified_utc_date": "2026-10-06",
+    "sources": [
+      "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "https://developers.openai.com/api/docs/pricing",
+      "https://ai.google.dev/gemini-api/docs/pricing"
+    ],
+    "luna_input": ".10",
+    "luna_output": ".50",
+    "luna_cache_write_upper": ".125",
+    "luna_fast_multiplier": "2",
+    "luna_long_input_multiplier": "2",
+    "luna_long_output_multiplier": "1.5",
+    "gemini_input": ".30",
+    "gemini_output_including_thinking": "2.50",
+    "method": "Official pricing pages opened and checked before freezing this one-shot lot."
+  },
+  "ledger_before": {
+    "sha256": "6ed8ccd493956c544a25cf4c04c4530089c9a2e050c74e00734cc0ef5c62d90f",
+    "receipt": {
+      "requests_attempted": 100,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.095785750",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 99,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "count_amendment": {
+    "sha256": "12af45bea95f0f248fef03d03c77f5eb5bbf4fc935f9ec0f0fa1ffc46d2c258a",
+    "receipt": {
+      "requests_attempted": 100,
+      "max_requests": 105,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.095785750",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 99,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "ledger_after": {
+    "sha256": "7793ff458df87b0abf10eca59f71a73e2be242a29c0687a82ae5c692be385895",
+    "receipt": {
+      "requests_attempted": 104,
+      "max_requests": 105,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.153279850",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 103,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "accounted_upper_increase_usd": "1.057494100",
+  "accounted_margin_usd": "1.846720150",
+  "old_entries_unchanged": true,
+  "old_unknowns_preserved": true,
+  "stop": null,
+  "runtime_disarmed": true,
+  "unused_new_slots_closed": 1,
+  "final_holdout_opened": false,
+  "reader_promoted": false,
+  "release_replaced": false,
+  "claim_limit": "Two fresh sampled owned stills/provider and at most one headless hybrid, not a statistical champion, Windows capture/paint, provider transfer, R2 or profit.",
+  "initial_timeout_stop_retained": true,
+  "completion_access": [
+    {
+      "candidate": "luna-fast-live-v3",
+      "http_status": 200,
+      "exact_model_access": true,
+      "client_initialization_ms": 31.0,
+      "timing": {
+        "http_status": 200,
+        "headers_received_ms": 766.0,
+        "body_complete_ms": 766.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 766.0,
+        "trace": [
+          {
+            "stage": "connect_tcp",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "connect_tcp",
+            "action": "complete",
+            "at_ms": 63.0,
+            "duration_ms": 63.0
+          },
+          {
+            "stage": "start_tls",
+            "action": "started",
+            "at_ms": 63.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "start_tls",
+            "action": "complete",
+            "at_ms": 125.0,
+            "duration_ms": 62.0
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 125.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 125.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 125.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 125.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 125.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 766.0,
+            "duration_ms": 641.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 766.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 766.0,
+            "duration_ms": 0.0
+          }
+        ],
+        "connect_tcp_attempts": 1,
+        "pool_prior_requests": 0,
+        "reused_connection_observed": false,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true
+      }
+    },
+    {
+      "candidate": "gemini-structured-card-limit-local",
+      "http_status": 200,
+      "exact_model_access": true,
+      "client_initialization_ms": 31.0,
+      "timing": {
+        "http_status": 200,
+        "headers_received_ms": 219.0,
+        "body_complete_ms": 219.0,
+        "provider_json_parse_ms": 0.0,
+        "transport_total_ms": 219.0,
+        "trace": [
+          {
+            "stage": "connect_tcp",
+            "action": "started",
+            "at_ms": 0.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "connect_tcp",
+            "action": "complete",
+            "at_ms": 47.0,
+            "duration_ms": 47.0
+          },
+          {
+            "stage": "start_tls",
+            "action": "started",
+            "at_ms": 47.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "start_tls",
+            "action": "complete",
+            "at_ms": 94.0,
+            "duration_ms": 47.0
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "started",
+            "at_ms": 94.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_headers",
+            "action": "complete",
+            "at_ms": 94.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "send_request_body",
+            "action": "started",
+            "at_ms": 94.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "send_request_body",
+            "action": "complete",
+            "at_ms": 94.0,
+            "duration_ms": 0.0
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "started",
+            "at_ms": 94.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_headers",
+            "action": "complete",
+            "at_ms": 219.0,
+            "duration_ms": 125.0
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "started",
+            "at_ms": 219.0,
+            "duration_ms": null
+          },
+          {
+            "stage": "receive_response_body",
+            "action": "complete",
+            "at_ms": 219.0,
+            "duration_ms": 0.0
+          }
+        ],
+        "connect_tcp_attempts": 1,
+        "pool_prior_requests": 0,
+        "reused_connection_observed": false,
+        "worker_completed": true,
+        "pool_closed": false,
+        "dns_resolution_outside_request": true
+      }
+    }
+  ],
+  "completion_cold_initialization": {
+    "local_initialization_and_first_read_ms": 656.0,
+    "dns_preresolution_ms": 2594.0
+  },
+  "first_101_entries_unchanged": true,
+  "completion_scope": "Original four comparisons exactly once; no hybrid, new allowance, retry or follow-on batch.",
+  "last_pair_access": {
+    "candidate": "luna-fast-live-v3",
+    "http_status": 200,
+    "exact_model_access": true,
+    "client_initialization_ms": 46.0,
+    "timing": {
+      "http_status": 200,
+      "headers_received_ms": 985.0,
+      "body_complete_ms": 985.0,
+      "provider_json_parse_ms": 0.0,
+      "transport_total_ms": 985.0,
+      "trace": [
+        {
+          "stage": "connect_tcp",
+          "action": "started",
+          "at_ms": 0.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "connect_tcp",
+          "action": "complete",
+          "at_ms": 63.0,
+          "duration_ms": 63.0
+        },
+        {
+          "stage": "start_tls",
+          "action": "started",
+          "at_ms": 63.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "start_tls",
+          "action": "complete",
+          "at_ms": 125.0,
+          "duration_ms": 62.0
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "started",
+          "at_ms": 125.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "send_request_headers",
+          "action": "complete",
+          "at_ms": 125.0,
+          "duration_ms": 0.0
+        },
+        {
+          "stage": "send_request_body",
+          "action": "started",
+          "at_ms": 125.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "send_request_body",
+          "action": "complete",
+          "at_ms": 125.0,
+          "duration_ms": 0.0
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "started",
+          "at_ms": 125.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "receive_response_headers",
+          "action": "complete",
+          "at_ms": 985.0,
+          "duration_ms": 860.0
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "started",
+          "at_ms": 985.0,
+          "duration_ms": null
+        },
+        {
+          "stage": "receive_response_body",
+          "action": "complete",
+          "at_ms": 985.0,
+          "duration_ms": 0.0
+        }
+      ],
+      "connect_tcp_attempts": 1,
+      "pool_prior_requests": 0,
+      "reused_connection_observed": false,
+      "worker_completed": true,
+      "pool_closed": false,
+      "dns_resolution_outside_request": true
+    }
+  },
+  "last_pair_cold": {
+    "fresh_dns_preresolution_ms": 5594.0
+  },
+  "first_103_entries_unchanged": true,
+  "original_stops_retained": true,
+  "execution_segments": [
+    "initial first pair stopped on timeout",
+    "two distinct Gemini pairs stopped on local validation rejection",
+    "only the fourth distinct Luna pair; all contracts unchanged"
+  ],
+  "offline_audit": {
+    "frozen_sources_pixels_models_history_verified": true,
+    "old_response_prefixes_unchanged": true,
+    "all_four_metrics_reproduced": true,
+    "four_unique_submission_claim_sha256": [
+      "76d05aec064aab1ce6904d102a2935345e675fbb21f18ccd910b5873f695a5ec",
+      "7761038304456ee44521791e09e62f57972ab0d493f78a226e819667c18dd445",
+      "8a583b099aec8cd8f268e82c7bc98a4f578e840ced70a6f3275b346801fe23a0",
+      "00852b7ad5f7ab5b4d2f9866abdb6ba80d113ccd1f659a59c02935c416025ba4"
+    ],
+    "provider_calls": 0,
+    "audit_source_sha256": "29c25ad0f9924ad55be7d933156f7738e0569b233fa267ab64f247aa743a0ff9",
+    "ledger_sha256_unchanged": "7793ff458df87b0abf10eca59f71a73e2be242a29c0687a82ae5c692be385895"
+  },
+  "new_accounting": {
+    "reported_usage_price_upper_usd": "0.0044221",
+    "unreconciled_timeout_reservation_usd": "1.053072000",
+    "accounted_upper_increase_usd": "1.057494100",
+    "total_new_reserved_usd": "1.6873376",
+    "initial_whole_lot_worst_case_usd": "2.2138736",
+    "new_inference_attempts": 4,
+    "new_reported_usage_requests": 2,
+    "new_unreconciled_timeouts": 2,
+    "invoice_or_current_balance_verified": false
+  },
+  "measurement_clock": {
+    "api": "time.monotonic_ns",
+    "declared_resolution_ms": 15.625,
+    "meaning": "Zeros mean below clock resolution; timeout finalization may overshoot deadline. No late observation is accepted."
+  },
+  "main_remaining_limit": "Timely strictly valid R1 availability: Luna header waits and Gemini numeric-label validation; no passing candidate for hybrid.",
+  "not_measured": [
+    "native Windows capture or advisor paint",
+    "session/R2 reliability",
+    "external-provider transfer",
+    "causal pooling speedup",
+    "server-versus-network header-wait split"
+  ]
+}

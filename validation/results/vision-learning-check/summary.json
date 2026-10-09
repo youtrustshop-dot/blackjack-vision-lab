@@ -1,0 +1,862 @@
+{
+  "schema": 1,
+  "baseline": {
+    "version": "1.1.1",
+    "commit": "4f074efd53066a95d64ca1ed53de03479a8adcba"
+  },
+  "parent_commit": "620e6a0dd7f929a116645c53181b4df360b8edbd",
+  "publication": "unreleased research candidate; installed release unchanged",
+  "latest_comparison": {
+    "scope": "private development stills; repeated preview is same family/session, not independent data",
+    "hardware": {
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD"
+    },
+    "source_fingerprint": "2132801b06730906247897961c80550a13e3112ca606f8757799b5f549d0725e",
+    "manifest_sha256": "691265dd7de8c88283fa2d00b74b07bd8f5b226de39a83ffaabc4eea01c11de7",
+    "metrics_semantics": "manual full-card boxes matched at IoU .30 within role; still-image detection/zone rank and suit metrics, not calibrated certainty or detection AP",
+    "timing_protocol": "one excluded runtime warm-up then three repeats per case/profile; glyph OCR cache cleared before each repeat; offline detection only",
+    "timing_environment": "Training and build processes completed; no concurrent research training; unrelated Clef runtime left idle",
+    "selection": "no promotion; limited samples and no unseen external session evaluation",
+    "not_measured": [
+      "tracking ID switches",
+      "missed/duplicate video events",
+      "RC/TC session drift",
+      "capture-to-display latency",
+      "independent final generalization"
+    ],
+    "aggregates": {
+      "baseline-full": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 3,
+        "missed_zone_ranks": 6,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.3333333333333333,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 1164.810000002035,
+        "offline_ms_p95": 1967.001319998235,
+        "localization_precision": 1.0,
+        "localization_recall": 0.3,
+        "rank_correct_including_misses": 3,
+        "suit_correct_including_misses": 0,
+        "suits_supported": true,
+        "outcomes": {
+          "rank": {
+            "correct": 3,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 6
+          },
+          "suit": {
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 3,
+            "missed": 6
+          }
+        },
+        "presence_outcomes": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 7,
+          "extra": 0,
+          "covered_correct": 0,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 0,
+          "correctly_usable": 0,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      },
+      "baseline-native-roi": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 3,
+        "missed_zone_ranks": 6,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.3333333333333333,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 947.6641000001109,
+        "offline_ms_p95": 1839.7534000017913,
+        "localization_precision": 1.0,
+        "localization_recall": 0.3,
+        "rank_correct_including_misses": 3,
+        "suit_correct_including_misses": 0,
+        "suits_supported": true,
+        "outcomes": {
+          "rank": {
+            "correct": 3,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 6
+          },
+          "suit": {
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 3,
+            "missed": 6
+          }
+        },
+        "presence_outcomes": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 7,
+          "extra": 0,
+          "covered_correct": 0,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 0,
+          "correctly_usable": 0,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      },
+      "calibrated-corners": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 9,
+        "missed_zone_ranks": 0,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 1.0,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 161.722999997437,
+        "offline_ms_p95": 257.36506000102963,
+        "localization_precision": 1.0,
+        "localization_recall": 1.0,
+        "rank_correct_including_misses": 9,
+        "suit_correct_including_misses": 4,
+        "suits_supported": true,
+        "outcomes": {
+          "rank": {
+            "correct": 9,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 0
+          },
+          "suit": {
+            "correct": 4,
+            "wrong": 0,
+            "unknown": 5,
+            "missed": 0
+          }
+        },
+        "presence_outcomes": {
+          "correct": 10,
+          "wrong": 0,
+          "missed": 0,
+          "extra": 0,
+          "covered_correct": 1,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 1,
+          "correctly_usable": 1,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      },
+      "ultralytics-corners": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 0,
+        "missed_zone_ranks": 9,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.0,
+        "rank_inventory_precision": null,
+        "offline_ms_p50": 122.59020000055898,
+        "offline_ms_p95": 181.19751999765867,
+        "localization_precision": null,
+        "localization_recall": 0.0,
+        "rank_correct_including_misses": 0,
+        "suit_correct_including_misses": null,
+        "suits_supported": false,
+        "outcomes": {
+          "rank": {
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 9
+          },
+          "suit": null
+        },
+        "presence_outcomes": {
+          "correct": 0,
+          "wrong": 0,
+          "missed": 10,
+          "extra": 0,
+          "covered_correct": 0,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 0,
+          "correctly_usable": 0,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      },
+      "learned-corners-ocr": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 8,
+        "missed_zone_ranks": 1,
+        "extra_or_wrong_zone_ranks": 2,
+        "rank_inventory_recall": 0.8888888888888888,
+        "rank_inventory_precision": 0.8,
+        "offline_ms_p50": 815.620499997749,
+        "offline_ms_p95": 1042.7951399979065,
+        "localization_precision": 0.17142857142857143,
+        "localization_recall": 0.6,
+        "rank_correct_including_misses": 5,
+        "suit_correct_including_misses": 1,
+        "suits_supported": true,
+        "outcomes": {
+          "rank": {
+            "correct": 5,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 4
+          },
+          "suit": {
+            "correct": 1,
+            "wrong": 0,
+            "unknown": 4,
+            "missed": 4
+          }
+        },
+        "presence_outcomes": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 4,
+          "extra": 29,
+          "covered_correct": 1,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 0,
+          "correctly_usable": 0,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      }
+    },
+    "localizer_checkpoint_sha256": "b76d7f2cc045330f7505cf136018076c1b1751027f3f29874b170111d5edbf2c",
+    "operating_points_sha256": "a095a418fe6501de6881f203ee6b17dee5f30a4bf9333a2f84c1961cd6e37d49",
+    "detector_version": "calibrated-corners-2-presence",
+    "raw_report_sha256": "c9b8e522748e8ca82d0341c7f1c39c2f65f761ea833adf284499d8ac74694637",
+    "assistance": "All challengers use the same manual dealer/player regions and manual turn. Automatic baselines have their original contracts.",
+    "full_card_geometry_warning": "Learned corners infer approximate card bodies from glyph boxes; IoU .30 is a diagnostic proxy, not corner detection AP."
+  },
+  "learning_checks": [
+    {
+      "initialization": "scratch",
+      "classes": [
+        "A",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "J",
+        "Q",
+        "K"
+      ],
+      "train_images": 16,
+      "train_annotations": 96,
+      "ultralytics": "8.4.7",
+      "torch": "2.9.1+cpu",
+      "imgsz": 416,
+      "requested_epochs": 60,
+      "actual_epochs": 60,
+      "budget_seconds": 360,
+      "wall_seconds": 314.62264710000454,
+      "dataset_sha256": "fc55c14bf9c8f72002901e6b2184ff5876fe89f3e43f7cbf0b59ea76f6851649",
+      "checkpoint_sha256": "b2ff991e30110a986ca3a57898df7cf27d57cbaaa0371fbd0a01539a95956afe",
+      "validation_metrics": {
+        "metrics/precision(B)": 0.0,
+        "metrics/recall(B)": 0.0,
+        "metrics/mAP50(B)": 0.0,
+        "metrics/mAP50-95(B)": 0.0,
+        "fitness": 0.0
+      },
+      "id": "learning-scratch",
+      "task": "rank",
+      "receipt_sha256": "9aad8f30442cc80899cdf83e2af312057a079bf37b5d252c4e44086659bf1219",
+      "fixed_gate": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "truth": 96,
+        "localized": 0,
+        "rank_correct": 0,
+        "rank_wrong": 0,
+        "missed": 96,
+        "extra_boxes": 0,
+        "learning_gate": false,
+        "gate_defined_before_run": ">=90% localization, >=80% correct rank including misses, <=10% extra boxes; train memorization only",
+        "independent_validation": false
+      },
+      "learning_gate": false,
+      "finding": "Memorized train mAP50 0.000; at the fixed .50 threshold 0/96 localized. No independent validation.",
+      "decision": "Not promoted; retain failed .50 gate and completed checkpoint.",
+      "suits_supported": false,
+      "origin_sha256": null
+    },
+    {
+      "initialization": "pretrained",
+      "classes": [
+        "A",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "J",
+        "Q",
+        "K"
+      ],
+      "train_images": 16,
+      "train_annotations": 96,
+      "ultralytics": "8.4.7",
+      "torch": "2.9.1+cpu",
+      "imgsz": 416,
+      "requested_epochs": 60,
+      "actual_epochs": 60,
+      "budget_seconds": 360,
+      "wall_seconds": 323.2756466999999,
+      "dataset_sha256": "fc55c14bf9c8f72002901e6b2184ff5876fe89f3e43f7cbf0b59ea76f6851649",
+      "checkpoint_sha256": "40203fa188d373c06976ffa8c373b637b9a60b1dca02b22da77bc9e653e578b2",
+      "validation_metrics": {
+        "metrics/precision(B)": 0.6140646146796519,
+        "metrics/recall(B)": 0.1898914550284943,
+        "metrics/mAP50(B)": 0.23164760570179949,
+        "metrics/mAP50-95(B)": 0.16801910836201037,
+        "fitness": 0.16801910836201037
+      },
+      "id": "learning-pretrained",
+      "task": "rank",
+      "receipt_sha256": "af9135ae691b517d07f64afa47787d24f643034c489494d920ef16d7f31efa55",
+      "fixed_gate": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "truth": 96,
+        "localized": 0,
+        "rank_correct": 0,
+        "rank_wrong": 0,
+        "missed": 96,
+        "extra_boxes": 0,
+        "learning_gate": false,
+        "gate_defined_before_run": ">=90% localization, >=80% correct rank including misses, <=10% extra boxes; train memorization only",
+        "independent_validation": false
+      },
+      "learning_gate": false,
+      "finding": "Memorized train mAP50 0.232; at the fixed .50 threshold 0/96 localized. No independent validation.",
+      "decision": "Not promoted; retain failed .50 gate and completed checkpoint.",
+      "suits_supported": false,
+      "origin_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "initialization": "pretrained",
+      "classes": [
+        "rank-corner"
+      ],
+      "train_images": 16,
+      "train_annotations": 96,
+      "ultralytics": "8.4.7",
+      "torch": "2.9.1+cpu",
+      "imgsz": 416,
+      "requested_epochs": 60,
+      "actual_epochs": 60,
+      "budget_seconds": 360,
+      "wall_seconds": 325.58219929999905,
+      "dataset_sha256": "7ec8403ba2b23531a7b30bd93fd82c6d91d64a6ed1f2ae75564a2036818a4070",
+      "checkpoint_sha256": "b76d7f2cc045330f7505cf136018076c1b1751027f3f29874b170111d5edbf2c",
+      "validation_metrics": {
+        "metrics/precision(B)": 0.8949409014115299,
+        "metrics/recall(B)": 0.798631932081347,
+        "metrics/mAP50(B)": 0.9296468617492563,
+        "metrics/mAP50-95(B)": 0.710105884929549,
+        "fitness": 0.710105884929549
+      },
+      "id": "learning-corner",
+      "task": "corner",
+      "receipt_sha256": "d045fa78465a457af032839e5310d259a969c9aa925446b11bd0266551e183a0",
+      "fixed_gate": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "truth": 96,
+        "localized": 0,
+        "rank_correct": 0,
+        "rank_wrong": 0,
+        "missed": 96,
+        "extra_boxes": 0,
+        "classification_task": "one geometry class; no rank or suit classifier",
+        "learning_gate": false,
+        "gate_defined_before_run": ">=90% localization, >=80% correct rank including misses, <=10% extra boxes; train memorization only",
+        "independent_validation": false
+      },
+      "learning_gate": false,
+      "finding": "Memorized train mAP50 0.930; at the fixed .50 threshold 0/96 localized. No independent validation. Development score/NMS diagnostic selects .025: 92/96 localized, four missed, one extra. This permits only a development comparison.",
+      "decision": "Compared on private development stills; 29 extra objects, 0/3 usable. Do not promote.",
+      "suits_supported": false,
+      "origin_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "initialization": "refine",
+      "classes": [
+        "rank-corner"
+      ],
+      "train_images": 16,
+      "train_annotations": 96,
+      "ultralytics": "8.4.7",
+      "torch": "2.9.1+cpu",
+      "imgsz": 416,
+      "requested_epochs": 30,
+      "actual_epochs": 30,
+      "budget_seconds": 180,
+      "wall_seconds": 135.49171309999656,
+      "dataset_sha256": "7ec8403ba2b23531a7b30bd93fd82c6d91d64a6ed1f2ae75564a2036818a4070",
+      "checkpoint_sha256": "737304c2d1c81acf7ac70382d6a6b47d55b59f0c533396897b41d926fd28044d",
+      "validation_metrics": {
+        "metrics/precision(B)": 0.8949409014115299,
+        "metrics/recall(B)": 0.798631932081347,
+        "metrics/mAP50(B)": 0.9296468617492563,
+        "metrics/mAP50-95(B)": 0.710105884929549,
+        "fitness": 0.710105884929549
+      },
+      "id": "learning-corner-refine",
+      "task": "corner",
+      "receipt_sha256": "db17bbb390ffbbe7e20f442cdb0b754b8f03883097d7efae2c133e827bc9cbc5",
+      "fixed_gate": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "truth": 96,
+        "localized": 0,
+        "rank_correct": 0,
+        "rank_wrong": 0,
+        "missed": 96,
+        "extra_boxes": 0,
+        "classification_task": "one geometry class; no rank or suit classifier",
+        "learning_gate": false,
+        "gate_defined_before_run": ">=90% localization, >=80% correct rank including misses, <=10% extra boxes; train memorization only",
+        "independent_validation": false
+      },
+      "learning_gate": false,
+      "finding": "Memorized train mAP50 0.930; at the fixed .50 threshold 0/96 localized. No independent validation. Thirty additional epochs retain the same best metrics; extra time did not improve this checkpoint.",
+      "decision": "Not promoted; retain failed .50 gate and completed checkpoint.",
+      "suits_supported": false,
+      "origin_sha256": "b76d7f2cc045330f7505cf136018076c1b1751027f3f29874b170111d5edbf2c"
+    }
+  ],
+  "learning_operating_point": {
+    "scope": "train memorization score/NMS diagnostic, development selection, no independent validation",
+    "checkpoint_sha256": "b76d7f2cc045330f7505cf136018076c1b1751027f3f29874b170111d5edbf2c",
+    "rule": "largest grid threshold with >=90% geometric recall and precision on development memorization data",
+    "grid": [
+      0.01,
+      0.025,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "matching_iou": 0.5,
+    "fixed_050_gate_preserved": false,
+    "rows": [
+      {
+        "threshold": 0.01,
+        "localized": 96,
+        "missed": 0,
+        "extra": 104,
+        "precision": 0.48,
+        "recall": 1.0,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.025,
+        "localized": 92,
+        "missed": 4,
+        "extra": 1,
+        "precision": 0.989247311827957,
+        "recall": 0.9583333333333334,
+        "diagnostic_gate": true
+      },
+      {
+        "threshold": 0.05,
+        "localized": 84,
+        "missed": 12,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.875,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.1,
+        "localized": 57,
+        "missed": 39,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.59375,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.15,
+        "localized": 42,
+        "missed": 54,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.4375,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.2,
+        "localized": 27,
+        "missed": 69,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.28125,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.3,
+        "localized": 7,
+        "missed": 89,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.07291666666666667,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.4,
+        "localized": 3,
+        "missed": 93,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.03125,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.5,
+        "localized": 0,
+        "missed": 96,
+        "extra": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "diagnostic_gate": false
+      }
+    ],
+    "selected": {
+      "threshold": 0.025,
+      "localized": 92,
+      "missed": 4,
+      "extra": 1,
+      "precision": 0.989247311827957,
+      "recall": 0.9583333333333334,
+      "diagnostic_gate": true
+    },
+    "can_proceed_to_development_roi_comparison": true,
+    "rank_and_suit_classifiers": "not part of this one-class localizer"
+  },
+  "own_development_sessions": {
+    "scope": "own synthetic full-round sequences, same renderer family, no external recordings",
+    "protocol": {
+      "schema": 1,
+      "scope": "own synthetic full-round sequences, same renderer family, no external recordings",
+      "seeds": [
+        4100401,
+        4100402,
+        4100403
+      ],
+      "rounds_per_session": 4,
+      "layout": {
+        "table": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "dealer": [
+          0.12,
+          0.06,
+          0.7,
+          0.29
+        ],
+        "player:0": [
+          0.12,
+          0.54,
+          0.7,
+          0.29
+        ]
+      },
+      "split": "development",
+      "detector": "calibrated-corners-2-presence",
+      "manual_turn": "simulated confirmation at each game state",
+      "suits": "correct/wrong/unknown including every visible face",
+      "count_acceptance": "never certified by this research profile",
+      "stable_observations_per_state": 6,
+      "geometry_drift": "same-size +60px (inside ROI) and +480px (clipped ROI); report gates, do not tune on them"
+    },
+    "dataset_manifest_sha256": "a02802ec54eaa216419ad77e238eb556fce40181d9736c7355fcafbbb4b6fc0f",
+    "receipt_sha256": "3c84ab611ee3827a24d2e50ac9f025da3a0a028ea11682a879ca67db11b2aced",
+    "sessions": [
+      {
+        "seed": 4100401,
+        "states": 10,
+        "decision_states": 6,
+        "correctly_usable_decision_states": 6,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 42,
+        "ranks_correct": 42,
+        "suits_correct": 17,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 25,
+        "final_inventory_l1_error": 0,
+        "final_observed_rc_error": 0,
+        "count_ever_certified": false
+      },
+      {
+        "seed": 4100402,
+        "states": 7,
+        "decision_states": 3,
+        "correctly_usable_decision_states": 3,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 27,
+        "ranks_correct": 27,
+        "suits_correct": 18,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 9,
+        "final_inventory_l1_error": 4,
+        "final_observed_rc_error": 3,
+        "count_ever_certified": false
+      },
+      {
+        "seed": 4100403,
+        "states": 10,
+        "decision_states": 6,
+        "correctly_usable_decision_states": 6,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 48,
+        "ranks_correct": 48,
+        "suits_correct": 18,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 30,
+        "final_inventory_l1_error": 4,
+        "final_observed_rc_error": -2,
+        "count_ever_certified": false
+      }
+    ],
+    "same_size_drift_probe": [
+      {
+        "source_size_unchanged": true,
+        "translation_px": 0,
+        "advice_available": true,
+        "reasons": []
+      },
+      {
+        "source_size_unchanged": true,
+        "translation_px": 60,
+        "advice_available": true,
+        "reasons": []
+      },
+      {
+        "source_size_unchanged": true,
+        "translation_px": 480,
+        "advice_available": false,
+        "reasons": [
+          "Need at least two player cards and exactly one visible dealer upcard.",
+          "No readable legal player controls; calibrate the table or declare a manual player turn."
+        ]
+      }
+    ],
+    "selection": "No promotion. New own-renderer development sessions, no new external provider session or count acceptance.",
+    "count_loss_diagnostics": [
+      {
+        "seed": 4100402,
+        "round": 1,
+        "native_phase": "settled",
+        "detected_phase": "unknown",
+        "detected_round": 0,
+        "lifecycle": {
+          "seen_round": false,
+          "stable_hits": 6,
+          "round_open": false,
+          "pending_boundary": false
+        },
+        "events": [],
+        "ranks_correct": 4,
+        "visible_faces": 4,
+        "inventory_l1_error": 4,
+        "expected_inventory": {
+          "K": 1,
+          "9": 1,
+          "A": 1,
+          "10": 1
+        },
+        "observed_inventory": {
+          "A": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0,
+          "J": 0,
+          "Q": 0,
+          "K": 0
+        },
+        "reasons": [
+          "Need at least two player cards and exactly one visible dealer upcard.",
+          "Waiting for a player decision in the video.",
+          "No readable legal player controls; calibrate the table or declare a manual player turn."
+        ]
+      },
+      {
+        "seed": 4100403,
+        "round": 4,
+        "native_phase": "settled",
+        "detected_phase": "unknown",
+        "detected_round": 3,
+        "lifecycle": {
+          "seen_round": true,
+          "stable_hits": 6,
+          "round_open": true,
+          "pending_boundary": false
+        },
+        "events": [
+          "STATE_CORRECTION",
+          "STATE_CORRECTION",
+          "STATE_CORRECTION",
+          "STATE_CORRECTION",
+          "TRACK_LOST",
+          "TRACK_LOST",
+          "TRACK_LOST",
+          "TRACK_LOST",
+          "TRACK_LOST",
+          "TRACK_LOST"
+        ],
+        "ranks_correct": 4,
+        "visible_faces": 4,
+        "inventory_l1_error": 4,
+        "expected_inventory": {
+          "Q": 2,
+          "K": 2,
+          "9": 2,
+          "3": 5,
+          "2": 4,
+          "8": 2,
+          "7": 2,
+          "4": 3,
+          "A": 2,
+          "10": 1,
+          "5": 1
+        },
+        "observed_inventory": {
+          "A": 1,
+          "2": 2,
+          "3": 4,
+          "4": 3,
+          "5": 1,
+          "6": 0,
+          "7": 2,
+          "8": 2,
+          "9": 2,
+          "10": 1,
+          "J": 0,
+          "Q": 2,
+          "K": 2
+        },
+        "reasons": [
+          "card occluded or removed without round boundary",
+          "6 cards await stable visual evidence",
+          "Need at least two player cards and exactly one visible dealer upcard.",
+          "Waiting for a player decision in the video.",
+          "No readable legal player controls; calibrate the table or declare a manual player turn."
+        ]
+      }
+    ]
+  },
+  "brief_exposure_negative": {
+    "scope": "own synthetic full-round sequences, same renderer family, no external recordings",
+    "stable_observations_per_state": 3,
+    "receipt_sha256": "6e4143f658a3c363dc6f10259185181f01e01001575d90907a473f48fba16e12",
+    "sessions": [
+      {
+        "seed": 4100401,
+        "states": 10,
+        "decision_states": 6,
+        "correctly_usable_decision_states": 6,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 42,
+        "ranks_correct": 42,
+        "suits_correct": 17,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 25,
+        "final_inventory_l1_error": 17,
+        "final_observed_rc_error": 0,
+        "count_ever_certified": false
+      },
+      {
+        "seed": 4100402,
+        "states": 7,
+        "decision_states": 3,
+        "correctly_usable_decision_states": 3,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 27,
+        "ranks_correct": 27,
+        "suits_correct": 18,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 9,
+        "final_inventory_l1_error": 18,
+        "final_observed_rc_error": 5,
+        "count_ever_certified": false
+      },
+      {
+        "seed": 4100403,
+        "states": 10,
+        "decision_states": 6,
+        "correctly_usable_decision_states": 6,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 48,
+        "ranks_correct": 48,
+        "suits_correct": 18,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 30,
+        "final_inventory_l1_error": 19,
+        "final_observed_rc_error": -5,
+        "count_ever_certified": false
+      }
+    ],
+    "finding": "Final inventory L1 17/18/19 despite all current ranks read; RC errors 0/+5/-5 can hide inventory loss. Six observations were a separate development sensitivity check, not acceptance."
+  },
+  "rejected_presence_variant": {
+    "scope": "development-only broader red/blue back geometry before refinement",
+    "receipt_sha256": "21c51324920107501eec986bb2ed2920bda9a4189cd1fd2fc70156cb95b72573",
+    "ranks_correct": 8,
+    "presence_outcomes": {
+      "correct": 9,
+      "wrong": 0,
+      "missed": 1,
+      "extra": 6,
+      "covered_correct": 1,
+      "covered_wrong": 0
+    },
+    "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
+  },
+  "decision": "No detector promoted. Failed scratch pilot preserved; bounded geometry learning demonstrated only on memorized development examples. Calibrated profile remains research-only."
+}

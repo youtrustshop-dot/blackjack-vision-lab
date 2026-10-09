@@ -222,7 +222,9 @@ def _apply(state: ReplayState, event: Event) -> None:
             raise EventValidationError("A reveal requires a known rank")
         if card.get("rank") is None and card.get("suit") is not None:
             raise EventValidationError("An unknown card cannot have a confirmed suit")
-        card["face_down"] = card.get("rank") is None
+        # Unreadable face-up pixels are not evidence of a face-down back.
+        card["face_down"] = bool(p.get("face_down", card.get("face_down", False))) if card.get("rank") is None else False
+        card["visibility"] = "covered" if card["face_down"] else "readable" if card.get("rank") else "unreadable"
         for key in ("zone", "bbox", "score", "round_id"):
             if key in p:
                 card[key] = p[key]

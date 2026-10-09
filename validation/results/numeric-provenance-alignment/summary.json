@@ -1,0 +1,489 @@
+{
+  "experiment_id": "VISION-024",
+  "report_date": "2026-10-06",
+  "started_date": "2026-10-05",
+  "policy": "numeric-provenance-r1-v1",
+  "evidence_kind": "offline-contract-re-evaluation-of-consumed-pr17-responses",
+  "new_model_quality_evidence": false,
+  "provider_calls": 0,
+  "hybrid_calls": 0,
+  "credential_loading": false,
+  "new_policy_source_hashes": {
+    "bjlab/numeric_provenance.py": "b137d47fdd9aa687e9b99b1a2d276f90f7971b487eed8200644510ac1f78f817",
+    "validation/tools/numeric_semantic_score.py": "3a47f5e8c49166d0350edf9bc0a5e82662b68bd7cd82d0d3951d93ddb1f3b1a4",
+    "validation/tools/numeric_contract_replay.py": "f4ce2aa413931c375c5777fe68bbe0efffd39d56d1dc297513cdcf6d698304d8",
+    "validation/tools/persistent_http_fixture.py": "27f0cd35a466913b754691378b647ee7dbf5da158a0a97129a5d06173f0a5a94"
+  },
+  "freeze_sha256": "d6fe0f0b41f624a717719ebccb3d35222d1fb4b534e1426b329d500ab4dbcbfe",
+  "responses_sha256": "9e14d7200b93531371af2c39ecc8d7c9fd9c359576d15cd0d3c1afae5b5fbf5e",
+  "original_public_scores": {
+    "luna-fast-live-v3": {
+      "planned": 3,
+      "attempted": 3,
+      "not_executed": 0,
+      "independent_sessions": 3,
+      "strict_validated": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "complete_state_correct": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "exact_card_inventory": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "phase_correct": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "controls_correct": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "numeric_provenance_exact": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "false_accept": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "accepted_inexact_card_inventory": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "timely_correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "timeouts": 1,
+      "failures": 1,
+      "rank": {
+        "correct": 6,
+        "expected": 9
+      },
+      "suit": {
+        "correct": 6,
+        "expected": 9
+      },
+      "backs": {
+        "correct": 2,
+        "expected": 3
+      },
+      "latency_complete_validated_only_ms": {
+        "count": 2,
+        "p50": 1946.9789499999024,
+        "p95": 2114.6300949998476,
+        "max": 2133.2579999998416
+      },
+      "scope": "R1 still observations only; latency excludes censored failures, whose counts remain visible; session-clustered uncertainty required before promotion",
+      "correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "numeric_provenance": {
+        "matched": 0,
+        "expected": 5,
+        "extra_or_wrong": 1
+      },
+      "provider_reported_usage": [
+        {
+          "input_tokens": 2237,
+          "input_tokens_details": {
+            "cache_write_tokens": 2234,
+            "cached_tokens": 0
+          },
+          "output_tokens": 166,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2403
+        },
+        {
+          "input_tokens": 2237,
+          "input_tokens_details": {
+            "cache_write_tokens": 2234,
+            "cached_tokens": 0
+          },
+          "output_tokens": 109,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2346
+        },
+        {
+          "input_tokens": 2237,
+          "input_tokens_details": {
+            "cache_write_tokens": 2234,
+            "cached_tokens": 0
+          },
+          "output_tokens": 128,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2365
+        }
+      ],
+      "reported_usage_upper_cost_usd": "0.00208075",
+      "uncertain_reserved_usd": "0"
+    },
+    "gemini-structured-card-limit-local": {
+      "planned": 3,
+      "attempted": 3,
+      "not_executed": 0,
+      "independent_sessions": 3,
+      "strict_validated": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "complete_state_correct": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "exact_card_inventory": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "phase_correct": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "controls_correct": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "numeric_provenance_exact": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "false_accept": {
+        "numerator": 1,
+        "denominator": 3
+      },
+      "accepted_inexact_card_inventory": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "timely_correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "timeouts": 0,
+      "failures": 0,
+      "rank": {
+        "correct": 9,
+        "expected": 9
+      },
+      "suit": {
+        "correct": 9,
+        "expected": 9
+      },
+      "backs": {
+        "correct": 3,
+        "expected": 3
+      },
+      "latency_complete_validated_only_ms": {
+        "count": 3,
+        "p50": 2454.8699999995733,
+        "p95": 2815.315680000822,
+        "max": 2855.3652000009606
+      },
+      "scope": "R1 still observations only; latency excludes censored failures, whose counts remain visible; session-clustered uncertainty required before promotion",
+      "correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "numeric_provenance": {
+        "matched": 0,
+        "expected": 5,
+        "extra_or_wrong": 5
+      },
+      "provider_reported_usage": [
+        {
+          "input_tokens": 4816,
+          "output_tokens": 352
+        },
+        {
+          "input_tokens": 4816,
+          "output_tokens": 260
+        },
+        {
+          "input_tokens": 4816,
+          "output_tokens": 260
+        }
+      ],
+      "reported_usage_upper_cost_usd": "0.0065144",
+      "uncertain_reserved_usd": "0"
+    }
+  },
+  "semantic_re_evaluation": {
+    "luna-fast-live-v3": {
+      "attempted": 3,
+      "strict_wire_validated": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "semantic_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "semantic_correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "semantic_timely_correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "semantic_false_accept": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "semantic_complete_transcription": {
+        "numerator": 1,
+        "denominator": 3
+      },
+      "semantic_numeric_provenance_exact": {
+        "numerator": 1,
+        "denominator": 3
+      },
+      "literal_complete_transcription": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "literal_numeric_provenance_exact": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "semantic_numeric_tuples": {
+        "matched": 1,
+        "expected": 5
+      },
+      "timeout_count": 1
+    },
+    "gemini-structured-card-limit-local": {
+      "attempted": 3,
+      "strict_wire_validated": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "semantic_usable_r1": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "semantic_correct_usable_r1": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "semantic_timely_correct_usable_r1": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "semantic_false_accept": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "semantic_complete_transcription": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "semantic_numeric_provenance_exact": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "literal_complete_transcription": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "literal_numeric_provenance_exact": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "semantic_numeric_tuples": {
+        "matched": 5,
+        "expected": 5
+      },
+      "timeout_count": 0
+    }
+  },
+  "historical_rows_reproduced": true,
+  "original_scores_and_sources_unchanged": true,
+  "protected_file_count": 251,
+  "protected_manifest_sha256": "a50b93953ab059196b33f7dd250268de6fc740c1b1ae90fc0cf2691ad7f9e1b2",
+  "ledger_before": {
+    "sha256": "6ed8ccd493956c544a25cf4c04c4530089c9a2e050c74e00734cc0ef5c62d90f",
+    "receipt": {
+      "requests_attempted": 100,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.095785750",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 99,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "ledger_after": {
+    "sha256": "6ed8ccd493956c544a25cf4c04c4530089c9a2e050c74e00734cc0ef5c62d90f",
+    "receipt": {
+      "requests_attempted": 100,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.095785750",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 99,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "runtime_disarmed": true,
+  "final_holdout_opened": false,
+  "timeout_analysis": {
+    "evidence_kind": "retained-pr17-timeout-trace",
+    "candidate": "luna-fast-live-v3",
+    "case_id": "labelled-totals",
+    "total_reader_ms": 3048.8380000006146,
+    "live_deadline_ms": 3000,
+    "exclusive_measured_spans_ms": {
+      "payload_ms": 2.2521999999298714,
+      "reservation_ms": 7.245599999805563,
+      "transport_total_ms": 2984.7270999998727,
+      "observation_parse_validate_ms": 7.409399999232846
+    },
+    "measured_sum_ms": 3001.634299998841,
+    "derived_untimed_residual_ms": 47.20370000177354,
+    "within_transport_cumulative_ms": {
+      "headers_received_ms": 2970.1861000012286,
+      "body_complete_ms": 2984.251400001085
+    },
+    "within_transport_stage_ms": {
+      "connect_tcp_ms": 30.329900000651833,
+      "start_tls_ms": 62.22190000153205,
+      "send_request_headers_ms": 0.22189999981492292,
+      "send_request_body_ms": 70.33299999966403,
+      "receive_response_headers_ms": 2771.187899999859,
+      "receive_response_body_ms": 13.816099999530707,
+      "provider_json_parse_ms": 0.13279999984661117,
+      "dns_separate_ms": null
+    },
+    "unobserved_ms": {
+      "absolute_reader_body_receipt": null,
+      "claim_submission": null,
+      "model_tier_usage_audit": null,
+      "durable_settlement": null,
+      "budget_receipt": null,
+      "provider_compute": null,
+      "state_revalidation": null,
+      "advisor": null
+    },
+    "untimed_code_paths": [
+      "schema/hash serialization",
+      "durable one-attempt submission claim",
+      "event-loop/worker scheduling",
+      "model/tier/usage audit",
+      "durable budget settlement",
+      "diagnostic receipt and final return overhead"
+    ],
+    "conclusions": [
+      "Complete response body arrived at 2984.251ms on the TRANSPORT clock; no reader-clock body timestamp was saved.",
+      "Even the four nonoverlapping measured spans total more than 3000ms. Deferring settlement alone is not shown sufficient.",
+      "The 47ms residual is aggregate unmeasured work, not a measured settlement duration.",
+      "Response-header wait includes server and network; it is not an isolated model-generation time.",
+      "The timeout remains discarded; parsing/contract changes cannot revive it."
+    ],
+    "future_critical_path": {
+      "must_remain_before_send": [
+        "durable worst-case reservation",
+        "durable one-attempt payload claim",
+        "authorization and reviewed-pixel checks"
+      ],
+      "must_remain_before_presentation": [
+        "auditable returned model/tier/usage and reserve upper bound",
+        "strict JSON/schema and numeric semantics",
+        "original capture deadline",
+        "current source/table/state revalidation"
+      ],
+      "candidate_noncritical_work": [
+        "full diagnostic receipt/serialization",
+        "durable settlement after auditable in-memory usage check ONLY while full worst-case reservation stays durable and charged until settlement"
+      ],
+      "not_implemented": "No accounting order, reader, transport or deadline changed. A future lifecycle must pass one absolute deadline through claim/transport/presentation."
+    }
+  },
+  "persistent_client_fixture": {
+    "evidence_kind": "socketless-httpcore-lifecycle-fixture",
+    "provider_calls": 0,
+    "credential_loading": false,
+    "real_dns_queries": 0,
+    "real_tcp_connections": 0,
+    "fixture_http_requests": 3,
+    "fixture_pool_connections": 2,
+    "first_origin_cold_connections": 1,
+    "same_origin_warm_new_connections": 0,
+    "tls_hostnames_preserved": true,
+    "verified_tls_context_configured": true,
+    "all_streams_closed": true,
+    "live_latency_gain_ms": null,
+    "production_integration": false,
+    "limits": "Sequential pool reuse/lifecycle only; no real TLS handshake, resolver repair, DNS speed, server keep-alive, cancellation or API latency proof."
+  },
+  "historical_dns_initialization": {
+    "api.openai.com": {
+      "resolution_ms": 9030.99999999904
+    },
+    "generativelanguage.googleapis.com": {
+      "resolution_ms": 9109.000000000378
+    }
+  },
+  "minimum_future_proposal": {
+    "status": "PROPOSAL_ONLY_NOT_AUTHORIZED",
+    "new_requests_executed": 0,
+    "fresh_paired_cases": 2,
+    "paired_requests": 4,
+    "conditional_stable_hybrid_requests": 1,
+    "maximum_requests": 5,
+    "per_request_reserve_usd": {
+      "luna-fast-live-v3": "0.526536",
+      "gemini-structured-card-limit-local": "0.3171328"
+    },
+    "paired_worst_case_usd": "1.6873376",
+    "hybrid_worst_case_usd": "0.526536",
+    "combined_worst_case_usd": "2.2138736",
+    "accounted_margin_usd": "2.904214250",
+    "fits_existing_money_margin_at_frozen_prices": true,
+    "current_lifetime_requests": 100,
+    "current_ceiling": 102,
+    "minimum_future_lifetime_ceiling_if_authorized": 105,
+    "closed_residual_slots": "Both remain closed; no inferred permission from balance or reservation margin.",
+    "case_specification": [
+      "fresh owned player decision with two labelled totals and independent SESSION badge",
+      "fresh owned player decision with partial/rotated card, back and an ambiguous UI number that must remain unknown"
+    ],
+    "freeze_before_execution": [
+      "new sessions/seeds/hand groups/artwork families, disjoint from consumed PR16 cases",
+      "same native pixels and frozen payloads for both providers",
+      "common semantic and literal evaluator, no oracle in app inputs",
+      "no final holdout, retries, paid warm-ups or new models"
+    ],
+    "conditional_hybrid": [
+      "at least one candidate passes both new cases with zero semantic false accepts",
+      "full required state within original 3s deadline and provisional sample p95 <= 2.5s, with timeouts retained",
+      "local routing must request the fallback without oracle forcing; zero calls if local succeeds",
+      "one fresh owned stable-table capture, advancing timestamps and no per-frame phase assistance",
+      "freshness/source checks through local -> cloud -> parse -> semantic gate -> revalidation -> solver -> headless advisor",
+      "transport lifecycle/absolute deadline implementation tested offline before any live request",
+      "explicit bounded scope/ledger admission and current model access/prices checked again"
+    ],
+    "cold_warm_reporting": "Include cold initialization separately and full cold capture-to-advisor time; no request-count-free inference warm-up.",
+    "limits": "This five-request maximum is a functional smoke, not a reliable p95, statistical winner, provider transfer or session certification.",
+    "authorization_policy": "Do not amend ceiling/epoch, reserve, load keys or submit as part of this offline proposal."
+  },
+  "application_integration": "Opt-in semantic_gate only; frozen live-v3 reader/default gate and deployed runtime unchanged.",
+  "promotion": "none; future independent requests require a new bounded authorization"
+}

@@ -85,6 +85,13 @@ Observation/event JSON exports remain separate. The browser may drop capture or
 encoder frames; those losses are not measured by this recorder. Recording does
 not upload footage, and its existence alone does not prove recognition accuracy.
 
+The next external session gate is restricted to Freegames classic, with initial
+calibration permitted and no manual player-turn flag. The exact recording slots,
+annotation/freeze rules and local runner are in
+[PROVIDER_SESSION_PROTOCOL.md](PROVIDER_SESSION_PROTOCOL.md). No original complete
+provider video has yet been evaluated by this gate. The calibrated reader still
+has unknown phase; its earlier assisted-still result is not an autonomous session.
+
 ## Can a model understand the whole game?
 
 A video model alone does not replace memory. The implemented session combines

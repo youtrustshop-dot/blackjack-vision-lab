@@ -1,0 +1,565 @@
+{
+  "experiment": "VISION-026",
+  "scope": "fabricated contract fixtures, not model evidence",
+  "provider_calls": 0,
+  "credentials_loaded": false,
+  "advisor_connected": false,
+  "cases_passed": 15,
+  "cases": [
+    {
+      "case": "explicit_total",
+      "expected": "valid_usable_content",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "valid_usable_content",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "passed"
+          },
+          {
+            "stage": "number_semantic_normalization",
+            "outcome": "passed"
+          },
+          {
+            "stage": "shared_r1_gate",
+            "outcome": "passed"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "whitespace_label",
+      "expected": "valid_usable_content",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "valid_usable_content",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "passed"
+          },
+          {
+            "stage": "number_semantic_normalization",
+            "outcome": "passed"
+          },
+          {
+            "stage": "shared_r1_gate",
+            "outcome": "passed"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "unknown_ui_number",
+      "expected": "valid_usable_content",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "valid_usable_content",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "passed"
+          },
+          {
+            "stage": "number_semantic_normalization",
+            "outcome": "passed"
+          },
+          {
+            "stage": "shared_r1_gate",
+            "outcome": "passed"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "actor_without_total",
+      "expected": "pre_normalization_invariant_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "pre_normalization_invariant_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [
+          {
+            "location": [
+              "n",
+              0
+            ],
+            "type": "value_error",
+            "rule": "explicit_total_label_required"
+          }
+        ],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "unlabelled_attributed_total",
+      "expected": "pre_normalization_invariant_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "pre_normalization_invariant_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [
+          {
+            "location": [
+              "n",
+              0
+            ],
+            "type": "value_error",
+            "rule": "explicit_total_label_required"
+          }
+        ],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "contradictory_suffix",
+      "expected": "semantic_provenance_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "semantic_provenance_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "passed"
+          },
+          {
+            "stage": "number_semantic_normalization",
+            "outcome": "rejected"
+          },
+          {
+            "stage": "shared_r1_gate",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [
+          "label_value_mismatch"
+        ],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "wrong_native_view",
+      "expected": "semantic_provenance_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "semantic_provenance_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "passed"
+          },
+          {
+            "stage": "number_semantic_normalization",
+            "outcome": "rejected"
+          },
+          {
+            "stage": "shared_r1_gate",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [
+          "label_source_view_mismatch"
+        ],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "ambiguous_actor_label",
+      "expected": "semantic_provenance_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "semantic_provenance_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "passed"
+          },
+          {
+            "stage": "number_semantic_normalization",
+            "outcome": "rejected"
+          },
+          {
+            "stage": "shared_r1_gate",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [
+          "ambiguous_total_label"
+        ],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "total_disagrees_with_cards",
+      "expected": "r1_integrity_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "r1_integrity_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "passed"
+          },
+          {
+            "stage": "number_semantic_normalization",
+            "outcome": "passed"
+          },
+          {
+            "stage": "shared_r1_gate",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [
+          "player_total_card_mismatch"
+        ],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "unknown_phase",
+      "expected": "r1_integrity_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "r1_integrity_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "passed"
+          },
+          {
+            "stage": "number_semantic_normalization",
+            "outcome": "passed"
+          },
+          {
+            "stage": "shared_r1_gate",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [
+          "player_turn_unknown"
+        ],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "covered_face_claim",
+      "expected": "pre_normalization_invariant_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "pre_normalization_invariant_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [
+          {
+            "location": [
+              "c",
+              3
+            ],
+            "type": "value_error",
+            "rule": "hidden_face_information"
+          }
+        ],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "duplicate_controls",
+      "expected": "pre_normalization_invariant_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "pre_normalization_invariant_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [
+          {
+            "location": [],
+            "type": "value_error",
+            "rule": "duplicate_control_or_blocker"
+          }
+        ],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "strict_number_type",
+      "expected": "structural_validation_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "structural_validation_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [
+          {
+            "location": [
+              "n",
+              0,
+              "v"
+            ],
+            "type": "int_type",
+            "rule": "strict_field_constraint"
+          }
+        ],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "unexpected_field",
+      "expected": "structural_validation_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "structural_validation_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [
+          {
+            "location": [
+              "other_field"
+            ],
+            "type": "extra_forbidden",
+            "rule": "strict_field_constraint"
+          }
+        ],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    },
+    {
+      "case": "malformed_json",
+      "expected": "json_format_rejection",
+      "diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "json_format_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      }
+    }
+  ],
+  "protected_roundtrip": {
+    "executed": true,
+    "exact_text_recovered": true,
+    "provider_envelope_excluded": true,
+    "public_receipt": {
+      "diagnostic_version": "rejected-output-diagnostic-v1",
+      "reader_status": "error",
+      "reader_elapsed_ms": 0.0,
+      "category": "pre_normalization_invariant_rejection",
+      "content_diagnosis": {
+        "diagnostic_version": "rejected-output-diagnostic-v1",
+        "contract": "grounded-r1-live-v3",
+        "semantic_policy": "numeric-provenance-r1-v1",
+        "category": "pre_normalization_invariant_rejection",
+        "stages": [
+          {
+            "stage": "json_syntax",
+            "outcome": "passed"
+          },
+          {
+            "stage": "strict_contract_fields_and_invariants",
+            "outcome": "rejected"
+          }
+        ],
+        "issues": [
+          {
+            "location": [
+              "n",
+              0
+            ],
+            "type": "value_error",
+            "rule": "explicit_total_label_required"
+          }
+        ],
+        "semantic_issue_codes": [],
+        "r1_issue_codes": [],
+        "eligible_for_live": false,
+        "scope": "offline contract inspection; not fresh model accuracy or advisor delivery"
+      },
+      "output_shape": "one_bounded_output_text",
+      "eligible_for_live": false,
+      "advice": null,
+      "output_sha256": "7bed98c54fa62b79ff490b951120e48782c8c70e786f2fad24a54045cfc0a33c",
+      "output_bytes": 317,
+      "retention": {
+        "retained": true,
+        "record_id": "03560a22f2004a219489c11bb41a264a",
+        "output_sha256": "7bed98c54fa62b79ff490b951120e48782c8c70e786f2fad24a54045cfc0a33c",
+        "output_bytes": 317,
+        "protection": "windows-current-user-dpapi",
+        "retention_days": 7,
+        "plaintext_saved": false
+      },
+      "retry_count": 0,
+      "clock_scope": "original reader clock unchanged; diagnostic write follows it",
+      "post_read_diagnostic_ms": 0.0
+    },
+    "scope": "one fabricated offline response through unchanged reader and actual Windows protection"
+  }
+}

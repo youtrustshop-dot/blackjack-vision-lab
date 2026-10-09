@@ -44,20 +44,25 @@ class ClassicCasinoDetector:
 
     def detect(self, image):
         started = time.perf_counter()
+        self.debug_images={}
         rgb = _rgb(image)
         hsv = cv2.cvtColor(rgb, cv2.COLOR_RGB2HSV)
         green = cv2.inRange(hsv, np.array([35, 70, 25], np.uint8), np.array([95, 255, 240], np.uint8))
         kernel = max(3, min(15, rgb.shape[1] // 200)) | 1
         green = cv2.morphologyEx(green, cv2.MORPH_CLOSE, np.ones((kernel, kernel), np.uint8))
+        self.debug_images['table-mask']=green
         fields = sorted(_contours(green), key=cv2.contourArea, reverse=True)
         fields = [c for c in fields if cv2.contourArea(c) > rgb.shape[0]*rgb.shape[1]*.035]
         self.context = {}
         self.last_diagnostics = {"rejected_card_candidates": 0, "detections": 0,
                                  "profile": "classic-casino-ocr", "scope": "printed ranks on a classic green table"}
         if not fields:
+            self.last_diagnostics['localization_rejection']='No sufficiently large compatible green surface.'
             return []
         x, y, w, h = cv2.boundingRect(fields[0])
         if w < 180 or h < 100 or not 1.1 < w/h < 4:
+            self.last_diagnostics['localization_rejection']='Largest green surface violates baseline size/aspect limits.'
+            self.last_diagnostics['rejected_table_bounds']=[x,y,w,h]
             return []
         self.context = {"table_bounds": [x, y, w, h], "profile": "classic-casino-ocr",
                         "phase": "waiting", "controls": [], "player_totals": {}}
@@ -101,12 +106,29 @@ class ClassicCasinoDetector:
                 groups.append(box)
             for ix, iy, iw, ih in groups:
                 crop = local[max(0,iy-2):min(top_height,iy+ih+2), max(0,ix-2):ix+iw+2]
+                key='rank-'+str(len(self.last_diagnostics.setdefault('rank_candidates',[])))
+                self.debug_images[key]=crop.copy()
                 text, score = read_text(crop)
                 rank = text.strip().upper()
+                vocabulary=("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K")
+                if rank not in vocabulary or score < OCR_RANK_MIN_SCORE:
+                    # A tightly cropped single glyph can lose OCR confidence.
+                    # Restore a white margin without lowering the acceptance
+                    # threshold or changing the rank vocabulary.
+                    padded=cv2.copyMakeBorder(crop,4,4,4,4,cv2.BORDER_CONSTANT,value=(255,255,255))
+                    self.debug_images[key+'-retry']=padded.copy()
+                    retry,retry_score=read_text(padded)
+                    retry=retry.strip().upper()
+                    if rank not in vocabulary or retry==rank:
+                        rank,score=retry,retry_score
                 # A generic text model scores narrow printed letters (notably J)
                 # below long words. The rank vocabulary, independent total check
                 # and temporal stability are additional integrity requirements.
-                if rank not in ("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K") or score < OCR_RANK_MIN_SCORE:
+                self.last_diagnostics['rank_candidates'].append({'zone':zone,'body_bbox':[bx,by,bw,bh],
+                    'rank_bbox':[bx+ix,by+iy,iw,ih],'raw_token':text,'selected_rank':rank,'score':score,
+                    'threshold':OCR_RANK_MIN_SCORE,'accepted':rank in vocabulary and score>=OCR_RANK_MIN_SCORE,'crop':key+'.png'})
+                if rank not in vocabulary or score < OCR_RANK_MIN_SCORE:
+                    self.last_diagnostics['rejected_card_candidates']+=1
                     continue
                 # Locate a card from its upper corner, including overlapped bodies.
                 left = max(bx, bx+ix-round(bh*.05))
@@ -230,6 +252,7 @@ class AdaptiveCardDetector:
         self.context={}
 
     def detect(self,image):
+        self.debug_images={}
         lab=self.lab.detect(image)
         rgb=_rgb(image)
         scale=2 if rgb.shape[1]<800 else 1
@@ -253,9 +276,13 @@ class AdaptiveCardDetector:
             self.last_diagnostics=self.lab.last_diagnostics
             return lab
         if self.classic.context:
+            self.debug_images=self.classic.debug_images
             self.context=self.classic.context
             self.last_diagnostics=self.classic.last_diagnostics
+            self.last_diagnostics['analysis_scale']=scale
             return external
         self.context={}
         self.last_diagnostics=self.lab.last_diagnostics
+        self.last_diagnostics['classic_attempt']=self.classic.last_diagnostics
+        self.debug_images=self.classic.debug_images
         return lab

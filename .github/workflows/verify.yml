@@ -13,7 +13,7 @@ jobs:
           node-version: '22'
           cache: npm
           cache-dependency-path: ui/package-lock.json
-      - run: python -m pip install -c requirements-lock.txt -e ".[dev]"
+      - run: python -m pip install -c requirements-lock.txt -e ".[dev,research]"
       - run: python -m pytest -q
       - run: python scripts/check-evidence.py
       - run: npm ci
@@ -22,3 +22,5 @@ jobs:
         working-directory: ui
       - run: npm test
         working-directory: ui
+      - name: Verify source startup without API credentials
+        run: python scripts/smoke-source.py --output artifacts/ci-source-smoke

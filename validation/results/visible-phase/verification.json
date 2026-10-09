@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "tests": {
+    "python_passed": 519,
+    "python_subtests": 10,
+    "warnings": 2,
+    "duration_seconds": 72.49,
+    "targeted_tests": 5,
+    "targeted_seconds": 2.13,
+    "frontend_passed": 46,
+    "frontend_scope": "Historical parent frontend evidence; no application UI source change; new PR CI also runs frontend checks"
+  },
+  "source_hashes": {
+    "validation/tools/stress_lab.py": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+    "bjlab/live.py": "b9499eac9140a53b500b6f8ba95b87e3b54f96c93c0ddac3da4cdb17a896f525",
+    "bjlab/visible_phase.py": "a4061cb384a2b1ee769d23034d0f98931e99c99b1c1d9c1332eccb1c8bb33fae",
+    "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+    "tests/test_visible_phase.py": "27c9f2c2860022d179287bf448b243bb6eab604691d0ba80fd9b5e575ffe4d1c",
+    "tests/test_stress_lab.py": "9d494458e0764216c4b1044525e84108f789e8f35e2557180fe50cf3b42914fb"
+  },
+  "api_requests": 0,
+  "model_promoted": false,
+  "installed_release_replaced": false,
+  "constant_sources_during_replays": true,
+  "unexecuted": [
+    "Independent provider session",
+    "Final holdout",
+    "Real capture-to-display",
+    "New model training",
+    "Native build",
+    "Physical advisor checks"
+  ],
+  "prior_failed_test_run": "518 passed and one test assumption failed: uncompressed backs are already classified by the baseline, so challenger override evidence can be empty. Corrected assertion checks covered detection and tests unknown-body override directly; full suite rerun passed.",
+  "tested_code_commit": "0d5c9a26caa166c1cd6aa953f64ebb37d392e085",
+  "source_binding": "All executed inference/evaluator/test hashes verified against committed source. Dirty-worktree execution receipts retained, not rewritten as post-commit runs."
+}

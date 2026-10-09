@@ -143,6 +143,17 @@ def health() -> dict:
             "local_only": True, "truth_boundary": "debug endpoint excluded from solver inputs"}
 
 
+@app.get('/api/vision/experiments')
+def vision_experiments():
+    from .vision_diagnostics import source_revision,candidate_revision
+    from .corner_vision import VERSION
+    data=json.loads((ROOT/'docs/VISION_EXPERIMENTS.json').read_text(encoding='utf-8'))
+    data['runtime']={'package_version':__version__,'detector_version':VERSION,
+        'source_fingerprint':source_revision(ROOT),'frozen':bool(getattr(__import__('sys'),'frozen',False)),
+        'publication':'research candidate; no installed desktop replacement',**candidate_revision(ROOT)}
+    return data
+
+
 @app.get("/api/rules")
 def default_rules() -> dict:
     return {"defaults": asdict(Rules()), "choices": {"decks": [1, 2, 4, 6, 8],
@@ -825,10 +836,14 @@ def mount_ui() -> None:
 
 from .live_api import router as live_router
 app.include_router(live_router)
+from .native_advisor import router as native_advisor_router
+app.include_router(native_advisor_router)
 from .advisor_api import router as advisor_router
 app.include_router(advisor_router)
 from .model_api import router as model_router
 app.include_router(model_router)
 from .poker_api import router as poker_router
 app.include_router(poker_router)
+from .integration_api import router as integration_router
+app.include_router(integration_router)
 mount_ui()

@@ -1,0 +1,172 @@
+{
+  "schema": 1,
+  "scope": "Unreleased external Windows advisor; owned simulator data only, no private screenshots or universal vision acceptance",
+  "candidate_code_commit": "7af8d1fc936ccc574de7b7c93550b5b2ade23fd2",
+  "installed_reference": {
+    "version": "1.1.1",
+    "commit": "4f074efd53066a95d64ca1ed53de03479a8adcba",
+    "all_four_artifacts_unchanged": true
+  },
+  "ci": {
+    "url": "https://github.com/youtrustshop-dot/blackjack-vision-lab/actions/runs/37154815159",
+    "commit": "7af8d1fc936ccc574de7b7c93550b5b2ade23fd2",
+    "status": "success",
+    "python_tests": 424,
+    "python_subtests": 10,
+    "ui_tests": 46
+  },
+  "rust_geometry_tests": {
+    "passed": 2,
+    "scope": "removed monitor, negative coordinates, physical bounds; not physical mixed-DPI interaction"
+  },
+  "frozen_backend": {
+    "status": "pass",
+    "sha256": "d5f0ccd08bc492baecd0c4562680cf768bd1ca484595af5b48c719917be3760e",
+    "mode": "frozen-backend",
+    "runtime_path": "Windows System32 only; no Python/Node/Rust paths",
+    "source_independent_launch": true,
+    "vision_runtime_identity": {
+      "package_version": "1.1.1",
+      "detector_version": "calibrated-corners-1",
+      "source_fingerprint": "5aee4dcaf763b7bec6d6dbb8346083d6ebd6160acab49623b709b43c863d3c0f",
+      "frozen": true,
+      "publication": "research candidate; no installed desktop replacement",
+      "commit": "7af8d1fc936ccc574de7b7c93550b5b2ade23fd2",
+      "working_tree_dirty": false
+    },
+    "live_pixel_stages": [
+      {
+        "round": 1,
+        "phase": "player",
+        "observed_cards": 3,
+        "running_count": 2,
+        "best_action": "double"
+      },
+      {
+        "round": 1,
+        "phase": "settled",
+        "observed_cards": 6,
+        "running_count": 0,
+        "best_action": null
+      },
+      {
+        "round": 2,
+        "phase": "player",
+        "observed_cards": 9,
+        "running_count": 2,
+        "best_action": "hit"
+      }
+    ],
+    "live_counts_match_public_exposures": true,
+    "graceful_exit_code": 0,
+    "local_port_closed": true,
+    "new_mei_leaks": 0
+  },
+  "native_executable": {
+    "status": "pass",
+    "sha256": "1b8c191f03ded2b0eac22ec09779a3ba44cde846ef1b347e5bc5be05b47a68ce",
+    "mode": "native-hidden",
+    "runtime_path": "Windows System32 only; no Python/Node/Rust paths",
+    "source_independent_launch": true,
+    "vision_runtime_identity": {
+      "package_version": "1.1.1",
+      "detector_version": "calibrated-corners-1",
+      "source_fingerprint": "5aee4dcaf763b7bec6d6dbb8346083d6ebd6160acab49623b709b43c863d3c0f",
+      "frozen": true,
+      "publication": "research candidate; no installed desktop replacement",
+      "commit": "7af8d1fc936ccc574de7b7c93550b5b2ade23fd2",
+      "working_tree_dirty": false
+    },
+    "live_pixel_stages": [
+      {
+        "round": 1,
+        "phase": "player",
+        "observed_cards": 3,
+        "running_count": 2,
+        "best_action": "double"
+      },
+      {
+        "round": 1,
+        "phase": "settled",
+        "observed_cards": 6,
+        "running_count": 0,
+        "best_action": null
+      },
+      {
+        "round": 2,
+        "phase": "player",
+        "observed_cards": 9,
+        "running_count": 2,
+        "best_action": "hit"
+      }
+    ],
+    "live_counts_match_public_exposures": true,
+    "owned_backend_exited": true,
+    "graceful_exit_code": 0,
+    "local_port_closed": true,
+    "new_mei_leaks": 0,
+    "native_advisor": {
+      "created": true,
+      "singleton_reopen_cycles": 3,
+      "always_on_top": true,
+      "same_origin_http_bridge": true,
+      "main_minimized": true,
+      "monitor_count": 1,
+      "fresh_source_binding": true,
+      "motion_and_expiry_withhold_advice": true,
+      "personal_picker_selected": false,
+      "capture_scope": "controlled session image HTTP submission; personal display sharing while minimized not exercised"
+    }
+  },
+  "chrome_native_bridge": {
+    "scope": "Chrome lab video demo to actual visible native advisor; not personal display sharing or count acceptance",
+    "single_observer": true,
+    "native_window_visible": true,
+    "native_window_label": "advisor",
+    "source_binding": true,
+    "monitor_count": 1,
+    "samples": [
+      {
+        "stale": false,
+        "source_id": "25470ba3bb63f52c",
+        "evidence_timestamp": 1791062065296,
+        "state_id": "25470ba3bb63f52c:125:f1f3e4345a36e546f34a"
+      }
+    ],
+    "native_input_automation": "not completed: failed to activate captured window after one targeting retry",
+    "physical_drag_and_mixed_dpi": "not exercised",
+    "stopped_source_withholds_report": true,
+    "observer_removed_without_recreation": true,
+    "browser_close_hides_native_window": true,
+    "code_commit": "57120875fd75253c356dd818a2e7787bfdbf943f"
+  },
+  "candidate_artifacts": [
+    {
+      "file": "bjlab-backend.exe",
+      "bytes": 175691605,
+      "sha256": "d5f0ccd08bc492baecd0c4562680cf768bd1ca484595af5b48c719917be3760e"
+    },
+    {
+      "file": "Blackjack Vision Lab_1.1.1_x64-setup.exe",
+      "bytes": 183847137,
+      "sha256": "23af15c96dafc0c77434024af6bc66e7c59ac446972cb068cebbbe0bc327c6d3"
+    },
+    {
+      "file": "Blackjack Vision Lab.exe",
+      "bytes": 13129216,
+      "sha256": "1b8c191f03ded2b0eac22ec09779a3ba44cde846ef1b347e5bc5be05b47a68ce"
+    },
+    {
+      "file": "WebView2Loader.dll",
+      "bytes": 160880,
+      "sha256": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5"
+    }
+  ],
+  "not_executed": [
+    "Personal display picker and actual display sharing while main window is minimized",
+    "Physical title-bar dragging between monitors and mixed DPI",
+    "Native input automation failed to activate the protected advisor after one targeting retry; no successful physical X-click claim",
+    "Screen/preview feedback in all capture combinations",
+    "New independent full-session detector/count validation and capture-to-display latency"
+  ]
+}

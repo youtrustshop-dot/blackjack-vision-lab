@@ -1,0 +1,596 @@
+{
+  "experiment_id": "VISION-023",
+  "freeze_sha256": "d6fe0f0b41f624a717719ebccb3d35222d1fb4b534e1426b329d500ab4dbcbfe",
+  "attempted": 6,
+  "planned": 6,
+  "access": [
+    {
+      "candidate": "luna-fast-live-v3",
+      "http_status": 200,
+      "exact_model_access": true,
+      "timings": {
+        "connect_tcp_ms": 39.37539999969886,
+        "start_tls_ms": 43.8283000003139,
+        "send_request_headers_ms": 0.3690000012284145,
+        "send_request_body_ms": 0.08999999954539817,
+        "receive_response_headers_ms": 639.8144000013417,
+        "headers_received_ms": 769.0977999991446,
+        "receive_response_body_ms": 0.19160000010742806,
+        "body_complete_ms": 769.5019999991928,
+        "provider_json_parse_ms": 0.026399999114801176,
+        "transport_total_ms": 769.8944000003394,
+        "dns_separate_ms": null
+      }
+    },
+    {
+      "candidate": "gemini-structured-card-limit-local",
+      "http_status": 200,
+      "exact_model_access": true,
+      "timings": {
+        "connect_tcp_ms": 31.836099999054568,
+        "start_tls_ms": 52.84070000016072,
+        "send_request_headers_ms": 0.21859999833395705,
+        "send_request_body_ms": 0.04789999911736231,
+        "receive_response_headers_ms": 181.40239999956975,
+        "headers_received_ms": 297.27420000017446,
+        "receive_response_body_ms": 0.3081999984715367,
+        "body_complete_ms": 297.769500000868,
+        "provider_json_parse_ms": 0.029299999368959107,
+        "transport_total_ms": 298.07220000111556,
+        "dns_separate_ms": null
+      }
+    }
+  ],
+  "dns_preresolution": {
+    "api.openai.com": {
+      "resolution_ms": 9030.99999999904
+    },
+    "generativelanguage.googleapis.com": {
+      "resolution_ms": 9109.000000000378
+    }
+  },
+  "candidates": {
+    "luna-fast-live-v3": {
+      "planned": 3,
+      "attempted": 3,
+      "not_executed": 0,
+      "independent_sessions": 3,
+      "strict_validated": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "complete_state_correct": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "exact_card_inventory": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "phase_correct": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "controls_correct": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "numeric_provenance_exact": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "false_accept": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "accepted_inexact_card_inventory": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "timely_correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "timeouts": 1,
+      "failures": 1,
+      "rank": {
+        "correct": 6,
+        "expected": 9
+      },
+      "suit": {
+        "correct": 6,
+        "expected": 9
+      },
+      "backs": {
+        "correct": 2,
+        "expected": 3
+      },
+      "latency_complete_validated_only_ms": {
+        "count": 2,
+        "p50": 1946.9789499999024,
+        "p95": 2114.6300949998476,
+        "max": 2133.2579999998416
+      },
+      "scope": "R1 still observations only; latency excludes censored failures, whose counts remain visible; session-clustered uncertainty required before promotion",
+      "correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "numeric_provenance": {
+        "matched": 0,
+        "expected": 5,
+        "extra_or_wrong": 1
+      },
+      "provider_reported_usage": [
+        {
+          "input_tokens": 2237,
+          "input_tokens_details": {
+            "cache_write_tokens": 2234,
+            "cached_tokens": 0
+          },
+          "output_tokens": 166,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2403
+        },
+        {
+          "input_tokens": 2237,
+          "input_tokens_details": {
+            "cache_write_tokens": 2234,
+            "cached_tokens": 0
+          },
+          "output_tokens": 109,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2346
+        },
+        {
+          "input_tokens": 2237,
+          "input_tokens_details": {
+            "cache_write_tokens": 2234,
+            "cached_tokens": 0
+          },
+          "output_tokens": 128,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2365
+        }
+      ],
+      "reported_usage_upper_cost_usd": "0.00208075",
+      "uncertain_reserved_usd": "0"
+    },
+    "gemini-structured-card-limit-local": {
+      "planned": 3,
+      "attempted": 3,
+      "not_executed": 0,
+      "independent_sessions": 3,
+      "strict_validated": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "complete_state_correct": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "exact_card_inventory": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "phase_correct": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "controls_correct": {
+        "numerator": 3,
+        "denominator": 3
+      },
+      "numeric_provenance_exact": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "false_accept": {
+        "numerator": 1,
+        "denominator": 3
+      },
+      "accepted_inexact_card_inventory": {
+        "numerator": 0,
+        "denominator": 3
+      },
+      "timely_correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "timeouts": 0,
+      "failures": 0,
+      "rank": {
+        "correct": 9,
+        "expected": 9
+      },
+      "suit": {
+        "correct": 9,
+        "expected": 9
+      },
+      "backs": {
+        "correct": 3,
+        "expected": 3
+      },
+      "latency_complete_validated_only_ms": {
+        "count": 3,
+        "p50": 2454.8699999995733,
+        "p95": 2815.315680000822,
+        "max": 2855.3652000009606
+      },
+      "scope": "R1 still observations only; latency excludes censored failures, whose counts remain visible; session-clustered uncertainty required before promotion",
+      "correct_usable_r1": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "numeric_provenance": {
+        "matched": 0,
+        "expected": 5,
+        "extra_or_wrong": 5
+      },
+      "provider_reported_usage": [
+        {
+          "input_tokens": 4816,
+          "output_tokens": 352
+        },
+        {
+          "input_tokens": 4816,
+          "output_tokens": 260
+        },
+        {
+          "input_tokens": 4816,
+          "output_tokens": 260
+        }
+      ],
+      "reported_usage_upper_cost_usd": "0.0065144",
+      "uncertain_reserved_usd": "0"
+    }
+  },
+  "rows": {
+    "luna-fast-live-v3": [
+      {
+        "strict_validated": false,
+        "status": "timeout",
+        "elapsed_ms": 3048.8380000006146,
+        "expected_usable_r1": true,
+        "usable_r1": false,
+        "correct_usable_r1": false,
+        "timely_correct_usable_r1": false,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": false,
+        "inventory_mismatches": {
+          "missing_tuples": 4,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 0,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 0,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 0,
+          "expected": 1
+        },
+        "phase_correct": false,
+        "controls_correct": false,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 3,
+          "extra_or_wrong": 0
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "case_id": "labelled-totals",
+        "condition": "labelled-totals",
+        "independent_session": "paired-81005181"
+      },
+      {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 2133.2579999998416,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": true,
+        "timely_correct_usable_r1": true,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 0
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "case_id": "rotation",
+        "condition": "rotation",
+        "independent_session": "paired-81005183"
+      },
+      {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 1760.6998999999632,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": true,
+        "timely_correct_usable_r1": true,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 1
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "case_id": "transition-after",
+        "condition": "transition-after",
+        "independent_session": "paired-81005187"
+      }
+    ],
+    "gemini-structured-card-limit-local": [
+      {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 2454.8699999995733,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": false,
+        "timely_correct_usable_r1": false,
+        "false_accept": true,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 3,
+          "extra_or_wrong": 3
+        },
+        "unsafe_attributed_total": true,
+        "unsupported_known_suit_tuples": 0,
+        "case_id": "labelled-totals",
+        "condition": "labelled-totals",
+        "independent_session": "paired-81005181"
+      },
+      {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 2855.3652000009606,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": true,
+        "timely_correct_usable_r1": true,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 1
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "case_id": "rotation",
+        "condition": "rotation",
+        "independent_session": "paired-81005183"
+      },
+      {
+        "strict_validated": true,
+        "status": "completed",
+        "elapsed_ms": 2421.7404999999417,
+        "expected_usable_r1": true,
+        "usable_r1": true,
+        "correct_usable_r1": true,
+        "timely_correct_usable_r1": true,
+        "false_accept": false,
+        "accepted_inexact_card_inventory": false,
+        "correct_abstention": false,
+        "complete_state_correct": false,
+        "exact_card_inventory": true,
+        "inventory_mismatches": {
+          "missing_tuples": 0,
+          "extra_tuples": 0,
+          "scope": "semantic tuples; wrong reads create missing+extra, not detector localization counts"
+        },
+        "rank": {
+          "correct": 3,
+          "expected": 3
+        },
+        "suit": {
+          "correct": 3,
+          "expected": 3
+        },
+        "backs": {
+          "correct": 1,
+          "expected": 1
+        },
+        "phase_correct": true,
+        "controls_correct": true,
+        "numeric_provenance_exact": false,
+        "numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 1
+        },
+        "unsafe_attributed_total": false,
+        "unsupported_known_suit_tuples": 0,
+        "case_id": "transition-after",
+        "condition": "transition-after",
+        "independent_session": "paired-81005187"
+      }
+    ]
+  },
+  "stop": null,
+  "runtime_disarmed": true,
+  "ledger_before": {
+    "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+    "receipt": {
+      "requests_attempted": 94,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.087190600",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 93,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "ledger_after": {
+    "sha256": "6ed8ccd493956c544a25cf4c04c4530089c9a2e050c74e00734cc0ef5c62d90f",
+    "receipt": {
+      "requests_attempted": 100,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.095785750",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 99,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "original_entries_unchanged": true,
+  "accounted_margin_usd": "2.904214250",
+  "pricing_check": {
+    "verified_utc_date": "2026-10-05",
+    "method": "Read current official model/pricing pages before this execution; no price assumption from the key.",
+    "sources": [
+      "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "https://ai.google.dev/gemini-api/docs/pricing"
+    ],
+    "luna_standard_per_million": {
+      "input": ".10",
+      "output": ".50",
+      "cache_write_upper": ".125"
+    },
+    "luna_fast_multiplier": "2",
+    "luna_long_input_multiplier": "2",
+    "luna_long_output_multiplier": "1.5",
+    "gemini_standard_per_million": {
+      "input": ".30",
+      "output_including_thinking": "2.50"
+    }
+  },
+  "hybrid_attempts": 0,
+  "final_holdout_opened": false,
+  "latency_scope": "Reader submission through full strict JSON validation; includes new TCP/TLS. DNS setup is separate. Not capture-to-advisor or continuous-video evidence.",
+  "promotion": "None. Three owned sampled stills per candidate cannot establish a champion or provider transfer.",
+  "common_evaluator_rows_verified": true,
+  "original_pr16_sources_unchanged": true,
+  "new_reported_usage_upper_total_usd": "0.008595150",
+  "numeric_label_diagnosis": {
+    "score_changed": false,
+    "gemini_labelled_totals": "Values/roles are correct, but labels append values: SESSION 20 / DEALER TOTAL 2 / PLAYER TOTAL 18. Frozen literal label comparison fails and records one unsafe attributed-total false accept. This is not wrong card recognition or badge-as-dealer confusion.",
+    "other_cases": "Luna omits SESSION in rotation and appends 20 in transition-after; Gemini appends 20 in both. No provider produces a complete exact numeric transcription."
+  },
+  "private_receipt_hashes": {
+    "execution-claim.json": "81b6e9665b35db6a01db602c9a698024251bf60ddbd776c7c985187ac656de90",
+    "responses.json": "9e14d7200b93531371af2c39ecc8d7c9fd9c359576d15cd0d3c1afae5b5fbf5e",
+    "stop.json": "a713b4fb263c7912265e992cd5a44c382c77b4d0e75f9ddd0a154ade82e65570"
+  },
+  "source_baseline": "ff6681a5448b6d90bb4da1af0358cab1912031bd"
+}

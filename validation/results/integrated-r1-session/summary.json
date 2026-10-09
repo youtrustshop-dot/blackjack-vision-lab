@@ -1,0 +1,858 @@
+{
+  "schema": 1,
+  "experiment": "VISION-034",
+  "executed_utc_date": "2026-10-08",
+  "source_parent_commit": "3c23ea3c7c65f4ea06af651a9ca8cc7e3c99d535",
+  "acquisition_commit": "a703ded52ffd7a712c004789456594320985274b",
+  "installed_baseline": {
+    "version": "1.1.1",
+    "commit": "4f074efd53066a95d64ca1ed53de03479a8adcba",
+    "replaced": false
+  },
+  "publication": "Unreleased opt-in source candidate; no native rebuild or deployment.",
+  "gates": {
+    "current_hand_r1": "Same semantic_score/semantic gate; sufficient current-hand content, phase, controls and relevant numeric provenance. Zero false accepted advice.",
+    "full_transcription": "Report semantic_complete_transcription separately; irrelevant UI omissions never repair historical gates or override semantic safety.",
+    "capture_to_dom_deadline_ms": 3000,
+    "target_p95_ms": 2500,
+    "capture_gap_ms": 250,
+    "changing_case": "No current advice after actual pixels change, even if cloud transcription is correct.",
+    "negative_case": "Explicit printed player total disagrees with cards: abstain.",
+    "promotion": false,
+    "r2_certification": false,
+    "physical_windows_capture": false
+  },
+  "original_freeze_sha256": "e1e3487f0eb702324e3868b1821816fb77aafebf14fb2078a23862399d6b6afc",
+  "connection_repair_freeze_sha256": "817f4bba39fd90399810b17c28656c2af913b321339f876455ddb6d37acb2f10",
+  "local_demo_freeze_sha256": "1985a57f74f8b3bc43e1bb690e18c730650f9f13caf55a103da775417dd1be74",
+  "source_snapshots": [
+    {
+      "freeze": "original",
+      "all_exact": true,
+      "sources": [
+        {
+          "source": "bjlab/integrated_r1.py",
+          "expected_sha256": "2606433e79676f1fe1ef949c7e0d86438170c590d044a3a6162122af799e7c78",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/integration_api.py",
+          "expected_sha256": "61c52b69b4efeb4b3ece01f70fbc6d5688694d2095cd73698b66368e661baf95",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/paired_deadline_reader.py",
+          "expected_sha256": "dcf359e3df510c0dd2c70a8dd6c592635992bb9f45a00fba80fd6507416aad46",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/hybrid_evidence.py",
+          "expected_sha256": "002a34e3215ec0f4653f50a48d9f4caeab3d418c9e9588afde383db87e49bee2",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/visible_phase_deadline_reader.py",
+          "expected_sha256": "938a7379b741b5b70191ec781c735abb738e4a8dee0c8ce9704c388ebd2e229b",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/available_image_views.py",
+          "expected_sha256": "11eabfd84c14f3c1324a333cd47a13f905474cd6f4d4ff971b92a67f93490610",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/numeric_provenance.py",
+          "expected_sha256": "b137d47fdd9aa687e9b99b1a2d276f90f7971b487eed8200644510ac1f78f817",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/live_state.py",
+          "expected_sha256": "6f5fea94cfb45177bde2835a43ed213082148b2c8cd884b1d48891f0501648e6",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/grounded_state.py",
+          "expected_sha256": "022fa776692d9ee3f931752873692ec9622f182fff5a1b542e05b070b5fba2c0",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/state_reader.py",
+          "expected_sha256": "8cd72316c8fabce1e2abee611134ccdda8ecaaa129c107e928053381d2dadeaa",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/paired_persistent_http.py",
+          "expected_sha256": "1c242c3451e472bba8dd9ae5e9fb6432b8c24da01a0fd385ddef05d5725d9c62",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/private_observation_store.py",
+          "expected_sha256": "7a4a6b149a189031eadb3a22c73d1675859d19a7ebba165ab5d6d7a6141809f9",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/research_budget.py",
+          "expected_sha256": "5f278731ec7a73231fc3110dfa25811dad0d97b65abf55f4d2b5c625e8f65c3a",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/controlled_http.py",
+          "expected_sha256": "e7701d5415d45750784fbdca2c94306f7ca292ee04d4a750519468b5a1a33ab6",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/advice.py",
+          "expected_sha256": "626aed67d9255488c0f07df56c70656f2d1f09b23f42f067207c9a39fdf04683",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/engine.py",
+          "expected_sha256": "3b9b68f6f6d124f17c7d1e6895ce149eb42ab66b06e1ab6e39545d078b5035ba",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "validation/tools/integrated_r1_session.py",
+          "expected_sha256": "1feedbfad790214362a2c8e8f055aa611f922b642c6687d903fbe0e2b5547a52",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "validation/tools/numeric_semantic_score.py",
+          "expected_sha256": "3a47f5e8c49166d0350edf9bc0a5e82662b68bd7cd82d0d3951d93ddb1f3b1a4",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "validation/tools/api_reader_tournament.py",
+          "expected_sha256": "c606123e3e7f941049bb10ea7548fe792f7288b77fe2243c5458432bf2dc5f20",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "validation/tools/paired_cloud_prepare.py",
+          "expected_sha256": "514cd19454a2515cf678bfa73bed8d4ce499d55af357d332d2f7751d8a92b54b",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "validation/tools/grounded_corpus.py",
+          "expected_sha256": "ee4c8e59690783b945b770dd3335204a52807d53f09816e43df8a46a43edfd6b",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "validation/tools/stress_lab.py",
+          "expected_sha256": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "ui/src/IntegrationLab.tsx",
+          "expected_sha256": "362baf7d9b924cdb0edd01441b23714004335d82986a69b5f2196ed4d99f8b8d",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "ui/src/CompactAdvisor.tsx",
+          "expected_sha256": "6d44798c6a4cd7e1d5c9257237e79c6797edea188297b677c2f9166dea855564",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "ui/src/compact-advisor.ts",
+          "expected_sha256": "9072a192096f3149e5adbf5526e019d49264cf597ad595a111225578679eb0dc",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "ui/src/main.tsx",
+          "expected_sha256": "94b9afb7db220ace8af124cf042fe4c1ade7b69329a653dfa0abac5a42631238",
+          "exact_bytes_preserved": true
+        }
+      ]
+    },
+    {
+      "freeze": "connection-repair",
+      "all_exact": true,
+      "sources": [
+        {
+          "source": "validation/tools/integrated_r1_session.py",
+          "expected_sha256": "182b1e5b04dd50a4bbac708ed7625fdc4f3d36b73738df0e1e88ae826a392106",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/dns_lease.py",
+          "expected_sha256": "519d9982f8d9464ccb28a802251b76fe1545e308c6df2285d0481e803368938f",
+          "exact_bytes_preserved": true
+        }
+      ]
+    },
+    {
+      "freeze": "local-demo",
+      "all_exact": true,
+      "sources": [
+        {
+          "source": "validation/tools/owned_local_demo.py",
+          "expected_sha256": "3eb695aa1be540d594dbb984fc2b03a4b62b495b8354f2c58836b472e1b67ca3",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/integrated_r1.py",
+          "expected_sha256": "2606433e79676f1fe1ef949c7e0d86438170c590d044a3a6162122af799e7c78",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/integration_api.py",
+          "expected_sha256": "61c52b69b4efeb4b3ece01f70fbc6d5688694d2095cd73698b66368e661baf95",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/hybrid_evidence.py",
+          "expected_sha256": "002a34e3215ec0f4653f50a48d9f4caeab3d418c9e9588afde383db87e49bee2",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/paired_deadline_reader.py",
+          "expected_sha256": "dcf359e3df510c0dd2c70a8dd6c592635992bb9f45a00fba80fd6507416aad46",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/visible_phase.py",
+          "expected_sha256": "ea1fc44edba5f1de7a2ab375abdda7b913b2987798729c711de9710161e39613",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/corner_vision.py",
+          "expected_sha256": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/ocr.py",
+          "expected_sha256": "97e279cfc8c3872efba841b536e883202c485f83757420b96561e1f2cc78e44e",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "bjlab/advice.py",
+          "expected_sha256": "626aed67d9255488c0f07df56c70656f2d1f09b23f42f067207c9a39fdf04683",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "ui/src/IntegrationLab.tsx",
+          "expected_sha256": "362baf7d9b924cdb0edd01441b23714004335d82986a69b5f2196ed4d99f8b8d",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "ui/src/CompactAdvisor.tsx",
+          "expected_sha256": "6d44798c6a4cd7e1d5c9257237e79c6797edea188297b677c2f9166dea855564",
+          "exact_bytes_preserved": true
+        },
+        {
+          "source": "ui/src/compact-advisor.ts",
+          "expected_sha256": "9072a192096f3149e5adbf5526e019d49264cf597ad595a111225578679eb0dc",
+          "exact_bytes_preserved": true
+        }
+      ]
+    }
+  ],
+  "historical_033": {
+    "scores_unchanged": true,
+    "full_transcription_correct": 2,
+    "attempted": 3,
+    "conditional_fourth": "closed; not executed or reopened",
+    "full_transcription_gate": "failed and preserved"
+  },
+  "local_browser": {
+    "input": "Actual 1024x768 PNG acquired with canvas.toBlob in browser; only pixels, time and declared layout.",
+    "reader": "Unchanged FrozenGroundedLocal(FrozenLocalObservation()); outlined controls owned development layout.",
+    "manual_trigger": true,
+    "manual_turn_confirmation": false,
+    "oracle_input": false,
+    "source_capture_count": 4429,
+    "attempts": 6,
+    "usable_positive": {
+      "accepted": 3,
+      "attempted": 4,
+      "first_cold_capture_gap_abstention": 1
+    },
+    "safe_negatives": {
+      "abstained": 2,
+      "attempted": 2,
+      "cases": [
+        "actual occlusion",
+        "actual empty table"
+      ]
+    },
+    "backend_capture_to_output_ms": [
+      979.060302,
+      86.459716,
+      86.954345,
+      73.147949,
+      198.470214,
+      123.423828
+    ],
+    "dom_receipts": {
+      "eligible": 3,
+      "attempted": 3,
+      "capture_to_dom_ms": [
+        327.19999999925494,
+        212.60000000149012,
+        274.29999999701977
+      ],
+      "boundary": "Two requestAnimationFrame acknowledgements in main browser view; physical scanout and external-window live paint not measured."
+    },
+    "expired_original_advice_with_ongoing_capture": true,
+    "actual_disconnect_removes_advice": true,
+    "browser_popup": {
+      "opened": true,
+      "close_reopen": true,
+      "reuses_existing_window": true,
+      "same_authoritative_engine": true,
+      "second_engine_analyses": 0,
+      "native_always_on_top_verified": false,
+      "monitor_drag_dpi_minimized_capture_verified": false,
+      "background_capture": "Chrome background timer/acquisition ages can exceed limits; stale/blocked, not operational success."
+    },
+    "r2_certified": false,
+    "independent_accuracy_or_p95": false,
+    "proof_sha256": "7d32738b5839d8558d0c9b02fccbecab2d0dfeb7a6673862bce796133680f2d0"
+  },
+  "cloud": {
+    "planned_slots": 3,
+    "reached_local_cloud_wrapper": 2,
+    "provider_posts": 0,
+    "responses": 0,
+    "quality_numerator": null,
+    "quality_denominator": 0,
+    "latency_p50_ms": null,
+    "latency_p95_ms": null,
+    "cases": [
+      {
+        "case": "stable-overlap",
+        "status": "timeout_before_post",
+        "elapsed_from_capture_ms": 17151.816894,
+        "diagnosis": "Synchronous official DNS resolution/preparation consumed deadline before reservation; no provider POST."
+      },
+      {
+        "case": "changing-rotation",
+        "status": "local_permission_guard_before_post",
+        "exact_guard": "unknown: original row saved exception type only; later stage tracing is offline-tested, not a reconstruction."
+      },
+      {
+        "case": "contradictory-total",
+        "status": "unused_closed"
+      }
+    ],
+    "actual_changed_while_cloud_pending_demonstrated": false,
+    "actual_late_provider_reply_demonstrated": false,
+    "dns_repair": "Expiring official OS DNS lease prepared outside capture path; no inference warm-up.",
+    "repair_pools_closed": true,
+    "initial_process_internal_pool_finalization_observed": false,
+    "runtime_disarmed": true,
+    "following_lot": false,
+    "retry": 0,
+    "paid_warmup": 0
+  },
+  "accounting": {
+    "before": {
+      "sha256": "be7e585038b53fe2364f67e09482973074679a180b6b7d3dde808f0e29d41b87",
+      "receipt": {
+        "requests_attempted": 123,
+        "max_requests": 124,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      }
+    },
+    "after": {
+      "sha256": "c7afb7e0c839c0d83bc0f13aee9a61b860ac83c3fc83fca0e5821cc83a3bfae8",
+      "receipt": {
+        "requests_attempted": 123,
+        "max_requests": 126,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      }
+    },
+    "all_123_previous_entries_unchanged": true,
+    "new_reservations": 0,
+    "new_reported_usage_usd": "0",
+    "unchanged_cap_usd": "8",
+    "remaining_accounted_margin_usd": "1.820197700",
+    "unused_slots_closed": 1,
+    "invoice_and_current_balance_verified": false
+  },
+  "continuous_sessions": [
+    {
+      "session": "continuous-clean",
+      "manifest_sha256": "33c62366ce4e606936b3cf50353edcf15dd4294cf0d0f7f4b0b376fe9da4d1b7",
+      "baseline": {
+        "profile": "clean",
+        "decoded_frames": 178,
+        "sampled_frames": 43,
+        "metrics": {
+          "localization_missed": 0,
+          "localization_extra": 0,
+          "readable_expected": 121,
+          "phase_correct": 43,
+          "rank_presence_state_correct": 28,
+          "rank_correct": 106,
+          "suit_correct": 82,
+          "suit_unknown": 39,
+          "covered_correct": 12,
+          "rank_unknown": 15
+        },
+        "inventory_max_l1": 3,
+        "inventory_final_l1": 1,
+        "observed_rc_max_abs_error": 3,
+        "recognized_rounds": 2,
+        "decision_opportunities": 2,
+        "timely_usable_opportunities": 1,
+        "first_usable_latency_ms": [
+          852.9632666674543,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 2,
+          "matched": 2,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 10,
+          "matched_unique": 9,
+          "missing": 1,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": -1,
+          "J": 0,
+          "Q": 0,
+          "K": 0
+        },
+        "offline_processing_ms": {
+          "p50": 321.2039000027289,
+          "p95": 466.6939900023863
+        }
+      },
+      "existing_v2": {
+        "profile": "clean",
+        "decoded_frames": 178,
+        "sampled_frames": 43,
+        "metrics": {
+          "localization_missed": 0,
+          "localization_extra": 0,
+          "readable_expected": 121,
+          "phase_correct": 43,
+          "rank_presence_state_correct": 28,
+          "rank_correct": 106,
+          "suit_correct": 82,
+          "suit_unknown": 39,
+          "covered_correct": 12,
+          "rank_unknown": 15
+        },
+        "inventory_max_l1": 3,
+        "inventory_final_l1": 1,
+        "observed_rc_max_abs_error": 3,
+        "recognized_rounds": 2,
+        "decision_opportunities": 2,
+        "timely_usable_opportunities": 1,
+        "first_usable_latency_ms": [
+          818.0165666659987,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 2,
+          "matched": 2,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 10,
+          "matched_unique": 9,
+          "missing": 1,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": -1,
+          "J": 0,
+          "Q": 0,
+          "K": 0
+        },
+        "offline_processing_ms": {
+          "p50": 251.5824000001885,
+          "p95": 361.5716099990095
+        }
+      },
+      "baseline_runner_sha256": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+      "v2_source_hashes": {
+        "validation/tools/stress_lab.py": "45111606fd0acf9065356b8bb2802fd2f4e07a84a8087dd4f77c73e09c3739c1",
+        "bjlab/live.py": "a69b641fe95dab513118ba8549c638eb90937b7bf8f09ff1ccdbb68043826f58",
+        "bjlab/visible_phase.py": "ea1fc44edba5f1de7a2ab375abdda7b913b2987798729c711de9710161e39613",
+        "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997"
+      },
+      "baseline_receipt_sha256": "5bbf0822bc550a8f7dd621327c56c7f9411d4d413631b4689cc194e2b2f23077",
+      "v2_receipt_sha256": "352832e835823900fdda3168cdbac08192b761668e0c4ea3eabe8df579814a3f",
+      "scope": "New owned development sessions; same renderer family; V2 is an existing implementation, not a new model."
+    },
+    {
+      "session": "continuous-overlap",
+      "manifest_sha256": "d19a54ec2252c10d150d95aa5a7ad1b2e3de8ea44abcb620efe297b5f832dd1c",
+      "baseline": {
+        "profile": "overlap",
+        "decoded_frames": 212,
+        "sampled_frames": 51,
+        "metrics": {
+          "localization_missed": 26,
+          "localization_extra": 0,
+          "readable_expected": 174,
+          "phase_correct": 51,
+          "rank_presence_state_correct": 25,
+          "rank_correct": 167,
+          "suit_correct": 40,
+          "suit_unknown": 127,
+          "false_or_stale_advice": 10,
+          "false_actionable_state": 10
+        },
+        "inventory_max_l1": 3,
+        "inventory_final_l1": 1,
+        "observed_rc_max_abs_error": 2,
+        "recognized_rounds": 2,
+        "decision_opportunities": 3,
+        "timely_usable_opportunities": 0,
+        "first_usable_latency_ms": [
+          null,
+          null,
+          null
+        ],
+        "round_boundaries": {
+          "expected": 2,
+          "matched": 2,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 13,
+          "matched_unique": 11,
+          "missing": 2,
+          "duplicate": 1,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": -1,
+          "J": 0,
+          "Q": 0,
+          "K": 0
+        },
+        "offline_processing_ms": {
+          "p50": 232.80820000218228,
+          "p95": 463.18820000124106
+        }
+      },
+      "existing_v2": {
+        "profile": "overlap",
+        "decoded_frames": 212,
+        "sampled_frames": 51,
+        "metrics": {
+          "localization_missed": 7,
+          "localization_extra": 0,
+          "readable_expected": 174,
+          "phase_correct": 51,
+          "rank_presence_state_correct": 44,
+          "rank_correct": 167,
+          "suit_correct": 40,
+          "suit_unknown": 127,
+          "covered_correct": 19
+        },
+        "inventory_max_l1": 3,
+        "inventory_final_l1": 1,
+        "observed_rc_max_abs_error": 2,
+        "recognized_rounds": 2,
+        "decision_opportunities": 3,
+        "timely_usable_opportunities": 3,
+        "first_usable_latency_ms": [
+          873.608766664499,
+          882.3492666657949,
+          950.7026666675902
+        ],
+        "round_boundaries": {
+          "expected": 2,
+          "matched": 2,
+          "duplicate": 0,
+          "false": 0
+        },
+        "exposure_events": {
+          "expected": 13,
+          "matched_unique": 12,
+          "missing": 1,
+          "duplicate": 0,
+          "wrong_rank": 0,
+          "unmatched_geometry": 0,
+          "association_scope": "diagnostic zone/center association; not independently verified identity"
+        },
+        "inventory_final_drift_by_rank": {
+          "A": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": -1,
+          "J": 0,
+          "Q": 0,
+          "K": 0
+        },
+        "offline_processing_ms": {
+          "p50": 263.5556999994151,
+          "p95": 424.55320000044594
+        }
+      },
+      "baseline_runner_sha256": "d3adbe0941f950daf9ab02af484fffaeb27adca74bee1e1af4b945a026e38ba4",
+      "v2_source_hashes": {
+        "validation/tools/stress_lab.py": "45111606fd0acf9065356b8bb2802fd2f4e07a84a8087dd4f77c73e09c3739c1",
+        "bjlab/live.py": "a69b641fe95dab513118ba8549c638eb90937b7bf8f09ff1ccdbb68043826f58",
+        "bjlab/visible_phase.py": "ea1fc44edba5f1de7a2ab375abdda7b913b2987798729c711de9710161e39613",
+        "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997"
+      },
+      "baseline_receipt_sha256": "b5a2d16badcde9409e9cf7b0edeb62d19d18bb1468b119d6ebb3eea38e67b5b1",
+      "v2_receipt_sha256": "2798fe52024d6f283774d64cf8d3cb349908314ab7be44d89a0ac1b2b5e35fdc",
+      "scope": "New owned development sessions; same renderer family; V2 is an existing implementation, not a new model."
+    }
+  ],
+  "strict_advice_diagnosis": [
+    {
+      "profile": "clean",
+      "missing_object_classification": {},
+      "strict_inventory_advice_failures": [],
+      "historical_scores_changed": false,
+      "scope": "post-run geometric diagnostic, not independently verified association or replacement acceptance metric"
+    },
+    {
+      "profile": "overlap",
+      "missing_object_classification": {
+        "covered:dealer": 19,
+        "readable:player:0": 7
+      },
+      "strict_inventory_advice_failures": [
+        {
+          "timestamp_ms": 2833.3333333333335,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        },
+        {
+          "timestamp_ms": 3166.6666666666665,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        },
+        {
+          "timestamp_ms": 3500.0,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        },
+        {
+          "timestamp_ms": 9833.333333333334,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        },
+        {
+          "timestamp_ms": 10166.666666666666,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        },
+        {
+          "timestamp_ms": 10500.0,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        },
+        {
+          "timestamp_ms": 10916.666666666666,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        },
+        {
+          "timestamp_ms": 12250.0,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        },
+        {
+          "timestamp_ms": 12666.666666666666,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        },
+        {
+          "timestamp_ms": 13000.0,
+          "missing_presence": [
+            "covered"
+          ],
+          "missing_zones": [
+            "dealer"
+          ],
+          "rank_wrong": 0,
+          "rank_unknown": 0,
+          "phase_agrees": true
+        }
+      ],
+      "historical_scores_changed": false,
+      "scope": "post-run geometric diagnostic, not independently verified association or replacement acceptance metric"
+    }
+  ],
+  "remaining_ten_failure": {
+    "continuous-clean": {
+      "ten_perception": {
+        "expected_readable": 15,
+        "localization_missed": 0,
+        "unknown": 15
+      },
+      "zones": {
+        "dealer": 15
+      },
+      "first": [
+        {
+          "t": 8750.0,
+          "zone": "dealer",
+          "rank": null,
+          "visibility": "unreadable"
+        },
+        {
+          "t": 9166.666666666666,
+          "zone": "dealer",
+          "rank": null,
+          "visibility": "unreadable"
+        },
+        {
+          "t": 9500.0,
+          "zone": "dealer",
+          "rank": null,
+          "visibility": "unreadable"
+        }
+      ],
+      "scope": "full-object evaluator geometric match after recognition; not independent physical identity"
+    },
+    "continuous-overlap": {
+      "ten_perception": {
+        "expected_readable": 7,
+        "localization_missed": 7
+      },
+      "zones": {},
+      "first": [],
+      "scope": "full-object evaluator geometric match after recognition; not independent physical identity"
+    }
+  },
+  "trace_retention": {
+    "clean_v1_original_trace_overwritten_by_misnamed_v2_output": true,
+    "original_v1_result_receipt_retained": true,
+    "v2_trace_copied_to_separate_directory": true,
+    "v1_reproduction_in_separate_directory": true,
+    "reproduction_not_original_run_or_new_independent_evidence": true,
+    "future_existing_result_or_trace_overwrite_rejected": true
+  },
+  "limitations": [
+    "Owned renderer references and geometric association are diagnostic, not independent human/physical identity truth.",
+    "Offline video processing and media-plus-CPU opportunity times are not capture-to-display latency.",
+    "Both final inventories remain one rank-10 short; zero certified complete session counts.",
+    "No fresh provider screenshot/session generalization, operational p95, universal accuracy or profit evidence.",
+    "Poker Phase0 and native advisor preserved, no strategy/tracker/model training expansion.",
+    "Final holdout sealed; private images, browser identifiers and raw provider envelopes not published."
+  ]
+}

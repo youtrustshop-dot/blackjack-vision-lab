@@ -1,0 +1,262 @@
+{
+  "schema": 1,
+  "version": "1.1.1",
+  "scope": "synthetic development, not original provider recordings",
+  "visual": {
+    "schema": 1,
+    "scope": "own-synthetic-continuous-video",
+    "manifest_sha256": "adacad619c445c7c6fe9b6d8749ca32178a54b479ff47118af5ca056228aad84",
+    "candidate": {
+      "commit": "752d0acccef6405e6277b7c4f8881d6a041fa93a",
+      "working_tree_dirty": true
+    },
+    "reader": "unchanged default calibrated LiveObserver; manual turn disabled",
+    "renderer_sha256": "b6ad66fbd3ae80d52674229ee8fca01de1ce3b3d77aa6ac6a58cd42bf3a459b5",
+    "original_provider_videos": 0,
+    "api_requests": 0,
+    "training_performed": false,
+    "reader_promoted": false,
+    "results": [
+      {
+        "profile": "clean",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 0,
+          "localization_extra": 0,
+          "readable_expected": 310,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 87,
+          "rank_correct": 310,
+          "suit_unknown": 189,
+          "covered_wrong": 39,
+          "suit_correct": 121
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "offline_processing_ms": {
+          "p50": 292.00289999789675,
+          "p95": 413.75589999988733
+        }
+      },
+      {
+        "profile": "overlap",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 39,
+          "localization_extra": 0,
+          "readable_expected": 310,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 48,
+          "rank_correct": 310,
+          "suit_unknown": 189,
+          "suit_correct": 121
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "offline_processing_ms": {
+          "p50": 257.9334000001836,
+          "p95": 374.24274000113655
+        }
+      },
+      {
+        "profile": "rotation",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 227,
+          "localization_extra": 0,
+          "readable_expected": 310,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 15,
+          "rank_unknown": 14,
+          "suit_unknown": 118,
+          "rank_correct": 104,
+          "covered_wrong": 4
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "offline_processing_ms": {
+          "p50": 226.76870000213967,
+          "p95": 395.56769999944663
+        }
+      },
+      {
+        "profile": "faded",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 209,
+          "localization_extra": 2,
+          "readable_expected": 310,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 15,
+          "rank_unknown": 140,
+          "suit_unknown": 140
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "offline_processing_ms": {
+          "p50": 187.70109999968554,
+          "p95": 209.57951999916986
+        }
+      },
+      {
+        "profile": "clipped",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 149,
+          "localization_extra": 0,
+          "readable_expected": 250,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 15,
+          "rank_correct": 178,
+          "suit_unknown": 125,
+          "rank_unknown": 22,
+          "suit_correct": 75
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "offline_processing_ms": {
+          "p50": 255.80679999984568,
+          "p95": 379.65474000011454
+        }
+      },
+      {
+        "profile": "covered",
+        "decoded_frames": 366,
+        "sampled_frames": 87,
+        "metrics": {
+          "localization_missed": 170,
+          "localization_extra": 0,
+          "readable_expected": 141,
+          "phase_wrong_or_unknown": 87,
+          "rank_presence_state_correct": 17,
+          "rank_correct": 117,
+          "suit_unknown": 75,
+          "covered_correct": 39,
+          "suit_correct": 42,
+          "unreadable_rank_claim": 10
+        },
+        "inventory_max_l1": 20,
+        "inventory_final_l1": 20,
+        "observed_rc_max_abs_error": 9,
+        "recognized_rounds": 0,
+        "decision_opportunities": 6,
+        "timely_usable_opportunities": 0,
+        "offline_processing_ms": {
+          "p50": 236.04830000112997,
+          "p95": 419.89286999814806
+        }
+      }
+    ],
+    "timing_scope": "Offline decoded frame processing, not live capture-to-display",
+    "not_measured": [
+      "Independent provider generalization",
+      "ID switches",
+      "Exact event-to-card association",
+      "Independent mathematical correctness",
+      "Profitability"
+    ]
+  },
+  "engine": {
+    "scope": "engine invariant stress; no vision, training or profitability claim",
+    "seed": 4100410,
+    "rounds": 200000,
+    "actions": {
+      "double": 9319,
+      "hit": 166671,
+      "stand": 113471,
+      "decline_insurance": 15240,
+      "split": 8841
+    },
+    "rounds_with_natural": 9454,
+    "rounds_with_bust": 54147,
+    "elapsed_seconds": 307.19956580000144,
+    "checks": [
+      "termination",
+      "physical card identity uniqueness",
+      "Hi-Lo versus unique exposure inventory"
+    ],
+    "independent_evaluator": false,
+    "api_requests": 0
+  },
+  "paired_game_runs": 1,
+  "render_variants": 6,
+  "rounds_per_variant": 3,
+  "frames_per_variant": 366,
+  "sampled_frames_per_variant": 87,
+  "provider_sessions": 0,
+  "input_hashes": [
+    {
+      "profile": "clean",
+      "video_sha256": "39cda4e800a490bcc7dfcb6b64cabd0ff0c8176a126142658aafa582c8950cba",
+      "truth_sha256": "c610f559fb2e2d1d98d43385e257fb6d53bcdf124076d0a5a3c3b58c34d815a7"
+    },
+    {
+      "profile": "overlap",
+      "video_sha256": "6f5753b5901ab697a2503878954d7f4d8f1507273d8fb87b0a87030f76e96447",
+      "truth_sha256": "4389bc0d7476e8ec0b03eb3d7cf443c606faf2f9d10f6f99bca1d4b52ef6f629"
+    },
+    {
+      "profile": "rotation",
+      "video_sha256": "369bc1158e1ec138c2470f0ca6f55861ada6f74348f0d0a50ea9ed5224877920",
+      "truth_sha256": "87c7ab0269371719abd3b350acf6c103dcb9f873ae90544133bc3feec7c1f968"
+    },
+    {
+      "profile": "faded",
+      "video_sha256": "bf168afb41eb9cd1f265626cafb6fdcea1803aa854c426ff2ebfe12269a7fe83",
+      "truth_sha256": "c610f559fb2e2d1d98d43385e257fb6d53bcdf124076d0a5a3c3b58c34d815a7"
+    },
+    {
+      "profile": "clipped",
+      "video_sha256": "3e1d589454c8b5bc1af0408938b93061c6a8de969c20e1a662bb00ca0f92d7b7",
+      "truth_sha256": "e4e91a9ea83da4861709bc7ad5dd73ddd24f116f0a00a3614004aac77d64007f"
+    },
+    {
+      "profile": "covered",
+      "video_sha256": "e57f008952ad8632f03d908283df91713e59557da50d67d9e43b1402975a1449",
+      "truth_sha256": "cb56ab33cd3be6b5efec92d254fa796c46045e52bfc1b6da20e6c556ebf33671"
+    }
+  ],
+  "renderer_version": "synthetic-stress-v2-glyph-visibility",
+  "decision": "No promotion. Phase is unknown on every sample; rotations/fading remain localization/rank failures.",
+  "metric_caution": "Repeated observations, not unique cards. Categories overlap and cannot be added into a single error distribution.",
+  "annotation_correction": "Preserved v1 broad-corner-mask run; v2 measures glyph ink. Same videos/game; no new independence.",
+  "gallery_check": {
+    "backend": "Codex in-app browser",
+    "videos_loaded": 6,
+    "native_size": [
+      1024,
+      768
+    ],
+    "duration_seconds": 30.5,
+    "codec_errors": 0,
+    "playback_verified": true
+  },
+  "api_requests": 0,
+  "training_performed": false,
+  "installed_release_replaced": false
+}

@@ -7,11 +7,11 @@ const require=createRequire(import.meta.url),pw=require(process.argv[2]);
 const root=path.resolve(import.meta.dirname,'../..');
 const browser=await pw.chromium.launch({headless:true,channel:'chrome'});
 const context=await browser.newContext({viewport:{width:1440,height:1100},reducedMotion:'reduce'});
-await context.addInitScript(()=>{localStorage.setItem('bjlab.language','en');localStorage.setItem('bjlab.reuseRules','yes')});
+await context.addInitScript(()=>{localStorage.setItem('bjlab.language','en');localStorage.setItem('bjlab.reuseRules','yes');Object.defineProperty(window,'documentPictureInPicture',{value:undefined,configurable:true})});
 const page=await context.newPage(),errors=[],frames=[],checks=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('response',async response=>{if(response.url().includes('/frame?')&&response.request().method()==='POST'&&response.status()===200){try{frames.push(await response.json())}catch{}}});
-const output=path.join(root,'experiments/live_reliability/browser.json');
+const output=process.env.BJLAB_BROWSER_EVIDENCE||path.join(root,'experiments/live_reliability/browser.json');
 const results={version:'1.1.1',scope:'headless Chrome, owned lab canvas video and real local REST service; no personal display picker or external provider footage',checks,errors};
 try{
  await page.goto(process.env.BJLAB_URL||'http://127.0.0.1:8768');
@@ -28,10 +28,12 @@ try{
  await table.locator('.probability-grid strong').first().filter({hasText:/%/}).waitFor({timeout:10000});
  checks.push('Independent analysis polling supplies probabilities for the same state');
  const stable=frames.findLast(r=>r.advice);results.initial={player:stable.player,dealer:stable.dealer,action:stable.advice.best_action,count_history:stable.count_history,state_id:stable.state_id};
- await table.getByRole('button',{name:'Floating advisor',exact:true}).click();
- assert.ok(await page.getByRole('complementary',{name:'Floating live advisor'}).isVisible());
- checks.push('Floating advisor uses the same current report');
- await page.getByRole('complementary',{name:'Floating live advisor'}).getByRole('button',{name:'Close advisor',exact:true}).click();
+ await table.getByRole('button',{name:'Open advisor',exact:true}).click();
+ await page.getByRole('complementary',{name:'In-page advisor fallback'}).waitFor();
+ assert.ok(await page.getByRole('complementary',{name:'In-page advisor fallback'}).isVisible());
+ assert.match(await page.getByRole('complementary',{name:'In-page advisor fallback'}).innerText(),/cannot move outside this app/);
+ checks.push('Unavailable native/PiP host is explicitly labelled as in-page fallback');
+ await page.getByRole('complementary',{name:'In-page advisor fallback'}).getByRole('button',{name:'Close advisor',exact:true}).click();
  await table.getByRole('button',{name:'Stop video',exact:true}).click();
  // Exercise the real API contract for a mid-shoe start without changing pixels.
  await page.route('**/api/live',async route=>{

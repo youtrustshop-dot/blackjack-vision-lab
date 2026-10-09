@@ -226,10 +226,13 @@ def estimate_actions(player: list[str], upcard: str, counts: list[int], rules: R
 
 
 class LiveObserver:
-    def __init__(self, rules: Rules, *, samples=1500, corners=None, zones=None,
-                 fresh_shoe=False, manual_turn=False, output_height=600):
+    def __init__(self, rules: Rules, *, samples=1500, corners=None, zones=None, layout=None,
+                 fresh_shoe=False, manual_turn=False, output_height=600, context_challenger=False,
+                 overlap_challenger=False):
         self.rules, self.samples = rules, samples
         self.corners, self.zones = corners, zones
+        self.layout=layout
+        self.source_size=None
         self.fresh_shoe, self.manual_turn, self.output_height = fresh_shoe, manual_turn, output_height
         self.tracker = TemporalTracker(stable_frames=3, lost_after=4)
         self.tracker.new_shoe(rules.decks, shoe_id="live-shoe-1")
@@ -254,7 +257,19 @@ class LiveObserver:
         self.external_previous_phase = None
         from .round_lifecycle import RoundLifecycle
         self.lifecycle=RoundLifecycle()
+        self.context_challenger = None
+        if overlap_challenger and not context_challenger:
+            raise ValueError('Overlap challenger requires the opt-in context challenger.')
+        if context_challenger:
+            if not layout or manual_turn:
+                raise ValueError('Visible phase challenger requires layout and automatic turn evidence.')
+            from .visible_phase import VisiblePhaseContext, VisibleRoundLifecycle
+            self.context_challenger=VisiblePhaseContext(layout,overlap_challenger=overlap_challenger)
+            self.lifecycle=VisibleRoundLifecycle()
+            if overlap_challenger:
+                self.tracker.association_mode='ordered_row'
         self.history_gap=False
+        self.perception_pending=False
         self.last_observation_timestamp=None
         self.state_generation = 0
         self.source_id = secrets.token_hex(8)
@@ -298,6 +313,12 @@ class LiveObserver:
             if timestamp <= self.tracker.last_timestamp:
                 raise ValueError("Video timestamps must increase; stale frame rejected.")
             started = time.perf_counter()
+            if self.layout:
+                if self.source_size is not None and self.source_size!=image.size:
+                    self.history_gap=True
+                    self._invalidate_analysis()
+                    raise ValueError('The capture geometry changed. Recalibrate and restart observation.')
+                self.source_size=image.size
             if self.corners:
                 image = Image.fromarray(normalize_table(image, self.corners,
                                          (960, self.output_height), corners_normalized=True).image_rgb)
@@ -305,26 +326,51 @@ class LiveObserver:
                 zones = self.zones or {"dealer": (0, 0, 960, 250)} | {
                     f"player:{i}": (30 + i % 2 * 440, 290 + i // 2 * 190, 440, 190)
                     for i in range(8)}
-                self.detector = AdaptiveCardDetector(zones=zones)
+                if self.layout:
+                    from .corner_vision import CornerCardDetector
+                    self.detector=CornerCardDetector(self.layout)
+                else:
+                    self.detector = AdaptiveCardDetector(zones=zones)
             pixel_key = (image.size, image.mode, hashlib.sha256(image.tobytes()).digest())
             if pixel_key != self.pixel_cache_key:
                 detected = self.detector.detect(image)
+                if self.layout and self.manual_turn:
+                    self.detector.context['phase']='player'
+                    self.detector.context['turn_provenance']='manual confirmation'
                 self.pixel_evidence = (detected, {} if self.detector.context else self.reader.read(image),
                                        extract_controlled_metadata(image), self.detector.context)
                 self.pixel_cache_key = pixel_key
             detections, context, metadata, external = self.pixel_evidence
+            rejected_card_candidates=self.detector.last_diagnostics['rejected_card_candidates']
+            if self.context_challenger:
+                external=dict(external)
+                detections,presence_evidence=self.context_challenger.covered_presence(image,detections)
+                # Clear only a positively identified unknown body rejection.
+                # Unresolved corner proposals remain blocking evidence.
+                recovered=sum(e['covered'] and e.get('resolved_body_rejection',True) for e in presence_evidence)
+                rejected_card_candidates=max(0,rejected_card_candidates-recovered)
+                phase_context=self.context_challenger.read(image,detections)
+                phase_context['covered_presence_evidence']=presence_evidence
+                if getattr(self.context_challenger,'overlap_challenger',False):
+                    phase_context['back_surface_proposals']=self.context_challenger.back_proposals
+                phase_context['raw_rejected_card_candidates']=self.detector.last_diagnostics['rejected_card_candidates']
+                phase_context['effective_rejected_card_candidates']=rejected_card_candidates
+                phase_context['reasons']=list(external.get('reasons',[]))+phase_context['reasons']
+                external.update(phase_context)
             if self.last_observation_timestamp is not None and timestamp-self.last_observation_timestamp>2.5:
                 self.history_gap=True
             self.last_observation_timestamp=timestamp
             # Template similarity and OCR token scores have different contracts.
             # Never silently discard an OCR rank accepted by its profile.
-            self.tracker.minimum_score = OCR_RANK_MIN_SCORE if external else .90
+            self.tracker.minimum_score = getattr(self.detector, 'tracking_minimum_score',
+                                                 OCR_RANK_MIN_SCORE if external else .90)
             token = tuple(context.get(k) for k in ("shoe", "round", "hand", "phase", "session"))
             self.context_hits = self.context_hits + 1 if token == self.context_candidate else 1
             self.context_candidate = token
             context_stable = self.context_hits >= 2 and all(k in context for k in ("shoe", "round", "hand", "phase"))
             # Accept visible context only after distinct consecutive video inputs.
             lifecycle={'stable':False}
+            boundary_events=[]
             if context_stable:
                 if (self.last_context.get("shoe") != context["shoe"] or
                         self.last_context.get("session") != context.get("session")):
@@ -335,6 +381,7 @@ class LiveObserver:
                                           shoe_id="live-shoe-" + str(context["shoe"]))
                     self.round = 0
                     self.history_gap=False
+                    self.perception_pending=False
                     if witnessed_shuffle:
                         self.fresh_shoe = True
                     elif context['round'] > 1:
@@ -346,10 +393,23 @@ class LiveObserver:
                 self.last_context = context
             elif external:
                 phase = external['phase']
-                lifecycle=self.lifecycle.observe(detections,phase)
+                clear_evidence=(phase=='waiting' and not external.get('reasons') and
+                    not rejected_card_candidates)
+                lifecycle=self.lifecycle.observe(detections,phase,clear_evidence=clear_evidence)
+                if lifecycle['stable']:
+                    if (lifecycle['round_ended'] or lifecycle['new_round']) and self.perception_pending:
+                        # A mismatch survived until cards left the table; a
+                        # later readable hand cannot repair that missing event.
+                        self.history_gap=True
+                    if external.get('reasons') or rejected_card_candidates:
+                        self.perception_pending=True
+                    elif detections:
+                        self.perception_pending=False
+                if lifecycle['round_ended']:
+                    boundary_events.append(self.tracker.end_round(timestamp=timestamp))
                 if lifecycle['new_round']:
                     self.round+=1
-                    self.tracker.start_round(str(self.round),timestamp=timestamp)
+                    boundary_events.append(self.tracker.start_round(str(self.round),timestamp=timestamp))
                 self.history_gap=self.history_gap or lifecycle['history_gap']
                 self.phase = 'player' if self.manual_turn else phase
             elif not context:
@@ -366,8 +426,11 @@ class LiveObserver:
             # An unclassified initial deal must not enter round 0 history and
             # then be counted again when its first player turn starts round 1.
             can_commit=not external or (lifecycle['stable'] and
-                (self.lifecycle.seen_round or external['phase']=='settled'))
-            emitted = self.tracker.update(detections, timestamp, round_id=str(self.round)) if can_commit else []
+                (self.lifecycle.seen_round or external['phase']=='settled') and
+                not lifecycle.get('ambiguous_boundary',False))
+            if self.context_challenger:
+                can_commit=lifecycle.get('commit_allowed',False)
+            emitted = boundary_events + (self.tracker.update(detections, timestamp, round_id=str(self.round)) if can_commit else [])
             self.sequence, self.last_access = sequence, time.monotonic()
             self.frame_count += 1
             summary = self.tracker.state_summary()
@@ -378,7 +441,9 @@ class LiveObserver:
             reasons.extend(external.get('reasons', []) if external else [])
             if context and not context_stable:
                 reasons.append("Visible round context is changing; waiting for stable video evidence.")
-            if self.detector.last_diagnostics["rejected_card_candidates"]:
+            if lifecycle.get('ambiguous_boundary'):
+                reasons.append('The current pixels permit several round histories; exposure commits are paused until an observable boundary.')
+            if rejected_card_candidates:
                 reasons.append("Some card-shaped regions could not be read.")
             cards = [c for c in summary["cards"].values() if c.get("on_table")]
             active_index = max(0, self.last_context.get("hand", 1) - 1) if context_stable else 0
@@ -404,6 +469,10 @@ class LiveObserver:
                 reasons.append("Active player cards are not fully visible.")
             if len(player_ranks) < 2 or len(dealer) != 1:
                 reasons.append("Need at least two player cards and exactly one visible dealer upcard.")
+            unreadable_active=any(d.zone==f'player:{active_index}' and d.rank is None for d in detections)
+            unreadable_dealer=any(d.zone=='dealer' and d.rank is None and not d.face_down for d in detections)
+            if unreadable_active or unreadable_dealer:
+                reasons.append("A present face-up card is unreadable; no card may be silently omitted.")
             if self.phase not in ("player", "insurance", "early"):
                 reasons.append("Waiting for a player decision in the video.")
             if context and not context_stable:
@@ -421,12 +490,22 @@ class LiveObserver:
             allowed_gate = summary["gate"]["solver_allowed"] and not reasons
             unknown_removed=any(not c.get('on_table') and not c.get('rank') for c in summary['cards'].values())
             observed_integrity=summary['gate']['solver_allowed'] and not self.history_gap and not unknown_removed
+            if external:
+                observed_integrity=observed_integrity and lifecycle['stable'] and not self.perception_pending
+                observed_integrity=observed_integrity and not external.get('reasons') and not rejected_card_candidates
             count_reliable=self.fresh_shoe and observed_integrity
+            if self.layout:
+                # This prototype does not yet verify backs or full event
+                # coverage. Rank recognition alone cannot certify a shoe.
+                observed_integrity=False
+                count_reliable=False
             if external:
                 # Missing history blocks composition estimates, not a valid
                 # visible-hand basic-policy recommendation.
                 allowed_gate=(lifecycle['stable'] and len(player_ranks)>=2 and len(dealer)==1
-                    and self.phase=='player' and bool(allowed) and not external.get('reasons'))
+                    and self.phase=='player' and bool(allowed) and not external.get('reasons')
+                    and not rejected_card_candidates
+                    and not unreadable_active and not unreadable_dealer)
             decision = None
             advice = None
             if allowed_gate:
@@ -485,12 +564,19 @@ class LiveObserver:
                 count_reasons.append('A video gap or round boundary was missed. Earlier exposures are incomplete.')
             if unknown_removed:
                 count_reasons.append('An earlier hidden card was never observed face up.')
+            if self.perception_pending:
+                count_reasons.append('Unreadable card evidence or a visible total mismatch has not been resolved within this round.')
+            if external and not lifecycle['stable']:
+                count_reasons.append('Current visible card evidence is not yet stable.')
             count_reasons.extend(summary['gate']['reasons'])
+            if self.layout:
+                count_reasons.append('Calibrated corner research profile: complete exposure history is not validated.')
             # Keep a named conditional model for inspection; never label it as
             # a known physical shoe when earlier history is unavailable.
             state = dict(summary, physical_remaining=remaining if count_reliable else None,
                          inventory_scope='complete' if count_reliable else 'conditional-model')
             report = {"source": "live-video-pixels", "sequence": sequence, "timestamp": timestamp,
+                    "source_id":self.source_id,
                     "image_size":list(image.size),
                     "processed_frames": self.frame_count, "detections": [d.to_dict() for d in detections],
                     "context": context, "phase": self.phase, "round": self.round, "gate": gate,
@@ -507,10 +593,24 @@ class LiveObserver:
                                               'physical_remaining':remaining, 'composition_remaining':summary['composition_remaining']},
                     "player": player_ranks, "dealer": [c["rank"] for c in dealer],
                     "events": [e.to_dict() for e in emitted], "state": state,
+                    "temporal_evidence":{
+                        'round_hits':self.lifecycle.hits if external else self.context_hits,
+                        'round_required':self.lifecycle.required if external else 2,
+                        'round_stable':lifecycle['stable'] if external else context_stable,
+                        'detected_phase':external.get('phase') if external else context.get('phase'),
+                        'exposure_commit_allowed':can_commit,
+                        'ambiguous_boundary':lifecycle.get('ambiguous_boundary',False),
+                        'tracker_required':self.tracker.stable_frames,
+                        'tracker_pending':[{k:t[k] for k in ('card_id','hits','confirmed','missed','label_pending','candidate_hits')}
+                            for t in summary['tracks'] if not t['confirmed'] or t['missed'] or t['label_pending']],
+                        'observation_timestamp':timestamp,
+                        'turn_provenance':'manual confirmation' if self.manual_turn else 'pixel evidence or unknown',
+                        'scope':'Observed confirmation counters; lifecycle and tracker waits are separate.'},
                     "processing_ms": (time.perf_counter() - started) * 1000,
                     "recognition_profile": external.get('profile', 'lab-template') if external else 'lab-template',
                     "table_bounds": external.get('table_bounds') if external else None,
                     "visible_controls": sorted(controls),
+                    "phase_evidence": external if self.context_challenger else None,
                     "scope": "lab artwork and classic green-table printed-rank OCR; unreadable or inconsistent evidence is gated"}
             self.last_report = report
             return copy.deepcopy(report)

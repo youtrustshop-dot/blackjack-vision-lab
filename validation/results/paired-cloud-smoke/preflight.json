@@ -1,0 +1,172 @@
+{
+  "checked_utc": "2026-10-05T17:29:07.277148+00:00",
+  "inference_calls": 0,
+  "pricing_checked": true,
+  "pricing_sources": [
+    "https://developers.openai.com/api/docs/pricing",
+    "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "https://ai.google.dev/gemini-api/docs/pricing"
+  ],
+  "luna_fast_usd_per_million": {
+    "input": ".20",
+    "cache_write": ".25",
+    "output": "1",
+    "long_input": ".40",
+    "long_cache_write": ".50",
+    "long_output": "1.50"
+  },
+  "gemini_standard_usd_per_million": {
+    "input": ".30",
+    "output": "2.50"
+  },
+  "ledger_before": {
+    "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+    "receipt": {
+      "requests_attempted": 94,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.087190600",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 93,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "runtime_disarmed_before": true,
+  "access": {
+    "luna-fast-live-v3": {
+      "available": false,
+      "error_type": "TimeoutError",
+      "http_status": null
+    },
+    "gemini-structured-card-limit-local": {
+      "available": false,
+      "error_type": "TimeoutError",
+      "http_status": null
+    }
+  },
+  "ready": false,
+  "experiment_id": "VISION-022",
+  "parent_experiment_id": "VISION-021",
+  "parent_commit": "097cbba877fe694f542850c550d8854cf6d12b0c",
+  "status": "blocked_model_access_timeout",
+  "freeze_sha256": "d6fe0f0b41f624a717719ebccb3d35222d1fb4b534e1426b329d500ab4dbcbfe",
+  "freeze_verified": true,
+  "smoke_cases": [
+    "labelled-totals",
+    "rotation",
+    "transition-after"
+  ],
+  "planned_inference_requests": 6,
+  "attempted_inference_requests": 0,
+  "read_only_gets": 2,
+  "read_only_timeouts": 2,
+  "retry_count": 0,
+  "paid_warmups": 0,
+  "development_inference_calls": 0,
+  "final_holdout": "not_opened",
+  "actual_hybrid_trials": 0,
+  "runtime_disarmed_after": true,
+  "ledger_after": {
+    "sha256": "6b94bbbfb5872ab8c1e64cec9a48140e9d5669eb57ae47dfe4e492422676ae4f",
+    "receipt": {
+      "requests_attempted": 94,
+      "max_requests": 102,
+      "max_usd": "8",
+      "accounted_upper_usd": "5.087190600",
+      "unknown_charge_requests": 13,
+      "network_attempts_claimed": 93,
+      "unknown_charge_reserved_usd": "4.9064744",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    }
+  },
+  "ledger_unchanged": true,
+  "all_previous_unknown_reservations_preserved": true,
+  "worst_case_six_usd": "2.5310064",
+  "remaining_accounting_margin_usd": "2.912809400",
+  "new_inference_usage": null,
+  "new_inference_charge_usd": "0",
+  "charge_scope": "No inference occurred; ledger values are upper reservations, not invoice or account balance",
+  "request_allowance_consumed": false,
+  "new_spending_epoch_created": false,
+  "credentials_disclosed": false,
+  "inference_quality_evidence": false,
+  "champion": "none",
+  "automatic_resumption": false,
+  "cause": "Read-only authenticated model metadata calls timed out with no HTTP status; exact network stage unknown.",
+  "candidates": {
+    "luna-fast-live-v3": {
+      "planned": 3,
+      "attempted": 0,
+      "not_executed": 3,
+      "strict_validated": {
+        "numerator": 0,
+        "denominator": 0
+      },
+      "correct_usable_r1": null,
+      "false_accepted_states": null,
+      "exact_relevant_inventory": null,
+      "rank": null,
+      "suit": null,
+      "backs": null,
+      "phase": null,
+      "controls": null,
+      "numeric_provenance": null,
+      "complete_grounded_transcription": null,
+      "complete_response_latency_ms": {
+        "count": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "inference_timeouts": 0,
+      "inference_failures": 0,
+      "read_only_access_timeouts": 1,
+      "reported_usage": null,
+      "reported_usage_cost_usd": null
+    },
+    "gemini-structured-card-limit-local": {
+      "planned": 3,
+      "attempted": 0,
+      "not_executed": 3,
+      "strict_validated": {
+        "numerator": 0,
+        "denominator": 0
+      },
+      "correct_usable_r1": null,
+      "false_accepted_states": null,
+      "exact_relevant_inventory": null,
+      "rank": null,
+      "suit": null,
+      "backs": null,
+      "phase": null,
+      "controls": null,
+      "numeric_provenance": null,
+      "complete_grounded_transcription": null,
+      "complete_response_latency_ms": {
+        "count": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "inference_timeouts": 0,
+      "inference_failures": 0,
+      "read_only_access_timeouts": 1,
+      "reported_usage": null,
+      "reported_usage_cost_usd": null
+    }
+  },
+  "offline_verification": {
+    "targeted_tests": "13 passed in 7.12s",
+    "evidence_checker": "consistent true, no errors",
+    "frozen_validation_rechecked": true,
+    "canonical_ledger_sha256_unchanged": true,
+    "prior_experiment_and_policy_fields_preserved": true,
+    "full_backend_suite": "not rerun; no product source or tests changed",
+    "ui_suite": "not rerun; UI unchanged"
+  }
+}

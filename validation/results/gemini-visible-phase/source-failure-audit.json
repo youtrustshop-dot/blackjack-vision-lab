@@ -1,0 +1,86 @@
+{
+  "experiment": "VISION-033-posthoc-offline-source-guard",
+  "consumed_freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
+  "consumed_source_commit": "5ffa402c39e3897b8667848bc9315b9ae9d17217",
+  "consumed_runner_sha256": "286f28fdbaab310dc05d9c3469bad3e4c63697c2ee9f40965a6cb5be5db5996b",
+  "amended_runner_sha256": "3f901e43f9d2dcca56db43bfc01dcdc0bee63869eac93e9b188d174a7ca1f761",
+  "new_regression_source_sha256": "eb31fdd0ec841d62c7c5c7c71965f225b40709d8346ad861e957c071ae884a7d",
+  "changed_frozen_sources": [
+    "validation/tools/gemini_visible_phase_check.py"
+  ],
+  "controlled_source_failures": {
+    "before": [
+      {
+        "case": "before_first_frame",
+        "error_type": "KeyError",
+        "reason": null,
+        "api_reservations": 0,
+        "api_posts": 0,
+        "local_reads": 0,
+        "solver_calls": 0,
+        "presented": false,
+        "unreached_presentation_timing": null,
+        "producer_errors": null,
+        "transport_closed": true,
+        "producer_worker_stopped": true
+      },
+      {
+        "case": "between_ready_and_path_snapshot",
+        "error_type": "KeyError",
+        "reason": null,
+        "api_reservations": 0,
+        "api_posts": 0,
+        "local_reads": 0,
+        "solver_calls": 0,
+        "presented": false,
+        "unreached_presentation_timing": null,
+        "producer_errors": null,
+        "transport_closed": true,
+        "producer_worker_stopped": true
+      }
+    ],
+    "after": [
+      {
+        "case": "before_first_frame",
+        "error_type": null,
+        "reason": "producer_failed_before_capture",
+        "api_reservations": 0,
+        "api_posts": 0,
+        "local_reads": 0,
+        "solver_calls": 0,
+        "presented": false,
+        "unreached_presentation_timing": null,
+        "producer_errors": [
+          "ValueError"
+        ],
+        "transport_closed": true,
+        "producer_worker_stopped": true
+      },
+      {
+        "case": "between_ready_and_path_snapshot",
+        "error_type": null,
+        "reason": "no_current_capture",
+        "api_reservations": 0,
+        "api_posts": 0,
+        "local_reads": 0,
+        "solver_calls": 0,
+        "presented": false,
+        "unreached_presentation_timing": null,
+        "producer_errors": [],
+        "transport_closed": true,
+        "producer_worker_stopped": true
+      }
+    ]
+  },
+  "provider_requests": 0,
+  "ledger_sha256_before": "be7e585038b53fe2364f67e09482973074679a180b6b7d3dde808f0e29d41b87",
+  "ledger_sha256_after": "be7e585038b53fe2364f67e09482973074679a180b6b7d3dde808f0e29d41b87",
+  "executed_summary_sha256_unchanged": "08729c2a4389e36aae893fa5e283c3a3e9e29416ce08207ffccc806a39db3f16",
+  "frozen_input_reference_request_files_unchanged": true,
+  "historical_scores_unchanged": true,
+  "runtime_disarmed": true,
+  "old_scope_rejected_after_source_change": true,
+  "fourth_slot_reopened": false,
+  "new_paid_freeze_created": false,
+  "scope": "Four fabricated before/after error reproductions; not model observations or additional pytest test count."
+}

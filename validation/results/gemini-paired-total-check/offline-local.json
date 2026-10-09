@@ -1,0 +1,616 @@
+{
+  "experiment": "VISION-030",
+  "provider_calls": 0,
+  "freeze_sha256": "365b6ee2d0f973755c1de561aebe0b114fa46762fb01263be47989d7bd0f276f",
+  "cases": 5,
+  "scope": "Exploratory owned new seeds/fonts; shared renderer; five paid cases superseded before submission by narrower four-request check. Neither local reader supports the numeric wire contract.",
+  "rows": [
+    {
+      "case": "new-labelled-total",
+      "reader": "current-local",
+      "elapsed_ms": 468.3663999894634,
+      "expected_usable_r1": true,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": true,
+        "missed_or_wrong_objects": 0,
+        "extra_or_wrong_objects": 0,
+        "full_card_state_correct": false,
+        "known_suits_correct": 1,
+        "known_suits_expected": 3,
+        "readable_suits_unknown": 2,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 468.3663999894634,
+        "strict_wire_validated": true,
+        "expected_usable_r1": true,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 3,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": false,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    },
+    {
+      "case": "new-rotated-ui",
+      "reader": "current-local",
+      "elapsed_ms": 59.483999997610226,
+      "expected_usable_r1": true,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Need at least two readable player cards.",
+          "Need exactly one readable dealer upcard.",
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": false,
+        "missed_or_wrong_objects": 3,
+        "extra_or_wrong_objects": 0,
+        "full_card_state_correct": false,
+        "known_suits_correct": 0,
+        "known_suits_expected": 3,
+        "readable_suits_unknown": 1,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 59.483999997610226,
+        "strict_wire_validated": true,
+        "expected_usable_r1": true,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Need at least two readable player cards.",
+          "Need exactly one readable dealer upcard.",
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": false,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    },
+    {
+      "case": "new-overlap-index",
+      "reader": "current-local",
+      "elapsed_ms": 129.09039997612126,
+      "expected_usable_r1": true,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": true,
+        "missed_or_wrong_objects": 0,
+        "extra_or_wrong_objects": 0,
+        "full_card_state_correct": true,
+        "known_suits_correct": 3,
+        "known_suits_expected": 3,
+        "readable_suits_unknown": 0,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 129.09039997612126,
+        "strict_wire_validated": true,
+        "expected_usable_r1": true,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": false,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    },
+    {
+      "case": "new-unreadable",
+      "reader": "current-local",
+      "elapsed_ms": 97.05749998101965,
+      "expected_usable_r1": false,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Unresolved local proposals; card presence is not established for each proposal.",
+          "Need at least two readable player cards.",
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": true,
+        "missed_or_wrong_objects": 0,
+        "extra_or_wrong_objects": 0,
+        "full_card_state_correct": false,
+        "known_suits_correct": 1,
+        "known_suits_expected": 2,
+        "readable_suits_unknown": 1,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 97.05749998101965,
+        "strict_wire_validated": true,
+        "expected_usable_r1": false,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Need at least two readable player cards.",
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": true,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    },
+    {
+      "case": "new-settled",
+      "reader": "current-local",
+      "elapsed_ms": 270.77790000475943,
+      "expected_usable_r1": false,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Readable player control lacks supported enabled-style evidence.",
+          "Need exactly one readable dealer upcard.",
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": true,
+        "missed_or_wrong_objects": 0,
+        "extra_or_wrong_objects": 0,
+        "full_card_state_correct": false,
+        "known_suits_correct": 2,
+        "known_suits_expected": 5,
+        "readable_suits_unknown": 3,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 270.77790000475943,
+        "strict_wire_validated": true,
+        "expected_usable_r1": false,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Need exactly one readable dealer upcard.",
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": true,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    },
+    {
+      "case": "new-labelled-total",
+      "reader": "specialized-local",
+      "elapsed_ms": 62.454700004309416,
+      "expected_usable_r1": true,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": true,
+        "missed_or_wrong_objects": 0,
+        "extra_or_wrong_objects": 0,
+        "full_card_state_correct": false,
+        "known_suits_correct": 1,
+        "known_suits_expected": 3,
+        "readable_suits_unknown": 2,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 62.454700004309416,
+        "strict_wire_validated": true,
+        "expected_usable_r1": true,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 3,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": false,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    },
+    {
+      "case": "new-rotated-ui",
+      "reader": "specialized-local",
+      "elapsed_ms": 66.46370000089519,
+      "expected_usable_r1": true,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Need exactly one readable dealer upcard.",
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": false,
+        "missed_or_wrong_objects": 1,
+        "extra_or_wrong_objects": 1,
+        "full_card_state_correct": false,
+        "known_suits_correct": 0,
+        "known_suits_expected": 3,
+        "readable_suits_unknown": 2,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 66.46370000089519,
+        "strict_wire_validated": true,
+        "expected_usable_r1": true,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 2,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Need exactly one readable dealer upcard.",
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": false,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    },
+    {
+      "case": "new-overlap-index",
+      "reader": "specialized-local",
+      "elapsed_ms": 59.17940000654198,
+      "expected_usable_r1": true,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": true,
+        "missed_or_wrong_objects": 0,
+        "extra_or_wrong_objects": 0,
+        "full_card_state_correct": true,
+        "known_suits_correct": 3,
+        "known_suits_expected": 3,
+        "readable_suits_unknown": 0,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 59.17940000654198,
+        "strict_wire_validated": true,
+        "expected_usable_r1": true,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": false,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    },
+    {
+      "case": "new-unreadable",
+      "reader": "specialized-local",
+      "elapsed_ms": 60.63739999081008,
+      "expected_usable_r1": false,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Need at least two readable player cards.",
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": false,
+        "missed_or_wrong_objects": 1,
+        "extra_or_wrong_objects": 0,
+        "full_card_state_correct": false,
+        "known_suits_correct": 1,
+        "known_suits_expected": 2,
+        "readable_suits_unknown": 1,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 60.63739999081008,
+        "strict_wire_validated": true,
+        "expected_usable_r1": false,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Need at least two readable player cards.",
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": true,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    },
+    {
+      "case": "new-settled",
+      "reader": "specialized-local",
+      "elapsed_ms": 64.12390002515167,
+      "expected_usable_r1": false,
+      "actual_local_gate": {
+        "usable": false,
+        "reasons": [
+          "Readable player control lacks supported enabled-style evidence.",
+          "Need exactly one readable dealer upcard.",
+          "Player turn is not established."
+        ],
+        "scope": "blackjack-image",
+        "live_certified": false,
+        "shoe_history_certified": false
+      },
+      "card_transcription": {
+        "rank_presence_state_correct": false,
+        "missed_or_wrong_objects": 1,
+        "extra_or_wrong_objects": 1,
+        "full_card_state_correct": false,
+        "known_suits_correct": 2,
+        "known_suits_expected": 5,
+        "readable_suits_unknown": 2,
+        "complete_state_correct": null,
+        "phase_annotated": true,
+        "complete_state_annotated": false
+      },
+      "projected_transcription_only": {
+        "policy": "numeric-provenance-r1-v1",
+        "status": "completed",
+        "elapsed_ms": 64.12390002515167,
+        "strict_wire_validated": true,
+        "expected_usable_r1": false,
+        "semantic_usable_r1": false,
+        "semantic_correct_usable_r1": false,
+        "semantic_timely_correct_usable_r1": false,
+        "semantic_false_accept": false,
+        "semantic_complete_transcription": false,
+        "semantic_numeric_provenance_exact": false,
+        "semantic_numeric_provenance": {
+          "matched": 0,
+          "expected": 1,
+          "extra_or_wrong": 0
+        },
+        "literal_complete_transcription": false,
+        "literal_numeric_provenance_exact": false,
+        "unsafe_semantic_total": false,
+        "normalized_numbers": [],
+        "gate_reasons": [
+          "Need exactly one readable dealer upcard.",
+          "Player turn is not established."
+        ],
+        "evidence_scope": "offline contract re-evaluation; not new accuracy or generalization"
+      },
+      "correct_timely_r1": false,
+      "correct_abstention": true,
+      "false_accept": false,
+      "numeric_provenance_supported": false
+    }
+  ],
+  "aggregates": {
+    "current-local": {
+      "correct_timely_positive": 0,
+      "positive_count": 3,
+      "safe_abstention": 2,
+      "negative_count": 2,
+      "false_accepts": 0,
+      "exact_full_card_state": 1,
+      "case_count": 5
+    },
+    "specialized-local": {
+      "correct_timely_positive": 0,
+      "positive_count": 3,
+      "safe_abstention": 2,
+      "negative_count": 2,
+      "false_accepts": 0,
+      "exact_full_card_state": 1,
+      "case_count": 5
+    }
+  }
+}

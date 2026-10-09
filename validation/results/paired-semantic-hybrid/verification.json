@@ -1,0 +1,45 @@
+{
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "experiment": "VISION-025",
+  "source_parent_commit": "a4eb763470dac5795518c4728fd16ad5da19b969",
+  "freeze_sha256": "f81df70de7c4a86d1adb274e0a0169ee72aed3bd888e46e75e411a011b927b58",
+  "semantic_policy": "numeric-provenance-r1-v1",
+  "tests": {
+    "python_passed": 740,
+    "python_subtests_passed": 10,
+    "python_seconds": 74.92,
+    "python_existing_warnings": 2,
+    "new_networkless_path_tests": 42,
+    "targeted_path_and_numeric_tests": 69,
+    "frontend_passed": 52,
+    "frontend_scope": "Inherited parent CI/source; UI unchanged, not rerun locally in VISION-025"
+  },
+  "executed": {
+    "provider_requests": 4,
+    "read_only_model_access_controls": 5,
+    "hybrid_trials": 0,
+    "luna_strict_timely_r1": "0/2",
+    "gemini_strict_timely_r1": "1/2",
+    "frozen_payload_claims_checked": 4,
+    "consumed_metrics_reproduced_offline": 4,
+    "completed_pooled_post_responses": 2,
+    "old_entries_and_unknown_reservations_retained": true,
+    "count_ceiling_audited_102_to_105": true,
+    "monetary_ceiling_usd": "8",
+    "original_stop_receipts_preserved": true,
+    "reader_prompt_gate_evaluator_weights_unchanged": true,
+    "runtime_disarmed": true,
+    "unused_slots_closed": 1,
+    "installed_release_unchanged": true
+  },
+  "not_executed": [
+    "Conditional real-API local-first hybrid: neither candidate passed frozen gate",
+    "Physical Windows capture/native advisor paint or full-session/R2 reliability",
+    "Matched nonpooled control or causal connection-pooling latency gain",
+    "Resolver/router root-cause repair or separate model-versus-network timing",
+    "New models/training/trackers/Poker/UI/release/final holdout",
+    "Current invoice/balance or timeout charge reconciliation"
+  ],
+  "scope": "Four new owned sampled stills, two per provider. No champion or operational p95; no current-advisor, external-transfer, session or profit certification."
+}

@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "scope": "Zero-budget source policy verification; not reader-quality or account-billing evidence",
+  "executed_utc": "2026-10-04T14:02:29.979849+00:00",
+  "previous_candidate": "048c2c8baff8018fdd3e5e3f9047b76f5504ceff",
+  "source_hashes": {
+    "bjlab/api_access_policy.py": "4a61b3bd0a149254da5b386bf5ff385ee33fd7aa13bc92bae092bfbab3f67d5a",
+    "bjlab/openai_reader.py": "24e63705b14b9e36a8fd5490df6a6e6d84d5fac44766bf92000e9496c10d04f0",
+    "validation/tools/state_reader_comparison.py": "fe1ef6765129c649668fe1da4e178d2e8a881232972394e87f4791ec81523479",
+    "tests/test_api_access_policy.py": "03df52106db7880873e735bbaec662f91777a66d6dddb1a0cfbdd11501450f00",
+    "tests/test_r1_readers.py": "7b9e1540bac5b6333528b9c85fa940e13c313db28fc2f84bc4876b5f007bdc5e",
+    "docs/VISION_EXPERIMENTS.json": "e83c168c8a8f66c2ab04c67caf31cecdcb679812ea87bf5d3c33b23ceff98cd9"
+  },
+  "commands": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest -q",
+      "python_passed": 504,
+      "subtests_passed": 10,
+      "warnings": 2,
+      "duration_seconds": 60.09
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/check-evidence.py",
+      "consistent": true
+    }
+  ],
+  "inference_authorized": false,
+  "max_requests": 0,
+  "max_usd": "0",
+  "credit_check": {
+    "status": "blocked_credit_verification",
+    "balance": null,
+    "free_credit_balance": null,
+    "auto_recharge_enabled": null,
+    "observation": "Billing overview redirected to login; no account fields read"
+  },
+  "blocked_no_free_credits_claimed": false,
+  "followup_actions": {
+    "inference_calls": 0,
+    "account_model_list_calls": 0,
+    "image_uploads": 0,
+    "payment_changes": 0,
+    "credit_purchases": 0,
+    "auto_recharge_changes": 0,
+    "model_downloads": 0
+  },
+  "not_executed": [
+    "authenticated credit verification",
+    "actual API reader comparison",
+    "new original provider sessions",
+    "new model training",
+    "native/UI/physical advisor checks"
+  ],
+  "historical_receipts": "Prior local-summary.json and source-checks.json preserved unchanged; no new vision-quality claim"
+}

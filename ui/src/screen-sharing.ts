@@ -24,13 +24,15 @@ export function screenSharingError(error:unknown):string{
  return 'Impossibile avviare la condivisione.';
 }
 
-export async function captureScreenFrame(video:HTMLVideoElement):Promise<File>{
+import {captureGeometry,Region} from './capture-geometry';
+export async function captureScreenFrame(video:HTMLVideoElement,options?:{region?:Region;maxEdge?:number|null}):Promise<File>{
  if(video.readyState<2||!video.videoWidth||!video.videoHeight)throw new Error('Attendi che l’anteprima sia pronta.');
  const canvas=typeof OffscreenCanvas==='function'?new OffscreenCanvas(1,1):document.createElement('canvas');
- const scale=Math.min(1,1920/Math.max(video.videoWidth,video.videoHeight));
- canvas.width=Math.max(1,Math.round(video.videoWidth*scale));canvas.height=Math.max(1,Math.round(video.videoHeight*scale));
+ const geometry=captureGeometry(video.videoWidth,video.videoHeight,options?.region,options?.maxEdge===undefined?1920:options.maxEdge);
+ const [x,y,w,h]=geometry.source_rect;
+ [canvas.width,canvas.height]=geometry.upload_size;
  const context=canvas.getContext('2d');if(!context)throw new Error('Acquisizione del fotogramma non disponibile.');
- context.drawImage(video,0,0,canvas.width,canvas.height);
+ context.drawImage(video,x,y,w,h,0,0,canvas.width,canvas.height);
  // Offscreen encoding avoids the document-idle callback used by toBlob in a background tab.
  const blob=canvas instanceof HTMLCanvasElement?await new Promise<Blob>((resolve,reject)=>canvas.toBlob(value=>value?resolve(value):reject(new Error('Acquisizione del fotogramma non riuscita.')),'image/png')):await canvas.convertToBlob({type:'image/png'});
  return new File([blob],'schermo-'+Date.now()+'.png',{type:'image/png'});

@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "version": "1.1.1",
+  "status": "unreleased-source-verified",
+  "tests": {
+    "python_passed": 514,
+    "python_subtests": 10,
+    "warnings": 2,
+    "duration_seconds": 96.26,
+    "targeted_tests": 5,
+    "targeted_seconds": 3.67,
+    "frontend_passed": 46,
+    "frontend_scope": "Historical parent evidence; application UI unchanged; generated gallery browser-tested separately"
+  },
+  "source_hashes": {
+    "validation/tools/stress_lab.py": "b6ad66fbd3ae80d52674229ee8fca01de1ce3b3d77aa6ac6a58cd42bf3a459b5",
+    "tests/test_stress_lab.py": "9d494458e0764216c4b1044525e84108f789e8f35e2557180fe50cf3b42914fb",
+    "bjlab/live.py": "8c847b74187ef82b94084ca703bf8e56639bcbd56303fe08b6c6183d9e3730db",
+    "bjlab/corner_vision.py": "ac2612d0198b16a6ec985b2b45efff3b900b4a87e7d9cdb6cda7bb9d00c0a997",
+    "bjlab/simulator.py": "2f12e895f4f0dcae4c60826d4f42109cc98f35a4510b11a44e58fe08c75d5707"
+  },
+  "renderer_hash_matches_generated_manifest": true,
+  "continuous_synthetic_videos": 6,
+  "provider_videos": 0,
+  "api_requests": 0,
+  "engine_rounds": 200000,
+  "model_promoted": false,
+  "installed_release_replaced": false,
+  "unexecuted": [
+    "External provider video baseline",
+    "Independent final holdout",
+    "Model training",
+    "Native desktop rebuild",
+    "Physical advisor checks"
+  ],
+  "tested_code_commit": "0202b3cb4a8227b90c2a57db1f6398e85a8ab025",
+  "source_binding": "All recorded executable/test source hashes match the committed tree; baseline was executed before commit and retains its original dirty-worktree receipt."
+}

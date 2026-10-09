@@ -1,0 +1,358 @@
+{
+  "schema": 1,
+  "experiment": "VISION-028",
+  "status": "OFFLINE_VERIFIED_NO_INFERENCE",
+  "source_parent_commit": "6a5e071da76c76b22453d3a4808a209f0ad74bd8",
+  "installed_version_unchanged": "1.1.1",
+  "external_review": {
+    "existing_blackjack_conversation_contacted": true,
+    "reply_received": true,
+    "settings": "retained; Pro and reasoning effort not verified or overridden",
+    "full_transcript": "private ignored local artifact; not published"
+  },
+  "controlled_packet_regression": {
+    "scope": "fabricated packet identity reproduction; not observed provider/capture failure",
+    "same_table_and_layout": true,
+    "changed_detail_bytes": true,
+    "before": {
+      "valid": true,
+      "reasons": [],
+      "capture_to_presentation_ms": 120.0,
+      "original_capture_ns": 1000000000,
+      "latest_capture_ns": 1100000000,
+      "latest_sequence": 2,
+      "requested_motion_epoch": 0,
+      "latest_motion_epoch": 0,
+      "mode": "controlled-current-pixel-revalidation",
+      "r2_certified": false
+    },
+    "after": {
+      "valid": false,
+      "reasons": [
+        "pixels_or_continuity_changed"
+      ],
+      "capture_to_presentation_ms": 120.0,
+      "original_capture_ns": 1000000000,
+      "latest_capture_ns": 1100000000,
+      "latest_sequence": 2,
+      "requested_motion_epoch": 0,
+      "latest_motion_epoch": 1,
+      "fingerprint_scope": "all_named_native_views_and_geometry",
+      "mode": "controlled-current-pixel-revalidation",
+      "r2_certified": false
+    },
+    "mocked_hybrid_changed_detail": "no solver invocation; no advisor payload",
+    "initial_crop_origin": "offline native crop audit only; fingerprint alone cannot prove origin"
+  },
+  "prepared_request_controls": {
+    "status": "OFFLINE_PREPARED_NOT_AUTHORIZED_NOT_EXECUTED",
+    "freeze_sha256": "3783df4d50421c79df3cc2575f2f8ced8577f73c384af9e3723a1859e789876e",
+    "cells_prepared": 5,
+    "cells_verified": 5,
+    "source_case": "fresh-rotated-unknown",
+    "not_independent_validation": true,
+    "cells": [
+      {
+        "id": "A",
+        "mode": "structured-card-limit-local",
+        "available_views": [
+          "controls",
+          "dealer",
+          "player:0",
+          "table"
+        ],
+        "packet_fingerprint": "8d77f3e6d1c8d3ee8bd4b70291d0f94e42a210f342f2bb41df0bab13dd2507e3",
+        "payload_sha256": "ac928614f15d3764e168326455e7bab1c55606cb634e8ae7df4e9e97df762b7a",
+        "canonical_payload_sha256": "c28fe555037340e15f7a41de4f1a9755cf472093a6d4bbc73f8c84738900658b",
+        "footprint": {
+          "views": [
+            "table",
+            "dealer",
+            "player:0",
+            "controls"
+          ],
+          "image_bytes": 125194,
+          "canonical_payload_bytes": 170334,
+          "system_text_characters": 1094,
+          "user_text_characters": 352,
+          "provider_schema_bytes": 1410,
+          "thinking": {
+            "thinkingLevel": "MINIMAL",
+            "includeThoughts": false
+          },
+          "output_token_cap": 1024,
+          "tokens_and_provider_timings": "unmeasured; no submission"
+        },
+        "native_view_audit": {
+          "status": "passed",
+          "checked_details": [
+            "dealer",
+            "player:0",
+            "controls"
+          ],
+          "table_size": [
+            1024,
+            768
+          ],
+          "scope": "native pixel equivalence, not independent card/label legibility"
+        }
+      },
+      {
+        "id": "B",
+        "mode": "json-mode",
+        "available_views": [
+          "controls",
+          "dealer",
+          "player:0",
+          "table"
+        ],
+        "packet_fingerprint": "8d77f3e6d1c8d3ee8bd4b70291d0f94e42a210f342f2bb41df0bab13dd2507e3",
+        "payload_sha256": "94cbaf397aa4d337c8de372a4fe1c7905f6b37434cb8e21d701e451a2e1f0a0f",
+        "canonical_payload_sha256": "8a81ab83c86004834632c28ed3d536d7f0140833caad58258e65b73aa239ad88",
+        "footprint": {
+          "views": [
+            "table",
+            "dealer",
+            "player:0",
+            "controls"
+          ],
+          "image_bytes": 125194,
+          "canonical_payload_bytes": 170703,
+          "system_text_characters": 2571,
+          "user_text_characters": 352,
+          "provider_schema_bytes": 0,
+          "thinking": {
+            "thinkingLevel": "MINIMAL",
+            "includeThoughts": false
+          },
+          "output_token_cap": 1024,
+          "tokens_and_provider_timings": "unmeasured; no submission"
+        },
+        "native_view_audit": {
+          "status": "passed",
+          "checked_details": [
+            "dealer",
+            "player:0",
+            "controls"
+          ],
+          "table_size": [
+            1024,
+            768
+          ],
+          "scope": "native pixel equivalence, not independent card/label legibility"
+        }
+      },
+      {
+        "id": "C",
+        "mode": "structured-card-limit-local",
+        "available_views": [
+          "table"
+        ],
+        "packet_fingerprint": "f31ed038361e3257acc8ff4b6a96faa828f996bf17d27794eeb39287387bc859",
+        "payload_sha256": "1e5b24e8c4d4554dec934c57559da708023d042b7b214ea3b54678841e359416",
+        "canonical_payload_sha256": "643e2fc37cc92c4602116e338d0d263a882e9142199cf98635da1e7ca077b207",
+        "footprint": {
+          "views": [
+            "table"
+          ],
+          "image_bytes": 68077,
+          "canonical_payload_bytes": 93948,
+          "system_text_characters": 1094,
+          "user_text_characters": 312,
+          "provider_schema_bytes": 1410,
+          "thinking": {
+            "thinkingLevel": "MINIMAL",
+            "includeThoughts": false
+          },
+          "output_token_cap": 1024,
+          "tokens_and_provider_timings": "unmeasured; no submission"
+        },
+        "native_view_audit": {
+          "status": "passed",
+          "checked_details": [],
+          "table_size": [
+            1024,
+            768
+          ],
+          "scope": "native pixel equivalence, not independent card/label legibility"
+        }
+      },
+      {
+        "id": "D",
+        "mode": "json-mode",
+        "available_views": [
+          "table"
+        ],
+        "packet_fingerprint": "f31ed038361e3257acc8ff4b6a96faa828f996bf17d27794eeb39287387bc859",
+        "payload_sha256": "24954e4c48bc960eebccce8bb5e833fcec71db1cb980f0aff4073f05201349e8",
+        "canonical_payload_sha256": "443ead7b796e9cd8470a69b0a308a9fdf39bdeff14f0ebd459bc0df8d01fc8ab",
+        "footprint": {
+          "views": [
+            "table"
+          ],
+          "image_bytes": 68077,
+          "canonical_payload_bytes": 94317,
+          "system_text_characters": 2571,
+          "user_text_characters": 312,
+          "provider_schema_bytes": 0,
+          "thinking": {
+            "thinkingLevel": "MINIMAL",
+            "includeThoughts": false
+          },
+          "output_token_cap": 1024,
+          "tokens_and_provider_timings": "unmeasured; no submission"
+        },
+        "native_view_audit": {
+          "status": "passed",
+          "checked_details": [],
+          "table_size": [
+            1024,
+            768
+          ],
+          "scope": "native pixel equivalence, not independent card/label legibility"
+        }
+      },
+      {
+        "id": "E",
+        "mode": "structured-card-limit-local",
+        "available_views": [
+          "controls",
+          "dealer",
+          "player:0",
+          "table"
+        ],
+        "packet_fingerprint": "27508a53def072f7af2a2352d118e0dd8b9aaaf481cfe3da2f2bb935c5eb9e74",
+        "payload_sha256": "6be3fbfc2f49edd588e1a450babd525de41805b23136ef79b0978bfc440084e9",
+        "canonical_payload_sha256": "3091dcdcdc60817a4f11c8839776640f23a8b7d42cc6cf407807b336e58700cf",
+        "footprint": {
+          "views": [
+            "table",
+            "dealer",
+            "player:0",
+            "controls"
+          ],
+          "image_bytes": 126051,
+          "canonical_payload_bytes": 171474,
+          "system_text_characters": 1094,
+          "user_text_characters": 352,
+          "provider_schema_bytes": 1410,
+          "thinking": {
+            "thinkingLevel": "MINIMAL",
+            "includeThoughts": false
+          },
+          "output_token_cap": 1024,
+          "tokens_and_provider_timings": "unmeasured; no submission"
+        },
+        "native_view_audit": {
+          "status": "passed",
+          "checked_details": [
+            "dealer",
+            "player:0",
+            "controls"
+          ],
+          "table_size": [
+            1024,
+            768
+          ],
+          "scope": "native pixel equivalence, not independent card/label legibility"
+        }
+      }
+    ],
+    "label_control": {
+      "new_label": "BET",
+      "label_box_native": [
+        847,
+        130,
+        897,
+        148
+      ],
+      "original_number_position_unchanged": [
+        910,
+        130
+      ],
+      "all_other_table_pixels_unchanged": true,
+      "annotation_review": "owned renderer plus assistant visual audit, not independent human truth"
+    },
+    "shared_policy": [
+      "grounded-r1-live-v3",
+      "numeric-provenance-r1-v1"
+    ],
+    "comparison_scope": {
+      "A/B and C/D": "serialization modes; logical local contract unchanged",
+      "A/C and B/D": "four views versus native table only; image content/load jointly change",
+      "A/E": "only BET label added to pixels; no answer injected into prompt"
+    },
+    "scoring": {
+      "common": "unchanged semantic_score plus literal transcription; available_views per cell",
+      "separate": [
+        "gate accepted",
+        "independent pixel/reference match",
+        "completed within 3s"
+      ],
+      "E": "ui20 with actually visible BET label, table view; never dealer_total",
+      "label_format_limit": "BET is not added to the frozen finite normalization grammar; raw label transcription differences stay visible"
+    },
+    "socket_and_dns_denied_during_preparation": true,
+    "credentials_loaded": false,
+    "empirical_provider_compatibility": "unmeasured for new JSON+MINIMAL combination",
+    "gate_relaxation": false,
+    "original_live_deadline_ms": 3000,
+    "diagnostic_wait_ms_proposed": 10000
+  },
+  "provider_requests_this_increment": 0,
+  "paid_warmup": 0,
+  "retry": 0,
+  "hybrid_inferences": 0,
+  "ledger": {
+    "sha256_before": "b73a4697f0e59c173e8756e00f1ab5c5a297bb329e78d57066397955c1c94c44",
+    "sha256_after": "b73a4697f0e59c173e8756e00f1ab5c5a297bb329e78d57066397955c1c94c44",
+    "byte_identical": true,
+    "receipt": {
+      "requests_attempted": 106,
+      "max_requests": 106,
+      "max_usd": "8",
+      "accounted_upper_usd": "6.156175900",
+      "unknown_charge_requests": 15,
+      "network_attempts_claimed": 105,
+      "unknown_charge_reserved_usd": "5.9595464",
+      "stopped": false,
+      "invoice_and_balance_verified": false,
+      "scope": "all configurations/providers under one aggregate authorization"
+    },
+    "historical_batch_reservation_usd": "1.5856640",
+    "proposed_only_request_ceiling": 111,
+    "current_request_ceiling_unchanged": 106,
+    "fits_historical_monetary_margin": true,
+    "invoice_or_account_balance": false,
+    "old_scopes_closed": true,
+    "runtime_disarmed": true
+  },
+  "preserved_source_files": [
+    "bjlab/live_cloud.py",
+    "bjlab/live_state.py",
+    "bjlab/numeric_provenance.py",
+    "bjlab/grounded_state.py",
+    "bjlab/state_reader.py",
+    "bjlab/offline_response_collector.py",
+    "validation/tools/numeric_semantic_score.py"
+  ],
+  "frozen_code_sha256": {
+    "validation/tools/gemini_request_ablation.py": "b4275ac38585cc328703246b98affe47faab71ae5158dc7cfdf56abcd806338d",
+    "bjlab/hybrid_evidence.py": "002a34e3215ec0f4653f50a48d9f4caeab3d418c9e9588afde383db87e49bee2",
+    "bjlab/live_cloud.py": "322c2f7f3565cdd2f300eca94271e1c43f9ad3ab81937925a2c143a5e32ecf9c",
+    "bjlab/live_state.py": "6f5fea94cfb45177bde2835a43ed213082148b2c8cd884b1d48891f0501648e6",
+    "bjlab/numeric_provenance.py": "b137d47fdd9aa687e9b99b1a2d276f90f7971b487eed8200644510ac1f78f817",
+    "bjlab/grounded_state.py": "022fa776692d9ee3f931752873692ec9622f182fff5a1b542e05b070b5fba2c0",
+    "bjlab/offline_response_collector.py": "49b7f38313fce3379f801c3d46a8a0307221017232c8f53889135b2d46b42bc3",
+    "validation/tools/numeric_semantic_score.py": "3a47f5e8c49166d0350edf9bc0a5e82662b68bd7cd82d0d3951d93ddb1f3b1a4"
+  },
+  "limitations": [
+    "diagnostic repeat, not new model reliability evidence",
+    "one request/cell cannot isolate server queue/compute from network or measure operational p95",
+    "table-only legibility needs declared assistant pixel review, not oracle injection",
+    "new JSON+MINIMAL combination is offline constructed, not provider compatibility verified",
+    "old scopes stay closed; this module has no run/submission/credential path",
+    "No desktop capture/paint, complete-session proof or R2 certification",
+    "No model promotion, weights/training/default thresholds, Poker or final holdout change"
+  ]
+}

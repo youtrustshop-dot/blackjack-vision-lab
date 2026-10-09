@@ -5,6 +5,8 @@ use tauri::{Manager, WebviewUrl, WebviewWindowBuilder};
 use tauri_plugin_shell::{process::{CommandChild, CommandEvent}, ShellExt};
 
 struct Backend(Mutex<Option<CommandChild>>);
+mod advisor;
+struct NativeUrl(Mutex<Option<String>>);
 
 fn stop_backend(app: &tauri::AppHandle) {
     if let Some(state) = app.try_state::<Backend>() {
@@ -22,11 +24,14 @@ fn main() {
     let application = tauri::Builder::default()
         .plugin(tauri_plugin_shell::init())
         .setup(|app| {
+            app.manage(advisor::Selection(Mutex::new(None)));
+            app.manage(NativeUrl(Mutex::new(None)));
             let smoke_hidden = std::env::var("BJLAB_DESKTOP_SMOKE").as_deref() == Ok("1");
             WebviewWindowBuilder::new(app, "startup", WebviewUrl::App("splash.html".into()))
                 .title("Blackjack Vision Lab").inner_size(460.0, 220.0)
                 .resizable(false).visible(!smoke_hidden).build()?;
             let command = app.shell().sidecar("bjlab-backend")?
+                .env("BJLAB_NATIVE_ADVISOR","1")
                 .args(["--port", "0", "--parent-pid", &std::process::id().to_string()]);
             let (mut output, child) = command.spawn()?;
             app.manage(Backend(Mutex::new(Some(child))));
@@ -38,11 +43,16 @@ fn main() {
                         CommandEvent::Stdout(bytes) => {
                             let line = String::from_utf8_lossy(&bytes);
                             if let Ok(message) = serde_json::from_str::<serde_json::Value>(line.trim()) {
+                                if message["event"]=="native_advisor" {
+                                    let base=handle.state::<NativeUrl>().0.lock().ok().and_then(|s|s.clone());
+                                    if let Some(base)=base{advisor::command(&handle,&base,&message);}
+                                }
                                 if !opened && message["event"] == "backend_ready" {
                                     if let Some(address) = message["url"].as_str() {
+                                        *handle.state::<NativeUrl>().0.lock().unwrap()=Some(address.to_string());
                                         if let Ok(url) = address.parse() {
                                             let result = WebviewWindowBuilder::new(&handle, "main", WebviewUrl::External(url))
-                                                .title("Blackjack Vision Lab")
+                                                .title("Blackjack Vision Lab · research candidate")
                                                 .inner_size(1440.0, 940.0).min_inner_size(1000.0, 720.0)
                                                 .visible(!smoke_hidden)
                                                 .build();
@@ -78,7 +88,8 @@ fn main() {
                             }
                         },
                         CommandEvent::Terminated(_) => {
-                            if !opened { handle.exit(1); }
+                            let unexpected=handle.state::<Backend>().0.lock().map(|state|state.is_some()).unwrap_or(true);
+                            if !opened || unexpected { handle.exit(1); }
                         },
                         _ => {}
                     }
@@ -87,8 +98,14 @@ fn main() {
             Ok(())
         })
         .on_window_event(|window, event| {
+            if window.label()=="advisor" {
+                if let tauri::WindowEvent::CloseRequested{api,..}=event {
+                    api.prevent_close();advisor::save_geometry(window.app_handle());let _=window.hide();
+                    advisor::acknowledge(window.app_handle(),None,None);
+                }
+            }
             if let tauri::WindowEvent::Destroyed = event {
-                if window.label() == "main" { stop_backend(window.app_handle()); }
+                if window.label() == "main" { advisor::save_geometry(window.app_handle());stop_backend(window.app_handle());window.app_handle().exit(0); }
                 else if window.label() == "startup" && window.app_handle().get_webview_window("main").is_none() {
                     stop_backend(window.app_handle()); window.app_handle().exit(0);
                 }
@@ -97,6 +114,6 @@ fn main() {
         .build(tauri::generate_context!())
         .expect("Unable to launch Blackjack Vision Lab desktop");
     application.run(|handle, event| {
-        if let tauri::RunEvent::Exit = event { stop_backend(handle); }
+        if let tauri::RunEvent::Exit = event { advisor::save_geometry(handle);stop_backend(handle); }
     });
 }

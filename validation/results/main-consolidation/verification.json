@@ -1,0 +1,138 @@
+{
+  "version": "1.1.1",
+  "review": "main-source-consolidation",
+  "executed_utc_date": "2026-10-09",
+  "baseline_commit": "4f074efd53066a95d64ca1ed53de03479a8adcba",
+  "reviewed_research_head": "2223b67e5b900476dd7910d90d92bf1038a23cd6",
+  "preserved_original_commits": 61,
+  "reviewed_changed_paths": 311,
+  "tests": {
+    "python_passed": 985,
+    "python_subtests_passed": 10,
+    "python_elapsed_seconds": 133.89,
+    "python_warnings": 2,
+    "frontend_passed": 52,
+    "frontend_build_passed": true,
+    "real_source_startup_checks_passed": 6,
+    "windows_native_geometry_passed": 3,
+    "native_compile": "locked offline Windows GNU debug test profile; 745 seconds",
+    "native_scope": "unit geometry/compilation; no physical capture, paint or installer"
+  },
+  "initial_python_run": {
+    "passed": 983,
+    "failed": 1,
+    "subtests_passed": 10,
+    "failure": "10ms sleep-based test could expire in payload preparation before dispatch",
+    "repair": "module-local controlled clock with real 3s gate; separate pre-dispatch case",
+    "production_runtime_changed_by_test_repair": false,
+    "local_receipt": "artifacts/main-consolidation-20261009/full-python.xml"
+  },
+  "source_startup": {
+    "status": "passed",
+    "checks": [
+      "real source server boots on loopback without provider credentials",
+      "built frontend is served by the real backend",
+      "experiment matrix keeps inference disarmed",
+      "owned integration needs explicit configuration; no default cloud factory",
+      "browser server does not pretend to supply the native always-on-top host",
+      "seeded local simulation deals, serves actual pixels and closes without a provider"
+    ],
+    "scope": "default source startup and loopback HTTP; not physical capture/vision accuracy",
+    "provider_credentials_in_child": false,
+    "inference_requests": 0,
+    "installed_release_changed": false
+  },
+  "dependency_checks": {
+    "pip_check": "no broken requirements",
+    "npm_audit_all_known_findings": 0,
+    "npm_audit_production_known_findings": 0,
+    "python": {
+      "status": "completed",
+      "database": "https://osv.dev/",
+      "packages_queried": 55,
+      "findings": [],
+      "scope": "known indexed advisories only; not a guarantee of package safety",
+      "private_data_submitted": false,
+      "provider_inference": false
+    },
+    "rust_all_platforms": {
+      "status": "completed",
+      "database": "https://osv.dev/",
+      "packages_queried": 431,
+      "findings": [
+        {
+          "package": "glib",
+          "version": "0.18.5",
+          "advisory_ids": [
+            "GHSA-wrw7-89jp-8q8g",
+            "RUSTSEC-2024-0429"
+          ]
+        },
+        {
+          "package": "proc-macro-error",
+          "version": "1.0.4",
+          "advisory_ids": [
+            "RUSTSEC-2024-0370"
+          ]
+        }
+      ],
+      "scope": "known indexed advisories only; not a guarantee of package safety",
+      "private_data_submitted": false,
+      "provider_inference": false
+    },
+    "rust_target_triage": {
+      "method": "cargo tree --locked --offline --target TARGET -i PACKAGE",
+      "windows_target": "x86_64-pc-windows-gnu",
+      "linux_target": "x86_64-unknown-linux-gnu",
+      "affected_windows_packages": [],
+      "affected_linux_packages": [
+        "glib@0.18.5",
+        "proc-macro-error@1.0.4"
+      ],
+      "linux_native_packaging_approved": false
+    },
+    "scope": "indexed known advisories and dependency graphs; not a security guarantee"
+  },
+  "tracked_source_inspection": {
+    "base": "4f074efd53066a95d64ca1ed53de03479a8adcba",
+    "reviewed_head": "2223b67e5b900476dd7910d90d92bf1038a23cd6",
+    "prior_commits": 61,
+    "changed_paths": 311,
+    "tracked_paths": 1592,
+    "python_syntax_checked": 237,
+    "historical_text_blobs_scanned": 535,
+    "credential_pattern_hits": [],
+    "current_credential_pattern_paths": [],
+    "private_tracked_paths": [],
+    "unsafe_serialized_weights_tracked": [],
+    "scope": "bounded credential patterns and tracked paths; no guarantee of all possible secrets",
+    "holdout_archives_opened": 0,
+    "provider_requests": 0,
+    "api_inference_authorized": false,
+    "ledger_sha256": "c7afb7e0c839c0d83bc0f13aee9a61b860ac83c3fc83fca0e5821cc83a3bfae8"
+  },
+  "provider_posts": 0,
+  "new_reservations": 0,
+  "runtime_disarmed": true,
+  "ledger_byte_identical": true,
+  "ledger_sha256": "c7afb7e0c839c0d83bc0f13aee9a61b860ac83c3fc83fca0e5821cc83a3bfae8",
+  "installed_release_changed": false,
+  "historical_measurements_preserved": true,
+  "source_hashes": {
+    "bjlab/integrated_r1.py": "87af58926af65a4a20f66bd095667f9ffcc0318d1f98bd9ddf08bedd709f0f21",
+    "bjlab/integration_api.py": "f513359775c66a63f3ee7ade039655a711bf924fd223e3236f9310498a93ecb3",
+    "tests/test_gemini_request_diagnosis.py": "c8e18fcf16cce681caba924997847f70cc297a329a0be6d303831428cb279dad",
+    "setup.ps1": "982bcbcc809954700931d13edcc430583cfaae35fe0a9d29b8b9ba34fe5324d8",
+    "scripts/smoke-source.py": "386f51205b40e2d698498262d43504ac1cdcd6834768ff3518d019a2280ac3e8",
+    ".github/workflows/verify.yml": "13a1a97d87d5cf0281c6c883c10dbab59023b1968b539bd93de00655ff6ac9bb"
+  },
+  "not_executed": [
+    "New provider inference",
+    "Final holdout",
+    "New training/model",
+    "Physical monitor/DPI dragging and minimized desktop sharing",
+    "New native installer/release verification or replacement",
+    "Universal provider/card accuracy or profitability evaluation"
+  ],
+  "github_verification": "Exact consolidation-head clean-checkout CI required before merge"
+}

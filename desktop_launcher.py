@@ -154,6 +154,11 @@ def main() -> int:
                 if line.strip() == b"shutdown":
                     server.should_exit = True
                     return
+                try:
+                    from bjlab.native_advisor import host
+                    host.acknowledge(json.loads(line))
+                except (ValueError,TypeError):
+                    pass
             if len(pending) > 4096:
                 pending = b""
     if options.parent_pid and sys.stdin is not None:

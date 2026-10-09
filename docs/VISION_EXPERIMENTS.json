@@ -1,0 +1,3689 @@
+{
+  "schema": 1,
+  "baseline": {
+    "version": "1.1.1",
+    "commit": "4f074efd53066a95d64ca1ed53de03479a8adcba"
+  },
+  "parent_commit": "18bfd579c1913bfa902a096fb8a83477ce510edf",
+  "publication": "unreleased research candidate; installed release unchanged",
+  "stages": [
+    {
+      "id": "owned-browser-capture-current-hand",
+      "stage": "R1 actual acquisition and compact advisor",
+      "candidate": "Unchanged local reader on declared outlined-controls owned layout",
+      "status": "executed",
+      "source_parent_commit": "3c23ea3c7c65f4ea06af651a9ca8cc7e3c99d535",
+      "finding": "Native browser PNG to backend to main DOM, three warm repeats212.6/274.3/327.2ms, positives3/4 with cold-gap abstention; occlusion/empty2/2 safely blocked. Popup shares source, close/reopen/reuse; physical/native live popup paint unverified. Count remains unverified. Development demonstration, not independent accuracy/p95.",
+      "evidence": "validation/results/integrated-r1-session/summary.json"
+    },
+    {
+      "id": "owned-bounded-cloud-integration",
+      "stage": "Bounded local-first cloud integration attempt",
+      "candidate": "Three fixed Gemini visible-phase slots; no following lot",
+      "status": "executed",
+      "execution_freeze_sha256": "e1e3487f0eb702324e3868b1821816fb77aafebf14fb2078a23862399d6b6afc",
+      "finding": "Two wrapper attempts, zero provider POSTs/reservations. First DNS preparation consumed original3s deadline; second local PermissionError stage unknown. Third unused slot closed. DNS lease repair and safe stage diagnostics tested offline, not hybrid success or model quality. Runtime disarmed; USD8 and all old123 entries/15 unknowns unchanged.",
+      "evidence": "validation/results/integrated-r1-session/summary.json"
+    },
+    {
+      "id": "owned-complete-session-existing-v2",
+      "stage": "Complete synthetic session reconstruction and covered presence",
+      "candidate": "Existing visible-overlap-temporal-v2 versus visible-controls-temporal-v1, identical frozen videos",
+      "status": "executed",
+      "finding": "Two new owned development two-round sessions, shared renderer. Overlap usable opportunities0->3/3, missing objects26->7, duplicate exposure1->0; clean coverage unchanged1/2. Both final inventories one10 short. Four observed round boundaries correct, zero certified full counts. Offline timing/geometric identity diagnostic only; no new detector/tracker or promotion.",
+      "evidence": "validation/results/integrated-r1-session/summary.json"
+    },
+    {
+      "id": "gemini-bound-new-states-conditional-hybrid",
+      "stage": "R1 functional validation and offline hybrid integration",
+      "candidate": "Frozen available-image-views-v1 D; three new owned seeds then at most one gated headless local-first",
+      "status": "executed",
+      "source_parent_commit": "5134452dc441cd7fbe3989640295e3388bd8644b",
+      "execution_freeze_sha256": "57cdefc57c2a3b014caa48a1372efb5454331fe58271cb161cfa94e7e660bd7f",
+      "finding": "Three HTTP200/strict/exact card inventories,11/11 ranks/suits,2/2 backs; timely positives2/2, safe negative1/1, phase2/3. Negative waiting vs settled fails frozen exact phase criterion; hybrid NOT executed. Full transcription1/3, falseaccept0/3.37 integrated offline tests preserve payload/original3s/no solver on semantic rejection; no production/default wiring or promotion.",
+      "evidence": "validation/results/gemini-bound-session-hybrid/summary.json"
+    },
+    {
+      "id": "gemini-available-numeric-image-binding",
+      "stage": "R1 request-contract repair",
+      "candidate": "available-image-views-v1; C/D builder, two corrected D controls",
+      "status": "executed",
+      "source_parent_commit": "da9d670c5beefb5ecf842e7caca69876701a1c57",
+      "execution_freeze_sha256": "a1bd1a4b49037a41942fe8ba3044ed3c8fd368c64c84bcf3f069f558a63c0af3",
+      "finding": "Supplied image enum from actual byte-checked packet, not layout. Two corrected D consumed-case controls: positive1/1 at1828ms, grounded contradictory18vs15 rejection1/1 at2110ms, relevant totals2/2; full numeric transcription1/2. No output remapping/validator relaxation. C offline only, no new-session/p95/champion/hybrid claim.",
+      "evidence": "validation/results/gemini-available-image-views/summary.json"
+    },
+    {
+      "id": "gemini-new-session-paired-totals",
+      "stage": "R1 functional validation",
+      "candidate": "table-only C structured versus D JSON MIME",
+      "status": "executed",
+      "source_parent_commit": "d9216baf7052f41d90cfa9262e23f1c4ea48ca2f",
+      "execution_freeze_sha256": "a068fce367d04434c28637df2e75d0e337bd8fe54c2f42dddf19674c8fcfb1a7",
+      "finding": "Both fail:0/1 usable positive each;1/1 safe negative rejection each but0/1 grounded content. Exact cards/strict JSON4/4; all declare numeric source views never sent. Do not remap outputs or weaken gate.",
+      "evidence": "validation/results/gemini-paired-total-check/summary.json"
+    },
+    {
+      "id": "gemini-preliminary-five-session-local",
+      "stage": "R1 offline exploratory comparison",
+      "candidate": "current-local and specialized-local; five owned scenes",
+      "status": "executed",
+      "finding": "Both0/3 correct usable positives,2/2 safe negatives,1/5 exact full card state. Phase remains unestablished. No provider submissions on this corpus; planned paid five superseded before execution.",
+      "evidence": "validation/results/gemini-paired-total-check/offline-local.json"
+    },
+    {
+      "id": "native-view-packet-consistency",
+      "stage": "Current evidence across named table/detail views",
+      "candidate": "All native views, layout and source geometry fingerprint plus mutation recheck",
+      "status": "executed",
+      "source_parent_commit": "6a5e071da76c76b22453d3a4808a209f0ad74bd8",
+      "finding": "Controlled fixture same table/layout plus changed detail was valid before, rejected after; mocked fallback never reaches solver. Native crop equivalence audited offline. 813 tests+10 subtests. No provider inference, runtime origin certification, R2 or physical capture proof.",
+      "evidence": "validation/results/frame-view-consistency/summary.json"
+    },
+    {
+      "id": "gemini-five-request-controls",
+      "stage": "Frozen serialization/view/pixel-label diagnostic controls",
+      "candidate": "Existing Gemini model, MINIMAL, cap1024; structured vs JSON MIME; four views vs table; BET pixel control",
+      "status": "executed",
+      "source_parent_commit": "d0690c18343558b8e169b5c4fcd70b494ec5f203",
+      "finding": "Exactly five frozen A-E diagnostics on one consumed hand:4/5 correct timely R1,0/5 complete numeric transcription; original structured/four-view n[0] invented dealer_total correctly rejected. Every raw card component correct; diagnostic components cannot revive rejected full state. One observation/cell, no p95/champion. Selected texts protected; ledger111/111, USD6.165045900 upper under USD8, all old reserves retained. Runtime disarmed, no hybrid.",
+      "freeze_sha256": "3783df4d50421c79df3cc2575f2f8ced8577f73c384af9e3723a1859e789876e",
+      "evidence": "validation/results/gemini-five-diagnostics/summary.json",
+      "preparation_evidence": {
+        "id": "gemini-five-request-controls",
+        "stage": "Frozen serialization/view/pixel-label diagnostic controls",
+        "candidate": "Existing Gemini model, MINIMAL, cap1024; structured vs JSON MIME; four views vs table; BET pixel control",
+        "status": "available",
+        "source_parent_commit": "6a5e071da76c76b22453d3a4808a209f0ad74bd8",
+        "finding": "Five payloads prepared and verified with socket/DNS denied;0 provider requests. Original gates/evaluator unchanged. Consumed development diagnostic, not independent validation. Snapshot historical reservation USD1.5856640, count106/106 exhausted; new bounded authorization required before any submission.",
+        "freeze_sha256": "3783df4d50421c79df3cc2575f2f8ced8577f73c384af9e3723a1859e789876e",
+        "evidence": "validation/results/frame-view-consistency/summary.json"
+      },
+      "execution_freeze_sha256": "25042d9a86d2fdd6e8c1179568f95a1b4caee1442446d8ec1c1babf85d8600ed"
+    },
+    {
+      "id": "two-provider-offline-diagnostics",
+      "stage": "New response text and extended-wait diagnosis, isolated from live advice",
+      "candidate": "Frozen Gemini structured-card-limit-local and Luna Fast compact on consumed owned PR19 input",
+      "status": "executed",
+      "finding": "Exactly two consumed-case diagnostic requests. Gemini new unlabelled20/dealer_total with null label is correctly rejected at n[0]; Luna strict/semantic/R1-valid at3.578s. Both encrypted locally, never advisor eligible; no p95/champion or independent validation. Runtime disarmed, count106/106 under unchanged USD8, old104 entries/all15 unknown reserves retained; no following batch.",
+      "source_parent_commit": "49d40036bef36fcf0658cf545946896d4d819f41",
+      "evidence": "validation/results/two-provider-diagnostics/summary.json"
+    },
+    {
+      "id": "rejected-output-offline-diagnostics",
+      "stage": "Private rejected-observation retention and validation-boundary diagnosis",
+      "candidate": "Unchanged compact live-v3 reader and numeric-provenance-r1-v1 with opt-in diagnostic tap",
+      "status": "executed",
+      "finding": "Zero provider calls. 15 fabricated contract cases and actual Windows DPAPI/DACL roundtrip preserve exact rejected text without provider envelope/headers. Invariants precede semantic normalization; contradictions/timeouts/stale bodies remain rejected. Frozen PR19 evidence and ledger unchanged. Missing prior 566-byte response remains missing; no live promotion or new latency/accuracy evidence.",
+      "source_parent_commit": "1770c32cc170c0c194c7d5309a2ed6787cc899a3",
+      "evidence": "validation/results/rejected-output-diagnostics/summary.json",
+      "proposal_only": "validation/results/rejected-output-diagnostics/proposal.json"
+    },
+    {
+      "id": "paired-semantic-four-plus-one",
+      "stage": "Four new paired still responses under shared semantics and an absolute capture deadline",
+      "candidate": "Frozen Luna Fast compact live-v3 vs Gemini structured-card-limit-local; numeric-provenance-r1-v1",
+      "status": "executed",
+      "finding": "Exactly four unique submissions on two fresh owned sessions. Luna 0/2 strict/timely R1, two header-wait timeouts; Gemini 1/2, one HTTP200 local n[0] total-label rejection. Zero false accepts on this tiny sample. Neither passes frozen 2/2 gate; no hybrid. Real Gemini complete pool reuse traced, no causal speedup. Original broad-stop receipts retained; completion uses only distinct unused pairs, same frozen contract. No promotion.",
+      "source_parent_commit": "a4eb763470dac5795518c4728fd16ad5da19b969",
+      "freeze_sha256": "f81df70de7c4a86d1adb274e0a0169ee72aed3bd888e46e75e411a011b927b58",
+      "evidence": "validation/results/paired-semantic-hybrid/summary.json"
+    },
+    {
+      "id": "numeric-provenance-offline-alignment",
+      "stage": "Shared semantic numeric gate and evaluator, consumed-response replay",
+      "candidate": "numeric-provenance-r1-v1, opt-in only; frozen live-v3 readers unchanged",
+      "status": "executed",
+      "finding": "Zero calls. Contract re-evaluation gives Gemini 3/3 semantic R1 and Luna 2/3; timeout retained. Semantic full transcription 3/3 versus 1/3, literal both 0/3. Original PR17 scores unchanged; no fresh accuracy or generalization evidence. Negative value/role/view cases rejected. Persistent pool lifecycle verified socketlessly only; DNS/latency not fixed.",
+      "evidence": "validation/results/numeric-provenance-alignment/summary.json"
+    },
+    {
+      "id": "scoped-dns-paired-six",
+      "stage": "Connection diagnosis and original paired smoke",
+      "candidate": "Frozen Luna Fast live-v3 vs Gemini structured-card-limit-local",
+      "status": "executed",
+      "finding": "DNS stage localized; expiring OS-resolved per-client addresses pass both exact authenticated model GETs with unchanged TLS. Six paired calls complete; Luna 2/3 correct timely R1 plus one timeout; Gemini 2/3 plus one literal-label provenance false accept. Both 0/3 complete transcription. No champion or hybrid.",
+      "evidence": "validation/results/cloud-connection-paired-smoke/summary.json"
+    },
+    {
+      "id": "paired-cloud-smoke-preflight",
+      "stage": "Frozen paired cloud smoke",
+      "candidate": "Luna Fast compact live-v3 vs Gemini structured-card-limit-local",
+      "status": "blocked",
+      "finding": "0/6 inference calls; both authenticated model GETs time out. Freeze/prices/budget pass, ledger unchanged; runtime never armed.",
+      "evidence": "validation/results/paired-cloud-smoke/preflight.json"
+    },
+    {
+      "id": "paired-cloud-offline-preparation",
+      "stage": "Fresh session-disjoint paired cloud readiness",
+      "candidate": "Luna Fast compact live-v3 vs Gemini structured-card-limit-local",
+      "status": "available",
+      "finding": "32 owned natural-session inputs / six source sessions; 64 offline payloads, common provenance-aware evaluator; initial six proposed requests USD2.5310064 reservation. Zero inference. Full validation/hybrid completion not guaranteed by current uncertain-charge margin.",
+      "evidence": "validation/results/paired-cloud-preparation/summary.json"
+    },
+    {
+      "id": "gemini-exact-schema-cause",
+      "stage": "Single-constraint causal request ablation",
+      "candidate": "Gemini 3.5 Flash Lite structured output, provider card count bound enforced locally",
+      "status": "executed",
+      "finding": "Identical full request: maxItems=52 -> HTTP400; remove only c.maxItems -> HTTP200, valid complete development state in 2.272s; exact reintroduction -> HTTP400. Internal reason generic. One separate pre-submission DNS timeout. No promotion.",
+      "evidence": "validation/results/gemini-schema-cause/summary.json"
+    },
+    {
+      "id": "gemini-json-request-fix",
+      "stage": "Gemini account/request isolation",
+      "candidate": "Existing Gemini 3.5 Flash Lite; explicit json-mode live-v3 serialization with strict local validation",
+      "status": "executed",
+      "finding": "Minimal text succeeds in 0.962s; legacy structured hand schema HTTP400; identical owned image views succeed in JSON mode in 1.993s with a complete correct state. Exact failed schema constraint unknown; one reused development still, no promotion.",
+      "evidence": "validation/results/gemini-request-fix/summary.json"
+    },
+    {
+      "id": "grounded-r1-v2-hybrid",
+      "stage": "Numeric provenance, visibility truth, paired API and continuous revalidation",
+      "candidate": "Frozen Local A/B; same grounded schema for Luna Fast/Gemini 3.5 Flash Lite; 3s research deadline",
+      "status": "executed",
+      "finding": "Validation A 28/34 ranks, 12/34 suits; B 33/34 ranks, 4/34 suits. Both phase 0/12, timely usable 0/9. Gemini HTTP400 twice; Luna timeout once; remaining API/hybrid trials not executed. Concurrent producer mocks test stale rejection, not API quality. No promotion.",
+      "evidence": "validation/results/grounded-reader-v2/summary.json"
+    },
+    {
+      "id": "specialized-local-card-reader",
+      "stage": "One trained YOLO26n/keypoint + learned rank/suit challenger",
+      "candidate": "YOLO26n-pose, three classes/four points; learned 13+unknown ranks and 4+unknown suits; native table ROI",
+      "status": "executed",
+      "finding": "8,000 owned train / 1,000 calibration / 1,000 frozen verification scenes. Verification exact nonempty states 26/941 -> 480/941, including correct unknown declarations; rank reads 694/2740 -> 2343/2740. Two new physical sessions with six paired variants each: timely R1 9/60 -> 17/60, but diagnostic identity switches 8 -> 119 and one duplicate. Historical provider ranks regress 9/9 -> 2/9. Research retained; default/provider/poker/R2 promotion rejected.",
+      "evidence": "validation/results/specialized-card-reader/comparison.json"
+    },
+    {
+      "id": "independent-reader-tournament",
+      "stage": "New session/seed/graphic-family local baseline",
+      "candidate": "frozen 77a036a opt-in context/overlap profile; no manual turn",
+      "status": "executed",
+      "finding": "Two original physical sessions, 12 distinct rounds, six paired difficulty renderings each. Development clean 5/5, overlap 4/5; validation clean 2/5 despite 350/350 ranks, overlap 4/5. Rotation/fading 0/5; clipped/covered have zero fully observable opportunities. Final holdout sealed; no champion or certified R2 promotion.",
+      "evidence": "validation/results/independent-tournament/local-baseline.json"
+    },
+    {
+      "id": "compact-native-advisor",
+      "stage": "External compact source-bound display",
+      "candidate": "existing native advisor, 260x220 window; one observer",
+      "status": "executed",
+      "finding": "Portable native executable verifies pin/minimize/reset/hide/reopen and capture-timestamp expiry. Installed 1.1.1 unchanged. HTTP minimized submissions are not actual minimized screen capture; cross-monitor dragging and mixed DPI remain unverified.",
+      "evidence": "validation/results/compact-advisor/verification.json"
+    },
+    {
+      "id": "synthetic-api-tournament",
+      "stage": "Reviewed native development OpenAI tournament",
+      "candidate": "gpt-6-luna Standard/Fast; gpt-6.1-sol residual cases; Gemini deferred",
+      "status": "executed",
+      "finding": "69 funded submissions under the same EUR10 allowance: 51 Luna Standard, 15 paired Fast, 3 selected Sol; 70 lifetime attempts including preserved HTTP429. Fast 39/39 annotated ranks/tuples, p95 2221ms, 0 timeouts/15, but 0/12 usable synthetic player states: unlabelled decorative 20 is read as dealer total. Fast full inventories 11/15; visibility-proxy disagreements remain. Standard 7/51 timeouts and one validation failure. No full-state/live/hybrid promotion.",
+      "evidence": "validation/results/api-reader-tournament/funded-comparison.json"
+    },
+    {
+      "id": "overlap-presence-identity",
+      "stage": "Upright overlap presence, physical identity and disabled-control regression",
+      "candidate": "unchanged ranks + patterned blue-back localization + ordered row association + enabled control evidence",
+      "status": "executed",
+      "finding": "Development overlap 6/6 R1 and full-table opportunities, 20/20 exposure identities, no miss/duplicate. New original graphics 7/7 per profile; graphic variations 0/7 per profile despite complete rank/presence tables. Provisional identity switches remain; no R2/default promotion.",
+      "evidence": "validation/results/overlap-session/comparison.json"
+    },
+    {
+      "id": "synthetic-continuous-stress",
+      "stage": "Local controlled continuous video and engine stress",
+      "candidate": "Existing Blackjack engine, six original visual variants, unchanged calibrated LiveObserver",
+      "status": "executed",
+      "finding": "200000 engine invariant rounds passed. Six paired 3-round development clips: clean 310/310 rank observations, phase unknown in all 522 sampled frames; 0/36 paired decision opportunities timely usable. Rotations/fading remain weak. No promotion.",
+      "evidence": "validation/results/synthetic-stress-lab/summary.json"
+    },
+    {
+      "id": "freegames-neutral-index",
+      "stage": "Native development stills / surface and corner proposals",
+      "candidate": "neutral bright mask + upright index row; same local OCR and initial ROI",
+      "status": "executed",
+      "finding": "On eight new sparse Freegames stills: exact nonempty inventories 1/7 -> 6/7; correct conditional rank-study opportunities 0/5 -> 4/5. Phase unknown in all eight, suits incomplete, one missed face. Historical BrainPlay regresses. Research only, no promotion.",
+      "evidence": "validation/results/freegames-surface-probe/summary.json"
+    },
+    {
+      "id": "r1-reader-comparison",
+      "stage": "R1 current hand observation",
+      "candidate": "calibrated local versus OpenAI Responses image reader, at most two configurations",
+      "status": "executed",
+      "finding": "Historical still/zero-budget guard preserved. VISION-016 executes bounded actual inference with durable aggregate accounting. Frozen local source, weights and thresholds unchanged. Fast perception/latency promising on a consumed subset, but context/total provenance and visibility annotations prevent promotion; Gemini absent."
+    },
+    {
+      "id": "provider-session-gate",
+      "stage": "Complete original provider sessions",
+      "candidate": "Freegames classic, initial calibration, manual turn disabled",
+      "status": "not_executable",
+      "finding": "Zero original complete videos. Autonomous collection attempted, but native window/source-picker controls could not provide a verified continuous recording. Eight new sparse native browser stills acquired instead; explicitly not session evidence. Calibrated phase remains unknown."
+    },
+    {
+      "id": "proposal-cause-audit",
+      "stage": "Proposal versus physical presence",
+      "candidate": "review of 29 preserved learned-adapter extras",
+      "status": "executed",
+      "finding": "Consumed-still assistant diagnostic review: 15 suit fragments, 4 face artwork, 5 badge digits, 2 capture-overlay text, 3 correct corners with inferred-box mismatch. No model promotion; independent presence verification still required."
+    },
+    {
+      "id": "capture",
+      "stage": "Acquisition",
+      "candidate": "native selected ROI vs 1920 full frame",
+      "status": "executed",
+      "finding": "Native ROI preserves source pixels; still-image comparison does not measure capture-to-display."
+    },
+    {
+      "id": "roi",
+      "stage": "Calibration",
+      "candidate": "explicit table/dealer/player/control regions",
+      "status": "executed",
+      "finding": "Source dimension/crop changes invalidate calibration. Touching a role edge blocks the tested cropped-card case. Same-size motion wholly inside ROI is not automatically recalibration; arbitrary scroll not certified."
+    },
+    {
+      "id": "localization",
+      "stage": "Localization",
+      "candidate": "baseline / calibrated corners / YOLO26n",
+      "status": "executed",
+      "finding": "Calibrated presence v2: 10/10 objects on two development moments; learned-corner/OCR adapter: 6/10 matched, 29 extra. No promotion."
+    },
+    {
+      "id": "ranks",
+      "stage": "Rank reading",
+      "candidate": "pixel corner OCR / YOLO26n 13-rank pilot",
+      "status": "executed",
+      "finding": "Calibrated 9/9; learned-corner/OCR 5/9 geometrically matched, inventory intersection 8/9 can hide assignment errors. Development only."
+    },
+    {
+      "id": "suits",
+      "stage": "Suit reading",
+      "candidate": "silhouette templates; learned corner classifier alternative",
+      "status": "executed",
+      "finding": "Calibrated four correct, zero wrong, five unknown. Rank-only YOLO pilot does not support suits; learned adapter uses silhouette templates, not a learned suit classifier."
+    },
+    {
+      "id": "rotation",
+      "stage": "Rotation / overlap",
+      "candidate": "corner detector; OBB/segmentation or RT-DETR alternatives",
+      "status": "proposed",
+      "finding": "Upright exposed K recovered; monitor-photo rotated cards remain diagnostic failures. No unseen graphics proof."
+    },
+    {
+      "id": "tracking",
+      "stage": "Object/card identity",
+      "candidate": "current tracker; ByteTrack / BoT-SORT alternatives",
+      "status": "available",
+      "finding": "PR1 continuity retained. Same detection replay comparison and new independent video sessions not executed in this increment."
+    },
+    {
+      "id": "temporal",
+      "stage": "Temporal confirmation",
+      "candidate": "three observations / probabilistic voting alternative",
+      "status": "executed",
+      "finding": "Historical own renderer: three observations/state lose inventory 17/18/19; six retain errors 0/4/4. New separate lifecycle/tracker counters expose sequential waits; pixel unit fixture commits at observation 5 with both windows at 3. No new provider video validation or lowered thresholds."
+    },
+    {
+      "id": "context",
+      "stage": "Game context",
+      "candidate": "visible-controls-temporal-v1 opt-in synthetic context challenger",
+      "status": "executed",
+      "finding": "VISION-012: clean 87/87 phase and 6/6 timely qualified opportunities, no manual turn; frozen five-condition transfer remains incomplete. Not a provider/default promotion.",
+      "historical_finding": "Manual turn required. Direct-settlement hands with no observable phase/boundary account for four lost exposures in two own sequences. No strategy or count promotion."
+    },
+    {
+      "id": "integrity",
+      "stage": "Integrity / count",
+      "candidate": "strict gates and source-bound reports",
+      "status": "executed",
+      "finding": "Calibrated stills: only 1/3 correctly usable despite 9/9 ranks. Unreadable player cards/cropped surfaces block advice. Research RC/TC never certified."
+    },
+    {
+      "id": "display",
+      "stage": "Visualization",
+      "candidate": "source coordinate overlays / private diagnostic ZIP",
+      "status": "executed",
+      "finding": "Actual selected-region pixels previewed; user-triggered ZIP contains exact uploaded bytes, crops, transform and tracker report."
+    },
+    {
+      "id": "verification",
+      "stage": "Independent verifier",
+      "candidate": "local Clef; classifier challengers",
+      "status": "available",
+      "finding": "Clef optional runtime available; not compared in this first pixel benchmark. No invented score."
+    },
+    {
+      "id": "data",
+      "stage": "Dataset partition",
+      "candidate": "session/family manifests and hashes",
+      "status": "available",
+      "finding": "Private cases remain consumed development evidence. VISION-014 adds original session/seed/family-disjoint development/validation and a sealed final holdout; shared rendering mechanics are disclosed. No private pixels distributed."
+    },
+    {
+      "id": "learning",
+      "stage": "Learning diagnostic",
+      "candidate": "scratch / official pretrained rank / pretrained geometry + shared OCR",
+      "status": "executed",
+      "finding": "Audited 160 synthetic images/960 labels. Geometry learns memorized corners after development score/NMS selection; provider comparison still fails. No final holdout read."
+    },
+    {
+      "id": "visible-phase-stress",
+      "stage": "Visible phase / continuous development context",
+      "candidate": "unchanged rank reader + visible-controls-temporal-v1",
+      "status": "executed",
+      "finding": "Clean 0/6 -> 6/6; overall 0/36 -> 6/36. Per-rank final drift clean zero. Fading fails phase; rotation/crop/overlap fail complete table evidence.",
+      "result": "validation/results/visible-phase/comparison.json"
+    },
+    {
+      "id": "live-grounded-schema",
+      "stage": "R1 response contract",
+      "candidate": "compact live v3 vs frozen PR11/PR12",
+      "status": "executed",
+      "finding": "Luna Fast 3/3 correct usable R1 within 3s, p50/p95 1.99/2.13s; full grounded state only 1/3 because two UI badge omissions. Research only.",
+      "result": "validation/results/live-reader-diagnosis/summary.json"
+    },
+    {
+      "id": "gemini-request-diagnosis",
+      "stage": "Provider request audit",
+      "candidate": "Gemini Lite current REST / common live schema",
+      "status": "executed",
+      "finding": "Read-only model and REST/schema audit pass; timeout then generic INVALID_ARGUMENT 400. Exact argument unresolved, third request not executed; quality unmeasured.",
+      "result": "validation/results/live-reader-diagnosis/summary.json"
+    },
+    {
+      "id": "actual-live-hybrid",
+      "stage": "Local-first current advisor",
+      "candidate": "frozen specialized local -> actual Luna Fast",
+      "status": "executed",
+      "finding": "Three controlled pixel-producer trials, two actual API calls: no current advice presented. Changed pixels correctly rejected; stable warm trial times out during DNS/TCP.",
+      "result": "validation/results/live-reader-diagnosis/summary.json"
+    },
+    {
+      "id": "bounded-transport",
+      "stage": "Caller deadline",
+      "candidate": "background network loop / persistent DNS executor",
+      "status": "executed",
+      "finding": "Initial Gemini caller took 11.35s despite HTTP timeout; separate transport supplement caller 3.031s. Unit deadline proof is not physical capture/native paint evidence.",
+      "result": "validation/results/live-reader-diagnosis/summary.json"
+    }
+  ],
+  "comparison": {
+    "scope": "private development stills; repeated preview is same family/session, not independent data",
+    "hardware": {
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD"
+    },
+    "source_fingerprint": "5aee4dcaf763b7bec6d6dbb8346083d6ebd6160acab49623b709b43c863d3c0f",
+    "timing_protocol": "one excluded runtime warm-up then three repeats per case/profile; glyph OCR cache cleared before each repeat; offline detection only, unrelated Clef runtime idle and CPU pilot training finished",
+    "metrics_semantics": "manual full-card boxes matched at IoU .30 within role; still-image detection/zone rank and suit metrics, not calibrated certainty or detection AP",
+    "selection": "no promotion; limited samples and no unseen external session evaluation",
+    "not_measured": [
+      "tracking ID switches",
+      "missed/duplicate video events",
+      "RC/TC session drift",
+      "capture-to-display latency",
+      "independent final generalization"
+    ],
+    "aggregates": {
+      "baseline-full": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 3,
+        "missed_zone_ranks": 6,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.3333333333333333,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 905.9573000049568,
+        "offline_ms_p95": 1680.2188599976944,
+        "localization_precision": 1.0,
+        "localization_recall": 0.3,
+        "rank_correct_including_misses": 3,
+        "suit_correct_including_misses": 0,
+        "suits_supported": true,
+        "outcomes": {
+          "suit": {
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 3,
+            "missed": 6
+          }
+        }
+      },
+      "baseline-native-roi": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 3,
+        "missed_zone_ranks": 6,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.3333333333333333,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 791.6413999992074,
+        "offline_ms_p95": 1622.4707199973636,
+        "localization_precision": 1.0,
+        "localization_recall": 0.3,
+        "rank_correct_including_misses": 3,
+        "suit_correct_including_misses": 0,
+        "suits_supported": true,
+        "outcomes": {
+          "suit": {
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 3,
+            "missed": 6
+          }
+        }
+      },
+      "calibrated-corners": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 9,
+        "missed_zone_ranks": 0,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 1.0,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 220.79699999449076,
+        "offline_ms_p95": 275.34902000043076,
+        "localization_precision": 1.0,
+        "localization_recall": 0.9,
+        "rank_correct_including_misses": 9,
+        "suit_correct_including_misses": 4,
+        "suits_supported": true,
+        "outcomes": {
+          "suit": {
+            "correct": 4,
+            "wrong": 0,
+            "unknown": 5,
+            "missed": 0
+          }
+        }
+      },
+      "ultralytics-corners": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 0,
+        "missed_zone_ranks": 9,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.0,
+        "rank_inventory_precision": null,
+        "offline_ms_p50": 118.64860000059707,
+        "offline_ms_p95": 189.55875999818088,
+        "localization_precision": null,
+        "localization_recall": 0.0,
+        "rank_correct_including_misses": 0,
+        "suit_correct_including_misses": null,
+        "suits_supported": false,
+        "outcomes": {
+          "suit": null
+        }
+      }
+    },
+    "detector_version": "calibrated-corners-1 (historical)"
+  },
+  "ultralytics_training": {
+    "schema": 1,
+    "ultralytics": "8.4.7",
+    "torch": "2.9.1+cpu",
+    "device": "cpu",
+    "model": "yolo26n.yaml",
+    "initialization": "random scratch, no pretrained COCO weights",
+    "classes": [
+      "A",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "J",
+      "Q",
+      "K"
+    ],
+    "checkpoint_sha256": "479a72b6247e679eb612bf41da7aefb10a100d2f28a364cfabeb79ff77b434ae",
+    "data_manifest_sha256": "314fbe487621eb6a1f1b33df46b717da4f39b5510d8b0ddea06a24c2bec8bc29",
+    "epochs": 8,
+    "wall_seconds": 227.8655327000015,
+    "validation_metrics": {
+      "metrics/precision(B)": 0.0,
+      "metrics/recall(B)": 0.0,
+      "metrics/mAP50(B)": 0.0,
+      "metrics/mAP50-95(B)": 0.0,
+      "fitness": 0.0
+    },
+    "telemetry": false,
+    "external_uploads": false,
+    "license": "Ultralytics AGPL-3.0; no distribution promotion",
+    "scope": "small synthetic training pilot, not proof of provider generalization",
+    "suits_supported": false
+  },
+  "private_artifacts": "Detailed private cases, pixels, diagnostics and manifests remain in ignored artifacts/vision-research.",
+  "statuses": [
+    "proposed",
+    "available",
+    "executed",
+    "not executable",
+    "rejected",
+    "promoted"
+  ],
+  "decision": "No detector promoted. Failed scratch pilot preserved; bounded geometry learning demonstrated only on memorized development examples. Calibrated profile remains research-only.",
+  "latest_comparison": {
+    "scope": "private development stills; repeated preview is same family/session, not independent data",
+    "hardware": {
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD"
+    },
+    "source_fingerprint": "2132801b06730906247897961c80550a13e3112ca606f8757799b5f549d0725e",
+    "manifest_sha256": "691265dd7de8c88283fa2d00b74b07bd8f5b226de39a83ffaabc4eea01c11de7",
+    "metrics_semantics": "manual full-card boxes matched at IoU .30 within role; still-image detection/zone rank and suit metrics, not calibrated certainty or detection AP",
+    "timing_protocol": "one excluded runtime warm-up then three repeats per case/profile; glyph OCR cache cleared before each repeat; offline detection only",
+    "timing_environment": "Training and build processes completed; no concurrent research training; unrelated Clef runtime left idle",
+    "selection": "no promotion; limited samples and no unseen external session evaluation",
+    "not_measured": [
+      "tracking ID switches",
+      "missed/duplicate video events",
+      "RC/TC session drift",
+      "capture-to-display latency",
+      "independent final generalization"
+    ],
+    "aggregates": {
+      "baseline-full": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 3,
+        "missed_zone_ranks": 6,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.3333333333333333,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 1164.810000002035,
+        "offline_ms_p95": 1967.001319998235,
+        "localization_precision": 1.0,
+        "localization_recall": 0.3,
+        "rank_correct_including_misses": 3,
+        "suit_correct_including_misses": 0,
+        "suits_supported": true,
+        "outcomes": {
+          "rank": {
+            "correct": 3,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 6
+          },
+          "suit": {
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 3,
+            "missed": 6
+          }
+        },
+        "presence_outcomes": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 7,
+          "extra": 0,
+          "covered_correct": 0,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 0,
+          "correctly_usable": 0,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      },
+      "baseline-native-roi": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 3,
+        "missed_zone_ranks": 6,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.3333333333333333,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 947.6641000001109,
+        "offline_ms_p95": 1839.7534000017913,
+        "localization_precision": 1.0,
+        "localization_recall": 0.3,
+        "rank_correct_including_misses": 3,
+        "suit_correct_including_misses": 0,
+        "suits_supported": true,
+        "outcomes": {
+          "rank": {
+            "correct": 3,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 6
+          },
+          "suit": {
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 3,
+            "missed": 6
+          }
+        },
+        "presence_outcomes": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 7,
+          "extra": 0,
+          "covered_correct": 0,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 0,
+          "correctly_usable": 0,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      },
+      "calibrated-corners": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 9,
+        "missed_zone_ranks": 0,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 1.0,
+        "rank_inventory_precision": 1.0,
+        "offline_ms_p50": 161.722999997437,
+        "offline_ms_p95": 257.36506000102963,
+        "localization_precision": 1.0,
+        "localization_recall": 1.0,
+        "rank_correct_including_misses": 9,
+        "suit_correct_including_misses": 4,
+        "suits_supported": true,
+        "outcomes": {
+          "rank": {
+            "correct": 9,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 0
+          },
+          "suit": {
+            "correct": 4,
+            "wrong": 0,
+            "unknown": 5,
+            "missed": 0
+          }
+        },
+        "presence_outcomes": {
+          "correct": 10,
+          "wrong": 0,
+          "missed": 0,
+          "extra": 0,
+          "covered_correct": 1,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 1,
+          "correctly_usable": 1,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      },
+      "ultralytics-corners": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 0,
+        "missed_zone_ranks": 9,
+        "extra_or_wrong_zone_ranks": 0,
+        "rank_inventory_recall": 0.0,
+        "rank_inventory_precision": null,
+        "offline_ms_p50": 122.59020000055898,
+        "offline_ms_p95": 181.19751999765867,
+        "localization_precision": null,
+        "localization_recall": 0.0,
+        "rank_correct_including_misses": 0,
+        "suit_correct_including_misses": null,
+        "suits_supported": false,
+        "outcomes": {
+          "rank": {
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 9
+          },
+          "suit": null
+        },
+        "presence_outcomes": {
+          "correct": 0,
+          "wrong": 0,
+          "missed": 10,
+          "extra": 0,
+          "covered_correct": 0,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 0,
+          "correctly_usable": 0,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      },
+      "learned-corners-ocr": {
+        "visible_cards": 9,
+        "correct_zone_ranks": 8,
+        "missed_zone_ranks": 1,
+        "extra_or_wrong_zone_ranks": 2,
+        "rank_inventory_recall": 0.8888888888888888,
+        "rank_inventory_precision": 0.8,
+        "offline_ms_p50": 815.620499997749,
+        "offline_ms_p95": 1042.7951399979065,
+        "localization_precision": 0.17142857142857143,
+        "localization_recall": 0.6,
+        "rank_correct_including_misses": 5,
+        "suit_correct_including_misses": 1,
+        "suits_supported": true,
+        "outcomes": {
+          "rank": {
+            "correct": 5,
+            "wrong": 0,
+            "unknown": 0,
+            "missed": 4
+          },
+          "suit": {
+            "correct": 1,
+            "wrong": 0,
+            "unknown": 4,
+            "missed": 4
+          }
+        },
+        "presence_outcomes": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 4,
+          "extra": 29,
+          "covered_correct": 1,
+          "covered_wrong": 0
+        },
+        "state_usefulness": {
+          "stills": 3,
+          "independent_moments": 2,
+          "advice_available": 0,
+          "correctly_usable": 0,
+          "scope": "same still replayed five times with manual turn; not first stable video latency or session integrity"
+        }
+      }
+    },
+    "localizer_checkpoint_sha256": "b76d7f2cc045330f7505cf136018076c1b1751027f3f29874b170111d5edbf2c",
+    "operating_points_sha256": "a095a418fe6501de6881f203ee6b17dee5f30a4bf9333a2f84c1961cd6e37d49",
+    "detector_version": "calibrated-corners-2-presence",
+    "raw_report_sha256": "c9b8e522748e8ca82d0341c7f1c39c2f65f761ea833adf284499d8ac74694637",
+    "assistance": "All challengers use the same manual dealer/player regions and manual turn. Automatic baselines have their original contracts.",
+    "full_card_geometry_warning": "Learned corners infer approximate card bodies from glyph boxes; IoU .30 is a diagnostic proxy, not corner detection AP."
+  },
+  "learning_checks": [
+    {
+      "initialization": "scratch",
+      "classes": [
+        "A",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "J",
+        "Q",
+        "K"
+      ],
+      "train_images": 16,
+      "train_annotations": 96,
+      "ultralytics": "8.4.7",
+      "torch": "2.9.1+cpu",
+      "imgsz": 416,
+      "requested_epochs": 60,
+      "actual_epochs": 60,
+      "budget_seconds": 360,
+      "wall_seconds": 314.62264710000454,
+      "dataset_sha256": "fc55c14bf9c8f72002901e6b2184ff5876fe89f3e43f7cbf0b59ea76f6851649",
+      "checkpoint_sha256": "b2ff991e30110a986ca3a57898df7cf27d57cbaaa0371fbd0a01539a95956afe",
+      "validation_metrics": {
+        "metrics/precision(B)": 0.0,
+        "metrics/recall(B)": 0.0,
+        "metrics/mAP50(B)": 0.0,
+        "metrics/mAP50-95(B)": 0.0,
+        "fitness": 0.0
+      },
+      "id": "learning-scratch",
+      "task": "rank",
+      "receipt_sha256": "9aad8f30442cc80899cdf83e2af312057a079bf37b5d252c4e44086659bf1219",
+      "fixed_gate": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "truth": 96,
+        "localized": 0,
+        "rank_correct": 0,
+        "rank_wrong": 0,
+        "missed": 96,
+        "extra_boxes": 0,
+        "learning_gate": false,
+        "gate_defined_before_run": ">=90% localization, >=80% correct rank including misses, <=10% extra boxes; train memorization only",
+        "independent_validation": false
+      },
+      "learning_gate": false,
+      "finding": "Memorized train mAP50 0.000; at the fixed .50 threshold 0/96 localized. No independent validation.",
+      "decision": "Not promoted; retain failed .50 gate and completed checkpoint.",
+      "suits_supported": false,
+      "origin_sha256": null
+    },
+    {
+      "initialization": "pretrained",
+      "classes": [
+        "A",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "J",
+        "Q",
+        "K"
+      ],
+      "train_images": 16,
+      "train_annotations": 96,
+      "ultralytics": "8.4.7",
+      "torch": "2.9.1+cpu",
+      "imgsz": 416,
+      "requested_epochs": 60,
+      "actual_epochs": 60,
+      "budget_seconds": 360,
+      "wall_seconds": 323.2756466999999,
+      "dataset_sha256": "fc55c14bf9c8f72002901e6b2184ff5876fe89f3e43f7cbf0b59ea76f6851649",
+      "checkpoint_sha256": "40203fa188d373c06976ffa8c373b637b9a60b1dca02b22da77bc9e653e578b2",
+      "validation_metrics": {
+        "metrics/precision(B)": 0.6140646146796519,
+        "metrics/recall(B)": 0.1898914550284943,
+        "metrics/mAP50(B)": 0.23164760570179949,
+        "metrics/mAP50-95(B)": 0.16801910836201037,
+        "fitness": 0.16801910836201037
+      },
+      "id": "learning-pretrained",
+      "task": "rank",
+      "receipt_sha256": "af9135ae691b517d07f64afa47787d24f643034c489494d920ef16d7f31efa55",
+      "fixed_gate": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "truth": 96,
+        "localized": 0,
+        "rank_correct": 0,
+        "rank_wrong": 0,
+        "missed": 96,
+        "extra_boxes": 0,
+        "learning_gate": false,
+        "gate_defined_before_run": ">=90% localization, >=80% correct rank including misses, <=10% extra boxes; train memorization only",
+        "independent_validation": false
+      },
+      "learning_gate": false,
+      "finding": "Memorized train mAP50 0.232; at the fixed .50 threshold 0/96 localized. No independent validation.",
+      "decision": "Not promoted; retain failed .50 gate and completed checkpoint.",
+      "suits_supported": false,
+      "origin_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "initialization": "pretrained",
+      "classes": [
+        "rank-corner"
+      ],
+      "train_images": 16,
+      "train_annotations": 96,
+      "ultralytics": "8.4.7",
+      "torch": "2.9.1+cpu",
+      "imgsz": 416,
+      "requested_epochs": 60,
+      "actual_epochs": 60,
+      "budget_seconds": 360,
+      "wall_seconds": 325.58219929999905,
+      "dataset_sha256": "7ec8403ba2b23531a7b30bd93fd82c6d91d64a6ed1f2ae75564a2036818a4070",
+      "checkpoint_sha256": "b76d7f2cc045330f7505cf136018076c1b1751027f3f29874b170111d5edbf2c",
+      "validation_metrics": {
+        "metrics/precision(B)": 0.8949409014115299,
+        "metrics/recall(B)": 0.798631932081347,
+        "metrics/mAP50(B)": 0.9296468617492563,
+        "metrics/mAP50-95(B)": 0.710105884929549,
+        "fitness": 0.710105884929549
+      },
+      "id": "learning-corner",
+      "task": "corner",
+      "receipt_sha256": "d045fa78465a457af032839e5310d259a969c9aa925446b11bd0266551e183a0",
+      "fixed_gate": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "truth": 96,
+        "localized": 0,
+        "rank_correct": 0,
+        "rank_wrong": 0,
+        "missed": 96,
+        "extra_boxes": 0,
+        "classification_task": "one geometry class; no rank or suit classifier",
+        "learning_gate": false,
+        "gate_defined_before_run": ">=90% localization, >=80% correct rank including misses, <=10% extra boxes; train memorization only",
+        "independent_validation": false
+      },
+      "learning_gate": false,
+      "finding": "Memorized train mAP50 0.930; at the fixed .50 threshold 0/96 localized. No independent validation. Development score/NMS diagnostic selects .025: 92/96 localized, four missed, one extra. This permits only a development comparison.",
+      "decision": "Compared on private development stills; 29 extra objects, 0/3 usable. Do not promote.",
+      "suits_supported": false,
+      "origin_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "initialization": "refine",
+      "classes": [
+        "rank-corner"
+      ],
+      "train_images": 16,
+      "train_annotations": 96,
+      "ultralytics": "8.4.7",
+      "torch": "2.9.1+cpu",
+      "imgsz": 416,
+      "requested_epochs": 30,
+      "actual_epochs": 30,
+      "budget_seconds": 180,
+      "wall_seconds": 135.49171309999656,
+      "dataset_sha256": "7ec8403ba2b23531a7b30bd93fd82c6d91d64a6ed1f2ae75564a2036818a4070",
+      "checkpoint_sha256": "737304c2d1c81acf7ac70382d6a6b47d55b59f0c533396897b41d926fd28044d",
+      "validation_metrics": {
+        "metrics/precision(B)": 0.8949409014115299,
+        "metrics/recall(B)": 0.798631932081347,
+        "metrics/mAP50(B)": 0.9296468617492563,
+        "metrics/mAP50-95(B)": 0.710105884929549,
+        "fitness": 0.710105884929549
+      },
+      "id": "learning-corner-refine",
+      "task": "corner",
+      "receipt_sha256": "db17bbb390ffbbe7e20f442cdb0b754b8f03883097d7efae2c133e827bc9cbc5",
+      "fixed_gate": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "truth": 96,
+        "localized": 0,
+        "rank_correct": 0,
+        "rank_wrong": 0,
+        "missed": 96,
+        "extra_boxes": 0,
+        "classification_task": "one geometry class; no rank or suit classifier",
+        "learning_gate": false,
+        "gate_defined_before_run": ">=90% localization, >=80% correct rank including misses, <=10% extra boxes; train memorization only",
+        "independent_validation": false
+      },
+      "learning_gate": false,
+      "finding": "Memorized train mAP50 0.930; at the fixed .50 threshold 0/96 localized. No independent validation. Thirty additional epochs retain the same best metrics; extra time did not improve this checkpoint.",
+      "decision": "Not promoted; retain failed .50 gate and completed checkpoint.",
+      "suits_supported": false,
+      "origin_sha256": "b76d7f2cc045330f7505cf136018076c1b1751027f3f29874b170111d5edbf2c"
+    }
+  ],
+  "learning_operating_point": {
+    "scope": "train memorization score/NMS diagnostic, development selection, no independent validation",
+    "checkpoint_sha256": "b76d7f2cc045330f7505cf136018076c1b1751027f3f29874b170111d5edbf2c",
+    "rule": "largest grid threshold with >=90% geometric recall and precision on development memorization data",
+    "grid": [
+      0.01,
+      0.025,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "matching_iou": 0.5,
+    "fixed_050_gate_preserved": false,
+    "rows": [
+      {
+        "threshold": 0.01,
+        "localized": 96,
+        "missed": 0,
+        "extra": 104,
+        "precision": 0.48,
+        "recall": 1.0,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.025,
+        "localized": 92,
+        "missed": 4,
+        "extra": 1,
+        "precision": 0.989247311827957,
+        "recall": 0.9583333333333334,
+        "diagnostic_gate": true
+      },
+      {
+        "threshold": 0.05,
+        "localized": 84,
+        "missed": 12,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.875,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.1,
+        "localized": 57,
+        "missed": 39,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.59375,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.15,
+        "localized": 42,
+        "missed": 54,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.4375,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.2,
+        "localized": 27,
+        "missed": 69,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.28125,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.3,
+        "localized": 7,
+        "missed": 89,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.07291666666666667,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.4,
+        "localized": 3,
+        "missed": 93,
+        "extra": 0,
+        "precision": 1.0,
+        "recall": 0.03125,
+        "diagnostic_gate": false
+      },
+      {
+        "threshold": 0.5,
+        "localized": 0,
+        "missed": 96,
+        "extra": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "diagnostic_gate": false
+      }
+    ],
+    "selected": {
+      "threshold": 0.025,
+      "localized": 92,
+      "missed": 4,
+      "extra": 1,
+      "precision": 0.989247311827957,
+      "recall": 0.9583333333333334,
+      "diagnostic_gate": true
+    },
+    "can_proceed_to_development_roi_comparison": true,
+    "rank_and_suit_classifiers": "not part of this one-class localizer"
+  },
+  "own_development_sessions": {
+    "scope": "own synthetic full-round sequences, same renderer family, no external recordings",
+    "protocol": {
+      "schema": 1,
+      "scope": "own synthetic full-round sequences, same renderer family, no external recordings",
+      "seeds": [
+        4100401,
+        4100402,
+        4100403
+      ],
+      "rounds_per_session": 4,
+      "layout": {
+        "table": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "dealer": [
+          0.12,
+          0.06,
+          0.7,
+          0.29
+        ],
+        "player:0": [
+          0.12,
+          0.54,
+          0.7,
+          0.29
+        ]
+      },
+      "split": "development",
+      "detector": "calibrated-corners-2-presence",
+      "manual_turn": "simulated confirmation at each game state",
+      "suits": "correct/wrong/unknown including every visible face",
+      "count_acceptance": "never certified by this research profile",
+      "stable_observations_per_state": 6,
+      "geometry_drift": "same-size +60px (inside ROI) and +480px (clipped ROI); report gates, do not tune on them"
+    },
+    "dataset_manifest_sha256": "a02802ec54eaa216419ad77e238eb556fce40181d9736c7355fcafbbb4b6fc0f",
+    "receipt_sha256": "3c84ab611ee3827a24d2e50ac9f025da3a0a028ea11682a879ca67db11b2aced",
+    "sessions": [
+      {
+        "seed": 4100401,
+        "states": 10,
+        "decision_states": 6,
+        "correctly_usable_decision_states": 6,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 42,
+        "ranks_correct": 42,
+        "suits_correct": 17,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 25,
+        "final_inventory_l1_error": 0,
+        "final_observed_rc_error": 0,
+        "count_ever_certified": false
+      },
+      {
+        "seed": 4100402,
+        "states": 7,
+        "decision_states": 3,
+        "correctly_usable_decision_states": 3,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 27,
+        "ranks_correct": 27,
+        "suits_correct": 18,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 9,
+        "final_inventory_l1_error": 4,
+        "final_observed_rc_error": 3,
+        "count_ever_certified": false
+      },
+      {
+        "seed": 4100403,
+        "states": 10,
+        "decision_states": 6,
+        "correctly_usable_decision_states": 6,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 48,
+        "ranks_correct": 48,
+        "suits_correct": 18,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 30,
+        "final_inventory_l1_error": 4,
+        "final_observed_rc_error": -2,
+        "count_ever_certified": false
+      }
+    ],
+    "same_size_drift_probe": [
+      {
+        "source_size_unchanged": true,
+        "translation_px": 0,
+        "advice_available": true,
+        "reasons": []
+      },
+      {
+        "source_size_unchanged": true,
+        "translation_px": 60,
+        "advice_available": true,
+        "reasons": []
+      },
+      {
+        "source_size_unchanged": true,
+        "translation_px": 480,
+        "advice_available": false,
+        "reasons": [
+          "Need at least two player cards and exactly one visible dealer upcard.",
+          "No readable legal player controls; calibrate the table or declare a manual player turn."
+        ]
+      }
+    ],
+    "selection": "No promotion. New own-renderer development sessions, no new external provider session or count acceptance.",
+    "count_loss_diagnostics": [
+      {
+        "seed": 4100402,
+        "round": 1,
+        "native_phase": "settled",
+        "detected_phase": "unknown",
+        "detected_round": 0,
+        "lifecycle": {
+          "seen_round": false,
+          "stable_hits": 6,
+          "round_open": false,
+          "pending_boundary": false
+        },
+        "events": [],
+        "ranks_correct": 4,
+        "visible_faces": 4,
+        "inventory_l1_error": 4,
+        "expected_inventory": {
+          "K": 1,
+          "9": 1,
+          "A": 1,
+          "10": 1
+        },
+        "observed_inventory": {
+          "A": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0,
+          "J": 0,
+          "Q": 0,
+          "K": 0
+        },
+        "reasons": [
+          "Need at least two player cards and exactly one visible dealer upcard.",
+          "Waiting for a player decision in the video.",
+          "No readable legal player controls; calibrate the table or declare a manual player turn."
+        ]
+      },
+      {
+        "seed": 4100403,
+        "round": 4,
+        "native_phase": "settled",
+        "detected_phase": "unknown",
+        "detected_round": 3,
+        "lifecycle": {
+          "seen_round": true,
+          "stable_hits": 6,
+          "round_open": true,
+          "pending_boundary": false
+        },
+        "events": [
+          "STATE_CORRECTION",
+          "STATE_CORRECTION",
+          "STATE_CORRECTION",
+          "STATE_CORRECTION",
+          "TRACK_LOST",
+          "TRACK_LOST",
+          "TRACK_LOST",
+          "TRACK_LOST",
+          "TRACK_LOST",
+          "TRACK_LOST"
+        ],
+        "ranks_correct": 4,
+        "visible_faces": 4,
+        "inventory_l1_error": 4,
+        "expected_inventory": {
+          "Q": 2,
+          "K": 2,
+          "9": 2,
+          "3": 5,
+          "2": 4,
+          "8": 2,
+          "7": 2,
+          "4": 3,
+          "A": 2,
+          "10": 1,
+          "5": 1
+        },
+        "observed_inventory": {
+          "A": 1,
+          "2": 2,
+          "3": 4,
+          "4": 3,
+          "5": 1,
+          "6": 0,
+          "7": 2,
+          "8": 2,
+          "9": 2,
+          "10": 1,
+          "J": 0,
+          "Q": 2,
+          "K": 2
+        },
+        "reasons": [
+          "card occluded or removed without round boundary",
+          "6 cards await stable visual evidence",
+          "Need at least two player cards and exactly one visible dealer upcard.",
+          "Waiting for a player decision in the video.",
+          "No readable legal player controls; calibrate the table or declare a manual player turn."
+        ]
+      }
+    ]
+  },
+  "brief_exposure_negative": {
+    "scope": "own synthetic full-round sequences, same renderer family, no external recordings",
+    "stable_observations_per_state": 3,
+    "receipt_sha256": "6e4143f658a3c363dc6f10259185181f01e01001575d90907a473f48fba16e12",
+    "sessions": [
+      {
+        "seed": 4100401,
+        "states": 10,
+        "decision_states": 6,
+        "correctly_usable_decision_states": 6,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 42,
+        "ranks_correct": 42,
+        "suits_correct": 17,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 25,
+        "final_inventory_l1_error": 17,
+        "final_observed_rc_error": 0,
+        "count_ever_certified": false
+      },
+      {
+        "seed": 4100402,
+        "states": 7,
+        "decision_states": 3,
+        "correctly_usable_decision_states": 3,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 27,
+        "ranks_correct": 27,
+        "suits_correct": 18,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 9,
+        "final_inventory_l1_error": 18,
+        "final_observed_rc_error": 5,
+        "count_ever_certified": false
+      },
+      {
+        "seed": 4100403,
+        "states": 10,
+        "decision_states": 6,
+        "correctly_usable_decision_states": 6,
+        "incorrect_actionable_states": 0,
+        "visible_faces": 48,
+        "ranks_correct": 48,
+        "suits_correct": 18,
+        "suits_wrong": 0,
+        "suits_unknown_or_missed": 30,
+        "final_inventory_l1_error": 19,
+        "final_observed_rc_error": -5,
+        "count_ever_certified": false
+      }
+    ],
+    "finding": "Final inventory L1 17/18/19 despite all current ranks read; RC errors 0/+5/-5 can hide inventory loss. Six observations were a separate development sensitivity check, not acceptance."
+  },
+  "rejected_presence_variant": {
+    "scope": "development-only broader red/blue back geometry before refinement",
+    "receipt_sha256": "21c51324920107501eec986bb2ed2920bda9a4189cd1fd2fc70156cb95b72573",
+    "ranks_correct": 8,
+    "presence_outcomes": {
+      "correct": 9,
+      "wrong": 0,
+      "missed": 1,
+      "extra": 6,
+      "covered_correct": 1,
+      "covered_wrong": 0
+    },
+    "decision": "Rejected: face artwork/chips produced extra objects and suppressed a rank. Current blue-only bounded rule is not universal back recognition."
+  },
+  "current_priority": "Keep opt-in local integration and existing V2 comparison. Local DOM demonstrated; both session inventories remain one10 short, cloud hybrid not demonstrated. No promotion. Only free diagnosis of observed rank10 failures and separate-session evaluation; current paid lot permanently closed. No automatic following inference, holdout, training, native release or Poker strategy.",
+  "iterations": [
+    {
+      "experiment_id": "VISION-009",
+      "parent_experiment_id": null,
+      "question": "Does API observation improve correct useful R1 states over the calibrated local baseline?",
+      "status": "blocked",
+      "component_ids": [
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F10"
+      ],
+      "candidate_model_id": null,
+      "candidate_weights_hash": null,
+      "baseline_commit": "478d1a9dac39927f17703cdd9eb8ec613b677a28",
+      "split": "development",
+      "assistance": "initial ROI only; no ground-truth phase",
+      "input_contract": "bjlab/state_reader.py:FrameInput",
+      "output_contract": "bjlab/state_reader.py:HandObservation",
+      "privacy_and_cost_approval": null,
+      "budget": {
+        "max_requests": 0,
+        "max_cost": 0
+      },
+      "primary_metrics": [
+        "complete_state_accuracy",
+        "useful_coverage",
+        "false_accepted_states",
+        "latency_p95_ms",
+        "cost_per_correct_useful_state"
+      ],
+      "acceptance_rule": "Independent supported R1 >=95% correct usable states; zero visibly wrong accepted in finite sample; validated output p95 <=5s. Consumed pilot cannot certify.",
+      "result": null,
+      "local_integration_evidence": "validation/results/r1-reader-comparison/local-summary.json",
+      "raw_evidence_path": "ignored artifacts/vision-research/r1-api-comparison",
+      "decision": "pending, no model promoted",
+      "what_was_not_tested": [
+        "actual API inference",
+        "account model availability",
+        "independent full-state verification",
+        "original provider session",
+        "live integration",
+        "Windows physical advisor"
+      ],
+      "next_action": "Continue local-only data/annotation/protocol work. Read-only account credit verification when authenticated; no inference without new explicit approval.",
+      "blocker_code": "blocked_zero_api_budget",
+      "credit_verification_status": "blocked_credit_verification"
+    },
+    {
+      "experiment_id": "VISION-010",
+      "parent_experiment_id": "VISION-009",
+      "question": "Does a bounded surface/index-row challenger remove the reproduced seam-7 substitution without weakening integrity?",
+      "status": "executed",
+      "component_ids": [
+        "F02",
+        "F03",
+        "F04",
+        "F10"
+      ],
+      "split": "development",
+      "assistance": "one initial ROI; no per-turn flags; truth isolated after inference",
+      "baseline_commit": "a2c7f857824e099ade1b3fd66110de808435b85b",
+      "reader_id": "calibrated-corners-2-presence:neutral-index-v1",
+      "evidence_kind": "sparse browser stills, not original video",
+      "budget": {
+        "max_requests": 0,
+        "max_cost": 0
+      },
+      "result": "validation/results/freegames-surface-probe/summary.json",
+      "decision": "not_promoted; scoped development improvement with BrainPlay regression",
+      "what_was_not_tested": [
+        "continuous provider recording",
+        "independent session generalization",
+        "automatic phase",
+        "physical advisor",
+        "API inference"
+      ],
+      "report": "docs/FREEGAMES_SURFACE_PROBE.md"
+    },
+    {
+      "experiment_id": "VISION-011",
+      "parent_experiment_id": "VISION-010",
+      "question": "Can original local continuous stress videos expose perception and context failures without provider capture?",
+      "status": "executed",
+      "split": "development",
+      "evidence_kind": "own synthetic continuous VP8 video, same paired game seed",
+      "assistance": "initial ROI only; manual turn disabled; truth accessed after inference",
+      "budget": {
+        "max_requests": 0,
+        "max_cost": 0
+      },
+      "reader_id": "unchanged default calibrated LiveObserver",
+      "result": "validation/results/synthetic-stress-lab/summary.json",
+      "decision": "laboratory extension accepted; detector not promoted; phase/context is required even on clean input",
+      "report": "docs/SYNTHETIC_STRESS_LAB.md",
+      "what_was_not_tested": [
+        "External provider generalization",
+        "Visual split hands",
+        "ID switches",
+        "New model training",
+        "Profitability"
+      ]
+    },
+    {
+      "experiment_id": "VISION-012",
+      "parent_experiment_id": "VISION-011",
+      "question": "Can visible controls and witnessed clear/deal transitions unlock the frozen clean video without oracle phase?",
+      "status": "executed",
+      "split": "development",
+      "reader_id": "unchanged rank reader + visible-controls-temporal-v1",
+      "assistance": "initial calibrated card/control ROIs only; no per-turn confirmation",
+      "budget": {
+        "max_requests": 0,
+        "max_cost": 0
+      },
+      "result": "validation/results/visible-phase/comparison.json",
+      "report": "docs/SYNTHETIC_STRESS_LAB.md",
+      "decision": "clean 6/6 timely full-table-qualified opportunities; five transfer variants unchanged; no promotion",
+      "what_was_not_tested": [
+        "Independent provider generalization",
+        "Live capture-to-display",
+        "Independent final holdout",
+        "Exact exposure identity",
+        "New models",
+        "Poker expansion",
+        "Native desktop build"
+      ]
+    },
+    {
+      "experiment_id": "VISION-013",
+      "parent_experiment_id": "VISION-012",
+      "status": "executed",
+      "question": "Can separate patterned-back presence and row identity repair overlap without losing clean, then transfer without tuning?",
+      "split": "development plus two new verification seeds; paired graphics, no provider/final holdout",
+      "reader_id": "visible-overlap-temporal-v2; rank detector unchanged",
+      "assistance": "initial card/control ROIs only; no per-turn confirmations; evaluator truth never enters observer",
+      "budget": {
+        "max_requests": 0,
+        "max_cost": 0
+      },
+      "result": "validation/results/overlap-session/comparison.json",
+      "report": "docs/OVERLAP_SESSION_COMPARISON.md",
+      "decision": "Retain opt-in synthetic rank/presence challenger; reject default/desktop and certified R2 promotion.",
+      "what_was_not_tested": [
+        "Independent provider sessions",
+        "Live capture-to-display",
+        "Native minimized capture and monitor/DPI checks",
+        "Poker/suit completeness",
+        "Rotation/fading/crop changes",
+        "Final holdout"
+      ]
+    },
+    {
+      "experiment_id": "VISION-014",
+      "parent_experiment_id": "VISION-013",
+      "status": "executed_local_only",
+      "question": "Does the frozen local reader transfer to new original session/seed/family data with timely usable R1, before comparing API candidates?",
+      "baseline_commit": "77a036ac34893fda201959a55f1033d9c106308c",
+      "result": "validation/results/independent-tournament/local-baseline.json",
+      "csv": "validation/results/independent-tournament/local-baseline.csv",
+      "report": "docs/INDEPENDENT_READER_DECISION.md",
+      "independent_sessions_evaluated": 2,
+      "distinct_rounds": 12,
+      "paired_difficulty_renderings_per_session": 6,
+      "final_holdout": "sealed_not_evaluated",
+      "api_requests": 0,
+      "actual_api_cost": 0,
+      "cloud_latency": null,
+      "cloud_correctness": null,
+      "decision": "No champion selection, installed-app replacement or certified R2 promotion. API prerequisite gate unresolved; compact native display delivered separately.",
+      "not_measured": [
+        "API inference",
+        "live capture-to-display",
+        "provider-engine generalization",
+        "mixed-DPI physical capture",
+        "complete poker suits",
+        "multi-hand split vision",
+        "profitability"
+      ]
+    },
+    {
+      "experiment_id": "VISION-015",
+      "parent_experiment_id": "VISION-014",
+      "status": "executed_local_training",
+      "question": "Does one serious card/index/keypoint and learned rank/suit reader improve the frozen local baseline on same inputs and new complete sessions?",
+      "candidate_source_commit": "94638a3",
+      "baseline_commit": "77a036ac34893fda201959a55f1033d9c106308c",
+      "result": "validation/results/specialized-card-reader/comparison.json",
+      "csv": "validation/results/specialized-card-reader/sessions.csv",
+      "report": "docs/SPECIALIZED_CARD_READER.md",
+      "train_scenes": 8000,
+      "calibration_scenes": 1000,
+      "verification_scenes": 1000,
+      "pose_actual_epochs": 9,
+      "classifier_actual_epochs": 24,
+      "independent_physical_sessions": 2,
+      "distinct_engine_rounds": 12,
+      "paired_difficulty_renderings_per_session": 6,
+      "final_holdout": "sealed_untouched",
+      "api_requests": 0,
+      "actual_api_cost": 0,
+      "cloud_latency": null,
+      "cloud_correctness": null,
+      "decision": "Retain research implementation and frozen evidence; reject default/release, provider, poker and certified R2 promotion. Actual provider graphic adaptation and physical identity stability remain bottlenecks. No new model after verification.",
+      "not_measured": [
+        "New provider full video",
+        "Live capture-to-display",
+        "API inference",
+        "Automatic universal layout/phase",
+        "Poker strategy",
+        "Physical monitor/DPI/minimized capture",
+        "Economic edge"
+      ]
+    },
+    {
+      "experiment_id": "VISION-016",
+      "parent_experiment_id": "VISION-015",
+      "question": "Does available OpenAI Luna Standard/Fast improve frozen same-input local R1 within the total EUR10 cap and complete-JSON deadline?",
+      "status": "executed",
+      "baseline_commit": "18bfd579c1913bfa902a096fb8a83477ce510edf",
+      "candidate_source_commit": "2f3d62d",
+      "split": "consumed-development",
+      "assistance": "Initial identical table/role/control regions only; no oracle phase or manual per-hand turn",
+      "result": "validation/results/api-reader-tournament/funded-comparison.json",
+      "report": "docs/OPENAI_READER_TOURNAMENT.md",
+      "decision": "Retain Luna Fast as an R1 research candidate, not a promoted full-state reader. Its paired 15-input latency and annotation intersection are promising, but all synthetic player states fail the existing gate. Freeze the run; next research must address ambiguous total provenance and independently annotated visibility before fresh session-disjoint verification. No further paid run or local training in this increment.",
+      "what_was_not_tested": [
+        "Actual invoice charge, account balance and auto-recharge setting",
+        "Live hybrid capture-to-display",
+        "Fast live/offline hybrid routing",
+        "Independent provider video/generalization",
+        "R2 tracking identity",
+        "Final holdout"
+      ]
+    },
+    {
+      "experiment_id": "VISION-018",
+      "parent_experiment_id": "VISION-017",
+      "baseline_commit": "b4b95168aa0cd290b47e4e780c7450d11764283f",
+      "question": "Can a compact grounded R1 response meet the deadline, then produce current advice through actual local-first API fallback?",
+      "decision": "Keep compact grounded Luna as a bounded R1 research candidate and transport guard; no operational hybrid/Gemini/default/release promotion",
+      "next_step": "One bounded initialized stable-hybrid transport/availability experiment with continuous capture and current-evidence revalidation; no automatic new paid batch",
+      "status": "executed",
+      "result": "validation/results/live-reader-diagnosis/summary.json",
+      "report": "docs/LIVE_READER_DIAGNOSIS.md",
+      "api_requests": 13,
+      "actual_api_cost": null,
+      "known_reported_usage_upper_usd": "0.00555150",
+      "new_development_scenes": 3,
+      "final_holdout": "not_opened_or_created",
+      "reader_promoted": false,
+      "release_changed": false
+    },
+    {
+      "experiment_id": "VISION-019",
+      "parent_experiment_id": "VISION-018",
+      "baseline_commit": "7717ec222436b47d45d5520ce67091f0e66c38ab",
+      "question": "Does Gemini fail because of account access, images or structured hand-schema configuration?",
+      "decision": "Keep opt-in JSON MIME mode with strict local validation; one correct owned development state, no reader/hybrid promotion.",
+      "next_step": "Fresh same-input verification then actual hybrid; only after an explicit bounded request allowance, without ledger reset.",
+      "status": "executed",
+      "result": "validation/results/gemini-request-fix/summary.json",
+      "report": "docs/GEMINI_REQUEST_FIX.md",
+      "api_requests": 3,
+      "actual_api_cost": null,
+      "known_reported_usage_upper_usd": "0.0024709",
+      "new_accounted_upper_including_uncertain_usd": "0.319603700",
+      "new_development_scenes": 0,
+      "reused_development_scenes": 1,
+      "final_holdout": "not_opened",
+      "reader_promoted": false,
+      "release_changed": false
+    },
+    {
+      "experiment_id": "VISION-020",
+      "parent_experiment_id": "VISION-019",
+      "baseline_commit": "48d227ff96403165ad6cd367e9f1448f21d8cc7c",
+      "question": "Which single schema constraint triggers the Gemini HTTP400?",
+      "decision": "Exact c.maxItems=52 trigger isolated by one-change A/B/A. Opt-in structured variant omits only that provider bound; strict local cap unchanged. No promotion.",
+      "next_step": "Fresh session-disjoint same-input verification and actual stable hybrid within a new bounded user scope; preserve current evidence and aggregate ledger.",
+      "status": "executed",
+      "result": "validation/results/gemini-schema-cause/summary.json",
+      "report": "docs/GEMINI_SCHEMA_CAUSE.md",
+      "reserved_attempts": 4,
+      "api_requests_with_body_sent": 3,
+      "pre_submission_dns_timeouts": 1,
+      "actual_api_cost": null,
+      "known_reported_usage_upper_usd": "0.0023373",
+      "new_accounted_upper_including_uncertain_usd": "0.953735700",
+      "new_development_scenes": 0,
+      "reused_development_scenes": 1,
+      "final_holdout": "not_opened",
+      "reader_promoted": false,
+      "release_changed": false
+    },
+    {
+      "experiment_id": "VISION-021",
+      "parent_experiment_id": "VISION-020",
+      "baseline_commit": "a5ea45428b670d8a0ff10f5d6d495ad534fa9fde",
+      "question": "Prepare a fresh paired Luna/Gemini comparison without spending or consuming final holdouts.",
+      "decision": "Offline corpus, exact native payloads, common evaluator and staged worst-case budget ready. No candidate promoted, no network/model calls.",
+      "next_step": "Stop. A new bounded explicit authorization is required for the proposed initial six paired requests. Conditional hybrid needs measured gates and admitting ledger.",
+      "status": "available",
+      "result": "validation/results/paired-cloud-preparation/summary.json",
+      "report": "docs/PAIRED_CLOUD_PREPARATION.md",
+      "api_requests": 0,
+      "new_development_scenes": 16,
+      "new_validation_scenes": 16,
+      "independent_source_sessions": 6,
+      "final_holdout": "not_opened_not_created",
+      "reader_promoted": false,
+      "release_changed": false
+    },
+    {
+      "experiment_id": "VISION-022",
+      "parent_experiment_id": "VISION-021",
+      "status": "blocked",
+      "question": "Can the exact PR16 six-request paired smoke pass current model-access and unchanged aggregate budget prerequisites?",
+      "candidate_model_ids": [
+        "gpt-6-luna",
+        "gemini-3.5-flash-lite"
+      ],
+      "baseline_commit": "097cbba877fe694f542850c550d8854cf6d12b0c",
+      "split": "validation",
+      "assistance": "Unchanged frozen native table and role crops",
+      "budget": {
+        "max_new_requests": 6,
+        "worst_case_usd": "2.5310064",
+        "unchanged_lifetime_max_usd": "8",
+        "executed_new_requests": 0
+      },
+      "result": "validation/results/paired-cloud-smoke/preflight.json",
+      "report": "docs/PAIRED_CLOUD_SMOKE.md",
+      "decision": "Stop without inference: both read-only model access GETs timed out. No claim about key validity, credit or model quality.",
+      "next_action": "Read-only connectivity diagnosis if resumed; no automatic smoke or hybrid."
+    },
+    {
+      "experiment_id": "VISION-023",
+      "parent_experiment_id": "VISION-022",
+      "status": "executed",
+      "baseline_commit": "ff6681a5448b6d90bb4da1af0358cab1912031bd",
+      "question": "Localize connection failure and resume only the original six PR16 paired requests.",
+      "split": "validation",
+      "candidate_model_ids": [
+        "gpt-6-luna",
+        "gemini-3.5-flash-lite"
+      ],
+      "budget": {
+        "max_new_requests": 6,
+        "executed_new_requests": 6,
+        "worst_case_usd": "2.5310064",
+        "reported_usage_upper_usd": "0.008595150",
+        "unchanged_lifetime_max_usd": "8"
+      },
+      "result": "validation/results/cloud-connection-paired-smoke/summary.json",
+      "report": "docs/CLOUD_CONNECTION_PAIRED_SMOKE.md",
+      "decision": "DNS stage localized; expiring OS-resolved per-client addresses pass both exact authenticated model GETs with unchanged TLS. Six paired calls complete; Luna 2/3 correct timely R1 plus one timeout; Gemini 2/3 plus one literal-label provenance false accept. Both 0/3 complete transcription. No champion or hybrid.",
+      "next_action": "Stop with runtime disarmed. No remaining inference authorization; no automatic hybrid, tuning, R2/Poker or release.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened"
+    },
+    {
+      "experiment_id": "VISION-027",
+      "parent_experiment_id": "VISION-026",
+      "status": "executed",
+      "baseline_commit": "49d40036bef36fcf0658cf545946896d4d819f41",
+      "question": "Retain exact new Gemini rejection and measure one full Luna completion within10s, outside app/advisor.",
+      "split": "consumed_owned_diagnostic_repeat_not_independent_validation",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite",
+        "gpt-6-luna"
+      ],
+      "budget": {
+        "max_new_requests": 2,
+        "executed_new_requests": 2,
+        "worst_case_usd": "0.8436688",
+        "reported_usage_upper_usd": "0.00289605",
+        "unchanged_lifetime_max_usd": "8"
+      },
+      "result": "validation/results/two-provider-diagnostics/summary.json",
+      "report": "docs/TWO_PROVIDER_DIAGNOSTICS.md",
+      "decision": "Exactly two consumed-case diagnostic requests. Gemini new unlabelled20/dealer_total with null label is correctly rejected at n[0]; Luna strict/semantic/R1-valid at3.578s. Both encrypted locally, never advisor eligible; no p95/champion or independent validation. Runtime disarmed, count106/106 under unchanged USD8, old104 entries/all15 unknown reserves retained; no following batch.",
+      "next_action": "Stop: scope consumed, runtime disarmed; no automatic inference/hybrid/tuning or promotion.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened"
+    },
+    {
+      "experiment_id": "VISION-028",
+      "parent_experiment_id": "VISION-027",
+      "status": "executed",
+      "baseline_commit": "6a5e071da76c76b22453d3a4808a209f0ad74bd8",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/frame-view-consistency/summary.json",
+      "report": "docs/FRAME_VIEW_CONSISTENCY_AND_GEMINI_PREPARATION.md",
+      "decision": "All named-view pixels/geometry bind evidence; changed detail invalidates old reply. Offline only; five controls prepared, no inference.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-029",
+      "parent_experiment_id": "VISION-028",
+      "status": "executed",
+      "baseline_commit": "d0690c18343558b8e169b5c4fcd70b494ec5f203",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/gemini-five-diagnostics/summary.json",
+      "report": "docs/GEMINI_FIVE_DIAGNOSTIC_CONTROLS.md",
+      "decision": "Five consumed-case controls: timely usable R1 4/5, full transcription 0/5. Candidate D only; no promotion.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-030",
+      "parent_experiment_id": "VISION-029",
+      "status": "executed",
+      "baseline_commit": "d9216baf7052f41d90cfa9262e23f1c4ea48ca2f",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/gemini-paired-total-check/summary.json",
+      "report": "docs/GEMINI_PAIRED_TOTAL_CHECK.md",
+      "decision": "Four C/D controls: exact card inventory4/4 but wrong numeric image names; usable positive0/2, total provenance0/4. Gates remain closed.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-031",
+      "parent_experiment_id": "VISION-030",
+      "status": "executed",
+      "baseline_commit": "da9d670c5beefb5ecf842e7caca69876701a1c57",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/gemini-available-image-views/summary.json",
+      "report": "docs/GEMINI_AVAILABLE_IMAGE_VIEWS.md",
+      "decision": "Bound available-image request repair: positive and arithmetic-contradiction controls pass, complete transcription1/2. Two consumed states only.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-032",
+      "parent_experiment_id": "VISION-031",
+      "status": "executed",
+      "baseline_commit": "5134452dc441cd7fbe3989640295e3388bd8644b",
+      "question": "Forward registry reconciliation of already published evidence, not a new execution.",
+      "split": "historical_published_evidence",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "result": "validation/results/gemini-bound-session-hybrid/summary.json",
+      "report": "docs/GEMINI_BOUND_SESSION_HYBRID.md",
+      "decision": "Three new sampled states: exact cards3/3, timely positives2/2, safe negative1/1; phase2/3 and complete transcription1/3. Fourth hybrid gate failed and remained unexecuted.",
+      "next_action": "Historical scope closed; see the latest experiment for current work.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "registry_reconciled_in": "VISION-033"
+    },
+    {
+      "experiment_id": "VISION-033",
+      "parent_experiment_id": "VISION-032",
+      "status": "executed",
+      "baseline_commit": "da57e74377be612b9dd39ba22fe687063aec10cd",
+      "question": "Can explicit visible phase vocabulary pass three new states before one bounded headless local-first attempt?",
+      "split": "new_owned_sampled_seed_states_shared_renderer_not_full_sessions",
+      "candidate_model_ids": [
+        "gemini-3.5-flash-lite"
+      ],
+      "budget": {
+        "max_new_requests": 4,
+        "executed_new_requests": 3,
+        "worst_case_usd": "1.2685312",
+        "unchanged_lifetime_max_usd": "8",
+        "reported_usage_upper_usd": "0.0032858"
+      },
+      "result": "validation/results/gemini-visible-phase/summary.json",
+      "report": "docs/GEMINI_VISIBLE_PHASE_CONTRACT.md",
+      "freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
+      "decision": "Visible phase3/3 and cards3/3 on new sampled states, but missing SESSION label makes full transcription2/3. Frozen all-three gate fails; conditional fourth closed, no hybrid/champion claim.",
+      "next_action": "Scope consumed; runtime disarmed, fourth slot closed. No automatic inference, promotion, training or holdout.",
+      "reader_promoted": false,
+      "release_changed": false,
+      "final_holdout": "not_opened",
+      "posthoc_offline_source_repair": {
+        "status": "offline_verified",
+        "result": "validation/results/gemini-visible-phase/source-failure-audit.json",
+        "new_pytest_regressions": 2,
+        "new_provider_requests": 0,
+        "ledger_changed": false,
+        "old_freeze_rejected": true,
+        "consumed_source_preserved": true,
+        "slot_reopened": false,
+        "decision": "Preserve producer/no_current_capture cause and null unreached timing; no API/solver/advisor on either source failure."
+      }
+    }
+  ],
+  "latest_experiment": {
+    "experiment_id": "VISION-034",
+    "parent_experiment_id": "VISION-033",
+    "status": "executed",
+    "baseline_commit": "3c23ea3c7c65f4ea06af651a9ca8cc7e3c99d535",
+    "question": "Does actual owned browser acquisition reach a safe current-hand compact view and reconstruct complete observable sessions?",
+    "split": "owned development; local browser repeated hand and two complete shared-renderer sessions",
+    "candidate_model_ids": [
+      "frozen-local",
+      "existing-visible-overlap-v2",
+      "gemini-3.5-flash-lite (no new provider inference)"
+    ],
+    "budget": {
+      "max_new_requests": 3,
+      "executed_new_requests": 0,
+      "new_reservations": 0,
+      "worst_case_usd": "0.9513984",
+      "unchanged_lifetime_max_usd": "8",
+      "reported_usage_upper_usd": "0"
+    },
+    "result": "validation/results/integrated-r1-session/summary.json",
+    "report": "docs/INTEGRATED_R1_SESSION.md",
+    "freeze_sha256": "e1e3487f0eb702324e3868b1821816fb77aafebf14fb2078a23862399d6b6afc",
+    "decision": "Keep opt-in local integration and existing V2 comparison. Local DOM demonstrated; both session inventories remain one10 short, cloud hybrid not demonstrated. No promotion.",
+    "next_action": "Only free diagnosis of observed rank10 failures and separate-session evaluation; current paid lot permanently closed. No automatic following inference, holdout, training, native release or Poker strategy.",
+    "reader_promoted": false,
+    "release_changed": false,
+    "final_holdout": "not_opened"
+  },
+  "conditional_components": [
+    {
+      "id": "C03",
+      "source": "https://github.com/ultralytics/ultralytics",
+      "role": "Verified YOLO26n four-keypoint localizer plus learned rank/suit",
+      "status": "executed_research_not_promoted",
+      "license_review": "AGPL/Enterprise options recorded in supplied plan; check exact code/checkpoint/data before reuse",
+      "trigger": "Further graphic-domain/geometry evidence; current checkpoint does not transfer to historical providers.",
+      "source_review_scope": "Official wheel 8.4.7 and hashed official COCO backbone; isolated CUDA training and ONNX evaluation executed. No third-party card weights imported.",
+      "evidence": "docs/SPECIALIZED_CARD_READER.md"
+    },
+    {
+      "id": "C04",
+      "source": "https://github.com/FoundationVision/ByteTrack",
+      "role": "Temporal association, not rank reading",
+      "status": "deferred",
+      "license_review": "MIT recorded in supplied plan; pin actual revision before reuse",
+      "trigger": "R2 identity failure with fixed detection replay"
+    },
+    {
+      "id": "C05",
+      "source": "https://github.com/facebookresearch/sam3",
+      "role": "Segmentation/tracking or annotation assistance",
+      "status": "deferred",
+      "license_review": "Custom license recorded in supplied plan; exact assets not adopted",
+      "trigger": "Measured card/badge/background separation failure; compare raw versus masked pixels"
+    },
+    {
+      "id": "C06",
+      "source": "https://github.com/facebookresearch/dinov3",
+      "role": "Crop representations/similarity, not calibrated correctness",
+      "status": "deferred",
+      "license_review": "Custom license recorded in supplied plan; exact assets not adopted",
+      "trigger": "Symbols already localized but example-based discrimination remains limiting"
+    },
+    {
+      "id": "C07",
+      "source": "https://github.com/geaxgx/playing-card-detection",
+      "role": "Printed-corner annotation/dataset reference",
+      "status": "source_reviewed",
+      "source_review_scope": "README and repository listing only, 2026-10-04; no executable or asset audit",
+      "license_review": "MIT shown by GitHub; dataset/checkpoint rights separately required",
+      "trigger": "Return to annotation/training after M1 decision"
+    },
+    {
+      "id": "C08",
+      "source": "https://github.com/roboflow/supervision",
+      "role": "Reusable annotation/zone tooling",
+      "status": "deferred",
+      "license_review": "MIT recorded in supplied plan; pin/check actual dependency before reuse",
+      "trigger": "Concrete tooling gap, not a parallel experiment framework"
+    },
+    {
+      "id": "C09",
+      "source": "https://github.com/roboflow/blackjack-basic-strategy",
+      "role": "Visual basic-strategy demo reference, not an oracle",
+      "status": "source_reviewed",
+      "source_review_scope": "README and repository listing only, 2026-10-04; no executable or asset audit",
+      "license_review": "MIT shown by GitHub; separately check dependencies/assets before reuse",
+      "trigger": "Implementation reuse with demonstrated savings after targeted review"
+    },
+    {
+      "id": "C10",
+      "source": "https://huggingface.co/nvidia/LocateAnything-3B",
+      "code_source": "https://github.com/NVlabs/Eagle/tree/main/Embodied",
+      "role": "Visual grounding/localization; not a complete rank/suit/session reader",
+      "status": "source_reviewed",
+      "source_review_scope": "Public model card, 2026-10-04; no weights/code downloaded or executed",
+      "license_review": "Model card specifies NVIDIA non-commercial academic/non-profit research use; code/checkpoint rights differ. No commercial adoption assumed.",
+      "trigger": "Dominant localization failure, compatible hardware and explicitly eligible research scope; no migration now"
+    },
+    {
+      "id": "C11",
+      "source": "https://github.com/GetStream/Vision-Agents",
+      "role": "Streaming/model orchestration framework, not a card-reading checkpoint",
+      "status": "source_reviewed",
+      "source_review_scope": "README and repository license listing, 2026-10-04; no installation",
+      "license_review": "Apache-2.0 code; provider/service/model costs and rights separate",
+      "trigger": "Measured transport/orchestration limitation; network latency and conversational memory do not certify card reading or shoe history"
+    }
+  ],
+  "api_access_policy": {
+    "inference_authorized": false,
+    "authorization_epoch": "2026-10-08-owned-browser-integration-three",
+    "max_requests": 0,
+    "max_usd": "0",
+    "reason": "VISION-034 permanently closed after local guard failure; zero new POSTs/reservations. Residual slots and prior fourth slot are not authorization for a following lot.",
+    "research_spending_authorization": {
+      "currency": "EUR",
+      "total_cap": "10",
+      "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
+      "supersedes": "2026-10-04-zero-budget",
+      "calls_executed": 122,
+      "cost_incurred": null,
+      "credential_choice": "reuse_existing_no_new_key",
+      "known_environment_credentials": "Existing Gemini key reused; exact schema trigger isolated; no key or billing changes.",
+      "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
+      "runtime_gate": "disarmed_after_owned_integration_local_guard_failure",
+      "record": "validation/results/integrated-r1-session/summary.json",
+      "working_cap_usd": "8",
+      "max_requests": 126,
+      "ledger": "artifacts/api-budget/eur10-total-20261004.json",
+      "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
+      "budget_receipt": {
+        "requests_attempted": 123,
+        "max_requests": 126,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "user_reported_credit_topup": {
+        "currency": "EUR",
+        "amount": "10",
+        "account_balance_verified": false
+      },
+      "reported_usage_upper_charge_usd": "0.035521000",
+      "historical_vision016_budget_receipt": {
+        "requests_attempted": 70,
+        "max_requests": 90,
+        "max_usd": "8",
+        "accounted_upper_usd": "7.422385000",
+        "unknown_charge_requests": 9,
+        "network_attempts_claimed": 70,
+        "unknown_charge_reserved_usd": "7.386864",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "lifetime_reserved_attempts": 123,
+      "calls_executed_scope": "Lifetime durable network claims; not successful generation count or invoice proof.",
+      "request_count_amendment": {
+        "experiment": "VISION-034",
+        "from": 124,
+        "to": 126,
+        "new_reservations": 0,
+        "local_wrapper_attempts": 2,
+        "provider_posts": 0,
+        "frozen_case_slots_closed": 3,
+        "unchanged_max_usd": "8",
+        "old_entries_and_unknown_reservations_preserved": true,
+        "residual_slots_are_not_authorization": true
+      },
+      "historical_vision033_request_count_amendment": {
+        "experiment": "VISION-033",
+        "from": 121,
+        "to": 124,
+        "used_new": 3,
+        "unused_new_closed": 1,
+        "unchanged_max_usd": "8",
+        "old_entries_and_unknown_reservations_preserved": true
+      },
+      "historical_vision023_snapshot": {
+        "calls_executed": 99,
+        "runtime_gate": "disarmed_after_original_paired_six",
+        "record": "docs/CLOUD_CONNECTION_PAIRED_SMOKE.md",
+        "max_requests": 102,
+        "budget_receipt": {
+          "requests_attempted": 100,
+          "max_requests": 102,
+          "max_usd": "8",
+          "accounted_upper_usd": "5.095785750",
+          "unknown_charge_requests": 13,
+          "network_attempts_claimed": 99,
+          "unknown_charge_reserved_usd": "4.9064744",
+          "stopped": false,
+          "invoice_and_balance_verified": false,
+          "scope": "all configurations/providers under one aggregate authorization"
+        },
+        "lifetime_reserved_attempts": 100
+      },
+      "historical_vision020_request_count_amendment": {
+        "previous_max_requests": 90,
+        "max_requests": 102,
+        "max_new_allowed": 12,
+        "used": 4,
+        "unused_closed": 8,
+        "max_usd_unchanged": "8",
+        "old_entries_and_unknown_charges_preserved": true
+      },
+      "reported_usage_upper_charge_usd_scope": "Historical original reader tournament receipt retained; current accounting is budget_receipt.",
+      "historical_vision033_budget_receipt": {
+        "requests_attempted": 123,
+        "max_requests": 124,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      }
+    },
+    "credit_check": {
+      "status": "verified_read_only_authenticated_billing",
+      "checked_utc": "2026-10-05T13:05:15.438578+00:00",
+      "available_credit_balance": null,
+      "currency": "USD",
+      "free_credit_balance": null,
+      "auto_recharge_enabled": false,
+      "source": "https://platform.openai.com/settings/organization/billing/overview",
+      "usage_export": "69 prior requests verified; not final invoice",
+      "balance_verified_privately": true,
+      "available_credit_status": "positive_prepaid_balance"
+    },
+    "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
+    "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
+    "account_model_access": {
+      "checked_utc": "2026-10-05T10:36:55.580364+00:00",
+      "credential_file": ".env.local",
+      "key_disclosed": false,
+      "inference_requests": 0,
+      "inputs_verified": 51,
+      "crops_verified": 168,
+      "budget": {
+        "requests_attempted": 0,
+        "max_requests": 90,
+        "max_usd": "8",
+        "accounted_upper_usd": "0",
+        "unknown_charge_requests": 0,
+        "network_attempts_claimed": 0,
+        "unknown_charge_reserved_usd": "0",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "status": "read_only_access_verified",
+      "available_requested_models": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "balance_and_invoice": "unverified"
+    },
+    "first_inference_failure": {
+      "model": "gpt-6-luna",
+      "tier": "default",
+      "http_status": 429,
+      "error_type": "ProviderHTTPError",
+      "error_code": null,
+      "failed_attempt_elapsed_ms": 2556.598699999995,
+      "usage_reported": false,
+      "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+    },
+    "historical_credit_check": {
+      "status": "blocked_credit_verification",
+      "balance": null,
+      "free_credit_balance": null,
+      "auto_recharge_enabled": null,
+      "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
+      "source": "https://platform.openai.com/settings/organization/billing/overview"
+    },
+    "runtime_gate": "disarmed_after_owned_integration_local_guard_failure",
+    "historical_vision016_credit_check": {
+      "status": "unverified_billing_browser_human_verification",
+      "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+      "free_credit_balance": null,
+      "available_credit_balance": null,
+      "auto_recharge_enabled": null,
+      "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+      "source": "https://platform.openai.com/settings/organization/billing/overview"
+    },
+    "gemini_credit_check": {
+      "status": "user_screenshot_positive_paid_prepaid_credit_and_generation_verified",
+      "available_credit_balance": null,
+      "currency": "EUR",
+      "free_credit_balance": "0",
+      "auto_recharge_enabled": false,
+      "source": "https://aistudio.google.com/billing",
+      "cost_delay": "page warns up to 24h or longer; zero current spend cannot settle failed requests",
+      "new_budget_authorized": false,
+      "balance_verified_privately": true,
+      "available_credit_status": "positive_EUR5_prepaid_credit_in_user_screenshot"
+    },
+    "timeout_reconciliation": {
+      "record": "validation/results/grounded-reader-v2/summary.json",
+      "method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+      "prior_timeouts": 8,
+      "cap_reset": false,
+      "retained_unknown_requests": 4
+    },
+    "paired_smoke_preflight": {
+      "record": "validation/results/paired-cloud-smoke/preflight.json",
+      "status": "blocked_model_access_timeout",
+      "planned_inference_requests": 6,
+      "executed_inference_requests": 0,
+      "runtime_ever_armed": false,
+      "automatic_resumption": false
+    },
+    "paired_smoke_execution": {
+      "experiment_id": "VISION-023",
+      "record": "validation/results/cloud-connection-paired-smoke/summary.json",
+      "executed_requests": 6,
+      "retries": 0,
+      "paid_warmups": 0,
+      "hybrid": 0,
+      "old_reservations_preserved": true,
+      "remaining_request_slots_closed": 2
+    },
+    "historical_runtime_gate_vision023": "disarmed_after_original_paired_six",
+    "paired_semantic_execution": {
+      "experiment_id": "VISION-025",
+      "record": "validation/results/paired-semantic-hybrid/summary.json",
+      "executed_requests": 4,
+      "retries": 0,
+      "paid_warmups": 0,
+      "hybrid": 0,
+      "old_reservations_preserved": true,
+      "remaining_request_slots_closed": 1,
+      "new_reported_usage_upper_usd": "0.0044221",
+      "new_unknown_timeout_reserves_usd": "1.0530720",
+      "actual_completed_connection_reuse_observed": true,
+      "causal_speedup_measured": false
+    },
+    "historical_vision025_closed_scope": {
+      "authorization_epoch": "2026-10-06-paired-semantic-four-plus-one",
+      "reason": "VISION-025 original four comparisons consumed; neither passed gate. Hybrid skipped, unused slot closed; no new inference authorized.",
+      "runtime_gate": "disarmed_after_paired_semantic_four",
+      "budget_receipt": {
+        "requests_attempted": 104,
+        "max_requests": 105,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.153279850",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 103,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      }
+    },
+    "two_provider_diagnostic_execution": {
+      "experiment_id": "VISION-027",
+      "record": "validation/results/two-provider-diagnostics/summary.json",
+      "executed_requests": 2,
+      "retries": 0,
+      "paid_warmups": 0,
+      "hybrid": 0,
+      "advisor_connected": false,
+      "scope_consumed": true,
+      "new_unused_slots_closed": 0,
+      "old_unused_scope_stays_closed": true,
+      "old_reservations_preserved": true,
+      "count_amendment": "105->106; unchanged USD8",
+      "new_reported_usage_upper_usd": "0.00289605"
+    },
+    "visible_phase_execution": {
+      "experiment_id": "VISION-033",
+      "record": "validation/results/gemini-visible-phase/summary.json",
+      "executed_requests": 3,
+      "retry": 0,
+      "paid_warmup": 0,
+      "hybrid": 0,
+      "advisor_connected": false,
+      "scope_consumed": true,
+      "unused_conditional_slot_closed": 1,
+      "old_reservations_preserved": true,
+      "reported_usage_upper_usd": "0.0032858"
+    },
+    "historical_vision033_closed_scope": {
+      "authorization_epoch": "2026-10-08-gemini-visible-phase-three-plus-one",
+      "runtime_gate": "disarmed_after_visible_phase_three_conditional_closed",
+      "visible_phase_execution": {
+        "experiment_id": "VISION-033",
+        "record": "validation/results/gemini-visible-phase/summary.json",
+        "executed_requests": 3,
+        "retry": 0,
+        "paid_warmup": 0,
+        "hybrid": 0,
+        "advisor_connected": false,
+        "scope_consumed": true,
+        "unused_conditional_slot_closed": 1,
+        "old_reservations_preserved": true,
+        "reported_usage_upper_usd": "0.0032858"
+      }
+    },
+    "integrated_session_execution": {
+      "experiment": "VISION-034",
+      "record": "validation/results/integrated-r1-session/summary.json",
+      "provider_posts": 0,
+      "new_reservations": 0,
+      "unused_slot_closed": true,
+      "all_123_previous_entries_unchanged": true,
+      "budget_receipt": {
+        "requests_attempted": 123,
+        "max_requests": 126,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      }
+    }
+  },
+  "historical_state_snapshots": [
+    {
+      "source_commit": "b4b95168aa0cd290b47e4e780c7450d11764283f",
+      "reason": "Preserve prior latest-experiment and authorization/budget evidence verbatim when advancing VISION-018",
+      "latest_experiment": {
+        "experiment_id": "VISION-016",
+        "parent_experiment_id": "VISION-015",
+        "status": "executed_no_promotion",
+        "question": "Does available OpenAI Luna Standard/Fast improve frozen same-input local R1 within the total EUR10 cap and complete-JSON deadline?",
+        "baseline_commit": "18bfd579c1913bfa902a096fb8a83477ce510edf",
+        "result": "validation/results/api-reader-tournament/funded-comparison.json",
+        "report": "docs/OPENAI_READER_TOURNAMENT.md",
+        "planned_inputs": 51,
+        "unique_frame_ids": 44,
+        "synthetic_physical_sessions": 2,
+        "paired_renderings": 12,
+        "provider_moments": 2,
+        "api_requests": 70,
+        "actual_api_cost": null,
+        "cloud_latency": {
+          "luna-standard": {
+            "p50": 2298.296900000423,
+            "p95": 2838.311629999771,
+            "max": 2991.0337999999683
+          },
+          "luna-fast": {
+            "p50": 1766.0274999998364,
+            "p95": 2221.401409999816,
+            "max": 2418.5288999997283
+          },
+          "sol-residual": {
+            "p50": 2311.561900000015,
+            "p95": 2469.145689999732,
+            "max": 2486.6549999997005
+          }
+        },
+        "cloud_correctness": {
+          "luna-standard": {
+            "planned_inputs": 51,
+            "completed": 43,
+            "timeouts": 7,
+            "reader_failures": 8,
+            "rank_presence_states_correct": 33,
+            "ranks_correct": 87,
+            "ranks_expected": 111,
+            "suits_correct": 87,
+            "suits_expected": 111,
+            "complete_states_correct": 0,
+            "complete_state_denominator": 48,
+            "correct_timely_player_states": 0,
+            "annotated_player_opportunity_denominator": 12
+          },
+          "luna-fast": {
+            "planned_inputs": 15,
+            "completed": 15,
+            "timeouts": 0,
+            "reader_failures": 0,
+            "rank_presence_states_correct": 11,
+            "ranks_correct": 39,
+            "ranks_expected": 39,
+            "suits_correct": 39,
+            "suits_expected": 39,
+            "complete_states_correct": 0,
+            "complete_state_denominator": 12,
+            "correct_timely_player_states": 0,
+            "annotated_player_opportunity_denominator": 12
+          },
+          "sol-residual": {
+            "planned_inputs": 3,
+            "completed": 2,
+            "timeouts": 1,
+            "reader_failures": 1,
+            "rank_presence_states_correct": 2,
+            "ranks_correct": 3,
+            "ranks_expected": 7,
+            "suits_correct": 3,
+            "suits_expected": 7,
+            "complete_states_correct": 0,
+            "complete_state_denominator": 3,
+            "correct_timely_player_states": 0,
+            "annotated_player_opportunity_denominator": 0
+          }
+        },
+        "credential_choice": "reuse_existing_resolved_key_loaded_from_ignored_env",
+        "gemini": "deferred_no_credential_openai_first",
+        "decision": "Retain Luna Fast as an R1 research candidate, not a promoted full-state reader. Its paired 15-input latency and annotation intersection are promising, but all synthetic player states fail the existing gate. Freeze the run; next research must address ambiguous total provenance and independently annotated visibility before fresh session-disjoint verification. No further paid run or local training in this increment.",
+        "not_measured": [
+          "Actual invoice charge, account balance and auto-recharge setting",
+          "Live hybrid capture-to-display",
+          "Fast live/offline hybrid routing",
+          "Independent provider video/generalization",
+          "R2 tracking identity",
+          "Final holdout"
+        ],
+        "candidate_source_commit": "2f3d62d",
+        "reserved_unknown_charge_usd": "7.386864",
+        "funded_attempt_requests": 69,
+        "reported_usage_upper_charge_usd": "0.035521000",
+        "ledger_accounted_upper_usd": "7.422385000",
+        "first_attempt_receipt": "validation/results/api-reader-tournament/access-attempt.json"
+      },
+      "api_access_policy": {
+        "inference_authorized": false,
+        "authorization_epoch": "2026-10-05-grounded-v2-eur10",
+        "max_requests": 0,
+        "max_usd": 0,
+        "reason": "VISION-017 Luna-only bounded experiment ended; no automatic further inference or retries.",
+        "research_spending_authorization": {
+          "currency": "EUR",
+          "total_cap": "10",
+          "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
+          "supersedes": "2026-10-04-zero-budget",
+          "calls_executed": 73,
+          "cost_incurred": null,
+          "credential_choice": "reuse_existing_no_new_key",
+          "known_environment_credentials": "Both existing keys available; both model GETs verified. Gemini inference HTTP400 unresolved.",
+          "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
+          "runtime_gate": "disarmed_after_grounded_v2_failures",
+          "record": "docs/GROUNDED_READER_HYBRID.md",
+          "working_cap_usd": "8",
+          "max_requests": 90,
+          "ledger": "artifacts/api-budget/eur10-total-20261004.json",
+          "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
+          "budget_receipt": {
+            "requests_attempted": 73,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "1.594426100",
+            "unknown_charge_requests": 4,
+            "network_attempts_claimed": 73,
+            "unknown_charge_reserved_usd": "1.4240696",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "user_reported_credit_topup": {
+            "currency": "EUR",
+            "amount": "10",
+            "account_balance_verified": false
+          },
+          "reported_usage_upper_charge_usd": "0.035521000",
+          "historical_vision016_budget_receipt": {
+            "requests_attempted": 70,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "7.422385000",
+            "unknown_charge_requests": 9,
+            "network_attempts_claimed": 70,
+            "unknown_charge_reserved_usd": "7.386864",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          }
+        },
+        "credit_check": {
+          "status": "verified_read_only_authenticated_billing",
+          "checked_utc": "2026-10-05T13:05:15.438578+00:00",
+          "available_credit_balance": null,
+          "currency": "USD",
+          "free_credit_balance": null,
+          "auto_recharge_enabled": false,
+          "source": "https://platform.openai.com/settings/organization/billing/overview",
+          "usage_export": "69 prior requests verified; not final invoice",
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_prepaid_balance"
+        },
+        "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
+        "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
+        "account_model_access": {
+          "checked_utc": "2026-10-05T10:36:55.580364+00:00",
+          "credential_file": ".env.local",
+          "key_disclosed": false,
+          "inference_requests": 0,
+          "inputs_verified": 51,
+          "crops_verified": 168,
+          "budget": {
+            "requests_attempted": 0,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "0",
+            "unknown_charge_requests": 0,
+            "network_attempts_claimed": 0,
+            "unknown_charge_reserved_usd": "0",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "status": "read_only_access_verified",
+          "available_requested_models": [
+            "gpt-6-luna",
+            "gpt-6.1-sol"
+          ],
+          "balance_and_invoice": "unverified"
+        },
+        "first_inference_failure": {
+          "model": "gpt-6-luna",
+          "tier": "default",
+          "http_status": 429,
+          "error_type": "ProviderHTTPError",
+          "error_code": null,
+          "failed_attempt_elapsed_ms": 2556.598699999995,
+          "usage_reported": false,
+          "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+        },
+        "historical_credit_check": {
+          "status": "blocked_credit_verification",
+          "balance": null,
+          "free_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "runtime_gate": "disarmed_after_grounded_v2_failures",
+        "historical_vision016_credit_check": {
+          "status": "unverified_billing_browser_human_verification",
+          "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+          "free_credit_balance": null,
+          "available_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "gemini_credit_check": {
+          "status": "verified_read_only_paid_prepaid_account",
+          "available_credit_balance": null,
+          "currency": "EUR",
+          "free_credit_balance": "0",
+          "auto_recharge_enabled": false,
+          "source": "https://aistudio.google.com/billing",
+          "cost_delay": "page warns up to 24h or longer; zero current spend cannot settle failed requests",
+          "new_budget_authorized": false,
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_prepaid_balance"
+        },
+        "timeout_reconciliation": {
+          "record": "validation/results/grounded-reader-v2/summary.json",
+          "method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+          "prior_timeouts": 8,
+          "cap_reset": false,
+          "retained_unknown_requests": 4
+        }
+      }
+    },
+    {
+      "reason": "Preserve VISION-018 and prior API/budget evidence verbatim when advancing VISION-019",
+      "latest_experiment": {
+        "experiment_id": "VISION-018",
+        "parent_experiment_id": "VISION-017",
+        "baseline_commit": "b4b95168aa0cd290b47e4e780c7450d11764283f",
+        "question": "Can a compact grounded R1 response meet the deadline, then produce current advice through actual local-first API fallback?",
+        "decision": "Keep compact grounded Luna as a bounded R1 research candidate and transport guard; no operational hybrid/Gemini/default/release promotion",
+        "next_step": "One bounded initialized stable-hybrid transport/availability experiment with continuous capture and current-evidence revalidation; no automatic new paid batch",
+        "status": "executed",
+        "result": "validation/results/live-reader-diagnosis/summary.json",
+        "report": "docs/LIVE_READER_DIAGNOSIS.md",
+        "api_requests": 13,
+        "actual_api_cost": null,
+        "known_reported_usage_upper_usd": "0.00555150",
+        "new_development_scenes": 3,
+        "final_holdout": "not_opened_or_created",
+        "reader_promoted": false,
+        "release_changed": false
+      },
+      "api_access_policy": {
+        "inference_authorized": false,
+        "authorization_epoch": "2026-10-05-gemini-request-isolation-eur10",
+        "max_requests": 0,
+        "max_usd": 0,
+        "reason": "VISION-019 diagnosis complete; same lifetime request ceiling exhausted; no automatic further inference",
+        "research_spending_authorization": {
+          "currency": "EUR",
+          "total_cap": "10",
+          "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
+          "supersedes": "2026-10-04-zero-budget",
+          "calls_executed": 89,
+          "cost_incurred": null,
+          "credential_choice": "reuse_existing_no_new_key",
+          "known_environment_credentials": "Existing Gemini credential reused; text and image generation confirmed. Structured hand schemas rejected, opt-in JSON mode succeeds.",
+          "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
+          "runtime_gate": "disarmed_after_bounded_gemini_request_diagnosis",
+          "record": "docs/GEMINI_REQUEST_FIX.md",
+          "working_cap_usd": "8",
+          "max_requests": 90,
+          "ledger": "artifacts/api-budget/eur10-total-20261004.json",
+          "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
+          "budget_receipt": {
+            "requests_attempted": 90,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "4.133454900",
+            "unknown_charge_requests": 10,
+            "network_attempts_claimed": 89,
+            "unknown_charge_reserved_usd": "3.9550760",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "user_reported_credit_topup": {
+            "currency": "EUR",
+            "amount": "10",
+            "account_balance_verified": false
+          },
+          "reported_usage_upper_charge_usd": "0.035521000",
+          "historical_vision016_budget_receipt": {
+            "requests_attempted": 70,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "7.422385000",
+            "unknown_charge_requests": 9,
+            "network_attempts_claimed": 70,
+            "unknown_charge_reserved_usd": "7.386864",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "lifetime_reserved_attempts": 90
+        },
+        "credit_check": {
+          "status": "verified_read_only_authenticated_billing",
+          "checked_utc": "2026-10-05T13:05:15.438578+00:00",
+          "available_credit_balance": null,
+          "currency": "USD",
+          "free_credit_balance": null,
+          "auto_recharge_enabled": false,
+          "source": "https://platform.openai.com/settings/organization/billing/overview",
+          "usage_export": "69 prior requests verified; not final invoice",
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_prepaid_balance"
+        },
+        "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
+        "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
+        "account_model_access": {
+          "checked_utc": "2026-10-05T10:36:55.580364+00:00",
+          "credential_file": ".env.local",
+          "key_disclosed": false,
+          "inference_requests": 0,
+          "inputs_verified": 51,
+          "crops_verified": 168,
+          "budget": {
+            "requests_attempted": 0,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "0",
+            "unknown_charge_requests": 0,
+            "network_attempts_claimed": 0,
+            "unknown_charge_reserved_usd": "0",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "status": "read_only_access_verified",
+          "available_requested_models": [
+            "gpt-6-luna",
+            "gpt-6.1-sol"
+          ],
+          "balance_and_invoice": "unverified"
+        },
+        "first_inference_failure": {
+          "model": "gpt-6-luna",
+          "tier": "default",
+          "http_status": 429,
+          "error_type": "ProviderHTTPError",
+          "error_code": null,
+          "failed_attempt_elapsed_ms": 2556.598699999995,
+          "usage_reported": false,
+          "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+        },
+        "historical_credit_check": {
+          "status": "blocked_credit_verification",
+          "balance": null,
+          "free_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "runtime_gate": "disarmed_after_vision019",
+        "historical_vision016_credit_check": {
+          "status": "unverified_billing_browser_human_verification",
+          "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+          "free_credit_balance": null,
+          "available_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "gemini_credit_check": {
+          "status": "user_screenshot_positive_paid_prepaid_credit_and_generation_verified",
+          "available_credit_balance": null,
+          "currency": "EUR",
+          "free_credit_balance": "0",
+          "auto_recharge_enabled": false,
+          "source": "https://aistudio.google.com/billing",
+          "cost_delay": "page warns up to 24h or longer; zero current spend cannot settle failed requests",
+          "new_budget_authorized": false,
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_EUR5_prepaid_credit_in_user_screenshot"
+        },
+        "timeout_reconciliation": {
+          "record": "validation/results/grounded-reader-v2/summary.json",
+          "method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+          "prior_timeouts": 8,
+          "cap_reset": false,
+          "retained_unknown_requests": 4
+        }
+      }
+    },
+    {
+      "reason": "Preserve VISION-019 latest experiment and allowance evidence verbatim before VISION-020",
+      "latest_experiment": {
+        "experiment_id": "VISION-019",
+        "parent_experiment_id": "VISION-018",
+        "baseline_commit": "7717ec222436b47d45d5520ce67091f0e66c38ab",
+        "question": "Does Gemini fail because of account access, images or structured hand-schema configuration?",
+        "decision": "Keep opt-in JSON MIME mode with strict local validation; one correct owned development state, no reader/hybrid promotion.",
+        "next_step": "Fresh same-input verification then actual hybrid; only after an explicit bounded request allowance, without ledger reset.",
+        "status": "executed",
+        "result": "validation/results/gemini-request-fix/summary.json",
+        "report": "docs/GEMINI_REQUEST_FIX.md",
+        "api_requests": 3,
+        "actual_api_cost": null,
+        "known_reported_usage_upper_usd": "0.0024709",
+        "new_accounted_upper_including_uncertain_usd": "0.319603700",
+        "new_development_scenes": 0,
+        "reused_development_scenes": 1,
+        "final_holdout": "not_opened",
+        "reader_promoted": false,
+        "release_changed": false
+      },
+      "api_access_policy": {
+        "inference_authorized": false,
+        "authorization_epoch": "2026-10-05-gemini-request-isolation-eur10",
+        "max_requests": 0,
+        "max_usd": 0,
+        "reason": "VISION-019 diagnosis complete; same lifetime request ceiling exhausted; no automatic further inference",
+        "research_spending_authorization": {
+          "currency": "EUR",
+          "total_cap": "10",
+          "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
+          "supersedes": "2026-10-04-zero-budget",
+          "calls_executed": 89,
+          "cost_incurred": null,
+          "credential_choice": "reuse_existing_no_new_key",
+          "known_environment_credentials": "Existing Gemini credential reused; text and image generation confirmed. Structured hand schemas rejected, opt-in JSON mode succeeds.",
+          "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
+          "runtime_gate": "disarmed_after_bounded_gemini_request_diagnosis",
+          "record": "docs/GEMINI_REQUEST_FIX.md",
+          "working_cap_usd": "8",
+          "max_requests": 90,
+          "ledger": "artifacts/api-budget/eur10-total-20261004.json",
+          "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
+          "budget_receipt": {
+            "requests_attempted": 90,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "4.133454900",
+            "unknown_charge_requests": 10,
+            "network_attempts_claimed": 89,
+            "unknown_charge_reserved_usd": "3.9550760",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "user_reported_credit_topup": {
+            "currency": "EUR",
+            "amount": "10",
+            "account_balance_verified": false
+          },
+          "reported_usage_upper_charge_usd": "0.035521000",
+          "historical_vision016_budget_receipt": {
+            "requests_attempted": 70,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "7.422385000",
+            "unknown_charge_requests": 9,
+            "network_attempts_claimed": 70,
+            "unknown_charge_reserved_usd": "7.386864",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "lifetime_reserved_attempts": 90
+        },
+        "credit_check": {
+          "status": "verified_read_only_authenticated_billing",
+          "checked_utc": "2026-10-05T13:05:15.438578+00:00",
+          "available_credit_balance": null,
+          "currency": "USD",
+          "free_credit_balance": null,
+          "auto_recharge_enabled": false,
+          "source": "https://platform.openai.com/settings/organization/billing/overview",
+          "usage_export": "69 prior requests verified; not final invoice",
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_prepaid_balance"
+        },
+        "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
+        "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
+        "account_model_access": {
+          "checked_utc": "2026-10-05T10:36:55.580364+00:00",
+          "credential_file": ".env.local",
+          "key_disclosed": false,
+          "inference_requests": 0,
+          "inputs_verified": 51,
+          "crops_verified": 168,
+          "budget": {
+            "requests_attempted": 0,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "0",
+            "unknown_charge_requests": 0,
+            "network_attempts_claimed": 0,
+            "unknown_charge_reserved_usd": "0",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "status": "read_only_access_verified",
+          "available_requested_models": [
+            "gpt-6-luna",
+            "gpt-6.1-sol"
+          ],
+          "balance_and_invoice": "unverified"
+        },
+        "first_inference_failure": {
+          "model": "gpt-6-luna",
+          "tier": "default",
+          "http_status": 429,
+          "error_type": "ProviderHTTPError",
+          "error_code": null,
+          "failed_attempt_elapsed_ms": 2556.598699999995,
+          "usage_reported": false,
+          "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+        },
+        "historical_credit_check": {
+          "status": "blocked_credit_verification",
+          "balance": null,
+          "free_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "runtime_gate": "disarmed_after_vision019",
+        "historical_vision016_credit_check": {
+          "status": "unverified_billing_browser_human_verification",
+          "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+          "free_credit_balance": null,
+          "available_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "gemini_credit_check": {
+          "status": "user_screenshot_positive_paid_prepaid_credit_and_generation_verified",
+          "available_credit_balance": null,
+          "currency": "EUR",
+          "free_credit_balance": "0",
+          "auto_recharge_enabled": false,
+          "source": "https://aistudio.google.com/billing",
+          "cost_delay": "page warns up to 24h or longer; zero current spend cannot settle failed requests",
+          "new_budget_authorized": false,
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_EUR5_prepaid_credit_in_user_screenshot"
+        },
+        "timeout_reconciliation": {
+          "record": "validation/results/grounded-reader-v2/summary.json",
+          "method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+          "prior_timeouts": 8,
+          "cap_reset": false,
+          "retained_unknown_requests": 4
+        }
+      }
+    },
+    {
+      "source_commit": "097cbba877fe694f542850c550d8854cf6d12b0c",
+      "reason": "Preserve PR16 offline latest-experiment and runtime policy verbatim before VISION-022 preflight-only stop.",
+      "latest_experiment": {
+        "experiment_id": "VISION-021",
+        "parent_experiment_id": "VISION-020",
+        "baseline_commit": "a5ea45428b670d8a0ff10f5d6d495ad534fa9fde",
+        "question": "Prepare a fresh paired Luna/Gemini comparison without spending or consuming final holdouts.",
+        "decision": "Offline corpus, exact native payloads, common evaluator and staged worst-case budget ready. No candidate promoted, no network/model calls.",
+        "next_step": "Stop. A new bounded explicit authorization is required for the proposed initial six paired requests. Conditional hybrid needs measured gates and admitting ledger.",
+        "status": "available",
+        "result": "validation/results/paired-cloud-preparation/summary.json",
+        "report": "docs/PAIRED_CLOUD_PREPARATION.md",
+        "api_requests": 0,
+        "new_development_scenes": 16,
+        "new_validation_scenes": 16,
+        "independent_source_sessions": 6,
+        "final_holdout": "not_opened_not_created",
+        "reader_promoted": false,
+        "release_changed": false
+      },
+      "api_access_policy": {
+        "inference_authorized": false,
+        "authorization_epoch": "2026-10-05-exact-gemini-schema-cause-eur10",
+        "max_requests": 0,
+        "max_usd": "0",
+        "reason": "VISION-020 exact causal witness obtained; unused diagnostic slots closed; no automatic inference",
+        "research_spending_authorization": {
+          "currency": "EUR",
+          "total_cap": "10",
+          "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
+          "supersedes": "2026-10-04-zero-budget",
+          "calls_executed": 93,
+          "cost_incurred": null,
+          "credential_choice": "reuse_existing_no_new_key",
+          "known_environment_credentials": "Existing Gemini key reused; exact schema trigger isolated; no key or billing changes.",
+          "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
+          "runtime_gate": "disarmed_after_bounded_exact_schema_diagnosis",
+          "record": "docs/GEMINI_SCHEMA_CAUSE.md",
+          "working_cap_usd": "8",
+          "max_requests": 102,
+          "ledger": "artifacts/api-budget/eur10-total-20261004.json",
+          "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
+          "budget_receipt": {
+            "requests_attempted": 94,
+            "max_requests": 102,
+            "max_usd": "8",
+            "accounted_upper_usd": "5.087190600",
+            "unknown_charge_requests": 13,
+            "network_attempts_claimed": 93,
+            "unknown_charge_reserved_usd": "4.9064744",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "user_reported_credit_topup": {
+            "currency": "EUR",
+            "amount": "10",
+            "account_balance_verified": false
+          },
+          "reported_usage_upper_charge_usd": "0.035521000",
+          "historical_vision016_budget_receipt": {
+            "requests_attempted": 70,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "7.422385000",
+            "unknown_charge_requests": 9,
+            "network_attempts_claimed": 70,
+            "unknown_charge_reserved_usd": "7.386864",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "lifetime_reserved_attempts": 94,
+          "calls_executed_scope": "claimed durable network attempts, not proof every HTTP body was sent",
+          "request_count_amendment": {
+            "previous_max_requests": 90,
+            "max_requests": 102,
+            "max_new_allowed": 12,
+            "used": 4,
+            "unused_closed": 8,
+            "max_usd_unchanged": "8",
+            "old_entries_and_unknown_charges_preserved": true
+          }
+        },
+        "credit_check": {
+          "status": "verified_read_only_authenticated_billing",
+          "checked_utc": "2026-10-05T13:05:15.438578+00:00",
+          "available_credit_balance": null,
+          "currency": "USD",
+          "free_credit_balance": null,
+          "auto_recharge_enabled": false,
+          "source": "https://platform.openai.com/settings/organization/billing/overview",
+          "usage_export": "69 prior requests verified; not final invoice",
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_prepaid_balance"
+        },
+        "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
+        "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
+        "account_model_access": {
+          "checked_utc": "2026-10-05T10:36:55.580364+00:00",
+          "credential_file": ".env.local",
+          "key_disclosed": false,
+          "inference_requests": 0,
+          "inputs_verified": 51,
+          "crops_verified": 168,
+          "budget": {
+            "requests_attempted": 0,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "0",
+            "unknown_charge_requests": 0,
+            "network_attempts_claimed": 0,
+            "unknown_charge_reserved_usd": "0",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "status": "read_only_access_verified",
+          "available_requested_models": [
+            "gpt-6-luna",
+            "gpt-6.1-sol"
+          ],
+          "balance_and_invoice": "unverified"
+        },
+        "first_inference_failure": {
+          "model": "gpt-6-luna",
+          "tier": "default",
+          "http_status": 429,
+          "error_type": "ProviderHTTPError",
+          "error_code": null,
+          "failed_attempt_elapsed_ms": 2556.598699999995,
+          "usage_reported": false,
+          "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+        },
+        "historical_credit_check": {
+          "status": "blocked_credit_verification",
+          "balance": null,
+          "free_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "runtime_gate": "disarmed_after_vision020_no_new_authorization",
+        "historical_vision016_credit_check": {
+          "status": "unverified_billing_browser_human_verification",
+          "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+          "free_credit_balance": null,
+          "available_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "gemini_credit_check": {
+          "status": "user_screenshot_positive_paid_prepaid_credit_and_generation_verified",
+          "available_credit_balance": null,
+          "currency": "EUR",
+          "free_credit_balance": "0",
+          "auto_recharge_enabled": false,
+          "source": "https://aistudio.google.com/billing",
+          "cost_delay": "page warns up to 24h or longer; zero current spend cannot settle failed requests",
+          "new_budget_authorized": false,
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_EUR5_prepaid_credit_in_user_screenshot"
+        },
+        "timeout_reconciliation": {
+          "record": "validation/results/grounded-reader-v2/summary.json",
+          "method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+          "prior_timeouts": 8,
+          "cap_reset": false,
+          "retained_unknown_requests": 4
+        }
+      }
+    },
+    {
+      "reason": "Preserve VISION-022 failed preflight and disarmed policy verbatim before explicitly resumed VISION-023.",
+      "latest_experiment": {
+        "experiment_id": "VISION-022",
+        "parent_experiment_id": "VISION-021",
+        "status": "blocked",
+        "question": "Can the exact PR16 six-request paired smoke pass current model-access and unchanged aggregate budget prerequisites?",
+        "candidate_model_ids": [
+          "gpt-6-luna",
+          "gemini-3.5-flash-lite"
+        ],
+        "baseline_commit": "097cbba877fe694f542850c550d8854cf6d12b0c",
+        "split": "validation",
+        "assistance": "Unchanged frozen native table and role crops",
+        "budget": {
+          "max_new_requests": 6,
+          "worst_case_usd": "2.5310064",
+          "unchanged_lifetime_max_usd": "8",
+          "executed_new_requests": 0
+        },
+        "result": "validation/results/paired-cloud-smoke/preflight.json",
+        "report": "docs/PAIRED_CLOUD_SMOKE.md",
+        "decision": "Stop without inference: both read-only model access GETs timed out. No claim about key validity, credit or model quality.",
+        "next_action": "Read-only connectivity diagnosis if resumed; no automatic smoke or hybrid."
+      },
+      "api_access_policy": {
+        "inference_authorized": false,
+        "authorization_epoch": "2026-10-05-exact-gemini-schema-cause-eur10",
+        "max_requests": 0,
+        "max_usd": "0",
+        "reason": "VISION-020 exact causal witness obtained; unused diagnostic slots closed; no automatic inference",
+        "research_spending_authorization": {
+          "currency": "EUR",
+          "total_cap": "10",
+          "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
+          "supersedes": "2026-10-04-zero-budget",
+          "calls_executed": 93,
+          "cost_incurred": null,
+          "credential_choice": "reuse_existing_no_new_key",
+          "known_environment_credentials": "Existing Gemini key reused; exact schema trigger isolated; no key or billing changes.",
+          "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
+          "runtime_gate": "disarmed_after_bounded_exact_schema_diagnosis",
+          "record": "docs/GEMINI_SCHEMA_CAUSE.md",
+          "working_cap_usd": "8",
+          "max_requests": 102,
+          "ledger": "artifacts/api-budget/eur10-total-20261004.json",
+          "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
+          "budget_receipt": {
+            "requests_attempted": 94,
+            "max_requests": 102,
+            "max_usd": "8",
+            "accounted_upper_usd": "5.087190600",
+            "unknown_charge_requests": 13,
+            "network_attempts_claimed": 93,
+            "unknown_charge_reserved_usd": "4.9064744",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "user_reported_credit_topup": {
+            "currency": "EUR",
+            "amount": "10",
+            "account_balance_verified": false
+          },
+          "reported_usage_upper_charge_usd": "0.035521000",
+          "historical_vision016_budget_receipt": {
+            "requests_attempted": 70,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "7.422385000",
+            "unknown_charge_requests": 9,
+            "network_attempts_claimed": 70,
+            "unknown_charge_reserved_usd": "7.386864",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "lifetime_reserved_attempts": 94,
+          "calls_executed_scope": "claimed durable network attempts, not proof every HTTP body was sent",
+          "request_count_amendment": {
+            "previous_max_requests": 90,
+            "max_requests": 102,
+            "max_new_allowed": 12,
+            "used": 4,
+            "unused_closed": 8,
+            "max_usd_unchanged": "8",
+            "old_entries_and_unknown_charges_preserved": true
+          }
+        },
+        "credit_check": {
+          "status": "verified_read_only_authenticated_billing",
+          "checked_utc": "2026-10-05T13:05:15.438578+00:00",
+          "available_credit_balance": null,
+          "currency": "USD",
+          "free_credit_balance": null,
+          "auto_recharge_enabled": false,
+          "source": "https://platform.openai.com/settings/organization/billing/overview",
+          "usage_export": "69 prior requests verified; not final invoice",
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_prepaid_balance"
+        },
+        "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
+        "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
+        "account_model_access": {
+          "checked_utc": "2026-10-05T10:36:55.580364+00:00",
+          "credential_file": ".env.local",
+          "key_disclosed": false,
+          "inference_requests": 0,
+          "inputs_verified": 51,
+          "crops_verified": 168,
+          "budget": {
+            "requests_attempted": 0,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "0",
+            "unknown_charge_requests": 0,
+            "network_attempts_claimed": 0,
+            "unknown_charge_reserved_usd": "0",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "status": "read_only_access_verified",
+          "available_requested_models": [
+            "gpt-6-luna",
+            "gpt-6.1-sol"
+          ],
+          "balance_and_invoice": "unverified"
+        },
+        "first_inference_failure": {
+          "model": "gpt-6-luna",
+          "tier": "default",
+          "http_status": 429,
+          "error_type": "ProviderHTTPError",
+          "error_code": null,
+          "failed_attempt_elapsed_ms": 2556.598699999995,
+          "usage_reported": false,
+          "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+        },
+        "historical_credit_check": {
+          "status": "blocked_credit_verification",
+          "balance": null,
+          "free_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "runtime_gate": "disarmed_after_vision020_no_new_authorization",
+        "historical_vision016_credit_check": {
+          "status": "unverified_billing_browser_human_verification",
+          "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+          "free_credit_balance": null,
+          "available_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "gemini_credit_check": {
+          "status": "user_screenshot_positive_paid_prepaid_credit_and_generation_verified",
+          "available_credit_balance": null,
+          "currency": "EUR",
+          "free_credit_balance": "0",
+          "auto_recharge_enabled": false,
+          "source": "https://aistudio.google.com/billing",
+          "cost_delay": "page warns up to 24h or longer; zero current spend cannot settle failed requests",
+          "new_budget_authorized": false,
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_EUR5_prepaid_credit_in_user_screenshot"
+        },
+        "timeout_reconciliation": {
+          "record": "validation/results/grounded-reader-v2/summary.json",
+          "method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+          "prior_timeouts": 8,
+          "cap_reset": false,
+          "retained_unknown_requests": 4
+        },
+        "paired_smoke_preflight": {
+          "record": "validation/results/paired-cloud-smoke/preflight.json",
+          "status": "blocked_model_access_timeout",
+          "planned_inference_requests": 6,
+          "executed_inference_requests": 0,
+          "runtime_ever_armed": false,
+          "automatic_resumption": false
+        }
+      }
+    },
+    {
+      "experiment": "VISION-030-before-report",
+      "api_access_policy": {
+        "inference_authorized": false,
+        "authorization_epoch": "2026-10-07-two-provider-offline-diagnostics",
+        "max_requests": 0,
+        "max_usd": "0",
+        "reason": "VISION-027 exactly two diagnostics consumed; no further inference authorized.",
+        "research_spending_authorization": {
+          "currency": "EUR",
+          "total_cap": "10",
+          "scope": "EUR10 aggregate across all providers/configurations; reviewed native owned synthetic and historical provider-development crops; OpenAI first",
+          "supersedes": "2026-10-04-zero-budget",
+          "calls_executed": 105,
+          "cost_incurred": null,
+          "credential_choice": "reuse_existing_no_new_key",
+          "known_environment_credentials": "Existing Gemini key reused; exact schema trigger isolated; no key or billing changes.",
+          "payment_actions": "No purchases, payment methods, billing upgrades or recharge changes authorized",
+          "runtime_gate": "disarmed_after_two_offline_diagnostics",
+          "record": "docs/TWO_PROVIDER_DIAGNOSTICS.md",
+          "working_cap_usd": "8",
+          "max_requests": 106,
+          "ledger": "artifacts/api-budget/eur10-total-20261004.json",
+          "existing_key_location_question": "resolved_user_saved_existing_key_to_ignored_env_file",
+          "budget_receipt": {
+            "requests_attempted": 106,
+            "max_requests": 106,
+            "max_usd": "8",
+            "accounted_upper_usd": "6.156175900",
+            "unknown_charge_requests": 15,
+            "network_attempts_claimed": 105,
+            "unknown_charge_reserved_usd": "5.9595464",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "user_reported_credit_topup": {
+            "currency": "EUR",
+            "amount": "10",
+            "account_balance_verified": false
+          },
+          "reported_usage_upper_charge_usd": "0.035521000",
+          "historical_vision016_budget_receipt": {
+            "requests_attempted": 70,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "7.422385000",
+            "unknown_charge_requests": 9,
+            "network_attempts_claimed": 70,
+            "unknown_charge_reserved_usd": "7.386864",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "lifetime_reserved_attempts": 104,
+          "calls_executed_scope": "claimed durable network attempts, not proof every HTTP body was sent",
+          "request_count_amendment": {
+            "previous_max_requests": 102,
+            "max_requests": 105,
+            "starting_consumed": 100,
+            "max_new_allowed": 5,
+            "used": 4,
+            "unused_closed": 1,
+            "max_usd_unchanged": "8",
+            "old_entries_and_unknown_charges_preserved": true
+          },
+          "historical_vision023_snapshot": {
+            "calls_executed": 99,
+            "runtime_gate": "disarmed_after_original_paired_six",
+            "record": "docs/CLOUD_CONNECTION_PAIRED_SMOKE.md",
+            "max_requests": 102,
+            "budget_receipt": {
+              "requests_attempted": 100,
+              "max_requests": 102,
+              "max_usd": "8",
+              "accounted_upper_usd": "5.095785750",
+              "unknown_charge_requests": 13,
+              "network_attempts_claimed": 99,
+              "unknown_charge_reserved_usd": "4.9064744",
+              "stopped": false,
+              "invoice_and_balance_verified": false,
+              "scope": "all configurations/providers under one aggregate authorization"
+            },
+            "lifetime_reserved_attempts": 100
+          },
+          "historical_vision020_request_count_amendment": {
+            "previous_max_requests": 90,
+            "max_requests": 102,
+            "max_new_allowed": 12,
+            "used": 4,
+            "unused_closed": 8,
+            "max_usd_unchanged": "8",
+            "old_entries_and_unknown_charges_preserved": true
+          }
+        },
+        "credit_check": {
+          "status": "verified_read_only_authenticated_billing",
+          "checked_utc": "2026-10-05T13:05:15.438578+00:00",
+          "available_credit_balance": null,
+          "currency": "USD",
+          "free_credit_balance": null,
+          "auto_recharge_enabled": false,
+          "source": "https://platform.openai.com/settings/organization/billing/overview",
+          "usage_export": "69 prior requests verified; not final invoice",
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_prepaid_balance"
+        },
+        "account_actions": "No payment methods, purchases, billing upgrades or auto-recharge changes. Inference has an aggregate EUR10 cap, working USD8 cap; unknown account balance is not zero.",
+        "source_check_receipt": "validation/results/r1-reader-comparison/zero-budget-policy-checks.json",
+        "account_model_access": {
+          "checked_utc": "2026-10-05T10:36:55.580364+00:00",
+          "credential_file": ".env.local",
+          "key_disclosed": false,
+          "inference_requests": 0,
+          "inputs_verified": 51,
+          "crops_verified": 168,
+          "budget": {
+            "requests_attempted": 0,
+            "max_requests": 90,
+            "max_usd": "8",
+            "accounted_upper_usd": "0",
+            "unknown_charge_requests": 0,
+            "network_attempts_claimed": 0,
+            "unknown_charge_reserved_usd": "0",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          },
+          "status": "read_only_access_verified",
+          "available_requested_models": [
+            "gpt-6-luna",
+            "gpt-6.1-sol"
+          ],
+          "balance_and_invoice": "unverified"
+        },
+        "first_inference_failure": {
+          "model": "gpt-6-luna",
+          "tier": "default",
+          "http_status": 429,
+          "error_type": "ProviderHTTPError",
+          "error_code": null,
+          "failed_attempt_elapsed_ms": 2556.598699999995,
+          "usage_reported": false,
+          "diagnostic_limit": "Historical transport retained HTTP status only, not provider body or error.code. Cannot distinguish temporary rate, credit, spend or usage limits."
+        },
+        "historical_credit_check": {
+          "status": "blocked_credit_verification",
+          "balance": null,
+          "free_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing overview redirects to login; no authenticated account balance available. Do not claim blocked_no_free_credits without verified absence.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "runtime_gate": "disarmed_after_two_offline_diagnostics",
+        "historical_vision016_credit_check": {
+          "status": "unverified_billing_browser_human_verification",
+          "checked_utc": "2026-10-05T10:45:45.022546+00:00",
+          "free_credit_balance": null,
+          "available_credit_balance": null,
+          "auto_recharge_enabled": null,
+          "reason": "Read-only Billing navigation stopped at a Cloudflare human-verification challenge. No inference diagnostic body or verified balance; do not assume zero credits or a transient rate limit.",
+          "source": "https://platform.openai.com/settings/organization/billing/overview"
+        },
+        "gemini_credit_check": {
+          "status": "user_screenshot_positive_paid_prepaid_credit_and_generation_verified",
+          "available_credit_balance": null,
+          "currency": "EUR",
+          "free_credit_balance": "0",
+          "auto_recharge_enabled": false,
+          "source": "https://aistudio.google.com/billing",
+          "cost_delay": "page warns up to 24h or longer; zero current spend cannot settle failed requests",
+          "new_budget_authorized": false,
+          "balance_verified_privately": true,
+          "available_credit_status": "positive_EUR5_prepaid_credit_in_user_screenshot"
+        },
+        "timeout_reconciliation": {
+          "record": "validation/results/grounded-reader-v2/summary.json",
+          "method": "each timeout: whole same-model/tier group input + maximum request output at audited upper prices",
+          "prior_timeouts": 8,
+          "cap_reset": false,
+          "retained_unknown_requests": 4
+        },
+        "paired_smoke_preflight": {
+          "record": "validation/results/paired-cloud-smoke/preflight.json",
+          "status": "blocked_model_access_timeout",
+          "planned_inference_requests": 6,
+          "executed_inference_requests": 0,
+          "runtime_ever_armed": false,
+          "automatic_resumption": false
+        },
+        "paired_smoke_execution": {
+          "experiment_id": "VISION-023",
+          "record": "validation/results/cloud-connection-paired-smoke/summary.json",
+          "executed_requests": 6,
+          "retries": 0,
+          "paid_warmups": 0,
+          "hybrid": 0,
+          "old_reservations_preserved": true,
+          "remaining_request_slots_closed": 2
+        },
+        "historical_runtime_gate_vision023": "disarmed_after_original_paired_six",
+        "paired_semantic_execution": {
+          "experiment_id": "VISION-025",
+          "record": "validation/results/paired-semantic-hybrid/summary.json",
+          "executed_requests": 4,
+          "retries": 0,
+          "paid_warmups": 0,
+          "hybrid": 0,
+          "old_reservations_preserved": true,
+          "remaining_request_slots_closed": 1,
+          "new_reported_usage_upper_usd": "0.0044221",
+          "new_unknown_timeout_reserves_usd": "1.0530720",
+          "actual_completed_connection_reuse_observed": true,
+          "causal_speedup_measured": false
+        },
+        "historical_vision025_closed_scope": {
+          "authorization_epoch": "2026-10-06-paired-semantic-four-plus-one",
+          "reason": "VISION-025 original four comparisons consumed; neither passed gate. Hybrid skipped, unused slot closed; no new inference authorized.",
+          "runtime_gate": "disarmed_after_paired_semantic_four",
+          "budget_receipt": {
+            "requests_attempted": 104,
+            "max_requests": 105,
+            "max_usd": "8",
+            "accounted_upper_usd": "6.153279850",
+            "unknown_charge_requests": 15,
+            "network_attempts_claimed": 103,
+            "unknown_charge_reserved_usd": "5.9595464",
+            "stopped": false,
+            "invoice_and_balance_verified": false,
+            "scope": "all configurations/providers under one aggregate authorization"
+          }
+        },
+        "two_provider_diagnostic_execution": {
+          "experiment_id": "VISION-027",
+          "record": "validation/results/two-provider-diagnostics/summary.json",
+          "executed_requests": 2,
+          "retries": 0,
+          "paid_warmups": 0,
+          "hybrid": 0,
+          "advisor_connected": false,
+          "scope_consumed": true,
+          "new_unused_slots_closed": 0,
+          "old_unused_scope_stays_closed": true,
+          "old_reservations_preserved": true,
+          "count_amendment": "105->106; unchanged USD8",
+          "new_reported_usage_upper_usd": "0.00289605"
+        }
+      },
+      "scope": "Preserved earlier published policy snapshot; canonical ledger and current executed receipts supersede stale totals."
+    },
+    {
+      "experiment": "VISION-030-closed",
+      "authorization_epoch": "2026-10-08-gemini-paired-total-check-four",
+      "runtime_gate": "disarmed_after_paired_total_four",
+      "budget_receipt": {
+        "requests_attempted": 115,
+        "max_requests": 115,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.170206000",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 114,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "record": "docs/GEMINI_PAIRED_TOTAL_CHECK.md"
+    },
+    {
+      "experiment": "VISION-031-closed",
+      "authorization_epoch": "2026-10-08-gemini-available-view-two",
+      "runtime_gate": "disarmed_after_available_view_two",
+      "budget_receipt": {
+        "requests_attempted": 117,
+        "max_requests": 117,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.172609200",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 116,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "record": "docs/GEMINI_AVAILABLE_IMAGE_VIEWS.md"
+    },
+    {
+      "experiment": "VISION-032-closed",
+      "authorization_epoch": "2026-10-08-gemini-bound-three-plus-one",
+      "runtime_gate": "disarmed_after_bound_three_conditional_closed",
+      "budget_receipt": {
+        "requests_attempted": 120,
+        "max_requests": 121,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.176516500",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 119,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "record": "validation/results/gemini-bound-session-hybrid/summary.json"
+    },
+    {
+      "experiment": "VISION-033-closed",
+      "authorization_epoch": "2026-10-08-gemini-visible-phase-three-plus-one",
+      "runtime_gate": "disarmed_after_visible_phase_three_conditional_closed",
+      "budget_receipt": {
+        "requests_attempted": 123,
+        "max_requests": 124,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "record": "validation/results/gemini-visible-phase/summary.json"
+    },
+    {
+      "experiment": "VISION-034-closed",
+      "authorization_epoch": "2026-10-08-owned-browser-integration-three",
+      "runtime_gate": "disarmed_after_owned_integration_local_guard_failure",
+      "budget_receipt": {
+        "requests_attempted": 123,
+        "max_requests": 126,
+        "max_usd": "8",
+        "accounted_upper_usd": "6.179802300",
+        "unknown_charge_requests": 15,
+        "network_attempts_claimed": 122,
+        "unknown_charge_reserved_usd": "5.9595464",
+        "stopped": false,
+        "invoice_and_balance_verified": false,
+        "scope": "all configurations/providers under one aggregate authorization"
+      },
+      "record": "validation/results/integrated-r1-session/summary.json",
+      "previous_latest_experiment": {
+        "experiment_id": "VISION-033",
+        "parent_experiment_id": "VISION-032",
+        "status": "executed",
+        "baseline_commit": "da57e74377be612b9dd39ba22fe687063aec10cd",
+        "question": "Can explicit visible phase vocabulary pass three new states before one bounded headless local-first attempt?",
+        "split": "new_owned_sampled_seed_states_shared_renderer_not_full_sessions",
+        "candidate_model_ids": [
+          "gemini-3.5-flash-lite"
+        ],
+        "budget": {
+          "max_new_requests": 4,
+          "executed_new_requests": 3,
+          "worst_case_usd": "1.2685312",
+          "unchanged_lifetime_max_usd": "8",
+          "reported_usage_upper_usd": "0.0032858"
+        },
+        "result": "validation/results/gemini-visible-phase/summary.json",
+        "report": "docs/GEMINI_VISIBLE_PHASE_CONTRACT.md",
+        "freeze_sha256": "b2a5d53f9e854e83c6a4e861232f86d8d49e74f12dbeaecf027b091d09ed0f13",
+        "decision": "Visible phase3/3 and cards3/3 on new sampled states, but missing SESSION label makes full transcription2/3. Frozen all-three gate fails; conditional fourth closed, no hybrid/champion claim.",
+        "next_action": "Scope consumed; runtime disarmed, fourth slot closed. No automatic inference, promotion, training or holdout.",
+        "reader_promoted": false,
+        "release_changed": false,
+        "final_holdout": "not_opened",
+        "posthoc_offline_source_repair": {
+          "status": "offline_verified",
+          "result": "validation/results/gemini-visible-phase/source-failure-audit.json",
+          "new_pytest_regressions": 2,
+          "new_provider_requests": 0,
+          "ledger_changed": false,
+          "old_freeze_rejected": true,
+          "consumed_source_preserved": true,
+          "slot_reopened": false,
+          "decision": "Preserve producer/no_current_capture cause and null unreached timing; no API/solver/advisor on either source failure."
+        }
+      }
+    }
+  ],
+  "registry_reconciliation": {
+    "experiment": "VISION-033",
+    "forward_summaries_added": [
+      "VISION-028",
+      "VISION-029",
+      "VISION-030",
+      "VISION-031",
+      "VISION-032"
+    ],
+    "prior_entries_and_result_files_unchanged": true,
+    "new_execution_implied": false
+  }
+}

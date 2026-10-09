@@ -32,6 +32,7 @@ class CardDetection:
     logical_hint: str | None = None
     calibrated_probability: float | None = None
     score_type: str = "template_similarity"
+    visibility: str | None = None
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "rank", normalize_rank(self.rank))
@@ -43,6 +44,12 @@ class CardDetection:
             raise ValueError("Bounding box must be x,y,width,height with positive size")
         if self.face_down and (self.rank is not None or self.suit is not None):
             raise ValueError("A hidden detection must not disclose its rank or suit")
+        visibility = self.visibility or ("covered" if self.face_down else "readable" if self.rank else "unreadable")
+        if visibility not in ("readable", "covered", "unreadable"):
+            raise ValueError("A detection is a present object; absence is not a detection")
+        if (visibility == "covered") != self.face_down or (visibility == "readable") != (self.rank is not None):
+            raise ValueError("Visibility must agree with the observed rank and card orientation")
+        object.__setattr__(self, "visibility", visibility)
         if self.calibrated_probability is not None and not 0 <= self.calibrated_probability <= 1:
             raise ValueError("Calibrated probability must be in [0, 1]")
 
@@ -258,10 +265,13 @@ class TemporalTracker:
     """
     def __init__(self, log: EventLog | None = None, *, stable_frames: int = 3,
                  minimum_score: float = .90, lost_after: int = 3,
-                 association_radius: float = 190) -> None:
+                 association_radius: float = 190, association_mode: str = 'legacy') -> None:
         if stable_frames < 1 or lost_after < 1 or association_radius <= 0:
             raise ValueError("Invalid temporal tracker thresholds")
         self.log = log if log is not None else EventLog()
+        if association_mode not in ('legacy','ordered_row'):
+            raise ValueError('Unknown association mode.')
+        self.association_mode=association_mode
         self.stable_frames, self.minimum_score = stable_frames, minimum_score
         self.lost_after, self.association_radius = lost_after, association_radius
         self.tracks: dict[str, _Track] = {}
@@ -320,8 +330,47 @@ class TemporalTracker:
     def _event_payload(self, track: _Track) -> dict[str, Any]:
         return {"card_id": track.card_id, "rank": track.rank, "suit": track.suit,
                 "face_down": track.face_down, "bbox": list(track.bbox), "zone": track.zone,
+                "visibility": "covered" if track.face_down else "readable" if track.rank else "unreadable",
                 "round_id": self.round_id, "score": track.score,
                 "score_semantics": "raw_similarity_not_probability"}
+
+    def _ordered_row_assignments(self, observations, stamp):
+        """Monotone sequence alignment for declared upright card rows only.
+
+        A revealed duplicate rank must not swap an upcard with its neighboring
+        hole card during re-centering. Keep left-to-right physical order, allow
+        missing observations and new cards, and surface near-tied alternatives.
+        No oracle order/identity is passed in; only current/prior pixel boxes.
+        """
+        assignments={}
+        for zone in sorted({d.zone for d in observations}):
+            old=sorted((t for t in self.tracks.values() if t.zone==zone),key=lambda t:t.bbox[0])
+            new=sorted((i for i,d in enumerate(observations) if d.zone==zone),key=lambda i:observations[i].bbox[0])
+            cells=[[[] for _ in range(len(new)+1)] for _ in range(len(old)+1)]
+            cells[0][0]=[(0.,())]
+            for a in range(len(old)+1):
+                for b in range(len(new)+1):
+                    if not a and not b: continue
+                    options=[]
+                    if a: options.extend((cost+100,pairs) for cost,pairs in cells[a-1][b])
+                    if b: options.extend((cost+100,pairs) for cost,pairs in cells[a][b-1])
+                    if a and b:
+                        cost=self._association_cost(old[a-1],observations[new[b-1]])
+                        if cost is not None:
+                            options.extend((previous+cost,pairs+((new[b-1],old[a-1].card_id),)) for previous,pairs in cells[a-1][b-1])
+                    unique={}
+                    for cost,pairs in options:
+                        unique[pairs]=min(cost,unique.get(pairs,float('inf')))
+                    cells[a][b]=sorted((cost,pairs) for pairs,cost in unique.items())[:2]
+            paths=cells[-1][-1]
+            if len(paths)>1 and paths[1][0]-paths[0][0]<10:
+                reason=f'Ordered row {zone} has near-tied physical identity assignments.'
+                self.ambiguities.append(reason)
+                issue=f'ordered-row:{self.round_id}:{zone}'
+                if issue not in self.log.replay().integrity_issues:
+                    self.log.append('STATE_UNCERTAIN',{'issue_id':issue,'reason':reason},stamp)
+            if paths: assignments.update(dict(paths[0][1]))
+        return assignments
 
     def update(self, detections: Iterable[CardDetection | Mapping[str, Any]], timestamp: float,
                round_id: str | None = None) -> list[Event]:
@@ -345,7 +394,7 @@ class TemporalTracker:
         candidates.sort()
         assignments: dict[int, str] = {}
         assigned_tracks: set[str] = set()
-        for cost, cid, i in candidates:
+        for cost, cid, i in candidates if self.association_mode == 'legacy' else []:
             if i in assignments or cid in assigned_tracks:
                 continue
             competing = [(other_cost, other_cid) for other_cost, other_cid, other_i in candidates
@@ -358,6 +407,10 @@ class TemporalTracker:
                     self.log.append("STATE_UNCERTAIN", {"issue_id": issue_id, "reason": reason}, stamp)
             assignments[i] = cid
             assigned_tracks.add(cid)
+        if self.association_mode=='ordered_row':
+            # Evaluate the whole row; do not emit legacy greedy uncertainties.
+            assignments=self._ordered_row_assignments(observations,stamp)
+            assigned_tracks=set(assignments.values())
         for i, detection in enumerate(observations):
             if i not in assignments:
                 self.sequence += 1
@@ -455,6 +508,8 @@ class TemporalTracker:
                 "tracks": [{"card_id": t.card_id, "rank": t.rank, "suit": t.suit,
                             "bbox": list(t.bbox), "zone": t.zone, "score": t.score,
                             "confirmed": t.confirmed, "hits": t.hits, "missed": t.missed,
+                            "label_pending": t.candidate is not None,
+                            "candidate_hits": t.candidate_hits,
                             "lost": t.lost} for t in self.tracks.values()]}
 
 

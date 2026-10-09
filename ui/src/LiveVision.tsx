@@ -6,6 +6,8 @@ import {api,download,fetchApi,Rules,Snapshot} from './api';
 import {ScreenShare,captureScreenFrame,screenSharingError} from './screen-sharing';
 import {LiveVideoLoop} from './live-loop';
 import {LiveAnalysis} from './live-analysis';
+import {nativeControl,publishView} from './native-advisor';
+import CompactAdvisor from './CompactAdvisor';
 import ClefVerification,{useClefVerification} from './ClefVerification';
 import {verificationImage,VisualEvidence} from './clef-evidence';
 import {FrameMonitor} from './frame-monitor';
@@ -14,6 +16,7 @@ import {DemoVideoSource} from './demo-source';
 import {getLanguage,t} from './i18n';
 import {localize} from './localize';
 import {handValue} from './preferences';
+import {captureGeometry,cropLayout,previewPoint,sourceDetectionBox,Layout} from './capture-geometry';
 import './live.css';
 
 const actions:Record<string,string>={hit:'Hit',stand:'Stand',double:'Double',split:'Split',surrender:'Surrender',continue:'Continue',insurance:'Insurance',decline_insurance:'Decline insurance'};
@@ -46,6 +49,7 @@ export function LiveAdvisor({report,stale,compact=false}:{report:any;stale:boole
    <p>{report?.count_history==='complete'?'Full observed history from a declared fresh shoe.':report?.count_history==='compromised'?'Observation history is incomplete. Declare a new shoe to restore the count.':'Count covers observed cards only. Earlier cards are unknown.'}</p><p>Remaining inventory: {report?.physical_remaining??'—'} cards. A positive true count describes a higher proportion of tens and aces in the estimated pool; it does not guarantee an outcome.</p>
    {report?.analysis&&<p><span>EV analysis</span>: <span>{analysisLabels[report.analysis.status]||'Not available'}</span>. <span>Basic strategy remains available while estimates run.</span></p>}
    <p>Basic strategy is available offline. Sampling intervals describe simulation uncertainty, not recognition accuracy. EV describes the current action, not the next-round betting edge.</p>
+   {report?.detections?.length>0&&<div><b>Card evidence</b>{report.detections.map((card:any,i:number)=><p key={i}>{card.zone} · {card.visibility==='covered'?'Covered card':card.rank?'Readable rank':'Unreadable face-up card'} · Rank: {card.rank||'Unknown'} · Suit: {card.suit||'Unknown'}</p>)}</div>}
   </div></details>
   <p className="analysis-disclaimer">Analysis and education only. Not financial advice. No guaranteed outcomes.</p>
  </section>);
@@ -54,7 +58,12 @@ export function LiveAdvisor({report,stale,compact=false}:{report:any;stale:boole
 function tableHeight(corners:number[][],width:number,height:number){if(corners.length!==4)return Math.max(600,Math.min(1600,Math.round(960*height/Math.max(1,width))));const edge=(a:number,b:number)=>Math.hypot((corners[a][0]-corners[b][0])*width,(corners[a][1]-corners[b][1])*height);return Math.max(600,Math.min(1600,Math.round(960*(edge(0,3)+edge(1,2))/Math.max(1,edge(0,1)+edge(3,2)))))}
 export default function LiveVision({rules,connected,acquireSource,releaseSource,interval=350,monitorOnly=false,tableName='Table 1',demoSeed=42,defaultSamples=1500}:{rules:Rules;connected:boolean;acquireSource?:()=>Promise<MediaStream>;releaseSource?:(stream:MediaStream)=>void;interval?:number;monitorOnly?:boolean;tableName?:string;demoSeed?:number;defaultSamples?:number}){
  const video=useRef<HTMLVideoElement>(null),owner=useRef(new ScreenShare()),demo=useRef<DemoVideoSource|null>(null),loop=useRef<LiveVideoLoop|null>(null);
- const advisorId=useRef(crypto.randomUUID());
+ const [profile,setProfile]=useState('automatic'),[layout,setLayout]=useState<Layout>({}),[regionName,setRegionName]=useState('table');
+ const regionStart=useRef<[number,number]|null>(null),diagnosticNext=useRef(false);
+ const [diagnosticStatus,setDiagnosticStatus]=useState('');
+ const [regionPixels,setRegionPixels]=useState<{name:string;url:string;size:string}[]>([]);
+ const advisorId=useRef(crypto.randomUUID()),viewEpoch=useRef(0),nativeStream=useRef<string|null>(null);
+ const automaticAdvisor=useRef(false),[nativeHost,setNativeHost]=useState<any>(null);
  const progressive=useRef(new LiveAnalysis());
  const identity=useRef<string|null>(null),generation=useRef(0),sourceGeneration=useRef(0),mounted=useRef(true),abort=useRef<AbortController|null>(null);
  const [stream,setStream]=useState<MediaStream|null>(null),[source,setSource]=useState(''),[pending,setPending]=useState(false),[observing,setObserving]=useState(false),[error,setError]=useState('');
@@ -76,33 +85,52 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
  };
  const sourceObserved=useRef(false);
  const shared=useRef<MediaStream|null>(null);
- const stop=()=>{recording.current.stop();sourceGeneration.current++;sourceObserved.current=false;stopObserver();owner.current.stop();if(shared.current){releaseSource?.(shared.current);shared.current=null}demo.current?.dispose();demo.current=null;if(mounted.current){setStream(null);setPending(false);setSource('');setDemoState(null)}};
+ const stop=()=>{automaticAdvisor.current=false;recording.current.stop();sourceGeneration.current++;sourceObserved.current=false;stopObserver();owner.current.stop();if(shared.current){releaseSource?.(shared.current);shared.current=null}demo.current?.dispose();demo.current=null;if(mounted.current){setStream(null);setPending(false);setSource('');setDemoState(null)}};
  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;advisorGeneration.current++;stop();const previous=floating.current;floating.current=null;previous?.root.unmount();previous?.window.close()}},[]);
  useEffect(()=>{if(!connected)stopObserver()},[connected]);
  useEffect(()=>{const timer=setInterval(()=>setStale(!lastSeen||performance.now()-lastSeen>2200),200);return()=>clearInterval(timer)},[lastSeen]);
- useEffect(()=>{const target=floating.current;if(target&&!target.window.closed){target.window.document.documentElement.lang=language;target.root.render(localize(<LiveAdvisor report={report} stale={stale} compact/>))}},[report,stale,language]);
+ useEffect(()=>{if(!connected){setNativeHost(null);return}let active=true;void api('/native/advisor/status').then(value=>{if(active)setNativeHost(value)}).catch(()=>{});return()=>{active=false}},[connected]);
+ useEffect(()=>{const target=floating.current;if(target&&!target.window.closed){target.window.document.documentElement.lang=language;target.root.render(<CompactAdvisor report={report} stale={stale} ageMs={lastSeen?performance.now()-lastSeen:undefined}/>)}},[report,stale,language,lastSeen]);
 
+ useEffect(()=>{
+  if(!stream||profile!=='native'){setRegionPixels([]);return}
+  const refresh=()=>{const target=video.current;if(!target||!target.videoWidth)return;
+   setRegionPixels(Object.entries(layout).filter(([name])=>name!=='table').map(([name,rect])=>{
+    const {source_rect:[x,y,w,h]}=captureGeometry(target.videoWidth,target.videoHeight,rect,null);
+    const preview=document.createElement('canvas');preview.width=Math.min(240,w);preview.height=Math.max(1,Math.round(h*preview.width/w));
+    preview.getContext('2d')!.drawImage(target,x,y,w,h,0,0,preview.width,preview.height);
+    return {name,url:preview.toDataURL('image/png'),size:w+' × '+h+' source pixels'};
+   }));
+  };refresh();const timer=setInterval(refresh,1000);return()=>clearInterval(timer);
+ },[stream,profile,layout]);
  const startObserver=async()=>{
   stopObserver();if(!video.current||!stream||!connected||monitorOnly)return;
   if(corners.length!==0&&corners.length!==4){setError('Select all four table corners before observing.');return}
   const attempt=generation.current;setError('');setPending(true);
   try{
-   const configuration=await api('/live',{rules,samples,output_height:tableHeight(corners,video.current.videoWidth,video.current.videoHeight),corners:corners.length===4?corners:null,fresh_shoe:(source==='demo'&&!sourceObserved.current)||fresh,manual_turn:manualTurn});
+   if(profile==='native'&&!['table','dealer','player:0'].every(name=>layout[name]))throw new Error('Select the table, dealer and player card regions first.');
+   viewEpoch.current=0;
+   const nativeLayout=profile==='native'?cropLayout(layout,video.current.videoWidth,video.current.videoHeight):undefined;
+   const configuration=await api('/live',{rules,samples,layout:nativeLayout,output_height:tableHeight(corners,video.current.videoWidth,video.current.videoHeight),corners:profile==='native'?null:corners.length===4?corners:null,fresh_shoe:(source==='demo'&&!sourceObserved.current)||fresh,manual_turn:manualTurn});
    if(!mounted.current||attempt!==generation.current){void fetchApi('/live/'+configuration.stream_id,{method:'DELETE'});return}
    identity.current=configuration.stream_id;sourceObserved.current=true;setObserving(true);
    const target=video.current!;const id=configuration.stream_id;
    const monitor=new FrameMonitor(),canvas=document.createElement('canvas');canvas.width=96;canvas.height=54;
    const monitorContext=canvas.getContext('2d',{willReadFrequently:true});let motionEpoch=0,region:number[]|null=null,imageSize:number[]|null=null;
    loop.current=new LiveVideoLoop(target,async(sequence)=>{
-    const began=performance.now(),capturedEpoch=motionEpoch,controller=new AbortController();abort.current=controller;
+    const capturedAt=Date.now(),began=performance.now(),capturedEpoch=motionEpoch,controller=new AbortController();abort.current=controller;
     const timeout=setTimeout(()=>controller.abort(),6000);
     try{
-     const image=await captureScreenFrame(target);
+     const capture=captureGeometry(target.videoWidth,target.videoHeight,profile==='native'?layout.table:undefined,profile==='native'?null:1920);
+     const image=await captureScreenFrame(target,{region:profile==='native'?layout.table:undefined,maxEdge:profile==='native'?null:1920});
+     const saveDiagnostic=diagnosticNext.current;diagnosticNext.current=false;
      if(attempt!==generation.current)return;
-     const response=await fetchApi('/live/'+id+'/frame?sequence='+sequence+'&timestamp='+(began/1000),{method:'POST',body:image,signal:controller.signal,headers:{'Content-Type':'image/png'}});
+     const response=await fetchApi('/live/'+id+'/frame?sequence='+sequence+'&timestamp='+(began/1000)+(saveDiagnostic?'&diagnostic=true':''),{method:'POST',body:image,signal:controller.signal,headers:{'Content-Type':'image/png','X-BJLAB-Capture':JSON.stringify({...capture,captured_monotonic_ms:began,captured_epoch_ms:capturedAt,motion_epoch:capturedEpoch,table_name:tableName})}});
+     if(saveDiagnostic&&response.ok){const blob=await response.blob();const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='private-vision-diagnostic.zip';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setDiagnosticStatus('Saved locally: exact backend input, transforms, crops and observation.');return}
      const value=await response.json();if(!response.ok)throw new Error(typeof value.detail==='string'?value.detail:'Video processing failed.');
      if(!mounted.current||attempt!==generation.current)return;
      region=value.table_bounds;imageSize=value.image_size;
+     if(automaticAdvisor.current&&value.table_bounds){automaticAdvisor.current=false;void api('/native/advisor/status').then(host=>{if(host.available&&mounted.current&&attempt===generation.current)void openAdvisor()}).catch(()=>{})}
      if(capturedEpoch===motionEpoch){setReport(value);setLastSeen(began);setStale(performance.now()-began>2200);setError('');if(verificationEnabled.current&&value.gate?.solver_allowed){const visualImage=await verificationImage(image,corners.length?null:value);if(capturedEpoch===motionEpoch&&attempt===generation.current)setEvidence({key:[attempt,capturedEpoch,value.round,value.player.join(','),value.dealer.join(',')].join(':'),image:visualImage,report:value,corners:corners.length?corners:undefined,output_height:tableHeight(corners,target.videoWidth,target.videoHeight)})}else setEvidence(null)}
      if(capturedEpoch===motionEpoch&&value.state_id&&['ready','pending','busy'].includes(value.analysis?.status)){
       progressive.current.watch([attempt,capturedEpoch,id,value.state_id].join(':'),async signal=>{
@@ -114,9 +142,10 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
     }finally{clearTimeout(timeout)}
    },e=>{setReport(null);setStale(true);setError(e instanceof Error&&e.name==='AbortError'?'Video processing timed out. Waiting for a fresh observation.':String(e instanceof Error?e.message:e))},interval,undefined,()=>{
     if(!monitorContext||attempt!==generation.current)return;
-    if(region&&imageSize&&!corners.length){const sx=target.videoWidth/imageSize[0],sy=target.videoHeight/imageSize[1];monitorContext.drawImage(target,region[0]*sx,region[1]*sy,region[2]*sx,region[3]*sy,0,0,96,54)}
+    if(profile==='native'&&layout.table){const [x,y,w,h]=captureGeometry(target.videoWidth,target.videoHeight,layout.table,null).source_rect;monitorContext.drawImage(target,x,y,w,h,0,0,96,54)}
+    else if(region&&imageSize&&!corners.length){const sx=target.videoWidth/imageSize[0],sy=target.videoHeight/imageSize[1];monitorContext.drawImage(target,region[0]*sx,region[1]*sy,region[2]*sx,region[3]*sy,0,0,96,54)}
     else monitorContext.drawImage(target,0,0,96,54);
-    if(monitor.observe(monitorContext.getImageData(0,0,96,54).data).motion>.008){motionEpoch++;progressive.current.stop();setReport(null);setEvidence(null);setStale(true)}
+    if(monitor.observe(monitorContext.getImageData(0,0,96,54).data).motion>.008){motionEpoch++;viewEpoch.current=motionEpoch;void publishView(id,{epoch:motionEpoch,stale:true,verification:verificationEnabled.current?'pending':'disabled'}).catch(()=>{});progressive.current.stop();setReport(null);setEvidence(null);setStale(true)}
    });
    loop.current.start();
   }catch(e){if(mounted.current&&attempt===generation.current)setError(e instanceof Error?e.message:String(e))}
@@ -130,37 +159,56 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
   return()=>{stream.getVideoTracks().forEach(track=>track.removeEventListener('ended',ended));target.srcObject=null};
  },[stream]);
  const start=async(kind:'screen'|'demo')=>{
-  stop();setError('');setCorners([]);setSelecting(false);setPending(true);const attempt=sourceGeneration.current;
+  stop();setError('');setCorners([]);setLayout({});setSelecting(false);setPending(true);const attempt=sourceGeneration.current;
   try{
    let next:MediaStream|null;
    if(kind==='screen'){next=acquireSource?await acquireSource():await owner.current.start();if(acquireSource&&next)shared.current=next}
    else{const source=new DemoVideoSource(rules,value=>{if(mounted.current&&attempt===sourceGeneration.current)setDemoState(value)},demoSeed);demo.current=source;next=await source.start();setBot(true)}
    if(!mounted.current||attempt!==sourceGeneration.current){if(kind==='screen'&&acquireSource&&next){releaseSource?.(next);if(shared.current===next)shared.current=null}else next?.getTracks().forEach(track=>track.stop());return}
-   if(next){setSource(kind);setStream(next);if(kind==='screen'&&!monitorOnly){window.dispatchEvent(new CustomEvent('bjlab:advisor-focus',{detail:advisorId.current}));setInlineAdvisor(true);setAdvisorOpen(true)}}
+   if(next){setSource(kind);setStream(next);automaticAdvisor.current=kind==='screen'&&!monitorOnly}
   }catch(e){if(mounted.current&&attempt===sourceGeneration.current)setError(screenSharingError(e))}
   finally{if(mounted.current&&attempt===sourceGeneration.current)setPending(false)}
  };
- const closeAdvisor=()=>{advisorGeneration.current++;const previous=floating.current;floating.current=null;previous?.root.unmount();previous?.window.close();setAdvisorOpen(false);setInlineAdvisor(false);setAdvisorOpening(false)};
+ const closeAdvisor=()=>{if(nativeStream.current){void nativeControl('hide',nativeStream.current).catch(()=>{});nativeStream.current=null}advisorGeneration.current++;const previous=floating.current;floating.current=null;previous?.root.unmount();previous?.window.close();setAdvisorOpen(false);setInlineAdvisor(false);setAdvisorOpening(false)};
+ useEffect(()=>{
+  const id=identity.current;if(!id)return;
+  const status=verify?(verification.result?.comparison?.status||'pending'):'disabled';
+  void publishView(id,{epoch:viewEpoch.current,stale,state_id:report?.state_id,verification:['disabled','pending','agreement','disagreement'].includes(status)?status:'inconclusive'}).catch(()=>{});
+ },[report,stale,verify,verification.result]);
+ useEffect(()=>{
+  if(!advisorOpen)return;const timer=setInterval(()=>{if(nativeStream.current)void api('/native/advisor/status').then(value=>{setNativeHost(value);if(value.stream_id!==nativeStream.current||!value.visible&&!value.pending){nativeStream.current=null;setAdvisorOpen(false);setInlineAdvisor(false)}}).catch(()=>{})},500);return()=>clearInterval(timer);
+ },[advisorOpen]);
  const openAdvisor=async()=>{
-  closeAdvisor();const attempt=advisorGeneration.current;window.dispatchEvent(new CustomEvent('bjlab:advisor-focus',{detail:advisorId.current}));setInlineAdvisor(true);setAdvisorOpen(true);setAdvisorOpening(true);
+  closeAdvisor();const attempt=advisorGeneration.current;window.dispatchEvent(new CustomEvent('bjlab:advisor-focus',{detail:advisorId.current}));setAdvisorOpening(true);
   try{
+   const host=nativeHost||await api('/native/advisor/status').catch(()=>({available:false}));
+   setNativeHost(host);
+   if(host.available){
+    if(!identity.current)throw new Error('Start observing the table before opening the native advisor.');
+    await nativeControl('open',identity.current,tableName);
+    for(let n=0;n<20;n++){await new Promise(resolve=>setTimeout(resolve,150));const status=await api('/native/advisor/status');
+     if(!mounted.current||attempt!==advisorGeneration.current){void nativeControl('hide',identity.current||undefined);return}
+     if(!status.pending){if(status.error||!status.visible)throw new Error(status.error||'The native window is unavailable.');setNativeHost(status);nativeStream.current=identity.current;setInlineAdvisor(false);setAdvisorOpen(true);return}
+    }throw new Error('Native advisor did not acknowledge opening.');
+   }
    const pip=(window as Window&{documentPictureInPicture?:{requestWindow:(options:{width:number;height:number})=>Promise<Window>}}).documentPictureInPicture;
    let win:Window|null=null;
-   if(pip){let expired=false;let timer:ReturnType<typeof setTimeout>|undefined;const requested=pip.requestWindow({width:360,height:300});
+   if(pip){let expired=false;let timer:ReturnType<typeof setTimeout>|undefined;const requested=pip.requestWindow({width:260,height:190});
     void requested.then(value=>{if(expired||attempt!==advisorGeneration.current||!mounted.current)value.close()}).catch(()=>{});
     try{win=await Promise.race([requested,new Promise<never>((_,reject)=>{timer=setTimeout(()=>reject(new Error('Picture-in-Picture unavailable')),1800)})])}catch{expired=true}finally{clearTimeout(timer)}
    }
    if(!mounted.current||attempt!==advisorGeneration.current){win?.close();return}
-   if(!win){window.dispatchEvent(new CustomEvent('bjlab:advisor-focus',{detail:advisorId.current}));setInlineAdvisor(true);setAdvisorOpen(true);setError('Advisor is shown in this page. Use Chrome or Edge for a separate always-on-top window.');return}
+   if(!win){window.dispatchEvent(new CustomEvent('bjlab:advisor-focus',{detail:advisorId.current}));setInlineAdvisor(true);setAdvisorOpen(true);setError('In-page advisor fallback: this server has no native window and browser Picture-in-Picture is unavailable. Open the research desktop candidate for the external advisor.');return}
    win.document.title='Blackjack Vision Lab · Live advisor';win.document.documentElement.lang=language;
    win.document.querySelectorAll('style,link[rel="stylesheet"]').forEach(node=>node.remove());
    document.querySelectorAll('style,link[rel="stylesheet"]').forEach(node=>{const clone=node.cloneNode(true) as HTMLElement;if(node instanceof HTMLLinkElement)clone.setAttribute('href',node.href);win.document.head.appendChild(clone)});
    win.document.body.className='advisor-window';const mount=win.document.createElement('div');win.document.body.replaceChildren(mount);
-   win.document.title=tableName+' · Blackjack Vision Lab';const root=createRoot(mount);floating.current={window:win,root};setInlineAdvisor(false);setAdvisorOpen(true);root.render(localize(<LiveAdvisor report={report} stale={stale} compact/>));
-   win.addEventListener('pagehide',()=>{if(floating.current?.window===win){floating.current=null;root.unmount();if(mounted.current){window.dispatchEvent(new CustomEvent('bjlab:advisor-focus',{detail:advisorId.current}));setInlineAdvisor(true);setAdvisorOpen(true)}}},{once:true});
-  }catch(e){if(mounted.current&&attempt===advisorGeneration.current){window.dispatchEvent(new CustomEvent('bjlab:advisor-focus',{detail:advisorId.current}));setInlineAdvisor(true);setAdvisorOpen(true);setError(e instanceof Error?e.message:String(e))}}
+   win.document.title=tableName+' · Blackjack Vision Lab';const root=createRoot(mount);floating.current={window:win,root};setInlineAdvisor(false);setAdvisorOpen(true);root.render(<CompactAdvisor report={report} stale={stale} ageMs={lastSeen?performance.now()-lastSeen:undefined}/>);
+   win.addEventListener('pagehide',()=>{if(floating.current?.window===win){floating.current=null;root.unmount();if(mounted.current){window.dispatchEvent(new CustomEvent('bjlab:advisor-focus',{detail:advisorId.current}));setInlineAdvisor(false);setAdvisorOpen(false)}}},{once:true});
+  }catch(e){if(mounted.current&&attempt===advisorGeneration.current){setInlineAdvisor(false);setAdvisorOpen(false);setError(e instanceof Error?e.message:String(e))}}
   finally{if(mounted.current&&attempt===advisorGeneration.current)setAdvisorOpening(false)}
  };
+ const resetAdvisor=async()=>{try{if(!identity.current)throw new Error('Start observing the table before opening the native advisor.');if(nativeHost?.stream_id!==identity.current)await openAdvisor();await nativeControl('reset',identity.current,tableName);nativeStream.current=identity.current;setInlineAdvisor(false);setAdvisorOpen(true)}catch(e){setError(e instanceof Error?e.message:String(e))}};
  useEffect(()=>{const focus=(event:Event)=>{if((event as CustomEvent).detail!==advisorId.current)closeAdvisor()};window.addEventListener('bjlab:advisor-focus',focus);return()=>window.removeEventListener('bjlab:advisor-focus',focus)},[]);
  const openBrowser=async()=>{try{await api('/live/browser',{});setError('Opened the local app in your browser. Keep the desktop app open while sharing.')}catch(e){setError(e instanceof Error?e.message:String(e))}};
  return localize(<div className="live-workspace">
@@ -169,21 +217,31 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
    <button hidden={monitorOnly} className="button secondary" disabled={pending||!connected} onClick={()=>void start('demo')}><Play size={16}/>Run lab demo</button>
    {stream&&<button className="button secondary" onClick={stop}><Square size={14}/>Stop video</button>}
    {pending&&<button className="button secondary" onClick={stop}>Cancel</button>}
-   <button hidden={monitorOnly} className="button secondary" onClick={()=>{if(advisorOpen)closeAdvisor();else{window.dispatchEvent(new CustomEvent('bjlab:advisor-focus',{detail:advisorId.current}));setInlineAdvisor(true);setAdvisorOpen(true)}}}><ExternalLink size={14}/>{advisorOpen?'Close advisor':'Floating advisor'}</button>
-   {advisorOpen&&<button className="button secondary" disabled={advisorOpening} onClick={()=>void openAdvisor()}>{advisorOpening?'Opening advisor…':'Pop out advisor'}</button>}
+   <button hidden={monitorOnly} className="button secondary" disabled={advisorOpening} onClick={()=>{if(advisorOpen)closeAdvisor();else void openAdvisor()}}><ExternalLink size={14}/>{advisorOpening?'Opening advisor…':advisorOpen?'Hide advisor':'Open advisor'}</button>
+   {inlineAdvisor&&<button className="button secondary" disabled={advisorOpening} onClick={()=>void openAdvisor()}>Try external advisor</button>}
+   {!monitorOnly&&nativeHost?.available&&observing&&<button className="button secondary" onClick={()=>void resetAdvisor()}>Reset advisor position</button>}
+   {nativeStream.current&&<label className="toggle-label"><input type="checkbox" checked={nativeHost?.topmost||false} onChange={e=>{void nativeControl('topmost',nativeStream.current||undefined,undefined,e.target.checked).catch(error=>setError(error.message))}}/>Advisor always on top</label>}
    <a className="button secondary" href="/?simulator=1" target="_blank" rel="noopener">Open simulator window</a>
   </div></section>
   {error&&<p className="tool-error live-error" role="alert">{error}</p>}
   <div className="live-columns"><section className="panel live-video-panel"><div className="panel-header"><h2><ScanEye size={17}/>{source==='demo'?'Lab video demo':'Screen video'}</h2><span className="badge" role="status">{observing||(monitorOnly&&stream)?'Video connected':stream?'Video paused':'Waiting for video'}</span></div>
-   {stream?<div className={'live-video-wrap '+(selecting?'selecting':'')} onClick={e=>{if(!selecting||corners.length>=4)return;const b=e.currentTarget.getBoundingClientRect();setCorners(previous=>[...previous,[(e.clientX-b.left)/b.width,(e.clientY-b.top)/b.height]])}}>
+   {stream?<div className={'live-video-wrap '+(selecting?'selecting':'')}
+    onPointerDown={e=>{if(profile!=='native'||!selecting||!video.current)return;regionStart.current=previewPoint(e.clientX,e.clientY,video.current.getBoundingClientRect(),video.current.videoWidth,video.current.videoHeight);e.currentTarget.setPointerCapture(e.pointerId)}}
+    onPointerUp={e=>{if(profile!=='native'||!selecting||!regionStart.current||!video.current)return;const end=previewPoint(e.clientX,e.clientY,video.current.getBoundingClientRect(),video.current.videoWidth,video.current.videoHeight);const start=regionStart.current;regionStart.current=null;if(!end)return;const rect:[number,number,number,number]=[Math.min(start[0],end[0]),Math.min(start[1],end[1]),Math.abs(end[0]-start[0]),Math.abs(end[1]-start[1])];if(rect[2]<.005||rect[3]<.005)return;setLayout(v=>({...v,[regionName]:rect}));setSelecting(false)}}
+    onClick={e=>{if(profile==='native'||!selecting||corners.length>=4||!video.current)return;const point=previewPoint(e.clientX,e.clientY,video.current.getBoundingClientRect(),video.current.videoWidth,video.current.videoHeight);if(point)setCorners(previous=>[...previous,point])}}>
     <video ref={video} muted autoPlay playsInline aria-label="Continuous shared video" onLoadedData={()=>void startObserver()}/>
-    <svg className="live-detections" viewBox={'0 0 '+(report?.image_size?.[0]||video.current?.videoWidth||960)+' '+(report?.image_size?.[1]||video.current?.videoHeight||600)} aria-label="Live recognized cards">{corners.length===0&&(report?.detections||[]).map((d:any,i:number)=>{const [x,y,w,h]=d.bbox;return <g key={i}><rect x={x} y={y} width={w} height={h}/><text x={x+3} y={Math.max(18,y-7)}>{d.face_down?'BACK':[d.rank,d.suit].filter(Boolean).join(' ')}</text></g>})}</svg>
+    <svg className="live-detections" viewBox={'0 0 '+(video.current?.videoWidth||960)+' '+(video.current?.videoHeight||600)} aria-label="Live recognized cards">{corners.length===0&&(report?.detections||[]).map((d:any,i:number)=>{const [x,y,w,h]=sourceDetectionBox(d.bbox,report?.capture_geometry);return <g key={i}><rect x={x} y={y} width={w} height={h}/><text x={x+3} y={Math.max(18,y-7)}>{d.face_down?'BACK':[d.rank,d.suit].filter(Boolean).join(' ')}</text></g>})}</svg>
     {corners.map((c,i)=><span className="live-corner" key={i} style={{left:c[0]*100+'%',top:c[1]*100+'%'}}>{i+1}</span>)}
+    {profile==='native'&&Object.entries(layout).map(([name,[x,y,w,h]])=><div className="selected-native-region" key={name} style={{left:x*100+'%',top:y*100+'%',width:w*100+'%',height:h*100+'%'}}>{name}</div>)}
    </div>:<div className="live-placeholder"><Monitor size={38}/><h3>Give the lab a live video source.</h3><p>Share your simulation, or run the lab demo to test video → recognition → tracking → advice.</p></div>}
    <div className="live-config" hidden={monitorOnly}><label>Samples per action<select disabled={observing||pending} value={samples} onChange={e=>setSamples(Number(e.target.value))}><option value="500">500 · fast</option><option value="1500">1,500 · balanced</option><option value="5000">5,000 · precise</option></select></label><label><input type="checkbox" disabled={observing||pending} checked={fresh} onChange={e=>setFresh(e.target.checked)}/>Observe from a new shoe</label><label><input type="checkbox" disabled={observing||pending} checked={manualTurn} onChange={e=>setManualTurn(e.target.checked)}/>Player turn (manual layout)</label>
     {stream&&<button className="button secondary" onClick={()=>{if(observing)stopObserver();else void startObserver()}} disabled={pending}>{observing?'Stop observing':'Start observing'}</button>}
    </div>
-   {stream&&!monitorOnly&&<div className="live-calibration"><button className="text-button" onClick={()=>{stopObserver();setSelecting(v=>!v);setCorners([])}}>Table calibration</button><span>Selected corners: {corners.length} / 4</span><button className="text-button" onClick={()=>{stopObserver();setCorners([]);setSelecting(false)}}>Clear corners</button><button className="button secondary" disabled={corners.length!==4||pending} onClick={()=>{setSelecting(false);void startObserver()}}>Apply calibration</button><p>For a full screen, select the table corners: top left, top right, bottom right, bottom left. Keep its position fixed while observing.</p></div>}
+   {stream&&!monitorOnly&&<div className="live-calibration"><label>Recognition profile <select value={profile} onChange={e=>{stopObserver();setProfile(e.target.value);setSelecting(false);setCorners([])}}><option value="automatic">Automatic · current baseline</option><option value="native">Calibrated corners · research</option></select></label>
+    {profile==='native'&&<><label>Region <select value={regionName} onChange={e=>setRegionName(e.target.value)}><option value="table">Table</option><option value="dealer">Dealer cards</option><option value="player:0">Player cards</option><option value="controls">Controls (diagnostic)</option></select></label><button className="button secondary" onClick={()=>{stopObserver();setSelecting(true)}}>Drag a region on the video</button><button className="button secondary" onClick={()=>void startObserver()} disabled={observing||!layout.table||!layout.dealer||!layout['player:0']}>Apply native regions</button><p>Only the selected table is uploaded. Card regions exclude advertising, previews and the advisor. Keep the window fixed; after scrolling or resizing, recalibrate. Confirm Player turn for research advice; complete card counts are not certified for this profile.</p><div className="native-region-pixels">{regionPixels.map(region=><figure key={region.name}><figcaption>{region.name} · {region.size}</figcaption><img src={region.url} alt={region.name+" pixels selected for analysis"}/></figure>)}</div><details><summary>Normalized regions</summary><pre>{JSON.stringify(layout,null,2)}</pre></details></>}
+    <button className="button secondary" disabled={!observing} onClick={()=>{diagnosticNext.current=true;setDiagnosticStatus('The next processed observation will be saved locally.')}}>Save private vision diagnostic</button><span role="status">{diagnosticStatus}</span>
+   </div>}
+   {stream&&!monitorOnly&&profile==="automatic"&&<div className="live-calibration"><button className="text-button" onClick={()=>{stopObserver();setSelecting(v=>!v);setCorners([])}}>Table calibration</button><span>Selected corners: {corners.length} / 4</span><button className="text-button" onClick={()=>{stopObserver();setCorners([]);setSelecting(false)}}>Clear corners</button><button className="button secondary" disabled={corners.length!==4||pending} onClick={()=>{setSelecting(false);void startObserver()}}>Apply calibration</button><p>For a full screen, select the table corners: top left, top right, bottom right, bottom left. Keep its position fixed while observing.</p></div>}
    {source==='demo'&&demoState&&<div className="live-demo-actions"><button className="button secondary" onClick={()=>{demo.current?.setBot(!bot);setBot(v=>!v)}}>{bot?'Pause bot':'Resume bot'}</button>{demoState.available_actions.map(action=><button key={action} className="button secondary" onClick={()=>void demo.current?.action(action).catch(e=>setError(e.message))}>{action==='deal'?'Deal':action==='shuffle'?'New shoe':actions[action]||action}</button>)}<span>Round {demoState.round_id} · {demoState.phase}</span></div>}
    <label className="toggle-label" hidden={monitorOnly}><input type="checkbox" checked={verify} onChange={e=>setVerify(e.target.checked)}/>Independent Clef verification (experimental)</label>
    {verify&&<ClefVerification result={verification.result} busy={verification.busy}/>}
@@ -194,6 +252,6 @@ export default function LiveVision({rules,connected,acquireSource,releaseSource,
    <p className="panel-caption">Display sharing needs Chrome or Edge on localhost. <button className="text-button" onClick={()=>void openBrowser()}>Open in default browser</button></p>
   </section>{monitorOnly?<section className="live-advisor"><h2>Visual monitor</h2><p>This source is registered separately. Poker strategy and poker card recognition are not supported; no blackjack recommendation is applied to this game.</p></section>:<LiveAdvisor report={report} stale={stale}/>}</div>
   {report&&<div className="live-export"><button className="button secondary" onClick={()=>download('live-observation.json',report)}><Download size={14}/>Export observation</button><button className="button secondary" onClick={()=>identity.current&&void api('/live/'+identity.current+'/events').then(value=>download('live-events.json',value))}><Download size={14}/>Export observed events</button></div>}
-  {inlineAdvisor&&createPortal(localize(<aside className="inline-live-advisor" aria-label="Floating live advisor"><div className="floating-table-name">{tableName}</div><button className="text-button" onClick={closeAdvisor}>Close advisor</button><LiveAdvisor report={report} stale={stale} compact/></aside>),document.body)}
+  {inlineAdvisor&&createPortal(<aside className="inline-live-advisor" aria-label="In-page advisor fallback"><div className="inline-advisor-label">In-page fallback · cannot move outside this app</div><div className="floating-table-name">{tableName}</div><button className="text-button" onClick={closeAdvisor}>Close advisor</button><CompactAdvisor report={report} stale={stale} ageMs={lastSeen?performance.now()-lastSeen:undefined}/></aside>,document.body)}
  </div>);
 }
