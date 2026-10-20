@@ -1,0 +1,2555 @@
+{
+ "images": 102,
+ "box_location": {
+  "jev": {
+   "cases": 66,
+   "answered": 66,
+   "mean_iou_counting_abstentions_as_0": 0.8633633480150719,
+   "mean_iou_when_answered": 0.8633633480150719,
+   "iou_at_least_0.5": 65,
+   "iou_at_least_0.7": 61
+  },
+  "current": {
+   "cases": 66,
+   "answered": 27,
+   "mean_iou_counting_abstentions_as_0": 0.31749828057546614,
+   "mean_iou_when_answered": 0.7761069080733617,
+   "iou_at_least_0.5": 22,
+   "iou_at_least_0.7": 20
+  },
+  "constant": {
+   "cases": 66,
+   "answered": 66,
+   "mean_iou_counting_abstentions_as_0": 0.35300304252051534,
+   "mean_iou_when_answered": 0.35300304252051534,
+   "iou_at_least_0.5": 22,
+   "iou_at_least_0.7": 0
+  }
+ },
+ "table_present": {
+  "jev_noul_at_0.5": {
+   "true_positive": 63,
+   "positives": 66,
+   "false_positive": 3,
+   "negatives": 36
+  },
+  "current_detector_found_table": {
+   "true_positive": 27,
+   "positives": 66,
+   "false_positive": 0,
+   "negatives": 36
+  }
+ },
+ "current_detector_seconds_median": 0.01405,
+ "notes": [
+  "The current detector measures the green felt only; the hand boxes mark the whole video canvas, so its IoU is slightly penalised on green screens.",
+  "Clef was not run: it needs a ~19 GB model and a CUDA GPU (docs/CLEF.md). Its recorded results use other cases."
+ ],
+ "rows": [
+  {
+   "image": "ace-advice.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.163,
+    0.647,
+    0.32,
+    0.675
+   ],
+   "current": null,
+   "current_seconds": 0.0219,
+   "constant": [
+    0.18575,
+    0.6563000000000001,
+    0.4596,
+    0.7506999999999999
+   ],
+   "jev": [
+    0.17,
+    0.64,
+    0.33,
+    0.67
+   ],
+   "jev_blackjack_table": 0.46
+  },
+  {
+   "image": "ace-advice.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.163,
+    0.647,
+    0.32,
+    0.675
+   ],
+   "current": null,
+   "current_seconds": 0.0136,
+   "constant": [
+    0.18575,
+    0.6563000000000001,
+    0.4596,
+    0.7506999999999999
+   ],
+   "jev": [
+    0.16,
+    0.64,
+    0.32,
+    0.68
+   ],
+   "jev_blackjack_table": 0.78
+  },
+  {
+   "image": "ace-advice.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.163,
+    0.647,
+    0.32,
+    0.675
+   ],
+   "current": null,
+   "current_seconds": 0.0129,
+   "constant": [
+    0.18575,
+    0.6563000000000001,
+    0.4596,
+    0.7506999999999999
+   ],
+   "jev": [
+    0.17,
+    0.65,
+    0.34,
+    0.66
+   ],
+   "jev_blackjack_table": 0.4
+  },
+  {
+   "image": "ace-advice.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.163,
+    0.647,
+    0.32,
+    0.675
+   ],
+   "current": null,
+   "current_seconds": 0.0053,
+   "constant": [
+    0.18575,
+    0.6563000000000001,
+    0.4596,
+    0.7506999999999999
+   ],
+   "jev": [
+    0.15,
+    0.64,
+    0.22,
+    0.76
+   ],
+   "jev_blackjack_table": 0.64
+  },
+  {
+   "image": "ace-advice.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.02674418604651162,
+    0.5895348837209302,
+    0.32,
+    0.675
+   ],
+   "current": null,
+   "current_seconds": 0.013,
+   "constant": [
+    0.18575,
+    0.6563000000000001,
+    0.4596,
+    0.7506999999999999
+   ],
+   "jev": [
+    0.02,
+    0.58,
+    0.32,
+    0.7
+   ],
+   "jev_blackjack_table": 0.62
+  },
+  {
+   "image": "ace-advice.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.163,
+    0.647,
+    0.32,
+    0.675
+   ],
+   "current": null,
+   "current_seconds": 0.0135,
+   "constant": [
+    0.18575,
+    0.6563000000000001,
+    0.4596,
+    0.7506999999999999
+   ],
+   "jev": [
+    0.16,
+    0.63,
+    0.32,
+    0.7
+   ],
+   "jev_blackjack_table": 0.52
+  },
+  {
+   "image": "simulator.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.148,
+    0.669,
+    0.395,
+    0.77
+   ],
+   "current": null,
+   "current_seconds": 0.0134,
+   "constant": [
+    0.18725,
+    0.6541,
+    0.4521,
+    0.7412
+   ],
+   "jev": [
+    0.13,
+    0.98,
+    0.35,
+    0.79
+   ],
+   "jev_blackjack_table": 0.94
+  },
+  {
+   "image": "simulator.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.148,
+    0.669,
+    0.395,
+    0.77
+   ],
+   "current": null,
+   "current_seconds": 0.0124,
+   "constant": [
+    0.18725,
+    0.6541,
+    0.4521,
+    0.7412
+   ],
+   "jev": [
+    0.13,
+    0.67,
+    0.34,
+    0.83
+   ],
+   "jev_blackjack_table": 0.93
+  },
+  {
+   "image": "simulator.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.148,
+    0.669,
+    0.395,
+    0.77
+   ],
+   "current": null,
+   "current_seconds": 0.0127,
+   "constant": [
+    0.18725,
+    0.6541,
+    0.4521,
+    0.7412
+   ],
+   "jev": [
+    0.13,
+    0.97,
+    0.35,
+    0.81
+   ],
+   "jev_blackjack_table": 0.94
+  },
+  {
+   "image": "simulator.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.148,
+    0.669,
+    0.395,
+    0.77
+   ],
+   "current": null,
+   "current_seconds": 0.0034,
+   "constant": [
+    0.18725,
+    0.6541,
+    0.4521,
+    0.7412
+   ],
+   "jev": [
+    0.14,
+    0.68,
+    0.34,
+    0.97
+   ],
+   "jev_blackjack_table": 0.8
+  },
+  {
+   "image": "simulator.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.009302325581395324,
+    0.6151162790697675,
+    0.395,
+    0.77
+   ],
+   "current": null,
+   "current_seconds": 0.0116,
+   "constant": [
+    0.18725,
+    0.6541,
+    0.4521,
+    0.7412
+   ],
+   "jev": [
+    0.0,
+    0.98,
+    0.34,
+    0.81
+   ],
+   "jev_blackjack_table": 0.95
+  },
+  {
+   "image": "simulator.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.148,
+    0.669,
+    0.395,
+    0.77
+   ],
+   "current": null,
+   "current_seconds": 0.0134,
+   "constant": [
+    0.18725,
+    0.6541,
+    0.4521,
+    0.7412
+   ],
+   "jev": [
+    0.14,
+    0.67,
+    0.36,
+    0.81
+   ],
+   "jev_blackjack_table": 0.86
+  },
+  {
+   "image": "live-vision.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.161,
+    0.662,
+    0.306,
+    0.58
+   ],
+   "current": null,
+   "current_seconds": 0.0168,
+   "constant": [
+    0.18595,
+    0.6548,
+    0.461,
+    0.7602
+   ],
+   "jev": [
+    0.15,
+    0.66,
+    0.3,
+    0.57
+   ],
+   "jev_blackjack_table": 0.96
+  },
+  {
+   "image": "live-vision.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.161,
+    0.662,
+    0.306,
+    0.58
+   ],
+   "current": null,
+   "current_seconds": 0.0159,
+   "constant": [
+    0.18595,
+    0.6548,
+    0.461,
+    0.7602
+   ],
+   "jev": [
+    0.14,
+    0.66,
+    0.3,
+    0.57
+   ],
+   "jev_blackjack_table": 0.95
+  },
+  {
+   "image": "live-vision.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.161,
+    0.662,
+    0.306,
+    0.58
+   ],
+   "current": null,
+   "current_seconds": 0.0182,
+   "constant": [
+    0.18595,
+    0.6548,
+    0.461,
+    0.7602
+   ],
+   "jev": [
+    0.14,
+    0.65,
+    0.3,
+    0.58
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "live-vision.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.161,
+    0.662,
+    0.306,
+    0.58
+   ],
+   "current": null,
+   "current_seconds": 0.0035,
+   "constant": [
+    0.18595,
+    0.6548,
+    0.461,
+    0.7602
+   ],
+   "jev": [
+    0.14,
+    0.65,
+    0.3,
+    0.58
+   ],
+   "jev_blackjack_table": 0.92
+  },
+  {
+   "image": "live-vision.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.02441860465116278,
+    0.6069767441860465,
+    0.306,
+    0.58
+   ],
+   "current": null,
+   "current_seconds": 0.0147,
+   "constant": [
+    0.18595,
+    0.6548,
+    0.461,
+    0.7602
+   ],
+   "jev": [
+    0.02,
+    0.59,
+    0.3,
+    0.59
+   ],
+   "jev_blackjack_table": 0.93
+  },
+  {
+   "image": "live-vision.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.161,
+    0.662,
+    0.306,
+    0.58
+   ],
+   "current": null,
+   "current_seconds": 0.0172,
+   "constant": [
+    0.18595,
+    0.6548,
+    0.461,
+    0.7602
+   ],
+   "jev": [
+    0.14,
+    0.65,
+    0.3,
+    0.57
+   ],
+   "jev_blackjack_table": 0.92
+  },
+  {
+   "image": "live-round-two.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.664,
+    0.313,
+    0.539
+   ],
+   "current": [
+    0.2051792828685259,
+    0.6643426294820717,
+    0.31328125,
+    0.53828125
+   ],
+   "current_seconds": 0.0598,
+   "constant": [
+    0.18165,
+    0.6546000000000001,
+    0.4603,
+    0.7643
+   ],
+   "jev": [
+    0.21,
+    0.66,
+    0.31,
+    0.54
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "live-round-two.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.664,
+    0.313,
+    0.539
+   ],
+   "current": [
+    0.2051792828685259,
+    0.6643426294820717,
+    0.31328125,
+    0.53828125
+   ],
+   "current_seconds": 0.0454,
+   "constant": [
+    0.18165,
+    0.6546000000000001,
+    0.4603,
+    0.7643
+   ],
+   "jev": [
+    0.2,
+    0.67,
+    0.31,
+    0.54
+   ],
+   "jev_blackjack_table": 0.98
+  },
+  {
+   "image": "live-round-two.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.664,
+    0.313,
+    0.539
+   ],
+   "current": [
+    0.2051792828685259,
+    0.6643426294820717,
+    0.31328125,
+    0.5390625
+   ],
+   "current_seconds": 0.0576,
+   "constant": [
+    0.18165,
+    0.6546000000000001,
+    0.4603,
+    0.7643
+   ],
+   "jev": [
+    0.2,
+    0.66,
+    0.31,
+    0.54
+   ],
+   "jev_blackjack_table": 0.95
+  },
+  {
+   "image": "live-round-two.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.664,
+    0.313,
+    0.539
+   ],
+   "current": [
+    0.2051792828685259,
+    0.6653386454183267,
+    0.3125,
+    0.5390625
+   ],
+   "current_seconds": 0.013,
+   "constant": [
+    0.18165,
+    0.6546000000000001,
+    0.4603,
+    0.7643
+   ],
+   "jev": [
+    0.2,
+    0.67,
+    0.32,
+    0.54
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "live-round-two.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.07441860465116276,
+    0.6093023255813954,
+    0.313,
+    0.539
+   ],
+   "current": [
+    0.0763888888888889,
+    0.6111111111111112,
+    0.31328125,
+    0.5390625
+   ],
+   "current_seconds": 0.0424,
+   "constant": [
+    0.18165,
+    0.6546000000000001,
+    0.4603,
+    0.7643
+   ],
+   "jev": [
+    0.08,
+    0.6,
+    0.31,
+    0.54
+   ],
+   "jev_blackjack_table": 0.98
+  },
+  {
+   "image": "live-round-two.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.664,
+    0.313,
+    0.539
+   ],
+   "current": [
+    0.2051792828685259,
+    0.5258964143426295,
+    0.31328125,
+    0.53828125
+   ],
+   "current_seconds": 0.0461,
+   "constant": [
+    0.18165,
+    0.6546000000000001,
+    0.4603,
+    0.7643
+   ],
+   "jev": [
+    0.21,
+    0.65,
+    0.31,
+    0.54
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "reliability-live.png::orig",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.013,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.15,
+    0.65,
+    0.45,
+    0.9
+   ],
+   "jev_blackjack_table": 0.95
+  },
+  {
+   "image": "reliability-live.png::blur",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0126,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.14,
+    0.65,
+    0.45,
+    0.9
+   ],
+   "jev_blackjack_table": 0.98
+  },
+  {
+   "image": "reliability-live.png::dark",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0126,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.15,
+    0.64,
+    0.47,
+    0.9
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "reliability-live.png::lowres",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0035,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.15,
+    0.65,
+    0.46,
+    0.91
+   ],
+   "jev_blackjack_table": 0.93
+  },
+  {
+   "image": "reliability-live.png::crop",
+   "has_table": 1,
+   "truth": [
+    0.022093023255813943,
+    0.6011627906976744,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0145,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.03,
+    0.58,
+    0.46,
+    0.9
+   ],
+   "jev_blackjack_table": 0.94
+  },
+  {
+   "image": "reliability-live.png::occluded",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0136,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.15,
+    0.64,
+    0.43,
+    0.92
+   ],
+   "jev_blackjack_table": 0.96
+  },
+  {
+   "image": "floating-advisor.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0135,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.15,
+    0.65,
+    0.44,
+    0.89
+   ],
+   "jev_blackjack_table": 0.94
+  },
+  {
+   "image": "floating-advisor.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0134,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.14,
+    0.66,
+    0.47,
+    0.9
+   ],
+   "jev_blackjack_table": 0.96
+  },
+  {
+   "image": "floating-advisor.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0138,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.15,
+    0.64,
+    0.47,
+    0.9
+   ],
+   "jev_blackjack_table": 0.93
+  },
+  {
+   "image": "floating-advisor.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0048,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.15,
+    0.64,
+    0.46,
+    0.92
+   ],
+   "jev_blackjack_table": 0.92
+  },
+  {
+   "image": "floating-advisor.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.022093023255813943,
+    0.6011627906976744,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0114,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.02,
+    0.59,
+    0.46,
+    0.9
+   ],
+   "jev_blackjack_table": 0.92
+  },
+  {
+   "image": "floating-advisor.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.159,
+    0.657,
+    0.475,
+    0.912
+   ],
+   "current": null,
+   "current_seconds": 0.0139,
+   "constant": [
+    0.18614999999999998,
+    0.6553,
+    0.4441,
+    0.7270000000000001
+   ],
+   "jev": [
+    0.15,
+    0.65,
+    0.45,
+    0.93
+   ],
+   "jev_blackjack_table": 0.98
+  },
+  {
+   "image": "perception.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.701,
+    0.906
+   ],
+   "current": [
+    0.22040816326530613,
+    0.6489795918367347,
+    0.70078125,
+    0.90625
+   ],
+   "current_seconds": 0.044,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.4215,
+    0.7276
+   ],
+   "jev": [
+    0.23,
+    0.65,
+    0.69,
+    0.91
+   ],
+   "jev_blackjack_table": 0.98
+  },
+  {
+   "image": "perception.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.701,
+    0.906
+   ],
+   "current": [
+    0.22142857142857142,
+    0.6479591836734694,
+    0.7015625,
+    0.90546875
+   ],
+   "current_seconds": 1.221,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.4215,
+    0.7276
+   ],
+   "jev": [
+    0.22,
+    0.65,
+    0.7,
+    0.91
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "perception.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.701,
+    0.906
+   ],
+   "current": [
+    0.22040816326530613,
+    0.6489795918367347,
+    0.70078125,
+    0.90625
+   ],
+   "current_seconds": 0.0448,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.4215,
+    0.7276
+   ],
+   "jev": [
+    0.23,
+    0.65,
+    0.7,
+    0.91
+   ],
+   "jev_blackjack_table": 0.94
+  },
+  {
+   "image": "perception.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.701,
+    0.906
+   ],
+   "current": [
+    0.22040816326530613,
+    0.6489795918367347,
+    0.7015625,
+    0.90625
+   ],
+   "current_seconds": 0.1591,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.4215,
+    0.7276
+   ],
+   "jev": [
+    0.24,
+    0.65,
+    0.7,
+    0.91
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "perception.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.09302325581395347,
+    0.5918604651162791,
+    0.701,
+    0.906
+   ],
+   "current": [
+    0.0937129300118624,
+    0.5919335705812574,
+    0.70078125,
+    0.90625
+   ],
+   "current_seconds": 0.1143,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.4215,
+    0.7276
+   ],
+   "jev": [
+    0.09,
+    0.59,
+    0.69,
+    0.91
+   ],
+   "jev_blackjack_table": 0.99
+  },
+  {
+   "image": "perception.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.701,
+    0.906
+   ],
+   "current": [
+    0.22040816326530613,
+    0.5214285714285715,
+    0.70078125,
+    0.90625
+   ],
+   "current_seconds": 0.0458,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.4215,
+    0.7276
+   ],
+   "jev": [
+    0.22,
+    0.64,
+    0.69,
+    0.91
+   ],
+   "jev_blackjack_table": 0.99
+  },
+  {
+   "image": "video-replay.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.628,
+    0.466,
+    0.6
+   ],
+   "current": [
+    0.22008862629246675,
+    0.6484490398818316,
+    0.79375,
+    0.93515625
+   ],
+   "current_seconds": 0.0275,
+   "constant": [
+    0.18005,
+    0.6582000000000001,
+    0.445,
+    0.7582
+   ],
+   "jev": [
+    0.23,
+    0.64,
+    0.46,
+    0.6
+   ],
+   "jev_blackjack_table": 0.98
+  },
+  {
+   "image": "video-replay.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.628,
+    0.466,
+    0.6
+   ],
+   "current": [
+    0.22156573116691286,
+    0.6484490398818316,
+    0.79375,
+    0.934375
+   ],
+   "current_seconds": 0.0264,
+   "constant": [
+    0.18005,
+    0.6582000000000001,
+    0.445,
+    0.7582
+   ],
+   "jev": [
+    0.22,
+    0.64,
+    0.46,
+    0.61
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "video-replay.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.628,
+    0.466,
+    0.6
+   ],
+   "current": [
+    0.22008862629246675,
+    0.6484490398818316,
+    0.79375,
+    0.93515625
+   ],
+   "current_seconds": 0.0262,
+   "constant": [
+    0.18005,
+    0.6582000000000001,
+    0.445,
+    0.7582
+   ],
+   "jev": [
+    0.23,
+    0.64,
+    0.47,
+    0.61
+   ],
+   "jev_blackjack_table": 0.95
+  },
+  {
+   "image": "video-replay.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.628,
+    0.466,
+    0.6
+   ],
+   "current": null,
+   "current_seconds": 0.002,
+   "constant": [
+    0.18005,
+    0.6582000000000001,
+    0.445,
+    0.7582
+   ],
+   "jev": [
+    0.22,
+    0.64,
+    0.48,
+    0.6
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "video-replay.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.09302325581395347,
+    0.5674418604651162,
+    0.466,
+    0.6
+   ],
+   "current": [
+    0.09433962264150944,
+    0.5917667238421955,
+    0.79375,
+    0.93515625
+   ],
+   "current_seconds": 0.0255,
+   "constant": [
+    0.18005,
+    0.6582000000000001,
+    0.445,
+    0.7582
+   ],
+   "jev": [
+    0.09,
+    0.57,
+    0.46,
+    0.62
+   ],
+   "jev_blackjack_table": 0.99
+  },
+  {
+   "image": "video-replay.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.628,
+    0.466,
+    0.6
+   ],
+   "current": [
+    0.22008862629246675,
+    0.6484490398818316,
+    0.79375,
+    0.93515625
+   ],
+   "current_seconds": 0.0297,
+   "constant": [
+    0.18005,
+    0.6582000000000001,
+    0.445,
+    0.7582
+   ],
+   "jev": [
+    0.22,
+    0.6,
+    0.46,
+    0.6
+   ],
+   "jev_blackjack_table": 0.98
+  },
+  {
+   "image": "clef-check.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.1625,
+    0.642,
+    0.304,
+    0.659
+   ],
+   "current": null,
+   "current_seconds": 0.0137,
+   "constant": [
+    0.18580000000000002,
+    0.6568,
+    0.4612,
+    0.7523
+   ],
+   "jev": [
+    0.15,
+    0.63,
+    0.32,
+    0.65
+   ],
+   "jev_blackjack_table": 0.61
+  },
+  {
+   "image": "clef-check.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.1625,
+    0.642,
+    0.304,
+    0.659
+   ],
+   "current": null,
+   "current_seconds": 0.0143,
+   "constant": [
+    0.18580000000000002,
+    0.6568,
+    0.4612,
+    0.7523
+   ],
+   "jev": [
+    0.15,
+    0.63,
+    0.31,
+    0.65
+   ],
+   "jev_blackjack_table": 0.77
+  },
+  {
+   "image": "clef-check.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.1625,
+    0.642,
+    0.304,
+    0.659
+   ],
+   "current": null,
+   "current_seconds": 0.0136,
+   "constant": [
+    0.18580000000000002,
+    0.6568,
+    0.4612,
+    0.7523
+   ],
+   "jev": [
+    0.16,
+    0.64,
+    0.32,
+    0.65
+   ],
+   "jev_blackjack_table": 0.46
+  },
+  {
+   "image": "clef-check.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.1625,
+    0.642,
+    0.304,
+    0.659
+   ],
+   "current": null,
+   "current_seconds": 0.0026,
+   "constant": [
+    0.18580000000000002,
+    0.6568,
+    0.4612,
+    0.7523
+   ],
+   "jev": [
+    0.15,
+    0.63,
+    0.3,
+    0.64
+   ],
+   "jev_blackjack_table": 0.72
+  },
+  {
+   "image": "clef-check.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.02616279069767441,
+    0.5837209302325581,
+    0.304,
+    0.659
+   ],
+   "current": null,
+   "current_seconds": 0.0157,
+   "constant": [
+    0.18580000000000002,
+    0.6568,
+    0.4612,
+    0.7523
+   ],
+   "jev": [
+    0.03,
+    0.57,
+    0.31,
+    0.65
+   ],
+   "jev_blackjack_table": 0.64
+  },
+  {
+   "image": "clef-check.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.1625,
+    0.642,
+    0.304,
+    0.659
+   ],
+   "current": null,
+   "current_seconds": 0.013,
+   "constant": [
+    0.18580000000000002,
+    0.6568,
+    0.4612,
+    0.7523
+   ],
+   "jev": [
+    0.15,
+    0.62,
+    0.31,
+    0.65
+   ],
+   "jev_blackjack_table": 0.89
+  },
+  {
+   "image": "calibration.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.784,
+    0.932
+   ],
+   "current": [
+    0.2211267605633803,
+    0.6492957746478873,
+    0.78359375,
+    0.93203125
+   ],
+   "current_seconds": 0.3255,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.41319999999999996,
+    0.725
+   ],
+   "jev": [
+    0.22,
+    0.66,
+    0.76,
+    0.96
+   ],
+   "jev_blackjack_table": 0.99
+  },
+  {
+   "image": "calibration.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.784,
+    0.932
+   ],
+   "current": [
+    0.2211267605633803,
+    0.647887323943662,
+    0.784375,
+    0.93125
+   ],
+   "current_seconds": 0.2618,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.41319999999999996,
+    0.725
+   ],
+   "jev": [
+    0.22,
+    0.65,
+    0.78,
+    0.95
+   ],
+   "jev_blackjack_table": 0.96
+  },
+  {
+   "image": "calibration.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.784,
+    0.932
+   ],
+   "current": [
+    0.2211267605633803,
+    0.6492957746478873,
+    0.78359375,
+    0.93203125
+   ],
+   "current_seconds": 0.0267,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.41319999999999996,
+    0.725
+   ],
+   "jev": [
+    0.22,
+    0.65,
+    0.77,
+    0.95
+   ],
+   "jev_blackjack_table": 0.94
+  },
+  {
+   "image": "calibration.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.784,
+    0.932
+   ],
+   "current": null,
+   "current_seconds": 0.002,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.41319999999999996,
+    0.725
+   ],
+   "jev": [
+    0.2,
+    0.64,
+    0.8,
+    0.93
+   ],
+   "jev_blackjack_table": 0.94
+  },
+  {
+   "image": "calibration.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.09302325581395347,
+    0.5918604651162791,
+    0.784,
+    0.932
+   ],
+   "current": [
+    0.09492635024549918,
+    0.5924713584288053,
+    0.78359375,
+    0.93203125
+   ],
+   "current_seconds": 0.1724,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.41319999999999996,
+    0.725
+   ],
+   "jev": [
+    0.08,
+    0.59,
+    0.76,
+    0.95
+   ],
+   "jev_blackjack_table": 0.99
+  },
+  {
+   "image": "calibration.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.22,
+    0.649,
+    0.784,
+    0.932
+   ],
+   "current": [
+    0.2211267605633803,
+    0.5197183098591549,
+    0.78359375,
+    0.93203125
+   ],
+   "current_seconds": 0.1001,
+   "constant": [
+    0.18005,
+    0.6561,
+    0.41319999999999996,
+    0.725
+   ],
+   "jev": [
+    0.22,
+    0.65,
+    0.76,
+    0.97
+   ],
+   "jev_blackjack_table": 0.98
+  },
+  {
+   "image": "workbench.jpg::orig",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.686,
+    0.377,
+    0.697
+   ],
+   "current": [
+    0.20525451559934318,
+    0.6863711001642037,
+    0.37734375,
+    0.696875
+   ],
+   "current_seconds": 0.0551,
+   "constant": [
+    0.18165,
+    0.6524,
+    0.45389999999999997,
+    0.7485
+   ],
+   "jev": [
+    0.2,
+    0.7,
+    0.36,
+    0.72
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "workbench.jpg::blur",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.686,
+    0.377,
+    0.697
+   ],
+   "current": [
+    0.20607553366174056,
+    0.6847290640394089,
+    0.378125,
+    0.6953125
+   ],
+   "current_seconds": 0.052,
+   "constant": [
+    0.18165,
+    0.6524,
+    0.45389999999999997,
+    0.7485
+   ],
+   "jev": [
+    0.2,
+    0.69,
+    0.36,
+    0.71
+   ],
+   "jev_blackjack_table": 0.89
+  },
+  {
+   "image": "workbench.jpg::dark",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.686,
+    0.377,
+    0.697
+   ],
+   "current": [
+    0.20525451559934318,
+    0.6863711001642037,
+    0.37734375,
+    0.696875
+   ],
+   "current_seconds": 0.078,
+   "constant": [
+    0.18165,
+    0.6524,
+    0.45389999999999997,
+    0.7485
+   ],
+   "jev": [
+    0.2,
+    0.7,
+    0.35,
+    0.71
+   ],
+   "jev_blackjack_table": 0.94
+  },
+  {
+   "image": "workbench.jpg::lowres",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.686,
+    0.377,
+    0.697
+   ],
+   "current": [
+    0.20525451559934318,
+    0.6863711001642037,
+    0.378125,
+    0.696875
+   ],
+   "current_seconds": 0.0113,
+   "constant": [
+    0.18165,
+    0.6524,
+    0.45389999999999997,
+    0.7485
+   ],
+   "jev": [
+    0.21,
+    0.7,
+    0.36,
+    0.72
+   ],
+   "jev_blackjack_table": 0.89
+  },
+  {
+   "image": "workbench.jpg::crop",
+   "has_table": 1,
+   "truth": [
+    0.07441860465116276,
+    0.6348837209302326,
+    0.377,
+    0.697
+   ],
+   "current": [
+    0.07633587786259542,
+    0.6345419847328244,
+    0.37734375,
+    0.696875
+   ],
+   "current_seconds": 0.0462,
+   "constant": [
+    0.18165,
+    0.6524,
+    0.45389999999999997,
+    0.7485
+   ],
+   "jev": [
+    0.07,
+    0.64,
+    0.36,
+    0.71
+   ],
+   "jev_blackjack_table": 0.97
+  },
+  {
+   "image": "workbench.jpg::occluded",
+   "has_table": 1,
+   "truth": [
+    0.204,
+    0.686,
+    0.377,
+    0.697
+   ],
+   "current": null,
+   "current_seconds": 0.0168,
+   "constant": [
+    0.18165,
+    0.6524,
+    0.45389999999999997,
+    0.7485
+   ],
+   "jev": [
+    0.2,
+    0.7,
+    0.36,
+    0.72
+   ],
+   "jev_blackjack_table": 0.98
+  },
+  {
+   "image": "holdem-vision.png::orig",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0121,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.05,
+    0.67,
+    0.03,
+    0.76
+   ],
+   "jev_blackjack_table": 0.45
+  },
+  {
+   "image": "holdem-vision.png::blur",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0135,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.14,
+    0.65,
+    0.03,
+    0.47
+   ],
+   "jev_blackjack_table": 0.63
+  },
+  {
+   "image": "holdem-vision.png::dark",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.015,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.05,
+    0.67,
+    0.05,
+    0.76
+   ],
+   "jev_blackjack_table": 0.54
+  },
+  {
+   "image": "holdem-vision.png::lowres",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0044,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.13,
+    0.65,
+    0.07,
+    0.52
+   ],
+   "jev_blackjack_table": 0.69
+  },
+  {
+   "image": "holdem-vision.png::crop",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0132,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.02,
+    0.59,
+    0.06,
+    0.49
+   ],
+   "jev_blackjack_table": 0.43
+  },
+  {
+   "image": "holdem-vision.png::occluded",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0142,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.1,
+    0.65,
+    0.05,
+    0.74
+   ],
+   "jev_blackjack_table": 0.46
+  },
+  {
+   "image": "replay.jpg::orig",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0174,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.19,
+    0.98,
+    0.03,
+    0.97
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "replay.jpg::blur",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0174,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.2,
+    0.97,
+    0.21,
+    0.96
+   ],
+   "jev_blackjack_table": 0.03
+  },
+  {
+   "image": "replay.jpg::dark",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0158,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.03,
+    0.98,
+    0.02,
+    0.97
+   ],
+   "jev_blackjack_table": 0.03
+  },
+  {
+   "image": "replay.jpg::lowres",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0064,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.2,
+    0.97,
+    0.24,
+    0.96
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "replay.jpg::crop",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0154,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.03,
+    0.97,
+    0.04,
+    0.96
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "replay.jpg::occluded",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0234,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.55,
+    0.97,
+    0.31,
+    0.69
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "configuration.jpg::orig",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0152,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.02,
+    0.99,
+    0.03,
+    0.98
+   ],
+   "jev_blackjack_table": 0.03
+  },
+  {
+   "image": "configuration.jpg::blur",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0184,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.03,
+    0.99,
+    0.05,
+    0.98
+   ],
+   "jev_blackjack_table": 0.1
+  },
+  {
+   "image": "configuration.jpg::dark",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.013,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.05,
+    0.65,
+    0.03,
+    0.36
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "configuration.jpg::lowres",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0025,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.03,
+    0.98,
+    0.05,
+    0.96
+   ],
+   "jev_blackjack_table": 0.06
+  },
+  {
+   "image": "configuration.jpg::crop",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0105,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.02,
+    0.99,
+    0.02,
+    0.98
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "configuration.jpg::occluded",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0131,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.02,
+    0.99,
+    0.03,
+    0.75
+   ],
+   "jev_blackjack_table": 0.04
+  },
+  {
+   "image": "strategy-library.jpg::orig",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0166,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.1,
+    0.98,
+    0.04,
+    0.97
+   ],
+   "jev_blackjack_table": 0.01
+  },
+  {
+   "image": "strategy-library.jpg::blur",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0133,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.12,
+    0.98,
+    0.34,
+    0.97
+   ],
+   "jev_blackjack_table": 0.03
+  },
+  {
+   "image": "strategy-library.jpg::dark",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0131,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.05,
+    0.98,
+    0.05,
+    0.97
+   ],
+   "jev_blackjack_table": 0.01
+  },
+  {
+   "image": "strategy-library.jpg::lowres",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0027,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.13,
+    0.96,
+    0.34,
+    0.97
+   ],
+   "jev_blackjack_table": 0.04
+  },
+  {
+   "image": "strategy-library.jpg::crop",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0109,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.01,
+    0.99,
+    0.03,
+    0.98
+   ],
+   "jev_blackjack_table": 0.01
+  },
+  {
+   "image": "strategy-library.jpg::occluded",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0144,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.57,
+    0.71,
+    0.3,
+    0.67
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "counting.jpg::orig",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0193,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.03,
+    0.98,
+    0.03,
+    0.96
+   ],
+   "jev_blackjack_table": 0.01
+  },
+  {
+   "image": "counting.jpg::blur",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0157,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.03,
+    0.97,
+    0.03,
+    0.96
+   ],
+   "jev_blackjack_table": 0.01
+  },
+  {
+   "image": "counting.jpg::dark",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0176,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.02,
+    0.98,
+    0.03,
+    0.97
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "counting.jpg::lowres",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0035,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.03,
+    0.98,
+    0.03,
+    0.97
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "counting.jpg::crop",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0143,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.01,
+    0.98,
+    0.03,
+    0.97
+   ],
+   "jev_blackjack_table": 0.01
+  },
+  {
+   "image": "counting.jpg::occluded",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0175,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.57,
+    0.97,
+    0.29,
+    0.69
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "mobile.jpg::orig",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0038,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.04,
+    0.96,
+    0.04,
+    0.44
+   ],
+   "jev_blackjack_table": 0.01
+  },
+  {
+   "image": "mobile.jpg::blur",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0022,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.19,
+    0.95,
+    0.42,
+    0.98
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "mobile.jpg::dark",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0021,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.03,
+    0.96,
+    0.05,
+    0.46
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "mobile.jpg::lowres",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.001,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.09,
+    0.96,
+    0.44,
+    0.97
+   ],
+   "jev_blackjack_table": 0.02
+  },
+  {
+   "image": "mobile.jpg::crop",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0025,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.03,
+    0.95,
+    0.05,
+    0.44
+   ],
+   "jev_blackjack_table": 0.01
+  },
+  {
+   "image": "mobile.jpg::occluded",
+   "has_table": 0,
+   "truth": null,
+   "current": null,
+   "current_seconds": 0.0028,
+   "constant": [
+    0.1836818181818182,
+    0.6554545454545454,
+    0.4469090909090909,
+    0.7438181818181818
+   ],
+   "jev": [
+    0.2,
+    0.96,
+    0.41,
+    0.47
+   ],
+   "jev_blackjack_table": 0.02
+  }
+ ]
+}

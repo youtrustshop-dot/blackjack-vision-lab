@@ -49,6 +49,25 @@ blur and low resolution). The "action buttons" false alarms on legends appear in
 in blur and low resolution). These variants are artificial degradations of the same 17 pictures, so they
 test sensitivity to image quality, not new tables or new layouts.
 
+## Comparison with the current method (`compare_baselines.py`, no network)
+
+Same 102 images and the same hand boxes, three ways of locating the table: Jev Box, the lab's current automatic locator
+(`ClassicCasinoDetector`, largest green surface, abstains otherwise) and a constant box that never looks at the picture
+(leave-one-out mean of the other labelled boxes). Full numbers in `comparison-report.json`.
+
+- Jev answered all 66 table cases, mean IoU 0.86 (65 at 0.5 or better, 61 at 0.7).
+- The current locator answered 27 of 66 (only green screens), mean IoU 0.78 when it answered, 0.32 counting abstentions
+  as zero, with no false alarms on the 36 pictures without a table and 14 ms median time.
+- The constant guess scored 0.35 mean IoU, so Jev's boxes carry real information about the picture.
+- On the 27 green cases where both answer, Jev scores 0.89 against 0.78 (27 of 27 at IoU 0.7 against 20 of 27). The
+  current locator is penalised here because it outlines the felt only while the hand boxes cover the whole canvas.
+- Table present? Jev's Noul at 0.5 found 63 of 66 with 3 false alarms on 36 negatives; the current locator found 27 of 66
+  with none.
+
+Caveats: the dark theme is the lab's own demo skin, outside the green-casino scope the current locator was written for,
+so its abstentions there are by design. All images are the lab's own artwork. Clef was not run (about 19 GB model and a
+CUDA GPU, see `docs/CLEF.md`); its recorded cases are different and not comparable.
+
 ## Measured result (2026-10-20, jev-1.14.0, 17 images, one run)
 
 See `jev-1.14.0-report.json` for every number. Headline: Box found the table canvas with a mean IoU of 0.85 against the
