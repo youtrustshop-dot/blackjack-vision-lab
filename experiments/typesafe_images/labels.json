@@ -1,0 +1,22 @@
+{
+  "_note": "Labels written by hand by looking at each docs/screenshots image (2026-10-20). Boxes are eyeballed fractions of the image resized to max side 1280 (left, right, top, bottom) and carry roughly +-2% error. 'table_box' is the rectangle of the table/video canvas, not the whole page. These are screenshots of the lab UI over its own synthetic artwork, not real casino footage.",
+  "images": {
+    "ace-advice.jpg":      {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.163, 0.647, 0.320, 0.675]},
+    "simulator.jpg":       {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.148, 0.669, 0.395, 0.770]},
+    "live-vision.jpg":     {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.161, 0.662, 0.306, 0.580]},
+    "live-round-two.jpg":  {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.204, 0.664, 0.313, 0.539]},
+    "reliability-live.png": {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.159, 0.657, 0.475, 0.912]},
+    "floating-advisor.jpg": {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.159, 0.657, 0.475, 0.912]},
+    "perception.jpg":      {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.220, 0.649, 0.701, 0.906]},
+    "video-replay.jpg":    {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.220, 0.628, 0.466, 0.600]},
+    "clef-check.jpg":      {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.1625, 0.642, 0.304, 0.659]},
+    "calibration.jpg":     {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.220, 0.649, 0.784, 0.932]},
+    "workbench.jpg":       {"blackjack_table": 1, "action_buttons": 1, "poker_table": 0, "table_box": [0.204, 0.686, 0.377, 0.697]},
+    "holdem-vision.png":   {"blackjack_table": 0, "action_buttons": 0, "poker_table": 1, "table_box": null},
+    "replay.jpg":          {"blackjack_table": 0, "action_buttons": 0, "poker_table": 0, "table_box": null},
+    "configuration.jpg":   {"blackjack_table": 0, "action_buttons": 0, "poker_table": 0, "table_box": null},
+    "strategy-library.jpg": {"blackjack_table": 0, "action_buttons": 0, "poker_table": 0, "table_box": null},
+    "counting.jpg":        {"blackjack_table": 0, "action_buttons": 0, "poker_table": 0, "table_box": null},
+    "mobile.jpg":          {"blackjack_table": 0, "action_buttons": 0, "poker_table": 0, "table_box": null}
+  }
+}

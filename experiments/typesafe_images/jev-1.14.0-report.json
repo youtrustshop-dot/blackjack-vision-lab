@@ -1,0 +1,752 @@
+{
+ "status": "complete",
+ "model_requested": "jev-1.14.0",
+ "models_returned": [
+  "jev-1.14.0"
+ ],
+ "labels": "experiments/typesafe_images/labels.json (hand labels; not an independent holdout)",
+ "summary": {
+  "noul": {
+   "blackjack_table": {
+    "positives": 11,
+    "cases": 17,
+    "auc": 0.9848484848484849,
+    "thresholds": {
+     "0.3": {
+      "true_positive": 11,
+      "false_positive": 1,
+      "missed": 0
+     },
+     "0.5": {
+      "true_positive": 10,
+      "false_positive": 0,
+      "missed": 1
+     },
+     "0.7": {
+      "true_positive": 9,
+      "false_positive": 0,
+      "missed": 2
+     },
+     "0.9": {
+      "true_positive": 9,
+      "false_positive": 0,
+      "missed": 2
+     }
+    }
+   },
+   "action_buttons": {
+    "positives": 11,
+    "cases": 17,
+    "auc": 1.0,
+    "thresholds": {
+     "0.3": {
+      "true_positive": 11,
+      "false_positive": 2,
+      "missed": 0
+     },
+     "0.5": {
+      "true_positive": 11,
+      "false_positive": 2,
+      "missed": 0
+     },
+     "0.7": {
+      "true_positive": 11,
+      "false_positive": 2,
+      "missed": 0
+     },
+     "0.9": {
+      "true_positive": 11,
+      "false_positive": 1,
+      "missed": 0
+     }
+    }
+   },
+   "poker_table": {
+    "positives": 1,
+    "cases": 17,
+    "auc": 1.0,
+    "thresholds": {
+     "0.3": {
+      "true_positive": 1,
+      "false_positive": 0,
+      "missed": 0
+     },
+     "0.5": {
+      "true_positive": 1,
+      "false_positive": 0,
+      "missed": 0
+     },
+     "0.7": {
+      "true_positive": 1,
+      "false_positive": 0,
+      "missed": 0
+     },
+     "0.9": {
+      "true_positive": 0,
+      "false_positive": 0,
+      "missed": 1
+     }
+    }
+   }
+  },
+  "box": {
+   "cases": 11,
+   "mean_iou": 0.8509586959982255,
+   "iou_at_least_0.5": 11,
+   "iou_at_least_0.7": 10,
+   "per_image_iou": {
+    "ace-advice.jpg": 0.911,
+    "simulator.jpg": 0.522,
+    "live-vision.jpg": 0.92,
+    "live-round-two.jpg": 0.966,
+    "reliability-live.png": 0.858,
+    "floating-advisor.jpg": 0.855,
+    "perception.jpg": 0.889,
+    "video-replay.jpg": 0.908,
+    "clef-check.jpg": 0.904,
+    "calibration.jpg": 0.777,
+    "workbench.jpg": 0.851
+   }
+  },
+  "latency_seconds": {
+   "p50": 0.439,
+   "p95": 0.636
+  },
+  "usage": {
+   "input_tokens": 58513,
+   "estimated_usd": 0.002458,
+   "price_note": "USD per million input tokens from docs.typesafe.ai/models on 2026-10-20; output is listed as free; currency not named on the page."
+  }
+ },
+ "rows": [
+  {
+   "image": "ace-advice.jpg",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.528,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.45
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.34,
+      "bottom": 0.67,
+      "left": 0.17,
+      "right": 0.65
+     },
+     "confidence": 0.71
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "simulator.jpg",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.437,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.35,
+      "bottom": 0.79,
+      "left": 0.13,
+      "right": 0.98
+     },
+     "confidence": 0.4
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-vision.jpg",
+   "size": [
+    1160,
+    1280
+   ],
+   "seconds": 0.44,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.3,
+      "bottom": 0.57,
+      "left": 0.15,
+      "right": 0.66
+     },
+     "confidence": 0.65
+    }
+   },
+   "usage": {
+    "input_tokens": 4233,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-round-two.jpg",
+   "size": [
+    1004,
+    1280
+   ],
+   "seconds": 0.498,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.96
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.54,
+      "left": 0.2,
+      "right": 0.66
+     },
+     "confidence": 0.81
+    }
+   },
+   "usage": {
+    "input_tokens": 3681,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "reliability-live.png",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.484,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.9
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.45,
+      "bottom": 0.9,
+      "left": 0.14,
+      "right": 0.64
+     },
+     "confidence": 0.58
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "floating-advisor.jpg",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.612,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.45,
+      "bottom": 0.89,
+      "left": 0.14,
+      "right": 0.65
+     },
+     "confidence": 0.64
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "perception.jpg",
+   "size": [
+    980,
+    1280
+   ],
+   "seconds": 0.387,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.69,
+      "bottom": 0.91,
+      "left": 0.23,
+      "right": 0.66
+     },
+     "confidence": 0.84
+    }
+   },
+   "usage": {
+    "input_tokens": 3589,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "video-replay.jpg",
+   "size": [
+    677,
+    1280
+   ],
+   "seconds": 0.41,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.46,
+      "bottom": 0.6,
+      "left": 0.23,
+      "right": 0.64
+     },
+     "confidence": 0.86
+    }
+   },
+   "usage": {
+    "input_tokens": 2669,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "clef-check.jpg",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.396,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.66
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.32,
+      "bottom": 0.65,
+      "left": 0.15,
+      "right": 0.64
+     },
+     "confidence": 0.67
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "calibration.jpg",
+   "size": [
+    710,
+    1280
+   ],
+   "seconds": 0.4,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.77,
+      "bottom": 0.96,
+      "left": 0.22,
+      "right": 0.65
+     },
+     "confidence": 0.85
+    }
+   },
+   "usage": {
+    "input_tokens": 2761,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "workbench.jpg",
+   "size": [
+    1218,
+    1280
+   ],
+   "seconds": 0.52,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.35,
+      "bottom": 0.72,
+      "left": 0.2,
+      "right": 0.69
+     },
+     "confidence": 0.74
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "holdem-vision.png",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.401,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.48
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.83
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.76,
+      "left": 0.05,
+      "right": 0.66
+     },
+     "confidence": 0.26
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "replay.jpg",
+   "size": [
+    1190,
+    1280
+   ],
+   "seconds": 0.41,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.96,
+      "left": 0.19,
+      "right": 0.97
+     },
+     "confidence": 0.07
+    }
+   },
+   "usage": {
+    "input_tokens": 4325,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "configuration.jpg",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.439,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.98,
+      "left": 0.02,
+      "right": 0.99
+     },
+     "confidence": 0.03
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "strategy-library.jpg",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.634,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.88
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.04,
+      "bottom": 0.97,
+      "left": 0.04,
+      "right": 0.98
+     },
+     "confidence": 0.04
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "counting.jpg",
+   "size": [
+    1265,
+    1215
+   ],
+   "seconds": 0.636,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.97,
+      "left": 0.03,
+      "right": 0.98
+     },
+     "confidence": 0.05
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "mobile.jpg",
+   "size": [
+    375,
+    812
+   ],
+   "seconds": 0.336,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.05,
+      "bottom": 0.43,
+      "left": 0.04,
+      "right": 0.96
+     },
+     "confidence": 0.14
+    }
+   },
+   "usage": {
+    "input_tokens": 1181,
+    "output_tokens": 75
+   }
+  }
+ ]
+}

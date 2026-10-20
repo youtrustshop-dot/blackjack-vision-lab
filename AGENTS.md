@@ -1,5 +1,13 @@
 # Card Lab project instructions
 
+- TypeSafe image observer experiment, explicit human request 2026-10-20, branch
+  experiment/typesafe-image-observer only: isolated opt-in script in
+  experiments/typesafe_images (Noul and Box on lab screenshots, hand labels, own
+  usage numbers). It never reads cards or chooses actions, needs --allow-network
+  plus a key already in the environment, and does not touch the cloud ledger, the
+  disarmed lots, keys, billing, UI or the installed 1.1.1 release. Not merged to
+  main and not a promotion of any reader.
+
 - Main consolidation, latest explicit human authorization 2026-10-09:
   audit the complete research chain and integrate the reviewed source in main.
   This resolves the PR28 destination question and supersedes earlier merge
