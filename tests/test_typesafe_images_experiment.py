@@ -16,6 +16,22 @@ def test_iou_identical_disjoint_and_half():
     assert abs(exp.iou([0, 1, 0, 1], [0, 0.5, 0, 1]) - 0.5) < 1e-12
 
 
+def test_crop_moves_box_and_keeps_none():
+    assert exp.crop_box(None) is None
+    left, right, top, bottom = exp.crop_box([0.14, 1.0, 0.2, 0.8])
+    assert abs(left) < 1e-12 and abs(right - 1.0) < 1e-12 and (top, bottom) == (0.2, 0.8)
+
+
+def test_variants_keep_size_limits():
+    from PIL import Image
+
+    im = Image.new("RGB", (1280, 906), (10, 80, 50))
+    for v in exp.VARIANTS:
+        out, quality, box = exp.make_variant(im.copy(), v, [0.2, 0.6, 0.3, 0.7])
+        assert min(out.size) >= 280 and quality in (30, 85)
+        assert (v == "crop") == (box != [0.2, 0.6, 0.3, 0.7])
+
+
 def test_auc_needs_both_classes():
     assert exp.auc([(0.9, 1), (0.8, 1)]) is None
     assert exp.auc([(0.9, 1), (0.1, 0)]) == 1.0

@@ -37,6 +37,18 @@ real casino footage, not an independent holdout and not enough to certify a thre
 buttons" (strategy table and mobile view) come from H/S/D legend chips that look like buttons; the labels were not
 adjusted to hide that.
 
+## Robustness run (same day, `--variants`)
+
+Each screenshot was also sent blurred, darkened, at half resolution with JPEG quality 30, with the left sidebar cut off
+(the box moves accordingly) and with a grey block over 30% of the table: 102 requests, 0 errors, 305,128 input tokens
+(about USD 0.013), latency about 0.40 s median and 0.63 s p95. The mean Box IoU stayed between 0.84 and 0.90 in every
+variant. Scene questions moved by one or two images per variant (details in `jev-1.14.0-variants-report.json`):
+the Hold'em screen was missed after blur and at low resolution, "action buttons" lost one or two true cases at low
+resolution and blur, and the dark copies produced two misses for "blackjack table" (plus one false alarm, as did
+blur and low resolution). The "action buttons" false alarms on legends appear in all variants (two in four of them, one
+in blur and low resolution). These variants are artificial degradations of the same 17 pictures, so they
+test sensitivity to image quality, not new tables or new layouts.
+
 ## Measured result (2026-10-20, jev-1.14.0, 17 images, one run)
 
 See `jev-1.14.0-report.json` for every number. Headline: Box found the table canvas with a mean IoU of 0.85 against the

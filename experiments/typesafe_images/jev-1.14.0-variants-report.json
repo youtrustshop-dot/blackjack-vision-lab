@@ -1,0 +1,4632 @@
+{
+ "status": "complete",
+ "model_requested": "jev-1.14.0",
+ "models_returned": [
+  "jev-1.14.0"
+ ],
+ "labels": "experiments/typesafe_images/labels.json (hand labels; not an independent holdout)",
+ "summary": {
+  "noul": {
+   "blackjack_table": {
+    "positives": 66,
+    "cases": 102,
+    "auc": 0.9907407407407407,
+    "thresholds": {
+     "0.3": {
+      "true_positive": 66,
+      "false_positive": 6,
+      "missed": 0
+     },
+     "0.5": {
+      "true_positive": 63,
+      "false_positive": 3,
+      "missed": 3
+     },
+     "0.7": {
+      "true_positive": 58,
+      "false_positive": 0,
+      "missed": 8
+     },
+     "0.9": {
+      "true_positive": 50,
+      "false_positive": 0,
+      "missed": 16
+     }
+    }
+   },
+   "action_buttons": {
+    "positives": 66,
+    "cases": 102,
+    "auc": 0.9269781144781145,
+    "thresholds": {
+     "0.3": {
+      "true_positive": 66,
+      "false_positive": 12,
+      "missed": 0
+     },
+     "0.5": {
+      "true_positive": 63,
+      "false_positive": 10,
+      "missed": 3
+     },
+     "0.7": {
+      "true_positive": 62,
+      "false_positive": 10,
+      "missed": 4
+     },
+     "0.9": {
+      "true_positive": 55,
+      "false_positive": 7,
+      "missed": 11
+     }
+    }
+   },
+   "poker_table": {
+    "positives": 6,
+    "cases": 102,
+    "auc": 0.9895833333333334,
+    "thresholds": {
+     "0.3": {
+      "true_positive": 4,
+      "false_positive": 1,
+      "missed": 2
+     },
+     "0.5": {
+      "true_positive": 4,
+      "false_positive": 0,
+      "missed": 2
+     },
+     "0.7": {
+      "true_positive": 3,
+      "false_positive": 0,
+      "missed": 3
+     },
+     "0.9": {
+      "true_positive": 1,
+      "false_positive": 0,
+      "missed": 5
+     }
+    }
+   }
+  },
+  "box": {
+   "cases": 66,
+   "mean_iou": 0.8633633480150719,
+   "iou_at_least_0.5": 65,
+   "iou_at_least_0.7": 61,
+   "per_image_iou": {
+    "ace-advice.jpg::orig": 0.93,
+    "ace-advice.jpg::blur": 0.966,
+    "ace-advice.jpg::dark": 0.883,
+    "ace-advice.jpg::lowres": 0.634,
+    "ace-advice.jpg::crop": 0.909,
+    "ace-advice.jpg::occluded": 0.898,
+    "simulator.jpg::orig": 0.522,
+    "simulator.jpg::blur": 0.738,
+    "simulator.jpg::dark": 0.506,
+    "simulator.jpg::lowres": 0.574,
+    "simulator.jpg::crop": 0.493,
+    "simulator.jpg::occluded": 0.819,
+    "live-vision.jpg::orig": 0.92,
+    "live-vision.jpg::blur": 0.903,
+    "live-vision.jpg::dark": 0.917,
+    "live-vision.jpg::lowres": 0.917,
+    "live-vision.jpg::crop": 0.912,
+    "live-vision.jpg::occluded": 0.885,
+    "live-round-two.jpg::orig": 0.962,
+    "live-round-two.jpg::blur": 0.962,
+    "live-round-two.jpg::dark": 0.966,
+    "live-round-two.jpg::lowres": 0.945,
+    "live-round-two.jpg::crop": 0.956,
+    "live-round-two.jpg::occluded": 0.941,
+    "reliability-live.png::orig": 0.892,
+    "reliability-live.png::blur": 0.875,
+    "reliability-live.png::dark": 0.913,
+    "reliability-live.png::lowres": 0.933,
+    "reliability-live.png::crop": 0.895,
+    "reliability-live.png::occluded": 0.849,
+    "floating-advisor.jpg::orig": 0.853,
+    "floating-advisor.jpg::blur": 0.922,
+    "floating-advisor.jpg::dark": 0.913,
+    "floating-advisor.jpg::lowres": 0.903,
+    "floating-advisor.jpg::crop": 0.919,
+    "floating-advisor.jpg::occluded": 0.883,
+    "perception.jpg::orig": 0.909,
+    "perception.jpg::blur": 0.974,
+    "perception.jpg::dark": 0.952,
+    "perception.jpg::lowres": 0.93,
+    "perception.jpg::crop": 0.923,
+    "perception.jpg::occluded": 0.914,
+    "video-replay.jpg::orig": 0.908,
+    "video-replay.jpg::blur": 0.868,
+    "video-replay.jpg::dark": 0.858,
+    "video-replay.jpg::lowres": 0.873,
+    "video-replay.jpg::crop": 0.828,
+    "video-replay.jpg::occluded": 0.894,
+    "clef-check.jpg::orig": 0.885,
+    "clef-check.jpg::blur": 0.911,
+    "clef-check.jpg::dark": 0.921,
+    "clef-check.jpg::lowres": 0.891,
+    "clef-check.jpg::crop": 0.928,
+    "clef-check.jpg::occluded": 0.892,
+    "calibration.jpg::orig": 0.722,
+    "calibration.jpg::blur": 0.869,
+    "calibration.jpg::dark": 0.82,
+    "calibration.jpg::lowres": 0.826,
+    "calibration.jpg::crop": 0.757,
+    "calibration.jpg::occluded": 0.703,
+    "workbench.jpg::orig": 0.857,
+    "workbench.jpg::blur": 0.899,
+    "workbench.jpg::dark": 0.857,
+    "workbench.jpg::lowres": 0.854,
+    "workbench.jpg::crop": 0.899,
+    "workbench.jpg::occluded": 0.857
+   }
+  },
+  "latency_seconds": {
+   "p50": 0.398,
+   "p95": 0.631
+  },
+  "usage": {
+   "input_tokens": 305128,
+   "estimated_usd": 0.012815,
+   "price_note": "USD per million input tokens from docs.typesafe.ai/models on 2026-10-20; output is listed as free; currency not named on the page."
+  }
+ },
+ "rows": [
+  {
+   "image": "ace-advice.jpg::orig",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.439,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.46
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.33,
+      "bottom": 0.67,
+      "left": 0.17,
+      "right": 0.64
+     },
+     "confidence": 0.7
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "ace-advice.jpg::blur",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.377,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.78
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.87
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.32,
+      "bottom": 0.68,
+      "left": 0.16,
+      "right": 0.64
+     },
+     "confidence": 0.61
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "ace-advice.jpg::dark",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.405,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.34,
+      "bottom": 0.66,
+      "left": 0.17,
+      "right": 0.65
+     },
+     "confidence": 0.72
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "ace-advice.jpg::lowres",
+   "size": [
+    640,
+    453
+   ],
+   "seconds": 0.299,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.64
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.22,
+      "bottom": 0.76,
+      "left": 0.15,
+      "right": 0.64
+     },
+     "confidence": 0.62
+    }
+   },
+   "usage": {
+    "input_tokens": 1151,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "ace-advice.jpg::crop",
+   "size": [
+    1101,
+    906
+   ],
+   "seconds": 0.366,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.62
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.32,
+      "bottom": 0.7,
+      "left": 0.02,
+      "right": 0.58
+     },
+     "confidence": 0.77
+    }
+   },
+   "usage": {
+    "input_tokens": 3009,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "ace-advice.jpg::occluded",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.4,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.52
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.32,
+      "bottom": 0.7,
+      "left": 0.16,
+      "right": 0.63
+     },
+     "confidence": 0.59
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "simulator.jpg::orig",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.673,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.35,
+      "bottom": 0.79,
+      "left": 0.13,
+      "right": 0.98
+     },
+     "confidence": 0.46
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "simulator.jpg::blur",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.417,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.93
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.84
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.34,
+      "bottom": 0.83,
+      "left": 0.13,
+      "right": 0.67
+     },
+     "confidence": 0.75
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "simulator.jpg::dark",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.393,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.35,
+      "bottom": 0.81,
+      "left": 0.13,
+      "right": 0.97
+     },
+     "confidence": 0.6
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "simulator.jpg::lowres",
+   "size": [
+    640,
+    453
+   ],
+   "seconds": 0.315,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.8
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.78
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.34,
+      "bottom": 0.97,
+      "left": 0.14,
+      "right": 0.68
+     },
+     "confidence": 0.61
+    }
+   },
+   "usage": {
+    "input_tokens": 1151,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "simulator.jpg::crop",
+   "size": [
+    1101,
+    906
+   ],
+   "seconds": 0.403,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.34,
+      "bottom": 0.81,
+      "left": 0.0,
+      "right": 0.98
+     },
+     "confidence": 0.39
+    }
+   },
+   "usage": {
+    "input_tokens": 3009,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "simulator.jpg::occluded",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.374,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.86
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.36,
+      "bottom": 0.81,
+      "left": 0.14,
+      "right": 0.67
+     },
+     "confidence": 0.8
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-vision.jpg::orig",
+   "size": [
+    1160,
+    1280
+   ],
+   "seconds": 0.401,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.96
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.3,
+      "bottom": 0.57,
+      "left": 0.15,
+      "right": 0.66
+     },
+     "confidence": 0.68
+    }
+   },
+   "usage": {
+    "input_tokens": 4233,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-vision.jpg::blur",
+   "size": [
+    1160,
+    1280
+   ],
+   "seconds": 0.354,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.3,
+      "bottom": 0.57,
+      "left": 0.14,
+      "right": 0.66
+     },
+     "confidence": 0.74
+    }
+   },
+   "usage": {
+    "input_tokens": 4233,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-vision.jpg::dark",
+   "size": [
+    1160,
+    1280
+   ],
+   "seconds": 0.487,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.3,
+      "bottom": 0.58,
+      "left": 0.14,
+      "right": 0.65
+     },
+     "confidence": 0.73
+    }
+   },
+   "usage": {
+    "input_tokens": 4233,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-vision.jpg::lowres",
+   "size": [
+    580,
+    640
+   ],
+   "seconds": 0.39,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.92
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.3,
+      "bottom": 0.58,
+      "left": 0.14,
+      "right": 0.65
+     },
+     "confidence": 0.73
+    }
+   },
+   "usage": {
+    "input_tokens": 1335,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-vision.jpg::crop",
+   "size": [
+    998,
+    1280
+   ],
+   "seconds": 0.426,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.93
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.3,
+      "bottom": 0.59,
+      "left": 0.02,
+      "right": 0.59
+     },
+     "confidence": 0.69
+    }
+   },
+   "usage": {
+    "input_tokens": 3681,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-vision.jpg::occluded",
+   "size": [
+    1160,
+    1280
+   ],
+   "seconds": 0.583,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.92
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.3,
+      "bottom": 0.57,
+      "left": 0.14,
+      "right": 0.65
+     },
+     "confidence": 0.44
+    }
+   },
+   "usage": {
+    "input_tokens": 4233,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-round-two.jpg::orig",
+   "size": [
+    1004,
+    1280
+   ],
+   "seconds": 0.449,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.54,
+      "left": 0.21,
+      "right": 0.66
+     },
+     "confidence": 0.81
+    }
+   },
+   "usage": {
+    "input_tokens": 3681,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-round-two.jpg::blur",
+   "size": [
+    1004,
+    1280
+   ],
+   "seconds": 0.379,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.89
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.54,
+      "left": 0.2,
+      "right": 0.67
+     },
+     "confidence": 0.85
+    }
+   },
+   "usage": {
+    "input_tokens": 3681,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-round-two.jpg::dark",
+   "size": [
+    1004,
+    1280
+   ],
+   "seconds": 0.39,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.54,
+      "left": 0.2,
+      "right": 0.66
+     },
+     "confidence": 0.78
+    }
+   },
+   "usage": {
+    "input_tokens": 3681,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-round-two.jpg::lowres",
+   "size": [
+    502,
+    640
+   ],
+   "seconds": 0.359,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.88
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.32,
+      "bottom": 0.54,
+      "left": 0.2,
+      "right": 0.67
+     },
+     "confidence": 0.9
+    }
+   },
+   "usage": {
+    "input_tokens": 1197,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-round-two.jpg::crop",
+   "size": [
+    864,
+    1280
+   ],
+   "seconds": 0.454,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.54,
+      "left": 0.08,
+      "right": 0.6
+     },
+     "confidence": 0.85
+    }
+   },
+   "usage": {
+    "input_tokens": 3221,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "live-round-two.jpg::occluded",
+   "size": [
+    1004,
+    1280
+   ],
+   "seconds": 0.41,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.54,
+      "left": 0.21,
+      "right": 0.65
+     },
+     "confidence": 0.73
+    }
+   },
+   "usage": {
+    "input_tokens": 3681,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "reliability-live.png::orig",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.472,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.45,
+      "bottom": 0.9,
+      "left": 0.15,
+      "right": 0.65
+     },
+     "confidence": 0.6
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "reliability-live.png::blur",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.397,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.45,
+      "bottom": 0.9,
+      "left": 0.14,
+      "right": 0.65
+     },
+     "confidence": 0.61
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "reliability-live.png::dark",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.423,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.47,
+      "bottom": 0.9,
+      "left": 0.15,
+      "right": 0.64
+     },
+     "confidence": 0.59
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "reliability-live.png::lowres",
+   "size": [
+    640,
+    453
+   ],
+   "seconds": 0.344,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.93
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.46,
+      "bottom": 0.91,
+      "left": 0.15,
+      "right": 0.65
+     },
+     "confidence": 0.68
+    }
+   },
+   "usage": {
+    "input_tokens": 1151,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "reliability-live.png::crop",
+   "size": [
+    1101,
+    906
+   ],
+   "seconds": 0.396,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.46,
+      "bottom": 0.9,
+      "left": 0.03,
+      "right": 0.58
+     },
+     "confidence": 0.72
+    }
+   },
+   "usage": {
+    "input_tokens": 3009,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "reliability-live.png::occluded",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.382,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.96
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.43,
+      "bottom": 0.92,
+      "left": 0.15,
+      "right": 0.64
+     },
+     "confidence": 0.56
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "floating-advisor.jpg::orig",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.404,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.44,
+      "bottom": 0.89,
+      "left": 0.15,
+      "right": 0.65
+     },
+     "confidence": 0.71
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "floating-advisor.jpg::blur",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.392,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.96
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.47,
+      "bottom": 0.9,
+      "left": 0.14,
+      "right": 0.66
+     },
+     "confidence": 0.63
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "floating-advisor.jpg::dark",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.415,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.93
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.47,
+      "bottom": 0.9,
+      "left": 0.15,
+      "right": 0.64
+     },
+     "confidence": 0.7
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "floating-advisor.jpg::lowres",
+   "size": [
+    640,
+    453
+   ],
+   "seconds": 0.381,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.92
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.46,
+      "bottom": 0.92,
+      "left": 0.15,
+      "right": 0.64
+     },
+     "confidence": 0.76
+    }
+   },
+   "usage": {
+    "input_tokens": 1151,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "floating-advisor.jpg::crop",
+   "size": [
+    1101,
+    906
+   ],
+   "seconds": 0.398,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.92
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.46,
+      "bottom": 0.9,
+      "left": 0.02,
+      "right": 0.59
+     },
+     "confidence": 0.77
+    }
+   },
+   "usage": {
+    "input_tokens": 3009,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "floating-advisor.jpg::occluded",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.442,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.45,
+      "bottom": 0.93,
+      "left": 0.15,
+      "right": 0.65
+     },
+     "confidence": 0.58
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "perception.jpg::orig",
+   "size": [
+    980,
+    1280
+   ],
+   "seconds": 0.365,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.69,
+      "bottom": 0.91,
+      "left": 0.23,
+      "right": 0.65
+     },
+     "confidence": 0.85
+    }
+   },
+   "usage": {
+    "input_tokens": 3589,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "perception.jpg::blur",
+   "size": [
+    980,
+    1280
+   ],
+   "seconds": 0.375,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.75
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.7,
+      "bottom": 0.91,
+      "left": 0.22,
+      "right": 0.65
+     },
+     "confidence": 0.87
+    }
+   },
+   "usage": {
+    "input_tokens": 3589,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "perception.jpg::dark",
+   "size": [
+    980,
+    1280
+   ],
+   "seconds": 0.695,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.7,
+      "bottom": 0.91,
+      "left": 0.23,
+      "right": 0.65
+     },
+     "confidence": 0.87
+    }
+   },
+   "usage": {
+    "input_tokens": 3589,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "perception.jpg::lowres",
+   "size": [
+    490,
+    640
+   ],
+   "seconds": 0.334,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.78
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.04
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.7,
+      "bottom": 0.91,
+      "left": 0.24,
+      "right": 0.65
+     },
+     "confidence": 0.88
+    }
+   },
+   "usage": {
+    "input_tokens": 1197,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "perception.jpg::crop",
+   "size": [
+    843,
+    1280
+   ],
+   "seconds": 0.461,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.69,
+      "bottom": 0.91,
+      "left": 0.09,
+      "right": 0.59
+     },
+     "confidence": 0.88
+    }
+   },
+   "usage": {
+    "input_tokens": 3221,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "perception.jpg::occluded",
+   "size": [
+    980,
+    1280
+   ],
+   "seconds": 0.423,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.69,
+      "bottom": 0.91,
+      "left": 0.22,
+      "right": 0.64
+     },
+     "confidence": 0.85
+    }
+   },
+   "usage": {
+    "input_tokens": 3589,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "video-replay.jpg::orig",
+   "size": [
+    677,
+    1280
+   ],
+   "seconds": 0.477,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.46,
+      "bottom": 0.6,
+      "left": 0.23,
+      "right": 0.64
+     },
+     "confidence": 0.86
+    }
+   },
+   "usage": {
+    "input_tokens": 2669,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "video-replay.jpg::blur",
+   "size": [
+    677,
+    1280
+   ],
+   "seconds": 0.341,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.64
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.07
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.46,
+      "bottom": 0.61,
+      "left": 0.22,
+      "right": 0.64
+     },
+     "confidence": 0.84
+    }
+   },
+   "usage": {
+    "input_tokens": 2669,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "video-replay.jpg::dark",
+   "size": [
+    677,
+    1280
+   ],
+   "seconds": 0.397,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.47,
+      "bottom": 0.61,
+      "left": 0.23,
+      "right": 0.64
+     },
+     "confidence": 0.81
+    }
+   },
+   "usage": {
+    "input_tokens": 2669,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "video-replay.jpg::lowres",
+   "size": [
+    338,
+    640
+   ],
+   "seconds": 0.362,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.13
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.48,
+      "bottom": 0.6,
+      "left": 0.22,
+      "right": 0.64
+     },
+     "confidence": 0.82
+    }
+   },
+   "usage": {
+    "input_tokens": 967,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "video-replay.jpg::crop",
+   "size": [
+    583,
+    1280
+   ],
+   "seconds": 0.636,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.46,
+      "bottom": 0.62,
+      "left": 0.09,
+      "right": 0.57
+     },
+     "confidence": 0.85
+    }
+   },
+   "usage": {
+    "input_tokens": 2301,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "video-replay.jpg::occluded",
+   "size": [
+    677,
+    1280
+   ],
+   "seconds": 0.551,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.46,
+      "bottom": 0.6,
+      "left": 0.22,
+      "right": 0.6
+     },
+     "confidence": 0.81
+    }
+   },
+   "usage": {
+    "input_tokens": 2669,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "clef-check.jpg::orig",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.521,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.61
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.32,
+      "bottom": 0.65,
+      "left": 0.15,
+      "right": 0.63
+     },
+     "confidence": 0.6
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "clef-check.jpg::blur",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.363,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.77
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.65,
+      "left": 0.15,
+      "right": 0.63
+     },
+     "confidence": 0.69
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "clef-check.jpg::dark",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.408,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.46
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.32,
+      "bottom": 0.65,
+      "left": 0.16,
+      "right": 0.64
+     },
+     "confidence": 0.7
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "clef-check.jpg::lowres",
+   "size": [
+    640,
+    453
+   ],
+   "seconds": 0.326,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.72
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.3,
+      "bottom": 0.64,
+      "left": 0.15,
+      "right": 0.63
+     },
+     "confidence": 0.78
+    }
+   },
+   "usage": {
+    "input_tokens": 1151,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "clef-check.jpg::crop",
+   "size": [
+    1101,
+    906
+   ],
+   "seconds": 0.526,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.64
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.65,
+      "left": 0.03,
+      "right": 0.57
+     },
+     "confidence": 0.69
+    }
+   },
+   "usage": {
+    "input_tokens": 3009,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "clef-check.jpg::occluded",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.393,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.89
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 1.0
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.65,
+      "left": 0.15,
+      "right": 0.62
+     },
+     "confidence": 0.61
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "calibration.jpg::orig",
+   "size": [
+    710,
+    1280
+   ],
+   "seconds": 0.417,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.76,
+      "bottom": 0.96,
+      "left": 0.22,
+      "right": 0.66
+     },
+     "confidence": 0.84
+    }
+   },
+   "usage": {
+    "input_tokens": 2761,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "calibration.jpg::blur",
+   "size": [
+    710,
+    1280
+   ],
+   "seconds": 0.387,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.96
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.42
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.78,
+      "bottom": 0.95,
+      "left": 0.22,
+      "right": 0.65
+     },
+     "confidence": 0.81
+    }
+   },
+   "usage": {
+    "input_tokens": 2761,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "calibration.jpg::dark",
+   "size": [
+    710,
+    1280
+   ],
+   "seconds": 0.398,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.96
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.77,
+      "bottom": 0.95,
+      "left": 0.22,
+      "right": 0.65
+     },
+     "confidence": 0.82
+    }
+   },
+   "usage": {
+    "input_tokens": 2761,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "calibration.jpg::lowres",
+   "size": [
+    355,
+    640
+   ],
+   "seconds": 0.355,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.31
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.07
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.8,
+      "bottom": 0.93,
+      "left": 0.2,
+      "right": 0.64
+     },
+     "confidence": 0.71
+    }
+   },
+   "usage": {
+    "input_tokens": 967,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "calibration.jpg::crop",
+   "size": [
+    611,
+    1280
+   ],
+   "seconds": 0.478,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.76,
+      "bottom": 0.95,
+      "left": 0.08,
+      "right": 0.59
+     },
+     "confidence": 0.82
+    }
+   },
+   "usage": {
+    "input_tokens": 2393,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "calibration.jpg::occluded",
+   "size": [
+    710,
+    1280
+   ],
+   "seconds": 0.509,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.76,
+      "bottom": 0.97,
+      "left": 0.22,
+      "right": 0.65
+     },
+     "confidence": 0.83
+    }
+   },
+   "usage": {
+    "input_tokens": 2761,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "workbench.jpg::orig",
+   "size": [
+    1218,
+    1280
+   ],
+   "seconds": 0.631,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.36,
+      "bottom": 0.72,
+      "left": 0.2,
+      "right": 0.7
+     },
+     "confidence": 0.78
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "workbench.jpg::blur",
+   "size": [
+    1218,
+    1280
+   ],
+   "seconds": 0.608,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.89
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.96
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.36,
+      "bottom": 0.71,
+      "left": 0.2,
+      "right": 0.69
+     },
+     "confidence": 0.78
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "workbench.jpg::dark",
+   "size": [
+    1218,
+    1280
+   ],
+   "seconds": 0.398,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.94
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.35,
+      "bottom": 0.71,
+      "left": 0.2,
+      "right": 0.7
+     },
+     "confidence": 0.8
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "workbench.jpg::lowres",
+   "size": [
+    609,
+    640
+   ],
+   "seconds": 0.334,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.89
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.36,
+      "bottom": 0.72,
+      "left": 0.21,
+      "right": 0.7
+     },
+     "confidence": 0.86
+    }
+   },
+   "usage": {
+    "input_tokens": 1381,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "workbench.jpg::crop",
+   "size": [
+    1048,
+    1280
+   ],
+   "seconds": 0.623,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.97
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.36,
+      "bottom": 0.71,
+      "left": 0.07,
+      "right": 0.64
+     },
+     "confidence": 0.78
+    }
+   },
+   "usage": {
+    "input_tokens": 3865,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "workbench.jpg::occluded",
+   "size": [
+    1218,
+    1280
+   ],
+   "seconds": 0.451,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.36,
+      "bottom": 0.72,
+      "left": 0.2,
+      "right": 0.7
+     },
+     "confidence": 0.78
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "holdem-vision.png::orig",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.36,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.45
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.75
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.76,
+      "left": 0.05,
+      "right": 0.67
+     },
+     "confidence": 0.34
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "holdem-vision.png::blur",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.63,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.63
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.05
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.08
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.47,
+      "left": 0.14,
+      "right": 0.65
+     },
+     "confidence": 0.67
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "holdem-vision.png::dark",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.785,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.54
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.63
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.05,
+      "bottom": 0.76,
+      "left": 0.05,
+      "right": 0.67
+     },
+     "confidence": 0.41
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "holdem-vision.png::lowres",
+   "size": [
+    640,
+    453
+   ],
+   "seconds": 0.419,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.69
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.05
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.05
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.07,
+      "bottom": 0.52,
+      "left": 0.13,
+      "right": 0.65
+     },
+     "confidence": 0.8
+    }
+   },
+   "usage": {
+    "input_tokens": 1151,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "holdem-vision.png::crop",
+   "size": [
+    1101,
+    906
+   ],
+   "seconds": 0.458,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.43
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.9
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.06,
+      "bottom": 0.49,
+      "left": 0.02,
+      "right": 0.59
+     },
+     "confidence": 0.48
+    }
+   },
+   "usage": {
+    "input_tokens": 3009,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "holdem-vision.png::occluded",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.543,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.46
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.82
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.05,
+      "bottom": 0.74,
+      "left": 0.1,
+      "right": 0.65
+     },
+     "confidence": 0.42
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "replay.jpg::orig",
+   "size": [
+    1190,
+    1280
+   ],
+   "seconds": 0.423,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.97,
+      "left": 0.19,
+      "right": 0.98
+     },
+     "confidence": 0.09
+    }
+   },
+   "usage": {
+    "input_tokens": 4325,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "replay.jpg::blur",
+   "size": [
+    1190,
+    1280
+   ],
+   "seconds": 0.39,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.21,
+      "bottom": 0.96,
+      "left": 0.2,
+      "right": 0.97
+     },
+     "confidence": 0.17
+    }
+   },
+   "usage": {
+    "input_tokens": 4325,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "replay.jpg::dark",
+   "size": [
+    1190,
+    1280
+   ],
+   "seconds": 0.365,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.02,
+      "bottom": 0.97,
+      "left": 0.03,
+      "right": 0.98
+     },
+     "confidence": 0.07
+    }
+   },
+   "usage": {
+    "input_tokens": 4325,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "replay.jpg::lowres",
+   "size": [
+    595,
+    640
+   ],
+   "seconds": 0.369,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.24,
+      "bottom": 0.96,
+      "left": 0.2,
+      "right": 0.97
+     },
+     "confidence": 0.25
+    }
+   },
+   "usage": {
+    "input_tokens": 1381,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "replay.jpg::crop",
+   "size": [
+    1024,
+    1280
+   ],
+   "seconds": 0.457,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.04,
+      "bottom": 0.96,
+      "left": 0.03,
+      "right": 0.97
+     },
+     "confidence": 0.08
+    }
+   },
+   "usage": {
+    "input_tokens": 3773,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "replay.jpg::occluded",
+   "size": [
+    1190,
+    1280
+   ],
+   "seconds": 0.451,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.31,
+      "bottom": 0.69,
+      "left": 0.55,
+      "right": 0.97
+     },
+     "confidence": 0.19
+    }
+   },
+   "usage": {
+    "input_tokens": 4325,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "configuration.jpg::orig",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.365,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.98,
+      "left": 0.02,
+      "right": 0.99
+     },
+     "confidence": 0.02
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "configuration.jpg::blur",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.367,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.1
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.05
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.05,
+      "bottom": 0.98,
+      "left": 0.03,
+      "right": 0.99
+     },
+     "confidence": 0.04
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "configuration.jpg::dark",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.364,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.36,
+      "left": 0.05,
+      "right": 0.65
+     },
+     "confidence": 0.09
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "configuration.jpg::lowres",
+   "size": [
+    640,
+    453
+   ],
+   "seconds": 0.312,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.06
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.04
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.05,
+      "bottom": 0.96,
+      "left": 0.03,
+      "right": 0.98
+     },
+     "confidence": 0.03
+    }
+   },
+   "usage": {
+    "input_tokens": 1151,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "configuration.jpg::crop",
+   "size": [
+    1101,
+    906
+   ],
+   "seconds": 0.392,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.02,
+      "bottom": 0.98,
+      "left": 0.02,
+      "right": 0.99
+     },
+     "confidence": 0.03
+    }
+   },
+   "usage": {
+    "input_tokens": 3009,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "configuration.jpg::occluded",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.387,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.04
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.75,
+      "left": 0.02,
+      "right": 0.99
+     },
+     "confidence": 0.05
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "strategy-library.jpg::orig",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.592,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.82
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.04,
+      "bottom": 0.97,
+      "left": 0.1,
+      "right": 0.98
+     },
+     "confidence": 0.06
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "strategy-library.jpg::blur",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.37,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.03
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.34,
+      "bottom": 0.97,
+      "left": 0.12,
+      "right": 0.98
+     },
+     "confidence": 0.21
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "strategy-library.jpg::dark",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.364,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.87
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.05,
+      "bottom": 0.97,
+      "left": 0.05,
+      "right": 0.98
+     },
+     "confidence": 0.06
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "strategy-library.jpg::lowres",
+   "size": [
+    640,
+    453
+   ],
+   "seconds": 0.34,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.04
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.46
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.34,
+      "bottom": 0.97,
+      "left": 0.13,
+      "right": 0.96
+     },
+     "confidence": 0.24
+    }
+   },
+   "usage": {
+    "input_tokens": 1151,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "strategy-library.jpg::crop",
+   "size": [
+    1101,
+    906
+   ],
+   "seconds": 0.43,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.99
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.98,
+      "left": 0.01,
+      "right": 0.99
+     },
+     "confidence": 0.15
+    }
+   },
+   "usage": {
+    "input_tokens": 3009,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "strategy-library.jpg::occluded",
+   "size": [
+    1280,
+    906
+   ],
+   "seconds": 0.797,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.96
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.3,
+      "bottom": 0.67,
+      "left": 0.57,
+      "right": 0.71
+     },
+     "confidence": 0.33
+    }
+   },
+   "usage": {
+    "input_tokens": 3405,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "counting.jpg::orig",
+   "size": [
+    1265,
+    1215
+   ],
+   "seconds": 0.414,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.96,
+      "left": 0.03,
+      "right": 0.98
+     },
+     "confidence": 0.04
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "counting.jpg::blur",
+   "size": [
+    1265,
+    1215
+   ],
+   "seconds": 0.395,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.96,
+      "left": 0.03,
+      "right": 0.97
+     },
+     "confidence": 0.08
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "counting.jpg::dark",
+   "size": [
+    1265,
+    1215
+   ],
+   "seconds": 0.399,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.97,
+      "left": 0.02,
+      "right": 0.98
+     },
+     "confidence": 0.05
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "counting.jpg::lowres",
+   "size": [
+    632,
+    607
+   ],
+   "seconds": 0.292,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.97,
+      "left": 0.03,
+      "right": 0.98
+     },
+     "confidence": 0.09
+    }
+   },
+   "usage": {
+    "input_tokens": 1381,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "counting.jpg::crop",
+   "size": [
+    1088,
+    1215
+   ],
+   "seconds": 0.451,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.03,
+      "bottom": 0.97,
+      "left": 0.01,
+      "right": 0.98
+     },
+     "confidence": 0.06
+    }
+   },
+   "usage": {
+    "input_tokens": 3801,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "counting.jpg::occluded",
+   "size": [
+    1265,
+    1215
+   ],
+   "seconds": 0.558,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.29,
+      "bottom": 0.69,
+      "left": 0.57,
+      "right": 0.97
+     },
+     "confidence": 0.17
+    }
+   },
+   "usage": {
+    "input_tokens": 4417,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "mobile.jpg::orig",
+   "size": [
+    375,
+    812
+   ],
+   "seconds": 0.374,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.04,
+      "bottom": 0.44,
+      "left": 0.04,
+      "right": 0.96
+     },
+     "confidence": 0.13
+    }
+   },
+   "usage": {
+    "input_tokens": 1181,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "mobile.jpg::blur",
+   "size": [
+    375,
+    812
+   ],
+   "seconds": 0.346,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.81
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.42,
+      "bottom": 0.98,
+      "left": 0.19,
+      "right": 0.95
+     },
+     "confidence": 0.1
+    }
+   },
+   "usage": {
+    "input_tokens": 1181,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "mobile.jpg::dark",
+   "size": [
+    375,
+    812
+   ],
+   "seconds": 0.36,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.05,
+      "bottom": 0.46,
+      "left": 0.03,
+      "right": 0.96
+     },
+     "confidence": 0.18
+    }
+   },
+   "usage": {
+    "input_tokens": 1181,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "mobile.jpg::lowres",
+   "size": [
+    280,
+    406
+   ],
+   "seconds": 0.281,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.44,
+      "bottom": 0.97,
+      "left": 0.09,
+      "right": 0.96
+     },
+     "confidence": 0.12
+    }
+   },
+   "usage": {
+    "input_tokens": 669,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "mobile.jpg::crop",
+   "size": [
+    323,
+    812
+   ],
+   "seconds": 0.387,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.98
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.05,
+      "bottom": 0.44,
+      "left": 0.03,
+      "right": 0.95
+     },
+     "confidence": 0.19
+    }
+   },
+   "usage": {
+    "input_tokens": 1065,
+    "output_tokens": 75
+   }
+  },
+  {
+   "image": "mobile.jpg::occluded",
+   "size": [
+    375,
+    812
+   ],
+   "seconds": 0.381,
+   "model": "jev-1.14.0",
+   "answers": {
+    "blackjack_table": {
+     "type": "noul",
+     "noul": 0.02
+    },
+    "action_buttons": {
+     "type": "noul",
+     "noul": 0.96
+    },
+    "poker_table": {
+     "type": "noul",
+     "noul": 0.01
+    },
+    "table_box": {
+     "type": "box",
+     "box": {
+      "top": 0.41,
+      "bottom": 0.47,
+      "left": 0.2,
+      "right": 0.96
+     },
+     "confidence": 0.05
+    }
+   },
+   "usage": {
+    "input_tokens": 1181,
+    "output_tokens": 75
+   }
+  }
+ ],
+ "by_variant": {
+  "orig": {
+   "noul": {
+    "blackjack_table": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 10,
+       "false_positive": 0,
+       "missed": 1
+      },
+      "0.7": {
+       "true_positive": 9,
+       "false_positive": 0,
+       "missed": 2
+      },
+      "0.9": {
+       "true_positive": 9,
+       "false_positive": 0,
+       "missed": 2
+      }
+     }
+    },
+    "action_buttons": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.9": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      }
+     }
+    },
+    "poker_table": {
+     "positives": 1,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.9": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      }
+     }
+    }
+   },
+   "box": {
+    "cases": 11,
+    "mean_iou": 0.8508538993963551,
+    "iou_at_least_0.5": 11,
+    "iou_at_least_0.7": 10,
+    "per_image_iou": {
+     "ace-advice.jpg::orig": 0.93,
+     "simulator.jpg::orig": 0.522,
+     "live-vision.jpg::orig": 0.92,
+     "live-round-two.jpg::orig": 0.962,
+     "reliability-live.png::orig": 0.892,
+     "floating-advisor.jpg::orig": 0.853,
+     "perception.jpg::orig": 0.909,
+     "video-replay.jpg::orig": 0.908,
+     "clef-check.jpg::orig": 0.885,
+     "calibration.jpg::orig": 0.722,
+     "workbench.jpg::orig": 0.857
+    }
+   },
+   "latency_seconds": {
+    "p50": 0.423,
+    "p95": 0.673
+   },
+   "usage": {
+    "input_tokens": 58513,
+    "estimated_usd": 0.002458,
+    "price_note": "USD per million input tokens from docs.typesafe.ai/models on 2026-10-20; output is listed as free; currency not named on the page."
+   }
+  },
+  "blur": {
+   "noul": {
+    "blackjack_table": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 11,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.9": {
+       "true_positive": 8,
+       "false_positive": 0,
+       "missed": 3
+      }
+     }
+    },
+    "action_buttons": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 0.9545454545454546,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 10,
+       "false_positive": 1,
+       "missed": 1
+      },
+      "0.7": {
+       "true_positive": 9,
+       "false_positive": 1,
+       "missed": 2
+      },
+      "0.9": {
+       "true_positive": 5,
+       "false_positive": 0,
+       "missed": 6
+      }
+     }
+    },
+    "poker_table": {
+     "positives": 1,
+     "cases": 17,
+     "auc": 0.9375,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 0,
+       "false_positive": 1,
+       "missed": 1
+      },
+      "0.5": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      },
+      "0.7": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      },
+      "0.9": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      }
+     }
+    }
+   },
+   "box": {
+    "cases": 11,
+    "mean_iou": 0.898777175593484,
+    "iou_at_least_0.5": 11,
+    "iou_at_least_0.7": 11,
+    "per_image_iou": {
+     "ace-advice.jpg::blur": 0.966,
+     "simulator.jpg::blur": 0.738,
+     "live-vision.jpg::blur": 0.903,
+     "live-round-two.jpg::blur": 0.962,
+     "reliability-live.png::blur": 0.875,
+     "floating-advisor.jpg::blur": 0.922,
+     "perception.jpg::blur": 0.974,
+     "video-replay.jpg::blur": 0.868,
+     "clef-check.jpg::blur": 0.911,
+     "calibration.jpg::blur": 0.869,
+     "workbench.jpg::blur": 0.899
+    }
+   },
+   "latency_seconds": {
+    "p50": 0.379,
+    "p95": 0.63
+   },
+   "usage": {
+    "input_tokens": 58513,
+    "estimated_usd": 0.002458,
+    "price_note": "USD per million input tokens from docs.typesafe.ai/models on 2026-10-20; output is listed as free; currency not named on the page."
+   }
+  },
+  "dark": {
+   "noul": {
+    "blackjack_table": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 0.9696969696969697,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 9,
+       "false_positive": 1,
+       "missed": 2
+      },
+      "0.7": {
+       "true_positive": 9,
+       "false_positive": 0,
+       "missed": 2
+      },
+      "0.9": {
+       "true_positive": 9,
+       "false_positive": 0,
+       "missed": 2
+      }
+     }
+    },
+    "action_buttons": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 0.946969696969697,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.9": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      }
+     }
+    },
+    "poker_table": {
+     "positives": 1,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      },
+      "0.9": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      }
+     }
+    }
+   },
+   "box": {
+    "cases": 11,
+    "mean_iou": 0.8641666969526143,
+    "iou_at_least_0.5": 11,
+    "iou_at_least_0.7": 10,
+    "per_image_iou": {
+     "ace-advice.jpg::dark": 0.883,
+     "simulator.jpg::dark": 0.506,
+     "live-vision.jpg::dark": 0.917,
+     "live-round-two.jpg::dark": 0.966,
+     "reliability-live.png::dark": 0.913,
+     "floating-advisor.jpg::dark": 0.913,
+     "perception.jpg::dark": 0.952,
+     "video-replay.jpg::dark": 0.858,
+     "clef-check.jpg::dark": 0.921,
+     "calibration.jpg::dark": 0.82,
+     "workbench.jpg::dark": 0.857
+    }
+   },
+   "latency_seconds": {
+    "p50": 0.398,
+    "p95": 0.785
+   },
+   "usage": {
+    "input_tokens": 58513,
+    "estimated_usd": 0.002458,
+    "price_note": "USD per million input tokens from docs.typesafe.ai/models on 2026-10-20; output is listed as free; currency not named on the page."
+   }
+  },
+  "lowres": {
+   "noul": {
+    "blackjack_table": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 0.9848484848484849,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 10,
+       "false_positive": 0,
+       "missed": 1
+      },
+      "0.9": {
+       "true_positive": 7,
+       "false_positive": 0,
+       "missed": 4
+      }
+     }
+    },
+    "action_buttons": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 0.8712121212121212,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 9,
+       "false_positive": 1,
+       "missed": 2
+      },
+      "0.7": {
+       "true_positive": 9,
+       "false_positive": 1,
+       "missed": 2
+      },
+      "0.9": {
+       "true_positive": 6,
+       "false_positive": 1,
+       "missed": 5
+      }
+     }
+    },
+    "poker_table": {
+     "positives": 1,
+     "cases": 17,
+     "auc": 0.875,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      },
+      "0.5": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      },
+      "0.7": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      },
+      "0.9": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      }
+     }
+    }
+   },
+   "box": {
+    "cases": 11,
+    "mean_iou": 0.8435272110538278,
+    "iou_at_least_0.5": 11,
+    "iou_at_least_0.7": 9,
+    "per_image_iou": {
+     "ace-advice.jpg::lowres": 0.634,
+     "simulator.jpg::lowres": 0.574,
+     "live-vision.jpg::lowres": 0.917,
+     "live-round-two.jpg::lowres": 0.945,
+     "reliability-live.png::lowres": 0.933,
+     "floating-advisor.jpg::lowres": 0.903,
+     "perception.jpg::lowres": 0.93,
+     "video-replay.jpg::lowres": 0.873,
+     "clef-check.jpg::lowres": 0.891,
+     "calibration.jpg::lowres": 0.826,
+     "workbench.jpg::lowres": 0.854
+    }
+   },
+   "latency_seconds": {
+    "p50": 0.34,
+    "p95": 0.419
+   },
+   "usage": {
+    "input_tokens": 19683,
+    "estimated_usd": 0.000827,
+    "price_note": "USD per million input tokens from docs.typesafe.ai/models on 2026-10-20; output is listed as free; currency not named on the page."
+   }
+  },
+  "crop": {
+   "noul": {
+    "blackjack_table": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 11,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 9,
+       "false_positive": 0,
+       "missed": 2
+      },
+      "0.9": {
+       "true_positive": 9,
+       "false_positive": 0,
+       "missed": 2
+      }
+     }
+    },
+    "action_buttons": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 0.946969696969697,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.9": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      }
+     }
+    },
+    "poker_table": {
+     "positives": 1,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.9": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      }
+     }
+    }
+   },
+   "box": {
+    "cases": 11,
+    "mean_iou": 0.8561439077010214,
+    "iou_at_least_0.5": 10,
+    "iou_at_least_0.7": 10,
+    "per_image_iou": {
+     "ace-advice.jpg::crop": 0.909,
+     "simulator.jpg::crop": 0.493,
+     "live-vision.jpg::crop": 0.912,
+     "live-round-two.jpg::crop": 0.956,
+     "reliability-live.png::crop": 0.895,
+     "floating-advisor.jpg::crop": 0.919,
+     "perception.jpg::crop": 0.923,
+     "video-replay.jpg::crop": 0.828,
+     "clef-check.jpg::crop": 0.928,
+     "calibration.jpg::crop": 0.757,
+     "workbench.jpg::crop": 0.899
+    }
+   },
+   "latency_seconds": {
+    "p50": 0.451,
+    "p95": 0.636
+   },
+   "usage": {
+    "input_tokens": 51393,
+    "estimated_usd": 0.002159,
+    "price_note": "USD per million input tokens from docs.typesafe.ai/models on 2026-10-20; output is listed as free; currency not named on the page."
+   }
+  },
+  "occluded": {
+   "noul": {
+    "blackjack_table": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 1,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 11,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 10,
+       "false_positive": 0,
+       "missed": 1
+      },
+      "0.9": {
+       "true_positive": 8,
+       "false_positive": 0,
+       "missed": 3
+      }
+     }
+    },
+    "action_buttons": {
+     "positives": 11,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      },
+      "0.9": {
+       "true_positive": 11,
+       "false_positive": 2,
+       "missed": 0
+      }
+     }
+    },
+    "poker_table": {
+     "positives": 1,
+     "cases": 17,
+     "auc": 1.0,
+     "thresholds": {
+      "0.3": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.5": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.7": {
+       "true_positive": 1,
+       "false_positive": 0,
+       "missed": 0
+      },
+      "0.9": {
+       "true_positive": 0,
+       "false_positive": 0,
+       "missed": 1
+      }
+     }
+    }
+   },
+   "box": {
+    "cases": 11,
+    "mean_iou": 0.8667111973931282,
+    "iou_at_least_0.5": 11,
+    "iou_at_least_0.7": 11,
+    "per_image_iou": {
+     "ace-advice.jpg::occluded": 0.898,
+     "simulator.jpg::occluded": 0.819,
+     "live-vision.jpg::occluded": 0.885,
+     "live-round-two.jpg::occluded": 0.941,
+     "reliability-live.png::occluded": 0.849,
+     "floating-advisor.jpg::occluded": 0.883,
+     "perception.jpg::occluded": 0.914,
+     "video-replay.jpg::occluded": 0.894,
+     "clef-check.jpg::occluded": 0.892,
+     "calibration.jpg::occluded": 0.703,
+     "workbench.jpg::occluded": 0.857
+    }
+   },
+   "latency_seconds": {
+    "p50": 0.442,
+    "p95": 0.797
+   },
+   "usage": {
+    "input_tokens": 58513,
+    "estimated_usd": 0.002458,
+    "price_note": "USD per million input tokens from docs.typesafe.ai/models on 2026-10-20; output is listed as free; currency not named on the page."
+   }
+  }
+ }
+}

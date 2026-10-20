@@ -68,14 +68,50 @@ def auc(pairs: list[tuple[float, int]]) -> float | None:
     return sum((p > n) + 0.5 * (p == n) for p in pos for n in neg) / (len(pos) * len(neg))
 
 
-def load_image_b64(path: Path) -> tuple[str, str, tuple[int, int]]:
+CROP_LEFT = 0.14  # removes the app sidebar; every labelled table box starts to the right of it
+VARIANTS = ("orig", "blur", "dark", "lowres", "crop", "occluded")
+
+
+def crop_box(box: list[float] | None) -> list[float] | None:
+    """Table box [left, right, top, bottom] after cutting CROP_LEFT off the left side."""
+    if box is None:
+        return None
+    return [(box[0] - CROP_LEFT) / (1 - CROP_LEFT), (box[1] - CROP_LEFT) / (1 - CROP_LEFT), box[2], box[3]]
+
+
+def make_variant(im, variant: str, box: list[float] | None):
+    """Returns (image, quality, box). Labels stay the same except for the crop, which moves the box."""
+    from PIL import ImageDraw, ImageEnhance, ImageFilter
+
+    w, h = im.size
+    q = 85
+    if variant == "blur":
+        im = im.filter(ImageFilter.GaussianBlur(2.5))
+    elif variant == "dark":
+        im = ImageEnhance.Brightness(im).enhance(0.45)
+    elif variant == "lowres":
+        im = im.resize((max(280, w // 2), max(280, h // 2)))
+        q = 30
+    elif variant == "crop":
+        im = im.crop((int(w * CROP_LEFT), 0, w, h))
+        box = crop_box(box)
+    elif variant == "occluded":
+        # grey block over the right 30% of the table (or of the page centre when there is no table)
+        b = box or [0.3, 0.7, 0.3, 0.7]
+        x0 = (b[0] + 0.7 * (b[1] - b[0])) * w
+        ImageDraw.Draw(im).rectangle([x0, b[2] * h, b[1] * w, b[3] * h], fill=(90, 90, 90))
+    return im, q, box
+
+
+def load_image_b64(path: Path, variant: str = "orig", box: list[float] | None = None):
     from PIL import Image
 
     im = Image.open(path).convert("RGB")
     im.thumbnail((MAX_SIDE, MAX_SIDE))
+    im, quality, box = make_variant(im, variant, box)
     buf = io.BytesIO()
-    im.save(buf, format="JPEG", quality=85)
-    return base64.b64encode(buf.getvalue()).decode("ascii"), "jpg", im.size
+    im.save(buf, format="JPEG", quality=quality)
+    return base64.b64encode(buf.getvalue()).decode("ascii"), "jpg", im.size, box
 
 
 def build_request(model: str, data_b64: str, fmt: str) -> dict:
@@ -153,19 +189,26 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--allow-network", action="store_true", help="required to send any image")
     ap.add_argument("--dry-run", action="store_true", help="validate labels and image sizes, no request")
+    ap.add_argument("--variants", action="store_true",
+                    help="also send blurred, dark, low-resolution, cropped and partly covered copies")
     ap.add_argument("--model", default="jev-1.14.0", help="Box needs Jev 1.14")
     ap.add_argument("--timeout", type=float, default=120.0)
     ap.add_argument("--output", type=Path)
     args = ap.parse_args(argv)
 
-    labels = json.loads((HERE / "labels.json").read_text(encoding="utf-8"))["images"]
+    base_labels = json.loads((HERE / "labels.json").read_text(encoding="utf-8"))["images"]
+    variants = VARIANTS if args.variants else ("orig",)
+    labels: dict = {}
     prepared = {}
-    for name in labels:
-        data, fmt, size = load_image_b64(SHOTS / name)
-        if min(size) < 280 or max(size) > 1568 or size[0] * size[1] > 2_458_624:
-            print(f"{name}: size {size} outside the documented limits", file=sys.stderr)
-            return 2
-        prepared[name] = (data, fmt, size)
+    for name, row in base_labels.items():
+        for variant in variants:
+            data, fmt, size, box = load_image_b64(SHOTS / name, variant, row["table_box"])
+            if min(size) < 280 or max(size) > 1568 or size[0] * size[1] > 2_458_624:
+                print(f"{name}::{variant}: size {size} outside the documented limits", file=sys.stderr)
+                return 2
+            key_name = name if variant == "orig" and not args.variants else f"{name}::{variant}"
+            labels[key_name] = {**row, "table_box": box}
+            prepared[key_name] = (data, fmt, size)
     print(f"{len(prepared)} images ready; no request made" if args.dry_run or not args.allow_network else "")
     if args.dry_run or not args.allow_network:
         if not args.allow_network and not args.dry_run:
@@ -197,6 +240,10 @@ def main(argv: list[str] | None = None) -> int:
         "summary": summarize(rows, labels),
         "rows": rows,
     }
+    if args.variants:
+        report["by_variant"] = {
+            v: summarize([r for r in rows if r["image"].endswith("::" + v)], labels) for v in variants
+        }
     if args.output:
         args.output.write_text(json.dumps(report, indent=1), encoding="utf-8")
     print(json.dumps(report["summary"], indent=1))
